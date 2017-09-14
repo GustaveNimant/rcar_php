@@ -9,7 +9,7 @@ $module = "block_list_reorder_functions";
 
 /* Tools */
 
-function block_list_reorder_of_surname_by_name_array_of_entry_name_of_block_name_of_block_content ($sur_by_nam_a, $nam_ent, $nam_blo, $con_blo) {
+function block_list_reorder_of_surname_by_name_array_of_entry_name_of_block_current_name_of_block_content ($sur_by_nam_a, $nam_ent, $nam_blo, $con_blo) {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -73,7 +73,7 @@ function block_list_reorder_content_order_html_table_array_build () {
   $html_str .= "\n" . '  </tr> ';
 
   foreach ($con_by_nam_blo_a as $nam_blo => $con_blo) {
-      $html_str .= block_list_reorder_of_surname_by_name_array_of_entry_name_of_block_name_of_block_content ($sur_by_nam_a, $nam_ent, $nam_blo, $con_blo);
+      $html_str .= block_list_reorder_of_surname_by_name_array_of_entry_name_of_block_current_name_of_block_content ($sur_by_nam_a, $nam_ent, $nam_blo, $con_blo);
       $arr_a[$count] = $nam_blo;
       $count++;
   }
@@ -97,7 +97,7 @@ function block_list_reorder_section_title_build (){
 
   $lan = $_SESSION['parameters']['language'];
   $sur_ent = irp_provide ('entry_surname', $here);
-  $kin_blo = irp_provide ('entry_block_kind', $here);
+  $kin_blo = irp_provide ('entry_item_kind', $here);
   $kin_blo_plu = block_kind_plural_of_block_kind ($kin_blo);
 
   $en_tit = 'list of ' . $kin_blo_plu . ' for entry';
@@ -136,7 +136,6 @@ function block_list_reorder_section_display_action_build () {
 
   $lan = $_SESSION['parameters']['language'];
 
-  $swap = ucfirst (language_translate_of_en_string_of_language ('swap', $lan));
   $move_b = ucfirst (language_translate_of_en_string_of_language ('move before', $lan));
   $move_a = ucfirst (language_translate_of_en_string_of_language ('move after', $lan));
   $reset = ucfirst (language_translate_of_en_string_of_language ('reset', $lan));
@@ -144,37 +143,29 @@ function block_list_reorder_section_display_action_build () {
   $html_str  = '';
 
   $html_str .= '<center> ' . "\n";
-  $html_str .= '<table> ';
+  $html_str .= '  <table> ';
 
   $html_str .= '<tr> ';
 
   $html_str .= '<td> ';
-  $html_str .= '<input type="submit" value="';
-  $html_str .= $swap;
-  $html_str .= '" name="order"/> '. "\n";
+  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift ('order', 'swap', '    ');
   $html_str .= '</td> ';
 
   $html_str .= '<td> ';
-  $html_str .= '<input type="submit" value="';
-  $html_str .= $move_b;
-  $html_str .= '" name="order"/> ' . "\n";
+  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift ('order', 'move before', '    ');
   $html_str .= '</td> ';
 
   $html_str .= '<td> ';
-  $html_str .= '<input type="submit" value="';
-  $html_str .= $move_a;
-  $html_str .= '" name="order"/> ' . "\n";
+  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift ('order', 'move after', '    ');
   $html_str .= '</td> ';
 
   $html_str .= '<td> ';
-  $html_str .= '<input type="reset" value="';
-  $html_str .= $reset;
-  $html_str .= '"/> '. "\n";
+  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift ('', 'reset', '    ');
   $html_str .= '</td> ';
 
   $html_str .= '</tr> ';
 
-  $html_str .= '</table> '. "\n";
+  $html_str .= '  </table> '. "\n";
   $html_str .= '</center> '. "\n";
 
 

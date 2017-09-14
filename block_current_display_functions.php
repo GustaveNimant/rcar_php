@@ -22,7 +22,7 @@ function block_current_display_section_page_title_build () {
 
   $sur_ent = irp_provide ('entry_surname', $here);
   $kin_blo = irp_provide ('entry_item_kind', $here);
-  $nam_blo_cur = irp_provide ('block_name', $here);
+  $nam_blo_cur = irp_provide ('block_current_name', $here);
   $sur_by_nam_a = irp_provide ('surname_by_name_array', $here);
   $sur_blo_cur = surname_of_name_of_surname_by_name_array ($nam_blo_cur, $sur_by_nam_a);
 
@@ -125,7 +125,7 @@ function block_current_display_action_link_of_en_block_action ($nof_mod, $nam_en
   entering_in_function ($here . " ($en_act_blo)");
 
   $html_str  = '';
-  $html_str .= '<a href="'. $nof_mod . '?entry_name=' . $nam_ent . '&block_name=' . $nam_blo_cur . '">';
+  $html_str .= '<a href="'. $nof_mod . '?entry_name=' . $nam_ent . '&block_current_name=' . $nam_blo_cur . '">';
   $html_str .= $la_act_blo;
   $html_str .= '</a>';
 
@@ -139,7 +139,7 @@ function block_current_action_display_links_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
 
-    $nam_blo_cur = irp_provide ('block_name', $here);
+    $nam_blo_cur = irp_provide ('block_current_name', $here);
     $nam_ent = irp_provide ('entry_name', $here);
     $lan = $_SESSION['parameters']['language'];
 
@@ -152,7 +152,7 @@ function block_current_action_display_links_build () {
         debug_n_check ($here , '$nof_mod',  $nof_mod);
         $la_act_blo = language_translate_of_en_string_of_language ($en_act_blo, $lan);
 
-        $html_str .= '<a href="'. $nof_mod . '?entry_name=' . $nam_ent . '&block_name=' . $nam_blo_cur . '">';
+        $html_str .= '<a href="'. $nof_mod . '?entry_name=' . $nam_ent . '&block_current_name=' . $nam_blo_cur . '">';
         $html_str .= $la_act_blo;
         $html_str .= '</a>';
         

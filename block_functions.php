@@ -37,22 +37,21 @@ function item_current_content_off_block_content ($con_blo) {
   return $con_ite_cur;
 }
 
-function block_content_write ($nam_ent, $nam_blo, $con_blo, $ext_blo) {
-  $here = __FUNCTION__;
-  entering_in_function ($here);
+function block_content_write ($nam_ent, $nam_blo, $con_blo) {
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($nam_ent, $nam_blo, $con_blo)");
 
-  debug_n_check ($here ,'$nam_ent', $nam_ent);
-  debug_n_check ($here ,'$nam_blo', $nam_blo);
-  debug_n_check ($here ,'$con_blo', $con_blo);
-  debug_n_check ($here ,'$ext_blo', $ext_blo);
+    $ext_blo = $_SESSION['parameters']['block_text_filename_extension'];
+    debug_n_check ($here ,'$ext_blo', $ext_blo);
 
-  $dir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
-  $nof_txt = $dir . $nam_blo . '.' . $ext_blo;
-  debug_n_check ($here , '$nof_txt', $nof_txt);
+    $dir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
+    $nof_blo = $dir . $nam_blo . '.' . $ext_blo;
+    debug_n_check ($here , '$nof_blo', $nof_blo);
 
-  file_string_write ($nof_txt, $con_blo); 
-
-  exiting_from_function ($module . ':' . $here);
+    file_string_write ($nof_blo, $con_blo); 
+    
+    exiting_from_function ($module . ':' . $here);
+    return;
 }
 
 # exiting_from_module ($module);

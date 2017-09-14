@@ -121,7 +121,7 @@ function before_one_block ($nam_blo_a) {
 
 }
 
-function block_name_reordered_array_of_block_name_array_of_language ($old_pro_a, $lan) {
+function block_current_name_reordered_array_of_block_name_array_of_language ($old_pro_a, $lan) {
   $here = __FUNCTION__;
   entering_in_function ($here . "(... array, $lan)");
   # debug_n_check ($here , "old block order array", $old_pro_a);
@@ -164,7 +164,7 @@ function block_name_array_reorder_build () {
   $lan = $_SESSION['parameters']['language'];
   $nam_blo_a = irp_provide ('block_name_array', $here);
 
-  $new_nam_blo_a = block_name_reordered_array_of_block_name_array_of_language ($nam_blo_a, $lan); 
+  $new_nam_blo_a = block_current_name_reordered_array_of_block_name_array_of_language ($nam_blo_a, $lan); 
 
   # debug_n_check ($here , '$new_nam_blo_a_a', $new_nam_blo_a);
   exiting_from_function ($here);
@@ -180,7 +180,7 @@ function block_list_neworder_display_title_build () {
 
   $lan = $_SESSION['parameters']['language'];
   $sur_ent = irp_provide ('entry_surname', $here);
-  $kin_blo = irp_provide ('entry_block_kind', $here);
+  $kin_blo = irp_provide ('entry_item_kind', $here);
   $kin_blo_plu = block_kind_plural_of_block_kind ($kin_blo);
 
   $en_tit = 'new order of ' . $kin_blo_plu . ' for entry';

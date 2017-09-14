@@ -43,7 +43,7 @@ function block_rename_save_build (){
   $new_nam_blo = word_name_capitalized_of_string_surname ($new_sur_blo);
 
   $nam_ent = irp_provide ('entry_name', $here);
-  $old_nam_blo = irp_provide ('block_name', $here);
+  $old_nam_blo = irp_provide ('block_current_name', $here);
 
   /* File new_block.ite */
 

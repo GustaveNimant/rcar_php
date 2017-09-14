@@ -98,7 +98,7 @@ function surname_catalog_add_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
     
-    $script_action = script_array_retrieve_module_of_function ($here);
+    $script_action = 'surname_catalog_add_save.php';
     $lan = $_SESSION['parameters']['language'];
     
     $html_str  = '';

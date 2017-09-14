@@ -3,7 +3,7 @@
 /*  */
 require_once "array_functions.php";
 require_once "file_functions.php";
-require_once "block_nameoffile_array_functions.php";
+require_once "block_current_nameoffile_array_functions.php";
 
 require_once "irp_functions.php";
 
@@ -31,7 +31,7 @@ function block_name_catalog_fullnameoffile_of_entry_name ($nam_ent) {
   return $fno_cat;
 }
 
-function block_name_catalog_delete_of_entry_name_of_block_name_catalog_of_block_name ($nam_ent, $cat_blo, $nam_blo) {
+function block_name_catalog_delete_of_entry_name_of_block_name_catalog_of_block_current_name ($nam_ent, $cat_blo, $nam_blo) {
   $here = __FUNCTION__;
   entering_in_function ($here . "($nam_ent, $cat_blo, $nam_blo)"); 
 
@@ -106,11 +106,11 @@ function block_name_catalog_build () {
       
   } else {
       try {
-          $nof_blo_a = irp_provide ('block_nameoffile_array', $here);
+          $nof_blo_a = irp_provide ('block_current_nameoffile_array', $here);
       } 
       catch (Exception $e) {  
           $mesc = $e->getMessage();
-          if ($mesc = "Value is empty in function block_nameoffile_array_build:for Entry name $nam_ent") {
+          if ($mesc = "Value is empty in function block_current_nameoffile_array_build:for Entry name $nam_ent") {
               debug ($here, 'Catch Exception with message', $mesc);
               $mest = "Catalog is empty in function block_name_catalog_build for Entry name $nam_ent";
               debug ($here, 'Throw new Exception with message', $mest);
@@ -129,7 +129,7 @@ function block_name_catalog_build () {
   
   debug ($here , '$cat_blo', $cat_blo);
   exiting_from_function ($here . " ('$cat_blo', $cat_blo)");
-  
+
   return $cat_blo;
   
 }

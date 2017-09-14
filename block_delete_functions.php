@@ -17,7 +17,7 @@ function block_delete_section_page_title_build (){
   $lan = $_SESSION['parameters']['language'];
   $sur_ent = irp_provide ('entry_surname', $here);
   $sur_ite = irp_provide ('block_surname', $here);
-  $kin_ite = irp_provide ('entry_block_kind', $here);
+  $kin_ite = irp_provide ('entry_item_kind', $here);
 
   $en_tit = 'delete the ' . $kin_ite;  
   $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
@@ -122,7 +122,7 @@ function block_delete_build (){
 
   $lan = $_SESSION['parameters']['language'];
   $nam_ent = irp_provide ('entry_name', $here);
-  $nam_ite = irp_provide ('block_name', $here);
+  $nam_ite = irp_provide ('block_current_name', $here);
   $nof_mod = 'entry_display.php';
 
   $script_action = 'block_delete_save.php';
@@ -132,7 +132,7 @@ function block_delete_build (){
   $html_str .= irp_provide ('block_delete_section_page_title', $here);
   $html_str .= '<br><br> ';
   $html_str .= '<form action="' . $script_action. '" method="get"> ' . "\n";
-  $html_str .= '<input type="hidden" name="block_name" value="';
+  $html_str .= '<input type="hidden" name="block_current_name" value="';
   $html_str .= $nam_ite;
   $html_str .= '">';
   $html_str .= irp_provide ('block_delete_section_justify', $here);

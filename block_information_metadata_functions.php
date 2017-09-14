@@ -30,7 +30,7 @@ function block_information_metadata_en_by_block_name_array_build () {
   $kin_ite  = $inf_ent_a['block_kind'];
   debug_n_check ($here , "kin_ite", $kin_ite);
 
-  $nam_ite = irp_provide ('block_name', $here);
+  $nam_ite = irp_provide ('block_current_name', $here);
   debug_n_check ($here , "nam_ite", $nam_ite);
 
   /* $sur_by_nam_a = surname_by_name_array_make (); */

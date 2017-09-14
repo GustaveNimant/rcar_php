@@ -2,7 +2,6 @@
 
 require_once "array_functions.php";
 require_once "block_current_display_functions.php";
-require_once "item_functions.php";
 require_once "item_kind_functions.php";
 require_once "bubble_functions.php";
 require_once "entry_display_functions.php";
@@ -19,6 +18,7 @@ $Documentation[$module]['block_name_array'] = "is the same as item_name_array";
 
 # entering_in_module ($module);
 
+/* Improve divide module */
 /* Tools */
 
 function block_current_display_and_link_of_surname_by_name_array_of_entry_name_of_block_current_name_of_language ($sur_by_nam_a, $nam_ent, $nam_blo, $lan) {
@@ -33,7 +33,7 @@ function block_current_display_and_link_of_surname_by_name_array_of_entry_name_o
 
   $html_str  = '';
   $html_str .= '<br> ';
-  $html_str .= '<a href="block_current_display.php?entry_name=' . $nam_ent . '&block_name=' . $nam_blo . '" title="' . $la_bub_lin . '">';
+  $html_str .= '<a href="block_current_display.php?entry_name=' . $nam_ent . '&block_current_name=' . $nam_blo . '" title="' . $la_bub_lin . '">';
   $html_str .= '<b> ' . $sur_blo . '</b> ';
   $html_str .= '</a>';
   $html_str .= '<br> ';
@@ -58,9 +58,9 @@ function entry_item_kind_build () {
   return $kin_ite;
 }
 
-/* First Section Create Item Title */
+/* First Section Create Block Title */
 
-function entry_section_create_block_title_build () {
+function entry_create_block_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -83,20 +83,20 @@ function entry_section_create_block_title_build () {
   return $html_str;
 }
 
-/* First Section Create Item Title and Action */
+/* First Section Create Block Title and Action */
 
-function entry_section_create_block_title_n_action_build () {
+function entry_create_block_title_n_action_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
 
-  $script_action = 'item_create.php';
+  $script_action = 'block_new_create_form.php';
   $en_val_but = 'create';
 
   $html_str  = '';
   $html_str .= '<form action="'. $script_action .'" method="get"> ' . "\n";
-  $html_str .= irp_provide ('entry_section_create_block_title', $here);
+  $html_str .= irp_provide ('entry_create_block_title', $here);
   $html_str .= button_submit_of_button_value_en_of_language ($en_val_but, $lan);
   $html_str .= '</form> ' .  "\n";
 
@@ -106,13 +106,13 @@ function entry_section_create_block_title_n_action_build () {
   return $html_str;
 }
 
-/* First Section Create Item */
+/* First Section Create Block */
 
-function entry_section_create_block_build () {
+function entry_create_block_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $html = irp_provide ('entry_section_create_block_title_n_action', $here);
+  $html = irp_provide ('entry_create_block_title_n_action', $here);
   $html_str = common_html_background_color_of_html ($html);
 
   debug_n_check ($here , '$html_str',  $html_str);
@@ -122,9 +122,9 @@ function entry_section_create_block_build () {
   return $html_str;
 }
 
-/*  Second Section Reorder Item Title */
+/*  Second Section Reorder Block Title */
 
-function entry_section_reorder_item_title_build () {
+function entry_reorder_block_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -146,20 +146,20 @@ function entry_section_reorder_item_title_build () {
   return $la_Tit;
 }
 
-/* Second Section Reorder Item Title and Action */
+/* Second Section Reorder Block Title and Action */
 
-function entry_section_reorder_item_title_n_action_build () {
+function entry_reorder_block_title_n_action_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
 
-  $script_action = 'item_list_reorder.php';
+  $script_action = 'block_list_reorder.php';
   $en_val_but = 'reorder';
 
   $html_str  = '';
   $html_str .= '<form action="'. $script_action .'" method="get"> ' . "\n";
-  $html_str .= irp_provide ('entry_section_reorder_item_title', $here);
+  $html_str .= irp_provide ('entry_reorder_block_title', $here);
   $html_str .= button_submit_of_button_value_en_of_language ($en_val_but, $lan);
   $html_str .= '</form> ' .  "\n";
 
@@ -169,13 +169,13 @@ function entry_section_reorder_item_title_n_action_build () {
   return $html_str;
 }
 
-/* Second Section Reorder item */
+/* Second Section Reorder block */
 
-function entry_section_reorder_item_build () {
+function entry_reorder_block_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $html = irp_provide ('entry_section_reorder_item_title_n_action', $here);
+  $html = irp_provide ('entry_reorder_block_title_n_action', $here);
   $html_str = common_html_background_color_of_html ($html);
 
   debug_n_check ($here , '$html_str',  $html_str);
@@ -187,7 +187,7 @@ function entry_section_reorder_item_build () {
 
 /* Third Section display Title */
 
-function entry_display_section_title_build () {
+function entry_display_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -213,14 +213,14 @@ function entry_display_section_title_build () {
 
 /* Third Section Display Action */
 
-function entry_display_section_action_build () {
+function entry_display_action_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
   $nam_ent = irp_provide ('entry_name', $here);
 
-  if (block_nameoffile_array_is_empty_of_entry_name ($nam_ent)) {
+  if (block_current_nameoffile_array_is_empty_of_entry_name ($nam_ent)) {
       $html_str = '<br> ';
   }
   else {
@@ -249,13 +249,13 @@ function entry_display_section_action_build () {
 
 /* Third Section Display */
 
-function entry_section_display_build (){
+function entry_display_title_n_action_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $html_str  = '';
-  $html_str .= irp_provide ('entry_display_section_title', $here);
-  $html_str .= irp_provide ('entry_display_section_action', $here);
+  $html_str .= irp_provide ('entry_display_title', $here);
+  $html_str .= irp_provide ('entry_display_action', $here);
 
   debug_n_check ($here , '$html_str', $html_str);
   exiting_from_function ($here);
@@ -263,7 +263,7 @@ function entry_section_display_build (){
   return $html_str;
 }
 
-/* Page entry */
+/* Display entry */
 
 function entry_display_build (){
   $here = __FUNCTION__;
@@ -274,17 +274,17 @@ function entry_display_build (){
   
   $html_str  = '';
   $html_str .= irp_provide ('pervasive_html_initial_section', $here);
-  $html_str .= irp_provide ('entry_section_create_block', $here);
+  $html_str .= irp_provide ('entry_create_block', $here);
 
   try {
       $nam_blo_a = irp_provide ('block_name_array', $here);
       if (count ($nam_blo_a) > 1 ) {
-          $html_str .= irp_provide ('entry_section_reorder_item', $here);
+          $html_str .= irp_provide ('entry_reorder_block', $here);
       }
   } 
   catch (Exception $e) {}
 
-  $html_str .= irp_provide ('entry_section_display', $here);
+  $html_str .= irp_provide ('entry_display_title_n_action', $here);
   $html_str .= link_to_return_of_module_nameoffile_of_language ($nof_mod, $lan);
   $html_str .= irp_provide ('pervasive_html_final_section', $here);
 

@@ -136,7 +136,7 @@ function debug ($nam_fun, $nam_var, $var) {
 };
 
 function warning ($her, $en_mes){
-    $lan = irp_retrieve ('language');
+    $lan = $_SESSION['parameters']['language'];
 
 /* Improve content of $en_mes has variable names */
     $en_txt = 'warning in';

@@ -4,7 +4,8 @@
 require_once "string_functions.php";
 require_once "management_functions.php";
 
-$module = "user_information_functions";
+$module = module_name (__FILE__);
+
 # entering_in_module ($module);
 
 function user_information_build () {

@@ -1,6 +1,6 @@
 <?php
 
-$block_information_en_by_block_name_
+$block_information_en_by_block_current_name_
   array (
 	 'entry' => 'An entry is a concept defined 
 by the list of its properties',

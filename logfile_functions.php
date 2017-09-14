@@ -1,6 +1,7 @@
 <?php
 
 require_once "array_functions.php";
+require_once "date_n_time_functions.php";
 
 # To be continued
 
@@ -135,7 +136,9 @@ function logfile_html_write ($htm_log) {
 
   $nof_log = "$Nam_pro.$ext_log";
 
-  file_content_append ($nof_log, $htm_log . "\n");
+  $now_tim = now();
+  $txt_log = $now_tim . ': ' . $htm_log;
+  file_content_append ($nof_log, $txt_log . "\n");
 
   exiting_from_function ($here);
   return;

@@ -1,16 +1,14 @@
 <?php
 
 require_once "array_functions.php";
-require_once "item_modify_save_functions.php";
 require_once "file_functions.php";
-require_once "item_content_by_item_name_array_functions.php";
-require_once "item_create_functions.php";
 require_once "debug_functions.php";
 require_once "button_submit_functions.php";
 require_once "irp_functions.php";
 require_once "bubble_functions.php";
 
-$module = "label_information_functions";
+$module = module_name (__FILE__);
+
 # entering_in_module ($module);
 
 function label_information_array_en_of_label ($nam_lab) {

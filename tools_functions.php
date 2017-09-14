@@ -23,6 +23,11 @@ function tools_display ($what) {
         print_html_array ($here, $what, $ses_reg_a);
         break;
 
+    case 'dollar_get_array' :
+        $def_var_a = get_defined_vars();
+        print_html_array ($here, $what, $def_var_a);
+        break;
+
     case 'father_n_son_entity' :
         $fat_n_son_a = $_SESSION['father_n_son_stack_entity'];
         print_html_array ($here, "father_n_son_stack_entity", $fat_n_son_a);

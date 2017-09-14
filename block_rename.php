@@ -10,8 +10,8 @@ father_n_son_stack_entity_push_of_current_entity ($module);
 
 /* $irp_register = $_SESSION['irp_register']; */
 
-/* $nam_ite = irp_provide ('block_name', $module); */
-/* $html_log = "$module : Block_name >$nam_ite< stored"; */
+/* $nam_ite = irp_provide ('block_current_name', $module); */
+/* $html_log = "$module : Block_current_name >$nam_ite< stored"; */
 
 $html_str = irp_provide ($module, $module . "_build");
 

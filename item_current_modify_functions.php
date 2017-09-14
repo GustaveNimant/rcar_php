@@ -20,7 +20,7 @@ function item_current_modify_section_page_title_build (){
 
   $sur_ent = irp_provide ('entry_surname', $here);
 
-  $nam_blo_cur = irp_provide ('block_name', $here);
+  $nam_blo_cur = irp_provide ('block_current_name', $here);
   $sur_by_nam_a = irp_provide ('surname_by_name_array', $here);
   $sur_blo_cur = surname_of_name_of_surname_by_name_array ($nam_blo_cur, $sur_by_nam_a);
 
@@ -228,7 +228,7 @@ function item_current_modify_build () {
   $sur_ent = surname_of_name_of_surname_by_name_array ($nam_ent, $sur_by_nam_a);
 
   $nof_mod = 'entry_display.php';
-  $script_action = 'block_current_modified_save.php';
+  $script_action = 'block_next_save.php';
 
   $html_str  = '';
   $html_str .= irp_provide ('pervasive_html_initial_section', $here);

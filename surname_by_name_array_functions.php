@@ -108,7 +108,7 @@ function surname_by_name_array_add_n_write_of_name_of_surname_of_current_array (
           print_fatal_error ($here, 
           "name >$nam< already exists in array with old surname >$old_sur<",
           "old surname >$old_sur< differs from new one >$sur_nam<",
-          "Check");
+          "correct by hand file SURNAMES/Surname_catalog.cat");
       }
 
       $new_sur_by_nam_a = $old_sur_by_nam_a; 

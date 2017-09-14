@@ -7,7 +7,7 @@ $module = "file_functions";
 # entering_in_module ($module);
 
 
-function fullnameofile_parse_array ($fno) {
+function fullnameoffile_parse_array ($fno) {
     $here = __FUNCTION__;
     
     $fno_arr_a = pathinfo ($fno);
@@ -27,7 +27,7 @@ function module_name ($fno) {
   entering_in_function ($here . " ($fno)");
 #  debug_n_check ($here , "input file name", $fno);
   
-  $fno_arr_a = fullnameofile_parse_array($fno);
+  $fno_arr_a = fullnameoffile_parse_array($fno);
   $nam_mod = $fno_arr_a['filename'];
 
 #  debug_n_check ($here , "output extension", $ext);
@@ -41,7 +41,7 @@ function get_any_file_extension ($fno) {
   entering_in_function ($here . " ($fno)");
 #  debug_n_check ($here , "input file name", $fno);
   
-  $fno_arr_a = fullnameofile_parse_array($fno);
+  $fno_arr_a = fullnameoffile_parse_array($fno);
   $ext = $fno_arr_a['extension'];
 
 #  debug_n_check ($here , "output extension", $ext);
@@ -248,14 +248,14 @@ function file_is_block_text_of_nameoffile ($fno) {
 
   $nam_blo = cut_dotted_3c_extension_of_nameoffile ($fno);
   $ext_fil = get_file_3c_extension ($fno) ;
-#  debug ($here , 'block_name ', $nam_blo) ;
+#  debug ($here , 'block_current_name ', $nam_blo) ;
 
   $result = 
-    is_block_name ($nam_blo)
+    is_block_current_name ($nam_blo)
     && 
     is_block_text_filename_extension ($ext_fil);
 
-#  debug ($here , 'is_block_name ', string_of_boolean (is_block_name ($nam_blo))) ;
+#  debug ($here , 'is_block_current_name ', string_of_boolean (is_block_current_name ($nam_blo))) ;
 #  debug ($here , 'is_block_text_filename_extension', string_of_boolean (is_block_text_filename_extension ($ext_fil))) ;
 
   exiting_from_function ($here. ' with result ' . string_of_boolean ($result));
@@ -475,7 +475,7 @@ function file_array_of_directory_path_of_predicate ($dir_pat, $predicate) {
   $fno_a = scandir ($dir_pat);
 
   if (! $fno_a) {
-      $link = 'item_create.php?entry_name=' . $nam_ent;
+      $link = 'item_new_create.php?entry_name=' . $nam_ent;
       exiting_from_function ($here);
       header('Location: ' . $link);
       exit;
@@ -552,6 +552,16 @@ function file_content_delete_last_line ($con_raw) {
 
   exiting_from_function ($here . ' with last line deleted from file content');
   return $con;
+
+}
+
+function fullnameoffile_of_name ($con_raw) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($con_raw)");
+
+
+  exiting_from_function ($here);
+  return $fno;
 
 }
 

@@ -3,10 +3,10 @@
 require_once "management_functions.php";
 require_once "irp_functions.php";
 
-$module = "block_current_modified_content_functions";
+$module = "block_next_content_functions";
 # entering_in_module ($module);
 
-function block_current_modified_content_of_four_elements ($con_ite_nex, $jus_ite_nex, $con_ite_cur, $blo_cur_sha) {
+function block_next_content_of_four_elements ($con_ite_nex, $jus_ite_nex, $con_ite_cur, $blo_cur_sha) {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -37,7 +37,7 @@ function block_current_modified_content_of_four_elements ($con_ite_nex, $jus_ite
 
 }
 
-function block_current_modified_content_build () {
+function block_next_content_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -46,7 +46,7 @@ function block_current_modified_content_build () {
   $con_ite_cur = irp_provide ('item_current_content', $here);
   $blo_cur_sha = irp_provide ('block_current_sha1', $here);
 
-  $con_blo_nex = block_current_modified_content_of_four_elements ($con_ite_nex, $jus_ite_nex, $con_ite_cur, $blo_cur_sha);
+  $con_blo_nex = block_next_content_of_four_elements ($con_ite_nex, $jus_ite_nex, $con_ite_cur, $blo_cur_sha);
 
   debug_n_check ($here , '$con_blo_nex', $con_blo_nex);
   exiting_from_function ($here);

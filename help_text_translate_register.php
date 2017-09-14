@@ -6,8 +6,8 @@ $Documentation[$module] = "keys";
 
 $help_text_by_language_by_item_a = 
     array (
-        'create content item' =>
-        
+        'block_new_create_content' =>
+
         array (
             'fr' => 
             'Ecrire une courte assertion définissant l&rsquo;item
@@ -20,7 +20,7 @@ without using <and>, <or> are allowed'
             
 		),
         
-        'create justify item' =>
+        'block_new_create_justification' =>
         
         array (
             'fr' => 
@@ -34,7 +34,7 @@ to justify the creation of this new item'
             
 		),
         
-        'create name item' =>
+        'block_new_create_name' =>
         
         array (
             'fr' => 

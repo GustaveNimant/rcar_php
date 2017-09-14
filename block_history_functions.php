@@ -18,7 +18,7 @@ function block_history_section_page_title_build (){
 
   $sur_ent = irp_provide ('entry_surname', $here);
   $sur_ite = irp_provide ('block_surname', $here);
-  $kin_ite = irp_provide ('entry_block_kind', $here);
+  $kin_ite = irp_provide ('entry_item_kind', $here);
 
   $lan = $_SESSION['parameters']['language'];
 

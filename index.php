@@ -75,7 +75,7 @@ $points = "....|....|....|....|....|....|....|....|....|....|....|....|....|....
 $_SESSION['parameters']['stack_function_level_points'] = $points;
 $_SESSION['parameters']['stack_function_level_maximum'] = 200;
 
-$_SESSION['parameters']['select_size'] = 5;
+$_SESSION['parameters']['select_size'] = 6;
 $_SESSION['parameters']['version'] = 0.01;
 
 $_SESSION['count_entity'] = 1;

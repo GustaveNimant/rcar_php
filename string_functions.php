@@ -251,22 +251,22 @@ function check_item_name ($nam_ite){
 #  exiting_from_function ($here . " ($nam_ite)");
 }
 
-function is_block_name ($nam_blo){
+function is_block_current_name ($nam_blo){
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_blo)");
 
   $result = preg_match ('/^[A-Z][A-Za-z_]*$/', $nam_blo);
   
-  exiting_from_function ($here . " for block_name >$nam_blo< is ". string_of_boolean ($result));
+  exiting_from_function ($here . " for block_current_name >$nam_blo< is ". string_of_boolean ($result));
   return $result;
 }
 
-function check_block_name ($nam_blo){
+function check_block_current_name ($nam_blo){
   $here = __FUNCTION__;
 #  entering_in_function ($here . " ($nam_blo)");
   /* debug_n_check ($here , "input block name", $nam_blo); */
 
-  if ( ! is_block_name ($nam_blo)) {
+  if ( ! is_block_current_name ($nam_blo)) {
     fatal_error ($here, "block name >$nam_blo< is NOT canonical");
   }
 

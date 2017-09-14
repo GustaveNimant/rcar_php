@@ -20,7 +20,7 @@ function block_modify_section_page_title_build (){
 
   $sur_ent = irp_provide ('entry_surname', $here);
   $sur_ite = irp_provide ('block_surname', $here);
-  $kin_ite = irp_provide ('entry_block_kind', $here);
+  $kin_ite = irp_provide ('entry_item_kind', $here);
 
   if ($kin_ite == 'question') {
       $en_tit = 'modify the answer to the ' . $kin_ite;  
@@ -52,7 +52,7 @@ function block_modify_section_content_old_title_build (){
   entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
-  $kin_ite = irp_provide ('entry_block_kind', $here);
+  $kin_ite = irp_provide ('entry_item_kind', $here);
 
   if ($kin_ite == 'question') {  /* Improve Ugly */
       $en_tit = 'answer to the ' . $kin_ite;  
@@ -76,7 +76,7 @@ function block_modify_section_content_old_display_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $nam_ite = irp_provide ('block_name', $here);
+  $nam_ite = irp_provide ('block_current_name', $here);
 
   $con_by_nam_ite_a = irp_provide ('block_content_by_block_name_array', $here);
   $con_ite_old = $con_by_nam_ite_a[$nam_ite];
@@ -133,7 +133,7 @@ function block_modify_section_content_new_create_textarea_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $nam_ite = irp_provide ('block_name', $here);
+  $nam_ite = irp_provide ('block_current_name', $here);
 
   $con_by_nam_ite_a = irp_provide ('block_content_by_block_name_array', $here);
   $con_ite_new = $con_by_nam_ite_a[$nam_ite];

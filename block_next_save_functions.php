@@ -1,31 +1,27 @@
 <?php
 
-require_once "management_functions.php";
 require_once "block_functions.php";
 require_once "irp_functions.php";
 
-$module = "item_current_modify_save_functions";
+$module = module_name (__FILE__);
+
 # entering_in_module ($module);
 
-function block_current_modified_save_build () {
+function block_next_save_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
-
-  /* debug_n_check ($module ,'$_GET', $_GET); */
 
   $lan = $_SESSION['parameters']['language'];
   $nam_ent = irp_provide ('entry_name', $here);
   $sur_by_nam_a = irp_provide ('surname_by_name_array', $here);
   $sur_ent = surname_of_name_of_surname_by_name_array ($nam_ent, $sur_by_nam_a);
 
-  $nam_blo_cur = irp_provide ('block_name', $here);
-  $con_blo_nex = irp_provide ('block_current_modified_content', $here);
+  $nam_blo_cur = irp_provide ('block_current_name', $here);
+  $con_blo_nex = irp_provide ('block_next_content', $here);
 
   debug_n_check ($here, '$nam_ent', $nam_ent);
 
-  $ext_blo = $_SESSION['parameters']['block_text_filename_extension'];
-
-  block_content_write ($nam_ent, $nam_blo_cur, $con_blo_nex, $ext_blo);
+  block_content_write ($nam_ent, $nam_blo_cur, $con_blo_nex);
 
   $nof_mod = 'entry_display.php';
  

@@ -1,12 +1,12 @@
 <?php
 
-require_once "management_functions.php";
 require_once "irp_functions.php";
 require_once "entry_information_functions.php";
 require_once "entry_display_functions.php";
 require_once "help_text_functions.php";
 
-$module = "block_create_functions";
+$module = module_name (__FILE__);
+
 # entering_in_module ($module);
 
 /* First Section Page Title */
@@ -17,7 +17,7 @@ function block_create_section_page_title_build (){
 
   $lan = $_SESSION['parameters']['language'];
   $sur_ent = irp_provide ('entry_surname', $here);
-  $kin_ite = irp_provide ('entry_block_kind', $here);
+  $kin_ite = irp_provide ('entry_item_kind', $here);
 
   if ($kin_ite == 'question'){
       $en_tit = 'ask a new ' . $kin_ite; 
@@ -48,7 +48,7 @@ function block_create_section_content_title_text_build (){
   entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
-  $kin_ite = irp_provide ('entry_block_kind', $here);
+  $kin_ite = irp_provide ('entry_item_kind', $here);
 
   if ($kin_ite == 'question') {  /* Improve Ugly */
       $en_tit = 'answer to the ' . $kin_ite;  
@@ -73,7 +73,7 @@ function block_create_section_content_title_help_build (){
   entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
-  $kin_ite = irp_provide ('entry_block_kind', $here);
+  $kin_ite = irp_provide ('entry_item_kind', $here);
 
   $key_hel = 'create content block';
   $la_Hel = help_text_of_string_key_of_language ($key_hel, $lan);
@@ -110,7 +110,7 @@ function block_create_section_content_textarea_build (){
   entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
-  $kin_ite = irp_provide ('entry_block_kind', $here);
+  $kin_ite = irp_provide ('entry_item_kind', $here);
   $en_con = 'enter the text of the ' . $kin_ite;
   $la_con = ucfirst (language_translate_of_en_string_of_language ($en_con, $lan));
 
@@ -150,7 +150,7 @@ function block_create_section_name_title_text_build (){
   entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
-  $kin_ite = irp_provide ('entry_block_kind', $here);
+  $kin_ite = irp_provide ('entry_item_kind', $here);
   $en_tit = 'enter the name of the ' . $kin_ite;
 
   $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
@@ -169,7 +169,7 @@ function block_create_section_name_title_help_build (){
   entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
-  $kin_ite = irp_provide ('entry_block_kind', $here);
+  $kin_ite = irp_provide ('entry_item_kind', $here);
 
   $key_hel = 'create name block';
   $la_Hel = help_text_of_string_key_of_language ($key_hel, $lan);
@@ -199,21 +199,15 @@ function block_create_section_name_title_n_help_build (){
   return $html_str;
 }
 
-/** Fourth Section Block Name Inputtypetext **/
-
 function block_create_section_name_inputtypetext_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
-  $kin_ite = irp_provide ('entry_block_kind', $here);
-  $en_con = 'enter the name of the ' . $kin_ite;
-  $la_con = ucfirst (language_translate_of_en_string_of_language ($en_con, $lan));
+  $kin_ite = irp_provide ('entry_item_kind', $here);
+  $en_pla = 'enter the name of the ' . $kin_ite;
 
-  $html_str  = '';
-  $html_str .= '<input type="text" name="block_surname" size="40" placeholder="';
-  $html_str .= $la_con;
-  $html_str .= '"> ';
+  inputtypetext_of_name_of_en_placeholder ($nam, $en_pla, '  ');
 
   debug_n_check ($here , '$html_str',  $html_str);
   exiting_from_function ($here);
@@ -245,7 +239,7 @@ function block_create_block_list_section_title_build () {
  
   $lan = $_SESSION['parameters']['language'];
   $sur_ent = irp_provide ('entry_surname', $here);
-  $kin_ite = irp_provide ('entry_block_kind', $here);
+  $kin_ite = irp_provide ('entry_item_kind', $here);
   $kin_ite_plu = block_kind_plural_of_block_kind ($kin_ite);
 
   $en_tit = 'the ' . $kin_ite_plu . ' for entry';

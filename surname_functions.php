@@ -76,6 +76,7 @@ function check_couple_consistency_of_name_of_surname ($nam, $sur) {
 
   if ( ! is_couple_consistent_of_name_of_surname ($nam, $sur)) {
       $nam_tmp = name_of_surname ($sur);
+
       print_fatal_error ($here,
       "Name >$nam< in Surname_catalog were >$nam_tmp<", 
       "Name >$nam< is inconsistent with its Surname <$sur<",

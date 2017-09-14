@@ -11,13 +11,13 @@ father_n_son_stack_entity_push_of_current_entity ($module);
 
 $nam_ent = irp_provide ('entry_name', $module);
 
-$nam_ite = irp_provide ('block_name', $module);
+$nam_ite = irp_provide ('block_current_name', $module);
 debug_n_check ($module , '$nam_ite', $nam_ite);
 
-/* if (isset ($_GET['block_name'])) { */
-/*     $nam_ite = $_GET['block_name']; */
+/* if (isset ($_GET['block_current_name'])) { */
+/*     $nam_ite = $_GET['block_current_name']; */
 /* } else { */
-/*     $nam_ite = irp_provide ('block_name', $module); */
+/*     $nam_ite = irp_provide ('block_current_name', $module); */
 /* } */
 
 
@@ -42,7 +42,7 @@ $sur_ent = $sur_by_nam_a[$nam_ent];
 
 $str_get  = '&entry_name=';
 $str_get .= $nam_ent;
-$str_get .= '&block_name=';
+$str_get .= '&block_current_name=';
 $str_get .= $nam_ite;
 $str_get .= '&block_action=';
 $str_get .= $ite_act;

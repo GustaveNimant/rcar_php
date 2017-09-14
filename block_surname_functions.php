@@ -10,10 +10,10 @@ function block_surname_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  if ( isset ($_GET['block_name_input'])) {
+  if ( isset ($_GET['block_current_name_input'])) {
    
 /* create surname from user GET */
-      $sur_blo = array_dollar_get_retrieve_value_of_key ('block_name_input', $here);
+      $sur_blo = array_dollar_get_retrieve_value_of_key ('block_current_name_input', $here);
   }
   else {
 
@@ -24,17 +24,17 @@ function block_surname_build () {
       }
       else {
   
-/* get from disk if block_name exists */
+/* get from disk if block_current_name exists */
  
-          if (irp_is_stored ('block_name')) {
-              $nam_blo = irp_provide ('block_name', $here);
+          if (irp_is_stored ('block_current_name')) {
+              $nam_blo = irp_provide ('block_current_name', $here);
               /* $sur_by_nam_a = surname_by_name_array_make (); ???? */
               $sur_by_nam_a = irp_provide ('surname_by_name_array', $here);
               $sur_blo = $sur_by_nam_a[$nam_blo];
           }
           else {
               debug ($here, 'irp_register', $_SESSION['irp_register']);
-              fatal_error ($here, "block_name is neither stored nor in GET");
+              fatal_error ($here, "block_current_name is neither stored nor in GET");
           }
       }
   }

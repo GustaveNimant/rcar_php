@@ -285,16 +285,21 @@ function check_is_key_unique_in_array ($key, $arr_a) {
 }
 
 function array_value_exists ($ele, $arr_a) {
-  $here = __FUNCTION__;
-#  entering_in_function ($here);
-#  debug ($here , "input key", $key); 
-#  # debug ($here , "input array", $arr_a); 
-
-  $boo = in_array ($ele, $arr_a);
- 
-#  exiting_from_function ($here);
-
-  return $boo;
+    #  $here = __FUNCTION__;
+    #  entering_in_function ($here);
+    #  debug ($here , "input key", $key); 
+    #  # debug ($here , "input array", $arr_a); 
+    
+    if (is_empty_of_array ($arr_a)) {
+        $boo = false;
+    }
+    else {
+        $boo = in_array ($ele, $arr_a);
+    }
+    
+    #  exiting_from_function ($here);
+    
+    return $boo;
 }
 
 function array_merge_unique_of_array_of_array ($fir_a, $sec_a) {
@@ -349,6 +354,58 @@ function array_swap ($key_fr, $key_to, $inp_arr_a) {
   return $out_arr_a;
 }
 
+function form_array_dollar_get_store_of_key_of_value_of_here ($key, $val, $her) {
+  $here = __FUNCTION__;
+#  entering_in_function ($here . " ($key, $val, $her)");
+
+  if ($val == '') {
+      print_fatal_error ($her,
+      "second argument \$val were NOT EMPTY<br>",
+      "\$val is EMPTY",
+      "Check");
+  }
+
+  $html_str  = '';
+  $html_str .= '<input type="hidden" ';
+  $html_str .= 'name="'  . $key . '" ';
+  $html_str .= 'value="' . $val . '" /> ';
+
+#  debug_n_check ($here , '$html_str', $html_str);
+#  exiting_from_function ($here);
+
+  return $html_str;
+
+}
+
+function array_dollar_get_store_of_key_of_value_of_here ($key, $val, $her) {
+  $here = __FUNCTION__;
+#  entering_in_function ($here . " ($key, $val, $her)");
+
+#  debug_n_check ($here , '$_GET', $_GET);
+
+  if ($val == '') {
+      print_fatal_error ($her,
+      "second argument \$val were NOT EMPTY<br>",
+      "\$val is EMPTY",
+      "Check");
+  }
+  
+  $_GET[$key] = $val;
+  
+  check_is_key_unique_in_array ($key, $_GET);
+
+  $_SESSION['last_dollar_get_register'][$key] = $val;
+  $_SESSION['get_variable_register'][$key] = $val;
+  father_n_son_stack_entity_push_of_father_of_son ($key, 'GET');
+  print_long ($here , "\$_GET[$key] = $val");
+
+#  debug_n_check ($here , '$_GET', $_GET);
+#  exiting_from_function ($here);
+
+  return;
+
+}
+
 function array_dollar_get_retrieve_value_of_key ($key, $mod) {
   $here = __FUNCTION__;
 #  entering_in_function ($here . " ($key, $mod)");
@@ -368,7 +425,7 @@ function array_dollar_get_retrieve_value_of_key ($key, $mod) {
         $message .= "Check that file >$fno_sur< exists";
     }
     else {
-      $message .= " Check that function >${key}_build< is implemented and accessible";
+      $message .= "Check that function >${key}_build< is implemented and accessible or its module not required in irp_functions.php";
     }
     fatal_error ($here , $message);
 

@@ -45,12 +45,13 @@ function command_action_of_action_name_of_argument ($nam_act, $str_arg) {
       case 'write' :
           tools_write ($str_arg);
           break;         
-      default:
-          print_fatal_error ($here, 
-          "action were defined",
-          "$nam_act",
-          "Please select one of : debug | delete | display | load | read | remove | set | unset | write"
-          );
+      default:  
+          $lan = $_SESSION['parameters']['language'];
+          $en_mes = "no action is defined. Using <i>display</i> as default";
+          $la_mes = language_translate_of_en_string_of_language ($en_mes, $lan); 
+          $la_Mes = string_html_capitalized_of_string ($la_mes);
+          warning ($here, $la_Mes);
+          tools_display ($str_arg);
       }
   
   exiting_from_function ($here);

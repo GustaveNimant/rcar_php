@@ -11,7 +11,7 @@ function item_current_action_display_links_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
 
-    $nam_blo_cur = irp_provide ('block_name', $here);
+    $nam_blo_cur = irp_provide ('block_current_name', $here);
     $nam_ent = irp_provide ('entry_name', $here);
     $lan = $_SESSION['parameters']['language'];
 
@@ -21,7 +21,7 @@ function item_current_action_display_links_build () {
     debug_n_check ($here , '$nof_mod',  $nof_mod);
     $la_act_ite = language_translate_of_en_string_of_language ($en_act_ite, $lan);
 
-    $html_str .= '<a href="'. $nof_mod . '?entry_name=' . $nam_ent . '&block_name=' . $nam_blo_cur . '">';
+    $html_str .= '<a href="'. $nof_mod . '?entry_name=' . $nam_ent . '&block_current_name=' . $nam_blo_cur . '">';
     $html_str .= $la_act_ite;
     $html_str .= '</a>';
 

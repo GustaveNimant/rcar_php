@@ -26,7 +26,7 @@ function block_information_texts_defaults_array_en_build () {
   $sur_ite = irp_provide ('block_surname', $here);
   $act_ite = irp_provide ('block_action', $here);
   $sur_ent = irp_provide ('entry_surname', $here);
-  $nam_ite = irp_provide ('block_name', $here);
+  $nam_ite = irp_provide ('block_current_name', $here);
   $nam_ent = irp_provide ('entry_name', $here);
 
   $kin_ite_a = array ('article', 'paragraph', 'property', 'rule');
@@ -66,7 +66,7 @@ function block_information_texts_specific_array_en_build () {
   $sur_ite = irp_provide ('block_surname', $here);
   $act_ite = irp_provide ('block_action', $here);
   $sur_ent = irp_provide ('entry_surname', $here);
-  $nam_ite = irp_provide ('block_name', $here);
+  $nam_ite = irp_provide ('block_current_name', $here);
   $nam_ent = irp_provide ('entry_name', $here);
   
   $inf_ite_txt_spe_a = array (); 

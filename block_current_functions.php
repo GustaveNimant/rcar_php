@@ -14,7 +14,7 @@ function block_current_content_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
  
-  $nam_blo_cur = irp_provide ('block_name', $here); 
+  $nam_blo_cur = irp_provide ('block_current_name', $here); 
   $con_blo_a = irp_provide ('block_content_by_block_name_array', $here);
   $con_blo_cur = array_retrieve_value_of_key_of_array ($nam_blo_cur, $con_blo_a);
 
@@ -72,7 +72,7 @@ function block_current_file_fullname_build () {
 
   $ext_blo = $_SESSION['parameters']['block_text_filename_extension'];
 
-  $nam_blo_cur = irp_provide ('block_name', $here);
+  $nam_blo_cur = irp_provide ('block_current_name', $here);
   $fno_blo_cur = $hdir . $nam_blo_cur . '.' .  $ext_blo;
 
   debug_n_check ($here , '$fno_blo_cur', $fno_blo_cur);

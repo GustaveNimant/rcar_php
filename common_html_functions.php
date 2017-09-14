@@ -1,11 +1,13 @@
 <?php
 
-require_once "management_functions.php";
 require_once "language_functions.php";
 require_once "language_translate_functions.php";
 require_once "file_functions.php";
 
-$module = "common_html_functions";
+$module = module_name (__FILE__);
+
+$Documentation[$module]['placeholder'] = "in a textarea a documentation or example text to be over-written";
+
 # entering_in_module ($module);
 
 function common_html_page_head_build () {
@@ -50,7 +52,7 @@ function common_html_page_tail_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $html_str = '';
+  $html_str  = '';
   $html_str .= '  </body> ' . "\n";
   $html_str .= '</html> ' . "\n";
 
@@ -66,9 +68,10 @@ function common_html_background_color_of_html ($tit) {
 
   $html_str = '';
   if ($tit != "") {
+    $html_str .= "\n";
     $html_str .= '<div class="my-div"> ';
-    $html_str .= $tit; 
-    $html_str .= '</div> '. "\n";
+    $html_str .= $tit . "\n";
+    $html_str .= '</div> ' . "\n";
   }
 
 #  debug_n_check ($here , '$html_str', $html_str);
@@ -77,16 +80,17 @@ function common_html_background_color_of_html ($tit) {
   return $html_str;
 }
 
-function common_html_page_title_centered_of_title ($tit) {
+function common_html_page_title_centered_of_title ($tit, $shi) {
   $here = __FUNCTION__;
-  entering_in_function ($here);
+  entering_in_function ($here . " ($tit, $shi)");
 
   $html_str = '';
   if ($tit != "") {
-      $html_str .= '<center> ';
+      $html_str .= '<center> ' . "\n";
+      $html_str .= $shi;
       $html_str .= '<div class="my-div"> ';
       $html_str .= $tit; 
-      $html_str .= '</div> '. "\n";
+      $html_str .= '</div> ' . "\n";
       $html_str .= '</center> ';
   }
 
@@ -102,7 +106,7 @@ function common_html_entitled_text_of_title_of_text ($tit, $html_txt) {
 #  debug_n_check ($here , '$tit', $tit);
 #  debug_n_check ($here , '$html_txt', $html_txt);
   
-  $html_str = '';
+  $html_str  = '';
   $html_str .= common_html_background_color_of_html ($tit);
   $html_str .= "<br>\n"; 
   $html_str .= $html_txt; 
@@ -114,50 +118,108 @@ function common_html_entitled_text_of_title_of_text ($tit, $html_txt) {
   return $html_str;
 }
 
-function enter_below_your_text_section_of_action ($nam_act){
+function method_get_in_form_of_action_module ($mod_act, $shi) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_act)");
+  entering_in_function ($here . " ($mod_act, $shi)");
 
-  $en_tit = 'enter your '. $nam_act . ' below'; 
-  $la_tit = language_translate_of_en_string_of_language ($en_tit, $lan);
-  $la_tit = ucfirst ($la_tit);
-  $htm_tit = common_html_background_color_of_html ($la_tit);
+  $html_str  = '';
+  $html_str .= $shi;
+  $html_str .= 'method="get" ';
+  $html_str .= 'action="'. $mod_act . '"';
 
-  $html_str = '';
-  $html_str .= $htm_tit;
-  $html_str .= '<br> ';
-  $html_str .= '<textarea name="' . $nam_act . '" rows="2" cols="100" /> ';
-  $html_str .= '</textarea> ' . "\n";
-
-#  debug_n_check ($here , '$html_str', $html_str);
+  debug_n_check ($here , '$html_str', $html_str);
   exiting_from_function ($here);
-
+  
   return $html_str;
-
 }
 
-function enter_below_your_text_and_get_section_of_action ($nam_act){
+function textarea_of_name_of_en_placeholder ($nam, $en_pla, $shi) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_act)");
+  entering_in_function ($here . " ($nam, $en_pla, $shi)");
 
-  $en_tit = 'enter your '. $nam_act . ' below'; 
-  $la_tit = language_translate_of_en_string_of_language ($en_tit, $lan);
-  $la_tit = string_html_capitalized_of_string ($la_tit);
-  $htm_tit = common_html_background_color_of_html ($la_tit);
+  $lan = $_SESSION['parameters']['language'];
+  $la_Pla = ucfirst (language_translate_of_en_string_of_language ($en_pla, $lan));
 
-  $html_str = '';
-  $html_str .= $htm_tit;
-  $html_str .= '<br> ';
-  $html_str .= '<textarea name="' . $nam_act . '" rows="2" cols="100" /> ';
+  $html_str  = '';
+  $html_str .= '<textarea ' . "\n"; 
+  $html_str .= $shi;
+  $html_str .= 'name="' . $nam . '" ';
+  $html_str .= 'rows="2" cols="100" ';
+  $html_str .= 'placeholder="';
+  $html_str .= $la_Pla;
+  $html_str .= '">' . "\n";
   $html_str .= '</textarea> ' . "\n";
-  
-  $html_str .= '<input type="hidden" name="item_content_previous" value="' . $con_ite . '"> ';
 
-#  debug_n_check ($here , '$html_str', $html_str);
+  debug_n_check ($here , '$html_str', $html_str);
   exiting_from_function ($here);
-
+  
   return $html_str;
+}
 
+function inputtypetext_of_name_of_en_placeholder ($nam, $en_pla, $shi) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($nam, $en_pla, $shi)");
+
+  $lan = $_SESSION['parameters']['language'];
+  $la_Pla = ucfirst (language_translate_of_en_string_of_language ($en_pla, $lan));
+
+  $html_str  = '';
+  $html_str .= '<input type="text" ' . "\n"; 
+  $html_str .= $shi;
+  $html_str .= 'name="' . $nam . '" ';
+  $html_str .= 'size="40" ';
+  $html_str .= 'placeholder="';
+  $html_str .= $la_Pla;
+  $html_str .= '"> ' . "\n";
+
+  debug_n_check ($here , '$html_str', $html_str);
+  exiting_from_function ($here);
+  
+  return $html_str;
+}
+
+
+function inputtypesubmit_of_name_of_en_value_of_shift ($nam, $en_val, $shi) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($nam, $shi)");
+
+  $lan = $_SESSION['parameters']['language'];
+  $la_Val = ucfirst (language_translate_of_en_string_of_language ($en_val, $lan));
+
+  $html_str  = '';
+  $html_str .= '<input type="submit" ' . "\n"; 
+  $html_str .= $shi;
+  if ( ! is_empty_of_string ($nam)) {
+      $html_str .= 'name="' . $nam . '" ';
+  }
+  $html_str .= 'value="' . $la_Val . '" ';
+  $html_str .= '"> ' . "\n";
+
+  debug_n_check ($here , '$html_str', $html_str);
+  exiting_from_function ($here);
+  
+  return $html_str;
+}
+
+function span_class_of_name_of_en_text ($nam, $en_txt) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($str)");
+
+  $lan = $_SESSION['parameters']['language'];
+  $la_txt = language_translate_of_en_string_of_language ($en_txt, $lan);
+
+  $html_str  = '';
+  $html_str .= '<span class="my-fieldset"> ';
+  $html_str .= $nam . ' : ';
+  $html_str .= '<b><font color="red"> ';
+  $html_str .= $la_txt;
+  $html_str .= '</font></b> ';
+  $html_str .= '</span> ';
+
+  debug_n_check ($here , '$html_str', $html_str);
+  exiting_from_function ($here);
+  
+  return $html_str;
 }
 
 function common_html_css_survol_of_la_title ($la_tit) {

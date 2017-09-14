@@ -15,7 +15,7 @@ function block_delete_save_section_page_title_build (){
   $lan = $_SESSION['parameters']['language'];
   $sur_ent = irp_provide ('entry_surname', $here);
   $sur_ite = irp_provide ('block_surname', $here);
-  $kin_ite = irp_provide ('entry_block_kind', $here);
+  $kin_ite = irp_provide ('entry_item_kind', $here);
 
   $en_tit = 'for entry';
   $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
@@ -45,7 +45,7 @@ function block_delete_save_catalog_actualize_build (){
   entering_in_function ($here);
 
   $nam_ent = irp_provide ('entry_name', $here);
-  $nam_ite = irp_provide ('block_name', $here);
+  $nam_ite = irp_provide ('block_current_name', $here);
 
   debug_n_check ($here , "input entry_name", $nam_ent);
   debug_n_check ($here , "input block name", $nam_ite);
@@ -53,7 +53,7 @@ function block_delete_save_catalog_actualize_build (){
   $dir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
 
   $cat_ite = irp_provide ('block_name_catalog', $here);
-  $con = block_name_catalog_delete_of_entry_name_of_block_name_catalog_of_block_name ($nam_ent, $cat_ite, $nam_ite);
+  $con = block_name_catalog_delete_of_entry_name_of_block_name_catalog_of_block_current_name ($nam_ent, $cat_ite, $nam_ite);
   $ext_lis = irp_provide ('block_name_catalog_filename_extension', $here);
   $nof = "Block_name_catalog." . $ext_lis;
 
@@ -74,7 +74,7 @@ function block_delete_save_delete_file_build () {
   entering_in_function ($here);
 
   $nam_ent = irp_provide ('entry_name', $here);
-  $nam_ite = irp_provide ('block_name', $here);
+  $nam_ite = irp_provide ('block_current_name', $here);
 
   $dir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
   $ext_txt = $_SESSION['parameters']['block_text_filename_extension'];
@@ -104,7 +104,7 @@ function block_delete_save_build () {
   entering_in_function ($here);
 
   $nam_ent = irp_provide ('entry_name', $here);
-  $nam_blo = irp_provide ('block_name', $here);
+  $nam_blo = irp_provide ('block_current_name', $here);
   $nof_mod = 'entry_display.php';
 
   $lan = $_SESSION['parameters']['language'];

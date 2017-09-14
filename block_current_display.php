@@ -9,7 +9,7 @@ $module = "block_current_display";
 
 father_n_son_stack_entity_push_of_current_entity ($module);
 
-irp_path_clean_register_of_top_key_of_bottom_key ('block_current_display', 'block_name');
+irp_path_clean_register_of_top_key_of_bottom_key ('block_current_display', 'block_current_name');
 
 $html_str = irp_provide ($module, $module . "_build");
 

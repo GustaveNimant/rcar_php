@@ -58,46 +58,6 @@ function button_submit_hidden_hidden_make ($nam_ent, $nam_ite, $val_sub, $tit_bu
 
 }
 
-function button_submit_justify_justify ($nam_ent, $nam_ite) {
-  $here = __function__;
-  entering_in_function ($here);
-
-  debug_n_check ($here , " input entry_name name", $nam_ent);
-  debug_n_check ($here , " input item name", $nam_ite);
-
-  global $item_justification_filename_extension;
-  $ext_jus = $item_justification_filename_extension;
-
-  $hdir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
-  $nof_j = $nam_ite . '.' . $ext_jus;
-
-  $path = $hdir . $nof_j;
-  $con_jus = file_content_read($path);
-
-  $tit  = '';
-  $tit .= language_translate_of_en_string_of_language ('modify the justification for', $lan);
-  $tit .= ' > ' . $nam_ite . "<\n";
-  $tit .= $con_jus;
-
-  $val_sub = language_translate_of_en_string_of_language ('justification', $lan);
-
-  $script_action_j  = script_array_retrieve_module_of_function ($here);
-
-  $html_str =  '';
- 
-  $html_str .= '<form action="' . $script_action_j;
-  $html_str .= '" method="get"> ' .  "\n";
-  $html_str .= button_submit_hidden_hidden_make ($nam_ent, $nam_ite, $val_sub, $tit);
-  $html_str .= '</form> ' . "\n";
-
-
-  debug_n_check ($here , '$html_str', $html_str);
-  exiting_from_function ($here);
-
-  return $html_str;
-
-}
-
 function button_submit_item_delete_of_entry_name_of_item_name_of_item_name_array ($nam_ent, $nam_ite, $nam_ite_a) {
   $here = __function__;
   entering_in_function ($here, "($nam_ent, $nam_ite, $nam_ite_a[0])");

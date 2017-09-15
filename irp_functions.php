@@ -1,13 +1,7 @@
 <?php
 
-/* require_once "item_content_linked_by_item_name_array_functions.php"; */
-/* require_once "item_delete_functions.php"; */
-/* require_once "item_justify_save_functions.php"; */
-/* require_once "item_list_neworder_functions.php"; */
-/* require_once "item_name_array_functions.php";  */
-/* require_once "item_name_functions.php"; */
-/* require_once "item_rename_functions.php"; */
-/* require_once "item_rename_save_functions.php"; */
+require_once "error_functions.php";
+
 require_once "block_content_by_block_name_array_functions.php";
 require_once "block_content_linked_by_block_name_array_functions.php";
 require_once "block_current_display_functions.php";

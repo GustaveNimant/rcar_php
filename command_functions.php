@@ -4,7 +4,6 @@ require_once "array_functions.php";
 require_once "irp_functions.php";
 require_once "management_functions.php";
 require_once "entry_information_functions.php";
-require_once "item_functions.php";
 require_once "bubble_functions.php";
 require_once "entry_display_functions.php";
 require_once "surname_by_name_array_functions.php";

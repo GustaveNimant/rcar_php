@@ -1,11 +1,10 @@
 <?php
 
 require_once "string_functions.php";
-require_once "trace_register.php";
 require_once "debug_html_functions.php";
 require_once "debug_array_functions.php";
 
-$module = "debug_functions";
+$module = module_name (__FILE__);
 
 function print_d ($str) {
   file_put_contents ("debug", $str, FILE_APPEND); 
@@ -70,30 +69,6 @@ function debug_string ($her, $str) {
     print_d  ("\n<DEBUG> in function : $her: $str\n");
 };
 
-function fatal_error ($her, $mes){
-    $str_htm = htmlentities ($mes, ENT_NOQUOTES, "UTF-8"); 
-    print ('<html>');
-    print ('<body>');
-    print ('<br><b><font color=red>Fatal Error</font></b> in <i>' . $her . '</i><br> ' . $str_htm . '<br>');
-    print '<br>Backtrace:';
-    print '<pre> ';
-    debug_print_backtrace(); 
-    flush ();
-    print '</pre> ';
-    print ('</body>');
-    print '</html> ';
-
-    die ();
-}
-
-function print_fatal_error ($her, $mes_exp, $mes_fou, $mes_cur){
-    $mes  = '<br>';
-    $mes .= '&nbsp;Expecting : ' . $mes_exp . '<br> '; 
-    $mes .= '&nbsp;Found : ' . $mes_fou . '<br> '; 
-    $mes .= '&nbsp;Cure : ' . $mes_cur;
-    fatal_error ($her, $mes);
-}
-
 function debug ($nam_fun, $nam_var, $var) {
 
     if ( ! $_SESSION['debug_active']) {
@@ -134,19 +109,6 @@ function debug ($nam_fun, $nam_var, $var) {
   }
   return;
 };
-
-function warning ($her, $en_mes){
-    $lan = $_SESSION['parameters']['language'];
-
-/* Improve content of $en_mes has variable names */
-    $en_txt = 'warning in';
-    $la_txt = language_translate_of_en_string_of_language ($en_txt, $lan); 
-
-    /* $la_mes = language_translate_of_en_string_of_language ($en_mes, $lan);  */
-
-    $la_Txt = string_html_capitalized_of_string ($la_txt);
-    print ('<br>' . $la_Txt . ' : ' . $her . '<br> ' . $en_mes . '<br> ');
-}
 
 function check ($her, $nam, $var) {
   if (count($var) == 0) {

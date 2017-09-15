@@ -11,61 +11,60 @@ require_once "bubble_functions.php";
 $module = "apropos_functions";
 # entering_in_module ($module);
 
-function apropos_content_by_item_name_array_build () {
+function apropos_content_by_block_name_array_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $nam_ent = irp_provide ('entry_name', $here);
-  $nam_ite_a = irp_provide ('item_name_array', $here);
+  $nam_blo_a = irp_provide ('block_name_array', $here);
 
-  if (is_empty_of_array ($nam_ite_a)) {
-    $con_by_nam_ite_a = array ();
+  if (is_empty_of_array ($nam_blo_a)) {
+    $con_by_nam_blo_a = array ();
   }
   else {
     $hdir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
     debug_n_check ($here , "hdir", $hdir);
 
-    global $item_text_filename_extension;
-    $ext_txt = $item_text_filename_extension;
+    $ext_blo = $_SESSION['parameters']['block_text_filename_extension'];
 
-    foreach ($nam_ite_a as $nam_ite) {
-      $fnof_txt = $hdir . $nam_ite . '.' .  $ext_txt;
+    foreach ($nam_blo_a as $nam_blo) {
+      $fno_txt = $hdir . $nam_blo . '.' .  $ext_blo;
       
-      $con_ite = file_content_read ($fnof_txt);
+      $con_ite = file_content_read ($fno_txt);
       
       /* $con_ite =  item_content_filtered_after_ckeditor_of_string ($con_ite) */;
       
-      $con_by_nam_ite_a[$nam_ite] = $con_ite;
+      $con_by_nam_blo_a[$nam_blo] = $con_ite;
     }
   }
 
-  # debug ($here , "output apropos_content_by_item_name_array", $con_by_nam_ite_a);
+  # debug ($here , "output apropos_content_by_item_name_array", $con_by_nam_blo_a);
   exiting_from_function ($here);
 
-  return $con_by_nam_ite_a;
+  return $con_by_nam_blo_a;
 };
 
 
-function apropos_display_item_html_make_of_entry_name_of_item_name_of_item_content_of_item_name_array_of_language ($nam_ent, $nam_ite, $con_ite, $nam_ite_a, $lan) {
+function apropos_display_item_html_make_of_entry_name_of_item_name_of_item_content_of_item_name_array_of_language ($nam_ent, $nam_blo, $con_ite, $nam_blo_a, $lan) {
   $here = __FUNCTION__;
-  entering_in_function ($here . "($nam_ent, $nam_ite, $con_ite, $nam_ite_a[0], $lan)");
+  entering_in_function ($here . "($nam_ent, $nam_blo, $con_ite, $nam_blo_a[0], $lan)");
 
   $la_str = language_translate_of_en_string_of_language ('Action', $lan);
 
   $html_str = '';
 
-  $html_str .= '<b> ' . $nam_ite . '</b> ';
+  $html_str .= '<b> ' . $nam_blo . '</b> ';
 
   $html_str .= '<span id="right"> ';
   $html_str .= '<table> '; 
   $html_str .= '<tr><td> ';
-  $html_str .= button_submit_modify_item_name ($nam_ent, $nam_ite);
+  $html_str .= button_submit_modify_item_name ($nam_ent, $nam_blo);
   $html_str .= '</td><td> ';
-  $html_str .= button_submit_modify_item_content ($nam_ent, $nam_ite);
+  $html_str .= button_submit_modify_item_content ($nam_ent, $nam_blo);
   $html_str .= '</td><td> ';
-  $html_str .= button_submit_justify_justify ($nam_ent, $nam_ite);
+  $html_str .= button_submit_justify_justify ($nam_ent, $nam_blo);
   $html_str .= '</td><td> ';
-  $html_str .= button_submit_item_delete_of_entry_name_of_item_name_of_item_name_array ($nam_ent, $nam_ite, $nam_ite_a);
+  $html_str .= button_submit_item_delete_of_entry_name_of_item_name_of_item_name_array ($nam_ent, $nam_blo, $nam_blo_a);
   $html_str .= '</td></tr></table> ';
   $html_str .= '</span> ';
   $html_str .= '<br> ';
@@ -86,15 +85,15 @@ function apropos_display_item_array_html_build () {
   $lan = $_SESSION['parameters']['language'];
   $nam_ent = irp_provide ('entry_name', $here);
 
-  $con_by_nam_ite_a = irp_provide ('item_content_linked_by_item_name_array', $here);
-  # debug_n_check ($here , '$con_by_nam_ite_a', $con_by_nam_ite_a);
+  $con_by_nam_blo_a = irp_provide ('item_content_linked_by_item_name_array', $here);
+  # debug_n_check ($here , '$con_by_nam_blo_a', $con_by_nam_blo_a);
 
-  $nam_ite_a = irp_provide ('item_name_array', $here);
-  # debug_n_check ($here , '$nam_ite_a', $nam_ite_a);
+  $nam_blo_a = irp_provide ('item_name_array', $here);
+  # debug_n_check ($here , '$nam_blo_a', $nam_blo_a);
 
   $html_str = '';
-  foreach ($con_by_nam_ite_a as $nam_ite => $con_ite) {
-      $html_str .= apropos_display_item_html_make_of_entry_name_of_item_name_of_item_content_of_item_name_array_of_language ($nam_ent, $nam_ite, $con_ite, $nam_ite_a, $lan);
+  foreach ($con_by_nam_blo_a as $nam_blo => $con_ite) {
+      $html_str .= apropos_display_item_html_make_of_entry_name_of_item_name_of_item_content_of_item_name_array_of_language ($nam_ent, $nam_blo, $con_ite, $nam_blo_a, $lan);
   }
    
   debug_n_check ($here , '$html_str', $html_str);

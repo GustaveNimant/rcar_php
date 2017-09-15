@@ -1,6 +1,7 @@
 <?php
 
-$module = "language_functions";
+$module = module_name (__FILE__);
+
 # entering_in_module ($module);
 
 function language_from_navigator () {
@@ -14,18 +15,6 @@ function language_from_navigator () {
 
   return $lan;
 }
-
-/* function display_string_language ($here, $lan, $key) { */
-/*   debug_n_check ($here , "language", $lan); */
-/*   debug_n_check ($here , "key", $key); */
-
-/*   global $here; */
-/*   $str = ($here[$lan][$key]); */
-/*   debug_n_check ($here , "string language", $str); */
-  
-/*   return $str; */
-
-/* }; */
 
 function language_build () {
   $here = __FUNCTION__;
@@ -52,4 +41,5 @@ function language_build () {
 }
 
 # exiting_from_module ($module);
+
 ?>

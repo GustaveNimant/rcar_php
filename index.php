@@ -74,6 +74,7 @@ $_SESSION['parameters']['stack_function_level_array'] = array ();
 $points = "....|....|....|....|....|....|....|....|....|....|....|....|....|....|";
 $_SESSION['parameters']['stack_function_level_points'] = $points;
 $_SESSION['parameters']['stack_function_level_maximum'] = 200;
+$_SESSION['parameters']['html_text_zone_size'] = 40;
 
 $_SESSION['parameters']['select_size'] = 6;
 $_SESSION['parameters']['version'] = 0.01;

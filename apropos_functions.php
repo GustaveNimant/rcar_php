@@ -31,9 +31,6 @@ function apropos_content_by_block_name_array_build () {
       $fno_blo = $hdir . $nam_blo . '.' .  $ext_blo;
       
       $con_blo = file_content_read ($fno_blo);
-      
-      /* $con_blo =  block_content_filtered_after_ckeditor_of_string ($con_blo) */;
-      
       $con_by_nam_blo_a[$nam_blo] = $con_blo;
     }
   }
@@ -49,7 +46,7 @@ function apropos_display_item_html_make_of_entry_name_of_item_name_of_item_conte
   $here = __FUNCTION__;
   entering_in_function ($here . "($nam_ent, $nam_ite, $con_ite, $nam_ite_a[0], $lan)");
 
-  $la_str = language_translate_of_en_string_of_language ('Action', $lan);
+  $la_Str = ucfirst (language_translate_of_en_string_of_language ('action', $lan));
 
   $html_str = '';
 

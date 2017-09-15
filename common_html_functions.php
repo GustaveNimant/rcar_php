@@ -133,6 +133,37 @@ function method_get_in_form_of_action_module ($mod_act, $shi) {
   return $html_str;
 }
 
+function form_action_get_of_script_nameoffile_of_en_value_of_en_text_of_shift ($nof_scr, $en_val, $en_txt, $shi) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($nof_scr, $en_val, $en_txt, $shi)");
+
+  $lan = $_SESSION['parameters']['language'];
+  $la_val = ucfirst (language_translate_of_en_string_of_language ($en_val, $lan));
+  $la_txt = ucfirst (language_translate_of_en_string_of_language ($en_txt, $lan));
+
+  $html_str  = '';
+  $html_str .= $shi . '<form ' . "\n";
+  $html_str .= $shi . $shi;
+  $html_str .= 'action="' . $nof_scr . '" ';
+  $html_str .= 'method="get"' . "\n";
+  $html_str .= $shi . $shi . '> ' . "\n";
+  $html_str .= $shi . $shi;
+  $html_str .= '<input type="submit" value="';
+  $html_str .= $la_val;
+  $html_str .= '" title="';
+  $html_str .= $la_txt;
+  $html_str .= '" ';
+  $html_str .= 'font-variant:small-caps; background-color:red ';
+  $html_str .= '> ' . "\n";
+  $html_str .= $shi;
+  $html_str .= '</form> ' . "\n";
+
+  debug_n_check ($here , '$html_str', $html_str);
+  exiting_from_function ($here);
+  
+  return $html_str;
+}
+
 function textarea_of_name_of_en_placeholder ($nam, $en_pla, $shi) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam, $en_pla, $shi)");
@@ -163,13 +194,20 @@ function inputtypetext_of_name_of_en_placeholder ($nam, $en_pla, $shi) {
   $lan = $_SESSION['parameters']['language'];
   $la_Pla = ucfirst (language_translate_of_en_string_of_language ($en_pla, $lan));
 
+  $tex_siz = $_SESSION['parameters']['html_text_zone_size'];
+
   $html_str  = '';
   $html_str .= '<input type="text" ' . "\n"; 
   $html_str .= $shi;
-  $html_str .= 'name="' . $nam . '" ';
-  $html_str .= 'size="40" ';
+  $html_str .= 'name="';
+  $html_str .= $nam;
+  $html_str .= '" ' . "\n";
   $html_str .= 'placeholder="';
   $html_str .= $la_Pla;
+  $html_str .= '" ' . "\n";
+  $html_str .= 'size="';
+  $html_str .= $tex_siz;
+  $html_str .= '" ' . "\n";
   $html_str .= '"> ' . "\n";
 
   debug_n_check ($here , '$html_str', $html_str);

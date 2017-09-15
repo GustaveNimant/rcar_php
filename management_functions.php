@@ -4,6 +4,7 @@ require_once "debug_functions.php";
 
 $module = "management_functions";
 
+
 function is_traced ($nam_fun) {
 /* Do not trace irp stuff */
 /* Do not trace user stuff */

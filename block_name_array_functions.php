@@ -50,11 +50,11 @@ function block_name_array_build () {
   entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
-  $cat_ite = irp_provide ('block_name_catalog', $here);
-  debug ($here , '$cat_ite', $cat_ite);
+  $cat_blo = irp_provide ('block_name_catalog', $here);
+  debug ($here , '$cat_blo', $cat_blo);
 
   $glue = $_SESSION['parameters']['glue']; 
-  $nam_blo_a = explode ($glue, $cat_ite);
+  $nam_blo_a = explode ($glue, $cat_blo);
 
   if (! has_values_unique_of_any_array ($nam_blo_a)){
       $en_mes_1 = 'the array';

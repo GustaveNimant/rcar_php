@@ -1,7 +1,6 @@
 <?php
 
 require_once "array_functions.php";
-require_once "item_modify_save_functions.php";
 require_once "file_functions.php";
 require_once "debug_functions.php";
 require_once "button_submit_functions.php";
@@ -25,7 +24,7 @@ function apropos_content_by_block_name_array_build () {
     $hdir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
     debug_n_check ($here , "hdir", $hdir);
 
-    $ext_blo = $_SESSION['parameters']['block_text_filename_extension'];
+    $ext_blo = $_SESSION['parameters']['block_filename_extension'];
 
     foreach ($nam_blo_a as $nam_blo) {
       $fno_txt = $hdir . $nam_blo . '.' .  $ext_blo;

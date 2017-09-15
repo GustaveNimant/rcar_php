@@ -417,18 +417,20 @@ function array_dollar_get_retrieve_value_of_key ($key, $mod) {
   $val = trim ($val);
 
   if ($val == '') {
-    print '$_GET array is :<br>';
-    print_r ($_GET);
-    $message  = " Fatal Error in >$mod< <br>   GET[" . $key ."] is EMPTY<br>";
+    print_html_array ($here,'<br>$_GET array is :' , $_GET);
+
     if (is_substring_of_substring_off_string ('_surname', $key)) {
         $fno_sur =  surname_catalog_fullnameoffile_make ();
-        $message .= "Check that file >$fno_sur< exists";
+        $check = "Check that file >$fno_sur< exists";
     }
     else {
-      $message .= "Check that function >${key}_build< is implemented and accessible or its module not required in irp_functions.php";
+      $check = "Check that :<br>&nbsp;&nbsp;function >${key}_build< is implemented and accessible<br>&nbsp;&nbsp;or that <i>require_once</i> of its module-file is lacking in irp_functions.php";
     }
-    fatal_error ($here , $message);
-
+ 
+    print_fatal_error ($mod , 
+    '$_GET[\'' . $key . '\'] were NOT empty',
+    'it is EMPTY',
+    $check);
   } else {
 
     check_is_key_unique_in_array ($key, $_GET);

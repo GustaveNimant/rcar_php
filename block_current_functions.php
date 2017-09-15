@@ -70,7 +70,7 @@ function block_current_file_fullname_build () {
   $hdir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
   debug_n_check ($here , '$hdir', $hdir);
 
-  $ext_blo = $_SESSION['parameters']['block_text_filename_extension'];
+  $ext_blo = $_SESSION['parameters']['block_filename_extension'];
 
   $nam_blo_cur = irp_provide ('block_current_name', $here);
   $fno_blo_cur = $hdir . $nam_blo_cur . '.' .  $ext_blo;

@@ -26,7 +26,7 @@ function label_information_array_en_of_label ($nam_lab) {
       $label_information = 
           array (
               'label_kind' => 'href',
-              'item_kind' => 'undefined',
+              'block_kind' => 'undefined',
               'url_relative' => 'command.php',
               'bubble_href' => 'select and execute a command',
               'title' => 'command',
@@ -39,7 +39,7 @@ function label_information_array_en_of_label ($nam_lab) {
           array (
               'label_kind' => 'href',
               'url_relative' => 'entry_list.php',
-              'item_kind' => 'undefined',
+              'block_kind' => 'undefined',
               'kind_justification' => 'justification',
               'bubble_href' => 'list of entries',
               'title' => 'entries',
@@ -51,7 +51,7 @@ function label_information_array_en_of_label ($nam_lab) {
       $label_information = 
           array (
               'label_kind' => 'apropos',
-              'item_kind' => 'undefined',
+              'block_kind' => 'undefined',
               'kind_justification' => 'justification',
               'url_relative' => 'apropos.php',
               'bubble_href' => 'ARCE Version',
@@ -63,7 +63,7 @@ function label_information_array_en_of_label ($nam_lab) {
       $label_information = 
           array (
               'label_kind' => 'text',
-              'item_kind' => 'paragraph',
+              'block_kind' => 'paragraph',
               'kind_justification' => 'justification',
               'url_relative' => 'home.php',
               'bubble_href' => 'home',
@@ -76,7 +76,7 @@ function label_information_array_en_of_label ($nam_lab) {
       $label_information = 
           array (
               'label_kind' => 'constant',
-              'item_kind' => 'undefined',
+              'block_kind' => 'undefined',
               'kind_justification' => 'justification',
               'url_relative' => 'language_selection.php',
               'bubble_href' => 'modify the language',

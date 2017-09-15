@@ -5,21 +5,21 @@ require_once "irp_functions.php";
 
 # "License : This code is available under the Creative Commons License https://creativecommons.org/licenses/by-sa/3.0/legalcode.fr";
 
-$module = "item_delete_functions";
+$module = "block_current_delete_functions";
 # entering_in_module ($module);
 
 /* First Section Page Title */
 
-function item_delete_section_page_title_build (){
+function block_current_delete_section_page_title_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
   $sur_ent = irp_provide ('entry_surname', $here);
-  $sur_ite = irp_provide ('item_surname', $here);
-  $kin_ite = irp_provide ('entry_item_kind', $here);
+  $sur_ite = irp_provide ('block_surname', $here);
+  $kin_blo = irp_provide ('entry_block_kind', $here);
 
-  $en_tit = 'delete the ' . $kin_ite;  
+  $en_tit = 'delete the ' . $kin_blo;  
   $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
   $la_Tit .= ' <i><b> ' . $sur_ite . '</b></i> '; 
@@ -37,11 +37,11 @@ function item_delete_section_page_title_build (){
   return $html_str;
 }
 
-/* Second Section Item Delete Justify */
+/* Second Section Block Delete Justify */
 
-/* Second Section Item Delete Justify Title */
+/* Second Section Block Delete Justify Title */
 
-function item_delete_section_justify_title_build (){
+function block_current_delete_section_justify_title_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -59,14 +59,14 @@ function item_delete_section_justify_title_build (){
   return $html_str;
 }
 
-/* Second Section Item Delete Justify Textarea */
+/* Second Section Block Delete Justify Textarea */
 
-function item_delete_section_justify_textarea_build (){
+function block_current_delete_section_justify_textarea_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $html_str  = '';
-  $html_str .= '<textarea name="item_delete_justification" rows="2" cols="100" />';
+  $html_str .= '<textarea name="block_current_delete_justification" rows="2" cols="100" />';
   $html_str .= '</textarea> ' . "\n";
 
   debug_n_check ($here , '$html_str',  $html_str);
@@ -75,15 +75,15 @@ function item_delete_section_justify_textarea_build (){
   return $html_str;
 }
 
-/* Second Section Item Delete Justify */
+/* Second Section Block Delete Justify */
 
-function item_delete_section_justify_build (){
+function block_current_delete_section_justify_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $html_str  = '';
-  $html_str .= irp_provide ('item_delete_section_justify_title', $here);
-  $html_str .= irp_provide ('item_delete_section_justify_textarea', $here);
+  $html_str .= irp_provide ('block_current_delete_section_justify_title', $here);
+  $html_str .= irp_provide ('block_current_delete_section_justify_textarea', $here);
 
   debug_n_check ($here , '$html_str',  $html_str);
   exiting_from_function ($here);
@@ -91,9 +91,9 @@ function item_delete_section_justify_build (){
   return $html_str;
 }
 
-/* Third Section Item Delete Save */
+/* Third Section Block Delete Save */
 
-function item_delete_section_save_build () {
+function block_current_delete_section_save_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -114,30 +114,30 @@ function item_delete_section_save_build () {
 
 }
 
-/* Page Item Delete */
+/* Page Block Delete */
 
-function item_delete_build (){
+function block_current_delete_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
   $nam_ent = irp_provide ('entry_name', $here);
-  $nam_ite = irp_provide ('item_name', $here);
+  $nam_ite = irp_provide ('block_current_name', $here);
   $nof_mod = 'entry_display.php';
 
-  $script_action = 'item_delete_save.php';
+  $script_action = 'block_current_delete_save.php';
 
   $html_str = '';
   $html_str .= irp_provide ('pervasive_html_initial_section', $here);
-  $html_str .= irp_provide ('item_delete_section_page_title', $here);
+  $html_str .= irp_provide ('block_current_delete_section_page_title', $here);
   $html_str .= '<br><br> ';
   $html_str .= '<form action="' . $script_action. '" method="get"> ' . "\n";
-  $html_str .= '<input type="hidden" name="item_name" value="';
+  $html_str .= '<input type="hidden" name="block_current_name" value="';
   $html_str .= $nam_ite;
   $html_str .= '">';
-  $html_str .= irp_provide ('item_delete_section_justify', $here);
+  $html_str .= irp_provide ('block_current_delete_section_justify', $here);
   $html_str .= '<br><br> ';
-  $html_str .= irp_provide ('item_delete_section_save', $here);
+  $html_str .= irp_provide ('block_current_delete_section_save', $here);
   $html_str .= '    </form> ' . "\n";
 
   $sur_ent = irp_provide ('entry_surname', $here);

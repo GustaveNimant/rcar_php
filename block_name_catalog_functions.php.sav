@@ -7,12 +7,12 @@ require_once "block_current_nameoffile_array_functions.php";
 
 require_once "irp_functions.php";
 
-$module = module_name (__FILE__);
-
-$Documentation[$module]['what is it'] = "it is a string as a list of block names separated by a blank";
-$Documentation[$module]['remark'] = "the order of the block names is defined by the user";
-
+$module = "block_name_catalog_functions";
 # entering_in_module ($module);
+
+$Documentation[$module]['block_name_array'] = "it is an array of block names";
+$Documentation[$module]['block_name_catalog'] = "it is a string as a list of block names separated by a space";
+$Documentation[$module]['block_name_catalog'] = "the order is defined";
 
 function block_name_catalog_fullnameoffile_of_entry_name ($nam_ent) {
   $here = __FUNCTION__;

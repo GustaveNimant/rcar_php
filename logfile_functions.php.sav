@@ -5,12 +5,9 @@ require_once "date_n_time_functions.php";
 
 # To be continued
 
-$Documentation[$module]['what is it'] = "a file where every side effect is written on disk";
-$Documentation[$module]['how is it done'] = "a side effect function returns a \$html_log";
-
-$module = module_name (__FILE__);
-
+$module = "logfile_functions";
 # entering_in_module ($module);
+
 
 function logfile_informations_en_of_action ($get_act) {
   $here = __FUNCTION__;
@@ -146,6 +143,8 @@ function logfile_html_write ($htm_log) {
   exiting_from_function ($here);
   return;
 };
+
+
 
 # exiting_from_module ($module);
 

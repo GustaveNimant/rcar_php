@@ -2,7 +2,7 @@
 
 require_once "array_functions.php";
 require_once "block_current_display_functions.php";
-require_once "item_kind_functions.php";
+require_once "block_kind_functions.php";
 require_once "bubble_functions.php";
 require_once "entry_display_functions.php";
 require_once "entry_information_functions.php";
@@ -13,7 +13,7 @@ require_once "surname_by_name_array_functions.php";
 $module = "entry_display_functions";
 $Documentation[$module]['entry_name'] = "is a directory name of php_server. i.e. any string expressed in the current language transformed in a Capitalized word, with blank transformed in underscores, without any accents.";
 $Documentation[$module]['entry_kind'] = "is a lower case word expressed in english. Ex.: text";
-$Documentation[$module]['entry_item_kind'] = "is a lower case word expressed in english. Ex.: paragraph";
+$Documentation[$module]['entry_block_kind'] = "is a lower case word expressed in english. Ex.: paragraph";
 $Documentation[$module]['block_name_array'] = "is the same as item_name_array";
 
 # entering_in_module ($module);
@@ -44,18 +44,18 @@ function block_current_display_and_link_of_surname_by_name_array_of_entry_name_o
   return $html_str;
 }
 
-function entry_item_kind_build () {
+function entry_block_kind_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $nam_ent = irp_provide ('entry_name', $here);
   $inf_ent_a = entry_information_array_en_of_entry_name ($nam_ent);
-  $kin_ite = $inf_ent_a['item_kind'];
+  $kin_blo = $inf_ent_a['block_kind'];
 
-  debug_n_check ($here , '$kin_ite',  $kin_ite); 
+  debug_n_check ($here , '$kin_blo',  $kin_blo); 
   exiting_from_function ($here);
 
-  return $kin_ite;
+  return $kin_blo;
 }
 
 /* First Section Create Block Title */
@@ -67,9 +67,9 @@ function entry_create_block_title_build () {
   $lan = $_SESSION['parameters']['language'];
 
   $sur_ent = irp_provide ('entry_surname', $here);
-  $kin_ite = irp_provide ('entry_item_kind', $here);
+  $kin_blo = irp_provide ('entry_block_kind', $here);
 
-  $en_tit = 'create a new ' . $kin_ite . ' for entry';
+  $en_tit = 'create a new ' . $kin_blo . ' for entry';
 
   $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
@@ -131,10 +131,10 @@ function entry_reorder_block_title_build () {
   $lan = $_SESSION['parameters']['language'];
 
   $sur_ent = irp_provide ('entry_surname', $here);
-  $kin_ite = irp_provide ('entry_item_kind', $here);
-  $kin_ite_plu = item_kind_plural_of_item_kind ($kin_ite);
+  $kin_blo = irp_provide ('entry_block_kind', $here);
+  $kin_blo_plu = block_kind_plural_of_block_kind ($kin_blo);
 
-  $en_tit = 'reorder the ' . $kin_ite_plu . ' for entry';
+  $en_tit = 'reorder the ' . $kin_blo_plu . ' for entry';
 
   $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
@@ -194,10 +194,10 @@ function entry_display_title_build () {
   $lan = $_SESSION['parameters']['language'];
 
   $sur_ent = irp_provide ('entry_surname', $here);
-  $kin_ite = irp_provide ('entry_item_kind', $here);
-  $kin_ite_plu = item_kind_plural_of_item_kind ($kin_ite);
+  $kin_blo = irp_provide ('entry_block_kind', $here);
+  $kin_blo_plu = block_kind_plural_of_block_kind ($kin_blo);
 
-  $en_tit = 'list of ' . $kin_ite_plu . ' for entry';
+  $en_tit = 'list of ' . $kin_blo_plu . ' for entry';
 
   $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
   $la_Tit = string_html_capitalized_of_string ($la_bub_tit);

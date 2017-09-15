@@ -11,8 +11,8 @@ function block_new_create_surname_inputtypetext_build (){
   entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
-  $kin_ite = irp_provide ('entry_item_kind', $here);
-  $en_nam_blo = 'enter the name of the ' . $kin_ite;
+  $kin_blo = irp_provide ('entry_block_kind', $here);
+  $en_nam_blo = 'enter the name of the ' . $kin_blo;
   $la_nam_blo = ucfirst (language_translate_of_en_string_of_language ($en_nam_blo, $lan));
 
   $nam = 'block_new_surname';

@@ -621,6 +621,12 @@ par la liste de ses propri&eacute;t&eacute;s',
         'it' => '???',
     ),
 
+    'does not exist' =>
+    array (
+        'fr' => 'n&rsquo;existe pas',
+        'it' => '???',
+    ),
+
     'done by' => 
     array (
 		'fr' => 'fait par',
@@ -856,6 +862,12 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 
+    'file' =>
+    array (
+        'fr' => 'fichier',
+        'it' => '???',
+    ), 
+
     'fill in the name here' => 
     array (
 		'fr' => 'compl&eacute;tez le nom ici',
@@ -1008,7 +1020,7 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'in' =>
     array (
-		'fr' => 'en',
+		'fr' => 'dans',
 		'it' => '???',
     ),
 
@@ -1481,6 +1493,12 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 
+    'not deleted' =>
+    array (
+        'fr' => 'pas d&eacute;truit',
+        'it' => '???',
+    ), 
+    
     'on' => 
     array (
         'fr' => 'le',
@@ -2104,6 +2122,12 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
         'it' => '???',
     ),
 
+    'warning' =>
+    array (
+        'fr' => 'attention',
+        'it' => '???',
+    ), 
+    
     'welcome to our website' => 
     array (
         'fr' => 'bienvenue sur notre site',

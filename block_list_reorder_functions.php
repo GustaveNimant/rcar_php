@@ -97,7 +97,7 @@ function block_list_reorder_section_title_build (){
 
   $lan = $_SESSION['parameters']['language'];
   $sur_ent = irp_provide ('entry_surname', $here);
-  $kin_blo = irp_provide ('entry_item_kind', $here);
+  $kin_blo = irp_provide ('entry_block_kind', $here);
   $kin_blo_plu = block_kind_plural_of_block_kind ($kin_blo);
 
   $en_tit = 'list of ' . $kin_blo_plu . ' for entry';

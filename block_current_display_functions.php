@@ -21,7 +21,7 @@ function block_current_display_section_page_title_build () {
   $lan = $_SESSION['parameters']['language'];
 
   $sur_ent = irp_provide ('entry_surname', $here);
-  $kin_blo = irp_provide ('entry_item_kind', $here);
+  $kin_blo = irp_provide ('entry_block_kind', $here);
   $nam_blo_cur = irp_provide ('block_current_name', $here);
   $sur_by_nam_a = irp_provide ('surname_by_name_array', $here);
   $sur_blo_cur = surname_of_name_of_surname_by_name_array ($nam_blo_cur, $sur_by_nam_a);

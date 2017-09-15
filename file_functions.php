@@ -170,7 +170,7 @@ function is_filename_extension ($ext) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($ext)");
 
-  $ext_blo = $_SESSION['parameters']['block_text_filename_extension'];
+  $ext_blo = $_SESSION['parameters']['block_filename_extension'];
   $ext_cat = $_SESSION['parameters']['block_name_catalog_filename_extension'];
   $ext_com = $_SESSION['parameters']['item_comment_filename_extension'];
 
@@ -202,7 +202,7 @@ function is_block_text_filename_extension ($ext) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($ext)");
 
-  $ext_txt = $_SESSION['parameters']['block_text_filename_extension'];
+  $ext_txt = $_SESSION['parameters']['block_filename_extension'];
 
   $result = ($ext == $ext_txt);
 
@@ -296,7 +296,7 @@ function is_item_nameoffile_of_entry_name_of_name ($nam_ent, $nam) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($nam_ent, $nam)");
 
-    $ext_blo = $_SESSION['parameters']['block_text_filename_extension'];
+    $ext_blo = $_SESSION['parameters']['block_filename_extension'];
 
     $hpse_dir = basic_directory_of_name ("hd_php_server");
     $fnod = $hpse_dir . '/' . $nam_ent;

@@ -18,11 +18,11 @@ function block_rename_section_page_title_build (){
 
   $sur_ent = irp_provide ('entry_surname', $here);
   $sur_ite = irp_provide ('block_surname', $here);
-  $kin_ite = irp_provide ('entry_item_kind', $here);
+  $kin_blo = irp_provide ('entry_block_kind', $here);
 
   $lan = $_SESSION['parameters']['language'];
 
-  $en_tit = 'rename the ' . $kin_ite;  
+  $en_tit = 'rename the ' . $kin_blo;  
   $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
   $la_Tit .= ' <i><b> ' . $sur_ite . '</b></i> '; 
@@ -71,7 +71,7 @@ function block_rename_section_name_modify_inputtype_build (){
   $sur_ite = irp_provide ('block_surname', $here);
 
   $html_str  = '';
-  $html_str .= '<input type="text" value="' . $sur_ite . '" name="block_newsurname" size="87" /> ';
+  $html_str .= '<input type="text" value="' . $sur_ite . '" name="block_new_surname" size="87" /> ';
 
   debug_n_check ($here , '$html_str',  $html_str);
   exiting_from_function ($here);
@@ -158,7 +158,7 @@ function block_rename_build () {
   $sur_ent = surname_of_name_of_surname_by_name_array ($nam_ent, $sur_by_nam_a);
 
   $nof_mod = 'entry_display.php';
-  $script_action = 'block_rename_save.php';
+  $script_action = 'block_current_rename_save.php';
 
   $html_str  = '';
   $html_str .= irp_provide ('pervasive_html_initial_section', $here);

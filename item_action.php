@@ -31,8 +31,8 @@ $ite_act = $link_a[1];
 debug_n_check ($module , "item action", $ite_act);
 
 $entry_information_a = entry_information_array_en_of_entry_name ($nam_ent);
-$item_kind = $entry_information_a['item_kind'];
-debug_n_check ($module , "item_kind", $item_kind);
+$block_kind = $entry_information_a['block_kind'];
+debug_n_check ($module , "block_kind", $block_kind);
 
 /* $sur_by_nam_a = surname_by_name_array_make (); */
 $sur_by_nam_a = irp_provide ('surname_by_name_array', $here);
@@ -46,8 +46,8 @@ $str_get .= '&item_name=';
 $str_get .= $nam_ite;
 $str_get .= '&item_action=';
 $str_get .= $ite_act;
-$str_get .= '&item_kind=';
-$str_get .= $item_kind;
+$str_get .= '&block_kind=';
+$str_get .= $block_kind;
 $str_get .= '&item_surname=';
 $str_get .= $sur_ite;
 $str_get .= '&entry_surname=';

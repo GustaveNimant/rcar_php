@@ -162,7 +162,7 @@ function git_status_information_retrieve ($str) {
   $remainder_a = preg_replace ('/^#/', '', $remainder_a);
   # debug_n_check ($here , "replace git status information remainder", $remainder_a);
 
-  $ext_txt = $_SESSION['parameters']['block_text_filename_extension'];
+  $ext_txt = $_SESSION['parameters']['block_filename_extension'];
   $ext_cat = $_SESSION['parameters']['block_name_catalog_filename_extension'];
   $ext_com = $_SESSION['parameters']['item_comment_filename_extension'];
 

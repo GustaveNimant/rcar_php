@@ -3,7 +3,7 @@
 require_once "irp_functions.php";
 require_once "button_functions.php";
 require_once "entry_information_functions.php";
-require_once "item_information_functions.php";
+require_once "block_information_functions.php";
 require_once "block_name_array_functions.php";
 
 $module = module_name (__FILE__);

@@ -44,7 +44,7 @@ function block_content_by_block_name_array_build () {
     $hdir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
     debug_n_check ($here , "hdir", $hdir);
 
-    $ext_blo = $_SESSION['parameters']['block_text_filename_extension'];
+    $ext_blo = $_SESSION['parameters']['block_filename_extension'];
 
     $con_blo_by_nam_blo_a = array ();
     foreach ($nam_blo_a as $nam_blo) {

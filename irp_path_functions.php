@@ -7,7 +7,7 @@ $Documentation[$module]['irp_stack'] = "stacks all $irp_key. When retrieved ($ir
 function irp_father_array_of_irp_key ($irp_key, $fat_n_son_a) {
 /* any father of $irp_key */
 /* the father calls its sons (as in a Tree) */
-/* [89] => entry_item_kind (87) calls -> entry_name */
+/* [89] => entry_block_kind (87) calls -> entry_name */
 /*         father (1)                    son (last) */
 
   $here = __FUNCTION__;

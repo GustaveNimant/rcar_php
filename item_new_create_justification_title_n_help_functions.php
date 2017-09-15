@@ -28,7 +28,7 @@ function item_new_create_justification_title_help_build (){
   entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
-  $kin_ite = irp_provide ('entry_item_kind', $here);
+  $kin_blo = irp_provide ('entry_block_kind', $here);
 
   $key_hel = 'create justify item';
   $la_Hel = help_text_of_help_key_of_language ($key_hel, $lan);

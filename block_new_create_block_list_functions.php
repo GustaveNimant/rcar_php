@@ -15,10 +15,10 @@ function block_new_create_block_list_title_build () {
  
   $lan = $_SESSION['parameters']['language'];
   $sur_ent = irp_provide ('entry_surname', $here);
-  $kin_ite = irp_provide ('entry_item_kind', $here);
-  $kin_ite_plu = block_kind_plural_of_block_kind ($kin_ite);
+  $kin_blo = irp_provide ('entry_block_kind', $here);
+  $kin_blo_plu = block_kind_plural_of_block_kind ($kin_blo);
 
-  $en_tit = 'the ' . $kin_ite_plu . ' for entry';
+  $en_tit = 'the ' . $kin_blo_plu . ' for entry';
 
   $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);

@@ -11,7 +11,7 @@ require_once "surname_by_name_array_functions.php";
 $module = "entry_name_functions";
 $Documentation[$module]['entry_name'] = "is a directory name of php_server. i.e. any string expressed in the current language transformed in a Capitalized word, with blank transformed in underscores, without any accents.";
 $Documentation[$module]['entry_kind'] = "is a lower case word expressed in english. Ex.: text";
-$Documentation[$module]['entry_item_kind'] = "is a lower case word expressed in english. Ex.: paragraph";
+$Documentation[$module]['entry_block_kind'] = "is a lower case word expressed in english. Ex.: paragraph";
 
 # entering_in_module ($module);
 

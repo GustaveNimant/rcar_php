@@ -3,7 +3,7 @@
 require_once "irp_functions.php";
 require_once "button_functions.php";
 require_once "entry_information_functions.php";
-require_once "item_information_functions.php";
+require_once "block_information_functions.php";
 require_once "block_name_array_functions.php";
 
 $module = module_name (__FILE__);
@@ -43,7 +43,7 @@ function block_new_create_exist_action_build () {
   $nam_blo_new = irp_provide ('block_new_name', $here);
 
   $fnd = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
-  $ext_blo = $_SESSION['parameters']['block_text_filename_extension'];
+  $ext_blo = $_SESSION['parameters']['block_filename_extension'];
   $fno = $fnd . $nam_blo_new . $ext_blo;
 
 #  $fno = fullnameoffile_of_fullnameofdirectory_of_name_of_extension ($fnd, $nam_blo_new, $ext_blo);
@@ -178,4 +178,5 @@ function block_new_create_save_build () {
 }
 
 # exiting_from_module ($module);
+
 ?>

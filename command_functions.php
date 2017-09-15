@@ -7,7 +7,7 @@ require_once "entry_information_functions.php";
 require_once "bubble_functions.php";
 require_once "entry_display_functions.php";
 require_once "surname_by_name_array_functions.php";
-require_once "item_kind_functions.php";
+require_once "block_kind_functions.php";
 require_once "tools_functions.php";
 
 $module = "command_functions";

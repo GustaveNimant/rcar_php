@@ -35,7 +35,7 @@ function entry_information_array_en_of_entry_name ($nam_ent) {
       $entry_information_a =
           array (
               'bubble_href' => 'frequently asked questions',
-              'item_kind' => 'question',
+              'block_kind' => 'question',
               'kind_justification' => 'answer',
               'entry_kind' => 'faq',
               'url_relative' => "entry_display.php?entry_name=$nam_ent",
@@ -48,7 +48,7 @@ function entry_information_array_en_of_entry_name ($nam_ent) {
       $entry_information_a = 
           array (
               'bubble_href' => 'introduction to ARCE',
-              'item_kind' => 'paragraph',
+              'block_kind' => 'paragraph',
               'kind_justification' => 'justification',
               'entry_kind' => 'text',
               'url_relative' => "entry_display.php?entry_name=$nam_ent",
@@ -62,7 +62,7 @@ function entry_information_array_en_of_entry_name ($nam_ent) {
       $entry_information_a = 
           array (
               'bubble_href' => 'these rules need to be followed when editing',
-              'item_kind' => 'rule',
+              'block_kind' => 'rule',
               'kind_justification' => 'justification',
               'entry_kind' => 'rule list',
               'url_relative' => "entry_display.php?entry_name=$nam_ent",
@@ -76,7 +76,7 @@ function entry_information_array_en_of_entry_name ($nam_ent) {
       $entry_information_a = 
           array (
               'bubble_href' => 'these rules need to be followed when editing any property',
-              'item_kind' => 'rule',
+              'block_kind' => 'rule',
               'kind_justification' => 'justification',
               'entry_kind' => 'rule list',
               'url_relative' => "entry_display.php?entry_name=$nam_ent",
@@ -90,7 +90,7 @@ function entry_information_array_en_of_entry_name ($nam_ent) {
       $entry_information_a = 
           array (
               'bubble_href' => 'bubble text for',
-              'item_kind' => 'paragraph',
+              'block_kind' => 'paragraph',
               'kind_justification' => 'justification',
               'entry_kind' => 'help',
               'url_relative' => "entry_display.php?entry_name=$nam_ent",
@@ -105,7 +105,7 @@ function entry_information_array_en_of_entry_name ($nam_ent) {
       $entry_information_a = 
           array (
               'entry_kind' => 'texte',
-              'item_kind' => 'paragraph',
+              'block_kind' => 'paragraph',
               'kind_justification' => 'justification',
               'url_relative' => "entry_display.php?entry_name=$nam_ent",
               'bubble_href' => 'paragraph',
@@ -118,7 +118,7 @@ function entry_information_array_en_of_entry_name ($nam_ent) {
         $entry_information_a = 
             array (
                 'entry_kind' => 'concept',
-                'item_kind' => 'property',
+                'block_kind' => 'property',
                 'kind_justification' => 'justification',
                 'bubble_href' => 'none',
                 'url_relative' => "entry_display.php?entry_name=$nam_ent",
@@ -186,8 +186,8 @@ function entry_information_array_lan_of_entry_name ($nam_ent, $lan) {
 /* function text_language_of_entry_name_of_english_text ($nam_ent, $txt_en) { */
 
 /*   $inf_ent_en_a = entry_information_array_en_of_entry_name ($nam_ent); */
-/*   $kin_ite_en = $inf_ent_en_a['item_kind'];  */
-/*   $legend_en =  $txt_en. ' ' . $kin_ite_en;  */
+/*   $kin_blo_en = $inf_ent_en_a['block_kind'];  */
+/*   $legend_en =  $txt_en. ' ' . $kin_blo_en;  */
 /*   $legend_la = language_translate_of_en_string_of_language ($legend_en, $lan); */
 
 /*   $sur_ent = surname_of_name_of_surname_by_name_array ($nam_ent); */
@@ -199,8 +199,8 @@ function entry_information_array_lan_of_entry_name ($nam_ent, $lan) {
 /* function text_language_of_entry_name_of_two_english_texts ($nam_ent, $tx1_en, $tx2_en) { */
 
 /*   $inf_ent_en_a = entry_information_array_en_of_entry_name ($nam_ent); */
-/*   $kin_ite_en = $inf_ent_en_a['item_kind'];  */
-/*   $legend_en =  $tx1_en . ' ' . $kin_ite_en . ' ' . $tx2_en;  */
+/*   $kin_blo_en = $inf_ent_en_a['block_kind'];  */
+/*   $legend_en =  $tx1_en . ' ' . $kin_blo_en . ' ' . $tx2_en;  */
 /*   $legend_la = language_translate_of_en_string_of_language ($legend_en, $lan); */
 
 /*   $sur_ent = surname_of_name_of_surname_by_name_array ($nam_ent); */

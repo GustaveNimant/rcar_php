@@ -14,15 +14,15 @@ function block_new_create_form_page_title_build (){
 
   $lan = $_SESSION['parameters']['language'];
   $sur_ent = irp_provide ('entry_surname', $here);
-  $kin_ite = irp_provide ('entry_item_kind', $here);
+  $kin_blo = irp_provide ('entry_block_kind', $here);
 
-  if ($kin_ite == 'question'){
-      $en_tit = 'ask a new ' . $kin_ite; 
+  if ($kin_blo == 'question'){
+      $en_tit = 'ask a new ' . $kin_blo; 
       $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
       $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
   } 
   else {
-      $en_tit = 'define a new ' . $kin_ite . ' for entry'; 
+      $en_tit = 'define a new ' . $kin_blo . ' for entry'; 
       $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
       $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
       $la_Tit .= ' <i><b> ' . $sur_ent . '</b></i> ';

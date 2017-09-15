@@ -27,8 +27,8 @@ function block_information_metadata_en_by_block_name_array_build () {
   $inf_ent_a = entry_information_array_en_of_entry_name($nam_ent);
   # debug_n_check ($here , "inf_ent_a", $inf_ent_a);
 
-  $kin_ite  = $inf_ent_a['block_kind'];
-  debug_n_check ($here , "kin_ite", $kin_ite);
+  $kin_blo  = $inf_ent_a['block_kind'];
+  debug_n_check ($here , "kin_blo", $kin_blo);
 
   $nam_ite = irp_provide ('block_current_name', $here);
   debug_n_check ($here , "nam_ite", $nam_ite);
@@ -39,7 +39,7 @@ function block_information_metadata_en_by_block_name_array_build () {
   debug_n_check ($here , "sur_ite", $sur_ite);
 
   $inf_ite_met_a = array () ;
-  $inf_ite_met_a = array_of_key_of_value_of_array ('entry_kind', $kin_ite, $inf_ite_met_a); 
+  $inf_ite_met_a = array_of_key_of_value_of_array ('entry_kind', $kin_blo, $inf_ite_met_a); 
   $inf_ite_met_a = array_of_key_of_value_of_array ('surname', $sur_ite, $inf_ite_met_a);
   $inf_ite_met_a = array_of_key_of_value_of_array ('entry_name', $nam_ent, $inf_ite_met_a);
   $inf_ite_met_a = array_of_key_of_value_of_array ('action', $act_ite, $inf_ite_met_a);

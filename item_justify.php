@@ -2,7 +2,6 @@
 include "session.php";
 require_once "father_n_son_stack_module_functions.php";
 
-require_once "item_justify_functions.php";
 
 $module = "item_justify";
 # entering_in_module ($module);

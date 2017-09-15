@@ -14,8 +14,8 @@ function block_new_create_content_textarea_build (){
   entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
-  $kin_ite = irp_provide ('entry_item_kind', $here);
-  $en_pla = 'enter the text of the ' . $kin_ite;
+  $kin_blo = irp_provide ('entry_block_kind', $here);
+  $en_pla = 'enter the text of the ' . $kin_blo;
   
   $html_str  = textarea_of_name_of_en_placeholder ('block_new_content', $en_pla);
   /* $html_str .= '<textarea ' . "\n";  */

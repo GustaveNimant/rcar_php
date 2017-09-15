@@ -25,13 +25,13 @@ function item_current_modify_section_page_title_build (){
   $sur_blo_cur = surname_of_name_of_surname_by_name_array ($nam_blo_cur, $sur_by_nam_a);
 
   $sur_ite = $sur_blo_cur;
-  $kin_ite = irp_provide ('entry_item_kind', $here);
+  $kin_blo = irp_provide ('entry_block_kind', $here);
 
-  if ($kin_ite == 'question') {
-      $en_tit = 'modify the answer to the ' . $kin_ite;  
+  if ($kin_blo == 'question') {
+      $en_tit = 'modify the answer to the ' . $kin_blo;  
   }
   else {
-      $en_tit = 'modify the content of the ' . $kin_ite;  
+      $en_tit = 'modify the content of the ' . $kin_blo;  
   }
   $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
@@ -57,13 +57,13 @@ function item_current_modify_section_content_old_title_build (){
   entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
-  $kin_ite = irp_provide ('entry_item_kind', $here);
+  $kin_blo = irp_provide ('entry_block_kind', $here);
 
-  if ($kin_ite == 'question') {  /* Improve Ugly */
-      $en_tit = 'answer to the ' . $kin_ite;  
+  if ($kin_blo == 'question') {  /* Improve Ugly */
+      $en_tit = 'answer to the ' . $kin_blo;  
   }
   else {
-      $en_tit = 'content of the ' . $kin_ite;  
+      $en_tit = 'content of the ' . $kin_blo;  
   }
 
   $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);

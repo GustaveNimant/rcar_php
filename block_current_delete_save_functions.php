@@ -3,26 +3,27 @@
 require_once "management_functions.php";
 require_once "irp_functions.php";
 
-$module = "block_delete_save_functions";
+$module = module_name (__FILE__);
+
 # entering_in_module ($module);
 
 /* First Section Page Title */
 
-function block_delete_save_section_page_title_build (){
+function block_current_delete_save_section_page_title_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
   $sur_ent = irp_provide ('entry_surname', $here);
   $sur_ite = irp_provide ('block_surname', $here);
-  $kin_ite = irp_provide ('entry_item_kind', $here);
+  $kin_blo = irp_provide ('entry_block_kind', $here);
 
   $en_tit = 'for entry';
   $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
   $la_Tit .= ' <i><b> ' . $sur_ent . '</b></i> '; 
 
-  $en_tit = $kin_ite;
+  $en_tit = $kin_blo;
   $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
   $la_Tit .= $la_bub_tit;
   $la_Tit .= ' <i><b> ' . $sur_ite . '</b></i> '; 
@@ -39,48 +40,63 @@ function block_delete_save_section_page_title_build (){
   return $html_str;
 }
 
-
-function block_delete_save_catalog_actualize_build (){
+function block_current_delete_save_catalog_actualize_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $nam_ent = irp_provide ('entry_name', $here);
-  $nam_ite = irp_provide ('block_current_name', $here);
+  $nam_blo_cur = irp_provide ('block_current_name', $here);
 
   debug_n_check ($here , "input entry_name", $nam_ent);
-  debug_n_check ($here , "input block name", $nam_ite);
+  debug_n_check ($here , "input block name", $nam_blo_cur);
 
   $dir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
 
-  $cat_ite = irp_provide ('block_name_catalog', $here);
-  $con = block_name_catalog_delete_of_entry_name_of_block_name_catalog_of_block_current_name ($nam_ent, $cat_ite, $nam_ite);
-  $ext_lis = irp_provide ('block_name_catalog_filename_extension', $here);
-  $nof = "Block_name_catalog." . $ext_lis;
+  $cat_blo = irp_provide ('block_name_catalog', $here);
 
-  if ($con == "") {
+  $con_cat_blo = block_name_catalog_remove_block_name_of_entry_name_of_block_name_catalog_of_block_current_name ($nam_ent, $cat_blo, $nam_blo_cur);
+  $ext_cat = $_SESSION['parameters']['block_name_catalog_filename_extension'];
+  $nof = "Block_name_catalog." . $ext_cat;
+
+  if ($con_cat_blo == "") {
       $fno = $dir . $nof;
-      if (! unlink ($fno)){
-          echo "file $fno does not exist. Not deleted";
+      if ( ! file_exists ($fno)) {
+          $lan = $_SESSION['parameters']['language'];
+          $en_tx1 = 'file';
+          $en_tx2 = 'does not exist';
+          $en_tx3 = 'not deleted';
+          $la_tx1 = language_translate_of_en_string_of_language ($en_tx1, $lan);
+          $la_tx2 = language_translate_of_en_string_of_language ($en_tx2, $lan);
+          $la_tx3 = language_translate_of_en_string_of_language ($en_tx3, $lan);
+          $la_Tx3  = string_html_capitalized_of_string ($la_tx3);
+
+          warning ($here, $la_tx1 . $fno . ' ' . $la_tx2 . '. ' . $la_Tx3);
       }
+      else {
+          unlink ($fno);
+      }
+      
   } else {
-    file_string_write ($dir . $nof, $con);
+      file_string_write ($dir . $nof, $con_cat_blo);
   }
 
-  return  "$here done"; 
+  $html_log = $nof . " file updated on disk";
+
+  return $html_log; 
 }
 
-function block_delete_save_delete_file_build () {
+function block_current_delete_save_delete_file_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $nam_ent = irp_provide ('entry_name', $here);
-  $nam_ite = irp_provide ('block_current_name', $here);
+  $nam_blo_cur = irp_provide ('block_current_name', $here);
 
   $dir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
-  $ext_txt = $_SESSION['parameters']['block_text_filename_extension'];
+  $ext_blo = $_SESSION['parameters']['block_filename_extension'];
 
   $cmd_del  = 'cd ' . $dir . ';';
-  $cmd_del .= 'rm ' . $nam_blo . '.' . $ext_txt;
+  $cmd_del .= 'rm ' . $nam_blo . '.' . $ext_blo;
 
   debug_n_check ($here , '$cmd_del', $cmd_del);
 
@@ -99,7 +115,7 @@ function block_delete_save_delete_file_build () {
   return  $str_exe;
 }
 
-function block_delete_save_build () {
+function block_current_delete_save_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -114,11 +130,11 @@ function block_delete_save_build () {
 
   $html_str .= irp_provide ('pervasive_html_initial_section', $here);
   $html_log .= '<br> ';
-  $html_log .= irp_provide ('block_delete_save_catalog_actualize', $here);
-  $html_str .= irp_provide ('block_delete_save_section_page_title', $here);
+  $html_log .= irp_provide ('block_current_delete_save_catalog_actualize', $here);
+  $html_str .= irp_provide ('block_current_delete_save_section_page_title', $here);
   $html_str .= '<br><br> ';
   $html_log .= '<br><br> ';
-  $html_log .= irp_provide ('block_delete_save_delete_file', $here);
+  $html_log .= irp_provide ('block_current_delete_save_delete_file', $here);
 
   $sur_ent   = irp_provide ('entry_surname', $here);
 

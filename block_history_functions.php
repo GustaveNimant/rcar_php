@@ -2,7 +2,7 @@
 
 require_once "management_functions.php";
 require_once "irp_functions.php";
-require_once "block_functions.php";
+require_once "item_functions.php";
 require_once "bubble_functions.php";
 require_once "button_submit_functions.php";
 require_once "common_html_functions.php";
@@ -17,12 +17,12 @@ function block_history_section_page_title_build (){
   entering_in_function ($here);
 
   $sur_ent = irp_provide ('entry_surname', $here);
-  $sur_ite = irp_provide ('block_surname', $here);
-  $kin_ite = irp_provide ('entry_item_kind', $here);
+  $sur_ite = irp_provide ('item_surname', $here);
+  $kin_blo = irp_provide ('entry_block_kind', $here);
 
   $lan = $_SESSION['parameters']['language'];
 
-  $en_tit = 'history the ' . $kin_ite;  
+  $en_tit = 'history the ' . $kin_blo;  
   $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
   $la_Tit .= ' <i><b> ' . $sur_ite . '</b></i> '; 
@@ -40,8 +40,8 @@ function block_history_section_page_title_build (){
   return $html_str;
 }
 
-/* Second Section Block Name Modify */
-/* Second Section Block Name Modify Title */
+/* Second Section Item Name Modify */
+/* Second Section Item Name Modify Title */
 
 function block_history_section_since_title_build (){
   $here = __FUNCTION__;
@@ -62,16 +62,16 @@ function block_history_section_since_title_build (){
   return $html_str;
 }
 
-/* Second Section Block Name Modify Inputtype */
+/* Second Section Item Name Modify Inputtype */
 
 function block_history_section_since_inputtype_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $sur_ite = irp_provide ('block_surname', $here);
+  $sur_ite = irp_provide ('item_surname', $here);
 
   $html_str  = '';
-  $html_str .= '<input type="text" value="' . $sur_ite . '" name="block_newsurname" size="87" /> ';
+  $html_str .= '<input type="text" value="' . $sur_ite . '" name="item_newsurname" size="87" /> ';
 
   debug_n_check ($here , '$html_str',  $html_str);
   exiting_from_function ($here);
@@ -95,7 +95,7 @@ function block_history_section_since_build (){
 
 /* Third Section Modification Justify */
 
-/* Third Section Block Justify Title */
+/* Third Section Item Justify Title */
 
 function block_history_section_before_title_build (){
   $here = __FUNCTION__;
@@ -115,14 +115,14 @@ function block_history_section_before_title_build (){
   return $html_str;
 }
 
-/* Third Section Block Justify Textarea */
+/* Third Section Item Justify Textarea */
 
 function block_history_section_before_textarea_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $html_str  = '';
-  $html_str .= '<textarea name="block_newname_justification" rows="2" cols="100" />';
+  $html_str .= '<textarea name="item_newname_justification" rows="2" cols="100" />';
   $html_str .= '</textarea> ' . "\n";
 
   debug_n_check ($here , '$html_str',  $html_str);
@@ -145,7 +145,7 @@ function block_history_section_before_build (){
   return $html_str;
 }
 
-/* Page Block History */
+/* Page Item History */
 
 function block_history_build () {
   $here = __FUNCTION__;

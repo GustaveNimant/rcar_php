@@ -18,11 +18,11 @@ function item_rename_section_page_title_build (){
 
   $sur_ent = irp_provide ('entry_surname', $here);
   $sur_ite = irp_provide ('item_surname', $here);
-  $kin_ite = irp_provide ('entry_item_kind', $here);
+  $kin_blo = irp_provide ('entry_block_kind', $here);
 
   $lan = $_SESSION['parameters']['language'];
 
-  $en_tit = 'rename the ' . $kin_ite;  
+  $en_tit = 'rename the ' . $kin_blo;  
   $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
   $la_Tit .= ' <i><b> ' . $sur_ite . '</b></i> '; 

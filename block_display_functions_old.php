@@ -21,7 +21,7 @@ function block_content_display_of_block_current_name__XX ($nam_blo) {
   $nam_ent = irp_provide ('entry_name', $here);
   $hdir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
 
-  $ext_blo = $_SESSION['parameters']['block_text_filename_extension'];
+  $ext_blo = $_SESSION['parameters']['block_filename_extension'];
   $nof_blo = $dir_pat . $nam_blo . '.' . $ext_blo ;
 
   $con_blo = file_content_read ($nof_blo);
@@ -64,7 +64,7 @@ function block_display_section_page_title_build () {
   $lan = $_SESSION['parameters']['language'];
 
   $sur_ent = irp_provide ('entry_surname', $here);
-  $kin_blo = irp_provide ('entry_item_kind', $here);
+  $kin_blo = irp_provide ('entry_block_kind', $here);
   $nam_blo = irp_provide ('block_current_name', $here);
   $sur_by_nam_a = irp_provide ('surname_by_name_array', $here);
 

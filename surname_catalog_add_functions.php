@@ -18,8 +18,8 @@ function surname_catalog_add_section_page_title_build (){
 
   $nam_wos = irp_provide ('name_without_surname', $here);
   debug_n_check ($here , '$nam_wos',  $nam_wos);
-  /* $kin_ite = irp_provide ('entry_item_kind', $here); */
-  /* $en_tit = 'add surname for ' . $kin_ite;   */
+  /* $kin_blo = irp_provide ('entry_block_kind', $here); */
+  /* $en_tit = 'add surname for ' . $kin_blo;   */
 
   $en_tit = 'add surname for name';  
   $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);

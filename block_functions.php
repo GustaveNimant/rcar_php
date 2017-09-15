@@ -41,7 +41,7 @@ function block_content_write ($nam_ent, $nam_blo, $con_blo) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($nam_ent, $nam_blo, $con_blo)");
 
-    $ext_blo = $_SESSION['parameters']['block_text_filename_extension'];
+    $ext_blo = $_SESSION['parameters']['block_filename_extension'];
     debug_n_check ($here ,'$ext_blo', $ext_blo);
 
     $dir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);

@@ -22,7 +22,7 @@ function block_modify_save_build () {
 
   debug_n_check ($here, '$nam_ent', $nam_ent);
 
-  $ext_blo = $_SESSION['parameters']['block_text_filename_extension'];
+  $ext_blo = $_SESSION['parameters']['block_filename_extension'];
   block_any_text_write ('block_content', $nam_ent, $nam_blo, $con_blo, $ext_blo);
 
   $nof_mod = 'entry_display.php';

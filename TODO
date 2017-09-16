@@ -1,0 +1,10 @@
+ entry_list.php  ?
+
+ block_new_create_form.php 
+   title
+   form
+     textarea item_new_content
+     textarea item_new_justification
+     inputtypetext block_new_surname
+
+ block_current_rename_form.php

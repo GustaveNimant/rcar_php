@@ -33,10 +33,8 @@ function block_current_rename_save_build (){
 
   $lan = $_SESSION['parameters']['language'];
 
-  /* irp_path_clean_register_of_top_key_of_bottom_key ('block_new_surname', 'block_current_rename_save'); */
-
-  $new_sur_blo = irp_provide ('block_new_surname', $here);
-  $new_nam_blo = word_name_capitalized_of_string_surname ($new_sur_blo);
+  $new_sur_blo_cur = irp_provide ('block_current_new_surname', $here);
+  $new_nam_blo_cur = word_name_capitalized_of_string_surname ($new_sur_blo_cur);
 
   $nam_ent = irp_provide ('entry_name', $here);
   $old_nam_blo = irp_provide ('block_current_name', $here);
@@ -45,7 +43,7 @@ function block_current_rename_save_build (){
 
   $ext_blo = $_SESSION['parameters']['block_filename_extension'];
 
-  debug_n_check ($here , '$new_sur_blo', $new_sur_blo);
+  debug_n_check ($here , '$new_sur_blo_cur', $new_sur_blo_cur);
   debug_n_check ($here , '$old_nam_blo', $old_nam_blo);
   debug_n_check ($here , '$new_nam_blo', $new_nam_blo);
   debug_n_check ($here , '$ext_blo', $ext_blo);
@@ -64,16 +62,16 @@ function block_current_rename_save_build (){
   debug_n_check ($here , '$new_cat_blo', $new_cat_blo);
   block_name_catalog_write_of_entry_name_of_block_name_catalog ($nam_ent, $new_cat_blo);
 
-  /* File server/SURNAMES/Surname_catalog.cat : add "$new_nam_blo : $new_sur_blo" */
+  /* File server/SURNAMES/Surname_catalog.cat : add "$new_nam_blo : $new_sur_blo_cur" */
 
   $sur_by_nam_a = irp_provide ('surname_by_name_array', $here);
 
   if (array_key_exists ($new_nam_blo, $sur_by_nam_a)) {
       $old_sur = $sur_by_nam_a[$new_nam_blo];
-      surname_by_name_array_replace_n_write_of_name_of_newsurname_of_current_array ($new_nam_blo, $new_sur_blo, $sur_by_nam_a);
+      surname_by_name_array_replace_n_write_of_name_of_newsurname_of_current_array ($new_nam_blo, $new_sur_blo_cur, $sur_by_nam_a);
   }
   else {
-  surname_by_name_array_add_n_write_of_name_of_surname_of_current_array ($new_nam_blo, $new_sur_blo, $sur_by_nam_a);
+  surname_by_name_array_add_n_write_of_name_of_surname_of_current_array ($new_nam_blo, $new_sur_blo_cur, $sur_by_nam_a);
   }
 
   /* Git */

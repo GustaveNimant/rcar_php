@@ -5,7 +5,7 @@ require_once "irp_functions.php";
 require_once "surname_by_name_array_functions.php";
 require_once "surname_catalog_add_functions.php";
 
-$module = "surname_functions";
+$module = module_name (__FILE__);
 # entering_in_module ($module);
 
 $Documentation[$module]['surname'] = "it is any name as it has been rentered by a user";

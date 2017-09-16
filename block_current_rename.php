@@ -2,8 +2,6 @@
 include "session.php";
 require_once "father_n_son_stack_module_functions.php";
 
-require_once "block_current_rename_functions.php";
-
 $module = "block_current_rename";
 # entering_in_module ($module);
 

@@ -69,7 +69,7 @@ function common_html_background_color_of_html ($tit) {
   $html_str = '';
   if ($tit != "") {
     $html_str .= "\n";
-    $html_str .= '<div class="my-div"> ';
+    $html_str .= '<div class="my-div">' . "\n";
     $html_str .= $tit . "\n";
     $html_str .= '</div> ' . "\n";
   }
@@ -216,7 +216,6 @@ function inputtypetext_of_name_of_en_placeholder ($nam, $en_pla, $shi) {
   return $html_str;
 }
 
-
 function inputtypesubmit_of_name_of_en_value_of_shift ($nam, $en_val, $shi) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam, $shi)");
@@ -247,13 +246,15 @@ function span_class_of_name_of_en_text ($nam, $en_txt) {
   $la_txt = language_translate_of_en_string_of_language ($en_txt, $lan);
 
   $html_str  = '';
-  $html_str .= '<span class="my-fieldset"> ';
+  $html_str .= '<span class="my-fieldset">' . "\n";
   $html_str .= $nam . ' : ';
-  $html_str .= '<b><font color="red"> ';
+  $html_str .= '<b>';
+  $html_str .= '<font color="red">';
   $html_str .= $la_txt;
-  $html_str .= '</font></b> ';
-  $html_str .= '</span> ';
-
+  $html_str .= '</font>';
+  $html_str .= '</b>';
+  $html_str .= '</span>' . "\n";
+  
   debug_n_check ($here , '$html_str', $html_str);
   exiting_from_function ($here);
   

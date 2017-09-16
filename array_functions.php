@@ -421,14 +421,14 @@ function array_dollar_get_retrieve_value_of_key ($key, $mod) {
 
     if (is_substring_of_substring_off_string ('_surname', $key)) {
         $fno_sur =  surname_catalog_fullnameoffile_make ();
-        $check = "Check that file >$fno_sur< exists";
+        $check = "Check Surname catalog file >$fno_sur<";
     }
     else {
       $check = "Check that :<br>&nbsp;&nbsp;function >${key}_build< is implemented and accessible<br>&nbsp;&nbsp;or that <i>require_once</i> of its module-file is lacking in irp_functions.php";
     }
  
     print_fatal_error ($mod , 
-    '$_GET[\'' . $key . '\'] were NOT empty',
+    '$_GET["' . $key . '"] were NOT empty',
     'it is EMPTY',
     $check);
   } else {

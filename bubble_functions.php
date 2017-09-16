@@ -34,16 +34,19 @@ function bubble_bubbled_text_of_text_of_bubble_text_array ($inp_txt, $bub_txt_a)
           $count++;
           if ( in_array ($wor, $bub_key_a)) {
               $bubble_text  = $bub_txt_a[$wor];
-              $bubble_html  = '<span title="' . $bubble_text . '">';
-              $bubble_html .= '<u>' ;
+
+              $bubble_html  = '' . "\n";
+              $bubble_html .= '<span title="' . $bubble_text . '">' . "\n";
+              $bubble_html .= '  <u>' ;
               if ($count == 1) {
                   $bubble_html .= string_html_capitalized_of_string ($wor); 
               }
               else {
                   $bubble_html .= $wor; 
               }
-              $bubble_html .= '</u>';
+              $bubble_html .= '  </u>';
               $bubble_html .= '</span>';
+
               $out_txt_a[$key_inp] = $bubble_html;
           }
           else {

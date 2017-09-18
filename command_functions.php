@@ -119,7 +119,7 @@ function command_button_build () {
   $html_str .= '<form action="'. $script_action .'" method="get"> ' . "\n";
   $html_str .= irp_provide ('command_selection_action', $here);
   $html_str .= irp_provide ('command_selection_argument', $here);
-  $html_str .= button_submit_of_button_value_en_of_language ($en_val_but, $lan);
+  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift ($en_val_but, $lan);
   $html_str .= '</form> ' .  "\n";
 
   debug_n_check ($here , '$html_str', $html_str);

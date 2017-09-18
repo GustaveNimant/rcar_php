@@ -20,27 +20,18 @@ function common_html_page_head_build () {
   $nam_pro = $_SESSION['parameters']['program_name'];
   $Nam_pro = ucfirst ($nam_pro);
 
-  $html_str  = '';
-  $html_str .= '<html> ';
-
-  $html_str .= "\n";
-  $html_str .= '  <head>';
-  $html_str .= "\n";
-  $html_str .= "<title>$Nam_pro</title>";
-  $html_str .= '<meta name="robots" CONTENT="index,follow">';
-  $html_str .= '<META NAME="keywords" CONTENT="democracy, d&eacute;mocratie, collaborative editing, r&eacute;daction collaborative, general will, volont&eacute; g&eacute;n&eacute;rale, auto regulated collaborative editing, r&eacute;daction collaborative auto-r&eacute;gul&eacute;e"> ';
-  $html_str .= "\n";
-  $html_str .= '<META NAME="description" CONTENT="ARCE (Auto-Regulated Collaborative Editing - r&eacute;daction collaborative auto-r&eacute;gul&eacute;e) est conçu pour que les membres d&rsquo;une communaut&eacute; d&rsquo;internautes puissent se mettre d&rsquo;accord sur le pourquoi, le comment et la destination d&rsquo;un texte, avant d&rsquo;en entreprendre l&rsquo;&eacute;criture."> ';
-  $html_str .= "\n";
-  $html_str .= '<meta http-equiv="content-type" content="text/html; charset=utf-8" /> ';
-  $html_str .= "\n";
-  $html_str .= '    <link href="' . $www_filename_css . '" rel="stylesheet" media="all" type="text/css"> ';
-  $html_str .= "\n";
-  $html_str .= '<link rel="icon" href="images/favicon.ico"> ';
-  $html_str .= "\n" . '  </head> ';
-  $html_str .= "\n";
-  $html_str .= '  <body> ';
-  $html_str .= "\n";
+  $html_str  = '<!DOCTYPE html>' . "\n";
+  $html_str .= '<html>' . "\n";
+  $html_str .= ' <head>' . "\n";
+  $html_str .= '  <title>' . $Nam_pro . '</title>' . "\n";
+  $html_str .= '  <meta name="robots" CONTENT="index,follow">' . "\n";
+  $html_str .= '  <META NAME="keywords" CONTENT="democracy, d&eacute;mocratie, collaborative editing, r&eacute;daction collaborative, general will, volont&eacute; g&eacute;n&eacute;rale, auto regulated collaborative editing, r&eacute;daction collaborative auto-r&eacute;gul&eacute;e">' . "\n";
+  $html_str .= '  <META NAME="description" CONTENT="ARCE (Auto-Regulated Collaborative Editing - r&eacute;daction collaborative auto-r&eacute;gul&eacute;e) est conçu pour que les membres d&rsquo;une communaut&eacute; d&rsquo;internautes puissent se mettre d&rsquo;accord sur le pourquoi, le comment et la destination d&rsquo;un texte, avant d&rsquo;en entreprendre l&rsquo;&eacute;criture.">' . "\n";
+  $html_str .= '  <meta http-equiv="content-type" content="text/html; charset=utf-8" />' . "\n";
+  $html_str .= '  <link href="' . $www_filename_css . '" rel="stylesheet" media="all" type="text/css">' . "\n";
+  $html_str .= '  <link rel="icon" href="images/favicon.ico">' . "\n";
+  $html_str .= ' </head>' . "\n";
+  $html_str .= ' <body>' . "\n";
  
 #  debug_n_check ($here , '$html_str', $html_str);
   exiting_from_function ($here);
@@ -53,7 +44,7 @@ function common_html_page_tail_build () {
   entering_in_function ($here);
 
   $html_str  = '';
-  $html_str .= '  </body> ' . "\n";
+  $html_str .= ' </body> ' . "\n";
   $html_str .= '</html> ' . "\n";
 
 #  debug_n_check ($here , '$html_str', $html_str);
@@ -68,10 +59,9 @@ function common_html_background_color_of_html ($tit) {
 
   $html_str = '';
   if ($tit != "") {
-    $html_str .= "\n";
     $html_str .= '<div class="my-div">' . "\n";
     $html_str .= $tit . "\n";
-    $html_str .= '</div> ' . "\n";
+    $html_str .= '</div>' . "\n";
   }
 
 #  debug_n_check ($here , '$html_str', $html_str);
@@ -86,12 +76,12 @@ function common_html_page_title_centered_of_title ($tit, $shi) {
 
   $html_str = '';
   if ($tit != "") {
-      $html_str .= '<center> ' . "\n";
+      $html_str .= '<center>' . "\n";
       $html_str .= $shi;
-      $html_str .= '<div class="my-div"> ';
+      $html_str .= '<div class="my-div">';
       $html_str .= $tit; 
-      $html_str .= '</div> ' . "\n";
-      $html_str .= '</center> ';
+      $html_str .= '</div>' . "\n";
+      $html_str .= '</center>';
   }
 
 #  debug_n_check ($here , '$html_str', $html_str);
@@ -109,8 +99,7 @@ function common_html_entitled_text_of_title_of_text ($tit, $html_txt) {
   $html_str  = '';
   $html_str .= common_html_background_color_of_html ($tit);
   $html_str .= "<br>\n"; 
-  $html_str .= $html_txt; 
-  $html_str .= "\n";
+  $html_str .= $html_txt . "\n"; 
   
 #  debug_n_check ($here , '$html_str', $html_str);
   exiting_from_function ($here);
@@ -118,15 +107,22 @@ function common_html_entitled_text_of_title_of_text ($tit, $html_txt) {
   return $html_str;
 }
 
-function method_get_in_form_of_action_module ($mod_act, $shi) {
+
+function a_href_of_entry_name_of_script_nameoffile_of_block_current_name_of_en_action ($nam_ent, $nof_scr, $nam_blo_cur, $en_act) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($mod_act, $shi)");
+  entering_in_function ($here . " ($nam_ent, $nof_scr, $nam_blo_cur, $shi)");
+
+  $lan = $_SESSION['parameters']['language'];
+  $la_act = language_translate_of_en_string_of_language ($en_act, $lan);
 
   $html_str  = '';
-  $html_str .= $shi;
-  $html_str .= 'method="get" ';
-  $html_str .= 'action="'. $mod_act . '"';
-
+  $html_str .= '<br><br>';
+  $html_str .= '<a href="'. $nof_scr . '?'; 
+  $html_str .= 'entry_name=' . $nam_ent;
+  $html_str .= '&block_current_name=' . $nam_blo_cur ; 
+  $html_str .= '">';
+  $html_str .= $la_act;
+  $html_str .= '</a>';
   debug_n_check ($here , '$html_str', $html_str);
   exiting_from_function ($here);
   
@@ -164,22 +160,44 @@ function form_action_get_of_script_nameoffile_of_en_value_of_en_text_of_shift ($
   return $html_str;
 }
 
-function textarea_of_name_of_en_placeholder ($nam, $en_pla, $shi) {
+function inputtypehidden_of_name_of_en_value ($nam, $en_val, $shi) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam, $en_pla, $shi)");
+  entering_in_function ($here . " ($nam, $en_val, $shi)");
 
   $lan = $_SESSION['parameters']['language'];
-  $la_Pla = ucfirst (language_translate_of_en_string_of_language ($en_pla, $lan));
+  $la_val = ucfirst (language_translate_of_en_string_of_language ($en_val, $lan));
+
+  $tex_siz = $_SESSION['parameters']['html_text_zone_size'];
 
   $html_str  = '';
-  $html_str .= '<textarea ' . "\n"; 
+  $html_str .= '<input type="hidden" ' . "\n"; 
   $html_str .= $shi;
-  $html_str .= 'name="' . $nam . '" ';
-  $html_str .= 'rows="2" cols="100" ';
-  $html_str .= 'placeholder="';
-  $html_str .= $la_Pla;
-  $html_str .= '">' . "\n";
-  $html_str .= '</textarea> ' . "\n";
+  $html_str .= 'name="';
+  $html_str .= $nam;
+  $html_str .= '" ' . "\n";
+  $html_str .= 'value="';
+  $html_str .= $la_val;
+  $html_str .= '"> ' . "\n";
+
+  debug_n_check ($here , '$html_str', $html_str);
+  exiting_from_function ($here);
+  
+  return $html_str;
+}
+
+function inputtypesubmit_of_name_of_en_value_of_shift ($nam, $en_val, $shi) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($nam, $shi)");
+
+  $lan = $_SESSION['parameters']['language'];
+  $la_Val = ucfirst (language_translate_of_en_string_of_language ($en_val, $lan));
+
+  $html_str  = '';
+  $html_str .= '<input type="submit" ' . "\n"; 
+  $html_str .= $shi;
+  if ( ! is_empty_of_string ($nam)) {$html_str .= 'name="' . $nam . '" ';}
+  $html_str .= 'value="' . $la_Val . '" ';
+  $html_str .= '"> ' . "\n";
 
   debug_n_check ($here , '$html_str', $html_str);
   exiting_from_function ($here);
@@ -216,21 +234,57 @@ function inputtypetext_of_name_of_en_placeholder ($nam, $en_pla, $shi) {
   return $html_str;
 }
 
-function inputtypesubmit_of_name_of_en_value_of_shift ($nam, $en_val, $shi) {
+function method_get_in_form_of_action_module_of_shift ($mod_act, $shi) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam, $shi)");
-
-  $lan = $_SESSION['parameters']['language'];
-  $la_Val = ucfirst (language_translate_of_en_string_of_language ($en_val, $lan));
+  entering_in_function ($here . " ($mod_act, $shi)");
 
   $html_str  = '';
-  $html_str .= '<input type="submit" ' . "\n"; 
   $html_str .= $shi;
-  if ( ! is_empty_of_string ($nam)) {
-      $html_str .= 'name="' . $nam . '" ';
-  }
-  $html_str .= 'value="' . $la_Val . '" ';
-  $html_str .= '"> ' . "\n";
+  $html_str .= 'method="get" ';
+  $html_str .= 'action="'. $mod_act . '"';
+
+  debug_n_check ($here , '$html_str', $html_str);
+  exiting_from_function ($here);
+  
+  return $html_str;
+}
+
+function textarea_of_name_of_en_placeholder ($nam, $en_pla, $shi) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($nam, $en_pla, $shi)");
+
+  $lan = $_SESSION['parameters']['language'];
+  $la_Pla = ucfirst (language_translate_of_en_string_of_language ($en_pla, $lan));
+
+  $html_str  = '';
+  $html_str .= '<textarea ' . "\n"; 
+  $html_str .= $shi;
+  $html_str .= 'name="' . $nam . '" ';
+  $html_str .= 'rows="2" cols="100" ';
+  $html_str .= 'placeholder="';
+  $html_str .= $la_Pla;
+  $html_str .= '">' . "\n";
+  $html_str .= '</textarea> ' . "\n";
+
+  debug_n_check ($here , '$html_str', $html_str);
+  exiting_from_function ($here);
+  
+  return $html_str;
+}
+
+function textarea_of_name_of_content_placeholder ($nam, $con_pla, $shi) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($nam, $con_pla, $shi)");
+
+  $html_str  = '';
+  $html_str .= '<textarea ' . "\n"; 
+  $html_str .= $shi;
+  $html_str .= 'name="' . $nam . '" ';
+  $html_str .= 'rows="2" cols="100" ';
+  $html_str .= 'placeholder="';
+  $html_str .= $con_pla;
+  $html_str .= '">' . "\n";
+  $html_str .= '</textarea> ' . "\n";
 
   debug_n_check ($here , '$html_str', $html_str);
   exiting_from_function ($here);

@@ -24,7 +24,7 @@ function block_current_rename_form_build () {
   $html_str .= irp_provide ('block_current_rename_form_page_title', $here);
 
   $html_str .= '<form' . "\n";
-  $html_str .= method_get_in_form_of_action_module ('block_current_rename_save.php', '  ');
+  $html_str .= method_get_in_form_of_action_module_of_shift ('block_current_rename_save.php', '  ');
   $html_str .= '> '; 
 
   $html_str .= '<br><br> ';
@@ -35,7 +35,7 @@ function block_current_rename_form_build () {
   $html_str .= button_submit_centered_of_button_value_en_of_language ('save', $lan);
   $html_str .= '</form> ' . "\n";
 
-  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_module_nameoffile_of_language ($nam_ent, $sur_ent, $nof_mod, $lan);
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent, $sur_ent, $nof_mod, $lan);
   $html_str .= irp_provide ('pervasive_html_final_section', $here);
 
   debug_n_check ($here , '$html_str', $html_str);

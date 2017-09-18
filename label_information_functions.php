@@ -95,19 +95,20 @@ function label_information_array_en_of_label ($nam_lab) {
   return $label_information;
 };
 
-function label_information_array_lan_of_label ($nam_lab, $lan) {
+function label_information_array_lan_of_label ($nam_lab) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_lab)");
 
   include "language_translate_register.php";
+  $lan = $_SESSION['parameters']['language'];
 
   $ent_inf_lan_a = array ();
   switch ($lan) {
   case 'en' :
-      $ent_inf_lan_a = label_information_array_en_of_label ($nam_lab, $lan);
+      $ent_inf_lan_a = label_information_array_en_of_label ($nam_lab);
       break;
   case 'fr' :
-      $ent_inf_en_a = label_information_array_en_of_label ($nam_lab, $lan);
+      $ent_inf_en_a = label_information_array_en_of_label ($nam_lab);
 
       foreach ($ent_inf_en_a as $key => $wor_en) {
 	

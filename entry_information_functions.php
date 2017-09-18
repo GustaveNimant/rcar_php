@@ -134,9 +134,11 @@ function entry_information_array_en_of_entry_name ($nam_ent) {
   return $entry_information_a;
 };
 
-function entry_information_array_lan_of_entry_name ($nam_ent, $lan) {
+function entry_information_array_lan_of_entry_name ($nam_ent) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_ent, $lan)");
+  entering_in_function ($here . " ($nam_ent)");
+
+  $lan = $_SESSION['parameters']['language'];
 
   include "language_translate_register.php";
 

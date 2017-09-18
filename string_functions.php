@@ -333,7 +333,10 @@ function check_label_name ($nam_lab){
   /* debug_n_check ($here , "input label_name name", $nam_lab); */
 
   if ( ! is_label_name ($nam_lab)) {
-    fatal_error ($here, "label_name >$nam_lab< is NOT canonical");
+    print_fatal_error ($here, 
+    "label_name >$nam_lab< were canonical",
+    "it is NOT",
+    "Check");
   }
 
 #  exiting_from_function ($here . " ($nam_lab)");

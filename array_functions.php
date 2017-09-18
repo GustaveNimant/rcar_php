@@ -424,7 +424,11 @@ function array_dollar_get_retrieve_value_of_key ($key, $mod) {
         $check = "Check Surname catalog file >$fno_sur<";
     }
     else {
-      $check = "Check that :<br>&nbsp;&nbsp;function >${key}_build< is implemented and accessible<br>&nbsp;&nbsp;or that <i>require_once</i> of its module-file is lacking in irp_functions.php";
+        $nam_fun = $key . '_build';
+
+        $check  = 'Check that :<br>';
+        $check .= '1 function >' . $nam_fun . '< is implemented and accessible' . '<br>';
+        $check .= '2 line <i>require_once "' . $key . '_functions.php";</i> is present in irp_functions.php';
     }
  
     print_fatal_error ($mod , 

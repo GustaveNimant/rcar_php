@@ -3,17 +3,18 @@
 require_once "array_functions.php";
 require_once "common_html_functions.php";
 require_once "clean_functions.php";
-
-# require_once "apropos_functions.php";
 require_once "entry_information_functions.php";
 require_once "git_command_functions.php";
 require_once "justification_functions.php";
 require_once "language_selection_functions.php";
 require_once "label_functions.php";
 
-$module = "pervasive_html_functions";
-# entering_in_module ($module);
+$module = module_name (__FILE__);
 
+$Documentation[$module]['what is it'] = "it is ...";
+$Documentation[$module]['what for'] = "to ...";
+
+# entering_in_module ($module);
 
 function pervasive_html_Auto_Regulated_Collaborative_Editing_build (){
   $here = __FUNCTION__;
@@ -35,30 +36,6 @@ function pervasive_html_Auto_Regulated_Collaborative_Editing_build (){
   return $html_str;
 }
 
-function pervasive_html_Auto_Regulated_Collaborative_Editing_in_la_build (){
-  $here = __FUNCTION__;
-  entering_in_function ($here);
-
-  $html_str = '';
-  $lan = $_SESSION['parameters']['language'];
-  
-  $txt_en = 'auto-regulated collaborative editing';
-  $txt_la = language_translate_of_en_string_of_language ($txt_en, $lan);
-
-  if ((isset ($lan)) && ($lan <> 'en')){
-      $html_str .= '<header_translate_subtitle> ';
-      $html_str .= '<i>( ';
-      $html_str .= $txt_la;
-      $html_str .= ' )</i> ';
-      $html_str .= '</header_translate_subtitle> ';
-  } 
-
-#  debug_n_check ($here , '$html_str', $html_str);
-  exiting_from_function ($here);
-  
-  return $html_str;
-}
-
 function pervasive_html_initial_section_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
@@ -76,25 +53,20 @@ function pervasive_html_initial_section_build (){
   $html_str  = '';
   $html_str .= $pag_hea;
  
-  $html_str .= '<table> ';
+  $html_str .= '<table> ' . "\n";
+  $html_str .= '  <tr> ' . "\n";
+  $html_str .= '    <td rowspan="3">' . "\n";
+  $html_str .= '      <header_sitename> ' . "\n";
+  $html_str .= $NAM_PRO . "\n";
+  $html_str .= '      </header_sitename> ' . "\n";
+  $html_str .= '    </td> ' . "\n";
 
-  $html_str .= '<tr> ';
-
-  $html_str .= '<td rowspan="3"> ';
-  $html_str .= '<header_sitename> ';
-  $html_str .= $NAM_PRO;
-  $html_str .= '</header_sitename> ';
-  $html_str .= '</td> ';
-
-  $html_str .= '<td colspan="6"> ';
-  $html_str .= $ARCE;
-
-  $html_str .= '</td> ';
-
-  $html_str .= '</tr> ';
-  $html_str .= $pag_ini; 
-
-  $html_str .= '</table> ';
+  $html_str .= '    <td colspan="6">' . "\n";
+  $html_str .= $ARCE . "\n";
+  $html_str .= '    </td>' . "\n";
+  $html_str .= '  </tr>' . "\n";
+  $html_str .= $pag_ini . "\n";
+  $html_str .= '</table>' . "\n";
   $html_str .= '<br> '; 
 
 #  debug_n_check ($here , '$html_str', $html_str);

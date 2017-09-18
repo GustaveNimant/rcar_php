@@ -2,12 +2,13 @@
 require_once "common_html_functions.php";
 require_once "language_translate_functions.php";
 
-$module = "link_functions"; /*SCRIPT_FILENAME'*/
+$module = module_name (__FILE__);
+
 # entering_in_module ($module);
 
 $Documentation[$module]['module_fullnameoffile'] = "the name of the php file with its path"; 
 $Documentation[$module]['module_nameoffile'] = "the name of the php file without its path"; 
-$Documentation[$module]['module_name'] = "the name of the php file without its path with .php extension"; 
+$Documentation[$module]['module_name'] = "the name of the php file without its path without .php extension"; 
 
 function link_is_ok_of_module_name ($nam_mod) {
 
@@ -76,19 +77,16 @@ function link_previous_module_name_make () {
   return $pre_mod;
 }
 
-function link_to_return_of_entry_name_of_entry_surname_of_module_nameoffile_of_language ($nam_ent, $sur_ent, $nof_mod, $lan) {
+function link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent, $sur_ent, $nof_mod) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_ent, $sur_ent, $nof_mod, $lan)");
+  entering_in_function ($here . " ($nam_ent, $sur_ent, $nof_mod)");
 
-  debug_n_check ("$here", '$nam_ent', $nam_ent);
-  debug_n_check ("$here", '$sur_ent', $sur_ent);
-  debug_n_check ("$here", '$nof_mod', $nof_mod);
-
+  $lan = $_SESSION['parameters']['language'];
   $en_txt = 'back to the entry';
   $la_txt = language_translate_of_en_string_of_language ($en_txt, $lan);
   $la_Txt  = string_html_capitalized_of_string ($la_txt);
 
-  debug_n_check ("$here", '$la_txt', $la_txt);
+  debug_n_check ("$here", '$la_Txt', $la_Txt);
 
   $html_str  = '';
   $html_str .= '<center> ';
@@ -102,12 +100,13 @@ function link_to_return_of_entry_name_of_entry_surname_of_module_nameoffile_of_l
   return $html_str;
 }
 
-function link_to_return_of_module_nameoffile_of_language ($nof_mod, $lan) {
+function link_to_return_of_return_module_nameoffile ($nof_mod) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nof_mod, $lan)");
+  entering_in_function ($here . " ($nof_mod)");
 
   $nam_mod = str_replace ('.php', '', $nof_mod);
 
+  $lan = $_SESSION['parameters']['language'];
   $la_txt = language_translate_of_en_string_of_language ('back to the module', $lan);
   $la_Txt = string_html_capitalized_of_string ($la_txt);
 

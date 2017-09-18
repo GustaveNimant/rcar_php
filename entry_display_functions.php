@@ -89,15 +89,12 @@ function entry_create_block_title_n_action_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $lan = $_SESSION['parameters']['language'];
-
   $script_action = 'block_new_create_form.php';
-  $en_val_but = 'create';
 
   $html_str  = '';
   $html_str .= '<form action="'. $script_action .'" method="get"> ' . "\n";
   $html_str .= irp_provide ('entry_create_block_title', $here);
-  $html_str .= button_submit_of_button_value_en_of_language ($en_val_but, $lan);
+  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift (' ', 'create', '  ');
   $html_str .= '</form> ' .  "\n";
 
   debug_n_check ($here , '$html_str',  $html_str);
@@ -160,7 +157,7 @@ function entry_reorder_block_title_n_action_build () {
   $html_str  = '';
   $html_str .= '<form action="'. $script_action .'" method="get"> ' . "\n";
   $html_str .= irp_provide ('entry_reorder_block_title', $here);
-  $html_str .= button_submit_of_button_value_en_of_language ($en_val_but, $lan);
+  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift ($en_val_but, $lan);
   $html_str .= '</form> ' .  "\n";
 
   debug_n_check ($here , '$html_str',  $html_str);
@@ -285,7 +282,7 @@ function entry_display_build (){
   catch (Exception $e) {}
 
   $html_str .= irp_provide ('entry_display_title_n_action', $here);
-  $html_str .= link_to_return_of_module_nameoffile_of_language ($nof_mod, $lan);
+  $html_str .= link_to_return_of_return_module_nameoffile ($nof_mod);
   $html_str .= irp_provide ('pervasive_html_final_section', $here);
 
   exiting_from_function ($here);

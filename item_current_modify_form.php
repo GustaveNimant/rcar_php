@@ -2,13 +2,11 @@
 include "session.php";
 require_once "father_n_son_stack_module_functions.php";
 
-require_once "item_current_modify_functions.php";
+$module = module_name (__FILE__);
 
-$module = "item_current_modify";
 # entering_in_module ($module);
-father_n_son_stack_entity_push_of_current_entity ($module);
 
-debug_n_check ($module , '$_GET', $_GET);
+father_n_son_stack_entity_push_of_current_entity ($module);
 
 $html_str = irp_provide ($module, $module . "_build");
 

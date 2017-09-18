@@ -69,21 +69,16 @@ function entry_list_section_select_entry_action_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
   
-  $lan = $_SESSION['parameters']['language'];
-
   $pre_mod = link_previous_module_name_make ();
   $son_mod = 'entry_display';
   $script_action = $son_mod . '.php'; 
   debug_n_check ($here, '$script_action', $script_action);
-  /* irp_father_of_module_of_son ($pre_mod, $son_mod); */
-
-  $en_val_but = 'select';
 
   $html_str  = '';
   $html_str .= '<form action="' . $script_action .'" method="get"> ' . "\n";
   $html_str .= '<br> ';
   $html_str .= irp_provide ('entry_list_menuselect_entry', $here);
-  $html_str .= button_submit_of_button_value_en_of_language ($en_val_but, $lan);
+  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift (' ', 'select', ' ');
   $html_str .= '</form> ' .  "\n";
  
   exiting_from_function ($here);
@@ -138,10 +133,6 @@ function entry_list_section_get_entry_newsurname_build () {
   $pre_mod = link_previous_module_name_make ();
   $son_mod = 'entry_create';
   $script_action = $son_mod . '.php';;
-  debug_n_check ($here, '$script_action', $script_action);
-  /* irp_father_of_module_of_son ($pre_mod, $son_mod); */
-
-  $en_val_but = 'create';
 
   $html_str  = '';
   $html_str .= '<form action="'. $script_action .'" method="get"> ' . "\n";
@@ -153,7 +144,7 @@ function entry_list_section_get_entry_newsurname_build () {
   }
 
   $html_str .= '"/> ';
-  $html_str .= button_submit_of_button_value_en_of_language ($en_val_but, $lan);
+  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift (' ', 'create', '  ');
   $html_str .= '    </form> ' .  "\n";
 
   exiting_from_function ($here);
@@ -199,19 +190,14 @@ function entry_list_section_rename_entry_action_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $lan = $_SESSION['parameters']['language'];
-
   $pre_mod = link_previous_module_name_make ();
   $script_action = 'entry_rename.php';
-  debug_n_check ($here, '$script_action', $script_action);
-
-  $en_val_but = 'select';
 
   $html_str  = '';
   $html_str .= '<form action="' . $script_action .'" method="get"> ' . "\n";
   $html_str .= '<br> ';
   $html_str .= irp_provide ('entry_list_menuselect_entry', $here);
-  $html_str .= button_submit_of_button_value_en_of_language ($en_val_but, $lan);
+  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift (' ', 'select', '  ');
   $html_str .= '</form> ' .  "\n";
  
   exiting_from_function ($here);

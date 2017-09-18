@@ -86,7 +86,7 @@ function entry_rename_save_build (){
   $html_str = '';
   $html_str .= irp_provide ('pervasive_html_initial_section', $here);
   $html_str .= irp_provide ('git_command_n_commit_html', $here);
-  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_module_nameoffile_of_language ($new_nam_ent, $new_sur_ent, $nof_mod, $lan); 
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($new_nam_ent, $new_sur_ent, $nof_mod, $lan); 
   $html_str .= irp_provide ('pervasive_html_final_section', $here);
   
   debug_n_check ($module , '$html_str', $html_str);

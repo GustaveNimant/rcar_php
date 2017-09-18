@@ -50,12 +50,19 @@ require_once "git_command_functions.php";
 
 require_once "irp_path_functions.php";
 
-require_once "item_current_action_display_functions.php";
+require_once "item_current_modify_display_functions.php";
 require_once "item_current_content_display_functions.php";
 require_once "item_current_content_linked_by_item_name_array_functions.php";
 require_once "item_current_justification_display_functions.php";
 
+require_once "item_current_modify_form_current_content_functions.php";
+require_once "item_current_modify_form_functions.php";
+require_once "item_current_modify_form_new_create_content_functions.php";
+require_once "item_current_modify_form_new_create_justification_functions.php";
+require_once "item_current_modify_form_page_title_functions.php";
+
 require_once "item_new_content_functions.php"; 
+
 require_once "item_new_create_content_form_functions.php"; 
 require_once "item_new_create_content_form_textarea_functions.php";
 require_once "item_new_create_content_form_title_n_help_functions.php";

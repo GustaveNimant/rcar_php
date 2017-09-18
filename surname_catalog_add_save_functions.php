@@ -42,7 +42,7 @@ function surname_catalog_item_add_save_build (){
 
   $nam_ent = irp_provide ('entry_name', $here);
   $sur_ent = irp_provide ('entry_surname', $here);
-  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_module_nameoffile_of_language ($nam_ent, $sur_ent, $nof_mod, $lan); 
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent, $sur_ent, $nof_mod, $lan); 
   $html_str .= irp_provide ('pervasive_html_final_section', $here);
   
   debug_n_check ($module , '$html_str', $html_str);
@@ -71,7 +71,7 @@ function surname_catalog_entry_add_save_build (){
   $html_str = '';
   $html_str .= irp_provide ('pervasive_html_initial_section', $here);
   $html_str .= irp_provide ('git_command_n_commit_html', $here);
-  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_module_nameoffile_of_language ($nam_wos, $sur_wos, $nof_mod, $lan);
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_wos, $sur_wos, $nof_mod, $lan);
   $html_str .= irp_provide ('pervasive_html_final_section', $here);
   
   debug_n_check ($module , '$html_str', $html_str);

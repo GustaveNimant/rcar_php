@@ -172,36 +172,6 @@ function button_submit_to_return_of_surname_by_name_array_of_module_nameoffile_o
   return $html_str;
 }
 
-function button_submit_of_button_value_en_of_language ($en_val_but, $lan) {
-  $here = __FUNCTION__;
-  entering_in_function ($here . "($en_val_but, $lan)");
-
-  $la_Val_but = ucfirst (language_translate_of_en_string_of_language ($en_val_but, $lan));
-
-  $html_str  = '';
-  $html_str .= '    <input type="submit" value="';
-  $html_str .= $la_Val_but;
-  $html_str .= '"> ' . "\n";
-
-  exiting_from_function ($here);
-
-  return $html_str;
-}
-
-function button_submit_centered_of_button_value_en_of_language ($en_val_but, $lan) {
-  $here = __FUNCTION__;
-  entering_in_function ($here . "($en_val_but, $lan)");
-
-  $html_str  = '';
-  $html_str .= '  <center> ' . "\n";
-  $html_str .= button_submit_of_button_value_en_of_language ($en_val_but, $lan);
-  $html_str .= '  </center> ' . "\n";
-
-  exiting_from_function ($here);
-
-  return $html_str;
-}
-
 # exiting_from_module ($module);
 
 ?>

@@ -3,7 +3,9 @@
 require_once "management_functions.php";
 require_once "irp_functions.php";
 
-$module = "block_current_name_functions";
+$module = module_name (__FILE__);
+$Documentation[$module]['what is it'] = "";
+
 # entering_in_module ($module);
 
 function block_current_name_build () {
@@ -16,17 +18,17 @@ function block_current_name_build () {
   trace ($here, "GET >$irp_key< cleaning done");
 
   if ( isset ($_GET['block_current_name'])) {
-      $nam_ite = array_dollar_get_retrieve_value_of_key ($irp_key, $here);
+      $nam_blo = array_dollar_get_retrieve_value_of_key ($irp_key, $here);
   }
   else {
 
-      $sur_ite = irp_provide ('block_surname', $here);
-      $nam_ite = word_name_capitalized_of_string_surname ($sur_ite);
+      $sur_blo = irp_provide ('block_surname', $here);
+      $nam_blo = word_name_capitalized_of_string_surname ($sur_blo);
   }
   
   exiting_from_function ($here);
 
-  return $nam_ite;
+  return $nam_blo;
 
 }
 

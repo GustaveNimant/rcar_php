@@ -41,7 +41,7 @@ function block_next_content_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $con_ite_nex = irp_provide ('item_current_content_modified', $here);
+  $con_ite_nex = irp_provide ('item_current_modify_content', $here);
   $jus_ite_nex = irp_provide ('item_current_modified_justification', $here);
   $con_ite_cur = irp_provide ('item_current_content', $here);
   $blo_cur_sha = irp_provide ('block_current_sha1', $here);

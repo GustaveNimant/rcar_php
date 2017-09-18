@@ -33,7 +33,7 @@ function block_list_neworder_save_build () {
   $sur_by_nam_a = irp_provide ('surname_by_name_array', $here);
   $nof_mod = 'entry_display.php';
  
-  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_module_nameoffile_of_language ($nam_ent, $sur_ent, $nof_mod, $lan); 
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent, $sur_ent, $nof_mod, $lan); 
  
   $html_str .= irp_provide ('pervasive_html_final_section', $here);
 

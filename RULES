@@ -1,0 +1,36 @@
+# definitions :
+entity :
+   block
+   entry
+   item
+
+status :
+   current
+   modified
+   new
+   next 
+   previous
+
+action :
+   display
+   create
+   modify
+   rename
+   save
+
+sectiontype : 
+   pagetitle
+   sectionform
+   sectiontextarea
+   sectiontitle
+   sectiontitlehelped
+
+pagetype : 
+   display
+   form 
+
+# file name structure entity_status_action_pagetype_functions.php
+
+# file name contains _form => build starts with <form and ends with </form>
+ 
+# the name of a function must begin with its module name

@@ -118,7 +118,7 @@ function block_current_display_build (){
   $html_str .= irp_provide ('block_current_display_section_page_title', $here);
 
   $html_str .= irp_provide ('item_current_content_display', $here);
-  $html_str .= irp_provide ('item_current_action_display', $here);
+  $html_str .= irp_provide ('item_current_modify_display', $here);
   $html_str .= irp_provide ('item_current_justification_display', $here);
   $html_str .= irp_provide ('item_previous_content_display', $here); 
 
@@ -126,7 +126,7 @@ function block_current_display_build (){
   $html_str .= irp_provide ('block_current_display_action', $here);
 
   $html_str .= '<br><br>';
-  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_module_nameoffile_of_language ($nam_ent, $sur_ent, $nof_mod, $lan);
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent, $sur_ent, $nof_mod, $lan);
 
   $html_str .= irp_provide ('pervasive_html_final_section', $here);
 

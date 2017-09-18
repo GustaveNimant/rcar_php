@@ -79,7 +79,7 @@ function arce_section_select_entry_action_build () {
   $html_str .= '<form action="' . $script_action .'" method="get"> ' . "\n";
   $html_str .= '<br> ';
   $html_str .= irp_provide ('arce_menuselect_entry', $here);
-  $html_str .= button_submit_of_button_value_en_of_language ($en_val_but, $lan);
+  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift ($en_val_but, $lan);
   $html_str .= '</form> ' .  "\n";
  
   exiting_from_function ($here);
@@ -145,7 +145,7 @@ function arce_section_create_entry_action_build () {
   }
 
   $html_str .= '"/> ';
-  $html_str .= button_submit_of_button_value_en_of_language ($en_val_but, $lan);
+  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift ($en_val_but, $lan);
   $html_str .= '    </form> ' .  "\n";
 
 
@@ -206,7 +206,7 @@ function arce_section_rename_entry_action_build () {
   $html_str .= '<form action="' . $script_action .'" method="get"> ' . "\n";
   $html_str .= '<br> ';
   $html_str .= irp_provide ('arce_menuselect_entry', $here);
-  $html_str .= button_submit_of_button_value_en_of_language ($en_val_but, $lan);
+  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift ($en_val_but, $lan);
   $html_str .= '</form> ' .  "\n";
  
   exiting_from_function ($here);

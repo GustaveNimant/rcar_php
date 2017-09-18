@@ -26,7 +26,7 @@ function block_new_create_form_build (){
   $html_str .= irp_provide ('block_new_create_form_page_title', $here);
 
   $html_str .= '<form' . "\n";
-  $html_str .= method_get_in_form_of_action_module ('block_new_create_save.php', '  ');
+  $html_str .= method_get_in_form_of_action_module_of_shift ('block_new_create_save.php', '  ');
   $html_str .= '> '; 
 
   $html_str .= form_array_dollar_get_store_of_key_of_value_of_here ('block_new_action', 'create', $here);
@@ -43,7 +43,7 @@ function block_new_create_form_build (){
 
   $html_str .= '</form> ' . "\n";
 
-  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_module_nameoffile_of_language ($nam_ent, $sur_ent, $nof_mod, $lan);
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent, $sur_ent, $nof_mod, $lan);
 
   $html_str .= irp_provide ('block_new_create_block_list', $here);
   $html_str .= irp_provide ('pervasive_html_final_section', $here);

@@ -61,7 +61,7 @@ function entry_create_section_create_entry_build () {
   $html_str  = '';
   $html_str .= '<form action="'. $script_action .'" method="get"> ' . "\n";
   $html_str .= irp_provide ('entry_create_message_of_entry_name', $here);
-  $html_str .= button_submit_of_button_value_en_of_language ($en_val_but, $lan);
+  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift ($en_val_but, $lan);
   $html_str .= '    </form> ' .  "\n";
 
   exiting_from_function ($here);
@@ -100,7 +100,7 @@ function entry_create_build () {
   $html_str  = '';
   $html_str .= irp_provide ('pervasive_html_initial_section', $here);
   $html_str .= irp_provide ('entry_create_section_create_entry', $here);
-  $html_str .= link_to_return_of_module_nameoffile_of_language ($nof_mod, $lan);
+  $html_str .= link_to_return_of_return_module_nameoffile ($nof_mod);
   $html_str .= irp_provide ('pervasive_html_final_section', $here);
 
   debug_n_check ($here , '$html_str',  $html_str);

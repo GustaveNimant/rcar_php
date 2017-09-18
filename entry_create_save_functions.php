@@ -92,7 +92,7 @@ function entry_create_save_build () {
 
   $sur_by_nam_a = irp_provide ('surname_by_name_array', $here); /* need to be updated */
 
-  $html_str .= link_to_return_of_module_nameoffile_of_language ($nof_mod, $lan);
+  $html_str .= link_to_return_of_return_module_nameoffile ($nof_mod);
   $html_str .= irp_provide ('pervasive_html_final_section', $here);
 
   debug_n_check ($here , '$html_str',  $html_str);

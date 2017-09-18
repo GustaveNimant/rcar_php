@@ -14,16 +14,16 @@ function button_submit_quit_html_make ($lan) {
   $script_action = 'quit.php';
   debug_n_check ($here , "script_action", $script_action);
 
-  $html_str  = "";
-  $html_str .= "\n";
-  $html_str .= '<form action="' . $script_action . '" method="get"> ' . "\n";
+  $html_str  = '<!-- entering in ' . $here . '-->' . "\n";
+  $html_str .= '<form action="' . $script_action . '" method="get">' . "\n";
   $html_str .= '  <input type="submit" value="';
   $html_str .= ucfirst (language_translate_of_en_string_of_language ('quit', $lan));
   $html_str .= '" title="';
   $html_str .= ucfirst (language_translate_of_en_string_of_language ('delete browsing data', $lan));
-  $html_str .= '" font-variant:small-caps; background-color:red"> ' . "\n";
+  $html_str .= '" font-variant:small-caps; background-color:red>' . "\n";
   $html_str .= '</form> ' . "\n";
-  
+  $html_str .= '<!-- exiting from ' . $here . '-->' . "\n";
+
   debug_n_check ($here , '$html_str', $html_str);
 
   exiting_from_function ($here);

@@ -95,11 +95,11 @@ function debug ($nam_fun, $nam_var, $var) {
   /*   print_html_array ("debug", "debug_array", $debug_array); */
   /* } */
   
-  if ( ($debug_array[$nam_fun][$nam_var]) ||
-       ($debug_array[$nam_fun]['any'])    ||
-       ($debug_array['any'][$nam_var])    ||
-       ($debug_array['any']['any']) ) {
-    
+  if ( (isset ($debug_array[$nam_fun][$nam_var])) ||
+  (isset ($debug_array[$nam_fun]['any']))    ||
+  (isset ($debug_array['any'][$nam_var]))    ||
+  (isset ($debug_array['any']['any'])) ) {
+      
       if (is_array ($var)) {
           debug_a ($nam_fun, $nam_var, $var);
       }

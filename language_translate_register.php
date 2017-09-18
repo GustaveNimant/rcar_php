@@ -3,7 +3,7 @@
 $CR="&#013";
 $LF="&#010";
  
-$language_translate_register = 
+$_SESSION['language_translate_register'] = 
 
 array (
 

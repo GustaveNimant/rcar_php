@@ -7,13 +7,7 @@ require_once "debug_functions.php";
 
 $module = "index";
 
-$subjet = "Connexion à $progam_name par $usr_ip";
-$message  = $usr_ip . " vient de se connecter sur $Progam_name\r\n";
-$message .= "http://fr.geoipview.com/?q=" . $usr_ip;
-
-mail_send_of_subject_of_message ($subjet, $message);
-
-$Documentation[$module]['Usage'] = "Initialize $_SESSION. Calls home";
+$Documentation[$module]['Usage'] = "Initialize \$_SESSION. Calls home";
 
 if (file_exists ("install.php")) {
     if ($_GET['Fin'] <> 'ok') {
@@ -85,6 +79,15 @@ $_SESSION['debug_active'] = 1;
 $_SESSION['trace_active'] = 1;
 
 $_SESSION['time_start'] = microtime (true);
+
+$program_name = $_SESSION['parameters']['program_name'];
+$Program_name = ucfirst($program_name);
+
+$subjet = "Connexion à $program_name par $usr_ip";
+$message  = $usr_ip . " vient de se connecter sur $Program_name\r\n";
+$message .= "http://fr.geoipview.com/?q=" . $usr_ip;
+
+mail_send_of_subject_of_message ($subjet, $message);
 
 $nof_deb = "debug_array.txt";
 if (file_exists ($nof_deb) ){

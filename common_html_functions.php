@@ -149,7 +149,7 @@ function form_action_get_of_script_nameoffile_of_en_value_of_en_text_of_shift ($
   $html_str .= '" title="';
   $html_str .= $la_txt;
   $html_str .= '" ';
-  $html_str .= 'font-variant:small-caps; background-color:red ';
+  $html_str .= 'font-variant:small-caps; background-color:red '; /* incorrect */
   $html_str .= '> ' . "\n";
   $html_str .= $shi;
   $html_str .= '</form> ' . "\n";

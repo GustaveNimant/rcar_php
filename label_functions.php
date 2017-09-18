@@ -5,15 +5,14 @@ require_once "common_html_functions.php";
 require_once "clean_functions.php";
 require_once "label_information_functions.php";
 require_once "git_command_functions.php";
-require_once "justification_functions.php";
 require_once "language_selection_functions.php";
 
 $module = module_name (__FILE__);
 
-# entering_in_module ($module);
+$Documentation[$module]['what is it'] = "it is ...";
+$Documentation[$module]['what for'] = "to ...";
 
-$Documentation[$module]['what is it']  = "a label is a link ( Entry or Module) displayed in the header";
-$Documentation[$module]['example'] .= "Home, Entries, Faq, ...";
+# entering_in_module ($module);
 
 function label_html_href_make_of_label ($nam_lab) {
   $here = __FUNCTION__;

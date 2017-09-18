@@ -5,7 +5,6 @@ require_once "common_html_functions.php";
 require_once "clean_functions.php";
 require_once "entry_information_functions.php";
 require_once "git_command_functions.php";
-require_once "justification_functions.php";
 require_once "language_selection_functions.php";
 require_once "label_functions.php";
 

@@ -85,7 +85,7 @@ $module = module_name (__FILE__);
 
 # entering_in_module ($module);
 
-$Documentation[$module]['irp_stack'] = "stacks all $irp_key. When retrieved ($irp_val) is added"; 
+$Documentation[$module]['irp_stack'] = "stacks all \$irp_key. When retrieved (\$irp_val) is added"; 
 
 function irp_is_stored ($irp_key) {
   $here = __FUNCTION__;

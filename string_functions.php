@@ -86,7 +86,7 @@ function string_remove_accents ($str) {
 #  entering_in_function ($here . "($str)");
   
   /* get html translation of é à etc...*/
-  $html_str = htmlentities ($str, ENT_NOQUOTES, $charset); 
+  $html_str = htmlentities ($str, ENT_NOQUOTES, "UTF-8"); 
   /* replace html form */
   $str = string_remove_html_entities ($html_str);
 

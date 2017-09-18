@@ -2,7 +2,7 @@
 require_once "father_n_son_stack_module_functions.php";
 require_once "father_n_son_stack_entity_functions.php";
 
-$Documentation[$module]['irp_stack'] = "stacks all $irp_key. When retrieved ($irp_val) is added"; 
+$Documentation[$module]['irp_stack'] = "stacks all \$irp_key. When retrieved (\$irp_val) is added"; 
 
 function irp_father_array_of_irp_key ($irp_key, $fat_n_son_a) {
 /* any father of $irp_key */

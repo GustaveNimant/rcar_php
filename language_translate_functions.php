@@ -59,7 +59,7 @@ function language_translate_of_en_string_of_language ($en_str, $lan) {
     );
   }
 
-  global $language_translate_register;
+  $language_translate_register = $_SESSION['language_translate_register'];
 
   if ($lan == 'en') {
     $lan_str = $en_str;
@@ -86,7 +86,6 @@ function language_translate_of_en_string_of_language ($en_str, $lan) {
 
   return $lan_str;  
 }
-
 
 function translate_language_texts_english_by_language_array_of_language ($lan) {
   $here = __FUNCTION__;

@@ -38,11 +38,11 @@ is an assertion it should verify',
 
 /* duplicate plurals */
 
-$bubble_text_en_by_key_array['properties'] = $bubble_text_en_by_key_array['property'];
-$bubble_text_en_by_key_array['new properties'] = $bubble_text_en_by_key_array['new property'];
-$bubble_text_en_by_key_array['entries'] = $bubble_text_en_by_key_array['entry_name'];
-$bubble_text_en_by_key_array['rules'] = $bubble_text_en_by_key_array['rule'];
-$bubble_text_en_by_key_array['Rule'] = $bubble_text_en_by_key_array['rule'];
-$bubble_text_en_by_key_array['Rules'] = $bubble_text_en_by_key_array['rule'];
-$bubble_text_en_by_key_array['Entry'] = $bubble_text_en_by_key_array['entry_name'];
+$bubble_en_text_by_key_array['properties'] = $bubble_en_text_by_key_array['property'];
+$bubble_en_text_by_key_array['new properties'] = $bubble_en_text_by_key_array['new property'];
+$bubble_en_text_by_key_array['entries'] = $bubble_en_text_by_key_array['entry_name'];
+$bubble_en_text_by_key_array['rules'] = $bubble_en_text_by_key_array['rule'];
+$bubble_en_text_by_key_array['Rule'] = $bubble_en_text_by_key_array['rule'];
+$bubble_en_text_by_key_array['Rules'] = $bubble_en_text_by_key_array['rule'];
+$bubble_en_text_by_key_array['Entry'] = $bubble_en_text_by_key_array['entry_name'];
 ?>

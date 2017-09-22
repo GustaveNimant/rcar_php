@@ -7,7 +7,7 @@ require_once "button_submit_functions.php";
 require_once "irp_functions.php";
 require_once "bubble_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 # entering_in_module ($module);
 
@@ -38,7 +38,7 @@ function label_information_array_en_of_label ($nam_lab) {
       $label_information = 
           array (
               'label_kind' => 'href',
-              'url_relative' => 'entry_list.php',
+              'url_relative' => 'entry_list_display.php',
               'block_kind' => 'undefined',
               'kind_justification' => 'justification',
               'bubble_href' => 'list of entries',
@@ -123,13 +123,13 @@ function label_information_array_lan_of_label ($nam_lab) {
 	      
 	      $worlan_a = array ();   
 	      foreach ($woren_a as $k => $w_en) {
-              $worlan = language_translate_of_en_string_of_language ($w_en, $lan);
+              $worlan = language_translate_of_en_string ($w_en);
               $worlan_a[$k] = $worlan;
 	      }
 	      $wor_lan = $worlan_a;
 	    }
 	    else {
-            $wor_lan = language_translate_of_en_string_of_language ($wor_en, $lan);
+            $wor_lan = language_translate_of_en_string ($wor_en);
 	    }
 	    $ent_inf_lan_a[$key] = $wor_lan;
 	  }

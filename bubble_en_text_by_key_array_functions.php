@@ -1,12 +1,17 @@
 <?php
-/* key   is a word to be bubbled in english */
-/* value is the bubble text in english */
 
-function bubble_text_en_by_key_array_make () {
+$module = module_name_of_module_fullnameoffile (__FILE__);
+
+$Documentation[$module]['what is key'] = "it is a word to be bubbled in english";
+$Documentation[$module]['what is value'] = "it is the bubble text in english";
+
+# entering_in_module ($module);
+
+function bubble_en_text_by_key_array_make () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $bubble_text_en_by_key_array = 
+  $bubble_en_text_by_key_array = 
     array (
         'action' => 'an action is one off delete, modify, justify or rename',
         'choose' => 'click on one of the radio buttons',
@@ -34,32 +39,32 @@ function bubble_text_en_by_key_array_make () {
   
   /* expression */
   
-  $bubble_text_en_by_key_array['paragraphes'] = $bubble_text_en_by_key_array['paragraph'];
-  $bubble_text_en_by_key_array['properties'] = $bubble_text_en_by_key_array['property'];
-  $bubble_text_en_by_key_array['new properties'] = $bubble_text_en_by_key_array['new property'];
-  $bubble_text_en_by_key_array['entries'] = $bubble_text_en_by_key_array['entry'];
-  $bubble_text_en_by_key_array['rules'] = $bubble_text_en_by_key_array['rule'];
-  $bubble_text_en_by_key_array['surnames'] = $bubble_text_en_by_key_array['surname'];
+  $bubble_en_text_by_key_array['paragraphes'] = $bubble_en_text_by_key_array['paragraph'];
+  $bubble_en_text_by_key_array['properties'] = $bubble_en_text_by_key_array['property'];
+  $bubble_en_text_by_key_array['new properties'] = $bubble_en_text_by_key_array['new property'];
+  $bubble_en_text_by_key_array['entries'] = $bubble_en_text_by_key_array['entry'];
+  $bubble_en_text_by_key_array['rules'] = $bubble_en_text_by_key_array['rule'];
+  $bubble_en_text_by_key_array['surnames'] = $bubble_en_text_by_key_array['surname'];
   
-  debug_n_check ($here , '$bubble_text_en_by_key_array', $bubble_text_en_by_key_array);
+  debug_n_check ($here , '$bubble_en_text_by_key_array', $bubble_en_text_by_key_array);
   exiting_from_function ($here);
   
-  return $bubble_text_en_by_key_array;
+  return $bubble_en_text_by_key_array;
   
 }
 
-function bubble_text_la_by_key_array_make_of_language ($lan) {
+function bubble_la_text_by_key_array_make () {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($lan)");
+  entering_in_function ($here);
   
-  $en_txt_bub_a = bubble_text_en_by_key_array_make ();
+  $en_txt_bub_a = bubble_en_text_by_key_array_make ();
   
   # debug_n_check ($here , '$en_txt_bub_a', $en_txt_bub_a);
 
   foreach ($en_txt_bub_a as $en_key_bub => $en_txt_bub) {
 
-      $la_key_bub = language_translate_of_en_string_of_language ($en_key_bub, $lan);
-      $la_txt_bub = language_translate_of_en_string_of_language ($en_txt_bub, $lan);
+      $la_key_bub = language_translate_of_en_string ($en_key_bub);
+      $la_txt_bub = language_translate_of_en_string ($en_txt_bub);
 
     $la_txt_bub_a[$la_key_bub] = $la_txt_bub;
     /* debug_n_check ($here , '$en_key_bub', $en_key_bub); */

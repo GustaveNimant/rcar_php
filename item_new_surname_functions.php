@@ -6,7 +6,7 @@ require_once "entry_information_functions.php";
 require_once "block_information_functions.php";
 require_once "block_name_array_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 # entering_in_module ($module);
 

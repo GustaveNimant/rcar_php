@@ -7,7 +7,7 @@ require_once "block_current_nameoffile_array_functions.php";
 
 require_once "irp_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 $Documentation[$module]['what is it'] = "it is a string as a list of block names separated by a blank";
 $Documentation[$module]['remark'] = "the order of the block names is defined by the user";
@@ -19,10 +19,7 @@ function block_name_catalog_fullnameoffile_of_entry_name ($nam_ent) {
   entering_in_function ($here . " ($nam_ent)");
 
   $dir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
-
-  $ext_cat = $_SESSION['parameters']['block_name_catalog_filename_extension'];
-  debug_n_check ($here , '$ext_cat', $ext_cat);
-
+  $ext_cat = $_SESSION['parameters']['extension_block_name_catalog_filename'];
   $fno_cat = $dir . 'Block_name_catalog.' . $ext_cat;
 
   debug_n_check ($here , '$fno_cat', $fno_cat);
@@ -53,7 +50,7 @@ function block_name_catalog_read_of_entry_name ($nam_ent) {
   $dir_pat = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
   debug_n_check ($here , "directory path", $dir_pat);
 
-  $ext_cat = $_SESSION['parameters']['block_name_catalog_filename_extension'];
+  $ext_cat = $_SESSION['parameters']['extension_block_name_catalog_filename'];
   $hnof = $dir_pat . 'Block_name_catalog.' . $ext_cat;
 
   $str = file_content_read ($hnof);
@@ -68,7 +65,9 @@ function block_name_catalog_read_of_entry_name ($nam_ent) {
 
 function block_name_catalog_of_block_name_array ($nam_blo_a){
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_blo_a[0], ...)");
+  entering_in_function ($here);
+
+  check_is_empty_of_array ($nam_blo_a, $here);
 
   $glue = $_SESSION['parameters']['glue'];
   debug_n_check ($here , "glue", $glue);

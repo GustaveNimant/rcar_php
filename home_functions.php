@@ -1,5 +1,5 @@
 <?php
-
+require_once "management_functions.php";
 require_once "irp_functions.php";
 require_once "pervasive_html_functions.php";
 
@@ -57,67 +57,84 @@ function arce_home_text_en () {
 }
 
 function arce_home_header_accent_fr () {
-  $html_str  = "";
-  $html_str .= "<center>";
-  $html_str .= "<i>Ce site est un prototype implémentant une méthode de <b>rédaction collaborative auto-régulée</b>.<br/>";
-  $html_str .= "Elle est applicable à une <b>vaste</b> collectivité d'internautes.<br/>";
-  $html_str .= 'Voir la <a href="entry_display.php?entry_name=Faq">Faq</a></i>.';
-  $html_str .= "</center>";
+    $here = __FUNCTION__;
+    entering_in_function ($here);
 
-  return $html_str;
+    $html_str  = comment_entering_of_function_name ($here);
+    $html_str .= '<center>'  . "\n";
+    $html_str .= '<i>' . "\n";
+    $html_str .= "Ce site est un prototype implémentant une méthode de <b>rédaction collaborative auto-régulée</b>.<br/>\n";
+    $html_str .= "Elle est applicable à une <b>vaste</b> collectivité d'internautes.<br/>\n";
+    $html_str .= 'Voir la <a href="entry_display.php?entry_name=Faq">Faq</a>.' . "\n";
+    $html_str .= '</i>' . "\n";
+    $html_str .= '</center>' . "\n";
+    $html_str .= comment_exiting_of_function_name ($here);
+    
+    exiting_from_function ($here);
+    return $html_str;
 }
 
 function arce_home_text_accent_fr () {
-  $nam_pro = $_SESSION['parameters']['program_name'];
-  $NAM_PRO = strtoupper ($nam_pro);
+    $here = __FUNCTION__;
+    entering_in_function ($here);
 
-  $html_str  = "";
-  $html_str .= "<br />";
-  $html_str .= "Fonctionnalités de <b>$NAM_PRO</b> :<br /><br />";
-  $html_str .= "<li>";
-  $html_str .= "<b>Entrées :</b> permet l'accès aux Entrées ou la création d'une nouvelle entrée.";
-  $html_str .= "</li>";
-  $html_str .= "<br />";
-  $html_str .= "<li>";
-  $html_str .= "<b>Langage :</b> permet de changer le langage du site";
-  $html_str .= "</li>";
-  $html_str .= "<br />";
-  $html_str .= "<li>";
-  $html_str .= "<b>Commande :</b> permet d'exécuter une commande";
-  $html_str .= "</li>";
-  $html_str .= "<br />";
-  $html_str .= "<li>";
-  $html_str .= "<b>Règles de rédaction :</b> permet d'accéder à l'entrée homonyme";
-  $html_str .= "</li>";
-  $html_str .= "<br />";
-  $html_str .= "<li>";
-  $html_str .= "<b>Faq :</b> permet d'accéder à l'entrée homonyme";
-  $html_str .= "</li>";
-  $html_str .= "<br />";
-  $html_str .= "<li>";
-  $html_str .= "<b>Règles des propriétés :</b> permet d'accéder à l'entrée homonyme";
-  $html_str .= "</li>";
-  $html_str .= "<br />";
-  $html_str .= "<li>";
-  $html_str .= "<b>Présentation :</b> permet d'accéder au texte de la présentation du site";
-  $html_str .= "</li>";
-  $html_str .= "<br />";
-  $html_str .= "<li>";
-  $html_str .= "<b>Utilisation :</b> manuel d'utilisation du site";
-  $html_str .= "</li>";
-
-  return $html_str;
+    $nam_pro = $_SESSION['parameters']['program_name'];
+    $NAM_PRO = strtoupper ($nam_pro);
+    
+    $html_str  = comment_entering_of_function_name ($here);
+    $html_str .= "<br />";
+    $html_str .= "Fonctionnalités de <b>$NAM_PRO</b> :";
+    $html_str .= "<br /><br />";
+    $html_str .= "\n";
+    $html_str .= "<li>";
+    $html_str .= "<b>Entrées :</b> permet l'accès aux Entrées ou la création d'une nouvelle entrée.";
+    $html_str .= "</li>";
+    $html_str .= "<br />";
+    $html_str .= "\n";
+    $html_str .= "<li>";
+    $html_str .= "<b>Commande :</b> permet d'exécuter une commande";
+    $html_str .= "</li>";
+    $html_str .= "<br />";
+    $html_str .= "\n";
+    $html_str .= "<li>";
+    $html_str .= "<b>Règles de rédaction :</b> permet d'accéder à l'entrée homonyme";
+    $html_str .= "</li>";
+    $html_str .= "<br />";
+    $html_str .= "\n";
+    $html_str .= "<li>";
+    $html_str .= "<b>Faq :</b> permet d'accéder à l'entrée homonyme";
+    $html_str .= "</li>";
+    $html_str .= "<br />";
+    $html_str .= "\n";
+    $html_str .= "<li>";
+    $html_str .= "<b>Règles des propriétés :</b> permet d'accéder à l'entrée homonyme";
+    $html_str .= "</li>";
+    $html_str .= "<br />";
+    $html_str .= "\n";
+    $html_str .= "<li>";
+    $html_str .= "<b>Présentation :</b> permet d'accéder au texte de la présentation du site";
+    $html_str .= "</li>";
+    $html_str .= "<br />";
+    $html_str .= "\n";
+    $html_str .= "<li>";
+    $html_str .= "<b>Utilisation :</b> manuel d'utilisation du site";
+    $html_str .= "</li>";
+    $html_str .= "\n";
+    $html_str .= comment_exiting_of_function_name ($here);
+    
+    exiting_from_function ($here);
+    return $html_str;
 }
 
 function home_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $html_str  = '';
+  $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_html_initial_section', $here);
-
+  
   $lan = $_SESSION['parameters']['language'];
-
+  
   switch ($lan) {
   case 'en' :
       $html_str .= arce_home_header_en ();
@@ -137,7 +154,8 @@ function home_build () {
       "Please set it to en of fr"
       );
   }
- 
+  $html_str .= comment_exiting_of_function_name ($here);
+
   $html_str .= irp_provide ('pervasive_html_final_section', $here);
 
   exiting_from_function ($here);

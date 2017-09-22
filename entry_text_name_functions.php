@@ -21,7 +21,7 @@ function entry_text_name_build () {
     entering_in_function ($here);
 
 /* Improve */    
-    if (irp_is_stored ('entry_name')) {  
+    if (irp_is_stored_of_irp_key ('entry_name')) {  
         $nam_ent = irp_provide ('entry_name', $here);  
         $nam_txt_ent = $nam_ent . '_text'; 
     }
@@ -32,7 +32,7 @@ function entry_text_name_build () {
         "Check");
     }
     
-    check_entry_name ($nam_txt_ent);
+    string_check_entry_name_of_string ($nam_txt_ent);
     
     debug_n_check ($here , '$nam_txt_ent', $nam_txt_ent);
     exiting_from_function ($here);

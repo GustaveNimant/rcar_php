@@ -10,7 +10,7 @@ function item_name_array_of_hd_directory_of_entry_name ($hdir, $nam_ent) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($hdir, $nam_ent, $ext_fil)");
 
-  $ext_fil = $_SESSION['parameters']['block_name_catalog_filename_extension'];
+  $ext_fil = $_SESSION['parameters']['extension_block_name_catalog_filename'];
   $nam_fil = $nam_ent . "/" . 'Item_name_catalog.' . $ext_fil;
  
   debug_n_check ($here , '$nam_fil', $nam_fil);
@@ -131,8 +131,8 @@ function git_status_check_build () {
 
   $lan = $_SESSION['parameters']['language'];
 
-  $lang_err = language_translate_of_en_string_of_language ('Error', $lan);
-  $lang_com = language_translate_of_en_string_of_language ('Take a previously committed', $lan);
+  $lang_err = language_translate_of_en_string ('Error');
+  $lang_com = language_translate_of_en_string ('Take a previously committed');
 
   if (git_is_nothing_to_commit_status ()){ 
     $html_str = '';
@@ -162,9 +162,9 @@ function git_status_information_retrieve ($str) {
   $remainder_a = preg_replace ('/^#/', '', $remainder_a);
   # debug_n_check ($here , "replace git status information remainder", $remainder_a);
 
-  $ext_txt = $_SESSION['parameters']['block_filename_extension'];
-  $ext_cat = $_SESSION['parameters']['block_name_catalog_filename_extension'];
-  $ext_com = $_SESSION['parameters']['item_comment_filename_extension'];
+  $ext_txt = $_SESSION['parameters']['extension_block_filename'];
+  $ext_cat = $_SESSION['parameters']['extension_block_name_catalog_filename'];
+  $ext_com = $_SESSION['parameters']['extension_item_comment_filename'];
 
   $ext_str = "($ext_cat|$ext_com|$ext_txt)";
 
@@ -344,7 +344,7 @@ function git_command_n_commit_html_build () {
   $html_cmd_git = str_replace(';git', '<br>git', $cmd_git);
 
   if (git_is_nothing_to_commit_status ()) {
-      $log_status = language_translate_of_en_string_of_language ('commit successful : working directory clean', $lan);
+      $log_status = language_translate_of_en_string ('commit successful : working directory clean');
       /* Improve translation */
       $html_log_status = str_replace(';git', '<br>git', $log_status);
       $html_str = '';
@@ -355,7 +355,7 @@ function git_command_n_commit_html_build () {
   
   else {
       
-      fatal_error ($here, language_translate_of_en_string_of_language ("git commit failed", $lan));
+      fatal_error ($here, language_translate_of_en_string ("git commit failed"));
   }
 
   debug_n_check ($here , '$html_str', $html_str);
@@ -377,7 +377,7 @@ function git_command_build () {
   if (git_is_nothing_to_commit_status ()){
  
     $html_str .= '<span class="my-fieldset"> ';
-    $html_str .= language_translate_of_en_string_of_language ('commit successful : working directory clean', $lan);
+    $html_str .= language_translate_of_en_string ('commit successful : working directory clean');
     $html_str .= '<br> ';
 
   } else {

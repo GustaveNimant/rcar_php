@@ -12,7 +12,7 @@ function language_selection_html_make_of_language ($lan) {
   $script_action = 'index.php';
   debug_n_check ($here , " script_action", $script_action);
 
-  $la_tit = language_translate_of_en_string_of_language ('select a language', $lan);
+  $la_tit = language_translate_of_en_string ('select a language');
   $la_Tit = string_html_capitalized_of_string ($la_tit);
   
   $html_str  = '';
@@ -42,9 +42,9 @@ function language_href_html_make_of_language ($lan) {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $tit = language_translate_of_en_string_of_language ('modify the language', $lan);
+  $tit = language_translate_of_en_string ('modify the language');
   
-  $script_action = 'entry_list.php';
+  $script_action = 'entry_list_display.php';
   
   $html_str  = '';
   $html_str .= '<span id="menu-header-links"> ';
@@ -52,7 +52,7 @@ function language_href_html_make_of_language ($lan) {
   $html_str .= '<a href="index.php" title="';
   $html_str .= $tit;
   $html_str .= '"> ';
-  $html_str .= language_translate_of_en_string_of_language ('language', $lan);
+  $html_str .= language_translate_of_en_string ('language');
   $html_str .= '</a> ';
   $html_str .= "</span>";
    

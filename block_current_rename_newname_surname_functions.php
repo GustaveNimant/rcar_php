@@ -2,11 +2,11 @@
 
 require_once "irp_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 # entering_in_module ($module);
 
-function block_current_rename_newname_title_build (){
+function block_current_rename_newname_surname_title_n_help_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -14,7 +14,7 @@ function block_current_rename_newname_title_build (){
 
   $lan = $_SESSION['parameters']['language'];
 
-  $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
  
   $html_str = common_html_background_color_of_html ($la_Tit);
@@ -25,16 +25,17 @@ function block_current_rename_newname_title_build (){
   return $html_str;
 }
 
-/* Second Section Block_Current Name Modify Inputtype */
-
-function block_current_rename_newname_inputtypetext_build (){
+function block_current_rename_newname_surname_inputtypetext_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $sur_blo = irp_provide ('block_surname', $here);
 
-  $html_str  = '';
-  $html_str .= '<input type="text" value="' . $sur_blo . '" name="block_current_surname" size="87" /> ';
+  $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= '<input type="text" value="' . $sur_blo . '" ';
+  $html_str .= 'name="block_current_newname_surname" ';
+  $html_str .= ' size="87" />' . "\n";
+  $html_str .= comment_exiting_of_function_name ($here); 
 
   debug_n_check ($here , '$html_str',  $html_str);
   exiting_from_function ($here);
@@ -42,12 +43,12 @@ function block_current_rename_newname_inputtypetext_build (){
   return $html_str;
 }
 
-function block_current_rename_newname_build (){
+function block_current_rename_newname_surname_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $html_str  = '';
-  $html_str .= irp_provide ('block_current_rename_newname_title', $here);
+  $html_str .= irp_provide ('block_current_rename_newname_title_n_help', $here);
   $html_str .= irp_provide ('block_current_rename_newname_inputtypetext', $here);
 
   debug_n_check ($here , '$html_str',  $html_str);

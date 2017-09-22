@@ -14,7 +14,7 @@ function item_current_justification_display_title_build () {
   $lan = $_SESSION['parameters']['language'];
 
   $en_tit = "content of the current justification";
-  $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
   $la_Tit = string_html_capitalized_of_string ($la_bub_tit);
   $la_Tit = '<b>' . $la_Tit . '</b>';
 

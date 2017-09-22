@@ -129,7 +129,7 @@ function block_current_name_reordered_array_of_block_name_array_of_language ($ol
   $order_lan = array_dollar_get_retrieve_value_of_key ('order', $here);
   debug_n_check ($here , '$order_lan', $order_lan);
   $order_lan = lcfirst ($order_lan);
-  $order = language_translate_to_english_of_language_of_lan_string ($lan, $order_lan);
+  $order = language_translate_to_english_of_la_string ($lan, $order_lan);
 
   switch ($order) {
   case 'move before':
@@ -185,7 +185,7 @@ function block_list_neworder_display_title_build () {
 
   $en_tit = 'new order of ' . $kin_blo_plu . ' for entry';
 
-  $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
   $la_Tit .= ' <i><b> ' . $sur_ent . '</b></i> ';
   
@@ -248,7 +248,7 @@ function block_list_neworder_justification_title_build () {
   $lan = $_SESSION['parameters']['language'];
   $en_tit = 'enter your justification below';
 
-  $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
   $la_Tit = string_html_capitalized_of_string ($la_bub_tit);
 
   $html_str  = '';

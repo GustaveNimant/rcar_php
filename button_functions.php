@@ -45,16 +45,16 @@ function button_radio_from_after_before_of_entry_name_of_item_name_of_language (
   $html_str .= '<br> ' . "\n";
 
   $html_str .= '<input type="radio" name="from" value="' . $nam_ite . '"/> ';
-  $html_str .= language_translate_of_en_string_of_language ('From', $lan) . "\n";
+  $html_str .= language_translate_of_en_string ('From') . "\n";
   $html_str .= '<br> ' . "\n";
 
 
   $html_str .= '<input type="radio" name="after" value="' . $nam_ite . '"/> ';
-  $html_str .= language_translate_of_en_string_of_language ('After', $lan) . "\n";
+  $html_str .= language_translate_of_en_string ('After') . "\n";
   $html_str .= '<br> ' . "\n";
 
   $html_str .= '<input type="radio" name="before" value="' . $nam_ite . '"/> ';
-  $html_str .= language_translate_of_en_string_of_language ('Before', $lan) . "\n";
+  $html_str .= language_translate_of_en_string ('Before') . "\n";
   $html_str .= '<br> ' . "\n";
 
   $html_str .= '  <input type="hidden" name="entry_name" value="';

@@ -1,21 +1,46 @@
 <?php
 
+require_once "module_name_functions.php";
 require_once "debug_functions.php";
 
 $module = "management_functions";
 
-
 function is_traced ($nam_fun) {
 /* Do not trace irp stuff */
 /* Do not trace user stuff */
-
-  $boo = (substr ($nam_fun, 0, 5) != "user_" )
-      && ($_SESSION['trace_active']);
-  
+    
+    if ( (substr ($nam_fun, 0, 5) != "user_" )  
+    && (isset ($_SESSION['trace_active']) ) ) {
+        $boo = $_SESSION['trace_active'] > 0;
+    }
+    else {$boo = false;}
+    
   return $boo;
 }
 
-function entering_in_function ($here) {
+function comment_entering_of_function_name ($nam_fun) {
+
+    $points = $_SESSION['parameters']['stack_function_level_points'];
+    $lev_cur = count ($_SESSION['parameters']['stack_function_level_array']);
+    $str_poi = substr ($points, 0, $lev_cur);
+    
+    $com = "<!-- $str_poi entering  in function $nam_fun -->\n"; 
+
+    return $com;
+};
+
+function comment_exiting_of_function_name ($nam_fun) {
+
+    $points = $_SESSION['parameters']['stack_function_level_points'];
+    $lev_cur = count ($_SESSION['parameters']['stack_function_level_array']);
+    $str_poi = substr ($points, 0, $lev_cur);
+    
+    $com = "<!-- $str_poi exiting from function $nam_fun -->\n"; 
+    
+    return $com;
+};
+
+function entering_in_function ($nam_fun) {
 
     if ( 
         (isset ($_SESSION['parameters']['stack_function_level_array']))
@@ -26,28 +51,40 @@ function entering_in_function ($here) {
         
     ) {
         $prev = end ($_SESSION['parameters']['stack_function_level_array']);
-        array_push ($_SESSION['parameters']['stack_function_level_array'], $here);
+        array_push ($_SESSION['parameters']['stack_function_level_array'], $nam_fun);
         
         $lev = count ($_SESSION['parameters']['stack_function_level_array']);
-    
+        $max_lev = $_SESSION['parameters']['stack_function_level_maximum'];
+
         if ($lev > $_SESSION['parameters']['stack_function_level_maximum']) {
             $sta_fun_lev_a = $_SESSION['parameters']['stack_function_level_array'];
-            print_html_array ($here,'stack_function_level_array' , $sta_fun_lev_a);
-            fatal_error ($here, "<br>Possible recursion or entering or exiting is missing<br>Function Stack Level has reached 50 in function $here");
+            print_html_array ($nam_fun,'stack_function_level_array' , $sta_fun_lev_a);
+            print_fatal_error ($nam_fun, 
+            "No recursion and no entering or exiting were missing",
+            "Function Stack Level has reached $max_lev in function $nam_fun",
+            "Check");
         }
-        
+        if ($lev < 1 ) {
+            $sta_fun_lev_a = $_SESSION['parameters']['stack_function_level_array'];
+            print_html_array ($nam_fun,'stack_function_level_array' , $sta_fun_lev_a);
+
+            print_fatal_error ($nam_fun, 
+            "Function Stack Level were greater than 0",
+            "Function Stack Level is >$lev< in function $nam_fun",
+            "Check");
+        }
         $points = $_SESSION['parameters']['stack_function_level_points'];
         $str_poi = substr ($points, 0, $lev);
         
-        if (is_traced ($here)) {
-            print_d ("\n$str_poi entering in function " . $here . "\n"); 
+        if (is_traced ($nam_fun)) {
+            print_d ("\n$str_poi entering  in function " . $nam_fun . "\n"); 
             print_d ("\tcalled by " . $prev . "\n"); 
         }
         
     }
     else {
-        if (is_traced ($here)) {
-            print_d ("\n$entering in function " . $here . "\n"); 
+        if (is_traced ($nam_fun)) {
+            print_d ("\n$entering in function " . $nam_fun . "\n"); 
         }
     }
      
@@ -55,7 +92,7 @@ function entering_in_function ($here) {
 };
 
 
-function exiting_from_function ($here) {
+function exiting_from_function ($nam_fun) {
 
     if ( 
         (isset ($_SESSION['parameters']['stack_function_level_array']))
@@ -73,27 +110,27 @@ function exiting_from_function ($here) {
         $exp_her = array_pop ($_SESSION['parameters']['stack_function_level_array']);
         
         $exp_her_ = word_of_ordinal_of_string (1, $exp_her);
-        $here_ = word_of_ordinal_of_string (1, $here);
+        $nam_fun_ = word_of_ordinal_of_string (1, $nam_fun);
         
-        #    print_html_scalar ($here, "\$exp_her_ >$exp_her_<", "                               were equal to \$here_ >$here_<");
+        #    print_html_scalar ($nam_fun, "\$exp_her_ >$exp_her_<", "                               were equal to \$nam_fun_ >$nam_fun_<");
         
-        /* if ($exp_her_ != $here_) { */
+        /* if ($exp_her_ != $nam_fun_) { */
         /*     $sta_fun_lev_a = $_SESSION['parameters']['stack_function_level_array']; */
-        /*     print_html_array ($here, 'stack_function_level_array' , $sta_fun_lev_a); */
-        /*     print_fatal_error ($here, */
-        /*     "\$exp_her_ >$exp_her_< were equal to \$here_ >$here_<", */
+        /*     print_html_array ($nam_fun, 'stack_function_level_array' , $sta_fun_lev_a); */
+        /*     print_fatal_error ($nam_fun, */
+        /*     "\$exp_her_ >$exp_her_< were equal to \$nam_fun_ >$nam_fun_<", */
         /*     "it is NOT", */
         /*     "Check" */
         /*     ); */
         /* } */
     }     
-    if (is_traced ($here)) {
-        print_d ("\n$str_poi exiting from function " . $here . "\n"); 
+    if (is_traced ($nam_fun)) {
+        print_d ("\n$str_poi exiting from function " . $nam_fun . "\n"); 
     }
     
     else {
-        if (is_traced ($here)) {
-            print_d ("\n$exiting from function " . $here . "\n"); 
+        if (is_traced ($nam_fun)) {
+            print_d ("\n$exiting from function " . $nam_fun . "\n"); 
         }
     }
     
@@ -101,19 +138,19 @@ function exiting_from_function ($here) {
     return;
 };
 
-function entering_in_module ($here) {
+function entering_in_module ($nam_fun) {
 
-    if (is_traced ($here)) {
-        print_d ("\n------ entering in module " . $here . " ------\n"); 
+    if (is_traced ($nam_fun)) {
+        print_d ("\n------ entering in module " . $nam_fun . " ------\n"); 
     }
 
     return;
 };
 
-function exiting_from_module ($here) {
+function exiting_from_module ($nam_fun) {
 
-    if (is_traced ($here)) {
-        print_d ("\n======= exiting from module " . $here . " ======\n"); 
+    if (is_traced ($nam_fun)) {
+        print_d ("\n======= exiting from module " . $nam_fun . " ======\n"); 
     }
 
     return;
@@ -129,22 +166,22 @@ function is_cpu ($nam_fun) {
   return $boo;
 }
 
-function entering_withcpu_in_function ($here) {
-    if (is_cpu ($here)) {
+function entering_withcpu_in_function ($nam_fun) {
+    if (is_cpu ($nam_fun)) {
         $cpu_in = microtime(true);
     }    
     
     return $cpu_in;
 };
 
-function exiting_withcpu_from_function ($here, $cpu_in) {
+function exiting_withcpu_from_function ($nam_fun, $cpu_in) {
 
-    if (is_cpu ($here)) {
+    if (is_cpu ($nam_fun)) {
         $time_here = microtime(true);
         $cpu_out = $time_here - $cpu_in;
-        print_d ("\ncpu when exiting from function $here : $cpu_out microseconds\n"); 
+        print_d ("\ncpu when exiting from function $nam_fun : $cpu_out microseconds\n"); 
 
-        $str_cpu = "$cpu_out $here";
+        $str_cpu = "$cpu_out $nam_fun";
         $cpu_a = $_SESSION ['cpu_n_function'];
         array_push ($cpu_a, $str_cpu);
         $_SESSION ['cpu_n_function'] = $cpu_a;

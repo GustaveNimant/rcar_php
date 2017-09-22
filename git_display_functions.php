@@ -10,7 +10,7 @@ function display_all_commits () {
   entering_in_function ($here);
 
   $serv = "../server";
-  $git_cmd = "git show entry_list_functions.php";
+  $git_cmd = "git show entry_list_display_functions.php";
   
   $cmd = "$git_cmd";
 

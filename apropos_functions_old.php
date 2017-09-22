@@ -24,7 +24,7 @@ function apropos_content_by_block_name_array_build () {
     $hdir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
     debug_n_check ($here , "hdir", $hdir);
 
-    $ext_blo = $_SESSION['parameters']['block_filename_extension'];
+    $ext_blo = $_SESSION['parameters']['extension_block_filename'];
 
     foreach ($nam_blo_a as $nam_blo) {
       $fno_txt = $hdir . $nam_blo . '.' .  $ext_blo;
@@ -48,7 +48,7 @@ function apropos_display_item_html_make_of_entry_name_of_item_name_of_item_conte
   $here = __FUNCTION__;
   entering_in_function ($here . "($nam_ent, $nam_blo, $con_ite, $nam_blo_a[0], $lan)");
 
-  $la_str = language_translate_of_en_string_of_language ('Action', $lan);
+  $la_str = language_translate_of_en_string ('Action');
 
   $html_str = '';
 
@@ -109,7 +109,7 @@ function apropos_display_section_build (){
   /* $en_str_a = array ('properties', 'entry_name'); */
   /* # debug_n_check ($here , "en_str_a", $en_str_a); */
 
-  /* include "bubble_text_en_by_key_array_functions.php"; */
+  /* include "bubble_en_text_by_key_array_functions.php"; */
   /* $la_txt = bubbled_text_lan_of_text_lan_of_bubble_key_en_array ($en_txt, $en_str_a); */
 
   $nam_ent = irp_provide ('entry_name', $here);
@@ -140,7 +140,7 @@ function apropos_create_input_submit_html_build () {
   $script_action = script_array_retrieve_module_of_function ($here);
   debug_n_check ($here , "script_action", $script_action);
 
-  $la_str = language_translate_of_en_string_of_language ('Create', $lan);
+  $la_str = language_translate_of_en_string ('Create');
   $html_str .= '<form action="' . $script_action . '"' . "\n";
   $html_str .= 'method="get"> ' .  "\n"; 
   $html_str .= '<input type="hidden" name="entry_name" value="' . $nam_ent . '" /> ';
@@ -162,7 +162,7 @@ function apropos_href_html_build () {
 /*  include "language_translate_register.php"; */
 
   $lan = $_SESSION['parameters']['language'];
-  $tit = language_translate_of_en_string_of_language ('Apropos', $lan);
+  $tit = language_translate_of_en_string ('Apropos');
 
 /*
   $abo = $about [$lan];

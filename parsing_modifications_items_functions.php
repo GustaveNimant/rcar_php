@@ -55,7 +55,7 @@ function git_diff_item_name () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $ext = $_SESSION['parameters']['block_filename_extension'];
+  $ext = $_SESSION['parameters']['extension_block_filename'];
   $con_fil_a = content_of_files_of_entries ();
 
   foreach ($con_fil_a as $ent => $pro){

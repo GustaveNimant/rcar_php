@@ -4,7 +4,7 @@ require_once "irp_functions.php";
 require_once "entry_information_functions.php";
 require_once "entry_display_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 $Documentation[$module]['what is it'] = "a user-provider for new block content"; 
 $Documentation[$module]['what it does'] = "it displays the html form"; 

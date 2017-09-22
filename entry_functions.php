@@ -13,7 +13,7 @@ function entry_subdirectory_name_of_entry_name ($nam_ent) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_ent)");
 
-  check_entry_name ($nam_ent);
+  string_check_entry_name_of_string ($nam_ent);
 
   $dir_bas = basic_directory_of_name ("hd_php_server");
   $fnd = $dir_bas . $nam_ent;

@@ -17,22 +17,22 @@ function entry_create_message_of_entry_name_build () {
   $sur_ent = irp_provide ('entry_newsurname', $here);  
   $nam_ent = word_name_capitalized_of_string_surname ($sur_ent);
 
-  check_entry_name ($nam_ent);
+  string_check_entry_name_of_string ($nam_ent);
   $lan = $_SESSION['parameters']['language'];
 
-  $la_tit = language_translate_of_en_string_of_language ('create a new entry', $lan);
+  $la_tit = language_translate_of_en_string ('create a new entry');
   $la_Tit  = string_html_capitalized_of_string ($la_tit);
 
   $fnd_ent = entry_subdirectory_name_of_entry_name ($nam_ent);
   if (! file_exists ($fnd_ent)) {
 /* new entry */
-      $la_mes  = language_translate_of_en_string_of_language ('do you want to create the entry', $lan);
+      $la_mes  = language_translate_of_en_string ('do you want to create the entry');
       $la_mes .= ' ' . $sur_ent . ' ?';
       $la_Mes = string_html_capitalized_of_string ($la_mes);
   } else {
-      $la_mes  = language_translate_of_en_string_of_language ('the entry', $lan);
+      $la_mes  = language_translate_of_en_string ('the entry');
       $la_mes .= ' ' . $sur_ent . ' '; 
-      $la_mes .= language_translate_of_en_string_of_language ('already exists', $lan);
+      $la_mes .= language_translate_of_en_string ('already exists');
       $la_Mes = string_html_capitalized_of_string ($la_mes);
   }
 
@@ -61,7 +61,7 @@ function entry_create_section_create_entry_build () {
   $html_str  = '';
   $html_str .= '<form action="'. $script_action .'" method="get"> ' . "\n";
   $html_str .= irp_provide ('entry_create_message_of_entry_name', $here);
-  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift ($en_val_but, $lan);
+  $html_str .= inputtypesubmit_of_en_action_name ($en_val_but);
   $html_str .= '    </form> ' .  "\n";
 
   exiting_from_function ($here);
@@ -84,18 +84,18 @@ function entry_create_build () {
   if (array_value_exists ($nam_ent, $nam_ent_a)) {
       $en_mes_1 = "the entry";
       $en_mes_2 = "already exists";
-      $la_mes_1 = language_translate_of_en_string_of_language ($en_mes_1, $lan); 
-      $la_mes_2 = language_translate_of_en_string_of_language ($en_mes_2, $lan);   
+      $la_mes_1 = language_translate_of_en_string ($en_mes_1); 
+      $la_mes_2 = language_translate_of_en_string ($en_mes_2);   
       $la_mes =  $la_mes_1 . ' ' . $new_sur_ent . ' ' . $la_mes_2;
       $la_Mes = string_html_capitalized_of_string ($la_mes);
       warning ($here, $la_Mes);
       exiting_from_function ($here);
-      include 'entry_list.php';
+      include 'entry_list_display.php';
       exit;
   }
 
   $sur_by_nam_a = irp_provide ('surname_by_name_array', $here);
-  $nof_mod   = 'entry_list.php';
+  $nof_mod   = 'entry_list_display.php';
 
   $html_str  = '';
   $html_str .= irp_provide ('pervasive_html_initial_section', $here);

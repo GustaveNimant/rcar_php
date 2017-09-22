@@ -3,7 +3,7 @@
 require_once "management_functions.php";
 require_once "irp_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 # entering_in_module ($module);
 
@@ -19,17 +19,17 @@ function block_current_delete_save_section_page_title_build (){
   $kin_blo = irp_provide ('entry_block_kind', $here);
 
   $en_tit = 'for entry';
-  $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
   $la_Tit .= ' <i><b> ' . $sur_ent . '</b></i> '; 
 
   $en_tit = $kin_blo;
-  $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
   $la_Tit .= $la_bub_tit;
   $la_Tit .= ' <i><b> ' . $sur_ite . '</b></i> '; 
  
   $en_tit = 'has been deleted';
-  $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
   $la_Tit .= $la_bub_tit;
 
   $html_str = common_html_background_color_of_html ($la_Tit);
@@ -55,7 +55,7 @@ function block_current_delete_save_catalog_actualize_build (){
   $cat_blo = irp_provide ('block_name_catalog', $here);
 
   $con_cat_blo = block_name_catalog_remove_block_name_of_entry_name_of_block_name_catalog_of_block_current_name ($nam_ent, $cat_blo, $nam_blo_cur);
-  $ext_cat = $_SESSION['parameters']['block_name_catalog_filename_extension'];
+  $ext_cat = $_SESSION['parameters']['extension_block_name_catalog_filename'];
   $nof = "Block_name_catalog." . $ext_cat;
 
   if ($con_cat_blo == "") {
@@ -65,9 +65,9 @@ function block_current_delete_save_catalog_actualize_build (){
           $en_tx1 = 'file';
           $en_tx2 = 'does not exist';
           $en_tx3 = 'not deleted';
-          $la_tx1 = language_translate_of_en_string_of_language ($en_tx1, $lan);
-          $la_tx2 = language_translate_of_en_string_of_language ($en_tx2, $lan);
-          $la_tx3 = language_translate_of_en_string_of_language ($en_tx3, $lan);
+          $la_tx1 = language_translate_of_en_string ($en_tx1);
+          $la_tx2 = language_translate_of_en_string ($en_tx2);
+          $la_tx3 = language_translate_of_en_string ($en_tx3);
           $la_Tx3  = string_html_capitalized_of_string ($la_tx3);
 
           warning ($here, $la_tx1 . $fno . ' ' . $la_tx2 . '. ' . $la_Tx3);
@@ -93,7 +93,7 @@ function block_current_delete_save_delete_file_build () {
   $nam_blo_cur = irp_provide ('block_current_name', $here);
 
   $dir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
-  $ext_blo = $_SESSION['parameters']['block_filename_extension'];
+  $ext_blo = $_SESSION['parameters']['extension_block_filename'];
 
   $cmd_del  = 'cd ' . $dir . ';';
   $cmd_del .= 'rm ' . $nam_blo . '.' . $ext_blo;

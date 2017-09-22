@@ -16,7 +16,7 @@ function entry_rename_display_section_build (){
   $sur_by_nam_a = irp_provide ('surname_by_name_array', $here);
   $sur_ent = surname_of_name_of_surname_by_name_array ($nam_ent, $sur_by_nam_a);
   $en_tit = 'entry';
-  $la_tit = language_translate_of_en_string_of_language ($en_tit, $lan);
+  $la_tit = language_translate_of_en_string ($en_tit);
   $la_Tit = string_html_capitalized_of_string ($la_tit);
 
   $html_str = '';
@@ -42,7 +42,7 @@ function entry_rename_modify_section_build (){
   $lan = $_SESSION['parameters']['language'];  
 
   $en_tit = 'change the name of the entry';
-  $la_tit = language_translate_of_en_string_of_language ($en_tit, $lan);
+  $la_tit = language_translate_of_en_string ($en_tit);
   $la_Tit = string_html_capitalized_of_string ($la_tit);
 
   $nam_get = 'entry_newsurname';
@@ -78,7 +78,7 @@ function entry_rename_justification_section_build (){
   $lan = $_SESSION['parameters']['language'];
 
   $en_tit = 'justify below your change';
-  $la_tit = language_translate_of_en_string_of_language ($en_tit, $lan);
+  $la_tit = language_translate_of_en_string ($en_tit);
   $la_Tit = string_html_capitalized_of_string ($la_tit);
 
   $html_str = '';
@@ -105,7 +105,7 @@ function entry_rename_final_section_build () {
   $lan = $_SESSION['parameters']['language'];
 
   $en_tit = 'save';
-  $la_tit = language_translate_of_en_string_of_language ($en_tit, $lan);
+  $la_tit = language_translate_of_en_string ($en_tit);
   $la_Tit = string_html_capitalized_of_string ($la_tit);
 
   $html_str = '';
@@ -144,7 +144,7 @@ function entry_rename_build () {
   $html_str .= '<br><br>';
   $html_str .= irp_provide ('entry_rename_justification_section', $here);
 
-  $nof_mod = 'entry_list.php';
+  $nof_mod = 'entry_list_display.php';
   $nam_ent = array_dollar_get_retrieve_value_of_key ('entry_name', $here);
   debug_n_check ($here, '$nam_ent', $nam_ent);
 

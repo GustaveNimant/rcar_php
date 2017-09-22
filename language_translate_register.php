@@ -1409,7 +1409,7 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 
-    'navigation data was deleted' =>
+    'navigation data have been deleted' =>
     array (
 		'fr' => 'les donn&eacute;es de navigation ont &eacute;t&eacute; supprim&eacute;es',
 		'it' => '???',
@@ -1474,6 +1474,12 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'fr' => 'nouvelle r&egrave;gle',
 		'it' => '???',
     ),
+
+    'no action is defined. Using action <i>display</i> as default' =>
+   array (
+      'fr' => 'aucune action n&apos;est d&eacute;finie. l&apos;action <i>afficher</i> est utilis&eacute;e par d&eacute;faut',
+      'it' => '???',
+   ), 
 
     'no action is defined. Using <i>display</i> as default' => 
    array (

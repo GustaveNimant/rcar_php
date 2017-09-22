@@ -21,7 +21,7 @@ function block_content_display_of_block_current_name__XX ($nam_blo) {
   $nam_ent = irp_provide ('entry_name', $here);
   $hdir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
 
-  $ext_blo = $_SESSION['parameters']['block_filename_extension'];
+  $ext_blo = $_SESSION['parameters']['extension_block_filename'];
   $nof_blo = $dir_pat . $nam_blo . '.' . $ext_blo ;
 
   $con_blo = file_content_read ($nof_blo);
@@ -40,7 +40,7 @@ function block_display_and_link_of_surname_by_name_array_of_entry_name_of_block_
   $sur_blo = string_html_capitalized_of_string ($sur_blo);
 
   $en_bub_lin = 'click to open the page';
-  $la_bub_lin = language_translate_of_en_string_of_language ($en_bub_lin, $lan);
+  $la_bub_lin = language_translate_of_en_string ($en_bub_lin);
 
   $html_str  = '';
   $html_str .= '<br> ';
@@ -71,12 +71,12 @@ function block_display_section_page_title_build () {
   $sur_blo = surname_of_name_of_surname_by_name_array ($nam_blo, $sur_by_nam_a);
 
   $en_tit =  $kin_blo;
-  $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
   $la_Tit = string_html_capitalized_of_string ($la_bub_tit);
   $la_Tit .= '<i><b> ' . $sur_blo . '</b></i> ';
 
   $en_tit =  'for entry';
-  $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
   $la_Tit .= lcfirst ($la_bub_tit);
   $la_Tit .= '<i><b> ' . $sur_ent . '</b></i> ';
 
@@ -113,7 +113,7 @@ function block_display_justify_title_build () {
   $lan = $_SESSION['parameters']['language'];
 
   $en_tit = "content of the current justification";
-  $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
   $la_Tit = string_html_capitalized_of_string ($la_bub_tit);
 
   $html_str = common_html_background_color_of_html ($la_Tit);
@@ -194,7 +194,7 @@ function block_display_action_links_build () {
 
         $nof_mod = "block_" . $en_act_blo . ".php";
         debug_n_check ($here , '$nof_mod',  $nof_mod);
-        $la_act_blo = language_translate_of_en_string_of_language ($en_act_blo, $lan);
+        $la_act_blo = language_translate_of_en_string ($en_act_blo);
 
         $html_str .= '<a href="'. $nof_mod . '?entry_name=' . $nam_ent . '&block_current_name=' . $nam_blo . '">';
         $html_str .= $la_act_blo;

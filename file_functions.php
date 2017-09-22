@@ -3,9 +3,12 @@
 require_once "array_functions.php";
 require_once "logfile_functions.php";
 
-$module = "file_functions";
-# entering_in_module ($module);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
+$Documentation[$module]['what is it'] = "it is ...";
+$Documentation[$module]['what for'] = "to ...";
+
+# entering_in_module ($module);
 
 function fullnameoffile_parse_array ($fno) {
     $here = __FUNCTION__;
@@ -17,42 +20,22 @@ function fullnameoffile_parse_array ($fno) {
     /* echo $fno_arr_a['extension'], "\n"; */
     /* echo $fno_arr_a['filename'], "\n"; // depuis PHP 5.2.0 */
     
-  exiting_from_function ($here);
-  
   return $fno_arr_a;
-};
-
-function module_name ($fno) {
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($fno)");
-#  debug_n_check ($here , "input file name", $fno);
-  
-  $fno_arr_a = fullnameoffile_parse_array($fno);
-  $nam_mod = $fno_arr_a['filename'];
-
-#  debug_n_check ($here , "output extension", $ext);
-  exiting_from_function ($here);
-  
-  return $nam_mod;
 };
 
 function get_any_file_extension ($fno) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($fno)");
 #  debug_n_check ($here , "input file name", $fno);
   
   $fno_arr_a = fullnameoffile_parse_array($fno);
   $ext = $fno_arr_a['extension'];
 
 #  debug_n_check ($here , "output extension", $ext);
-  exiting_from_function ($here);
-  
   return $ext;
 };
 
 function basic_directory_of_name ($nam) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam)");
 #  debug_n_check ($here , '$nam', $nam);
 
   $src_abs_pat = $_SESSION['parameters']['absolute_path_source'];
@@ -84,8 +67,6 @@ function basic_directory_of_name ($nam) {
   }
   
 #  debug_n_check ($here , "output directory name", $dir);
-  exiting_from_function ($here);
-  
   return $dir;
 };
 
@@ -126,7 +107,7 @@ function create_specific_directory_of_basic_name_of_name ($nam_bas, $nam) {
   exiting_from_function ($here);
 };
 
-function has_file_3c_extension ($fno) {
+function has_file_3c_extension_of_fullnameoffile ($fno) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($fno)");
 
@@ -147,13 +128,13 @@ function has_file_3c_extension ($fno) {
   return $result;
 };
 
-function get_file_3c_extension ($fno) {
+function file_get_3c_extension_of_fullnameoffile ($fno) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($fno)");
 
   $bool = preg_match ('/[a-z][a-z][a-z]$/', $fno, $matches);
 
-  if (has_file_3c_extension ($fno)) {
+  if (has_file_3c_extension_of_fullnameoffile ($fno)) {
     $result = $matches[0];
     exiting_from_function ($here);
     return $result;
@@ -166,66 +147,8 @@ function get_file_3c_extension ($fno) {
   exiting_from_function ($here);
 }
 
-function is_filename_extension ($ext) {
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($ext)");
-
-  $ext_blo = $_SESSION['parameters']['block_filename_extension'];
-  $ext_cat = $_SESSION['parameters']['block_name_catalog_filename_extension'];
-  $ext_com = $_SESSION['parameters']['item_comment_filename_extension'];
-
-  $result = ($ext == $ext_blo)
-    || ($ext == $ext_cat)
-    || ($ext == $ext_com)
-    ;
-
-#  debug_n_check ($here , "result ", $result);
-  exiting_from_function ($here);
-
-  return $result;
-};
-
-function is_item_comment_filename_extension ($ext) {
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($ext)");
-
-  $ext_txt = $_SESSION['parameters']['item_comment_filename_extension'];
-
-  $result = ($ext == $ext_txt);
-
-  exiting_from_function ($here);
-
-  return $result;
-};
-
-function is_block_text_filename_extension ($ext) {
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($ext)");
-
-  $ext_txt = $_SESSION['parameters']['block_filename_extension'];
-
-  $result = ($ext == $ext_txt);
-
-  exiting_from_function ($here);
-
-  return $result;
-
-};
-
-function check_block_text_filename_extension ($ext){
-  $here = __FUNCTION__;
-#  entering_in_function ($here . " ($ext)");
-  /* debug_n_check ($here , "input block name", $ext); */
-
-  if ( ! is_block_text_filename_extension ($ext)) {
-    fatal_error ($here, "block text filename extension >$ext< is NOT canonical");
-  }
-
-#  exiting_from_function ($here . " ($ext)");
-}
-
 function cut_dotted_3c_extension_of_nameoffile ($nof) {
-    if (has_file_3c_extension ($nof)){
+    if (has_file_3c_extension_of_fullnameoffile ($nof)){
         $cou = strlen ($nof) -4;
         $new_nof = substr ($nof, 0, $cou);
         return $new_nof;
@@ -240,14 +163,14 @@ function file_is_block_text_of_nameoffile ($fno) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($fno)");
 
-  if ( ! has_file_3c_extension ($fno) ) {
+  if ( ! has_file_3c_extension_of_fullnameoffile ($fno) ) {
     $result = 0;
     exiting_from_function ($here . ' with no 3c_extension for >' . $fno . '<');
     return $result;
   }
 
   $nam_blo = cut_dotted_3c_extension_of_nameoffile ($fno);
-  $ext_fil = get_file_3c_extension ($fno) ;
+  $ext_fil = file_get_3c_extension_of_fullnameoffile ($fno) ;
 #  debug ($here , 'block_current_name ', $nam_blo) ;
 
   $result = 
@@ -296,7 +219,7 @@ function is_item_nameoffile_of_entry_name_of_name ($nam_ent, $nam) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($nam_ent, $nam)");
 
-    $ext_blo = $_SESSION['parameters']['block_filename_extension'];
+    $ext_blo = $_SESSION['parameters']['extension_block_filename'];
 
     $hpse_dir = basic_directory_of_name ("hd_php_server");
     $fnod = $hpse_dir . '/' . $nam_ent;
@@ -316,13 +239,13 @@ function is_justify_text_file ($fno) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($fno)");
 
-  if ( ! has_file_3c_extension ($fno) ) {
+  if ( ! has_file_3c_extension_of_fullnameoffile ($fno) ) {
     $result = 0;
     exiting_from_function ($here);
     return $result;
   }
 
-  $ext_fil = get_file_3c_extension ($fno) ;
+  $ext_fil = file_get_3c_extension_of_fullnameoffile ($fno) ;
   $nam_ite_jus = cut_justify_file_3c_extension ($fno);
 
   $result = 
@@ -335,11 +258,34 @@ function is_justify_text_file ($fno) {
   return $result;
 };
 
+function is_existing_of_fullnameoffile ($fno) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($fno)");
+
+  $boo = file_exists ($fno);
+  
+  return $boo;
+};
+
+function check_file_exists ($fno) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($fno)");
+
+  if ( ! file_exists ($fno) ) {
+      print_fatal_error ($here,
+      "file >$fno< existed",
+      "it does NOT",
+      "Check");
+  }
+  
+  return;
+};
+
 function file_surname_nameofile_extension_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $ext_sur = $_SESSION['parameters']['surname_nameoffile_extension'];
+  $ext_sur = $_SESSION['parameters']['extension_surname_nameoffile'];
 
   exiting_from_function ($here . ' with $ext_sur >' . $ext_sur);
   
@@ -484,7 +430,7 @@ function file_array_of_directory_path_of_predicate ($dir_pat, $predicate) {
     $html_str = irp_provide ('arce_section_create_entry', $here);
     print $html_str;
     */
-      $str_url = "entry_list.php?not_yet_set_entry=" . basename($dir_pat);
+      $str_url = "entry_list_display.php?not_yet_set_entry=" . basename($dir_pat);
       header('Refresh: 5; URL=' . $str_url);
       fatal_error ($here, "directory >" . $dir_pat . "< is inaccessible or inexistant<br>
   Probably entry_name >". basename($dir_pat) ."< has not been created yet<br>
@@ -510,7 +456,7 @@ function file_rename ($old_nof, $new_nof) {
 #  debug_n_check ($here , "input new file", $new_nof);
 
   if ( ! file_exists ($old_nof) ) {
-    fatal_error ($here, "file >$old_nof< does not exist");
+    print_fatal_error ($here, "file >$old_nof< does not exist");
   }
 
   if (! rename ($old_nof, $new_nof)) {
@@ -552,16 +498,6 @@ function file_content_delete_last_line ($con_raw) {
 
   exiting_from_function ($here . ' with last line deleted from file content');
   return $con;
-
-}
-
-function fullnameoffile_of_name ($con_raw) {
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($con_raw)");
-
-
-  exiting_from_function ($here);
-  return $fno;
 
 }
 

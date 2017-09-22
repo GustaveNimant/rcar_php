@@ -1,13 +1,9 @@
 <?php
 
-require_once "array_functions.php";
 require_once "irp_functions.php";
 require_once "management_functions.php";
 require_once "entry_information_functions.php";
-require_once "bubble_functions.php";
 require_once "entry_display_functions.php";
-require_once "surname_by_name_array_functions.php";
-require_once "block_kind_functions.php";
 require_once "tools_functions.php";
 
 $module = "command_functions";
@@ -46,8 +42,8 @@ function command_action_of_action_name_of_argument ($nam_act, $str_arg) {
           break;         
       default:  
           $lan = $_SESSION['parameters']['language'];
-          $en_mes = "no action is defined. Using <i>display</i> as default";
-          $la_mes = language_translate_of_en_string_of_language ($en_mes, $lan); 
+          $en_mes = "no action is defined. Using action <i>display</i> as default";
+          $la_mes = language_translate_of_en_string ($en_mes); 
           $la_Mes = string_html_capitalized_of_string ($la_mes);
           warning ($here, $la_Mes);
           tools_display ($str_arg);
@@ -72,12 +68,12 @@ function command_selection_action_build () {
   $html_str  = '';
   $html_str .= '<select name="command_action"> ' . "\n";
   $html_str .= '  <option value="default"> ';
-  $html_str .= string_html_capitalized_of_string (language_translate_of_en_string_of_language ('actions', $lan));
+  $html_str .= string_html_capitalized_of_string (language_translate_of_en_string ('actions'));
   $html_str .= '  </option> ' . "\n";
 
   foreach ($action_a as $act) {
       $html_str .= '<option value="' . $act . '"> ' . "\n";
-      $html_str .= ucfirst (language_translate_of_en_string_of_language ($act, $lan));
+      $html_str .= ucfirst (language_translate_of_en_string ($act));
       $html_str .= '</option> ' . "\n";
   }
 
@@ -107,20 +103,19 @@ function command_selection_argument_build () {
   return $html_str;
 }
 
-function command_button_build () {
+function command_button_form_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $lan = $_SESSION['parameters']['language'];
   $script_action = 'command.php';
-  $en_val_but = 'go';
 
-  $html_str  = '';
+  $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form action="'. $script_action .'" method="get"> ' . "\n";
   $html_str .= irp_provide ('command_selection_action', $here);
   $html_str .= irp_provide ('command_selection_argument', $here);
-  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift ($en_val_but, $lan);
+  $html_str .= inputtypesubmit_of_en_action_name ('go');
   $html_str .= '</form> ' .  "\n";
+  $html_str .= comment_exiting_of_function_name ($here); 
 
   debug_n_check ($here , '$html_str', $html_str);
 
@@ -128,31 +123,16 @@ function command_button_build () {
 
   return $html_str;
 }
-
-function command_section_build () {
-  $here = __FUNCTION__;
-  entering_in_function ($here);
-
-  $html_str  = '';
-  $html_str .= irp_provide ('command_button', $here);
-
-  debug_n_check ($here , '$html_str', $html_str);
-
-  exiting_from_function ($here);
-
-  return $html_str;
-}
-
-/* Page Debug Menu */
 
 function command_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $html_str  = '';
+  $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_html_initial_section', $here);
-  $html_str .= irp_provide ('command_section', $here);
+  $html_str .= irp_provide ('command_button_form', $here);
   $html_str .= irp_provide ('pervasive_html_final_section', $here);
+  $html_str .= comment_exiting_of_function_name ($here); 
 
   exiting_from_function ($here);
   return $html_str;

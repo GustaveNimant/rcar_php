@@ -7,6 +7,30 @@ require_once "surname_functions.php";
 $module = "array_functions";
 # entering_in_module ($module);
 
+function first_last_element_of_array ($arr_a) {
+  $here = __FUNCTION__;
+#  entering_in_function ($here);
+#  # debug ($here , "input array", $arr_a); 
+
+  $first = $arr_a[0];
+  $last = end ($arr_a);
+
+  if (is_array ($first)) {
+      $first = first_last_element_of_array ($first);
+  }
+
+  if (is_array ($last)) {
+      $last = first_last_element_of_array ($last);
+  }
+
+  $str = $first . ' ... ' . $last;
+
+#  debug ($here , "output count", $cou); 
+#  exiting_from_function ($here);
+
+  return $str;
+};
+
 function is_empty_of_array ($arr_a) {
   $here = __FUNCTION__;
 #  entering_in_function ($here);
@@ -21,9 +45,27 @@ function is_empty_of_array ($arr_a) {
   return $boo;
 };
 
+function check_is_empty_of_array ($arr_a, $her) {
+  $here = __FUNCTION__;
+#  entering_in_function ($here);
+#  # debug ($here , "input array", $arr_a); 
+ 
+  if (is_empty_of_array ($arr_a)) {
+      print_fatal_error ($her,
+      "array \$arr_a were NOT empty",
+      "it is EMPTY",
+      "Check");
+  }
+  
+#  debug ($here , "output count", $cou); 
+#  exiting_from_function ($here);
+
+  return;
+};
+
 function has_values_unique_of_any_array ($arr_a) {
   $here = __FUNCTION__;
-#  entering_in_function ($here . "($arr_a...)");
+#  entering_in_function ($here . "(\$arr_a...)");
 
   $new_a = array_unique ($arr_a);
 
@@ -34,6 +76,24 @@ function has_values_unique_of_any_array ($arr_a) {
 
   return $boo;
 
+};
+
+function check_has_values_unique_of_any_array ($arr_a) {
+  $here = __FUNCTION__;
+#  entering_in_function ($here);
+#  # debug ($here , "input array", $arr_a); 
+ 
+  if (has_values_unique_of_any_array ($arr_a)) {
+      print_fatal_error ($her,
+      "array \$arr_a had only UNIQUE values",
+      "it is EMPTY",
+      "Check");
+  }
+  
+#  debug ($here , "output count", $cou); 
+#  exiting_from_function ($here);
+
+  return;
 };
 
 function array_duplicated_value_by_count_of_array ($arr_a) {
@@ -118,24 +178,33 @@ function array_by_key_unserialize_of_separator_of_string ($sep, $str_sur) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($sep, $str_sur)");
 
-  $str_a = explode ("\n", $str_sur);
-
+  $str_tri = trim ($str_sur, " \t\n\r\0\x0B");
+  $str_a = explode ("\n", $str_tri);
+  
   $val_by_key_a = array ();
   foreach ($str_a as $key => $val) {
-
+      
       $val_a = explode ($sep, $val);
-      $arr_key = $val_a[0];
-      $arr_val = $val_a[1];
-      $val_by_key_a[$arr_key] = $arr_val;
-
+      if (count ($val_a) > 1) {
+          $arr_key = $val_a[0];
+          $arr_val = $val_a[1];
+          $val_by_key_a[$arr_key] = $arr_val;
+      }
+      else {
+          print_fatal_error ($here,
+          "separator >$sep< were found at least once in string",
+          "string is >$val<",
+          "Check");
+      }
   }
+  
   $val_by_key_a = array_filter ($val_by_key_a);
-
-#  # debug_n_check ($here , '$val_by_key_a', $val_by_key_a); 
+  
+  #  # debug_n_check ($here , '$val_by_key_a', $val_by_key_a); 
   exiting_from_function ($here);
   
   return $val_by_key_a;
-
+  
 }
 
 function array_by_key_unserialize_of_regular_expression_of_string ($reg_exp, $str_sur) {
@@ -456,6 +525,20 @@ function array_retrieve_value_of_key_of_array ($key, $arr_a) {
 #  entering_in_function ($here);
 #  debug_n_check ($here , "input key", $key);
 #  # debug_n_check ($here , "input array", $arr_a);
+
+  if ( ! is_array ($arr_a)) {
+      print_fatal_error ($here,  
+      "second argument were an ARRAY",
+      "it is NOT",
+      "Check");
+      }
+
+  if ( count ($arr_a) == 0) {
+      print_fatal_error ($here,  
+      "Array argument were NOT empty",
+      "it is EMPTY",
+      "Check");
+      }
 
   if ( ! array_key_exists ($key, $arr_a) ) {
       $str = string_html_array ($here, "Array", $arr_a);

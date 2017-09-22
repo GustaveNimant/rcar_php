@@ -3,9 +3,8 @@
 require_once "irp_functions.php";
 require_once "surname_functions.php";
 require_once "string_functions.php";
-require_once "block_name_array_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 # entering_in_module ($module);
 
@@ -33,7 +32,7 @@ function block_current_rename_save_build (){
 
   $lan = $_SESSION['parameters']['language'];
 
-  $new_sur_blo_cur = irp_provide ('block_current_new_surname', $here);
+  $new_sur_blo_cur = irp_provide ('block_current_newname_surname', $here);
   $new_nam_blo_cur = word_name_capitalized_of_string_surname ($new_sur_blo_cur);
 
   $nam_ent = irp_provide ('entry_name', $here);
@@ -41,37 +40,37 @@ function block_current_rename_save_build (){
 
   /* File new_block.ite */
 
-  $ext_blo = $_SESSION['parameters']['block_filename_extension'];
+  $ext_blo = $_SESSION['parameters']['extension_block_filename'];
 
   debug_n_check ($here , '$new_sur_blo_cur', $new_sur_blo_cur);
   debug_n_check ($here , '$old_nam_blo', $old_nam_blo);
-  debug_n_check ($here , '$new_nam_blo', $new_nam_blo);
+  debug_n_check ($here , '$new_nam_blo_cur', $new_nam_blo_cur);
   debug_n_check ($here , '$ext_blo', $ext_blo);
 
   $old_nam_blo_a = irp_provide ('block_name_array', $here);
   check_is_array_unique_of_nameofarray_of_array ('block_oldname_array', $old_nam_blo_a);
-  $new_nam_blo_a = block_name_array_update_after_block_rename ($nam_ent, $old_nam_blo, $new_nam_blo, $old_nam_blo_a);
+  $new_nam_blo_a = block_name_array_update_after_block_rename ($nam_ent, $old_nam_blo, $new_nam_blo_cur, $old_nam_blo_a);
   check_is_array_unique_of_nameofarray_of_array ('block_newname_array', $new_nam_blo_a);
   # debug_n_check ($here , '$old_nam_blo_a', $old_nam_blo_a);
   # debug_n_check ($here , '$new_nam_blo_a', $new_nam_blo_a);
 
   /* File new catalog */
 
-  block_file_rename ($nam_ent, $old_nam_blo, $new_nam_blo, $ext_blo);
+  block_file_rename ($nam_ent, $old_nam_blo, $new_nam_blo_cur, $ext_blo);
   $new_cat_blo = block_name_catalog_of_block_name_array ($new_nam_blo_a);
   debug_n_check ($here , '$new_cat_blo', $new_cat_blo);
   block_name_catalog_write_of_entry_name_of_block_name_catalog ($nam_ent, $new_cat_blo);
 
-  /* File server/SURNAMES/Surname_catalog.cat : add "$new_nam_blo : $new_sur_blo_cur" */
+  /* File server/SURNAMES/Surname_catalog.cat : add "$new_nam_blo_cur : $new_sur_blo_cur" */
 
   $sur_by_nam_a = irp_provide ('surname_by_name_array', $here);
 
-  if (array_key_exists ($new_nam_blo, $sur_by_nam_a)) {
-      $old_sur = $sur_by_nam_a[$new_nam_blo];
-      surname_by_name_array_replace_n_write_of_name_of_newsurname_of_current_array ($new_nam_blo, $new_sur_blo_cur, $sur_by_nam_a);
+  if (array_key_exists ($new_nam_blo_cur, $sur_by_nam_a)) {
+      $old_sur = $sur_by_nam_a[$new_nam_blo_cur];
+      surname_by_name_array_replace_n_write_of_name_of_newsurname_of_current_array ($new_nam_blo_cur, $new_sur_blo_cur, $sur_by_nam_a);
   }
   else {
-  surname_by_name_array_add_n_write_of_name_of_surname_of_current_array ($new_nam_blo, $new_sur_blo_cur, $sur_by_nam_a);
+  surname_by_name_array_add_n_write_of_name_of_surname_of_current_array ($new_nam_blo_cur, $new_sur_blo_cur, $sur_by_nam_a);
   }
 
   /* Git */

@@ -10,7 +10,11 @@ require_once "debug_html_functions.php";
 /* Second Section Create_entry */
 /* Third Section Select an Entry to be Renamed */
 
-$module = "arce_functions";
+$module = module_name_of_module_nameoffile (__FILE__);
+
+$Documentation[$module]['what is it'] = "it is ...";
+$Documentation[$module]['what for'] = "to ...";
+
 entering_in_module ($module);
 
 function arce_menuselect_entry_build () {
@@ -51,7 +55,7 @@ function arce_section_select_entry_title_build () {
   $en_tit = 'select an existing entry';
   $lan = $_SESSION['parameters']['language'];
 
-  $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
   $la_Tit = string_html_capitalized_of_string ($la_bub_tit); 
 
   $html_str = common_html_background_color_of_html ($la_Tit);
@@ -79,7 +83,7 @@ function arce_section_select_entry_action_build () {
   $html_str .= '<form action="' . $script_action .'" method="get"> ' . "\n";
   $html_str .= '<br> ';
   $html_str .= irp_provide ('arce_menuselect_entry', $here);
-  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift ($en_val_but, $lan);
+  $html_str .= inputtypesubmit_of_en_action_name ($en_val_but);
   $html_str .= '</form> ' .  "\n";
  
   exiting_from_function ($here);
@@ -112,7 +116,7 @@ function arce_section_create_entry_title_build () {
   $lan = $_SESSION['parameters']['language'];
   $en_tit = 'create a new entry';
 
-  $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
   $la_Tit = string_html_capitalized_of_string ($la_bub_tit);
   $html_str = common_html_background_color_of_html ($la_Tit);
 
@@ -145,7 +149,7 @@ function arce_section_create_entry_action_build () {
   }
 
   $html_str .= '"/> ';
-  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift ($en_val_but, $lan);
+  $html_str .= inputtypesubmit_of_en_action_name ($en_val_but);
   $html_str .= '    </form> ' .  "\n";
 
 
@@ -179,7 +183,7 @@ function arce_section_rename_entry_title_build () {
 
   $en_tit = 'rename an existing entry';
 
-  $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
   $la_Tit = string_html_capitalized_of_string ($la_bub_tit);
   $html_str = common_html_background_color_of_html ($la_Tit);
 
@@ -206,7 +210,7 @@ function arce_section_rename_entry_action_build () {
   $html_str .= '<form action="' . $script_action .'" method="get"> ' . "\n";
   $html_str .= '<br> ';
   $html_str .= irp_provide ('arce_menuselect_entry', $here);
-  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift ($en_val_but, $lan);
+  $html_str .= inputtypesubmit_of_en_action_name ($en_val_but);
   $html_str .= '</form> ' .  "\n";
  
   exiting_from_function ($here);

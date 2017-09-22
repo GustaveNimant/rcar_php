@@ -3,7 +3,7 @@
 require_once "string_functions.php";
 require_once "irp_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 # entering_in_module ($module);
 
 function block_surname_build () {
@@ -26,7 +26,7 @@ function block_surname_build () {
   
 /* get from disk if block_current_name exists */
  
-          if (irp_is_stored ('block_current_name')) {
+          if (irp_is_stored_of_irp_key ('block_current_name')) {
               $nam_blo = irp_provide ('block_current_name', $here);
               /* $sur_by_nam_a = surname_by_name_array_make (); ???? */
               $sur_by_nam_a = irp_provide ('surname_by_name_array', $here);

@@ -163,13 +163,13 @@ function entry_information_array_lan_of_entry_name ($nam_ent) {
                       
                       $worlan_a = array ();   
                       foreach ($woren_a as $k => $w_en) {
-                          $worlan = language_translate_of_en_string_of_language ($w_en, $lan);
+                          $worlan = language_translate_of_en_string ($w_en);
                           $worlan_a[$k] = $worlan;
                       }
                       $wor_lan = $worlan_a;
                   }
                   else {
-                      $wor_lan = language_translate_of_en_string_of_language ($wor_en, $lan);
+                      $wor_lan = language_translate_of_en_string ($wor_en);
                   }
                   $ent_inf_lan_a[$key] = $wor_lan;
               }
@@ -190,7 +190,7 @@ function entry_information_array_lan_of_entry_name ($nam_ent) {
 /*   $inf_ent_en_a = entry_information_array_en_of_entry_name ($nam_ent); */
 /*   $kin_blo_en = $inf_ent_en_a['block_kind'];  */
 /*   $legend_en =  $txt_en. ' ' . $kin_blo_en;  */
-/*   $legend_la = language_translate_of_en_string_of_language ($legend_en, $lan); */
+/*   $legend_la = language_translate_of_en_string ($legend_en); */
 
 /*   $sur_ent = surname_of_name_of_surname_by_name_array ($nam_ent); */
 /*   $legend_la = str_replace ($nam_ent, $sur_ent, $legend_la); */
@@ -203,7 +203,7 @@ function entry_information_array_lan_of_entry_name ($nam_ent) {
 /*   $inf_ent_en_a = entry_information_array_en_of_entry_name ($nam_ent); */
 /*   $kin_blo_en = $inf_ent_en_a['block_kind'];  */
 /*   $legend_en =  $tx1_en . ' ' . $kin_blo_en . ' ' . $tx2_en;  */
-/*   $legend_la = language_translate_of_en_string_of_language ($legend_en, $lan); */
+/*   $legend_la = language_translate_of_en_string ($legend_en); */
 
 /*   $sur_ent = surname_of_name_of_surname_by_name_array ($nam_ent); */
 /*   $legend_la = str_replace ($nam_ent, $sur_ent, $legend_la); */

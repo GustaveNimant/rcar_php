@@ -8,7 +8,7 @@ require_once "date_n_time_functions.php";
 $Documentation[$module]['what is it'] = "a file where every side effect is written on disk";
 $Documentation[$module]['how is it done'] = "a side effect function returns a \$html_log";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 # entering_in_module ($module);
 
@@ -22,7 +22,7 @@ function logfile_informations_en_of_action ($get_act) {
     $act_ite = irp_provide ('item_action', $here);
     $ite_act = irp_provide ($act_ite, $here);
     $old_con = irp_provide ('item_content_previous', $here);
-    $lan_act = language_translate_of_en_string_of_language ($act_ite, $lan); 
+    $lan_act = language_translate_of_en_string ($act_ite); 
   }else {
     unset ($_COOKIE);
   }
@@ -31,11 +31,11 @@ function logfile_informations_en_of_action ($get_act) {
   date_default_timezone_set ("Europe/Paris");
   $dat_act = date("j F Y/G\hi");
   
-  $con_pro =language_translate_of_en_string_of_language ('content of the property', $lan);
+  $con_pro =language_translate_of_en_string ('content of the property');
   $con_pro = html_entity_decode ($con_pro);
-  $ent_nam =language_translate_of_en_string_of_language ('in entry name', $lan);
+  $ent_nam =language_translate_of_en_string ('in entry name');
   $ent_nam = html_entity_decode ($ent_nam);
-  $in =language_translate_of_en_string_of_language ('in', $lan);
+  $in =language_translate_of_en_string ('in');
   
   $fno_con  = '';
   
@@ -96,7 +96,7 @@ function logfile_create_of_action () {
     
     $dir_nam = specific_directory_name_of_basic_name_of_name ('hd_php', 'LOGS');
     
-    $ext_log = $_SESSION['parameters']['action_log_filename_extension'];
+    $ext_log = $_SESSION['parameters']['extension_action_log_filename'];
  
     if ($_COOKIE['connect'] == 'ok') {
         $fno = 'connexion' . '.' . $ext_log;
@@ -135,7 +135,7 @@ function logfile_html_write ($htm_log) {
 
   $nam_pro = $_SESSION['parameters']['program_name'];
   $Nam_pro = ucfirst ($nam_pro);
-  $ext_log = $_SESSION['parameters']['action_log_filename_extension'];
+  $ext_log = $_SESSION['parameters']['extension_action_log_filename'];
 
   $nof_log = "$Nam_pro.$ext_log";
 

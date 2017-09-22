@@ -2,7 +2,7 @@
 
 require_once "irp_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 # entering_in_module ($module);
 
@@ -13,7 +13,7 @@ function block_new_create_surname_inputtypetext_build (){
   $lan = $_SESSION['parameters']['language'];
   $kin_blo = irp_provide ('entry_block_kind', $here);
   $en_nam_blo = 'enter the name of the ' . $kin_blo;
-  $la_nam_blo = ucfirst (language_translate_of_en_string_of_language ($en_nam_blo, $lan));
+  $la_nam_blo = ucfirst (language_translate_of_en_string ($en_nam_blo));
 
   $nam = 'block_new_surname';
   $html_str  = '';

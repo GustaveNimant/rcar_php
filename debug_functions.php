@@ -1,10 +1,11 @@
 <?php
 
+require_once "file_functions.php";
 require_once "string_functions.php";
 require_once "debug_html_functions.php";
 require_once "debug_array_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 function print_d ($str) {
   file_put_contents ("debug", $str, FILE_APPEND); 
@@ -15,7 +16,8 @@ function pretty_of_key_of_string ($key, $str) {
 };
 
 function print_long ($here, $str) {
-    if ($_SESSION['debug_active']) {
+    if ( (isset ($_SESSION['debug_active']) 
+    && $_SESSION['debug_active'] > 0)  ) {
         print_d ($here . ' ' . $str . "\n"); 
     }
 };
@@ -71,7 +73,7 @@ function debug_string ($her, $str) {
 
 function debug ($nam_fun, $nam_var, $var) {
 
-    if ( ! $_SESSION['debug_active']) {
+    if ((isset($_SESSION['debug_active']) && ($_SESSION['debug_active'] > 0))) {
         return;
     }
 
@@ -89,30 +91,34 @@ function debug ($nam_fun, $nam_var, $var) {
   /*   /\* print "<pre> nam_fun = $nam_fun \$_SESSION is set</pre>"; *\/ */
   /* } */
 
-  $debug_array = $_SESSION['debug'];
-
-  /* if (isset ($debug_array)){ */
-  /*   print_html_array ("debug", "debug_array", $debug_array); */
-  /* } */
-  
-  if ( (isset ($debug_array[$nam_fun][$nam_var])) ||
-  (isset ($debug_array[$nam_fun]['any']))    ||
-  (isset ($debug_array['any'][$nam_var]))    ||
-  (isset ($debug_array['any']['any'])) ) {
-      
-      if (is_array ($var)) {
-          debug_a ($nam_fun, $nam_var, $var);
-      }
-      else {
-          debug_v ($nam_fun, $nam_var, $var);
-      }
-  }
+    if (isset ($_SESSION)) {
+        if (isset ($_SESSION['debug'])) {
+            $debug_array = $_SESSION['debug'];
+            
+            if ( (isset ($debug_array[$nam_fun][$nam_var])) ||
+            (isset ($debug_array[$nam_fun]['any']))    ||
+            (isset ($debug_array['any'][$nam_var]))    ||
+            (isset ($debug_array['any']['any'])) ) {
+                
+                if (is_array ($var)) {
+                    debug_a ($nam_fun, $nam_var, $var);
+                }
+                else {
+                    debug_v ($nam_fun, $nam_var, $var);
+                }
+            }
+        }
+    }
+    
   return;
 };
 
 function check ($her, $nam, $var) {
   if (count($var) == 0) {
-    fatal_error ($her,  "check says : variable >$nam< is empty");
+    print_fatal_error ($her,  
+    "variable >$nam< were NOT empty",
+    "it is EMPTY",
+    "Check");
   }
 };
 
@@ -122,7 +128,8 @@ function debug_n_check ($her, $nam, $var) {
 }
 
 function trace ($her, $mes) {
-    if ($_SESSION['trace_active']) {
+    if ( (isset ($_SESSION['trace_active']) 
+    && $_SESSION['trace_active'] > 0)  ) {
         print_d ("\n<TRACE> in : $her : $mes\n");    
     }
 };
@@ -134,9 +141,9 @@ function debug_href_html_make () {
   $script_action = script_array_retrieve_module_of_function ($here);
 #  debug_n_check ($here , "script_action", $script_action);
 
-  $tit = language_translate_of_en_string_of_language ('Debugging', $lan);
+  $tit = language_translate_of_en_string ('Debugging');
   
-  $html_str  = '';
+  $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<span id="menu-header-links"> ';   
 
   $html_str .= '<a href="debug_index.php" target="_blank" title="';
@@ -145,6 +152,7 @@ function debug_href_html_make () {
   $html_str .= 'Debug';
   $html_str .= '</a> ';
   $html_str .= "</span>";
+  $html_str .= comment_exiting_of_function_name ($here);
 
   exiting_from_function ($here);
   
@@ -159,6 +167,7 @@ function debug_register ($her, $irp_key) {
     $str  = "\nFunction " . $her . "\n";
     $str .= '>' . $irp_key . '<' . "\n";
     $str .= '>>' . $_SESSION['irp_register'][$irp_key] . '<<' . "\n";
+
     file_put_contents ($fno, $str, FILE_APPEND);
 }
 

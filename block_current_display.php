@@ -3,7 +3,11 @@ include "session.php";
 require_once "irp_functions.php";
 require_once "father_n_son_stack_module_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
+
+$Documentation[$module]['what is it'] = "it is ...";
+$Documentation[$module]['what for'] = "to ...";
+
 
 # entering_in_module ($module);
 

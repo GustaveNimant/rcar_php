@@ -4,11 +4,12 @@ require_once "management_functions.php";
 require_once "irp_functions.php";
 require_once "array_functions.php";
 
-$module = "surname_catalog_functions";
-# entering_in_module ($module);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
-$Documentation[$module]['surname_catalog'] = "it is a string as a list of name:surname separated by \\n";
-$Documentation[$module]['Surname_catalog.cat'] = "it is the nameoffile where the surname_catalog is dumped";
+$Documentation[$module]['what is it'] = "it is a string as a list of name:surname separated by \\n";
+$Documentation[$module]['what for'] = "to fill file Surname_catalog.cat";
+
+# entering_in_module ($module);
 
 function surname_catalog_fullnameoffile_make () {
   $here = __FUNCTION__;
@@ -63,7 +64,7 @@ function surname_catalog_read () {
     $fno_sur = surname_catalog_fullnameoffile_make ();
     $cat_sur = file_content_read ($fno_sur);
     
-    debug_n_check ($here , '$cat_sur', $cat_sur);
+    debug_n_check ($here , '$cat_sur', ">$cat_sur<");
     
     exiting_from_function ($here);
     exiting_withcpu_from_function ($here, $cpu_in);

@@ -2,7 +2,7 @@
 require_once "common_html_functions.php";
 require_once "irp_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 $Documentation[$module]['what for'] = "to display the form page where one can modify the current item";
 
@@ -15,7 +15,9 @@ function item_current_modify_display_build () {
     $nam_ent = irp_provide ('entry_name', $here);
     $nam_blo_cur = irp_provide ('block_current_name', $here);
 
-    $html_str  = a_href_of_entry_name_of_script_nameoffile_of_block_current_name_of_en_action ($nam_ent, 'item_current_modify_form.php', $nam_blo_cur, 'modify');
+    $html_str  = comment_entering_of_function_name ($here);
+    $html_str .= a_href_of_entry_name_of_script_nameoffile_of_block_current_name_of_en_action ($nam_ent, 'item_current_modify_form.php', $nam_blo_cur, 'modify');
+    $html_str .= comment_exiting_of_function_name ($here);
 
     debug_n_check ($here , '$html_str', $html_str);
     exiting_from_function ($here);

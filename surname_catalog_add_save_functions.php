@@ -1,12 +1,14 @@
 <?php
 
-require_once "management_functions.php";
 require_once "irp_functions.php";
 require_once "surname_functions.php";
 require_once "surname_catalog_functions.php";
-require_once "string_functions.php";
 
-$module = "surname_catalog_add_save_functions";
+$module = module_name_of_module_nameoffile (__FILE__);
+
+$Documentation[$module]['what is it'] = "it is ...";
+$Documentation[$module]['what for'] = "to ...";
+
 # entering_in_module ($module);
 
 function surname_catalog_item_add_save_build (){
@@ -42,7 +44,7 @@ function surname_catalog_item_add_save_build (){
 
   $nam_ent = irp_provide ('entry_name', $here);
   $sur_ent = irp_provide ('entry_surname', $here);
-  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent, $sur_ent, $nof_mod, $lan); 
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent, $sur_ent, $nof_mod); 
   $html_str .= irp_provide ('pervasive_html_final_section', $here);
   
   debug_n_check ($module , '$html_str', $html_str);
@@ -71,7 +73,7 @@ function surname_catalog_entry_add_save_build (){
   $html_str = '';
   $html_str .= irp_provide ('pervasive_html_initial_section', $here);
   $html_str .= irp_provide ('git_command_n_commit_html', $here);
-  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_wos, $sur_wos, $nof_mod, $lan);
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_wos, $sur_wos, $nof_mod);
   $html_str .= irp_provide ('pervasive_html_final_section', $here);
   
   debug_n_check ($module , '$html_str', $html_str);

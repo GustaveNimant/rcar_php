@@ -4,7 +4,7 @@ require_once "block_name_catalog_functions.php";
 require_once "management_functions.php";
 require_once "irp_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 # entering_in_module ($module);
 
@@ -59,8 +59,8 @@ function block_name_array_build () {
   if (! has_values_unique_of_any_array ($nam_blo_a)){
       $en_mes_1 = 'the array';
       $en_mes_2 = 'is NOT unique';
-      $la_mes_1 = language_translate_of_en_string_of_language ($en_mes_1, $lan); 
-      $la_mes_2 = language_translate_of_en_string_of_language ($en_mes_2, $lan);   
+      $la_mes_1 = language_translate_of_en_string ($en_mes_1); 
+      $la_mes_2 = language_translate_of_en_string ($en_mes_2);   
       $la_mes =  $la_mes_1 . ' ' . 'block_name_array' . ' ' . $la_mes_2;
       $la_Mes = string_html_capitalized_of_string ($la_mes);
       warning ($here, $la_Mes);

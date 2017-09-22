@@ -6,7 +6,7 @@ require_once "entry_information_functions.php";
 require_once "block_information_functions.php";
 require_once "block_name_array_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 # entering_in_module ($module);
 
@@ -43,7 +43,7 @@ function block_new_create_exist_action_build () {
   $nam_blo_new = irp_provide ('block_new_name', $here);
 
   $fnd = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
-  $ext_blo = $_SESSION['parameters']['block_filename_extension'];
+  $ext_blo = $_SESSION['parameters']['extension_block_filename'];
   $fno = $fnd . $nam_blo_new . $ext_blo;
 
 #  $fno = fullnameoffile_of_fullnameofdirectory_of_name_of_extension ($fnd, $nam_blo_new, $ext_blo);
@@ -114,8 +114,8 @@ function block_new_create_save_build () {
       if (array_value_exists ($nam_blo_new, $old_nam_blo_a) ) {
           $en_mes_1 = "the block";
           $en_mes_2 = "already exists";
-          $la_mes_1 = language_translate_of_en_string_of_language ($en_mes_1, $lan); 
-          $la_mes_2 = language_translate_of_en_string_of_language ($en_mes_2, $lan);   
+          $la_mes_1 = language_translate_of_en_string ($en_mes_1); 
+          $la_mes_2 = language_translate_of_en_string ($en_mes_2);   
           $la_mes =  $la_mes_1 . ' ' . $nam_blo_new . ' ' . $la_mes_2;
           $la_Mes = string_html_capitalized_of_string ($la_mes);
           warning ($here, $la_Mes);

@@ -3,7 +3,7 @@
 require_once "string_functions.php";
 require_once "irp_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 # entering_in_module ($module);
 
 function four_elements_array_off_block_content ($con_blo) {
@@ -41,7 +41,7 @@ function block_content_write ($nam_ent, $nam_blo, $con_blo) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($nam_ent, $nam_blo, $con_blo)");
 
-    $ext_blo = $_SESSION['parameters']['block_filename_extension'];
+    $ext_blo = $_SESSION['parameters']['extension_block_filename'];
     debug_n_check ($here ,'$ext_blo', $ext_blo);
 
     $dir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);

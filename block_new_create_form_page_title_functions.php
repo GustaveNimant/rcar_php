@@ -4,7 +4,7 @@ require_once "irp_functions.php";
 require_once "entry_information_functions.php";
 require_once "entry_display_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 # entering_in_module ($module);
 
@@ -18,12 +18,12 @@ function block_new_create_form_page_title_build (){
 
   if ($kin_blo == 'question'){
       $en_tit = 'ask a new ' . $kin_blo; 
-      $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+      $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
       $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
   } 
   else {
       $en_tit = 'define a new ' . $kin_blo . ' for entry'; 
-      $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+      $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
       $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
       $la_Tit .= ' <i><b> ' . $sur_ent . '</b></i> ';
   }

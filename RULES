@@ -1,8 +1,23 @@
 # definitions :
-entity :
+
+entity : has a name and a content
    block
+   block_list
    entry
+   entry_list
    item
+   item_list
+   justification
+   sha1
+   surname_catalog
+
+entity part :
+   name
+   newname
+   surname
+   newsurname
+
+   content
 
 status :
    current
@@ -12,25 +27,39 @@ status :
    previous
 
 action :
-   display
    create
+   delete
+   justify
    modify
    rename
+   reorder
    save
+
+page :
 
 sectiontype : 
    pagetitle
+
    sectionform
    sectiontextarea
    sectiontitle
    sectiontitlehelped
 
-pagetype : 
-   display
-   form 
+moduletype : 
+   display  page initial_section ... final_section
+   form     page from <form ... </form> no print 
+   titlehelped any button is helped 
+   save     overwrites current : save on disk, newname -> name, newsurname -> surname
 
 # file name structure entity_status_action_pagetype_functions.php
 
 # file name contains _form => build starts with <form and ends with </form>
  
 # the name of a function must begin with its module name
+
+block_name
+block_surname
+
+block_newname  untill save. 
+block_newsurname
+

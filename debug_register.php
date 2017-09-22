@@ -3,7 +3,6 @@
 $debug_register = 
   array (
 
-
 	 'all' => array (),
 
 	 'arce' => array (

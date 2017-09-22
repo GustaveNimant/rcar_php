@@ -3,7 +3,7 @@
 require_once "management_functions.php";
 require_once "irp_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 # entering_in_module ($module);
 
@@ -22,7 +22,7 @@ function block_modify_save_build () {
 
   debug_n_check ($here, '$nam_ent', $nam_ent);
 
-  $ext_blo = $_SESSION['parameters']['block_filename_extension'];
+  $ext_blo = $_SESSION['parameters']['extension_block_filename'];
   block_any_text_write ('block_content', $nam_ent, $nam_blo, $con_blo, $ext_blo);
 
   $nof_mod = 'entry_display.php';

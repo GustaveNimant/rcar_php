@@ -53,7 +53,7 @@ function surname_by_name_array_make () {
   $str_sur = surname_catalog_read ();
   $sur_by_nam_a = surname_by_name_array_of_surname_catalog ($str_sur);
 
-  # debug_n_check ($here , '$sur_by_nam_a', $sur_by_nam_a);
+  debug_n_check ($here , '$sur_by_nam_a', $sur_by_nam_a);
   exiting_from_function ($here);
 
   return $sur_by_nam_a;

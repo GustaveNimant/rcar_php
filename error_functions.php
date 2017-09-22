@@ -2,18 +2,18 @@
 
 require_once "file_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 function html_warning ($her, $la_mes){
 
     $lan = $_SESSION['parameters']['language'];
 
     $en_tx1 = 'warning';
-    $la_tx1 = language_translate_of_en_string_of_language ($en_tx1, $lan);
+    $la_tx1 = language_translate_of_en_string ($en_tx1);
     $la_Tx1 = string_html_capitalized_of_string ($la_tx1);
 
     $en_tx2 = 'in';
-    $la_tx2 = language_translate_of_en_string_of_language ($en_tx2, $lan);
+    $la_tx2 = language_translate_of_en_string ($en_tx2);
 
     $html_str  = '';
     $html_str .= '<html>' . "\n";

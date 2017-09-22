@@ -4,7 +4,7 @@
 require_once "string_functions.php";
 require_once "management_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 # entering_in_module ($module);
 
@@ -15,14 +15,14 @@ function user_information_build () {
   $lan = $_SESSION['parameters']['language'];
 
   $usr_ip = $_SERVER['REMOTE_ADDR'];
-  debug_n_check ($here , "output user ip", $usr_ip);
+  debug_n_check ($here , '$irp_ip', $usr_ip);
 
   $dat = today (); 
 
   $usr_inf  = '';
-  $usr_inf .= language_translate_of_en_string_of_language ('done by', $lan);
+  $usr_inf .= language_translate_of_en_string ('done by');
   $usr_inf .= ' ' . $usr_ip . ' ';
-  $usr_inf .= language_translate_of_en_string_of_language ('on', $lan);
+  $usr_inf .= language_translate_of_en_string ('on');
   $usr_inf .= ' ' . $dat . ' ';
  
   debug_n_check ($here , "output user information", $usr_inf);

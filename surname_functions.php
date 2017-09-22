@@ -5,7 +5,7 @@ require_once "irp_functions.php";
 require_once "surname_by_name_array_functions.php";
 require_once "surname_catalog_add_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 # entering_in_module ($module);
 
 $Documentation[$module]['surname'] = "it is any name as it has been rentered by a user";
@@ -84,7 +84,7 @@ function check_couple_consistency_of_name_of_surname ($nam, $sur) {
   }
  
   exiting_from_function ($here);
-  return $boo;
+  return;
 }
 
 function name_of_surname_lowercase_of_surname_by_name_array ($sur_low, $sur_by_nam_a) {

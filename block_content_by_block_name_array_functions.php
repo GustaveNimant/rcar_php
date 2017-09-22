@@ -1,19 +1,15 @@
 <?php
 
 require_once "array_functions.php";
-require_once "block_modify_save_functions.php";
 require_once "file_functions.php";
-require_once "block_create_functions.php";
-require_once "debug_functions.php";
-require_once "button_submit_functions.php";
 require_once "irp_functions.php";
-require_once "bubble_functions.php";
 
-$module = "block_content_by_block_name_array_functions";
+$module = module_name_of_module_fullnameoffile (__FILE__);
+
+$Documentation[$module]['what is it'] = "it is ...";
+$Documentation[$module]['what for'] = "to ...";
+
 # entering_in_module ($module);
-
-$irp_register = $_SESSION['irp_register'];
-debug ($module, 'SESSION irp_register', $irp_register);
 
 function block_content_formatting_of_block_content ($con_blo) {
   $here = __FUNCTION__;
@@ -44,7 +40,7 @@ function block_content_by_block_name_array_build () {
     $hdir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
     debug_n_check ($here , "hdir", $hdir);
 
-    $ext_blo = $_SESSION['parameters']['block_filename_extension'];
+    $ext_blo = $_SESSION['parameters']['extension_block_filename'];
 
     $con_blo_by_nam_blo_a = array ();
     foreach ($nam_blo_a as $nam_blo) {
@@ -87,4 +83,5 @@ function block_content_formatted_by_block_name_array_build () {
 }
 
 # exiting_from_module ($module);
+
 ?>

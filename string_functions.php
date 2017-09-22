@@ -1,10 +1,12 @@
 <?php
-
-/* require_once "common_html_functions.php";  */
 require_once "management_functions.php";
 require_once "file_functions.php";
 
-$module = "string_functions";
+$module = module_name_of_module_fullnameoffile (__FILE__);
+
+$Documentation[$module]['what is it'] = "it is ...";
+$Documentation[$module]['what for'] = "to ...";
+
 # entering_in_module ($module);
 
 function remove_control_M ($str) {
@@ -22,9 +24,6 @@ function string_html_capitalized_of_string ($str) {
   $here = __FUNCTION__;
 #  entering_in_function ($here . "($str)");
   
-  $str_htm = htmlentities ($str, ENT_NOQUOTES); 
-  $sub_7 = substr ($str_htm, 0, 7);
-
   $str_htm = htmlentities ($str, ENT_NOQUOTES, "UTF-8"); 
   $sub_7 = substr ($str_htm, 0, 7);
 
@@ -288,7 +287,7 @@ function item_content_clean ($con_ite) {
 
 }
 
-function is_entry_name ($nam_ent){
+function string_is_entry_name_of_string ($nam_ent){
   $here = __FUNCTION__;
 #  entering_in_function ($here . " ($nam_ent)");
 
@@ -302,12 +301,12 @@ function is_entry_name ($nam_ent){
   return $result;
 }
 
-function check_entry_name ($nam_ent){
+function string_check_entry_name_of_string ($nam_ent){
   $here = __FUNCTION__;
 #  entering_in_function ($here . " ($nam_ent)");
   /* debug_n_check ($here , "input entry_name name", $nam_ent); */
 
-  if ( ! is_entry_name ($nam_ent)) {
+  if ( ! string_is_entry_name_of_string ($nam_ent)) {
     fatal_error ($here, "entry_name >$nam_ent< is NOT canonical");
   }
 
@@ -456,7 +455,8 @@ function four_elements_array_of_four_keys_off_string ($key_1, $key_2, $key_3, $k
           $key = $str_t;
           break; 
       default:
-          if ($result_a[$key] != "") {
+          if ( (isset ($result_a[$key])) && 
+          ($result_a[$key] != "") ) {
               $result_a[$key] .= "\n";
               $result_a[$key] .= $str_t;
           }
@@ -472,5 +472,64 @@ function four_elements_array_of_four_keys_off_string ($key_1, $key_2, $key_3, $k
   
   return $result_a;
 }
+function is_filename_extension ($ext) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($ext)");
+
+  $ext_blo = $_SESSION['parameters']['extension_block_filename'];
+  $ext_cat = $_SESSION['parameters']['extension_block_name_catalog_filename'];
+  $ext_com = $_SESSION['parameters']['extension_item_comment_filename'];
+
+  $result = ($ext == $ext_blo)
+    || ($ext == $ext_cat)
+    || ($ext == $ext_com)
+    ;
+
+#  debug_n_check ($here , "result ", $result);
+  exiting_from_function ($here);
+
+  return $result;
+};
+
+function is_item_comment_filename_extension ($ext) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($ext)");
+
+  $ext_txt = $_SESSION['parameters']['extension_item_comment_filename'];
+
+  $result = ($ext == $ext_txt);
+
+  exiting_from_function ($here);
+
+  return $result;
+};
+
+function is_block_text_filename_extension ($ext) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($ext)");
+
+  $ext_txt = $_SESSION['parameters']['extension_block_filename'];
+
+  $result = ($ext == $ext_txt);
+
+  exiting_from_function ($here);
+
+  return $result;
+
+};
+
+function check_block_text_filename_extension ($ext){
+  $here = __FUNCTION__;
+#  entering_in_function ($here . " ($ext)");
+  /* debug_n_check ($here , "input block name", $ext); */
+
+  if ( ! is_block_text_filename_extension ($ext)) {
+    fatal_error ($here, "block text filename extension >$ext< is NOT canonical");
+  }
+
+#  exiting_from_function ($here . " ($ext)");
+}
+
+#  exiting_from_module ($module);
 
 ?>

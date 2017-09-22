@@ -8,7 +8,12 @@ require_once "bubble_functions.php";
 require_once "entry_display_functions.php";
 require_once "surname_by_name_array_functions.php";
 
-$module = "entry_name_functions";
+$module = module_name_of_module_fullnameoffile (__FILE__);
+
+$Documentation[$module]['what is it'] = "it is ...";
+$Documentation[$module]['what for'] = "to ...";
+
+
 $Documentation[$module]['entry_name'] = "is a directory name of php_server. i.e. any string expressed in the current language transformed in a Capitalized word, with blank transformed in underscores, without any accents.";
 $Documentation[$module]['entry_kind'] = "is a lower case word expressed in english. Ex.: text";
 $Documentation[$module]['entry_block_kind'] = "is a lower case word expressed in english. Ex.: paragraph";
@@ -34,7 +39,7 @@ function entry_name_build () {
     entering_in_function ($here);
 
 /* Improve */    
-    if (irp_is_stored ('entry_newsurname')) {  
+    if (irp_is_stored_of_irp_key ('entry_newsurname')) {  
         $sur_ent = irp_provide ('entry_newsurname', $here);  
         $nam_ent = word_name_capitalized_of_string_surname ($sur_ent);
     }
@@ -42,7 +47,7 @@ function entry_name_build () {
         $nam_ent = array_dollar_get_retrieve_value_of_key ('entry_name', $here);
     }
 
-    check_entry_name ($nam_ent);
+    string_check_entry_name_of_string ($nam_ent);
     
     debug_n_check ($here , '$nam_ent', $nam_ent);
     exiting_from_function ($here);

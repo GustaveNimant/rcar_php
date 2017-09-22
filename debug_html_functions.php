@@ -1,9 +1,11 @@
 <?php
 function print_html_scalar ($her, $mes, $var){	
+
   print "<pre>in $her :";	
   print "$mes<br>";
   print ($var);
   print '</pre> ';
+
 }
 
 function string_html_array ($her, $mes, $var_a){	

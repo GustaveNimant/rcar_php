@@ -2,7 +2,7 @@
 
 require_once "irp_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 $Documentation[$module]['what is it'] = "??? "; 
 $Documentation[$module]['what for'] = "to build the ???"; 
@@ -16,7 +16,7 @@ function item_current_modify_form_new_create_justification_title_build (){
   $lan = $_SESSION['parameters']['language'];
   $en_tit = 'enter your justification below';
 
-  $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
  
   $html_str = common_html_background_color_of_html ($la_Tit);

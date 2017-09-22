@@ -20,12 +20,12 @@ function block_current_delete_section_page_title_build (){
   $kin_blo = irp_provide ('entry_block_kind', $here);
 
   $en_tit = 'delete the ' . $kin_blo;  
-  $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
   $la_Tit .= ' <i><b> ' . $sur_ite . '</b></i> '; 
 
   $en_tit = 'for entry';
-  $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
   $la_Tit .= $la_bub_tit;
   $la_Tit .= ' <i><b> ' . $sur_ent . '</b></i> '; 
   
@@ -48,7 +48,7 @@ function block_current_delete_section_justify_title_build (){
   $lan = $_SESSION['parameters']['language'];
   $en_tit = 'enter your justification below';
 
-  $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
  
   $html_str = common_html_background_color_of_html ($la_Tit);
@@ -102,7 +102,7 @@ function block_current_delete_section_save_build () {
   $html_str  = '';
   $html_str .= '<center> ';
   $html_str .= '   <input type="submit" value="';
-  $html_str .= ucfirst (language_translate_of_en_string_of_language ('delete', $lan));
+  $html_str .= ucfirst (language_translate_of_en_string ('delete'));
   $html_str .= '" name="submitme"> ' . "\n";
   $html_str .= '</center> ' . "\n";
 

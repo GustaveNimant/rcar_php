@@ -54,9 +54,9 @@ function block_list_reorder_content_order_html_table_array_build () {
   $arr_a = array();
   $count = 0;
 
-  $from = language_translate_of_en_string_of_language ('from', $lan);
+  $from = language_translate_of_en_string ('from');
   $from = ucfirst ($from);
-  $to = language_translate_of_en_string_of_language ('to', $lan);
+  $to = language_translate_of_en_string ('to');
   $to = ucfirst ($to);
 
   $html_str  = '';
@@ -101,7 +101,7 @@ function block_list_reorder_section_title_build (){
   $kin_blo_plu = block_kind_plural_of_block_kind ($kin_blo);
 
   $en_tit = 'list of ' . $kin_blo_plu . ' for entry';
-  $la_bub_tit = bubble_bubbled_text_la_of_text_en_of_language ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
   $la_Tit .= ' <i><b> ' . $sur_ent . '</b></i> ';
 
@@ -136,11 +136,11 @@ function block_list_reorder_section_display_action_build () {
 
   $lan = $_SESSION['parameters']['language'];
 
-  $move_b = ucfirst (language_translate_of_en_string_of_language ('move before', $lan));
-  $move_a = ucfirst (language_translate_of_en_string_of_language ('move after', $lan));
-  $reset = ucfirst (language_translate_of_en_string_of_language ('reset', $lan));
+  $move_b = ucfirst (language_translate_of_en_string ('move before'));
+  $move_a = ucfirst (language_translate_of_en_string ('move after'));
+  $reset = ucfirst (language_translate_of_en_string ('reset'));
 
-  $html_str  = '';
+  $html_str  = comment_entering_of_function_name ($here);
 
   $html_str .= '<center> ' . "\n";
   $html_str .= '  <table> ';
@@ -148,25 +148,26 @@ function block_list_reorder_section_display_action_build () {
   $html_str .= '<tr> ';
 
   $html_str .= '<td> ';
-  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift ('order', 'swap', '    ');
+  $html_str .= inputtypesubmit_of_en_action_name_of_button_name ('swap', 'order');
   $html_str .= '</td> ';
 
   $html_str .= '<td> ';
-  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift ('order', 'move before', '    ');
+  $html_str .= inputtypesubmit_of_en_action_name_of_button_name ('move before', 'order');
   $html_str .= '</td> ';
 
   $html_str .= '<td> ';
-  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift ('order', 'move after', '    ');
+  $html_str .= inputtypesubmit_of_en_action_name_of_button_name ('move after', 'order');
   $html_str .= '</td> ';
 
   $html_str .= '<td> ';
-  $html_str .= inputtypesubmit_of_name_of_en_value_of_shift ('', 'reset', '    ');
+  $html_str .= inputtypesubmit_of_en_action_name ('reset');
   $html_str .= '</td> ';
 
   $html_str .= '</tr> ';
 
   $html_str .= '  </table> '. "\n";
   $html_str .= '</center> '. "\n";
+  $html_str .= comment_exiting_of_function_name ($here);
 
 
   debug_n_check ($here , '$html_str', $html_str);

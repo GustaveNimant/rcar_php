@@ -152,7 +152,7 @@ function block_information_texts_array_lan_build () {
       foreach ($arr_tit_a as $k => $w_en) {
 
 	if (is_substring_of_substring_off_string ('text ', $k)){
-	  $worlan = language_translate_of_en_string_of_language ($w_en, $lan);
+	  $worlan = language_translate_of_en_string ($w_en);
 	  $worlan_a[$k] = $worlan;
 	}
       }
@@ -163,7 +163,7 @@ function block_information_texts_array_lan_build () {
       $worlan_a = array ();   
       foreach ($arr_tit_a as $k => $w_en) {
 
-	$worlan = language_translate_of_en_string_of_language ($w_en, $lan);
+	$worlan = language_translate_of_en_string ($w_en);
 	$worlan_a[$k] = $worlan;
 	
       }

@@ -2,7 +2,7 @@
 
 require_once "irp_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 $Documentation[$module]['what is it'] = "??? "; 
 $Documentation[$module]['what for'] = "to build the ???"; 
@@ -18,7 +18,7 @@ function block_new_create_button_save_build (){
     $html_str  = '';
     $html_str .= '<center> ' . "\n";
     $html_str .= '   <input type="submit" value="';
-    $html_str .= ucfirst (language_translate_of_en_string_of_language ('save', $lan));
+    $html_str .= ucfirst (language_translate_of_en_string ('save'));
     $html_str .= '" name="submitme"> ' . "\n";
     $html_str .= '</center> ' . "\n";
 

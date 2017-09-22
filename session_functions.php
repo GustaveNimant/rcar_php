@@ -1,7 +1,9 @@
 <?php
 require_once "file_functions.php";
+require_once "session_array_initialize.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
+
 # entering_in_module ($module);
 
 function session_remove () {

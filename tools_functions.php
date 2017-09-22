@@ -5,7 +5,7 @@ require_once "session_functions.php";
 require_once "father_n_son_stack_module_functions.php";
 require_once "father_n_son_stack_entity_functions.php";
 
-$module = module_name (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 # entering_in_module ($module);
 
 function tools_display ($what) {

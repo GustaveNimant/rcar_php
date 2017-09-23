@@ -15,7 +15,7 @@ function language_selection_html_make_of_language ($lan) {
   $la_tit = language_translate_of_en_string ('select a language');
   $la_Tit = string_html_capitalized_of_string ($la_tit);
   
-  $html_str  = '';
+  $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center> ' . "\n";
   $html_str .= '<form action="' . $script_action. '" method="get"> ' . "\n";
 
@@ -30,6 +30,7 @@ function language_selection_html_make_of_language ($lan) {
 
   $html_str .= '</form> ' . "\n";
   $html_str .= '</center> ' . "\n";
+  $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str', $html_str);
   exiting_from_function ($here);
@@ -46,7 +47,7 @@ function language_href_html_make_of_language ($lan) {
   
   $script_action = 'entry_list_display.php';
   
-  $html_str  = '';
+  $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<span id="menu-header-links"> ';
   
   $html_str .= '<a href="index.php" title="';
@@ -55,6 +56,7 @@ function language_href_html_make_of_language ($lan) {
   $html_str .= language_translate_of_en_string ('language');
   $html_str .= '</a> ';
   $html_str .= "</span>";
+  $html_str .= comment_exiting_of_function_name ($here);
    
   debug_n_check ($here , '$html_str', $html_str);
   exiting_from_function ($here);
@@ -68,7 +70,9 @@ function language_selection_section_build () {
 
   $lan = $_SESSION['parameters']['language'];
 
-  $html_str = language_selection_html_make_of_language ($lan);
+  $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= language_selection_html_make_of_language ($lan);
+  $html_str .= comment_exiting_of_function_name ($here);
 
   debug ($here , "language selection _GET", $_GET);
   exiting_from_function ($here);
@@ -80,10 +84,11 @@ function language_selection_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $html_str  = '';
+  $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_html_initial_section', $here);
   $html_str .= irp_provide ('language_selection_section', $here);
   $html_str .= irp_provide ('pervasive_html_final_section', $here);
+  $html_str .= comment_exiting_of_function_name ($here);
 
   exiting_from_function ($here);
 

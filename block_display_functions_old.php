@@ -71,12 +71,12 @@ function block_display_section_page_title_build () {
   $sur_blo = surname_of_name_of_surname_by_name_array ($nam_blo, $sur_by_nam_a);
 
   $en_tit =  $kin_blo;
-  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
   $la_Tit = string_html_capitalized_of_string ($la_bub_tit);
   $la_Tit .= '<i><b> ' . $sur_blo . '</b></i> ';
 
   $en_tit =  'for entry';
-  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
   $la_Tit .= lcfirst ($la_bub_tit);
   $la_Tit .= '<i><b> ' . $sur_ent . '</b></i> ';
 
@@ -113,7 +113,7 @@ function block_display_justify_title_build () {
   $lan = $_SESSION['parameters']['language'];
 
   $en_tit = "content of the current justification";
-  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
   $la_Tit = string_html_capitalized_of_string ($la_bub_tit);
 
   $html_str = common_html_background_color_of_html ($la_Tit);

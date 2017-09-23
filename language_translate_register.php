@@ -1132,6 +1132,12 @@ par la liste de ses propri&eacute;t&eacute;s',
         'it' => '???',
     ),
 
+    'leave' =>
+    array (
+        'fr' => 'sortir',
+        'it' => '???',
+    ),
+    
     'list of editing rules' =>
     array (
 		'fr' => 'liste des r&egrave;gles de r&eacute;daction',

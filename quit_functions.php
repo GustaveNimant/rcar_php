@@ -19,7 +19,7 @@ function button_close_window () {
 
     $scr_act = 'close.php';
     $en_bub = 'close the window';
-    $en_nam_act = 'quit';
+    $en_nam_act = 'leave';
     
     $html_str  = comment_entering_of_function_name ($here);
     $html_str .= '<form action="' . $scr_act. '" method="get"> ' . "\n";

@@ -23,12 +23,12 @@ function block_rename_section_page_title_build (){
   $lan = $_SESSION['parameters']['language'];
 
   $en_tit = 'rename the ' . $kin_blo;  
-  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
   $la_Tit .= ' <i><b> ' . $sur_ite . '</b></i> '; 
 
   $en_tit = 'for entry';
-  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
   $la_Tit .= $la_bub_tit;
   $la_Tit .= ' <i><b> ' . $sur_ent . '</b></i> '; 
 
@@ -51,7 +51,7 @@ function block_rename_section_name_modify_title_build (){
 
   $lan = $_SESSION['parameters']['language'];
 
-  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
  
   $html_str = common_html_background_color_of_html ($la_Tit);
@@ -104,7 +104,7 @@ function block_rename_section_justify_title_build (){
   $lan = $_SESSION['parameters']['language'];
   $en_tit = 'enter your justification below';
 
-  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
  
   $html_str = common_html_background_color_of_html ($la_Tit);

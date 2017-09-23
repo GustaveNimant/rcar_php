@@ -91,7 +91,7 @@ function bubble_la_text_by_key_array_make_of_la_text ($la_txt) {
   return $la_bub_txt_a;
 }
 
-function bubble_bubbled_text_la_of_en_text ($en_txt) {
+function bubble_bubbled_la_text_of_en_text ($en_txt) {
   $here = __FUNCTION__;
   entering_in_function ($here . "($en_txt)");
 

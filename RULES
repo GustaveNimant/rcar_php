@@ -1,4 +1,4 @@
-# definitions :
+# built or read
 
 entity : has a name and a content
    block
@@ -26,27 +26,31 @@ status :
    next 
    previous
 
+# html text 
+
 action :
    create
    delete
+   display   entry_list_select_display 
    justify
    modify
-   rename
+   rename    entry_list_select_rename
    reorder
    save
 
 page :
 
 sectiontype : 
-   pagetitle
+   <page>_title
 
-   sectionform
-   sectiontextarea
-   sectiontitle
-   sectiontitlehelped
+   <section>_form
+   <section>_select
+   <section>_textarea
+   <section>_title
+   <section>_titlehelped
 
 moduletype : 
-   display  page initial_section ... final_section
+   page     page initial_section ... final_section
    form     page from <form ... </form> no print 
    titlehelped any button is helped 
    save     overwrites current : save on disk, newname -> name, newsurname -> surname
@@ -63,3 +67,10 @@ block_surname
 block_newname  untill save. 
 block_newsurname
 
+page_template
+
+pervasive_html_initial_section
+<    >_page_titlehelped
+<    >_page_form
+link_to_return_of_return_module_nameoffile
+pervasive_html_final_section

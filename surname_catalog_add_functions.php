@@ -24,12 +24,12 @@ function surname_catalog_add_page_title_build (){
   /* $en_tit = 'add surname for ' . $kin_blo;   */
 
   $en_tit = 'add surname for name';  
-  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
   $la_Tit .= '<i><b>' . $nam_wos . '</b></i>' . "\n"; 
 
   /* $en_tit = 'for entry'; */
-  /* $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit); */
+  /* $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit); */
   /* $la_Tit .= $la_bub_tit; */
   /* $la_Tit .= '<i><b>' . $sur_ent . '</b></i>' . "\n"; */
 
@@ -53,7 +53,7 @@ function surname_catalog_add_name_modify_title_build (){
   $lan = $_SESSION['parameters']['language'];
   $en_tit = 'enter the surname below';
 
-  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
  
   $html_str  = comment_entering_of_function_name ($here);

@@ -497,7 +497,7 @@ function array_dollar_get_retrieve_value_of_key ($key, $mod) {
 
         $check  = 'Check that :<br>';
         $check .= '1 function >' . $nam_fun . '< is implemented and accessible' . '<br>';
-        $check .= '2 line <i>require_once "' . $key . '_functions.php";</i> is present in irp_functions.php';
+        $check .= '2 line <i>require_once "' . $key . '_functions.php";</i> is present in build_functions.php';
     }
  
     print_fatal_error ($mod , 

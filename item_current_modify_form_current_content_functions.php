@@ -23,7 +23,7 @@ function item_current_modify_form_current_content_title_build (){
       $en_tit = 'content of the ' . $kin_blo;  
   }
 
-  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
 
   $html_str = common_html_background_color_of_html ($la_Tit);

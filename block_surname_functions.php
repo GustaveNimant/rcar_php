@@ -4,6 +4,7 @@ require_once "string_functions.php";
 require_once "irp_functions.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
+
 # entering_in_module ($module);
 
 function block_surname_build () {
@@ -34,7 +35,10 @@ function block_surname_build () {
           }
           else {
               debug ($here, 'irp_register', $_SESSION['irp_register']);
-              fatal_error ($here, "block_current_name is neither stored nor in GET");
+              print_fatal_error ($here, 
+              "block_current_name were irp_stored or in \$_GET",
+              "None is true",
+              "Check");
           }
       }
   }

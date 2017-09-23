@@ -13,7 +13,7 @@ function block_current_rename_justification_title_build (){
   $lan = $_SESSION['parameters']['language'];
   $en_tit = 'enter your justification below';
 
-  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
  
   $html_str = common_html_background_color_of_html ($la_Tit);

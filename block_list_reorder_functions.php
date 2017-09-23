@@ -101,7 +101,7 @@ function block_list_reorder_section_title_build (){
   $kin_blo_plu = block_kind_plural_of_block_kind ($kin_blo);
 
   $en_tit = 'list of ' . $kin_blo_plu . ' for entry';
-  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
   $la_Tit .= ' <i><b> ' . $sur_ent . '</b></i> ';
 

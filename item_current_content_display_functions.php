@@ -18,7 +18,7 @@ function item_current_content_display_title_build () {
   $lan = $_SESSION['parameters']['language'];
 
   $en_tit = 'item current content';
-  $la_bub_tit = bubble_bubbled_text_la_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
   $la_Tit = string_html_capitalized_of_string ($la_bub_tit);
   $la_Tit = '<b>' . $la_Tit . '</b>';
 

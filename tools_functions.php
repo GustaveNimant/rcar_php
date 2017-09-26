@@ -136,7 +136,7 @@ function tools_display ($what) {
     };
     
     $html_log = "Entity $what displayed";
-    logfile_html_write ($html_log);
+    logfile_html_write ($here, $html_log);
     
     return $html_log;
 }
@@ -166,7 +166,7 @@ function tools_load ($what) {
     irp_store_force ($what, $irp_val, 'entry_display');
     
     $html_log = "Entity >$what< loaded from disk";
-    logfile_html_write ($html_log);
+    logfile_html_write ($here, $html_log);
 
     return;
 }
@@ -192,7 +192,7 @@ function tools_remove ($what) {
     };
     
     $html_log = "$what has been removed";
-    logfile_html_write ($html_log);
+    logfile_html_write ($here, $html_log);
 
     exiting_from_function ($here);
     return $html_log;
@@ -225,7 +225,7 @@ function tools_set ($what) {
     };
     
     $html_log = "$what has been set";
-    logfile_html_write ($html_log);
+    logfile_html_write ($here, $html_log);
 
     exiting_from_function ($here);
     return $html_log;
@@ -258,7 +258,7 @@ function tools_unset ($what) {
     };
     
     $html_log = "$what has been unset";
-    logfile_html_write ($html_log);
+    logfile_html_write ($here, $html_log);
 
     exiting_from_function ($here);
     return $html_log;
@@ -357,7 +357,7 @@ function tools_write ($what) {
     };
     
     $html_log = "Entity $what displayed";
-    logfile_html_write ($html_log);
+    logfile_html_write ($here, $html_log);
     
     return $html_log;
 

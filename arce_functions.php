@@ -55,7 +55,7 @@ function arce_section_select_entry_title_build () {
   $en_tit = 'select an existing entry';
   $lan = $_SESSION['parameters']['language'];
 
-  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_Tit = string_html_capitalized_of_string ($la_bub_tit); 
 
   $html_str = common_html_background_color_of_html ($la_Tit);
@@ -116,7 +116,7 @@ function arce_section_create_entry_title_build () {
   $lan = $_SESSION['parameters']['language'];
   $en_tit = 'create a new entry';
 
-  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_Tit = string_html_capitalized_of_string ($la_bub_tit);
   $html_str = common_html_background_color_of_html ($la_Tit);
 
@@ -183,7 +183,7 @@ function arce_section_rename_entry_title_build () {
 
   $en_tit = 'rename an existing entry';
 
-  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_Tit = string_html_capitalized_of_string ($la_bub_tit);
   $html_str = common_html_background_color_of_html ($la_Tit);
 

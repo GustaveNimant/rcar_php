@@ -16,7 +16,7 @@ function block_current_display_actions_title_build () {
   $lan = $_SESSION['parameters']['language'];
 
   $en_tit = 'select one of the actions to be performed on current block';
-  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_Tit = string_html_capitalized_of_string ($la_bub_tit);
   $la_colon = language_translate_of_en_string (':');
 

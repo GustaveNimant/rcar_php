@@ -10,7 +10,7 @@ function language_from_navigator () {
 
   $lan = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 
-  debug_n_check ($here, "langage du navigateur", $lan); 
+  debug_n_check ($here, '$lan', $lan); 
   exiting_from_function ($here);
 
   return $lan;
@@ -20,21 +20,9 @@ function language_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-/* Improve */
-  /* $lan = language_from_navigator (); */
-  /* debug_n_check ($here , "language", $lan); */
-
   $lan = 'fr'; 
 
-  /* if ($lan == "") { */
-  /*   $lan = 'fr'; */
-  /*   warning ($here, "no language from navigator. language set to $lan"); */
-  /* } */
-  /* else { */
-  /*   /\* warning ($here, "language from navigator. language set to $lan"); *\/ */
-  /* } */
-  
-  debug_n_check ($here , "language", $lan);
+  debug_n_check ($here , '$lan', $lan);
   exiting_from_function ($here);
   
   return $lan;  

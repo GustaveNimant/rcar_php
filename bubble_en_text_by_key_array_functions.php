@@ -59,7 +59,7 @@ function bubble_la_text_by_key_array_make () {
   
   $en_txt_bub_a = bubble_en_text_by_key_array_make ();
   
-  # debug_n_check ($here , '$en_txt_bub_a', $en_txt_bub_a);
+  debug_n_check ($here , '$en_txt_bub_a', $en_txt_bub_a);
 
   foreach ($en_txt_bub_a as $en_key_bub => $en_txt_bub) {
 
@@ -73,7 +73,7 @@ function bubble_la_text_by_key_array_make () {
     /* debug_n_check ($here , '$la_txt_bub', $la_txt_bub); */
   }
 
-  # debug_n_check ($here , '$la_txt_bub_a', $la_txt_bub_a);
+  debug_n_check ($here , '$la_txt_bub_a', $la_txt_bub_a);
   exiting_from_function ($here);
 
   return $la_txt_bub_a;

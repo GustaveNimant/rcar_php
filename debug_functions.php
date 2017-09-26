@@ -73,7 +73,7 @@ function debug_string ($her, $str) {
 
 function debug ($nam_fun, $nam_var, $var) {
 
-    if ((isset($_SESSION['debug_active']) && ($_SESSION['debug_active'] > 0))) {
+    if ((isset($_SESSION['debug_active']) && ($_SESSION['debug_active'] < 1))) {
         return;
     }
 
@@ -129,7 +129,7 @@ function debug_n_check ($her, $nam, $var) {
 
 function trace ($her, $mes) {
     if ( (isset ($_SESSION['trace_active']) 
-    && $_SESSION['trace_active'] > 0)  ) {
+              && $_SESSION['trace_active'] > 0)  ) {
         print_d ("\n<TRACE> in : $her : $mes\n");    
     }
 };

@@ -51,9 +51,9 @@ $Program_name = ucfirst ($program_name);
 /* print "</pre>"; */
 
 date_default_timezone_set ("Europe/Paris");
-$str = date("j F Y à G\hi:s");  
-file_put_contents ("debug", $str . "\n");
-file_put_contents ("$Program_name.log", $str . "\n");
+$html_log = date("j F Y à G\hi:s");  
+file_put_contents ("debug", $html_log . "\n");
+file_put_contents ("$Program_name.log", $html_log . "\n");
 
 array_push ($_SESSION['parameters']['stack_function_level_array'], $module);
 

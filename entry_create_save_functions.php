@@ -60,7 +60,6 @@ function entry_create_save_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $lan = $_SESSION['parameters']['language'];    
   $new_sur_ent = irp_provide ('entry_newsurname', $here);  /* GET */
   debug_n_check ($here, '$new_sur_ent', $new_sur_ent);
 
@@ -82,9 +81,8 @@ function entry_create_save_build () {
   }
 
   $sur_by_nam_a = irp_provide ('surname_by_name_array', $here);
-  $nof_mod   = 'entry_list_display.php';
 
-  $html_str  = '';
+  $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_html_initial_section', $here);
   $html_str .= irp_provide ('entry_create_save_subdirectory_create_of_entry_name', $here);
   $html_str .= entry_create_save_update_of_surname_by_name_array_of_entry_newsurname_of_language ($sur_by_nam_a, $new_sur_ent, $lan);
@@ -92,8 +90,9 @@ function entry_create_save_build () {
 
   $sur_by_nam_a = irp_provide ('surname_by_name_array', $here); /* need to be updated */
 
-  $html_str .= link_to_return_of_return_module_nameoffile ($nof_mod);
+  $html_str .= link_to_return_of_return_module_nameoffile ('entry_list_display.php');
   $html_str .= irp_provide ('pervasive_html_final_section', $here);
+  $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str',  $html_str);
 

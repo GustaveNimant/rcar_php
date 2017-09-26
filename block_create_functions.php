@@ -21,12 +21,12 @@ function block_create_section_page_title_build (){
 
   if ($kin_blo == 'question'){
       $en_tit = 'ask a new ' . $kin_blo; 
-      $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
+      $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
       $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
   } 
   else {
       $en_tit = 'define a new ' . $kin_blo . ' for entry'; 
-      $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
+      $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
       $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
       $la_Tit .= ' <i><b> ' . $sur_ent . '</b></i> ';
   }
@@ -57,7 +57,7 @@ function block_create_section_content_title_text_build (){
       $en_tit = 'content of the ' . $kin_blo;  
   }
 
-  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
 
   debug_n_check ($here , '$la_Tit',  $la_Tit);
@@ -153,7 +153,7 @@ function block_create_section_name_title_text_build (){
   $kin_blo = irp_provide ('entry_block_kind', $here);
   $en_tit = 'enter the name of the ' . $kin_blo;
 
-  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
 
   debug_n_check ($here , '$la_Tit',  $la_Tit);
@@ -244,7 +244,7 @@ function block_create_block_list_section_title_build () {
 
   $en_tit = 'the ' . $kin_blo_plu . ' for entry';
 
-  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
   $la_Tit .= ' <i><b> ' . $sur_ent . '</b></i> ';
 

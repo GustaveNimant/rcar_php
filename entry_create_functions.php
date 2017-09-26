@@ -20,7 +20,8 @@ function entry_create_message_of_entry_name_build () {
   string_check_entry_name_of_string ($nam_ent);
   $lan = $_SESSION['parameters']['language'];
 
-  $la_tit = language_translate_of_en_string ('create a new entry');
+  $en_tit = 'create a new entry';
+  $la_tit = language_translate_of_en_string ($en_tit);
   $la_Tit  = string_html_capitalized_of_string ($la_tit);
 
   $fnd_ent = entry_subdirectory_name_of_entry_name ($nam_ent);
@@ -48,21 +49,19 @@ function entry_create_section_create_entry_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $lan = $_SESSION['parameters']['language'];
-
   $pre_mod = link_previous_module_name_make ();
   $son_mod = 'entry_create_save';
-  $script_action = $son_mod . '.php';;
+
+  $script_action = 'entry_create_save.php';
+
   debug_n_check ($here, '$script_action', $script_action);
-  /* irp_father_of_module_of_son ($pre_mod, $son_mod); */
 
-  $en_val_but = 'yes';
-
-  $html_str  = '';
+  $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form action="'. $script_action .'" method="get"> ' . "\n";
   $html_str .= irp_provide ('entry_create_message_of_entry_name', $here);
-  $html_str .= inputtypesubmit_of_en_action_name ($en_val_but);
-  $html_str .= '    </form> ' .  "\n";
+  $html_str .= inputtypesubmit_of_en_action_name ('yes');
+  $html_str .= '</form> ' .  "\n";
+  $html_str .= comment_exiting_of_function_name ($here);
 
   exiting_from_function ($here);
   return $html_str;
@@ -97,11 +96,12 @@ function entry_create_build () {
   $sur_by_nam_a = irp_provide ('surname_by_name_array', $here);
   $nof_mod   = 'entry_list_display.php';
 
-  $html_str  = '';
+  $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_html_initial_section', $here);
   $html_str .= irp_provide ('entry_create_section_create_entry', $here);
   $html_str .= link_to_return_of_return_module_nameoffile ($nof_mod);
   $html_str .= irp_provide ('pervasive_html_final_section', $here);
+  $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str',  $html_str);
 

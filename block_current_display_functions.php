@@ -28,12 +28,12 @@ function block_current_display_page_title_build () {
   $sur_blo_cur = surname_of_name_of_surname_by_name_array ($nam_blo_cur, $sur_by_nam_a);
 
   $en_tit =  $kin_blo;
-  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_Tit = string_html_capitalized_of_string ($la_bub_tit);
   $la_Tit .= '<i><b> ' . $sur_blo_cur . '</b></i> ';
 
   $en_tit =  'for entry';
-  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_Tit .= lcfirst ($la_bub_tit);
   $la_Tit .= '<i><b>' . $sur_ent . '</b></i>';
 
@@ -56,7 +56,7 @@ function block_previous_sha1_display_title_build () {
   $lan = $_SESSION['parameters']['language'];
 
   $en_tit = "previous block sha1";
-  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_Tit = string_html_capitalized_of_string ($la_bub_tit);
   $la_Tit = '<b>' . $la_Tit . '</b>';
 

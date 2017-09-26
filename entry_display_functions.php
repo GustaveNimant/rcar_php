@@ -68,15 +68,14 @@ function entry_create_block_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $lan = $_SESSION['parameters']['language'];
-
   $sur_ent = irp_provide ('entry_surname', $here);
   $kin_blo = irp_provide ('entry_block_kind', $here);
 
   $en_tit = 'create a new ' . $kin_blo . ' for entry';
 
-  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
+  $la_Tit .= ' '; /* necessary */
   $la_Tit .= '<i><b>' . $sur_ent . '</b></i>';
 
   $html_str  = comment_entering_of_function_name ($here);
@@ -117,7 +116,10 @@ function entry_create_block_build () {
   entering_in_function ($here);
 
   $html = irp_provide ('entry_create_block_title_n_action', $here);
-  $html_str = common_html_background_color_of_html ($html);
+
+  $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= common_html_background_color_of_html ($html);
+  $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str',  $html_str);
 
@@ -140,8 +142,9 @@ function entry_reorder_block_title_build () {
 
   $en_tit = 'reorder the ' . $kin_blo_plu . ' for entry';
 
-  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
+  $la_Tit .= ' '; /* necessary */
   $la_Tit .= '<i><b>' . $sur_ent . '</b></i> ';
 
   $html_str  = comment_entering_of_function_name ($here);
@@ -211,8 +214,9 @@ function entry_display_title_build () {
 
   $en_tit = 'list of ' . $kin_blo_plu . ' for entry';
 
-  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_Tit = string_html_capitalized_of_string ($la_bub_tit);
+  $la_Tit .= ' '; /* necessary */
   $la_Tit .= '<i><b>' . $sur_ent . '</b></i> ';
 
   $html_str  = comment_entering_of_function_name ($here);
@@ -287,8 +291,7 @@ function entry_display_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $lan = $_SESSION['parameters']['language'];
-  $nof_mod = 'entry_list_display.php';
+  $ret_mod = 'entry_list_display.php';
   
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_html_initial_section', $here);
@@ -303,7 +306,7 @@ function entry_display_build (){
   catch (Exception $e) {}
 
   $html_str .= irp_provide ('entry_display_title_n_action', $here);
-  $html_str .= link_to_return_of_return_module_nameoffile ($nof_mod);
+  $html_str .= link_to_return_of_return_module_nameoffile ($ret_mod);
   $html_str .= irp_provide ('pervasive_html_final_section', $here);
   $html_str .= comment_exiting_of_function_name ($here);
 

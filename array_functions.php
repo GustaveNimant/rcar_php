@@ -45,14 +45,14 @@ function is_empty_of_array ($arr_a) {
   return $boo;
 };
 
-function check_is_empty_of_array ($arr_a, $her) {
+function check_is_empty_of_array ($what, $arr_a, $her) {
   $here = __FUNCTION__;
 #  entering_in_function ($here);
 #  # debug ($here , "input array", $arr_a); 
  
   if (is_empty_of_array ($arr_a)) {
       print_fatal_error ($her,
-      "array \$arr_a were NOT empty",
+      "array $what were NOT empty",
       "it is EMPTY",
       "Check");
   }

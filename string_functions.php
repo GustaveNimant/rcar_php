@@ -528,6 +528,19 @@ function check_block_text_filename_extension ($ext){
   }
 
 #  exiting_from_function ($here . " ($ext)");
+
+  return;
+}
+
+function string_of_separator_of_any_variable ($sep, $var) {
+    if (is_array ($var)) {
+        $str = array_serialize_of_separator_of_array_by_key ($sep, $var);
+    }
+    else {
+        $str = $var;
+    }
+    
+    return $str;
 }
 
 #  exiting_from_module ($module);

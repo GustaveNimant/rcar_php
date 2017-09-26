@@ -13,8 +13,8 @@ function father_n_son_stack_entity_push_of_father_of_son ($nam_fat, $nam_son) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_fat, $nam_son)");
 
-  if ( isset ($_SESSION)) {
-      exiting_from_function ($here . '$_SESSION not yet set');
+  if (! isset ($_SESSION)) {
+      exiting_from_function ($here . ' $_SESSION not yet set');
       return;
   }
 
@@ -27,14 +27,14 @@ function father_n_son_stack_entity_push_of_father_of_son ($nam_fat, $nam_son) {
 
   if ( ! (link_is_ok_of_module_name ($nam_fat) ) ) {
       print_fatal_error ($here,
-      "\$nam_fat = $nam_fat were a correct module name",
+      "\$nam_fat = >$nam_fat< were a correct module name",
       "it is NOT",
       "Check");
   }
 
   if ( ! (link_is_ok_of_module_name ($nam_son) ) ) {
       print_fatal_error ($here,
-      "\$nam_son = $nam_son were a correct module name",
+      "\$nam_son = >$nam_son< were a correct module name",
       "it is NOT",
       "Check");
   }
@@ -51,7 +51,7 @@ function father_n_son_stack_entity_push_of_father_of_son ($nam_fat, $nam_son) {
                   trace ($here, "push \$duo >$duo< in father_n_son_stack_entity" );
                   $_SESSION['father_n_son_stack_entity'] = $fat_n_son_a;
               }
-              #      # debug_n_check ($here, '$fat_n_son_a', $fat_n_son_a);
+              debug_n_check ($here, '$fat_n_son_a', $fat_n_son_a);
           }
       }
   }

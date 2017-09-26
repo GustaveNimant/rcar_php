@@ -168,7 +168,7 @@ function block_new_create_save_build () {
 /* Log */
 
   $html_log .= irp_provide ('block_new_create_save_content_write', $here);
-  logfile_html_write ($html_log);
+  logfile_html_write ($here, $html_log);
 
   debug_n_check ($here , '$html_str', $html_str);
   exiting_from_function ($here);

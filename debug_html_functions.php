@@ -52,4 +52,28 @@ function print_html_array ($her, $mes, $var_a){
     $html_str = string_html_array ($her, $mes, $var_a);
     print $html_str;
 }
+
+function string_html_variable ($her, $mes, $var){
+
+    if (is_array ($var)) {
+        string_html_array ($her, $mes, $var);
+    }
+    else {
+        $html_str = '';
+        $html_str .= "<pre>in $her :";	
+        $html_str .= "$mes<br>";
+        $html_str .= $var;
+        $html_str .= "<br>";
+        $html_str .= '</pre> ';
+    }
+    
+    $html_str = string_html_array ($her, $mes, $var_a);
+    print $html_str;
+}
+
+function print_html_variable ($her, $mes, $var){	
+    $html_str = string_html_array ($her, $mes, $var);
+    print $html_str;
+}
+
 ?>

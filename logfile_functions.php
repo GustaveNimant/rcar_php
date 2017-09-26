@@ -129,9 +129,9 @@ function logfile_create_of_action () {
 }
 
 
-function logfile_html_write ($htm_log) {
+function logfile_html_write ($her, $htm_log) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($htm_log)");
+  entering_in_function ($here . " ($her, $htm_log)");
 
   $nam_pro = $_SESSION['parameters']['program_name'];
   $Nam_pro = ucfirst ($nam_pro);
@@ -140,7 +140,7 @@ function logfile_html_write ($htm_log) {
   $nof_log = "$Nam_pro.$ext_log";
 
   $now_tim = now();
-  $txt_log = $now_tim . ': ' . $htm_log;
+  $txt_log = $now_tim . ': ' . $her . ' : ' . $htm_log;
   file_content_append ($nof_log, $txt_log . "\n");
 
   exiting_from_function ($here);

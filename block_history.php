@@ -14,7 +14,7 @@ print $html_str;
 
 /* $_SESSION['irp_register'] = $irp_register; */
 
-/* logfile_html_write ($html_log); */
+/* logfile_html_write ($here, $html_log); */
 
 # exiting_from_module ($module);
 

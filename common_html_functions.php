@@ -60,7 +60,7 @@ function common_html_background_color_of_html ($tit) {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $html_str  = comment_entering_of_function_name ($here);
+  $html_str = comment_entering_of_function_name ($here);
   if ($tit != '') {
     $html_str .= '<div class="my-div">' . "\n";
     $html_str .= $tit;
@@ -78,7 +78,7 @@ function common_html_page_title_centered_of_title ($tit, $shi) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($tit, $shi)");
 
-  $html_str  = comment_entering_of_function_name ($here);
+  $html_str = comment_entering_of_function_name ($here);
   if ($tit != '') {
       $html_str .= '<center>' . "\n";
       $html_str .= $shi;
@@ -108,7 +108,7 @@ function common_html_entitled_text_of_title_of_text ($tit, $html_txt) {
   
   return $html_str;
 }
-         
+        
 function common_html_css_survol_of_la_title ($la_tit) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($la_tit)");

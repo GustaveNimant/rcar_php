@@ -16,7 +16,7 @@ function item_current_modify_form_new_create_content_title_build (){
   $lan = $_SESSION['parameters']['language'];
   $en_tit = 'enter your modification below';
 
-  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit, $lan);
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
  
   $html_str  = comment_entering_of_function_name ($here);

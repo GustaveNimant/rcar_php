@@ -127,13 +127,6 @@ function debug_n_check ($her, $nam, $var) {
     check ($her, $nam, $var);
 }
 
-function trace ($her, $mes) {
-    if ( (isset ($_SESSION['trace_active']) 
-              && $_SESSION['trace_active'] > 0)  ) {
-        print_d ("\n<TRACE> in : $her : $mes\n");    
-    }
-};
-
 function debug_href_html_make () {
   $here = __FUNCTION__;
   entering_in_function ($here);
@@ -173,5 +166,12 @@ function debug_get_defined_variables () {
     $arr = get_defined_vars();
     print_r ($arr);
 }
+
+function trace ($her, $mes) {
+    if ( (isset ($_SESSION['trace_active']) 
+              && $_SESSION['trace_active'] > 0)  ) {
+        print_d ("\n<TRACE> in $her : $mes\n");    
+    }
+};
 
 ?>

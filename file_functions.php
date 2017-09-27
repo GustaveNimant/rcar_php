@@ -308,8 +308,8 @@ function file_string_write ($fno, $con) {
 
   flush ();
 
-  /* $str_log = "File >$fno< written on disk"; */
-  /* file_log_write ($here, $str_log); */
+  /* $log_str = "File >$fno< written on disk"; */
+  /* file_log_write ($here, $log_str); */
 
   exiting_from_function ($here);
   return;
@@ -357,8 +357,8 @@ function file_content_append ($fno, $con) {
 
   flush ();
 
-  /* $str_log = "File >$fno< written on disk"; */
-  /* file_log_write ($here, $str_log); */
+  /* $log_str = "File >$fno< written on disk"; */
+  /* file_log_write ($here, $log_str); */
 
   exiting_from_function ($here);
 }
@@ -402,8 +402,8 @@ function file_content_read ($fno) {
   $con = (file_get_contents ($fno))
     or fatal_error ($here, "file >" . $fno . "< is not readable");
 
-  $str_log = "File >$fno< read";
-  file_log_write ($here, $str_log);
+  $log_str = "File >$fno< read";
+  file_log_write ($here, $log_str);
 
 #  debug_n_check ($here , '$con', $con);
   exiting_from_function ($here);
@@ -473,15 +473,15 @@ function file_delete ($fno) {
 
   if (file_exists ($fno)) {
       if (unlink ($fno)) {
-          $str_log = "File $fno has been deleted";
-          file_log_write ($here, $str_log);
+          $log_str = "File $fno has been deleted";
+          file_log_write ($here, $log_str);
       } else {
           fatal_error ($here, "when deleting file $fno");
       }
   }
   else {
-      $str_log = "Non existing file $fno not deleted";
-      file_log_write ($here, $str_log);
+      $log_str = "Non existing file $fno not deleted";
+      file_log_write ($here, $log_str);
   }
 
   exiting_from_function ($here . ' with file >' . $old_nof . ' deleted');

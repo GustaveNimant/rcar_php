@@ -206,8 +206,8 @@ function irp_path_clean_register_of_top_key_of_bottom_key ($top_key, $bot_key) {
           debug ($here, '$_SESSION["irp_register"]',$_SESSION['irp_register']);
 
 #          unset ($_SESSION['irp_register'][$irp_key]);
-          $str_log = "SKIPPED irp_key >$irp_key< has been removed from irp_register";
-          file_log_write ($here, $str_log);
+          $log_str = "SKIPPED irp_key >$irp_key< has been removed from irp_register";
+          file_log_write ($here, $log_str);
       }
   }
 
@@ -235,8 +235,8 @@ function irp_path_clean_from_dollar_get_key_of_module ($module) {
     }
     
 #    unset ($_GET);
-    $str_log = 'SKIPPED Array $_GET has been removed (emptied)' . "\n";
-    file_log_write ($here, $str_log);
+    $log_str = 'SKIPPED Array $_GET has been removed (emptied)' . "\n";
+    file_log_write ($here, $log_str);
 
     exiting_from_function ($here);
     return ;  

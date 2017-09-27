@@ -129,13 +129,13 @@ function git_sha_commit_array_of_directory_path_of_quatuor ($hdir, $since, $befo
     $here = __FUNCTION__;
     entering_in_function ($here . " ($hdir, $since, $before, $nam_ent, $nam_blo)");
     
-    $str_log = git_log_shaipdate_of_directory_path_of_quatuor ($hdir, $since, $before, $nam_ent, $nam_blo);
+    $log_str = git_log_shaipdate_of_directory_path_of_quatuor ($hdir, $since, $before, $nam_ent, $nam_blo);
 
     /* 6deee17 fait par ::1 le 9 March 2017 à 17h49:05 */
     /* 7349de0 fait par ::1 le 6 March 2017 à 18h08:01 */
 
-    debug ($here , '$str_log', $str_log);
-    $str_a = explode ("\n", $str_log);
+    debug ($here , '$log_str', $log_str);
+    $str_a = explode ("\n", $log_str);
     
     $sha_com_a = array ();
     foreach ($str_a as $k => $str) {

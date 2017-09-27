@@ -79,13 +79,13 @@ function after_one_block ($nam_blo_a) {
 
   $ren_arr_a[($pro_key_to + 1)] = $nam_blo_fr;
   unset ($ren_arr_a[$pro_key_fr]);
-  $str_log = "Key >$pro_key_fr< has been removed from array \$ren_arr_a";
+  $log_str = "Key >$pro_key_fr< has been removed from array \$ren_arr_a";
 
   ksort ($ren_arr_a);
   $ren_arr_a = renumber_keys_of_step_of_array (1, $ren_arr_a);
-  $str_log .= "Keys of array \$ren_arr_a have been renumbered by ?";
+  $log_str .= "Keys of array \$ren_arr_a have been renumbered by ?";
 
-  file_log_write ($here, $str_log);
+  file_log_write ($here, $log_str);
   debug_n_check ($here , '$ren_arr_a', $ren_arr_a); 
   exiting_from_function ('exiting :' . $here);
 
@@ -115,13 +115,13 @@ function before_one_block ($nam_blo_a) {
 
   $ren_arr_a[($pro_key_to -1)] = $nam_blo_fr;
   unset ($ren_arr_a[$pro_key_fr]);
-  $str_log = "Key >$pro_key_fr< has been removed from array \$ren_arr_a";
+  $log_str = "Key >$pro_key_fr< has been removed from array \$ren_arr_a";
 
   ksort ($ren_arr_a);
   $ren_arr_a = renumber_keys_of_step_of_array (1, $ren_arr_a);
-  $str_log .= "Keys of array \$ren_arr_a have been renumbered";
+  $log_str .= "Keys of array \$ren_arr_a have been renumbered";
 
-  file_log_write ($here, $str_log);
+  file_log_write ($here, $log_str);
 
   debug_n_check ($here , "output block name array:", $ren_arr_a); 
   exiting_from_function ('exiting :' . $here);

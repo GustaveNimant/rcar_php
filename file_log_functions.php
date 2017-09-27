@@ -6,7 +6,7 @@ require_once "date_n_time_functions.php";
 # To be continued
 
 $Documentation[$module]['what is it'] = "a file where every side effect is written on disk";
-$Documentation[$module]['how is it done'] = "a side effect function returns a \$str_log";
+$Documentation[$module]['how is it done'] = "a side effect function returns a \$log_str";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
@@ -128,11 +128,12 @@ function logfile_create_of_action () {
     return;
 }
 
-function file_log_write ($her, $htm_log) {
+function file_log_write ($her, $log_str) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($her, $htm_log)");
+  entering_in_function ($here . " ($her, $log_str)");
 
-/* to have "here : " on every line */
+/* any log is also traced */
+  trace ($her, $log_str);
 
   $nam_pro = $_SESSION['parameters']['program_name'];
   $Nam_pro = ucfirst ($nam_pro);
@@ -142,8 +143,8 @@ function file_log_write ($her, $htm_log) {
 
   $now = now();
   $head = "\n$now" . ': ' . $her . ' : ';
-  $htm_tri = trim ($htm_log, " \t\n\r\0\x0B");
-  $str = preg_replace ('/\n/', $head, $htm_tri); 
+  $htm_tri = trim ($log_str, " \t\n\r\0\x0B"); 
+  $str = preg_replace ('/\n/', $head, $htm_tri); /* to have "here : " on every line */ 
 
   $txt_log = $now . ': ' . $her . ' : ' . $str;
 

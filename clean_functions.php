@@ -23,9 +23,9 @@ function clean () {
   unlink ("debug");
   unset ($_SESSION['PHPSESSID']);
   unset ($_COOKIE['PHPSESSID']);
-  $str_log  = 'PHPSESSID has been removed from $_SESSION' . "\n";
-  $str_log .= 'PHPSESSID has been removed from $_COOKIE' . "\n";
-  file_log_write ($here, $str_log);
+  $log_str  = 'PHPSESSID has been removed from $_SESSION' . "\n";
+  $log_str .= 'PHPSESSID has been removed from $_COOKIE' . "\n";
+  file_log_write ($here, $log_str);
 
   print 'SESSION<hr><pre> ';
   print_r ($_SESSION);

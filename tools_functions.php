@@ -136,10 +136,10 @@ function tools_display ($what) {
         }
     };
     
-    $str_log = "Entity $what displayed";
-    file_log_write ($here, $str_log);
+    $log_str = "Entity $what displayed";
+    file_log_write ($here, $log_str);
     
-    return $str_log;
+    return $log_str;
 }
 
 function tools_read ($what) {
@@ -166,8 +166,8 @@ function tools_load ($what) {
     
     irp_store_force ($what, $irp_val, 'entry_display');
     
-    $str_log = "Entity >$what< loaded from disk";
-    file_log_write ($here, $str_log);
+    $log_str = "Entity >$what< loaded from disk";
+    file_log_write ($here, $log_str);
 
     return;
 }
@@ -192,11 +192,11 @@ function tools_remove ($what) {
           );
     };
     
-    $str_log = "$what has been removed";
-    file_log_write ($here, $str_log);
+    $log_str = "$what has been removed";
+    file_log_write ($here, $log_str);
 
     exiting_from_function ($here);
-    return $str_log;
+    return $log_str;
 
 }
 
@@ -225,11 +225,11 @@ function tools_set ($what) {
           );
     };
     
-    $str_log = "$what has been set";
-    file_log_write ($here, $str_log);
+    $log_str = "$what has been set";
+    file_log_write ($here, $log_str);
 
     exiting_from_function ($here);
-    return $str_log;
+    return $log_str;
 
 }
 
@@ -258,11 +258,11 @@ function tools_unset ($what) {
           );
     };
     
-    $str_log = "$what has been removed";
-    file_log_write ($here, $str_log);
+    $log_str = "$what has been removed";
+    file_log_write ($here, $log_str);
 
     exiting_from_function ($here);
-    return $str_log;
+    return $log_str;
 
 }
 
@@ -357,10 +357,10 @@ function tools_write ($what) {
 
     };
     
-    $str_log = "Entity $what displayed";
-    file_log_write ($here, $str_log);
+    $log_str = "Entity $what displayed";
+    file_log_write ($here, $log_str);
     
-    return $str_log;
+    return $log_str;
 
 }
 

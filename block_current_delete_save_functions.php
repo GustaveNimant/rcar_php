@@ -80,9 +80,9 @@ function block_current_delete_save_catalog_actualize_build (){
       file_string_write ($dir . $nof, $con_cat_blo);
   }
 
-  $str_log = $nof . " file updated on disk";
+  $log_str = $nof . " file updated on disk";
 
-  return $str_log; 
+  return $log_str; 
 }
 
 function block_current_delete_save_delete_file_build () {
@@ -126,15 +126,15 @@ function block_current_delete_save_build () {
   $lan = $_SESSION['parameters']['language'];
 
   $html_str  = '';
-  $str_log  = '';
+  $log_str  = '';
 
   $html_str .= irp_provide ('pervasive_html_initial_section', $here);
-  $str_log .= '<br> ';
-  $str_log .= irp_provide ('block_current_delete_save_catalog_actualize', $here);
+  $log_str .= '<br> ';
+  $log_str .= irp_provide ('block_current_delete_save_catalog_actualize', $here);
   $html_str .= irp_provide ('block_current_delete_save_section_page_title', $here);
   $html_str .= '<br><br> ';
-  $str_log .= '<br><br> ';
-  $str_log .= irp_provide ('block_current_delete_save_delete_file', $here);
+  $log_str .= '<br><br> ';
+  $log_str .= irp_provide ('block_current_delete_save_delete_file', $here);
 
   $sur_ent   = irp_provide ('entry_surname', $here);
 
@@ -144,7 +144,7 @@ function block_current_delete_save_build () {
   $html_str .= irp_provide ('pervasive_html_final_section', $here);
 
   $html_str .= '<br>Log<br> ';
-  /* $html_str .= $str_log; */
+  /* $html_str .= $log_str; */
 
   debug_n_check ($module , '$html_str', $html_str);
 

@@ -141,17 +141,6 @@ function exiting_from_function ($nam_fun) {
         $exp_her_ = word_of_ordinal_of_string (1, $exp_her);
         $nam_fun_ = word_of_ordinal_of_string (1, $nam_fun);
         
-        #    print_html_scalar ($nam_fun, "\$exp_her_ >$exp_her_<", "                               were equal to \$nam_fun_ >$nam_fun_<");
-        
-        /* if ($exp_her_ != $nam_fun_) { */
-        /*     $sta_fun_lev_a = $_SESSION['parameters']['stack_function_level_array']; */
-        /*     print_html_array ($nam_fun, 'stack_function_level_array' , $sta_fun_lev_a); */
-        /*     print_fatal_error ($nam_fun, */
-        /*     "\$exp_her_ >$exp_her_< were equal to \$nam_fun_ >$nam_fun_<", */
-        /*     "it is NOT", */
-        /*     "Check" */
-        /*     ); */
-        /* } */
     }     
     if (management_is_tracable_of_function_name ($nam_fun)) {
         print_d ("\n$str_poi exiting from function " . $nam_fun . "\n"); 
@@ -167,21 +156,13 @@ function exiting_from_function ($nam_fun) {
     return;
 };
 
-function entering_in_module ($nam_fun) {
-
-    if (management_is_tracable_of_function_name ($nam_fun)) {
-        print_d ("\n------ entering in module " . $nam_fun . " ------\n"); 
-    }
-
+function entering_in_module ($nam_mod) {
+    print_d ("\nentering  in module $nam_mod\n"); 
     return;
 };
 
-function exiting_from_module ($nam_fun) {
-
-    if (management_is_tracable_of_function_name ($nam_fun)) {
-        print_d ("\n======= exiting from module " . $nam_fun . " ======\n"); 
-    }
-
+function exiting_from_module ($nam_mod) {
+    print_d ("\nexiting from module $nam_mod\n"); 
     return;
 };
 

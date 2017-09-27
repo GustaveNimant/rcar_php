@@ -14,7 +14,7 @@ function item_new_surname_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $html_log  = '';
+  $str_log  = '';
 
   $lan = $_SESSION['parameters']['language'];
   $nam_ent = irp_provide ('entry_name', $here);

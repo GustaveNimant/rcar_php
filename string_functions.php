@@ -94,8 +94,7 @@ function string_remove_accents ($str) {
   return $str;
 };
 
-function word_remove_accents ($str, $charset='utf-8')  /* why two functions ??? FCC 6th March 2016*/ 
-{
+function word_remove_accents ($str, $charset='utf-8')  /* why two functions ??? FCC 6th March 2016*/ {
   $here = __FUNCTION__;
 #  entering_in_function ($here . "($str)");
  
@@ -302,28 +301,28 @@ function string_is_entry_name_of_string ($nam_ent){
 }
 
 function string_check_entry_name_of_string ($nam_ent){
-  $here = __FUNCTION__;
-#  entering_in_function ($here . " ($nam_ent)");
-  /* debug_n_check ($here , "input entry_name name", $nam_ent); */
-
-  if ( ! string_is_entry_name_of_string ($nam_ent)) {
-    fatal_error ($here, "entry_name >$nam_ent< is NOT canonical");
-  }
-
-#  exiting_from_function ($here . " ($nam_ent)");
+    $here = __FUNCTION__;
+    #  entering_in_function ($here . " ($nam_ent)");
+    /* debug_n_check ($here , "input entry_name name", $nam_ent); */
+    
+    if ( ! string_is_entry_name_of_string ($nam_ent)) {
+        fatal_error ($here, "entry_name >$nam_ent< is NOT canonical");
+    }
+    
+    #  exiting_from_function ($here . " ($nam_ent)");
 }
 
 function is_label_name ($nam_lab){
-  $here = __FUNCTION__;
-#  entering_in_function ($here . " ($nam_lab)");
-
-  /* debug_n_check ($here , "input label_name name", $nam_lab); */
-
-  $result = preg_match ('/^[a-z][a-z_]*[a-z]$/', $nam_lab);
-
-  /* debug_n_check ($here , "result", $result); */
-#  exiting_from_function ($here . " ($nam_lab)");
-  return $result;
+    $here = __FUNCTION__;
+    #  entering_in_function ($here . " ($nam_lab)");
+    
+    /* debug_n_check ($here , "input label_name name", $nam_lab); */
+    
+    $result = preg_match ('/^[a-z][a-z_]*[a-z]$/', $nam_lab);
+    
+    /* debug_n_check ($here , "result", $result); */
+    #  exiting_from_function ($here . " ($nam_lab)");
+    return $result;
 }
 
 function check_label_name ($nam_lab){
@@ -419,90 +418,89 @@ function pretty_string_of_array_of_index_of_eol ($str_a, $ind, $eol) {
     $blanks = "               ";
     $out_str = '';
 
-    foreach ($str_a as $key => $value) {
-        if (is_array($value)) {
-
+    foreach ($str_a as $key => $val) {
+        if (is_array($val)) {
             $out_str .= substr ($blanks, 0, $ind) . " array  >$key<$eol";
-            $out_str .= pretty_string_of_array_of_index_of_eol ($value, ($ind + 2));
+            $out_str .= pretty_string_of_array_of_index_of_eol ($val, ($ind + 2), $eol);
         }
         else {
-            $out_str .= substr ($blanks, 0, $ind) . '  [' . $key . '] = '. $value . $eol;
+            $out_str .= substr ($blanks, 0, $ind) . '  [' . $key . '] = '. $val . $eol;
         }
     }
     return $out_str;
 };
 
 function four_elements_array_of_four_keys_off_string ($key_1, $key_2, $key_3, $key_4, $str) {  
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($key_1, $key_2, $key_3, $key_4, $str)");
-
-  $str_a = explode ("\n", $str);
-  debug ($here, '$str_a', $str_a);
-
-  $result_a = array ();
-  foreach ($str_a as $k => $str) {
-      $str_t = trim ($str);
-      switch ($str_t) {
-      case "$key_1" :
-          $key = $str_t;
-          break;
-      case "$key_2" :
-          $key = $str_t;
-          break;
-      case "$key_3" :
-          $key = $str_t;
-          break; 
-      case "$key_4" :
-          $key = $str_t;
-          break; 
-      default:
-          if ( (isset ($result_a[$key])) && 
-          ($result_a[$key] != "") ) {
-              $result_a[$key] .= "\n";
-              $result_a[$key] .= $str_t;
-          }
-          else {
-              $result_a[$key] = $str_t;
-          }
-          break;
-      }
-  }
-      
-  debug ($here, '$result_a', $result_a);
-  exiting_from_function ($here);
-  
-  return $result_a;
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($key_1, $key_2, $key_3, $key_4, $str)");
+    
+    $str_a = explode ("\n", $str);
+    debug ($here, '$str_a', $str_a);
+    
+    $result_a = array ();
+    foreach ($str_a as $k => $str) {
+        $str_t = trim ($str);
+        switch ($str_t) {
+        case "$key_1" :
+            $key = $str_t;
+            break;
+        case "$key_2" :
+            $key = $str_t;
+            break;
+        case "$key_3" :
+            $key = $str_t;
+            break; 
+        case "$key_4" :
+            $key = $str_t;
+            break; 
+        default:
+            if ( (isset ($result_a[$key])) && 
+            ($result_a[$key] != "") ) {
+                $result_a[$key] .= "\n";
+                $result_a[$key] .= $str_t;
+            }
+            else {
+                $result_a[$key] = $str_t;
+            }
+            break;
+        }
+    }
+    
+    debug ($here, '$result_a', $result_a);
+    exiting_from_function ($here);
+    
+    return $result_a;
 }
 function is_filename_extension ($ext) {
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($ext)");
-
-  $ext_blo = $_SESSION['parameters']['extension_block_filename'];
-  $ext_cat = $_SESSION['parameters']['extension_block_name_catalog_filename'];
-  $ext_com = $_SESSION['parameters']['extension_item_comment_filename'];
-
-  $result = ($ext == $ext_blo)
-    || ($ext == $ext_cat)
-    || ($ext == $ext_com)
-    ;
-
-#  debug_n_check ($here , "result ", $result);
-  exiting_from_function ($here);
-
-  return $result;
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($ext)");
+    
+    $ext_blo = $_SESSION['parameters']['extension_block_filename'];
+    $ext_cat = $_SESSION['parameters']['extension_block_name_catalog_filename'];
+    $ext_com = $_SESSION['parameters']['extension_item_comment_filename'];
+    
+    $result = ($ext == $ext_blo)
+        || ($ext == $ext_cat)
+        || ($ext == $ext_com)
+        ;
+    
+    #  debug_n_check ($here , "result ", $result);
+    exiting_from_function ($here);
+    
+    return $result;
 };
 
 function is_item_comment_filename_extension ($ext) {
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($ext)");
-
-  $ext_txt = $_SESSION['parameters']['extension_item_comment_filename'];
-
-  $result = ($ext == $ext_txt);
-
-  exiting_from_function ($here);
-
-  return $result;
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($ext)");
+    
+    $ext_txt = $_SESSION['parameters']['extension_item_comment_filename'];
+    
+    $result = ($ext == $ext_txt);
+    
+    exiting_from_function ($here);
+    
+    return $result;
 };
 
 function is_block_text_filename_extension ($ext) {

@@ -59,8 +59,8 @@ function session_obsolete_remove () {
 
           if ($tim_sec_fil < $tim_sec_lim) {
               unlink ($fil_abs_pat);
-              $html_log = "$dat_now : Session file $fil_abs_pat has been deleted";
-              logfile_html_write ($here, $html_log);
+              $str_log = "$dat_now : Session file $fil_abs_pat has been deleted";
+              file_log_write ($here, $str_log);
           }
       }
   }

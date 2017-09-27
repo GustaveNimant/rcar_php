@@ -97,7 +97,7 @@ function block_new_create_save_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $html_log  = '';
+  $str_log  = '';
 
   $lan = $_SESSION['parameters']['language'];
   $nam_ent = irp_provide ('entry_name', $here);
@@ -128,7 +128,7 @@ function block_new_create_save_build () {
   catch (Exception $e) {  
       $mes = $e->getMessage();
       if ($mes = "Catalog is empty in function block_new_name_catalog_build for Entry name $nam_ent") {
-          $html_log .= 'block_new_name_catalog is empty';
+          $str_log .= 'block_new_name_catalog is empty';
       }
   }
 
@@ -167,8 +167,8 @@ function block_new_create_save_build () {
 
 /* Log */
 
-  $html_log .= irp_provide ('block_new_create_save_content_write', $here);
-  logfile_html_write ($here, $html_log);
+  $str_log .= irp_provide ('block_new_create_save_content_write', $here);
+  file_log_write ($here, $str_log);
 
   debug_n_check ($here , '$html_str', $html_str);
   exiting_from_function ($here);

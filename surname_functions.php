@@ -36,8 +36,8 @@ function surname_of_name_of_surname_by_name_array ($nam, $sur_by_nam_a) {
 
   $sur = ucfirst ($sur);
 
-  $html_log = "Surname >$sur< for name >$nam< has been done";
-  logfile_html_write ($here, $html_log);
+  $str_log = "Surname >$sur< for name >$nam< has been done";
+  file_log_write ($here, $str_log);
 
   debug_n_check ($here , '$sur', $sur);
   exiting_from_function ($here);

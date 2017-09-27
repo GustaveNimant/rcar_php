@@ -541,7 +541,7 @@ function array_retrieve_value_of_key_of_array ($key, $arr_a) {
       }
 
   if ( ! array_key_exists ($key, $arr_a) ) {
-      $str = string_html_array ($here, "Array", $arr_a);
+      $str = string_html_of_array ($arr_a);
       print_fatal_error ($here , 
       "key >$key< were found in array",
       $str,

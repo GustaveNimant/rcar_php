@@ -292,7 +292,7 @@ function irp_remove_off_irp_register_of_irp_key ($key, $her) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($key, $her)");
 
-  $html_log = "$her : irp_register[$key] cleaned";
+  $str_log = "$her : irp_register[$key] cleaned";
 
   if ($key == "all"){
       unset ($_SESSION['irp_register']);
@@ -301,7 +301,7 @@ function irp_remove_off_irp_register_of_irp_key ($key, $her) {
       unset ($_SESSION['irp_register'][$key]);
   }
 
-  logfile_html_write ($here, $html_log);
+  file_log_write ($here, $str_log);
   
   exiting_from_function ($here);
   return;

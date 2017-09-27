@@ -193,28 +193,28 @@ function irp_path_clean_register_of_top_key_of_bottom_key ($top_key, $bot_key) {
   $cpu_in = entering_withcpu_in_function ($here);
 
   $fat_n_son_a = $_SESSION['father_n_son_stack_entity'];
-#  # debug_n_check ($here, '$fat_n_son_a', $fat_n_son_a);
+  debug_n_check ($here, '$fat_n_son_a', $fat_n_son_a);
   
   $irp_pat_a = irp_father_array_all_steps_of_top_key_of_bottom_key ($top_key, $bot_key, $fat_n_son_a);
   array_push ($irp_pat_a, $bot_key);
   
   $_SESSION['deleted_irp_keys_array'] = $irp_pat_a;
-#  # debug ($here, 'deleting $irp_pat_a', $irp_pat_a);
+  debug ($here, 'deleting $irp_pat_a', $irp_pat_a);
   
   if ( ! (is_empty_of_array ($irp_pat_a))) {
       foreach ($irp_pat_a as $idx => $irp_key) {
           debug ($here, '$_SESSION["irp_register"]',$_SESSION['irp_register']);
 
-          unset ($_SESSION['irp_register'][$irp_key]);
-          $html_log = "irp_key >$irp_key< has been removed from irp_register";
-          logfile_html_write ($here, $html_log);
+#          unset ($_SESSION['irp_register'][$irp_key]);
+          $str_log = "SKIPPED irp_key >$irp_key< has been removed from irp_register";
+          file_log_write ($here, $str_log);
       }
   }
 
   if ( is_array ($_SESSION['irp_register']) ) {  
       $irp_reg_a = $_SESSION['irp_register'];
       $irp_key_a = array_keys ($irp_reg_a);
-      #  # debug ($here, 'saving $irp_key_a', $irp_key_a);
+      debug ($here, 'saving $irp_key_a', $irp_key_a);
   }
 
   exiting_withcpu_from_function ($here . " in module $top_key", $cpu_in);
@@ -234,9 +234,9 @@ function irp_path_clean_from_dollar_get_key_of_module ($module) {
         irp_path_clean_register_of_top_key_of_bottom_key ($module, $bot_key);
     }
     
-    unset ($_GET);
-    $html_log = 'Array $_GET has been removed (emptied)' . "\n";
-    logfile_html_write ($here, $html_log);
+#    unset ($_GET);
+    $str_log = 'SKIPPED Array $_GET has been removed (emptied)' . "\n";
+    file_log_write ($here, $str_log);
 
     exiting_from_function ($here);
     return ;  

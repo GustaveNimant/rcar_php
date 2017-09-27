@@ -1,7 +1,7 @@
 <?php
 
 require_once "array_functions.php";
-require_once "logfile_functions.php";
+require_once "file_log_functions.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
@@ -308,8 +308,8 @@ function file_string_write ($fno, $con) {
 
   flush ();
 
-  /* $html_log = "File >$fno< written on disk"; */
-  /* logfile_html_write ($here, $html_log); */
+  /* $str_log = "File >$fno< written on disk"; */
+  /* file_log_write ($here, $str_log); */
 
   exiting_from_function ($here);
   return;
@@ -357,8 +357,8 @@ function file_content_append ($fno, $con) {
 
   flush ();
 
-  /* $html_log = "File >$fno< written on disk"; */
-  /* logfile_html_write ($here, $html_log); */
+  /* $str_log = "File >$fno< written on disk"; */
+  /* file_log_write ($here, $str_log); */
 
   exiting_from_function ($here);
 }
@@ -402,8 +402,8 @@ function file_content_read ($fno) {
   $con = (file_get_contents ($fno))
     or fatal_error ($here, "file >" . $fno . "< is not readable");
 
-  $html_log = "File >$fno< read";
-  logfile_html_write ($here, $html_log);
+  $str_log = "File >$fno< read";
+  file_log_write ($here, $str_log);
 
 #  debug_n_check ($here , '$con', $con);
   exiting_from_function ($here);
@@ -473,15 +473,15 @@ function file_delete ($fno) {
 
   if (file_exists ($fno)) {
       if (unlink ($fno)) {
-          $html_log = "File $fno has been deleted";
-          logfile_html_write ($here, $html_log);
+          $str_log = "File $fno has been deleted";
+          file_log_write ($here, $str_log);
       } else {
           fatal_error ($here, "when deleting file $fno");
       }
   }
   else {
-      $html_log = "Non existing file $fno not deleted";
-      logfile_html_write ($here, $html_log);
+      $str_log = "Non existing file $fno not deleted";
+      file_log_write ($here, $str_log);
   }
 
   exiting_from_function ($here . ' with file >' . $old_nof . ' deleted');

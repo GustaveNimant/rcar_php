@@ -160,15 +160,15 @@ function irp_store ($irp_key, $irp_val) {
         ||  
         ($irp_key == "user_information")
     ){
-        $html_log = "Value storage skipped for key >$irp_key<"; 
+        $str_log = "Value storage skipped for key >$irp_key<"; 
     }
     else {
         $_SESSION['irp_register'][$irp_key] = $irp_val;
-        $html_log = "Value stored for key >$irp_key<"; 
+        $str_log = "Value stored for key >$irp_key<"; 
     }
 
-    trace ($here, $html_log);
-    logfile_html_write ($here, $html_log);
+    trace ($here, $str_log);
+    file_log_write ($here, $str_log);
     
     debug ($here , "irp_register", $_SESSION['irp_register']);
     exiting_from_function ($here);
@@ -195,18 +195,16 @@ function irp_store_force ($irp_key, $irp_val, $irp_fat) {
     }
     
     irp_path_clean_register_of_top_key_of_bottom_key ($irp_fat, $irp_key);
-    $html_log = "Path for bottom irp_key >$irp_key< has been cleaned up to >$irp_fat<" . "\n"; 
+    $str_log = "Path for bottom irp_key >$irp_key< has been cleaned up to >$irp_fat<" . "\n"; 
 
-    unset ($_SESSION['irp_register'][$irp_key]);
-    $html_log .= "irp_key >$irp_key< removed from irp_register" . "\n";    
+#    unset ($_SESSION['irp_register'][$irp_key]);
+    $str_log .= "SKIPPED irp_key >$irp_key< removed from irp_register" . "\n";    
 
     irp_store ($irp_key, $irp_val);
-    $html_log .= "Value storage forced for irp_key >$irp_key<" . "\n"; 
+    $str_log .= "Value storage forced for irp_key >$irp_key<" . "\n"; 
 
-    trace ($here, $html_log);    
-    logfile_html_write ($here, $html_log);
-
-    print_html_array ($here, '$_SESSION[\'irp_register\']', $_SESSION['irp_register']);
+    trace ($here, $str_log);    
+    file_log_write ($here, $str_log);
 
     exiting_from_function ($here);
     return;
@@ -222,9 +220,9 @@ function irp_store_from_get ($get_key, $module) {
 
   irp_store ($get_key, $get_val);
 
-  $html_log = "Value stored form \$_GET['$get_key']"; 
-  trace ($here, $html_log);    
-  logfile_html_write ($here, $html_log);
+  $str_log = "Value stored form \$_GET['$get_key']"; 
+  trace ($here, $str_log);    
+  file_log_write ($here, $str_log);
 
   exiting_from_function ($here);
   return;
@@ -274,8 +272,8 @@ function irp_retrieve ($irp_key) {
         
         $str_val = string_of_separator_of_any_variable ('::', $irp_val);
         array_push ($_SESSION['irp_stack'], $irp_key . " ($str_val)");
-        $html_log  = "already stored Value pushed in irp_stack for irp_key >$irp_key< pushed in irp_stack";
-        trace ($here, $html_log);
+        $str_log  = "already stored Value pushed in irp_stack for irp_key >$irp_key< pushed in irp_stack";
+        trace ($here, $str_log);
 
         exiting_from_function ($here);
         return $irp_val;
@@ -294,19 +292,19 @@ function irp_remove_off_irp_register_of_irp_key ($key, $her) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($key, $her)");
     
-    $html_log = "$her : irp_register[$key] cleaned";
+    $str_log = "$her :irp_register[$key] cleaned";
     
     if ($key == "all"){
-        unset ($_SESSION['irp_register']);
-        $html_log = "$here : All irp_key removed from irp_register";    
+#        unset ($_SESSION['irp_register']);
+        $str_log = "SKIPPED All irp_key removed from irp_register";    
     }
     else {
-        unset ($_SESSION['irp_register'][$key]);
-        $html_log = "$here : \$irp_key >$irp_key< removed from irp_register";    
+#        unset ($_SESSION['irp_register'][$key]);
+        $str_log = "SKIPPED \$irp_key >$irp_key< removed from irp_register";    
     }
     
-    trace ($here, $html_log);
-    logfile_html_write ($here, $html_log);
+    trace ($here, $str_log);
+    file_log_write ($here, $str_log);
 
     exiting_from_function ($here);
     return;
@@ -333,9 +331,9 @@ function irp_clean_value_of_irp_key ($irp_key, $irp_val_sal) {
         $irp_val_cle = $irp_val_sal;
     }
 
-    $html_log =  "Value cleaned as >$irp_val_cle< for irp_key >$irp_key<";
-    trace ($here, $html_log);
-    logfile_html_write ($here, $html_log);
+    $str_log =  "Value cleaned as >$irp_val_cle< for irp_key >$irp_key<";
+    trace ($here, $str_log);
+    file_log_write ($here, $str_log);
 
     exiting_from_function ($here);
     return $irp_val_cle;
@@ -384,9 +382,9 @@ function irp_build_n_store ($irp_key, $nam_fat) {
       /* father_n_son_stack_entity_push_of_current_entity ($irp_key);  */
       
       array_push ($_SESSION['irp_stack'], $irp_key);
-      $html_log = "irp_key >$irp_key< pushed in irp_stack built by >$irp_fat<";
-      trace ($here, $html_log);
-      logfile_html_write ($here, $html_log);
+      $str_log = "irp_key >$irp_key< pushed in irp_stack built by >$irp_fat<";
+      trace ($here, $str_log);
+      file_log_write ($here, $str_log);
   }
   
   if (empty ($irp_val)) {

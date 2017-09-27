@@ -1,0 +1,7 @@
+digraph dgn {
+command -> command_button_form;
+command_button_form -> command_selection_action;
+command_selection_action -> BUTTON;
+command_button_form -> command_selection_argument;
+command_selection_argument -> BUTTON;
+}

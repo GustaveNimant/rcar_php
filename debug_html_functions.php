@@ -43,6 +43,7 @@ function string_html_array ($her, $mes, $var_a){
             }
         }
     }
+
     $html_str .= '</pre> ';
 
     return $html_str;

@@ -4,27 +4,31 @@ script=`basename $0`
 
 if [ $# -lt 1 ] 
 then
-    echo -e "Usage :\n ${script} father_n_son_stack_entity\n"
+    echo -e "Usage :\n ${script} $ALSE/FILES/father_n_son_stack_entity.txt\n"
     exit 1
 fi
 
-file=$1
-if [ ! -f ${file} ] 
+txtfile=$1
+if [ ! -f ${txtfile} ] 
 then 
-    echo "file ${file} does not exist"
+    echo "$script : file ${txtfile} does not exist"
     exit 1
+else
+    echo "$script : on ${txtfile}"
 fi
 
-dotfile="$file.dot"
+txtbase=`basename $txtfile`
+dotfile=`echo $txtbase | sed 's/\.txt/.dot/'`
+
+echo "dot file is ${dotfile}"
 
 echo "digraph dgn {" > $dotfile
 
-cat ${file} | \
 sed -e 's/$/;/' \
     -e '/language/d'  \
     -e '/pervasive/d' \
     -e '/common/d' \
-    -e '/label/d' >> ${dotfile}
+    -e '/label/d' ${txtfile} >> ${dotfile}
 
 echo "}" >> $dotfile
 

@@ -87,15 +87,14 @@ function irp_is_stored_of_irp_key ($irp_key) {
     entering_in_function ($here . " ($irp_key)");
     
     $irp_reg_a = $_SESSION['irp_register'];
+    debug ($here , 'irp_register', $irp_reg_a);
     if ( ! is_array ($irp_reg_a) ) {
-        exiting_from_function ($here . " with " . $irp_key . " = " . $str_bol);
+        exiting_from_function ($here . " with irp_key >" . $irp_key . "<");
         include 'index.php';
         exit;
     }
     
-    $bol = FALSE;
-    $str_bol="FALSE";
-    
+    $boo = FALSE;
     switch ($irp_key) {
     case 'quit' :
         break;
@@ -103,17 +102,17 @@ function irp_is_stored_of_irp_key ($irp_key) {
         if (array_key_exists ($irp_key, $irp_reg_a)){
             $mes = " for key >$irp_key< already stored\n";
             trace ($here, $mes);
-            $bol = TRUE;
-            $str_bol="TRUE";
+            $boo = TRUE;
         }
     };
     
-    debug_n_check ($here , "is_stored", $str_bol);
-    debug ($here , "irp_register", $_SESSION['irp_register']);
+    $str_boo = string_of_boolean ($boo);
     
-    exiting_from_function ($here . " with " . $irp_key . " = " . $str_bol);
+    debug ($here , 'irp_register', $irp_reg_a);
     
-    return $bol;
+    exiting_from_function ($here . " with irp_key >" . $irp_key . "< is " . $str_boo);
+    
+    return $boo;
 }
 
 function irp_store ($irp_key, $irp_val) {
@@ -130,7 +129,7 @@ function irp_store ($irp_key, $irp_val) {
     
     if (empty($irp_key)) {
         print_fatal_error ($here, 
-        "Key \$irp_key were NOT empty",
+        "irp_key \$irp_key were NOT empty",
         "it is EMPTY",
         "Check");
     }
@@ -146,7 +145,7 @@ function irp_store ($irp_key, $irp_val) {
             print_html_variable ($here , "old value",  $old_value);
             print_html_variable ($here , "new value",  $irp_val);
             print_fatal_error ($here, 
-            "Key >$irp_key< were already stored with the same value:",
+            "irp_key >$irp_key< were already stored with the same value:",
             "Old Value differs from new Value",
             "Check Values upper");
         }
@@ -190,22 +189,24 @@ function irp_store_force ($irp_key, $irp_val, $irp_fat) {
     
     if (empty($irp_key)) {
         print_fatal_error ($here, 
-        "Key \$irp_key were NOT empty",
+        "irp_key \$irp_key were NOT empty",
         "it is EMPTY",
         "Check");
     }
     
     irp_path_clean_register_of_top_key_of_bottom_key ($irp_fat, $irp_key);
-    $html_log = "for bottom Key >$irp_key< cleaning done up to >$irp_fat<";
+    $html_log = "Path for bottom irp_key >$irp_key< has been cleaned up to >$irp_fat<" . "\n"; 
 
-    unset ($_session['irp_register'][$irp_key]);
-    $html_log .= "Key >$irp_key< removed from irp_register";    
+    unset ($_SESSION['irp_register'][$irp_key]);
+    $html_log .= "irp_key >$irp_key< removed from irp_register" . "\n";    
 
     irp_store ($irp_key, $irp_val);
-    $html_log .= "Value storage forced for Key >$irp_key<"; 
+    $html_log .= "Value storage forced for irp_key >$irp_key<" . "\n"; 
 
     trace ($here, $html_log);    
     logfile_html_write ($here, $html_log);
+
+    print_html_array ($here, '$_SESSION[\'irp_register\']', $_SESSION['irp_register']);
 
     exiting_from_function ($here);
     return;
@@ -252,9 +253,8 @@ function irp_retrieve ($irp_key) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($irp_key)");
     
-    $irp_reg = $_SESSION['irp_register'];
-    
-    /* print_html_array ($here, "irp_reg", $irp_reg); */
+    $irp_reg_a = $_SESSION['irp_register'];
+    debug_n_check ($here, "irp_reg_a", $irp_reg_a); 
     
     if (irp_is_stored_of_irp_key ($irp_key)) {
         
@@ -262,7 +262,7 @@ function irp_retrieve ($irp_key) {
         /* debug ($here , "irp_val",  $irp_val); */
         
         if (is_empty_of_string ($irp_val)) {
-            $mest = "Irp Value is empty in function irp_retrieve for Irp Key $irp_key";
+            $mest = "Irp Value is empty in function irp_retrieve for Irp irp_key $irp_key";
             exiting_from_function ($here . ' with ' . $mest);
             throw new Exception ($mest);
         }
@@ -274,7 +274,7 @@ function irp_retrieve ($irp_key) {
         
         $str_val = string_of_separator_of_any_variable ('::', $irp_val);
         array_push ($_SESSION['irp_stack'], $irp_key . " ($str_val)");
-        $html_log  = "already stored Value pushed in irp_stack for Key >$irp_key< pushed in irp_stack";
+        $html_log  = "already stored Value pushed in irp_stack for irp_key >$irp_key< pushed in irp_stack";
         trace ($here, $html_log);
 
         exiting_from_function ($here);
@@ -290,7 +290,7 @@ function irp_retrieve ($irp_key) {
     }
 }
 
-function irp_register_clean ($key, $her) {
+function irp_remove_off_irp_register_of_irp_key ($key, $her) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($key, $her)");
     
@@ -312,15 +312,18 @@ function irp_register_clean ($key, $her) {
     return;
 }
 
-function irp_value_clean_of_irp_key ($irp_key, $irp_val_sal) {
+function irp_clean_value_of_irp_key ($irp_key, $irp_val_sal) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($irp_key, $irp_val_sal)");
-    
+    /* Improve what is it ? */
     switch ($irp_key) {
         /* case 'item_name' : */
         /*   $irp_val = word_name_capitalized_of_string_surname ($irp_val_sal); */
         /*   break; */
     case 'item_newname' :
+        $irp_val_cle = word_name_capitalized_of_string_surname ($irp_val_sal);
+        break;
+    case 'entry_newsurname' :
         $irp_val_cle = word_name_capitalized_of_string_surname ($irp_val_sal);
         break;
     case 'entry_name' :
@@ -330,7 +333,7 @@ function irp_value_clean_of_irp_key ($irp_key, $irp_val_sal) {
         $irp_val_cle = $irp_val_sal;
     }
 
-    $html_log =  "Value cleaned for Key >$irp_key<";
+    $html_log =  "Value cleaned as >$irp_val_cle< for irp_key >$irp_key<";
     trace ($here, $html_log);
     logfile_html_write ($here, $html_log);
 
@@ -374,14 +377,14 @@ function irp_build_n_store ($irp_key, $nam_fat) {
       irp_path_clean_register_of_top_key_of_bottom_key ('entry_display', $irp_key);
       
       $irp_val_sal = array_dollar_get_retrieve_value_of_key ($irp_key, $here);
-      $irp_val = irp_value_clean_of_irp_key ($irp_key, $irp_val_sal);
+      $irp_val = irp_clean_value_of_irp_key ($irp_key, $irp_val_sal);
       
 /* father_n_son_stack_entity */
       /* father_n_son_stack_entity_push_of_father_of_son ($irp_key, 'GET'); */
       /* father_n_son_stack_entity_push_of_current_entity ($irp_key);  */
       
       array_push ($_SESSION['irp_stack'], $irp_key);
-      $html_log = "Key >$irp_key< pushed in irp_stack built by >$irp_fat<";
+      $html_log = "irp_key >$irp_key< pushed in irp_stack built by >$irp_fat<";
       trace ($here, $html_log);
       logfile_html_write ($here, $html_log);
   }

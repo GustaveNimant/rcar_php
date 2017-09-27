@@ -60,7 +60,7 @@ function swap_two_blocks ($nam_blo_a) {
 function after_one_block ($nam_blo_a) {
   $here = __FUNCTION__;
   entering_in_function ($here);
-  # debug_n_check ($here , '$nam_blo_a', $nam_blo_a); 
+  debug_n_check ($here , '$nam_blo_a', $nam_blo_a); 
  
   $nam_blo_fr = array_dollar_get_retrieve_value_of_key ('from', $here);
   $nam_blo_to = array_dollar_get_retrieve_value_of_key ('to', $here);
@@ -79,10 +79,14 @@ function after_one_block ($nam_blo_a) {
 
   $ren_arr_a[($pro_key_to + 1)] = $nam_blo_fr;
   unset ($ren_arr_a[$pro_key_fr]);
+  $html_log = "Key >$pro_key_fr< has been removed from array \$ren_arr_a";
+
   ksort ($ren_arr_a);
   $ren_arr_a = renumber_keys_of_step_of_array (1, $ren_arr_a);
+  $html_log .= "Keys of array \$ren_arr_a have been renumbered by ?";
 
-  # debug_n_check ($here , "output block name array:", $ren_arr_a); 
+  logfile_html_write ($here, $html_log);
+  debug_n_check ($here , '$ren_arr_a', $ren_arr_a); 
   exiting_from_function ('exiting :' . $here);
 
   return $ren_arr_a;
@@ -92,7 +96,7 @@ function after_one_block ($nam_blo_a) {
 function before_one_block ($nam_blo_a) {
   $here = __FUNCTION__;
   entering_in_function ($here);
-  # debug_n_check ($here , '$nam_blo_a', $nam_blo_a); 
+  debug_n_check ($here , '$nam_blo_a', $nam_blo_a); 
  
   $nam_blo_fr = array_dollar_get_retrieve_value_of_key ('from', $here);
   $nam_blo_to = array_dollar_get_retrieve_value_of_key ('to', $here);
@@ -111,10 +115,15 @@ function before_one_block ($nam_blo_a) {
 
   $ren_arr_a[($pro_key_to -1)] = $nam_blo_fr;
   unset ($ren_arr_a[$pro_key_fr]);
+  $html_log = "Key >$pro_key_fr< has been removed from array \$ren_arr_a";
+
   ksort ($ren_arr_a);
   $ren_arr_a = renumber_keys_of_step_of_array (1, $ren_arr_a);
+  $html_log .= "Keys of array \$ren_arr_a have been renumbered";
 
-  # debug_n_check ($here , "output block name array:", $ren_arr_a); 
+  logfile_html_write ($here, $html_log);
+
+  debug_n_check ($here , "output block name array:", $ren_arr_a); 
   exiting_from_function ('exiting :' . $here);
 
   return $ren_arr_a;

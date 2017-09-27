@@ -1,0 +1,281 @@
+<TRACE> in : irp_build_n_store : >home< pushed in irp_stack built by >index<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >index -> home< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >pervasive_html_initial_section< pushed in irp_stack built by >home<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >home -> pervasive_html_initial_section< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >common_html_page_head< pushed in irp_stack built by >pervasive_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_initial_section -> common_html_page_head< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >common_html_page_head<
+<TRACE> in : irp_build_n_store : >pervasive_html_Auto_Regulated_Collaborative_Editing< pushed in irp_stack built by >pervasive_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_initial_section -> pervasive_html_Auto_Regulated_Collaborative_Editing< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >pervasive_html_Auto_Regulated_Collaborative_Editing<
+<TRACE> in : irp_build_n_store : >label_html_initial_section< pushed in irp_stack built by >pervasive_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_initial_section -> label_html_initial_section< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >label_pure_html_initial_section< pushed in irp_stack built by >label_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >label_html_initial_section -> label_pure_html_initial_section< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >label_pure_html_initial_section<
+<TRACE> in : irp_build_n_store : >label_entry_html_initial_section_as_row< pushed in irp_stack built by >label_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >label_html_initial_section -> label_entry_html_initial_section_as_row< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >label_entry_html_initial_section_as_row<
+<TRACE> in : irp_store : Value stored for key >label_html_initial_section<
+<TRACE> in : irp_store : Value stored for key >pervasive_html_initial_section<
+<TRACE> in : irp_build_n_store : >pervasive_html_final_section< pushed in irp_stack built by >home<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >home -> pervasive_html_final_section< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >common_html_page_tail< pushed in irp_stack built by >pervasive_html_final_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_final_section -> common_html_page_tail< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >common_html_page_tail<
+<TRACE> in : irp_store : Value stored for key >pervasive_html_final_section<
+<TRACE> in : irp_store : Value stored for key >home<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo > -> entry_list_display< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : skip irp_father[entry_list_display] = entry_list_display
+<TRACE> in : irp_build_n_store : >pervasive_html_initial_section< pushed in irp_stack built by >entry_list_display<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display -> pervasive_html_initial_section< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >common_html_page_head< pushed in irp_stack built by >pervasive_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_initial_section -> common_html_page_head< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >common_html_page_head<
+<TRACE> in : irp_build_n_store : >pervasive_html_Auto_Regulated_Collaborative_Editing< pushed in irp_stack built by >pervasive_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_initial_section -> pervasive_html_Auto_Regulated_Collaborative_Editing< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >pervasive_html_Auto_Regulated_Collaborative_Editing<
+<TRACE> in : irp_build_n_store : >label_html_initial_section< pushed in irp_stack built by >pervasive_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_initial_section -> label_html_initial_section< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >label_pure_html_initial_section< pushed in irp_stack built by >label_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >label_html_initial_section -> label_pure_html_initial_section< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >label_pure_html_initial_section<
+<TRACE> in : irp_build_n_store : >label_entry_html_initial_section_as_row< pushed in irp_stack built by >label_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >label_html_initial_section -> label_entry_html_initial_section_as_row< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >label_entry_html_initial_section_as_row<
+<TRACE> in : irp_store : Value stored for key >label_html_initial_section<
+<TRACE> in : irp_store : Value stored for key >pervasive_html_initial_section<
+<TRACE> in : irp_build_n_store : >entry_list_display_section_select_entry< pushed in irp_stack built by >entry_list_display<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display -> entry_list_display_section_select_entry< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >entry_list_display_section_select_entry_title< pushed in irp_stack built by >entry_list_display_section_select_entry<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_section_select_entry -> entry_list_display_section_select_entry_title< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >entry_list_display_section_select_entry_title<
+<TRACE> in : irp_build_n_store : >entry_list_display_section_select_entry_action< pushed in irp_stack built by >entry_list_display_section_select_entry<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_section_select_entry -> entry_list_display_section_select_entry_action< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >entry_list_display_menuselect_entry< pushed in irp_stack built by >entry_list_display_section_select_entry_action<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_section_select_entry_action -> entry_list_display_menuselect_entry< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >entry_name_array< pushed in irp_stack built by >entry_list_display_menuselect_entry<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_menuselect_entry -> entry_name_array< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >surname_by_name_array< pushed in irp_stack built by >entry_name_array<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_name_array -> surname_by_name_array< in father_n_son_stack_entity
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >surname_by_name_array -> READ< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >surname_by_name_array<
+<TRACE> in : irp_store : Value stored for key >entry_name_array<
+<TRACE> in : irp_is_stored_of_irp_key :  for key >surname_by_name_array< already stored
+<TRACE> in : irp_is_stored_of_irp_key :  for key >surname_by_name_array< already stored
+<TRACE> in : irp_retrieve : already stored Value pushed in irp_stack for Key >surname_by_name_array< pushed in irp_stack
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_menuselect_entry -> surname_by_name_array< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >entry_list_display_menuselect_entry<
+<TRACE> in : irp_store : Value stored for key >entry_list_display_section_select_entry_action<
+<TRACE> in : irp_store : Value stored for key >entry_list_display_section_select_entry<
+<TRACE> in : irp_build_n_store : >entry_list_display_section_rename_entry< pushed in irp_stack built by >entry_list_display<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display -> entry_list_display_section_rename_entry< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >entry_list_display_section_rename_entry_title< pushed in irp_stack built by >entry_list_display_section_rename_entry<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_section_rename_entry -> entry_list_display_section_rename_entry_title< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >entry_list_display_section_rename_entry_title<
+<TRACE> in : irp_build_n_store : >entry_list_display_section_rename_entry_action< pushed in irp_stack built by >entry_list_display_section_rename_entry<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_section_rename_entry -> entry_list_display_section_rename_entry_action< in father_n_son_stack_entity
+<TRACE> in : irp_is_stored_of_irp_key :  for key >entry_list_display_menuselect_entry< already stored
+<TRACE> in : irp_is_stored_of_irp_key :  for key >entry_list_display_menuselect_entry< already stored
+<TRACE> in : irp_retrieve : already stored Value pushed in irp_stack for Key >entry_list_display_menuselect_entry< pushed in irp_stack
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_section_rename_entry_action -> entry_list_display_menuselect_entry< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >entry_list_display_section_rename_entry_action<
+<TRACE> in : irp_store : Value stored for key >entry_list_display_section_rename_entry<
+<TRACE> in : irp_build_n_store : >entry_list_display_section_create_entry< pushed in irp_stack built by >entry_list_display<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display -> entry_list_display_section_create_entry< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >entry_list_display_section_create_entry_title< pushed in irp_stack built by >entry_list_display_section_create_entry<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_section_create_entry -> entry_list_display_section_create_entry_title< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >entry_list_display_section_create_entry_title<
+<TRACE> in : irp_build_n_store : >entry_list_display_section_get_entry_newsurname< pushed in irp_stack built by >entry_list_display_section_create_entry<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_section_create_entry -> entry_list_display_section_get_entry_newsurname< in father_n_son_stack_entity
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_section_get_entry_newsurname -> BUTTON< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >entry_list_display_section_get_entry_newsurname<
+<TRACE> in : irp_store : Value stored for key >entry_list_display_section_create_entry<
+<TRACE> in : irp_build_n_store : >pervasive_html_final_section< pushed in irp_stack built by >entry_list_display<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display -> pervasive_html_final_section< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >common_html_page_tail< pushed in irp_stack built by >pervasive_html_final_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_final_section -> common_html_page_tail< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >common_html_page_tail<
+<TRACE> in : irp_store : Value stored for key >pervasive_html_final_section<
+<TRACE> in : irp_store : Value stored for key >entry_list_display<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo > -> entry_list_display< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : skip irp_father[entry_list_display] = entry_list_display
+<TRACE> in : irp_build_n_store : >pervasive_html_initial_section< pushed in irp_stack built by >entry_list_display<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display -> pervasive_html_initial_section< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >common_html_page_head< pushed in irp_stack built by >pervasive_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_initial_section -> common_html_page_head< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >common_html_page_head<
+<TRACE> in : irp_build_n_store : >pervasive_html_Auto_Regulated_Collaborative_Editing< pushed in irp_stack built by >pervasive_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_initial_section -> pervasive_html_Auto_Regulated_Collaborative_Editing< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >pervasive_html_Auto_Regulated_Collaborative_Editing<
+<TRACE> in : irp_build_n_store : >label_html_initial_section< pushed in irp_stack built by >pervasive_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_initial_section -> label_html_initial_section< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >label_pure_html_initial_section< pushed in irp_stack built by >label_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >label_html_initial_section -> label_pure_html_initial_section< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >label_pure_html_initial_section<
+<TRACE> in : irp_build_n_store : >label_entry_html_initial_section_as_row< pushed in irp_stack built by >label_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >label_html_initial_section -> label_entry_html_initial_section_as_row< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >label_entry_html_initial_section_as_row<
+<TRACE> in : irp_store : Value stored for key >label_html_initial_section<
+<TRACE> in : irp_store : Value stored for key >pervasive_html_initial_section<
+<TRACE> in : irp_build_n_store : >entry_list_display_section_select_entry< pushed in irp_stack built by >entry_list_display<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display -> entry_list_display_section_select_entry< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >entry_list_display_section_select_entry_title< pushed in irp_stack built by >entry_list_display_section_select_entry<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_section_select_entry -> entry_list_display_section_select_entry_title< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >entry_list_display_section_select_entry_title<
+<TRACE> in : irp_build_n_store : >entry_list_display_section_select_entry_action< pushed in irp_stack built by >entry_list_display_section_select_entry<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_section_select_entry -> entry_list_display_section_select_entry_action< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >entry_list_display_menuselect_entry< pushed in irp_stack built by >entry_list_display_section_select_entry_action<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_section_select_entry_action -> entry_list_display_menuselect_entry< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >entry_name_array< pushed in irp_stack built by >entry_list_display_menuselect_entry<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_menuselect_entry -> entry_name_array< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >surname_by_name_array< pushed in irp_stack built by >entry_name_array<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_name_array -> surname_by_name_array< in father_n_son_stack_entity
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >surname_by_name_array -> READ< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >surname_by_name_array<
+<TRACE> in : irp_store : Value stored for key >entry_name_array<
+<TRACE> in : irp_is_stored_of_irp_key :  for key >surname_by_name_array< already stored
+<TRACE> in : irp_is_stored_of_irp_key :  for key >surname_by_name_array< already stored
+<TRACE> in : irp_retrieve : already stored Value pushed in irp_stack for Key >surname_by_name_array< pushed in irp_stack
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_menuselect_entry -> surname_by_name_array< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >entry_list_display_menuselect_entry<
+<TRACE> in : irp_store : Value stored for key >entry_list_display_section_select_entry_action<
+<TRACE> in : irp_store : Value stored for key >entry_list_display_section_select_entry<
+<TRACE> in : irp_build_n_store : >entry_list_display_section_rename_entry< pushed in irp_stack built by >entry_list_display<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display -> entry_list_display_section_rename_entry< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >entry_list_display_section_rename_entry_title< pushed in irp_stack built by >entry_list_display_section_rename_entry<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_section_rename_entry -> entry_list_display_section_rename_entry_title< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >entry_list_display_section_rename_entry_title<
+<TRACE> in : irp_build_n_store : >entry_list_display_section_rename_entry_action< pushed in irp_stack built by >entry_list_display_section_rename_entry<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_section_rename_entry -> entry_list_display_section_rename_entry_action< in father_n_son_stack_entity
+<TRACE> in : irp_is_stored_of_irp_key :  for key >entry_list_display_menuselect_entry< already stored
+<TRACE> in : irp_is_stored_of_irp_key :  for key >entry_list_display_menuselect_entry< already stored
+<TRACE> in : irp_retrieve : already stored Value pushed in irp_stack for Key >entry_list_display_menuselect_entry< pushed in irp_stack
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_section_rename_entry_action -> entry_list_display_menuselect_entry< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >entry_list_display_section_rename_entry_action<
+<TRACE> in : irp_store : Value stored for key >entry_list_display_section_rename_entry<
+<TRACE> in : irp_build_n_store : >entry_list_display_section_create_entry< pushed in irp_stack built by >entry_list_display<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display -> entry_list_display_section_create_entry< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >entry_list_display_section_create_entry_title< pushed in irp_stack built by >entry_list_display_section_create_entry<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_section_create_entry -> entry_list_display_section_create_entry_title< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >entry_list_display_section_create_entry_title<
+<TRACE> in : irp_build_n_store : >entry_list_display_section_get_entry_newsurname< pushed in irp_stack built by >entry_list_display_section_create_entry<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_section_create_entry -> entry_list_display_section_get_entry_newsurname< in father_n_son_stack_entity
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display_section_get_entry_newsurname -> BUTTON< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >entry_list_display_section_get_entry_newsurname<
+<TRACE> in : irp_store : Value stored for key >entry_list_display_section_create_entry<
+<TRACE> in : irp_build_n_store : >pervasive_html_final_section< pushed in irp_stack built by >entry_list_display<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display -> pervasive_html_final_section< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >common_html_page_tail< pushed in irp_stack built by >pervasive_html_final_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_final_section -> common_html_page_tail< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >common_html_page_tail<
+<TRACE> in : irp_store : Value stored for key >pervasive_html_final_section<
+<TRACE> in : irp_store : Value stored for key >entry_list_display<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display -> entry_create< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : skip irp_father[entry_create] = entry_create
+<TRACE> in : irp_build_n_store : function >entry_newsurname_build< does not exist
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_newsurname -> GET< in father_n_son_stack_entity
+<TRACE> in : irp_value_clean_of_irp_key : Value cleaned for Key >entry_newsurname<
+<TRACE> in : irp_build_n_store : Key >entry_newsurname< pushed in irp_stack built by >GET<
+<TRACE> in : irp_store : Value stored for key >entry_newsurname<
+<TRACE> in : irp_build_n_store : >entry_name_array< pushed in irp_stack built by >entry_create<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_create -> entry_name_array< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >surname_by_name_array< pushed in irp_stack built by >entry_name_array<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_name_array -> surname_by_name_array< in father_n_son_stack_entity
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >surname_by_name_array -> READ< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >surname_by_name_array<
+<TRACE> in : irp_store : Value stored for key >entry_name_array<
+<TRACE> in : irp_is_stored_of_irp_key :  for key >surname_by_name_array< already stored
+<TRACE> in : irp_is_stored_of_irp_key :  for key >surname_by_name_array< already stored
+<TRACE> in : irp_retrieve : already stored Value pushed in irp_stack for Key >surname_by_name_array< pushed in irp_stack
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_create -> surname_by_name_array< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >pervasive_html_initial_section< pushed in irp_stack built by >entry_create<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_create -> pervasive_html_initial_section< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >common_html_page_head< pushed in irp_stack built by >pervasive_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_initial_section -> common_html_page_head< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >common_html_page_head<
+<TRACE> in : irp_build_n_store : >pervasive_html_Auto_Regulated_Collaborative_Editing< pushed in irp_stack built by >pervasive_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_initial_section -> pervasive_html_Auto_Regulated_Collaborative_Editing< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >pervasive_html_Auto_Regulated_Collaborative_Editing<
+<TRACE> in : irp_build_n_store : >label_html_initial_section< pushed in irp_stack built by >pervasive_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_initial_section -> label_html_initial_section< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >label_pure_html_initial_section< pushed in irp_stack built by >label_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >label_html_initial_section -> label_pure_html_initial_section< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >label_pure_html_initial_section<
+<TRACE> in : irp_build_n_store : >label_entry_html_initial_section_as_row< pushed in irp_stack built by >label_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >label_html_initial_section -> label_entry_html_initial_section_as_row< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >label_entry_html_initial_section_as_row<
+<TRACE> in : irp_store : Value stored for key >label_html_initial_section<
+<TRACE> in : irp_store : Value stored for key >pervasive_html_initial_section<
+<TRACE> in : irp_build_n_store : >entry_create_section_create_entry< pushed in irp_stack built by >entry_create<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_create -> entry_create_section_create_entry< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >entry_create_message_of_entry_name< pushed in irp_stack built by >entry_create_section_create_entry<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_create_section_create_entry -> entry_create_message_of_entry_name< in father_n_son_stack_entity
+<TRACE> in : irp_is_stored_of_irp_key :  for key >entry_newsurname< already stored
+<TRACE> in : irp_is_stored_of_irp_key :  for key >entry_newsurname< already stored
+<TRACE> in : irp_retrieve : already stored Value pushed in irp_stack for Key >entry_newsurname< pushed in irp_stack
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_create_message_of_entry_name -> entry_newsurname< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >entry_create_message_of_entry_name<
+<TRACE> in : irp_store : Value stored for key >entry_create_section_create_entry<
+<TRACE> in : irp_build_n_store : >pervasive_html_final_section< pushed in irp_stack built by >entry_create<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_create -> pervasive_html_final_section< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >common_html_page_tail< pushed in irp_stack built by >pervasive_html_final_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_final_section -> common_html_page_tail< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >common_html_page_tail<
+<TRACE> in : irp_store : Value stored for key >pervasive_html_final_section<
+<TRACE> in : irp_store : Value stored for key >entry_create<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_list_display -> entry_create< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : skip irp_father[entry_create] = entry_create
+<TRACE> in : irp_build_n_store : function >entry_newsurname_build< does not exist
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_newsurname -> GET< in father_n_son_stack_entity
+<TRACE> in : irp_value_clean_of_irp_key : Value cleaned for Key >entry_newsurname<
+<TRACE> in : irp_build_n_store : Key >entry_newsurname< pushed in irp_stack built by >GET<
+<TRACE> in : irp_store : Value stored for key >entry_newsurname<
+<TRACE> in : irp_build_n_store : >entry_name_array< pushed in irp_stack built by >entry_create<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_create -> entry_name_array< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >surname_by_name_array< pushed in irp_stack built by >entry_name_array<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_name_array -> surname_by_name_array< in father_n_son_stack_entity
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >surname_by_name_array -> READ< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >surname_by_name_array<
+<TRACE> in : irp_store : Value stored for key >entry_name_array<
+<TRACE> in : irp_is_stored_of_irp_key :  for key >surname_by_name_array< already stored
+<TRACE> in : irp_is_stored_of_irp_key :  for key >surname_by_name_array< already stored
+<TRACE> in : irp_retrieve : already stored Value pushed in irp_stack for Key >surname_by_name_array< pushed in irp_stack
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_create -> surname_by_name_array< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >pervasive_html_initial_section< pushed in irp_stack built by >entry_create<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_create -> pervasive_html_initial_section< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >common_html_page_head< pushed in irp_stack built by >pervasive_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_initial_section -> common_html_page_head< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >common_html_page_head<
+<TRACE> in : irp_build_n_store : >pervasive_html_Auto_Regulated_Collaborative_Editing< pushed in irp_stack built by >pervasive_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_initial_section -> pervasive_html_Auto_Regulated_Collaborative_Editing< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >pervasive_html_Auto_Regulated_Collaborative_Editing<
+<TRACE> in : irp_build_n_store : >label_html_initial_section< pushed in irp_stack built by >pervasive_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_initial_section -> label_html_initial_section< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >label_pure_html_initial_section< pushed in irp_stack built by >label_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >label_html_initial_section -> label_pure_html_initial_section< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >label_pure_html_initial_section<
+<TRACE> in : irp_build_n_store : >label_entry_html_initial_section_as_row< pushed in irp_stack built by >label_html_initial_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >label_html_initial_section -> label_entry_html_initial_section_as_row< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >label_entry_html_initial_section_as_row<
+<TRACE> in : irp_store : Value stored for key >label_html_initial_section<
+<TRACE> in : irp_store : Value stored for key >pervasive_html_initial_section<
+<TRACE> in : irp_build_n_store : >entry_create_section_create_entry< pushed in irp_stack built by >entry_create<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_create -> entry_create_section_create_entry< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >entry_create_message_of_entry_name< pushed in irp_stack built by >entry_create_section_create_entry<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_create_section_create_entry -> entry_create_message_of_entry_name< in father_n_son_stack_entity
+<TRACE> in : irp_is_stored_of_irp_key :  for key >entry_newsurname< already stored
+<TRACE> in : irp_is_stored_of_irp_key :  for key >entry_newsurname< already stored
+<TRACE> in : irp_retrieve : already stored Value pushed in irp_stack for Key >entry_newsurname< pushed in irp_stack
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_create_message_of_entry_name -> entry_newsurname< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >entry_create_message_of_entry_name<
+<TRACE> in : irp_store : Value stored for key >entry_create_section_create_entry<
+<TRACE> in : irp_build_n_store : >pervasive_html_final_section< pushed in irp_stack built by >entry_create<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_create -> pervasive_html_final_section< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : >common_html_page_tail< pushed in irp_stack built by >pervasive_html_final_section<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >pervasive_html_final_section -> common_html_page_tail< in father_n_son_stack_entity
+<TRACE> in : irp_store : Value stored for key >common_html_page_tail<
+<TRACE> in : irp_store : Value stored for key >pervasive_html_final_section<
+<TRACE> in : irp_store : Value stored for key >entry_create<
+<TRACE> in : father_n_son_stack_entity_push_of_father_of_son : push $duo >entry_create -> entry_create_save< in father_n_son_stack_entity
+<TRACE> in : irp_build_n_store : skip irp_father[entry_create_save] = entry_create_save

@@ -35,7 +35,7 @@ function warning ($her, $la_mes){
 
     $html_str = html_warning ($her, $la_mes);
     print $html_str;
-    logfile_html_write ($html_str);
+    logfile_html_write ($her, $html_str);
 
     return;
 }

@@ -1,5 +1,5 @@
 <?php
-
+require_once "basics.php";
 require_once "file_functions.php";
 require_once "string_functions.php";
 require_once "debug_html_functions.php";
@@ -26,13 +26,13 @@ function pretty_of_string_of_key ($str, $key) {
   print_d ( "[" . $key . "] = ". $value . "\n");
 };
 
-function print_pretty_string_of_array ($str_a, $ind) {
+function print_pretty_string_of_array_of_index ($str_a, $ind) {
     foreach ($str_a as $key => $value) {
         if (is_array($value)) {
             $str = "               ";
             $sub = substr ($str, 0, $ind);
             print_d ($sub . " array  >$key<\n");
-            pretty_string_of_array ($value, ($ind + 2));
+            pretty_string_of_array_of_index_of_eol ($value, ($ind + 2), "\n");
         }
         else {
             $str = "               ";
@@ -44,8 +44,8 @@ function print_pretty_string_of_array ($str_a, $ind) {
 
 function print_dr ($str_a) {
     if (count ($str_a) > 0 ){
-        $str = pretty_string_of_array ($str_a, 0);
-        print_d ($str);
+        $str = pretty_string_of_array_of_index_of_eol ($str_a, 0, "\n");
+        print_d ("\n" . $str);
     }
 };
 
@@ -157,8 +157,6 @@ function debug_href_html_make () {
   exiting_from_function ($here);
   
   return $html_str;
-
-
 }
 
 function debug_register ($her, $irp_key) {

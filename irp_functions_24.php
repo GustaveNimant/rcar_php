@@ -288,7 +288,7 @@ function irp_retrieve ($irp_key) {
   return; 
 }
 
-function irp_register_clean ($key, $her) {
+function irp_remove_off_irp_register_of_irp_key ($key, $her) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($key, $her)");
 
@@ -307,7 +307,7 @@ function irp_register_clean ($key, $her) {
   return;
 }
 
-function irp_value_clean_of_irp_key ($irp_key, $irp_val_sal) {
+function irp_clean_value_of_irp_key ($irp_key, $irp_val_sal) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($irp_key, $irp_val_sal)");
 
@@ -368,7 +368,7 @@ function irp_build_n_store ($irp_key, $nam_fat) {
       trace ($here, "\$_GET['$irp_key'] path has been cleaned");
       
       $irp_val_sal = array_dollar_get_retrieve_value_of_key ($irp_key, $here);
-      $irp_val = irp_value_clean_of_irp_key ($irp_key, $irp_val_sal);
+      $irp_val = irp_clean_value_of_irp_key ($irp_key, $irp_val_sal);
       
 /* father_n_son_stack_entity */
       /* father_n_son_stack_entity_push_of_father_of_son ($irp_key, 'GET'); */

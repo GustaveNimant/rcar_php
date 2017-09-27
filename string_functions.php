@@ -415,17 +415,18 @@ function string_of_boolean ($boo) {
     return $str;
 }
 
-function pretty_string_of_array ($str_a, $ind) {
+function pretty_string_of_array_of_index_of_eol ($str_a, $ind, $eol) {
     $blanks = "               ";
     $out_str = '';
+
     foreach ($str_a as $key => $value) {
         if (is_array($value)) {
 
-            $out_str .= substr ($blanks, 0, $ind) . " array  >$key<<br>";
-            $out_str .= pretty_string_of_array ($value, ($ind + 2));
+            $out_str .= substr ($blanks, 0, $ind) . " array  >$key<$eol";
+            $out_str .= pretty_string_of_array_of_index_of_eol ($value, ($ind + 2));
         }
         else {
-            $out_str .= substr ($blanks, 0, $ind) . '  [' . $key . '] = '. $value . "<br>";
+            $out_str .= substr ($blanks, 0, $ind) . '  [' . $key . '] = '. $value . $eol;
         }
     }
     return $out_str;

@@ -5,16 +5,45 @@ require_once "debug_functions.php";
 
 $module = "management_functions";
 
-function is_traced ($nam_fun) {
-/* Do not trace irp stuff */
-/* Do not trace user stuff */
+function management_is_quiet_of_function_name ($nam_fun) {
     
-    if ( (substr ($nam_fun, 0, 5) != "user_" )  
-    && (isset ($_SESSION['trace_active']) ) ) {
-        $boo = $_SESSION['trace_active'] > 0;
+    $wor_a = explode ("_", $nam_fun);
+    $wor_fir = $wor_a[0];
+    switch ($wor_fir) {
+    case 'user' :
+        $is_qui = true;
+        break;
+    case 'array' :
+        $is_qui = true;
+        break;
+    case 'file' :
+        $is_qui = true;
+        break;
+    case 'now' :
+        $is_qui = true;
+        break;
+    default:
+        $is_qui = false;
     }
-    else {$boo = false;}
+
+    /* $str = string_of_boolean ($is_qui); */
+    /* print "management_is_quiet_of_function_name ($nam_fun) = $str<br>"; */
+
+  return $is_qui;
+}
+
+function management_is_tracable_of_function_name ($nam_fun) {
     
+    $tra_ok = (isset ($_SESSION['trace_active'] ) ) &&
+        ($_SESSION['trace_active'] > 0 );
+
+    $is_qui = management_is_quiet_of_function_name ($nam_fun);
+
+    $boo = $tra_ok && (! $is_qui) ;
+
+    /* $str = string_of_boolean ($boo); */
+    /* print "management_is_tracable_of_function_name ($nam_fun) = $str<br>"; */
+
   return $boo;
 }
 
@@ -76,14 +105,14 @@ function entering_in_function ($nam_fun) {
         $points = $_SESSION['parameters']['stack_function_level_points'];
         $str_poi = substr ($points, 0, $lev);
         
-        if (is_traced ($nam_fun)) {
+        if (management_is_tracable_of_function_name ($nam_fun)) {
             print_d ("\n$str_poi entering  in function " . $nam_fun . "\n"); 
             print_d ("\tcalled by " . $prev . "\n"); 
         }
         
     }
     else {
-        if (is_traced ($nam_fun)) {
+        if (management_is_tracable_of_function_name ($nam_fun)) {
             print_d ("\n$entering in function " . $nam_fun . "\n"); 
         }
     }
@@ -124,12 +153,12 @@ function exiting_from_function ($nam_fun) {
         /*     ); */
         /* } */
     }     
-    if (is_traced ($nam_fun)) {
+    if (management_is_tracable_of_function_name ($nam_fun)) {
         print_d ("\n$str_poi exiting from function " . $nam_fun . "\n"); 
     }
     
     else {
-        if (is_traced ($nam_fun)) {
+        if (management_is_tracable_of_function_name ($nam_fun)) {
             print_d ("\n$exiting from function " . $nam_fun . "\n"); 
         }
     }
@@ -140,7 +169,7 @@ function exiting_from_function ($nam_fun) {
 
 function entering_in_module ($nam_fun) {
 
-    if (is_traced ($nam_fun)) {
+    if (management_is_tracable_of_function_name ($nam_fun)) {
         print_d ("\n------ entering in module " . $nam_fun . " ------\n"); 
     }
 
@@ -149,7 +178,7 @@ function entering_in_module ($nam_fun) {
 
 function exiting_from_module ($nam_fun) {
 
-    if (is_traced ($nam_fun)) {
+    if (management_is_tracable_of_function_name ($nam_fun)) {
         print_d ("\n======= exiting from module " . $nam_fun . " ======\n"); 
     }
 

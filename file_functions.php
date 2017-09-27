@@ -334,7 +334,7 @@ function file_associative_array_write ($fno, $arr_a) {
 
   check ($here, '$arr_a', $arr_a);
 
-  $con = pretty_string_of_array ($arr_a, 3);
+  $con = pretty_string_of_array_of_index_of_eol ($arr_a, 3, "\n");
   file_string_write ($fno, $con);
 
   exiting_from_function ($here);

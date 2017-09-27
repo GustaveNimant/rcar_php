@@ -38,7 +38,7 @@ function block_new_create_exist_action_build () {
   $here = __function__;
   entering_in_function ($here);
 
-  $lan = $_session['parameters']['language'];
+  $lan = $_SESSION['parameters']['language'];
   $nam_ent = irp_provide ('entry_name', $here);
   $nam_blo_new = irp_provide ('block_new_name', $here);
 

@@ -67,13 +67,13 @@ function entry_create_section_create_entry_build () {
   return $html_str;
 };
 
-
 function entry_create_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $lan = $_SESSION['parameters']['language'];    
-  $new_sur_ent = irp_provide ('entry_newsurname', $here);  /* GET */
+  $new_sur_ent = array_dollar_get_retrieve_value_of_key ('entry_newsurname', $here);
+  irp_store_force ('entry_newsurname', $new_sur_ent, $here); 
+
   debug_n_check ($here, '$new_sur_ent', $new_sur_ent);
 
   $nam_ent = word_name_capitalized_of_string_surname ($new_sur_ent);

@@ -143,7 +143,6 @@ function array_serialize_of_array_of_where ($arr_a, $where) {
 
 function array_serialize_of_separator_of_array_by_key ($sep, $arr_a) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($sep, $arr_a)");
   
   $str = '';
   foreach ($arr_a as $key => $val) {
@@ -156,9 +155,6 @@ function array_serialize_of_separator_of_array_by_key ($sep, $arr_a) {
       }
   }
    
-#  debug_n_check ($here , '$str', $str); 
-  exiting_from_function ($here);
-
   return $str;
 }
 

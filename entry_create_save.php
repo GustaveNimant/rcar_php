@@ -22,8 +22,6 @@ print ("\$_SESSION['deleted_irp_keys_array'] avant irp_functions.php<br>");
 print_r ($_SESSION['deleted_irp_keys_array']);
 print ("<br>");
 
-#require_once "irp_functions.php";
-
 require_once "entry_create_save_functions.php";
 
 print ("<br><br>XXX après<br><br>");
@@ -46,7 +44,10 @@ print ("\$_SESSION['deleted_irp_keys_array'] après entry_create_save_functions.
 print_r ($_SESSION['deleted_irp_keys_array']);
 print ("<br>");
 
+
+
 require_once "father_n_son_stack_module_functions.php";
+
 
 $module = module_name_of_module_nameoffile (__FILE__);
 

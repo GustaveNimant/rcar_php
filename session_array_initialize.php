@@ -17,6 +17,7 @@ $_SESSION['irp_register'] = array ();
 $_SESSION['irp_stack'] = array ();
 
 $_SESSION['item_information_metadata_en_by_item_name_array'] = array ();
+$_SESSION['language_translate_register'] = array ();
 $_SESSION['last_dollar_get_register'] = array ();
 
 $_SESSION['parameters']['absolute_path_arce'] = '/keep/sources/rcar';

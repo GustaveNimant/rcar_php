@@ -140,20 +140,9 @@ function string_replace_accents_to_html_code ($str) {
 
 function string_is_empty_of_string ($str) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($str)");
-  /* debug_n_check ($here , "input string", $str); */
   
   $bol = empty ($str); 
   
-  /* if ($bol){ */
-  /*     debug_n_check ($here , "output string", "TRUE"); */
-  /* } */
-  /* else { */
-  /*     debug_n_check ($here , "output string", "FALSE"); */
-  /* } */
-
-  exiting_from_function ($here . " ($str)");
-
   return $bol;
 };
 

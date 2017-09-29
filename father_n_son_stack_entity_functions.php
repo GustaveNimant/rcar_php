@@ -41,7 +41,6 @@ function father_n_son_stack_entity_push_of_father_of_son ($nam_fat, $nam_son) {
 
   if ( $nam_son != $nam_fat) {
       $fat_to_son = $nam_fat . ' -> ' . $nam_son;
-
       session_array_push_inplace_of_key_of_value ('father_n_son_stack_entity', $fat_to_son);
   }
 

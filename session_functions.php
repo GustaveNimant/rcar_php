@@ -159,9 +159,9 @@ function session_array_push_inplace_of_key_of_value ($key, $val) {
         }
     }
     
-    session_check_end_value_of_key_of_value ($key, $val);
+# SKIPPED    session_check_end_value_of_key_of_value ($key, $val);
     
-    $log_str = "Value >$val< has been successfully pushed inplace in \$_SESSION['$key']['$sub_key'] array";
+    $log_str = "Value >$val< has been successfully pushed inplace in \$_SESSION['$key'] array";
     file_log_write ($here, $log_str);
     
     exiting_from_function ($here);

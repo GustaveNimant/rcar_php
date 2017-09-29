@@ -7,13 +7,13 @@ require_once "string_functions.php";
 require_once "entry_name_array_functions.php";
 
 $module = "entry_rename_save_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 /* Improve entry_surname are surname */
 
 function entry_rename_subdirectory ($old_nam_ent, $new_nam_ent) {
   $here = __FUNCTION__;
-  entering_in_function ($here . "($old_nam_ent, $new_nam_ent)");
+  entering_in_function ($here . " ($old_nam_ent, $new_nam_ent)");
   debug_n_check ($here , '$old_nam_ent', $old_nam_ent);
   debug_n_check ($here , '$new_nam_ent', $new_nam_ent);
  
@@ -96,6 +96,6 @@ function entry_rename_save_build (){
   
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

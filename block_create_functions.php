@@ -7,7 +7,7 @@ require_once "help_text_functions.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 /* First Section Page Title */
 
@@ -421,6 +421,6 @@ function block_create_build (){
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

@@ -4,7 +4,7 @@ require_once "irp_functions.php";
 require_once "common_html_functions.php";
 
 $module = "git_history_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 /* 6deee17 fait par ::1 le 9 March 2017 à 17h49:05 */
 
@@ -46,7 +46,7 @@ function git_log_shaipdate_of_directory_path_of_quatuor ($hdir, $since, $before,
 
   $log_git = shell_exec ($cmd_git);
 
-  if (is_empty_of_string ($log_git)) {
+  if (string_is_empty_of_string ($log_git)) {
       print_fatal_error ($here,
       "log of git command >$cmd_git< were NOT empty",
       'it is empty',
@@ -60,10 +60,10 @@ function git_log_shaipdate_of_directory_path_of_quatuor ($hdir, $since, $before,
 }
 
 function git_ls_tree_of_entry_name_of_commit_sha ($nam_ent, $sha_com) {
-/* 100644 blob 3e756621cb2417a91f0c2c896c24e1972b92e060	Citoyen.ite */
-
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_ent, $sha_com)");
+
+/* 100644 blob 3e756621cb2417a91f0c2c896c24e1972b92e060	Citoyen.ite */
 
   $hdir = basic_directory_of_name ("hd_php_server");
   debug_n_check ($here , '$hdir', $hdir);
@@ -74,7 +74,7 @@ function git_ls_tree_of_entry_name_of_commit_sha ($nam_ent, $sha_com) {
 
   $log_git = shell_exec ($cmd_git);
 
-  if (is_empty_of_string ($log_git)) {
+  if (string_is_empty_of_string ($log_git)) {
       print_fatal_error ($here,
       "log of git command >$cmd_git< were NOT empty",
       'it is empty',
@@ -114,7 +114,7 @@ function git_blob_sha_of_entry_name_of_blob_name_of_commit_sha ($nam_ent, $nam_b
       }
   }
 
-  if (is_empty_of_string ($sha_blo)) {
+  if (string_is_empty_of_string ($sha_blo)) {
       warning ($here, 'Blob_sha is empty. Reset to empty_sha');
       $sha_blo = 'empty_sha';
   }
@@ -144,7 +144,7 @@ function git_sha_commit_array_of_directory_path_of_quatuor ($hdir, $since, $befo
         array_push ($sha_com_a, $sha);
     }
     
-    if (is_empty_of_array ($sha_com_a)) {
+    if (array_is_empty_of_array ($sha_com_a)) {
         print_fatal_error ($here,
         "selected commit array were NOT empty",
         'it is EMPTY',
@@ -180,7 +180,7 @@ function git_blob_content_of_blob_sha ($sha_blo) {
 
   $con_blo = shell_exec ($cmd_git);
 
-  if (is_empty_of_string ($con_blo)) {
+  if (string_is_empty_of_string ($con_blo)) {
       print_fatal_error ($here,
       "content of blob from git command >$cmd_git< were NOT empty",
       'it is empty',

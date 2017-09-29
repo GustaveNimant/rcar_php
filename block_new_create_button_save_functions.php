@@ -7,7 +7,7 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "??? "; 
 $Documentation[$module]['what for'] = "to build the ???"; 
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function block_new_create_button_save_build (){
     $here = __FUNCTION__;
@@ -29,6 +29,6 @@ function block_new_create_button_save_build (){
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

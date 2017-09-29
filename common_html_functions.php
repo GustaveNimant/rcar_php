@@ -8,7 +8,7 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 
 $Documentation[$module]['placeholder'] = "in a textarea a documentation or example text to be over-written";
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function common_html_page_head_build () {
   $here = __FUNCTION__;
@@ -142,6 +142,6 @@ function common_html_css_style_build () {
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

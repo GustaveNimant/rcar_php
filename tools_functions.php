@@ -7,7 +7,7 @@ require_once "father_n_son_stack_entity_functions.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function tools_display ($what) {
     $here = __FUNCTION__;
@@ -102,6 +102,12 @@ function tools_display ($what) {
         print_html_scalar ($here, $what, $ses_id);
         break;
 
+    case 'session_keys' :
+        $ses_a = $_SESSION;
+        $arr_a = array_keys ($ses_a);
+        print_html_array ($here, $what, $arr_a);
+        break;
+
     case 'session_name' :
         $ses_nam = session_name ();
         print_html_scalar ($here, $what, $ses_nam);
@@ -139,6 +145,7 @@ function tools_display ($what) {
     $log_str = "Entity $what displayed";
     file_log_write ($here, $log_str);
     
+    exiting_from_function ($here . " ($what)");
     return $log_str;
 }
 
@@ -147,7 +154,7 @@ function tools_read ($what) {
     entering_in_function ($here . " ($what)");
 
     fatal_error ($here, "Not yet implemented");
-
+    exiting_from_function ($here . " ($what)");
     return;
 }
 
@@ -169,6 +176,7 @@ function tools_load ($what) {
     $log_str = "Entity >$what< loaded from disk";
     file_log_write ($here, $log_str);
 
+    exiting_from_function ($here . " ($what)");
     return;
 }
 
@@ -195,7 +203,7 @@ function tools_remove ($what) {
     $log_str = "$what has been removed";
     file_log_write ($here, $log_str);
 
-    exiting_from_function ($here);
+    exiting_from_function ($here . " ($what)");
     return $log_str;
 
 }
@@ -215,7 +223,7 @@ function tools_set ($what) {
           $_SESSION['debug_active'] = 1;
           break;
       case 'trace' :
-          $_SESSION['trace_active'] = 1;
+          $_SESSION['is_verbose'] = 1;
           break;
       default:
           print_fatal_error ($here, 
@@ -228,7 +236,7 @@ function tools_set ($what) {
     $log_str = "$what has been set";
     file_log_write ($here, $log_str);
 
-    exiting_from_function ($here);
+    exiting_from_function ($here . " ($what)");
     return $log_str;
 
 }
@@ -248,7 +256,7 @@ function tools_unset ($what) {
           $_SESSION['debug_active'] = 0;
           break;
       case 'trace' :
-          $_SESSION['trace_active'] = 0;
+          $_SESSION['is_verbose'] = 0;
           break;
       default:
           print_fatal_error ($here, 
@@ -261,7 +269,7 @@ function tools_unset ($what) {
     $log_str = "$what has been removed";
     file_log_write ($here, $log_str);
 
-    exiting_from_function ($here);
+    exiting_from_function ($here . " ($what)");
     return $log_str;
 
 }
@@ -344,6 +352,12 @@ function tools_write ($what) {
         file_associative_array_write ($fno, $_SESSION);
         break;
         
+    case 'session_keys' :
+        $ses_a = $_SESSION;
+        $arr_a = array_keys ($ses_a);
+        file_array_write ($fno, $arr_a);
+        break;
+
     default:
         $res = irp_provide ($what, $here);
         debug_n_check ($here , '$res', $res);
@@ -360,10 +374,11 @@ function tools_write ($what) {
     $log_str = "Entity $what displayed";
     file_log_write ($here, $log_str);
     
+    exiting_from_function ($here . " ($what)");
     return $log_str;
 
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

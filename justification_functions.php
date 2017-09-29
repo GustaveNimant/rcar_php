@@ -16,7 +16,7 @@ function justification_check ($jus_ite) {
   }
   
   exiting_from_function ($here);
-
+  return;
 }
 
 function check_justification_content ($jus_con) {
@@ -44,23 +44,29 @@ function check_justification_content ($jus_con) {
   };
 
   print "<br>" . $bad_words_replaced;
-
+  exiting_from_function ($here);
+  return;
 };
 
 
 function check_justification_count ($jus_con) {
-  $str_a = explode (' ', $jus_con);
-
-  # debug_n_check ($here , "string array", $str_a);
-
-  array_filter ();
-  $count = count ($str_a);
-  debug_n_check ($here, "count", $count);
-
-  if ($count < 3){
-    print "<br>Entrez une justification<br>";
-  }
-
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+    
+    $str_a = explode (' ', $jus_con);
+    
+    # debug_n_check ($here , "string array", $str_a);
+    
+    array_filter ();
+    $count = count ($str_a);
+    debug_n_check ($here, "count", $count);
+    
+    if ($count < 3){
+        print "<br>Entrez une justification<br>";
+    }
+    exiting_from_function ($here);
+    return;
 };
 
 function justification_get_content_of_item_name_of_entry_name ($nam_ite, $nam_ent) {

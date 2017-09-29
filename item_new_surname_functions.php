@@ -8,7 +8,7 @@ require_once "block_name_array_functions.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function item_new_surname_build () {
   $here = __FUNCTION__;
@@ -31,6 +31,6 @@ function item_new_surname_build () {
 
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

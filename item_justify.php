@@ -4,7 +4,7 @@ require_once "father_n_son_stack_module_functions.php";
 
 
 $module = "item_justify";
-# entering_in_module ($module);
+entering_in_module ($module);
 father_n_son_stack_entity_push_of_current_entity ($module);
 
 
@@ -16,6 +16,6 @@ debug_n_check ($module , '$html_str', $html_str);
 print $html_str;
 
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

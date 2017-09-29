@@ -5,13 +5,14 @@ require_once "father_n_son_stack_entity_functions.php";
 $Documentation[$module]['irp_stack'] = "stacks all \$irp_key. When retrieved (\$irp_val) is added"; 
 
 function irp_father_array_of_irp_key ($irp_key, $fat_n_son_a) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($irp_key)");
+
 /* any father of $irp_key */
 /* the father calls its sons (as in a Tree) */
 /* [89] => entry_block_kind (87) calls -> entry_name */
 /*         father (1)                    son (last) */
 
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($irp_key)");
 
 #  # debug_n_check ($here, '$fat_n_son_a', $fat_n_son_a);
   /* print_html_scalar ($here, '$irp_key', $irp_key); */
@@ -22,8 +23,8 @@ function irp_father_array_of_irp_key ($irp_key, $fat_n_son_a) {
 
   if (is_array ($fat_n_son_a)) {
       foreach ($fat_n_son_a as $idx => $line) {
-          $fat_cur = word_of_ordinal_of_string (1, $line);
-          $son_cur = last_word_of_string ($line);
+          $fat_cur = string_word_of_ordinal_of_string (1, $line);
+          $son_cur = string_last_word_of_string ($line);
           
           #      debug_n_check ($here, '$fat_cur >'. $fat_cur .'< $son_cur >', $son_cur . '<'); 
           
@@ -111,7 +112,9 @@ function irp_father_array_increment_next_step_of_top_key_of_irp_father_array ($t
 }
 
 function irp_path_of_local_bottom_key ($loc_bot_key, $top_key, $fat_n_son_a) {
-    
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($loc_bot_key, $top_key, \$fat_n_son_a)");
+
     $fat_a = irp_father_array_of_irp_key ($loc_bot_key, $fat_n_son_a);
     
     $cur_fat_a = $fat_a;
@@ -125,7 +128,7 @@ function irp_path_of_local_bottom_key ($loc_bot_key, $top_key, $fat_n_son_a) {
             $cur_fat_a = array_merge_unique_of_array_of_array ($cur_fat_a, $inc_fat_a);
         }
     }
-    
+    exiting_from_function ($here);
     return $cur_fat_a;
 };
 
@@ -142,7 +145,6 @@ function irp_father_array_all_steps_of_top_key_of_bottom_key ($top_key, $bot_key
       'Array $bot_fat_a had at least one element i.e. $bot_key had one father',
       'only one element >' . $bot_fat_a[0] . '<',
       'Check top_key >'. $top_key . '< bot_key >'. $bot_key . '<');
-      return ;
   }
 
   $max_ste = count ($fat_n_son_a);
@@ -193,7 +195,7 @@ function irp_path_clean_register_of_top_key_of_bottom_key ($top_key, $bot_key) {
   $cpu_in = entering_withcpu_in_function ($here);
 
   $fat_n_son_a = $_SESSION['father_n_son_stack_entity'];
-  debug_n_check ($here, '$fat_n_son_a', $fat_n_son_a);
+  debug ($here, '$fat_n_son_a', $fat_n_son_a);
   
   $irp_pat_a = irp_father_array_all_steps_of_top_key_of_bottom_key ($top_key, $bot_key, $fat_n_son_a);
   array_push ($irp_pat_a, $bot_key);
@@ -201,7 +203,7 @@ function irp_path_clean_register_of_top_key_of_bottom_key ($top_key, $bot_key) {
   $_SESSION['deleted_irp_keys_array'] = $irp_pat_a;
   debug ($here, 'deleting $irp_pat_a', $irp_pat_a);
   
-  if ( ! (is_empty_of_array ($irp_pat_a))) {
+  if ( ! (array_is_empty_of_array ($irp_pat_a))) {
       foreach ($irp_pat_a as $idx => $irp_key) {
           debug ($here, '$_SESSION["irp_register"]',$_SESSION['irp_register']);
 

@@ -7,7 +7,7 @@ require_once "entry_display_functions.php";
 require_once "tools_functions.php";
 
 $module = "command_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function command_action_of_action_name_of_argument ($nam_act, $str_arg) {
   $here = __FUNCTION__;
@@ -138,6 +138,6 @@ function command_build (){
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

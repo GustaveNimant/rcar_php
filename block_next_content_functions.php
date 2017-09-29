@@ -4,7 +4,7 @@ require_once "management_functions.php";
 require_once "irp_functions.php";
 
 $module = "block_next_content_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function block_next_content_of_four_elements ($con_ite_nex, $jus_ite_nex, $con_ite_cur, $blo_cur_sha) {
   $here = __FUNCTION__;
@@ -55,7 +55,7 @@ function block_next_content_build () {
 
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 
 ?>

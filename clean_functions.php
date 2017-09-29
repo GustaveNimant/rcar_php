@@ -2,14 +2,13 @@
 
 require_once "array_functions.php";
 require_once "file_functions.php";
-require_once "git_command_functions.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
 
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function clean () {
   $here = __FUNCTION__;
@@ -21,8 +20,8 @@ function clean () {
   
   /* nothing before date */
   unlink ("debug");
-  unset ($_SESSION['PHPSESSID']);
-  unset ($_COOKIE['PHPSESSID']);
+  unset ($_SESSION['PHPSESSID']); /* left */
+  unset ($_COOKIE['PHPSESSID']);  /* left */
   $log_str  = 'PHPSESSID has been removed from $_SESSION' . "\n";
   $log_str .= 'PHPSESSID has been removed from $_COOKIE' . "\n";
   file_log_write ($here, $log_str);
@@ -37,6 +36,8 @@ function clean () {
   /* debug ($here, "", $today . "\n"); */
   /* git_status_check (); */
 
+  exiting_from_function ($here);
+  return;
 };
 
-# exiting_from_module ($module);
+exiting_from_module ($module);

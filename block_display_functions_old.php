@@ -10,13 +10,13 @@ require_once "irp_functions.php";
 require_once "justification_functions.php";
 
 $module = "block_display_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 /* Improve move elsewhere */
 
 function block_content_display_of_block_current_name__XX ($nam_blo) {
   $here = __FUNCTION__;
-  entering_in_function ($here . "($nam_blo)");
+  entering_in_function ($here . " ($nam_blo)");
 
   $nam_ent = irp_provide ('entry_name', $here);
   $hdir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
@@ -34,7 +34,7 @@ function block_content_display_of_block_current_name__XX ($nam_blo) {
 
 function block_display_and_link_of_surname_by_name_array_of_entry_name_of_block_current_name_of_language ($sur_by_nam_a, $nam_ent, $nam_blo, $lan) {
   $here = __FUNCTION__;
-  entering_in_function ($here . "($nam_ent, $nam_blo, $lan");
+  entering_in_function ($here . " ($nam_ent, $nam_blo, $lan");
 
   $sur_blo = surname_of_name_of_surname_by_name_array ($nam_blo, $sur_by_nam_a);
   $sur_blo = string_html_capitalized_of_string ($sur_blo);
@@ -241,6 +241,6 @@ function block_display_build (){
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

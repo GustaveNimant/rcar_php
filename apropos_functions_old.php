@@ -8,7 +8,7 @@ require_once "irp_functions.php";
 require_once "bubble_functions.php";
 
 $module = "apropos_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function apropos_content_by_block_name_array_build () {
   $here = __FUNCTION__;
@@ -17,7 +17,7 @@ function apropos_content_by_block_name_array_build () {
   $nam_ent = irp_provide ('entry_name', $here);
   $nam_blo_a = irp_provide ('block_name_array', $here);
 
-  if (is_empty_of_array ($nam_blo_a)) {
+  if (array_is_empty_of_array ($nam_blo_a)) {
     $con_by_nam_blo_a = array ();
   }
   else {
@@ -46,7 +46,7 @@ function apropos_content_by_block_name_array_build () {
 
 function apropos_display_item_html_make_of_entry_name_of_item_name_of_item_content_of_item_name_array_of_language ($nam_ent, $nam_blo, $con_ite, $nam_blo_a, $lan) {
   $here = __FUNCTION__;
-  entering_in_function ($here . "($nam_ent, $nam_blo, $con_ite, $nam_blo_a[0], $lan)");
+  entering_in_function ($here . " ($nam_ent, $nam_blo, $con_ite, $nam_blo_a[0], $lan)");
 
   $la_str = language_translate_of_en_string ('Action');
 
@@ -204,6 +204,6 @@ function apropos_build (){
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

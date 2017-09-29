@@ -8,7 +8,7 @@ require_once "button_submit_functions.php";
 require_once "common_html_functions.php";
 
 $module = "block_modify_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 /* First Section Page Title */
 
@@ -259,7 +259,7 @@ function block_modify_build () {
 
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 
 ?>

@@ -12,7 +12,7 @@ require_once "bubble_functions.php";
 require_once "block_information_metadata_functions.php";
 
 $module = "block_information_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 /*
 
@@ -183,6 +183,6 @@ function block_information_texts_array_lan_build () {
 }
 
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

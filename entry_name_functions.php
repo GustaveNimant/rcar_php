@@ -18,7 +18,7 @@ $Documentation[$module]['entry_name'] = "is a directory name of php_server. i.e.
 $Documentation[$module]['entry_kind'] = "is a lower case word expressed in english. Ex.: text";
 $Documentation[$module]['entry_block_kind'] = "is a lower case word expressed in english. Ex.: paragraph";
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function entry_surname_build () {
   $here = __FUNCTION__;
@@ -44,7 +44,7 @@ function entry_name_build () {
         $nam_ent = word_name_capitalized_of_string_surname ($sur_ent);
     }
     else {
-        $nam_ent = array_dollar_get_retrieve_value_of_key ('entry_name', $here);
+        $nam_ent = dollar_get_array_retrieve_value_of_key_of_where ('entry_name', $here);
     }
 
     string_check_entry_name_of_string ($nam_ent);
@@ -55,6 +55,6 @@ function entry_name_build () {
     return $nam_ent;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

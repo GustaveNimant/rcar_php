@@ -4,7 +4,8 @@ require_once "irp_functions.php";
 require_once "common_html_functions.php";
 
 $module = "git_command_functions";
-# entering_in_module ($module);
+
+entering_in_module ($module);
 
 function item_name_array_of_hd_directory_of_entry_name ($hdir, $nam_ent) {
   $here = __FUNCTION__;
@@ -148,7 +149,9 @@ function git_status_check_build () {
 
     exit;
   }
-  exiting_from_function ($here);
+ 
+ exiting_from_function ($here);
+ return;
 }
 
 function git_status_information_retrieve ($str) {
@@ -254,7 +257,7 @@ function git_command_make ($cmd_git_inf_a) {
   $cmd_git_add_a = $cmd_git_inf_a['add'];
   # debug ($here , "input git command information add array", $cmd_git_add_a);
 
-  if (!is_empty_of_array ($cmd_git_add_a)) {
+  if (!array_is_empty_of_array ($cmd_git_add_a)) {
     $cmd_git .= 'git add ';
     $cmd_git .= implode (' ', $cmd_git_add_a);
     $cmd_git .= " ;\n";
@@ -262,7 +265,7 @@ function git_command_make ($cmd_git_inf_a) {
 
   $cmd_git_rm_a = $cmd_git_inf_a['rm'];
   # debug ($here , "input git command information rm array", $cmd_git_rm_a);
-  if (!is_empty_of_array ($cmd_git_rm_a)) { 
+  if (!array_is_empty_of_array ($cmd_git_rm_a)) { 
     $cmd_git .= 'git rm ';
     $cmd_git .= implode (' ', $cmd_git_rm_a);
     $cmd_git .= " ;\n";
@@ -310,7 +313,7 @@ function git_command_commit_build () {
   debug_n_check ($here , '$cmd_git', $cmd_git);
   $log_git = shell_exec ($cmd_git);
 
-  if (is_empty_of_string ($log_git)) {
+  if (string_is_empty_of_string ($log_git)) {
       print_fatal_error ($here,
       'log of git command were NOT empty',
       'it is empty',
@@ -395,6 +398,6 @@ function git_command_build () {
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

@@ -8,7 +8,7 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function fullnameoffile_parse_array ($fno) {
     $here = __FUNCTION__;
@@ -105,6 +105,7 @@ function create_specific_directory_of_basic_name_of_name ($nam_bas, $nam) {
   }
 
   exiting_from_function ($here);
+  return;
 };
 
 function has_file_3c_extension_of_fullnameoffile ($fno) {
@@ -148,6 +149,7 @@ function file_get_3c_extension_of_fullnameoffile ($fno) {
 }
 
 function cut_dotted_3c_extension_of_nameoffile ($nof) {
+  $here = __FUNCTION__;
     if (has_file_3c_extension_of_fullnameoffile ($nof)){
         $cou = strlen ($nof) -4;
         $new_nof = substr ($nof, 0, $cou);
@@ -165,24 +167,26 @@ function file_is_block_text_of_nameoffile ($fno) {
 
   if ( ! has_file_3c_extension_of_fullnameoffile ($fno) ) {
     $result = 0;
-    exiting_from_function ($here . ' with no 3c_extension for >' . $fno . '<');
-    return $result;
+    $message = ' with no 3c_extension for >' . $fno . '<';
   }
-
-  $nam_blo = cut_dotted_3c_extension_of_nameoffile ($fno);
-  $ext_fil = file_get_3c_extension_of_fullnameoffile ($fno) ;
-#  debug ($here , 'block_current_name ', $nam_blo) ;
-
-  $result = 
-    is_block_current_name ($nam_blo)
-    && 
-    is_block_text_filename_extension ($ext_fil);
-
-#  debug ($here , 'is_block_current_name ', string_of_boolean (is_block_current_name ($nam_blo))) ;
-#  debug ($here , 'is_block_text_filename_extension', string_of_boolean (is_block_text_filename_extension ($ext_fil))) ;
-
-  exiting_from_function ($here. ' with result ' . string_of_boolean ($result));
-
+  else {
+      $nam_blo = cut_dotted_3c_extension_of_nameoffile ($fno);
+      $ext_fil = file_get_3c_extension_of_fullnameoffile ($fno) ;
+      #  debug ($here , 'block_current_name ', $nam_blo) ;
+      
+      $result = 
+          is_block_current_name ($nam_blo)
+          && 
+          is_block_text_filename_extension ($ext_fil);
+      
+      #  debug ($here , 'is_block_current_name ', string_of_boolean (is_block_current_name ($nam_blo))) ;
+      #  debug ($here , 'is_block_text_filename_extension', string_of_boolean (is_block_text_filename_extension ($ext_fil))) ;
+      
+      $message = ' with result ' . string_of_boolean ($result);
+      
+  }
+  
+  exiting_from_function ($here . $message);
   return $result;
 };
 
@@ -241,20 +245,19 @@ function is_justify_text_file ($fno) {
 
   if ( ! has_file_3c_extension_of_fullnameoffile ($fno) ) {
     $result = 0;
-    exiting_from_function ($here);
-    return $result;
   }
-
-  $ext_fil = file_get_3c_extension_of_fullnameoffile ($fno) ;
-  $nam_ite_jus = cut_justify_file_3c_extension ($fno);
-
-  $result = 
-    is_item_name ($nam_ite_jus)
-    && 
-    is_block_text_comment_filename_extension ($ext_fil);
-
-  exiting_from_function ($here. ' with result ' . string_of_boolean ($result));
+  else {
+      $ext_fil = file_get_3c_extension_of_fullnameoffile ($fno) ;
+      $nam_ite_jus = cut_justify_file_3c_extension ($fno);
+      
+      $result = 
+          string_is_item_name_of_string ($nam_ite_jus)
+          && 
+          is_block_text_comment_filename_extension ($ext_fil);
+  }
   
+  exiting_from_function ($here. ' with result ' . string_of_boolean ($result));
+
   return $result;
 };
 
@@ -263,7 +266,8 @@ function is_existing_of_fullnameoffile ($fno) {
   entering_in_function ($here . " ($fno)");
 
   $boo = file_exists ($fno);
-  
+
+  exiting_from_function ($here);
   return $boo;
 };
 
@@ -278,6 +282,7 @@ function check_file_exists ($fno) {
       "Check");
   }
   
+  exiting_from_function ($here);
   return;
 };
 
@@ -361,6 +366,7 @@ function file_content_append ($fno, $con) {
   /* file_log_write ($here, $log_str); */
 
   exiting_from_function ($here);
+  return;
 }
 
 function directory_create_or_skip ($dir_nam) {
@@ -377,6 +383,7 @@ function directory_create_or_skip ($dir_nam) {
   }
 
   exiting_from_function ($here);
+  return;
 }
 
 function html_file_content_write ($fno, $con) {
@@ -392,6 +399,7 @@ function html_file_content_write ($fno, $con) {
   }
     
    exiting_from_function ($here);
+  return;
 };
 
 function file_content_read ($fno) {
@@ -413,7 +421,7 @@ function file_content_read ($fno) {
 
 function file_array_of_directory_path_of_predicate ($dir_pat, $predicate) {
   $here = __FUNCTION__;
-  entering_in_function ($here . "($dir_pat, $predicate)");
+  entering_in_function ($here . " ($dir_pat, $predicate)");
 
 #  debug_n_check ($here , "directory_path", $dir_pat);
 #  debug_n_check ($here , "predicate", $predicate);
@@ -423,7 +431,7 @@ function file_array_of_directory_path_of_predicate ($dir_pat, $predicate) {
   if (! $fno_a) {
       $link = 'item_new_create.php?entry_name=' . $nam_ent;
       exiting_from_function ($here);
-      header('Location: ' . $link);
+      header ('Location: ' . $link);
       exit;
       
     /*
@@ -451,9 +459,7 @@ function file_array_of_directory_path_of_predicate ($dir_pat, $predicate) {
 
 function file_rename ($old_nof, $new_nof) {
   $here = __FUNCTION__;
-  entering_in_function ($here); 
-#  debug_n_check ($here , "input old file", $old_nof);
-#  debug_n_check ($here , "input new file", $new_nof);
+  entering_in_function ($here . " ($old_nof, $new_nof)"); 
 
   if ( ! file_exists ($old_nof) ) {
     print_fatal_error ($here, "file >$old_nof< does not exist");
@@ -464,6 +470,7 @@ function file_rename ($old_nof, $new_nof) {
   }
 
   exiting_from_function ($here . ' with file >' . $old_nof . ' renamed as '. $new_nof);
+  return;
 }
 
 
@@ -501,6 +508,6 @@ function file_content_delete_last_line ($con_raw) {
 
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

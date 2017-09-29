@@ -6,7 +6,7 @@ require_once "surname_by_name_array_functions.php";
 require_once "surname_catalog_add_functions.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
-# entering_in_module ($module);
+entering_in_module ($module);
 
 $Documentation[$module]['surname'] = "it is any name as it has been rentered by a user";
 
@@ -21,7 +21,7 @@ function surname_of_name_of_surname_by_name_array ($nam, $sur_by_nam_a) {
   $sur = $sur_by_nam_a[$nam];
   debug ($here , '$sur', $sur);
 
-  if (is_empty_of_string ($sur)) {
+  if (string_is_empty_of_string ($sur)) {
       /* print_fatal_error ($here, */
       /* "name >$nam< had a surname", */
       /* "it does not", */
@@ -46,7 +46,7 @@ function surname_of_name_of_surname_by_name_array ($nam, $sur_by_nam_a) {
   return $sur;
 }
 
-function name_of_surname ($sur) {
+function surname_name_of_surname ($sur) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($sur)");
 
@@ -58,11 +58,11 @@ function name_of_surname ($sur) {
   return $nam;
 }
 
-function is_couple_consistent_of_name_of_surname ($nam, $sur) {
+function surname_is_couple_consistent_of_name_of_surname ($nam, $sur) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam, $sur)");
 
-  $boo = name_of_surname ($sur) == $nam;
+  $boo = surname_name_of_surname ($sur) == $nam;
  
   debug_n_check ($here , '$boo', $boo);
   exiting_from_function ($here . ' with $boo ' . $boo);
@@ -70,12 +70,12 @@ function is_couple_consistent_of_name_of_surname ($nam, $sur) {
   return $boo;
 }
 
-function check_couple_consistency_of_name_of_surname ($nam, $sur) {
+function surname_check_couple_consistency_of_name_of_surname ($nam, $sur) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam, $sur)");
 
-  if ( ! is_couple_consistent_of_name_of_surname ($nam, $sur)) {
-      $nam_tmp = name_of_surname ($sur);
+  if ( ! surname_is_couple_consistent_of_name_of_surname ($nam, $sur)) {
+      $nam_tmp = surname_name_of_surname ($sur);
 
       print_fatal_error ($here,
       "Name >$nam< in Surname_catalog were >$nam_tmp<", 
@@ -87,7 +87,7 @@ function check_couple_consistency_of_name_of_surname ($nam, $sur) {
   return;
 }
 
-function name_of_surname_lowercase_of_surname_by_name_array ($sur_low, $sur_by_nam_a) {
+function nasurname_me_of_surname_lowercase_of_surname_by_name_arraray ($sur_low, $sur_by_nam_a) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($sur_low, $sur_by_nam_a[0])");
 
@@ -113,11 +113,11 @@ function name_of_surname_lowercase_of_surname_by_name_array ($sur_low, $sur_by_n
     return $nam;
 }
 
-function is_entry_of_entry_name_array_of_surname_lowercase_of_surname_by_name_array ($nam_ent_a, $sur_low, $sur_by_nam_a) {
+function surname_is_entry_of_entry_name_array_of_surname_lowercase_of_surname_by_name_array ($nam_ent_a, $sur_low, $sur_by_nam_a) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($sur_low, \$sur_by_nam_a");
     
-    $nam_ent = name_of_surname_lowercase_of_surname_by_name_array ($sur_low, $sur_by_nam_a);
+    $nam_ent = nasurname_me_of_surname_lowercase_of_surname_by_name_arraray ($sur_low, $sur_by_nam_a);
     $boo = in_array ($nam_ent, $nam_ent_a);
 
     debug_n_check ($here , '$boo', $boo);

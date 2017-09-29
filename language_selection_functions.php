@@ -3,7 +3,7 @@
 require_once "irp_functions.php";
 
 $module = "language_selection_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function language_selection_html_make_of_language ($lan) {
   $here = __FUNCTION__;
@@ -95,6 +95,6 @@ function language_selection_build () {
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

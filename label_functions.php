@@ -12,7 +12,7 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function label_html_href_make_of_label ($nam_lab) {
   $here = __FUNCTION__;
@@ -177,6 +177,6 @@ function label_html_initial_section_build () {
 }
 
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

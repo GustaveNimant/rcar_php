@@ -3,7 +3,7 @@
 require_once "management_functions.php";
 
 $module = "block_kind_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function block_kind_plural_of_block_kind ($kin_blo) {
   $here = __FUNCTION__;
@@ -42,6 +42,6 @@ function block_kind_plural_of_block_kind ($kin_blo) {
 
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

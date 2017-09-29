@@ -6,7 +6,7 @@ require_once "entry_information_functions.php";
 require_once "file_functions.php";
 
 $module = "item_action";
-# entering_in_module ($module);
+entering_in_module ($module);
 father_n_son_stack_entity_push_of_current_entity ($module);
 
 $nam_ent = irp_provide ('entry_name', $module);
@@ -60,17 +60,17 @@ $str_url = 'entry_display.php?entry_name=' . $nam_ent . '&selection_error=true';
 if ( $link == 'default' or $nam_ite == '' ) {
   header('Location: ' . $str_url);
   debug_n_check ($module , '$str_url', $str_url);
-  # exiting_from_module ($module);
+  exiting_from_module ($module);
   exit;
 }
 
 if (isset ( $_GET['action_selected'])) {
   header('Location: ' . $link . $str_get);
   debug_n_check ($module , '$str_get', $str_get);
-  # exiting_from_module ($module);
+  exiting_from_module ($module);
   exit;
 }else {
   fatal_error ($here, "check");
 }
-# exiting_from_module ($module);
+exiting_from_module ($module);
 ?>

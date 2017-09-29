@@ -36,13 +36,17 @@ require_once "block_rename_functions.php";
 require_once "block_surname_functions.php";
 
 require_once "entry_create_functions.php";
+require_once "entry_create_save_functions.php";
 require_once "entry_display_functions.php";
+require_once "entry_list_display_functions.php";
 require_once "entry_name_array_functions.php";
 require_once "entry_name_functions.php";
+
 require_once "father_n_son_stack_entity_functions.php";
 require_once "father_n_son_stack_module_functions.php";
 require_once "git_command_functions.php";
 
+require_once "home_functions.php";
 require_once "irp_path_functions.php";
 
 require_once "item_current_modify_display_functions.php";
@@ -78,7 +82,7 @@ require_once "user_information_functions.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 $Documentation[$module]['irp_stack'] = "stacks all \$irp_key. When retrieved (\$irp_val) is added"; 
 
@@ -192,8 +196,8 @@ function irp_store_force ($irp_key, $irp_val, $irp_fat) {
         "Check");
     }
     
-    irp_path_clean_register_of_top_key_of_bottom_key ($irp_fat, $irp_key);
-    $log_str = "Path for bottom irp_key >$irp_key< has been cleaned up to >$irp_fat<" . "\n"; 
+#    irp_path_clean_register_of_top_key_of_bottom_key ($irp_fat, $irp_key);
+    $log_str = "SKIPPED Path for bottom irp_key >$irp_key< has been cleaned up to >$irp_fat<" . "\n"; 
 
 #    unset ($_SESSION['irp_register'][$irp_key]);
     $log_str .= "SKIPPED irp_key >$irp_key< removed from irp_register" . "\n";    
@@ -211,7 +215,7 @@ function irp_store_from_get ($get_key, $module) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($get_key)");
 
-  $get_val = array_dollar_get_retrieve_value_of_key ($get_key, $module);
+  $get_val = dollar_get_array_retrieve_value_of_key_of_where ($get_key, $module);
   /* debug ($here , "get_key",  $get_key); */
   /* debug ($here , "get_val",  $get_val); */
 
@@ -255,7 +259,7 @@ function irp_retrieve ($irp_key) {
         $irp_val = $_SESSION['irp_register'][$irp_key];
         /* debug ($here , "irp_val",  $irp_val); */
         
-        if (is_empty_of_string ($irp_val)) {
+        if (string_is_empty_of_string ($irp_val)) {
             $mest = "Irp Value is empty in function irp_retrieve for Irp irp_key $irp_key";
             exiting_from_function ($here . ' with ' . $mest);
             throw new Exception ($mest);
@@ -276,17 +280,17 @@ function irp_retrieve ($irp_key) {
     }
     else {
         print_html_array ($here , "irp_register", $_SESSION['irp_register']);
+        exiting_from_function ($here);
         print_fatal_error ($here, 
         "irp_key >$irp_key< were storing some value",
         "it does NOT",
         "Check irp_register upper");
-        return; 
     }
 }
 
-function irp_remove_off_irp_register_of_irp_key ($key, $her) {
+function irp_remove_off_irp_register_of_irp_key ($key, $where) {
     $here = __FUNCTION__;
-    entering_in_function ($here . " ($key, $her)");
+    entering_in_function ($here . " ($key, $where)");
     
     $log_str = "$her :irp_register[$key] cleaned";
     
@@ -361,17 +365,18 @@ function irp_build_n_store ($irp_key, $nam_fat) {
   }
   else {
 /* $_GET */
-      check_is_empty_of_array ('$_GET', $_GET, $here);
+
+      $irp_val_sal = dollar_get_array_retrieve_value_of_key_of_where ($irp_key, $here);
+      $irp_val = irp_clean_value_of_irp_key ($irp_key, $irp_val_sal);
+
       $irp_fat = "GET";  /* Improve true ??? */
 
       $log_str  = "\$_GET has " . count ($_GET) . " elements" . "\n";
       $log_str .= "function >$irp_build< does not exist" . "\n";
 
 /* Improve entry_display is not the only one */
-      irp_path_clean_register_of_top_key_of_bottom_key ('entry_display', $irp_key);
-      
-      $irp_val_sal = array_dollar_get_retrieve_value_of_key ($irp_key, $here);
-      $irp_val = irp_clean_value_of_irp_key ($irp_key, $irp_val_sal);
+#      irp_path_clean_register_of_top_key_of_bottom_key ('entry_display', $irp_key);
+      $log_str = "SKIPPED Path for bottom irp_key >$irp_key< has been cleaned up to entry_display" . "\n"; 
       
 /* father_n_son_stack_entity */
       /* father_n_son_stack_entity_push_of_father_of_son ($irp_key, 'GET'); */
@@ -414,6 +419,7 @@ function irp_provide ($irp_key, $cal_fun) {
     }
     
     $irp_fat = preg_replace ('/_build/', '', $cal_fun); 
+
     if (irp_is_stored_of_irp_key ($irp_key)) {
         $irp_val = irp_retrieve ($irp_key);
         $nam_son = $irp_key;
@@ -421,6 +427,9 @@ function irp_provide ($irp_key, $cal_fun) {
         father_n_son_stack_entity_push_of_father_of_son ($nam_fat, $nam_son); /* may be not useful */
     }
     else {
+        $log_str = "irp_key >$irp_key< not stored calling irp_build_n_store";
+        file_log_write ($here, $log_str);
+
         $irp_val = irp_build_n_store ($irp_key, $irp_fat);
     }
     
@@ -484,6 +493,6 @@ function irp_father_of_module_of_son__XX ($nam_fat, $nam_son) {
     
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

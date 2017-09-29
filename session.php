@@ -15,7 +15,7 @@ ini_set ('session.save_path', '/keep/sources/rcar/server/SESSION');
 $ses_nam = session_name ('SESSION_ARCE');
 $ses_id = session_id ($usr_ip_m);
 
-if (!isset($_SESSION)) { session_start(); }
+if (!isset($_SESSION)) {session_start(); }
 
 if (empty($_SESSION['count'])) {
    $_SESSION['count'] = 1;

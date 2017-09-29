@@ -38,7 +38,18 @@ function dollar_get_array_retrieve_value_of_key_of_where ($key, $where) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($key, $where)");
 
-  debug_n_check ($here , '$_GET', $_GET);
+  if (array_is_empty_of_array ($_GET)){ /* Improve */
+      $nam_fun = $key . '_build';
+      
+      $mes  = 'Check that :<br>';
+      $mes .= '1 function >' . $nam_fun . '< is implemented and accessible' . '<br>';
+      $mes .= '2 line <br><i>  require_once "' . $key . '_functions.php";</i><br>  is present in build_functions.php';
+
+      print_fatal_error ($where , 
+      '$_GET["' . $key . '"] were NOT empty',
+      'it is EMPTY',
+      $mes);
+  }
 
   $val = $_GET[$key];
   $val = string_remove_control_M ($val);
@@ -48,21 +59,21 @@ function dollar_get_array_retrieve_value_of_key_of_where ($key, $where) {
       print_html_array ($here,'<br>$_GET array is :' , $_GET);
 
       if (is_substring_of_substring_off_string ('_surname', $key)) {
-          $fno_sur =  surname_catalog_fullnameoffile_make ();
-          $check = "Check Surname catalog file >$fno_sur<";
+          $fno_sur = surname_catalog_fullnameoffile_make ();
+          $mes = "Check Surname catalog file >$fno_sur<";
       }
       else {
           $nam_fun = $key . '_build';
           
-          $check  = 'Check that :<br>';
-          $check .= '1 function >' . $nam_fun . '< is implemented and accessible' . '<br>';
-          $check .= '2 line <i>require_once "' . $key . '_functions.php";</i> is present in build_functions.php';
+          $mes  = 'Check that :<br>';
+          $mes .= '1 function >' . $nam_fun . '< is implemented and accessible' . '<br>';
+          $mes .= '2 line <br><i>  require_once "' . $key . '_functions.php";</i><br>  is present in build_functions.php';
       }
       
       print_fatal_error ($her , 
       '$_GET["' . $key . '"] were NOT empty',
       'it is EMPTY',
-      $check);
+      $mes);
   
   } else {
       

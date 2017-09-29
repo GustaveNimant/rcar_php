@@ -3,19 +3,20 @@
 require_once "array_functions.php";
 require_once "common_html_functions.php";
 require_once "language_translate_functions.php";
+require_once "dollar_get_array_functions.php";
 require_once "irp_functions.php";
 require_once "file_functions.php";
 require_once "entry_functions.php";
 
 $module = "entry_create_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function entry_create_message_of_entry_name_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $sur_ent = irp_provide ('entry_newsurname', $here);  
-  $nam_ent = word_name_capitalized_of_string_surname ($sur_ent);
+  $new_sur_ent = irp_provide ('entry_newsurname', $here);  
+  $nam_ent = word_name_capitalized_of_string_surname ($new_sur_ent);
 
   string_check_entry_name_of_string ($nam_ent);
   $lan = $_SESSION['parameters']['language'];
@@ -28,11 +29,11 @@ function entry_create_message_of_entry_name_build () {
   if (! file_exists ($fnd_ent)) {
 /* new entry */
       $la_mes  = language_translate_of_en_string ('do you want to create the entry');
-      $la_mes .= ' ' . $sur_ent . ' ?';
+      $la_mes .= ' ' . $new_sur_ent . ' ?';
       $la_Mes = string_html_capitalized_of_string ($la_mes);
   } else {
       $la_mes  = language_translate_of_en_string ('the entry');
-      $la_mes .= ' ' . $sur_ent . ' '; 
+      $la_mes .= ' ' . $new_sur_ent . ' '; 
       $la_mes .= language_translate_of_en_string ('already exists');
       $la_Mes = string_html_capitalized_of_string ($la_mes);
   }
@@ -49,16 +50,19 @@ function entry_create_section_create_entry_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $pre_mod = link_previous_module_name_make ();
-  $son_mod = 'entry_create_save';
+  /* $pre_mod = link_previous_module_name_make (); */
+  /* $son_mod = 'entry_create_save'; */
 
   $script_action = 'entry_create_save.php';
 
   debug_n_check ($here, '$script_action', $script_action);
 
+  $new_sur_ent = irp_provide ('entry_newsurname', $here);  
+
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form action="'. $script_action .'" method="get"> ' . "\n";
   $html_str .= irp_provide ('entry_create_message_of_entry_name', $here);
+  /* test $html_str .= inputtypehidden_store_of_get_key_of_get_value ('entry_newsurname', $new_sur_ent); */
   $html_str .= inputtypesubmit_of_en_action_name ('yes');
   $html_str .= '</form> ' .  "\n";
   $html_str .= comment_exiting_of_function_name ($here);
@@ -71,10 +75,9 @@ function entry_create_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $new_sur_ent = array_dollar_get_retrieve_value_of_key ('entry_newsurname', $here);
-  irp_store_force ('entry_newsurname', $new_sur_ent, $here); 
-
+  $new_sur_ent = dollar_get_array_retrieve_value_of_key_of_where ('entry_newsurname', $here);
   debug_n_check ($here, '$new_sur_ent', $new_sur_ent);
+  irp_store_force ('entry_newsurname', $new_sur_ent, $here); 
 
   $nam_ent = word_name_capitalized_of_string_surname ($new_sur_ent);
   debug_n_check ($here, '$nam_ent', $nam_ent);
@@ -110,6 +113,6 @@ function entry_create_build () {
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

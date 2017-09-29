@@ -7,7 +7,7 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "??? "; 
 $Documentation[$module]['what for'] = "to build the ???"; 
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function item_new_create_content_form_textarea_build (){
   $here = __FUNCTION__;
@@ -25,6 +25,6 @@ function item_new_create_content_form_textarea_build (){
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

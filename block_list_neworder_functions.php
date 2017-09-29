@@ -5,7 +5,7 @@ require_once "irp_functions.php";
 require_once "button_submit_functions.php";
 
 $module = "block_list_neworder_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 /* Verify  */
 
@@ -43,8 +43,8 @@ function swap_two_blocks ($nam_blo_a) {
   entering_in_function ($here);
   # debug_n_check ($here , '$nam_blo_a', $nam_blo_a); 
 
-  $nam_blo_fr = array_dollar_get_retrieve_value_of_key ('from', $here);
-  $nam_blo_to = array_dollar_get_retrieve_value_of_key ('to', $here);
+  $nam_blo_fr = dollar_get_array_retrieve_value_of_key_of_where ('from', $here);
+  $nam_blo_to = dollar_get_array_retrieve_value_of_key_of_where ('to', $here);
 
   $pro_key_fr = array_retrieve_key_of_value ($nam_blo_fr, $nam_blo_a, $here);
   $pro_key_to = array_retrieve_key_of_value ($nam_blo_to , $nam_blo_a, $here);
@@ -62,8 +62,8 @@ function after_one_block ($nam_blo_a) {
   entering_in_function ($here);
   debug_n_check ($here , '$nam_blo_a', $nam_blo_a); 
  
-  $nam_blo_fr = array_dollar_get_retrieve_value_of_key ('from', $here);
-  $nam_blo_to = array_dollar_get_retrieve_value_of_key ('to', $here);
+  $nam_blo_fr = dollar_get_array_retrieve_value_of_key_of_where ('from', $here);
+  $nam_blo_to = dollar_get_array_retrieve_value_of_key_of_where ('to', $here);
 
   debug_n_check ($here , "block name from:", $nam_blo_fr); 
   debug_n_check ($here , "block name to:", $nam_blo_to);  
@@ -78,12 +78,12 @@ function after_one_block ($nam_blo_a) {
   debug_n_check ($here , "key to:", $pro_key_to);  
 
   $ren_arr_a[($pro_key_to + 1)] = $nam_blo_fr;
-  unset ($ren_arr_a[$pro_key_fr]);
-  $log_str = "Key >$pro_key_fr< has been removed from array \$ren_arr_a";
+  unset ($ren_arr_a[$pro_key_fr]);  /* left */
+  $log_str = "Key >$pro_key_fr< has been removed from array \$ren_arr_a" . "\n";
 
   ksort ($ren_arr_a);
   $ren_arr_a = renumber_keys_of_step_of_array (1, $ren_arr_a);
-  $log_str .= "Keys of array \$ren_arr_a have been renumbered by ?";
+  $log_str .= "Keys of array \$ren_arr_a have been renumbered by ?" . "\n";
 
   file_log_write ($here, $log_str);
   debug_n_check ($here , '$ren_arr_a', $ren_arr_a); 
@@ -98,8 +98,8 @@ function before_one_block ($nam_blo_a) {
   entering_in_function ($here);
   debug_n_check ($here , '$nam_blo_a', $nam_blo_a); 
  
-  $nam_blo_fr = array_dollar_get_retrieve_value_of_key ('from', $here);
-  $nam_blo_to = array_dollar_get_retrieve_value_of_key ('to', $here);
+  $nam_blo_fr = dollar_get_array_retrieve_value_of_key_of_where ('from', $here);
+  $nam_blo_to = dollar_get_array_retrieve_value_of_key_of_where ('to', $here);
 
   debug_n_check ($here , "block name from:", $nam_blo_fr); 
   debug_n_check ($here , "block name to:", $nam_blo_to);  
@@ -114,7 +114,7 @@ function before_one_block ($nam_blo_a) {
   debug_n_check ($here , "key to:", $pro_key_to);  
 
   $ren_arr_a[($pro_key_to -1)] = $nam_blo_fr;
-  unset ($ren_arr_a[$pro_key_fr]);
+  unset ($ren_arr_a[$pro_key_fr]); /* left */
   $log_str = "Key >$pro_key_fr< has been removed from array \$ren_arr_a";
 
   ksort ($ren_arr_a);
@@ -124,7 +124,7 @@ function before_one_block ($nam_blo_a) {
   file_log_write ($here, $log_str);
 
   debug_n_check ($here , "output block name array:", $ren_arr_a); 
-  exiting_from_function ('exiting :' . $here);
+  exiting_from_function ($here);
 
   return $ren_arr_a;
 
@@ -132,43 +132,39 @@ function before_one_block ($nam_blo_a) {
 
 function block_current_name_reordered_array_of_block_name_array_of_language ($old_pro_a, $lan) {
   $here = __FUNCTION__;
-  entering_in_function ($here . "(... array, $lan)");
+  entering_in_function ($here . " (... array, $lan)");
   # debug_n_check ($here , "old block order array", $old_pro_a);
 
-  $order_lan = array_dollar_get_retrieve_value_of_key ('order', $here);
+  $order_lan = dollar_get_array_retrieve_value_of_key_of_where ('order', $here);
   debug_n_check ($here , '$order_lan', $order_lan);
   $order_lan = lcfirst ($order_lan);
   $order = language_translate_to_english_of_la_string ($lan, $order_lan);
 
   switch ($order) {
   case 'move before':
-    $new_pro_a = before_one_block ($old_pro_a);
-    # debug_n_check ($here , "new block order array", $new_pro_a);
-    exiting_from_function ($here);
-    return  $new_pro_a;
-    break;
+      $new_pro_a = before_one_block ($old_pro_a);
+      # debug_n_check ($here , "new block order array", $new_pro_a);
+      break;
   case 'move after':
-    $new_pro_a = after_one_block ($old_pro_a);
-    # debug_n_check ($here , "new block order array", $new_pro_a);
-    exiting_from_function ($here);
-   return  $new_pro_a;
-    break;
+      $new_pro_a = after_one_block ($old_pro_a);
+      # debug_n_check ($here , "new block order array", $new_pro_a);
+      break;
   case 'swap':
-    $new_pro_a = swap_two_blocks ($old_pro_a);
-    # debug_n_check ($here , "new block order array", $new_pro_a);
-    exiting_from_function ($here);
-    return  $new_pro_a;    
-    break;
+      $new_pro_a = swap_two_blocks ($old_pro_a);
+      # debug_n_check ($here , "new block order array", $new_pro_a);
+      break;
   default:
-    print "<br>Fatal Error in $here : case >$order< is unknown. Check";
-    exiting_from_function ($here);
-    break;
+      print "<br>Fatal Error in $here : case >$order< is unknown. Check";
+      break;
   }
-
+  
+  exiting_from_function ($here);
+  return $new_pro_a;
 }
 
 function block_name_array_reorder_build () {
   $here = __FUNCTION__;
+  entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
   $nam_blo_a = irp_provide ('block_name_array', $here);
@@ -333,6 +329,6 @@ function block_list_neworder_build () {
  
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

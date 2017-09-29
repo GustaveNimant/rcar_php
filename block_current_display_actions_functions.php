@@ -7,7 +7,7 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "display the possible actions to be done on a block"; 
 $Documentation[$module]['what for'] = "to delete, show history, rename"; 
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function block_current_display_actions_title_build () {
   $here = __FUNCTION__;
@@ -96,6 +96,6 @@ function block_current_display_actions_build () {
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

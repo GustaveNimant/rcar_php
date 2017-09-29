@@ -7,7 +7,7 @@ $module = module_name_of_module_nameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 father_n_son_stack_entity_push_of_current_entity ($module);
 

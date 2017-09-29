@@ -41,12 +41,13 @@ function sub_sentence_linked_of_sub_sentence_matched ($sub_sen_mat){
 }
 
 function is_first_substring_of_substring_off_string ($sub_str, $str) { 
+    $here = __FUNCTION__;
+    /* entering_in_function ($here . " ($sub_str, $str"); */
+
 /* $sub_str = "souverain" */
 /* false = 'La souveraineté du peuple souverain est la souveraineté sur un territoire'; */
 /* true = 'souverain est la souveraineté sur un territoire'; */
 /* true = 'souverain'; */
-    $here = __FUNCTION__;
-    /* entering_in_function ($here . " ($sub_str, $str"); */
 
     $sub_len = strlen ($sub_str);
     $str_len = strlen ($str);
@@ -65,12 +66,13 @@ function is_first_substring_of_substring_off_string ($sub_str, $str) {
 }
 
 function is_surname_included_of_surname_of_sub_sentence_begining ($sur, $sub_sen) {
+    $here = __FUNCTION__;
     $boo = (is_first_substring_of_substring_off_string ($sur, $sub_sen)); 
     return $boo;
 }
 
 function string_array_extract_of_string_array_of_substring ($sur_a, $sub_sen) {
-
+  $here = __FUNCTION__;
     $ext_a = array ();
     foreach ($sur_a as $sur) {
         if (is_first_substring_of_substring_off_string ($sur, $sub_sen)) { 
@@ -83,10 +85,11 @@ function string_array_extract_of_string_array_of_substring ($sur_a, $sub_sen) {
 }
 
 function surname_reduced_array_of_surname_by_name_array_of_entry_name_array_of_surname_lowercase_array_of_full_sentence_original ($sur_by_nam_a, $nam_ent_a, $sur_low_a, $sen_ori) {
-/* keeps any surname which is a substring of the full sentence original */
-/* supresses duplicated surnames */
     $here = __FUNCTION__;
     entering_in_function ($here . " (\$sur_low_a, $sen_ori)");
+
+/* keeps any surname which is a substring of the full sentence original */
+/* supresses duplicated surnames */
 
     # debug_n_check ($here, '$sur_low_a', $sur_low_a);
 

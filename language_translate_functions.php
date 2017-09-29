@@ -9,7 +9,7 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 /* function language_translate_from_en_for_install ($en_str) { */
 /*  $here = __FUNCTION__; */
@@ -34,7 +34,6 @@ $Documentation[$module]['what for'] = "to ...";
 
 /* function language_translate_from_en_help ($en_str) { */
 /*   $here = __FUNCTION__; */
-/*   entering_in_function ($here); */
 /*   debug_n_check ($here , "input english string", $en_str); */
 
 /*   $lan = $_SESSION['parameters']['language']; */
@@ -45,14 +44,13 @@ $Documentation[$module]['what for'] = "to ...";
 /*   $la_str = $help_language_translate_register[$en_str][$lan]; */
  
 /*   debug_n_check ($here , "output string in $lan", $la_str); */
-/*   exiting_from_function ($here); */
 
 /*   return $la_str;   */
 /* } */
 
 function language_translate_of_en_string ($en_str) {
   $here = __FUNCTION__;
-#  entering_in_function ($here . " ($en_str)");
+  entering_in_function ($here . " ($en_str)");
 
   $lan = $_SESSION['parameters']['language'];
   $language_translate_register = $_SESSION['language_translate_register'];
@@ -78,14 +76,14 @@ function language_translate_of_en_string ($en_str) {
   }
 
 #  debug_n_check ($here , "$en_str in $lan is", $la_str);
-#  exiting_from_function ($here);
+  exiting_from_function ($here);
 
   return $la_str;  
 }
 
 function translate_language_texts_english_by_language_array () {
   $here = __FUNCTION__;
-  /* entering_in_function ($here); */
+  entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
   include "language_translate_register.php";
@@ -100,14 +98,14 @@ function translate_language_texts_english_by_language_array () {
   }
 
   /* # debug_n_check ($here , "output bi_language array", $texts_english_by_language_a); */
-  /* exiting_from_function ($here); */
-
+  exiting_from_function ($here);
+  
   return $texts_english_by_language_a;
 }
 
 function language_translate_to_english_of_la_string ($la_str) {
   $here = __FUNCTION__;
-  /* entering_in_function ($here . " ($la_str)"); */
+  entering_in_function ($here . " ($la_str)"); 
 
   $lan = $_SESSION['parameters']['language'];
   if ($lan == "en") {
@@ -130,11 +128,11 @@ function language_translate_to_english_of_la_string ($la_str) {
      }
   
 #  debug_n_check ($here , "output string in english", $en_str);
-#  exiting_from_function ($here);
+  exiting_from_function ($here);
 
   return $en_str;  
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

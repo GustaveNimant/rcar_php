@@ -5,7 +5,7 @@ require_once "language_translate_functions.php";
 require_once "irp_functions.php";
 
 $module = "item_current_justification_display_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function item_current_justification_display_title_build () {
   $here = __FUNCTION__;
@@ -60,6 +60,6 @@ function item_current_justification_display_build () {
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

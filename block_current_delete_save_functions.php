@@ -5,7 +5,7 @@ require_once "irp_functions.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 /* First Section Page Title */
 
@@ -81,7 +81,7 @@ function block_current_delete_save_catalog_actualize_build (){
   }
 
   $log_str = $nof . " file updated on disk";
-
+  exiting_from_function ($here);
   return $log_str; 
 }
 
@@ -147,10 +147,11 @@ function block_current_delete_save_build () {
   /* $html_str .= $log_str; */
 
   debug_n_check ($module , '$html_str', $html_str);
+  exiting_from_function ($here);
 
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

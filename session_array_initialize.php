@@ -1,11 +1,6 @@
 <?php
 /* --- $_SESSION --- */
 
-
-
-
-
-
 $points = "....|....|....|....|....|....|....|....|....|....|....|....|....|....|";
 
 $_SESSION['count_entity'] = 1;
@@ -16,8 +11,11 @@ $_SESSION['deleted_irp_keys_array'] = array ();
 $_SESSION['father_n_son_stack_entity'] = array ();
 $_SESSION['father_n_son_stack_module'] = array ();
 $_SESSION['get_variable_register'] = array ();
+
+$_SESSION['irp_register_bis'] = array ();
 $_SESSION['irp_register'] = array ();
 $_SESSION['irp_stack'] = array ();
+
 $_SESSION['item_information_metadata_en_by_item_name_array'] = array ();
 $_SESSION['last_dollar_get_register'] = array ();
 
@@ -53,6 +51,6 @@ $_SESSION['parameters']['version'] = 0.01;
 $_SESSION['parameters']['www_filename_css'] = 'css/style.css';
 
 $_SESSION['time_start'] = microtime (true);
-$_SESSION['trace_active'] = 1;
+$_SESSION['is_verbose'] = 1;
 
 ?>

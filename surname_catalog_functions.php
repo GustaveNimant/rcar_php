@@ -9,7 +9,7 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is a string as a list of name:surname separated by \\n";
 $Documentation[$module]['what for'] = "to fill file Surname_catalog.cat";
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function surname_catalog_fullnameoffile_make () {
   $here = __FUNCTION__;

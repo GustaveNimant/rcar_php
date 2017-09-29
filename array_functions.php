@@ -1,78 +1,81 @@
 <?php
 
 require_once "string_functions.php";
-require_once "management_functions.php";
 require_once "surname_functions.php";
 
-$module = "array_functions";
-# entering_in_module ($module);
+$module = module_name_of_module_nameoffile (__FILE__);
 
-function first_last_element_of_array ($arr_a) {
+$Documentation[$module]['what is it'] = "it is ...";
+$Documentation[$module]['what for'] = "to ...";
+
+entering_in_module ($module);
+
+function array_first_dots_last_element_of_array ($arr_a) {
   $here = __FUNCTION__;
-#  entering_in_function ($here);
+  entering_in_function ($here);
 #  # debug ($here , "input array", $arr_a); 
 
   $first = $arr_a[0];
-  $last = end ($arr_a);
+  $last = current ($arr_a);
 
   if (is_array ($first)) {
-      $first = first_last_element_of_array ($first);
+      $first = array_first_dots_last_element_of_array ($first);
   }
 
   if (is_array ($last)) {
-      $last = first_last_element_of_array ($last);
+      $last = array_first_dots_last_element_of_array ($last);
   }
 
   $str = $first . ' ... ' . $last;
 
 #  debug ($here , "output count", $cou); 
-#  exiting_from_function ($here);
+  exiting_from_function ($here);
 
   return $str;
 };
 
-function is_empty_of_array ($arr_a) {
+function array_is_empty_of_array ($arr_a) {
   $here = __FUNCTION__;
-#  entering_in_function ($here);
+  entering_in_function ($here);
 #  # debug ($here , "input array", $arr_a); 
  
   $cou = count ($arr_a);
   $boo = ($cou == 0);
   
 #  debug ($here , "output count", $cou); 
-#  exiting_from_function ($here);
+  exiting_from_function ($here);
 
   return $boo;
 };
 
-function check_is_empty_of_array ($what, $arr_a, $her) {
+function array_check_is_empty_of_what_of_array_of_where ($what, $arr_a, $where) {
   $here = __FUNCTION__;
-#  entering_in_function ($here);
-#  # debug ($here , "input array", $arr_a); 
+  entering_in_function ($here);
+#  # debug ($here . " ($what, $arr_a, $where)");
  
-  if (is_empty_of_array ($arr_a)) {
-      print_fatal_error ($her,
+  if (array_is_empty_of_array ($arr_a)) {
+      print_fatal_error ($where,
       "array $what were NOT empty",
       "it is EMPTY",
       "Check");
   }
   
 #  debug ($here , "output count", $cou); 
-#  exiting_from_function ($here);
+  exiting_from_function ($here);
 
   return;
 };
 
 function has_values_unique_of_any_array ($arr_a) {
   $here = __FUNCTION__;
-#  entering_in_function ($here . "(\$arr_a...)");
+  entering_in_function ($here . " (\$arr_a...)");
 
   $new_a = array_unique ($arr_a);
 
   $boo = count ($new_a) == count ($arr_a);
   
 #  debug ($here , "output count", $cou); 
-#  exiting_from_function ($here);
+  exiting_from_function ($here);
 
   return $boo;
 
@@ -80,7 +83,7 @@ function has_values_unique_of_any_array ($arr_a) {
 
 function check_has_values_unique_of_any_array ($arr_a) {
   $here = __FUNCTION__;
-#  entering_in_function ($here);
+  entering_in_function ($here);
 #  # debug ($here , "input array", $arr_a); 
  
   if (has_values_unique_of_any_array ($arr_a)) {
@@ -91,14 +94,14 @@ function check_has_values_unique_of_any_array ($arr_a) {
   }
   
 #  debug ($here , "output count", $cou); 
-#  exiting_from_function ($here);
+  exiting_from_function ($here);
 
   return;
 };
 
 function array_duplicated_value_by_count_of_array ($arr_a) {
   $here = __FUNCTION__;
-#  entering_in_function ($here . "($arr_a)");
+  entering_in_function ($here . " ($arr_a)");
 
   $new_a = array_unique ($arr_a);
 
@@ -111,30 +114,15 @@ function array_duplicated_value_by_count_of_array ($arr_a) {
   }
   
 #  debug ($here , "output count", $cou); 
-#  exiting_from_function ($here);
+  exiting_from_function ($here);
 
   return $cou_by_val_a;
 
 };
 
-function string_capitalize_of_array ($arr_a) {
+function array_serialize_of_array_of_where ($arr_a, $where) {
   $here = __FUNCTION__;
-#  entering_in_function ($here);
-#  # debug_n_check ($here , "input array", $arr_a); 
- 
-  foreach ($arr_a as $key => $val) {
-    $out_arr[$key] = ucfirst ($val);
-   }
-  
-#  debug_n_check ($here , "output array", $out_arr); 
-#  exiting_from_function ($here);
-
-  return $out_arr;
-  };
-
-function array_serialize_of_array_of_here ($arr_a, $her) {
-  $here = __FUNCTION__;
-#  entering_in_function ($here . " ($arr_a, $her)");
+  entering_in_function ($here . " ($arr_a, $where)");
  
   if (array_key_exists ('', $arr_a)){
       $val = $arr_a[''];
@@ -148,14 +136,14 @@ function array_serialize_of_array_of_here ($arr_a, $her) {
   $str = serialize ($arr_a);
   
 #  debug_n_check ($here , "output array", $str); 
-#  exiting_from_function ($here);
+  exiting_from_function ($here);
 
   return $str;
   };
 
 function array_serialize_of_separator_of_array_by_key ($sep, $arr_a) {
   $here = __FUNCTION__;
-#  entering_in_function ($here . " ($sep, $arr_a)");
+  entering_in_function ($here . " ($sep, $arr_a)");
   
   $str = '';
   foreach ($arr_a as $key => $val) {
@@ -169,7 +157,7 @@ function array_serialize_of_separator_of_array_by_key ($sep, $arr_a) {
   }
    
 #  debug_n_check ($here , '$str', $str); 
-#  exiting_from_function ($here);
+  exiting_from_function ($here);
 
   return $str;
 }
@@ -232,7 +220,7 @@ function array_by_key_unserialize_of_regular_expression_of_string ($reg_exp, $st
 
 function check_is_array_unique_of_nameofarray_of_array ($nam_arr, $arr_a) { 
   $here = __FUNCTION__;
-#  entering_in_function ($here);
+  entering_in_function ($here);
 #  # debug ($here , "input array", $arr_a); 
 
   if ( ! has_values_unique_of_any_array ($arr_a) ){
@@ -247,13 +235,13 @@ function check_is_array_unique_of_nameofarray_of_array ($nam_arr, $arr_a) {
       "Check");
   }
  
-#  exiting_from_function ($here);
-
+  exiting_from_function ($here);
+  return;
 }
 
 function check_is_array_unique_of_nameofarray_of_associative_array ($nam_arr, $val_by_key_a) {
   $here = __FUNCTION__;
-#  entering_in_function ($here);
+  entering_in_function ($here);
 #  # debug ($here , "input array", $arr_a); 
 
   if ( ! has_values_unique_of_any_array ($val_by_key_a) ){
@@ -278,13 +266,13 @@ function check_is_array_unique_of_nameofarray_of_associative_array ($nam_arr, $v
       "Check");
   }
  
-#  exiting_from_function ($here);
-
+  exiting_from_function ($here);
+  return;
 }
 
 function is_value_unique_in_array ($val, $arr_a) {
   $here = __FUNCTION__;
-#  entering_in_function ($here . "($val, $arr_a)");
+  entering_in_function ($here . " ($val, $arr_a)");
 #  debug ($here , "input value", $val); 
 #  # debug ($here , "input array", $arr_a); 
 
@@ -297,7 +285,7 @@ function is_value_unique_in_array ($val, $arr_a) {
   $boo = ($cou == 1);
   
 #  debug ($here , "output count", $cou); 
-#  exiting_from_function ($here);
+  exiting_from_function ($here);
 
   return $boo;
 
@@ -305,7 +293,7 @@ function is_value_unique_in_array ($val, $arr_a) {
 
 function check_is_value_unique_in_array ($val, $arr_a) {
   $here = __FUNCTION__;
-#  entering_in_function ($here);
+  entering_in_function ($here);
 #  debug ($here , "input value", $val); 
 #  # debug ($here , "input array", $arr_a); 
 
@@ -313,13 +301,13 @@ function check_is_value_unique_in_array ($val, $arr_a) {
     fatal_error ($here, "value >$val< exists more than once in array");
   }
  
-#  exiting_from_function ($here);
-
+  exiting_from_function ($here);
+  return;
 }
 
 function is_key_unique_in_array ($key, $arr_a) {
   $here = __FUNCTION__;
-#  entering_in_function ($here);
+  entering_in_function ($here);
 #  debug ($here , "input key", $key); 
 #  # debug ($here , "input array", $arr_a); 
 
@@ -334,14 +322,14 @@ function is_key_unique_in_array ($key, $arr_a) {
 
   $boo = ($cou == "1");
  
-#  exiting_from_function ($here);
+  exiting_from_function ($here);
 
   return $boo;
 }
 
 function check_is_key_unique_in_array ($key, $arr_a) {
   $here = __FUNCTION__;
-#  entering_in_function ($here);
+  entering_in_function ($here);
 #  debug ($here , "input key", $key); 
 #  # debug ($here , "input array", $arr_a); 
 
@@ -349,24 +337,24 @@ function check_is_key_unique_in_array ($key, $arr_a) {
     fatal_error ($here, "value >$key< exists more than once in array");
   }
  
-#  exiting_from_function ($here);
-
+  exiting_from_function ($here);
+  return;
 }
 
 function array_value_exists ($ele, $arr_a) {
-    #  $here = __FUNCTION__;
-    #  entering_in_function ($here);
+    $here = __FUNCTION__;
+    entering_in_function ($here);
     #  debug ($here , "input key", $key); 
     #  # debug ($here , "input array", $arr_a); 
     
-    if (is_empty_of_array ($arr_a)) {
+    if (array_is_empty_of_array ($arr_a)) {
         $boo = false;
     }
     else {
         $boo = in_array ($ele, $arr_a);
     }
     
-    #  exiting_from_function ($here);
+    exiting_from_function ($here);
     
     return $boo;
 }
@@ -381,13 +369,16 @@ function array_merge_unique_of_array_of_array ($fir_a, $sec_a) {
   }
 
   $mer_a = array_unique ($arr_a);
+
   exiting_from_function ($here);
+
   return $mer_a;
+
 }
 
 function renumber_keys_of_step_of_array ($step, $inp_arr_a) {
   $here = __FUNCTION__;
-#  entering_in_function ($here);
+  entering_in_function ($here);
 #  debug_n_check ($here , "input step", $step); 
 #  # debug_n_check ($here , "input array", $inp_arr_a); 
  
@@ -398,14 +389,14 @@ function renumber_keys_of_step_of_array ($step, $inp_arr_a) {
    }
   
 #  debug_n_check ($here , "output array", $out_arr); 
-#  exiting_from_function ($here);
+  exiting_from_function ($here);
 
   return $out_arr;
-  };
+};
 
 function array_swap ($key_fr, $key_to, $inp_arr_a) {
   $here = __FUNCTION__;
-#  entering_in_function ($here);
+  entering_in_function ($here);
 #  debug_n_check ($here , "key from", $key_fr);
 #  debug_n_check ($here , "key to", $key_to);
 #  # debug_n_check ($here , "input array", $inp_arr_a);
@@ -419,110 +410,13 @@ function array_swap ($key_fr, $key_to, $inp_arr_a) {
 
 #  # debug_n_check ($here , "output array", $out_arr_a);
 
-#  exiting_from_function ($here);
+  exiting_from_function ($here);
   return $out_arr_a;
-}
-
-function form_array_dollar_get_store_of_key_of_value_of_here ($key, $val, $her) {
-  $here = __FUNCTION__;
-#  entering_in_function ($here . " ($key, $val, $her)");
-
-  if ($val == '') {
-      print_fatal_error ($her,
-      "second argument \$val were NOT EMPTY<br>",
-      "\$val is EMPTY",
-      "Check");
-  }
-
-  $html_str  = '';
-  $html_str .= '<input type="hidden" ';
-  $html_str .= 'name="'  . $key . '" ';
-  $html_str .= 'value="' . $val . '" /> ';
-
-#  debug_n_check ($here , '$html_str', $html_str);
-#  exiting_from_function ($here);
-
-  return $html_str;
-
-}
-
-function array_dollar_get_store_of_key_of_value_of_here ($key, $val, $her) {
-  $here = __FUNCTION__;
-#  entering_in_function ($here . " ($key, $val, $her)");
-
-#  debug_n_check ($here , '$_GET', $_GET);
-
-  if ($val == '') {
-      print_fatal_error ($her,
-      "second argument \$val were NOT EMPTY<br>",
-      "\$val is EMPTY",
-      "Check");
-  }
-  
-  $_GET[$key] = $val;
-  
-  check_is_key_unique_in_array ($key, $_GET);
-
-  $_SESSION['last_dollar_get_register'][$key] = $val;
-  $_SESSION['get_variable_register'][$key] = $val;
-  father_n_son_stack_entity_push_of_father_of_son ($key, 'GET');
-  print_long ($here , "\$_GET[$key] = $val");
-
-#  debug_n_check ($here , '$_GET', $_GET);
-#  exiting_from_function ($here);
-
-  return;
-
-}
-
-function array_dollar_get_retrieve_value_of_key ($key, $mod) {
-  $here = __FUNCTION__;
-#  entering_in_function ($here . " ($key, $mod)");
-
-#  debug_n_check ($here , '$_GET', $_GET);
-
-  $val = $_GET[$key];
-  $val = remove_control_M ($val);
-  $val = trim ($val);
-
-  if ($val == '') {
-    print_html_array ($here,'<br>$_GET array is :' , $_GET);
-
-    if (is_substring_of_substring_off_string ('_surname', $key)) {
-        $fno_sur =  surname_catalog_fullnameoffile_make ();
-        $check = "Check Surname catalog file >$fno_sur<";
-    }
-    else {
-        $nam_fun = $key . '_build';
-
-        $check  = 'Check that :<br>';
-        $check .= '1 function >' . $nam_fun . '< is implemented and accessible' . '<br>';
-        $check .= '2 line <i>require_once "' . $key . '_functions.php";</i> is present in build_functions.php';
-    }
- 
-    print_fatal_error ($mod , 
-    '$_GET["' . $key . '"] were NOT empty',
-    'it is EMPTY',
-    $check);
-  } else {
-
-    check_is_key_unique_in_array ($key, $_GET);
-    $_SESSION['last_dollar_get_register'][$key] = $val;
-    $_SESSION['get_variable_register'][$key] = $val;
-    father_n_son_stack_entity_push_of_father_of_son ($key, 'GET');
-    print_long ($here , "\$_GET[$key] = $val");
-  }
-
-#  debug_n_check ($here , '$val', $val);
-#  exiting_from_function ($here);
-
-  return $val;
-
 }
 
 function array_retrieve_value_of_key_of_array ($key, $arr_a) {
   $here = __FUNCTION__;
-#  entering_in_function ($here);
+  entering_in_function ($here);
 #  debug_n_check ($here , "input key", $key);
 #  # debug_n_check ($here , "input array", $arr_a);
 
@@ -551,7 +445,7 @@ function array_retrieve_value_of_key_of_array ($key, $arr_a) {
   $val = $arr_a[$key];
 
 #  debug_n_check ($here , "ouput value", $val);
-#  exiting_from_function ($here);
+  exiting_from_function ($here);
 
   return $val;
 
@@ -559,17 +453,17 @@ function array_retrieve_value_of_key_of_array ($key, $arr_a) {
 
 function array_retrieve_non_empty_value_of_key ($key, $arr_a) {
   $here = __FUNCTION__;
-#  entering_in_function ($here);
+  entering_in_function ($here);
 #  debug_n_check ($here , "input key", $key);
 #  # debug_n_check ($here , "input array", $arr_a);
 
   $val = array_retrieve_value_of_key_of_array ($key, $arr_a);
-  if ( is_empty_of_string ($val) ) {
+  if ( string_is_empty_of_string ($val) ) {
     fatal_error ($here , "value is empty for key >$key< in array");
   }
 
 #  debug_n_check ($here , '$val', $val);
-#  exiting_from_function ($here);
+  exiting_from_function ($here);
 
   return $val;
 
@@ -577,7 +471,7 @@ function array_retrieve_non_empty_value_of_key ($key, $arr_a) {
 
 function array_of_key_of_value_of_array ($key, $val, $arr_a) {
   $here = __FUNCTION__;
-#  entering_in_function ($here);
+  entering_in_function ($here);
 #  debug_n_check ($here , "input key", $key);
 #  debug_n_check ($here , "input val", $val);
 #  # debug ($here , "input array", $arr_a);
@@ -598,7 +492,7 @@ function array_of_key_of_value_of_array ($key, $val, $arr_a) {
   }
 
 #  # debug_n_check ($here , "ouput array", $arr_a);
-#  exiting_from_function ($here);
+  exiting_from_function ($here);
 
   return $arr_a;
 
@@ -610,7 +504,7 @@ function array_retrieve_key_of_value ($val, $arr_a, $where) {
  debug_n_check ($here ,'$val', $val);
  # debug_n_check ($here , '$arr_a', $arr_a);
  
- if (is_empty_of_array ($arr_a)) {
+ if (array_is_empty_of_array ($arr_a)) {
      print_fatal_error ($where , 
      '$arr_a were NOT EMPTY',
      'it is EMPTY',
@@ -631,7 +525,7 @@ function array_retrieve_key_of_value ($val, $arr_a, $where) {
 
 function get_retrieve_key_of_value ($val) {
   $here = __FUNCTION__;
-#  entering_in_function ($here);
+  entering_in_function ($here);
 #  debug_n_check ($here , "input value", $val);
 #  debug_n_check ($here , '$_GET', $_GET);
 
@@ -640,26 +534,26 @@ function get_retrieve_key_of_value ($val) {
   $key = array_retrieve_key_of_value ($val, $_GET, $here);
 
 #  debug_n_check ($here , "ouput key", $key);
-#  exiting_from_function ($here);
+  exiting_from_function ($here);
 
   return $key;
 
 }
 
-function last_element_of_array ($arr_a) {
+function array_last_element_of_array ($arr_a) {
   $here = __FUNCTION__;
-#  entering_in_function ($here . "($arr_a)");
+  entering_in_function ($here . " ($arr_a)");
 
   /* print_html_array ($here , "input array", $arr_a);  */
 
   if (isset ($arr_a)) { 
       $keys = array_keys ($arr_a);
-      $last_key = end ($keys);
+      $last_key = current ($keys);
       $last = $arr_a [$last_key];
       /* print_html_array ($here , "keys", $keys);  */
       /* print_html_scalar ($here , "last key", $last_key);  */
       /* print_html_scalar ($here , "output last", $last);  */
-    #  exiting_from_function ($here);
+      exiting_from_function ($here);
     }
     else {
       fatal_error ($here, "input array is empty");
@@ -671,7 +565,7 @@ function last_element_of_array ($arr_a) {
 
 function lowercase_n_sort_of_string_by_key_array ($str_by_key_a) {
     $here = __FUNCTION__;
-    entering_in_function ($here . " (" . current($str_by_key_a) . ", ...");
+    entering_in_function ($here . " (\$str_by_key_a");
 
     # debug_n_check ($here, '$str_by_key_a', $str_by_key_a);
 
@@ -687,6 +581,35 @@ function lowercase_n_sort_of_string_by_key_array ($str_by_key_a) {
     return $str_low_a;
 }
 
-# exiting_from_module ($module);
+function array_push_inplace_of_name_of_value_of_array ($nam_arr, $val, $arr_a) {
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($nam_arr, $val, \$arr_a)");
+
+    if (! is_array ($arr_a)) {
+        print_fatal_error ($here,
+        "Array >$nam_arr< were an array",
+        "it is NOT",
+        "Check");
+    }
+
+    $cou_in = count ($arr_a);
+    array_push ($arr_a, $val);
+    $cou_out = count ($arr_a);
+
+    if ($cou_out != $cou_in + 1) {
+        print_fatal_error ($here,
+        "after pushing element >$val< array >$nam_arr< count >$cou_in< were incremented by 1",
+        "array new count is >$cou_out<",
+        "Check");
+    }
+    else {
+        $log_str = "Value >$val< has been pushed at top of array >$nam_arr<";
+        file_log_write ($here, $log_str);
+    }
+    exiting_from_function ($here);
+    return;
+}
+
+exiting_from_module ($module);
 
 ?>

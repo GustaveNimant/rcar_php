@@ -12,7 +12,7 @@ require_once "bubble_functions.php";
 
 
 $module = "block_information_metadata_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function block_information_metadata_en_by_block_name_array_build () {
   $here = __FUNCTION__;
@@ -50,5 +50,5 @@ function block_information_metadata_en_by_block_name_array_build () {
   return $inf_ite_met_a;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 ?>

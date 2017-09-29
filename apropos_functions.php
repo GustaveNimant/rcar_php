@@ -9,7 +9,7 @@ $module = module_name_of_module_nameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function apropos_version_build (){
   $here = __FUNCTION__;
@@ -49,6 +49,6 @@ function apropos_build (){
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

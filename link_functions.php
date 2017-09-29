@@ -4,14 +4,14 @@ require_once "language_translate_functions.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 $Documentation[$module]['module_fullnameoffile'] = "the name of the php file with its path"; 
 $Documentation[$module]['module_nameoffile'] = "the name of the php file without its path"; 
 $Documentation[$module]['module_name_of_module_nameoffile'] = "the name of the php file without its path without .php extension"; 
 
 function link_is_ok_of_module_name ($nam_mod) {
-
+  $here = __FUNCTION__;
     $boo = ! (
         (is_substring_of_substring_off_string ("http:", $nam_mod))
         ||
@@ -44,7 +44,7 @@ function link_previous_module_name_make () {
   if (isset ($_SERVER["HTTP_REFERER"]) ) {
       $url_rel = $_SERVER["HTTP_REFERER"];
       print_long ($here, '$url_rel >' . $url_rel . '<');
-      if (is_empty_of_string ($url_rel)) {
+      if (string_is_empty_of_string ($url_rel)) {
           $url_rel = 'http://top.php';
       }
   }  
@@ -59,6 +59,6 @@ function link_previous_module_name_make () {
   return $pre_mod;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

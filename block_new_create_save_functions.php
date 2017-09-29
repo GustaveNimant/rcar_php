@@ -8,7 +8,7 @@ require_once "block_name_array_functions.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 # block_new_create_save.php?
 # block_new_action=create
@@ -90,6 +90,7 @@ function block_new_create_save_catalog_actualize_build (){
 
   block_name_catalog_write_of_entry_name_of_block_name_catalog ($nam_ent, $new_cat_blo);
   
+  exiting_from_function ($here);
   return $new_cat_blo;
 }
 
@@ -146,7 +147,10 @@ function block_new_create_save_build () {
 
 /* Actualize block_name_array */
 
-  unset ($_SESSION['irp_register']['block_name_array']);
+  unset ($_SESSION['irp_register']['block_name_array']); /* left */
+  $log_str .= "irp_key >block_name_array< removed from irp_register" . "\n"; 
+  file_log_write ($here, $log_str);
+
   $new_nam_blo_a = irp_provide ('block_name_array', $here);
   debug_n_check ($here , 'verify $new_nam_blo_a', $new_nam_blo_a);
 
@@ -177,6 +181,6 @@ function block_new_create_save_build () {
 
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

@@ -2,7 +2,7 @@
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function now () {
   $here = __FUNCTION__;
@@ -16,6 +16,6 @@ function now () {
   return $tim_now;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

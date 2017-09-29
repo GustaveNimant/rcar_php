@@ -91,28 +91,41 @@ function debug ($nam_fun, $nam_var, $var) {
   /*   /\* print "<pre> nam_fun = $nam_fun \$_SESSION is set</pre>"; *\/ */
   /* } */
 
-    if (isset ($_SESSION)) {
-        if (isset ($_SESSION['debug'])) {
-            $debug_array = $_SESSION['debug'];
+    /* if (isset ($_SESSION)) { */
+    /*     if (isset ($_SESSION['debug'])) { */
+    /*         $debug_array = $_SESSION['debug']; */
             
-            if ( (isset ($debug_array[$nam_fun][$nam_var])) ||
-            (isset ($debug_array[$nam_fun]['any']))    ||
-            (isset ($debug_array['any'][$nam_var]))    ||
-            (isset ($debug_array['any']['any'])) ) {
+    /*         if ( (isset ($debug_array[$nam_fun][$nam_var])) || */
+    /*         (isset ($debug_array[$nam_fun]['any']))    || */
+    /*         (isset ($debug_array['any'][$nam_var]))    || */
+    /*         (isset ($debug_array['any']['any'])) ) { */
                 
-                if (is_array ($var)) {
-                    debug_a ($nam_fun, $nam_var, $var);
-                }
-                else {
-                    debug_v ($nam_fun, $nam_var, $var);
-                }
+    /*             if (is_array ($var)) { */
+    /*                 debug_a ($nam_fun, $nam_var, $var); */
+    /*             } */
+    /*             else { */
+    /*                 debug_v ($nam_fun, $nam_var, $var); */
+    /*             } */
+    /*         } */
+    /*     } */
+    /* } */
+
+
+    if (isset ($_SESSION)) {
+        if ( (isset ($_SESSION['debug_active']) 
+        && $_SESSION['debug_active'] > 0)  ) {
+            
+            if (is_array ($var)) {
+                debug_a ($nam_fun, $nam_var, $var);
+            }
+            else {
+                debug_v ($nam_fun, $nam_var, $var);
             }
         }
     }
-    
-  return;
+    return;
 };
-
+    
 function check ($her, $nam, $var) {
   if (count($var) == 0) {
     print_fatal_error ($her,  
@@ -168,8 +181,8 @@ function debug_get_defined_variables () {
 }
 
 function trace ($her, $mes) {
-    if ( (isset ($_SESSION['trace_active']) 
-              && $_SESSION['trace_active'] > 0)  ) {
+    if ( (isset ($_SESSION['is_verbose']) 
+              && $_SESSION['is_verbose'] > 0)  ) {
         print_d ("\n<TRACE> in $her : $mes\n");    
     }
 };

@@ -10,7 +10,8 @@ function print_html_scalar ($her, $mes, $var){
 }
 
 function string_html_of_array ($var_a){	
-
+    $here = __FUNCTION__;
+    
     $html_str = '';
     if (isset ($var_a) ) {
         if (is_array ($var_a)) {
@@ -44,7 +45,7 @@ function string_html_of_array ($var_a){
             }
         }
     }
- 
+
     return $html_str;
 }
 
@@ -65,6 +66,7 @@ function print_html_array ($her, $mes, $var_a){
     $html_str .= "<pre>in $her :";	
     $html_str .= "$mes<br>";
     $html_str .= string_html_of_array ($her, $mes, $var_a);
+
     print $html_str;
 }
 

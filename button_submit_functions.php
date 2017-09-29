@@ -5,7 +5,7 @@ require_once "language_translate_functions.php";
 require_once "button_functions.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function button_submit_quit_html_make () {
   $here = __FUNCTION__;
@@ -170,6 +170,6 @@ function button_submit_to_return_of_surname_by_name_array_of_module_nameoffile_o
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

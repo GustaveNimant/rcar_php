@@ -187,7 +187,7 @@ function irp_store ($irp_key, $irp_val) {
 
 function irp_store_force ($irp_key, $irp_val, $irp_fat) {
   $here = __FUNCTION__;
-#  entering_in_function ($here . " ($irp_key, ..., $irp_fat)");
+  entering_in_function ($here . " ($irp_key, ..., $irp_fat)");
 
   if ($irp_val == "") {
     fatal_error ($here, "value is empty for irp_key >$irp_key<");
@@ -203,7 +203,7 @@ function irp_store_force ($irp_key, $irp_val, $irp_fat) {
 
   trace ($here, "value >$irp_val< stored for key >$irp_key<" );
 
-#  exiting_from_function ($here);
+  exiting_from_function ($here);
   return;
 }
 
@@ -241,7 +241,7 @@ function irp_stack_path_of_key ($irp_key) {
 
 function irp_retrieve ($irp_key) {
   $here = __FUNCTION__;
-#  entering_in_function ($here . " $irp_key");
+  entering_in_function ($here . " $irp_key");
 
   /* debug_n_check ($here , "input irp_key",  $irp_key); */
   $irp_reg = $_SESSION['irp_register'];
@@ -334,7 +334,7 @@ function irp_clean_value_of_irp_key ($irp_key, $irp_val_sal) {
 
 function irp_build_n_store ($irp_key, $nam_fat) {
   $here = __FUNCTION__;
-#  entering_in_function ($here . " ($irp_key, $nam_fat)");
+  entering_in_function ($here . " ($irp_key, $nam_fat)");
   
   $irp_build = $irp_key . "_build";
 
@@ -388,7 +388,7 @@ function irp_build_n_store ($irp_key, $nam_fat) {
   
   irp_store ($irp_key, $irp_val);
 
-  #  exiting_from_function ($here);
+    exiting_from_function ($here);
   
   return $irp_val;
 }

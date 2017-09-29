@@ -6,23 +6,30 @@ require_once "pervasive_html_functions.php";
 $module = "home_functions";
 
 function arce_home_header_en () {
-  $html_str  = "";
-  $html_str .= "<center>";
-  $html_str .= "<i>This site is a prototype implementing a method for <b>auto-regulated collaborative editing</b>.<br/>";
-  $html_str .= "It can be applied to a <b>wide</b> collectivity of connected people.<br/>";
-  $html_str .= 'See <a href="entry_display.php?entry_name=Faq">Faq</a></i>.';
-  $html_str .= "</center>";
+    $here = __FUNCTION__; 
+    entering_in_function ($here);
 
-  return $html_str;
+    $html_str  = "";
+    $html_str .= "<center>";
+    $html_str .= "<i>This site is a prototype implementing a method for <b>auto-regulated collaborative editing</b>.<br/>";
+    $html_str .= "It can be applied to a <b>wide</b> collectivity of connected people.<br/>";
+    $html_str .= 'See <a href="entry_display.php?entry_name=Faq">Faq</a></i>.';
+    $html_str .= "</center>";
+    
+    
+    exiting_from_function ($here);
+    return $html_str;
 }
 
 function arce_home_text_en () {
-
-  $html_str  = "";
-  $html_str .= "<br />";
-  $html_str .= "<b>ARCE</b> fonctionnalities :<br /><br />";
-  $html_str .= "<li>";
-  $html_str .= "<b>Entries :</b> allows to select any Entry to display or rename it or allows to create a new entry.";
+    $here = __FUNCTION__; 
+    entering_in_function ($here);
+    
+    $html_str  = "";
+    $html_str .= "<br />";
+    $html_str .= "<b>ARCE</b> fonctionnalities :<br /><br />";
+    $html_str .= "<li>";
+    $html_str .= "<b>Entries :</b> allows to select any Entry to display or rename it or allows to create a new entry.";
   $html_str .= "</li>";
   $html_str .= "<br />";
   $html_str .= "<li>";
@@ -53,6 +60,7 @@ function arce_home_text_en () {
   $html_str .= "<b>Usage :</b> the website manual";
   $html_str .= "</li>";
 
+  exiting_from_function ($here);
   return $html_str;
 }
 
@@ -142,10 +150,10 @@ function home_build () {
       break;
   case 'fr' :
       $str = arce_home_header_accent_fr ();
-      $html_str .= replace_accents_to_html_code ($str);
+      $html_str .= string_replace_accents_to_html_code ($str);
       
       $str = arce_home_text_accent_fr ();
-      $html_str .= replace_accents_to_html_code ($str);
+      $html_str .= string_replace_accents_to_html_code ($str);
       break;
   default:
       print_fatal_error ($here, 

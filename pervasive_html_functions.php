@@ -13,7 +13,7 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function pervasive_html_Auto_Regulated_Collaborative_Editing_build (){
   $here = __FUNCTION__;
@@ -94,6 +94,6 @@ function pervasive_html_final_section_build () {
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

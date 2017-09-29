@@ -6,7 +6,7 @@ require_once "irp_functions.php";
 # "License : This code is available under the Creative Commons License https://creativecommons.org/licenses/by-sa/3.0/legalcode.fr";
 
 $module = "block_current_delete_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 /* First Section Page Title */
 
@@ -152,6 +152,6 @@ function block_current_delete_build (){
 }
 
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

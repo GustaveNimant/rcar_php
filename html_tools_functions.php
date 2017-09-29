@@ -7,7 +7,7 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 
 $Documentation[$module]['placeholder'] = "in a textarea a documentation or example text to be over-written";
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function a_href_of_entry_name_of_script_nameoffile_of_block_current_name_of_en_action ($nam_ent, $nof_scr, $nam_blo_cur, $en_act) {
   $here = __FUNCTION__;
@@ -62,14 +62,9 @@ function form_action_get_of_script_nameoffile_of_en_value_of_en_text ($nof_scr, 
   return $html_str;
 }
 
-function inputtypehidden_store_of_get_key_of_get_value ($nam, $en_val, $shi) {
+function inputtypehidden_store_of_get_key_of_get_value ($get_key, $get_val) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam, $en_val, $shi)");
-
-  $lan = $_SESSION['parameters']['language'];
-  $la_val = ucfirst (language_translate_of_en_string ($en_val));
-
-  $tex_siz = $_SESSION['parameters']['html_text_zone_size'];
+  entering_in_function ($here . " ($get_key, $get_val)");
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<input type="hidden" name="' . $get_key . '" ' . "\n";
@@ -142,7 +137,6 @@ function inputtypetext_of_get_key_of_en_placeholder ($get_key, $en_pla) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($get_key, $en_pla, $shi)");
 
-  $lan = $_SESSION['parameters']['language'];
   $la_Pla = ucfirst (language_translate_of_en_string ($en_pla));
 
   $tex_siz = $_SESSION['parameters']['html_text_zone_size'];
@@ -166,6 +160,24 @@ function inputtypetext_of_get_key_of_en_placeholder ($get_key, $en_pla) {
   
   return $html_str;
 }
+
+function goto_of_script_action_of_message_of_action_name ($scr_act, $mes, $nam_act) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($scr_act, $nam_act)");
+
+  $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= '<form action="'. $scr_act .'" method="get"> ' . "\n";
+  $html_str .= $mes;
+  $html_str .= inputtypesubmit_of_en_action_name ($nam_act);
+  $html_str .= '</form> ' .  "\n";
+  $html_str .= comment_exiting_of_function_name ($here);
+
+  debug_n_check ($here , '$html_str', $html_str);
+  exiting_from_function ($here);
+  
+  return $html_str;
+}
+
 
 function textarea_of_get_key_of_en_placeholder ($get_key, $en_pla) {
   $here = __FUNCTION__;
@@ -213,6 +225,6 @@ function span_class_of_name_of_en_text ($nam, $en_txt) {
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

@@ -9,7 +9,7 @@ require_once "bubble_functions.php";
 
 $module = "entry_information_functions";
 
-# entering_in_module ($module);
+entering_in_module ($module);
 $Documentation[$module]['path'] = "http://path.module.php?get_arguments";
 $Documentation[$module]['url_absolute'] = "http://path.module.php?get_arguments";
 $Documentation[$module]['url_relative'] = "module.php?get_arguments";
@@ -211,6 +211,6 @@ function entry_information_array_lan_of_entry_name ($nam_ent) {
 /*   return $legend_la; */
 /* } */
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

@@ -5,7 +5,7 @@ require_once "irp_functions.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function block_surname_build () {
   $here = __FUNCTION__;
@@ -14,14 +14,14 @@ function block_surname_build () {
   if ( isset ($_GET['block_current_name_input'])) {
    
 /* create surname from user GET */
-      $sur_blo = array_dollar_get_retrieve_value_of_key ('block_current_name_input', $here);
+      $sur_blo = dollar_get_array_retrieve_value_of_key_of_where ('block_current_name_input', $here);
   }
   else {
 
       if ( isset ($_GET['block_surname'])) {
           
 /* get surname from user selection GET */
-          $sur_blo = array_dollar_get_retrieve_value_of_key ('block_surname', $here);
+          $sur_blo = dollar_get_array_retrieve_value_of_key_of_where ('block_surname', $here);
       }
       else {
   
@@ -49,7 +49,7 @@ function block_surname_build () {
   return $sur_blo;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>
 

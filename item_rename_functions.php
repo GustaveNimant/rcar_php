@@ -8,7 +8,7 @@ require_once "button_submit_functions.php";
 require_once "common_html_functions.php";
 
 $module = "item_rename_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 /* First Section Page Title */
 
@@ -181,7 +181,7 @@ function item_rename_build () {
 
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 
 ?>

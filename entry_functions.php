@@ -7,7 +7,7 @@ require_once "irp_functions.php";
 require_once "file_functions.php";
 
 $module = "entry_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function entry_subdirectory_name_of_entry_name ($nam_ent) {
   $here = __FUNCTION__;
@@ -44,6 +44,6 @@ function entry_subdirectory_create_of_subdirectory_name ($fnd) {
   return;
 };
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

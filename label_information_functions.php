@@ -9,7 +9,7 @@ require_once "bubble_functions.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function label_information_array_en_of_label ($nam_lab) {
   $here = __FUNCTION__;
@@ -145,6 +145,6 @@ function label_information_array_lan_of_label ($nam_lab) {
   return $ent_inf_lan_a;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

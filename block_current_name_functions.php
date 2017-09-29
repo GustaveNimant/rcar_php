@@ -6,7 +6,7 @@ require_once "irp_functions.php";
 $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "";
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function block_current_name_build () {
   $here = __FUNCTION__;
@@ -18,7 +18,7 @@ function block_current_name_build () {
   trace ($here, "GET >$irp_key< cleaning done");
 
   if ( isset ($_GET['block_current_name'])) {
-      $nam_blo = array_dollar_get_retrieve_value_of_key ($irp_key, $here);
+      $nam_blo = dollar_get_array_retrieve_value_of_key_of_where ($irp_key, $here);
   }
   else {
 
@@ -32,6 +32,6 @@ function block_current_name_build () {
 
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

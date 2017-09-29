@@ -10,11 +10,11 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "functions to make bubbles";
 $Documentation[$module]['what for'] = "to bubble a sentence divided into words";
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function bubble_bubbled_text_of_text_of_bubble_text ($txt, $bub_txt) {
   $here = __FUNCTION__;
-  entering_in_function ($here . "($txt, $bub_txt)");
+  entering_in_function ($here . " ($txt, $bub_txt)");
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<span title="' . $bub_txt . '">';
@@ -28,9 +28,9 @@ function bubble_bubbled_text_of_text_of_bubble_text ($txt, $bub_txt) {
 
 function bubble_bubbled_text_of_text_of_bubble_text_array ($inp_txt, $bub_txt_a) {
   $here = __FUNCTION__;
-  entering_in_function ($here . "($inp_txt, \$bub_txt_a)");
+  entering_in_function ($here . " ($inp_txt, \$bub_txt_a)");
 
-  if ( is_empty_of_array ($bub_txt_a) ){
+  if ( array_is_empty_of_array ($bub_txt_a) ){
       $out_txt = $inp_txt;
   }
   else {
@@ -78,7 +78,7 @@ function bubble_bubbled_text_of_text_of_bubble_text_array ($inp_txt, $bub_txt_a)
 
 function bubble_la_text_by_key_array_make_of_la_text ($la_txt) {
   $here = __FUNCTION__;
-  entering_in_function ($here . "($la_txt)");
+  entering_in_function ($here . " ($la_txt)");
 
   $bubble_la_text_by_key_array = bubble_la_text_by_key_array_make ();
 
@@ -103,7 +103,7 @@ function bubble_la_text_by_key_array_make_of_la_text ($la_txt) {
 
 function bubble_bubbled_la_text_of_en_text ($en_txt) {
   $here = __FUNCTION__;
-  entering_in_function ($here . "($en_txt)");
+  entering_in_function ($here . " ($en_txt)");
 
   $la_txt = language_translate_of_en_string ($en_txt);
   $la_bub_txt_a = bubble_la_text_by_key_array_make_of_la_text ($la_txt);
@@ -119,7 +119,7 @@ function bubble_bubbled_la_text_of_en_text ($en_txt) {
 
 function bubble_bubbled_capitalized_la_text_of_en_text ($en_bub_txt) {
   $here = __FUNCTION__;
-  entering_in_function ($here . "($en_bub_txt)");
+  entering_in_function ($here . " ($en_bub_txt)");
 
   $la_bub_txt = bubble_bubbled_la_text_of_en_text ($en_bub_txt);
   $la_bub_Txt = string_html_capitalized_of_string ($la_bub_txt); 
@@ -129,7 +129,7 @@ function bubble_bubbled_capitalized_la_text_of_en_text ($en_bub_txt) {
   return $la_bub_Txt;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 
 ?>

@@ -6,7 +6,7 @@ require_once "array_functions.php";
 require_once "surname_catalog_functions.php";
 
 $module = "surname_by_name_array_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 $Documentation[$module]['surname_by_name_array'] = "it is an array equivalent to the surname_catalog";
 # "License : This code is available under the Creative Commons License https://creativecommons.org/licenses/by-sa/3.0/legalcode.fr";
@@ -34,7 +34,7 @@ function surname_by_name_array_of_surname_catalog ($str_sur) {
   $sur_by_nam_a = array_filter ($unser_a);
 
   foreach ($sur_by_nam_a as $nam => $sur ) {
-      check_couple_consistency_of_name_of_surname ($nam, $sur);
+      surname_check_couple_consistency_of_name_of_surname ($nam, $sur);
   }
 
   $sur_by_nam_a = surname_by_name_array_keysort ($sur_by_nam_a);
@@ -60,24 +60,12 @@ function surname_by_name_array_make () {
 
 }
 
-function surname_by_name_array_delete_of_nameofarray_of_array__ ($nam, $sur_by_nam_a) {
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam)");
-
-  unset ($sur_by_nam_a[$nam]);
-
-  # debug_n_check ($here , '$sur_by_nam_a', $sur_by_nam_a);
-  exiting_from_function ($here);
-
-  return $sur_by_nam_a;
-}
-
 function surname_by_name_array_put_of_name_of_surname_of_current_array ($nam, $sur_nam, $sur_by_nam_a) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam, $sur_nam)");
 
-  check_is_empty_of_here_of_string ($here, $nam);
-  check_is_empty_of_here_of_string ($here, $sur_nam);
+  string_check_is_empty_of_where_of_string ($here, $nam);
+  string_check_is_empty_of_where_of_string ($here, $sur_nam);
   # debug_n_check ($here , '$sur_by_nam_a', $sur_by_nam_a);
 
   $sur_by_nam_a [$nam] = $sur_nam;
@@ -93,8 +81,8 @@ function surname_by_name_array_add_n_write_of_name_of_surname_of_current_array (
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam, $sur_nam, \$old_sur_by_nam_a [...])");
 
-  check_is_empty_of_here_of_string ($here, $nam);
-  check_is_empty_of_here_of_string ($here, $sur_nam);
+  string_check_is_empty_of_where_of_string ($here, $nam);
+  string_check_is_empty_of_where_of_string ($here, $sur_nam);
   # debug_n_check ($here , '$old_sur_by_nam_a', $old_sur_by_nam_a);
 
   if ($sur_nam <> ucfirst($sur_nam)){
@@ -130,8 +118,8 @@ function surname_by_name_array_replace_n_write_of_name_of_newsurname_of_current_
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam, $new_sur_nam, \$sur_by_nam_a [...])");
 
-  check_is_empty_of_here_of_string ($here, $nam);
-  check_is_empty_of_here_of_string ($here, $new_sur_nam);
+  string_check_is_empty_of_where_of_string ($here, $nam);
+  string_check_is_empty_of_where_of_string ($here, $new_sur_nam);
 
   if ($new_sur_nam <> ucfirst($new_sur_nam)){
       $new_sur_nam = ucfirst($new_sur_nam);
@@ -168,21 +156,22 @@ function surname_by_name_array_check_are_surnamed_of_nameofarray_of_current_arra
 
   foreach ($nam_a as $k => $nam) {
 
-      if (! is_empty_of_string ($nam)) { /* Improve */
-
-          $sur = $sur_by_nam_a[$nam];
-
-          debug ($here , '$nam', ">$nam<");
-          debug ($here , '$sur', ">$sur<");
-          
-          if (is_empty_of_string ($sur)) {
-              warning ($here, "Array >$nam_arr< NO surname for name >$nam<");
-              irp_store_force ('name_without_surname', $nam, 'entry_display');
-              exiting_from_function ($here);
-              include 'surname_catalog_add.php';
-              exit;
+      if (isset ($nam)) { /* Improve */
+          if (! string_is_empty_of_string ($nam)) { /* Improve */
+              
+              $sur = $sur_by_nam_a[$nam];
+              
+              debug ($here , '$nam', ">$nam<");
+              debug ($here , '$sur', ">$sur<");
+              
+              if (string_is_empty_of_string ($sur)) {
+                  warning ($here, "Array >$nam_arr< NO surname for name >$nam<");
+                  irp_store_force ('name_without_surname', $nam, 'entry_display');
+                  exiting_from_function ($here);
+                  include 'surname_catalog_add.php';
+                  exit;
+              }
           }
-          
       }
   }
   
@@ -205,6 +194,6 @@ function surname_by_name_array_build () {
 
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

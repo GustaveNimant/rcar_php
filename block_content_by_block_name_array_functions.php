@@ -9,7 +9,7 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function block_content_formatting_of_block_content ($con_blo) {
   $here = __FUNCTION__;
@@ -33,7 +33,7 @@ function block_content_by_block_name_array_build () {
 
 /* Use exception*/
 
-  if (is_empty_of_array ($nam_blo_a)) {
+  if (array_is_empty_of_array ($nam_blo_a)) {
     $con_by_nam_blo_a = array ();
   }
   else {
@@ -49,7 +49,7 @@ function block_content_by_block_name_array_build () {
 /* Read Block_content from Disk */      
       $con_blo = file_content_read ($fno_blo);
 
-      if (is_empty_of_string ($con_blo)) {
+      if (string_is_empty_of_string ($con_blo)) {
           fatal_error ($here, "block >$nam_blo< has an EMPTY content");
       }
       
@@ -82,6 +82,6 @@ function block_content_formatted_by_block_name_array_build () {
   return $con_blo_for_by_nam_blo_a;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

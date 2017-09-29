@@ -8,7 +8,7 @@ $module = "block_current_functions";
 
 # $Documentation[$module]['surname_local_array'] = "the array of the surnames that begins as the current word";
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function block_current_content_build () {
   $here = __FUNCTION__;
@@ -19,7 +19,7 @@ function block_current_content_build () {
   $con_blo_cur = array_retrieve_value_of_key_of_array ($nam_blo_cur, $con_blo_a);
 
   debug_n_check ($here, '$con_blo_cur', $con_blo_cur);
-  
+  exiting_from_function ($here);
   return $con_blo_cur;
 }
 
@@ -31,6 +31,7 @@ function block_current_four_elements_array_build () {
   $ele_a = four_elements_array_off_block_content ($con_blo_cur);
 
   debug_n_check ($here, '$ele_a', $ele_a);
+  exiting_from_function ($here);
   return $ele_a;
 }
 
@@ -44,7 +45,7 @@ function item_current_content_build () {
   $result = array_retrieve_value_of_key_of_array ($key, $ele_a);
 
   debug_n_check ($here, '$result', $result);
-  
+  exiting_from_function ($here);
   return $result;
 }
 
@@ -58,7 +59,7 @@ function item_current_justification_build () {
   $result = array_retrieve_value_of_key_of_array ($key, $ele_a);
 
   debug_n_check ($here, '$result', $result);
-  
+  exiting_from_function ($here);
   return $result;
 }
 
@@ -76,8 +77,8 @@ function block_current_file_fullname_build () {
   $fno_blo_cur = $hdir . $nam_blo_cur . '.' .  $ext_blo;
 
   debug_n_check ($here , '$fno_blo_cur', $fno_blo_cur);
-  exiting_from_function ($here);
 
+  exiting_from_function ($here);
   return $fno_blo_cur;
 
 }
@@ -107,6 +108,7 @@ function item_previous_content_build () {
   $result = array_retrieve_value_of_key_of_array ($key, $ele_a);
 
   debug_n_check ($here, '$result', $result);
+  exiting_from_function ($here);
   
   return $result;
 }
@@ -121,11 +123,11 @@ function block_previous_sha1_build () {
   $result = array_retrieve_value_of_key_of_array ($key, $ele_a);
 
   debug_n_check ($here, '$result', $result);
-  
+  exiting_from_function ($here);  
   return $result;
 }
 
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

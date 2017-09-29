@@ -19,14 +19,14 @@ $Documentation[$module]['entry_kind'] = "is a lower case word expressed in engli
 $Documentation[$module]['entry_block_kind'] = "is a lower case word expressed in english. Ex.: paragraph";
 $Documentation[$module]['block_name_array'] = "is the same as item_name_array";
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 /* Improve divide module */
 /* Tools */
 
 function block_current_display_and_link_of_surname_by_name_array_of_entry_name_of_block_current_name ($sur_by_nam_a, $nam_ent, $nam_blo_cur, $lan) {
   $here = __FUNCTION__;
-  entering_in_function ($here . "($nam_ent, $nam_blo_cur");
+  entering_in_function ($here . " ($nam_ent, $nam_blo_cur");
 
   $sur_blo = surname_of_name_of_surname_by_name_array ($nam_blo_cur, $sur_by_nam_a);
   $sur_blo = string_html_capitalized_of_string ($sur_blo);
@@ -315,6 +315,6 @@ function entry_display_build (){
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

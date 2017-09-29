@@ -5,7 +5,7 @@ require_once "irp_functions.php";
 require_once "entry_display_functions.php";
 
 $module = "block_list_reorder_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 /* Tools */
 
@@ -222,5 +222,5 @@ function block_list_reorder_build () {
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 ?>

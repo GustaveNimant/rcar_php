@@ -7,7 +7,7 @@ $module = module_name_of_module_nameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function father_n_son_stack_module_push_of_father_of_son ($nam_fat, $nam_son) {
   $here = __FUNCTION__;
@@ -34,7 +34,7 @@ function father_n_son_stack_module_push_of_father_of_son ($nam_fat, $nam_son) {
       $duo = $nam_fat . ' -> ' . $nam_son;
 
       $fat_n_son_a = $_SESSION['father_n_son_stack_module'];
-      if (!is_empty_of_array ($fat_n_son_a)) { 
+      if (!array_is_empty_of_array ($fat_n_son_a)) { 
           array_push ($fat_n_son_a, $duo);
           trace ($here, "push \$duo >$duo< in father_n_son_stack_module" );
       }
@@ -70,6 +70,6 @@ function father_n_son_stack_module_push_of_current_module ($nam_son) {
   return ;
   }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

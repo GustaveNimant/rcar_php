@@ -1,9 +1,7 @@
 <?php
 include "session.php";
-require_once "home_functions.php";
-require_once "father_n_son_stack_module_functions.php";
+require_once "irp_functions.php";
 require_once "mail.php";
-require_once "debug_functions.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
@@ -30,6 +28,7 @@ if (file_exists ($nof_deb) ){
 }
 else {	
      $_SESSION['debug'] = array ();
+     warning ($here, "File >$nof_deb< is missing");
 }
 
 $program_name = $_SESSION['parameters']['program_name'];
@@ -39,6 +38,12 @@ $subjet = "Connexion à $program_name par $usr_ip";
 $message  = $usr_ip . " vient de se connecter sur $Program_name\r\n";
 $message .= "http://fr.geoipview.com/?q=" . $usr_ip;
 
+# stack_function_level_array
+
+array_push ($_SESSION['parameters']['stack_function_level_array'], "UP");
+array_push ($_SESSION['parameters']['stack_function_level_array'], "TOP");
+array_push ($_SESSION['parameters']['stack_function_level_array'], $module);
+
 mail_send_of_subject_of_message ($subjet, $message);
 
 # phpinfo();
@@ -46,26 +51,21 @@ mail_send_of_subject_of_message ($subjet, $message);
 $program_name = $_SESSION['parameters']['program_name'];
 $Program_name = ucfirst ($program_name);
 
-/* print "<pre>"; */
-/* print ("\$Program_name $Program_name<br>"); */
-/* print "</pre>"; */
-
 date_default_timezone_set ("Europe/Paris");
-$log_str = date("j F Y à G\hi:s");  
-file_put_contents ("debug", $log_str . "\n");
-file_put_contents ("$Program_name.log", $log_str . "\n");
-
-array_push ($_SESSION['parameters']['stack_function_level_array'], $module);
+$dat_str = date("j F Y à G\hi:s");
+$log_str = $dat_str . "\n";
+file_put_contents ("debug", $log_str); 
+$nof_log = "$Program_name.log";
+file_put_contents ('nof_log', $log_str);
 
 # starts program 
-
-/* print "<pre>"; */
-/* print "module index.php calling home "; */
-/* print "</pre>"; */
+entering_in_module ($module);
 
 $html_str = irp_provide ('home', $module . '_build');
 
 print $html_str;
+
+exiting_from_module ($module);
 
 ?>
  

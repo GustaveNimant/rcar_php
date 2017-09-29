@@ -73,6 +73,7 @@ function git_diff_item_name () {
 	   }
 
   exiting_from_function ($here);
+  return;
 }
 
 ?>

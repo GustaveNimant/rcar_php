@@ -5,6 +5,7 @@ require_once "git_command_functions.php";
 require_once "father_n_son_stack_module_functions.php";
 
 $module = "git_command";
+
 entering_in_module ($module);
 
 father_n_son_stack_entity_push_of_current_entity ($module);

@@ -10,7 +10,7 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function item_current_modify_form_build () {
   $here = __FUNCTION__;
@@ -31,7 +31,7 @@ function item_current_modify_form_build () {
   $html_str .= '<form ' . "\n";
   $html_str .= 'method="get" action="' . 'block_current_modify_save.php' . ">\n";
   
-  $html_str .= form_array_dollar_get_store_of_key_of_value_of_here ('item_current_action', 'modify', $here);
+  $html_str .= dollar_get_array_store_form_of_key_of_value_of_where ('item_current_action', 'modify', $here);
 
   $html_str .= '<br><br>';
   $html_str .= irp_provide ('item_current_modify_form_current_content', $here);
@@ -57,6 +57,6 @@ function item_current_modify_form_build () {
 
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

@@ -6,7 +6,7 @@ require_once "irp_functions.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function block_name_array_update_after_block_rename ($nam_ent, $old_nam_blo, $new_nam_blo, $old_nam_blo_a) {
   $here = __FUNCTION__;
@@ -80,6 +80,6 @@ function block_name_array_build () {
   return $nam_blo_a;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

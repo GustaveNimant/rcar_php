@@ -5,7 +5,7 @@ require_once "management_functions.php";
 require_once "irp_functions.php";
 
 $module = "entry_rename_functions";
-# entering_in_module ($module);
+entering_in_module ($module);
 
 function entry_rename_display_section_build (){
   $here = __FUNCTION__;
@@ -145,7 +145,7 @@ function entry_rename_build () {
   $html_str .= irp_provide ('entry_rename_justification_section', $here);
 
   $nof_mod = 'entry_list_display.php';
-  $nam_ent = array_dollar_get_retrieve_value_of_key ('entry_name', $here);
+  $nam_ent = dollar_get_array_retrieve_value_of_key_of_where ('entry_name', $here);
   debug_n_check ($here, '$nam_ent', $nam_ent);
 
   $html_str .= irp_provide ('entry_rename_final_section', $here);
@@ -161,6 +161,6 @@ function entry_rename_build () {
 
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

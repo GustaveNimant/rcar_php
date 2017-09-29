@@ -5,6 +5,7 @@ require_once "file_functions.php";
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
 function html_warning ($her, $la_mes){
+    $here = __FUNCTION__; 
 
     $lan = $_SESSION['parameters']['language'];
 
@@ -32,6 +33,7 @@ function html_warning ($her, $la_mes){
 }
 
 function warning ($her, $la_mes){
+    $here = __FUNCTION__; 
 
     $html_str = html_warning ($her, $la_mes);
     print $html_str;
@@ -41,6 +43,7 @@ function warning ($her, $la_mes){
 }
 
 function html_fatal_error ($her, $en_mes){
+    $here = __FUNCTION__; 
 
     $html_str  = '';
     $html_str .= '<html>' . "\n";
@@ -58,6 +61,7 @@ function html_fatal_error ($her, $en_mes){
 }
 
 function print_fatal_error ($her, $mes_exp, $mes_fou, $mes_cur){
+    $here = __FUNCTION__; 
 
     $en_mes  = '<br>';
     $en_mes .= '&nbsp;Expecting : ' . $mes_exp . '<br> '; 
@@ -76,6 +80,7 @@ function print_fatal_error ($her, $mes_exp, $mes_fou, $mes_cur){
     print '</pre> ';
 
     die ();
+    return;
 }
 
 ?>

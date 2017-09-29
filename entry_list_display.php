@@ -1,19 +1,22 @@
 <?php
 include "session.php";
 require_once "father_n_son_stack_module_functions.php";
-require_once "entry_list_display_functions.php";
 
-$module = "entry_list_display";
-# entering_in_module ($module);
+$module = module_name_of_module_nameoffile (__FILE__);
+
+$Documentation[$module]['what is it'] = "it is ...";
+$Documentation[$module]['what for'] = "to ...";
+
+entering_in_module ($module);
 
 father_n_son_stack_entity_push_of_current_entity ($module);
 
-irp_path_clean_register_of_top_key_of_bottom_key ($module, 'GET'); 
+# SKIPPED irp_path_clean_register_of_top_key_of_bottom_key ($module, 'GET'); 
 
 $html_str = irp_provide ($module, $module . "_build");
 
 print $html_str;
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

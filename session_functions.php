@@ -4,7 +4,81 @@ require_once "session_array_initialize.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
-# entering_in_module ($module);
+entering_in_module ($module);
+
+function session_check_not_empty_array_of_key ($key) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($key)");
+
+  $arr_a = $_SESSION[$key]; 
+
+  if (array_is_empty_of_array ($arr_a)) {
+      print_fatal_error ($here,
+      "Array \$_SESSION['\$key']['$sub_key'] were NOT EMPTY",
+      'it is EMPTY',
+      'Check'
+      );
+  }
+  
+  exiting_from_function ($here);
+  return;
+}
+
+function session_check_end_value_of_key_of_sub_key_of_value ($key, $sub_key, $val) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($key, $sub_key, $val)");
+
+  $arr_a = $_SESSION[$key][$sub_key];
+
+  if (is_array ($arr_a) ) {
+ 
+      $end_ele  = end ($arr_a);
+      if ( $end_ele != $val) {
+          print_fatal_error ($here,
+          "end element of array \$_SESSION['$key']['$sub_key'] were equal to >$val<",
+          "end element is >$end_ele<",
+          'Check'
+          );
+      }
+  }
+  else {
+      print_fatal_error ($here,  
+      "\$_SESSION['$key']['$sub_key'] were an ARRAY",
+      "it is NOT",
+      "Check");
+  }
+
+  exiting_from_function ($here);
+  return;
+}
+
+function session_check_end_value_of_key_of_value ($key, $val) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($key, $val)");
+
+  $arr_a = $_SESSION[$key]; 
+
+  if (is_array ($arr_a) ) {
+      
+      $end_ele  = end ($arr_a);
+      if ( $end_ele != $val) {
+          print_fatal_error ($here,
+          "end element of array \$_SESSION['$key'] were equal to >$val<",
+          "end element is >$end_ele<",
+          'Check'
+          );
+      }
+  }
+  else {
+      print_fatal_error ($here,  
+      "\$_SESSION['$key'] were an ARRAY",
+      "it is NOT",
+      "Check");
+  }
+
+  exiting_from_function ($here);
+  return;
+}
 
 function session_remove () {
   $here = __FUNCTION__;
@@ -66,8 +140,59 @@ function session_obsolete_remove () {
   }
 
   exiting_from_function ($here);
+  return;
 }
 
-# exiting_from_module ($module);
+function session_array_push_inplace_of_key_of_value ($key, $val) {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+# Example array $_SESSION['father_n_son_stack_entity'] 
+ 
+    if (isset ($_SESSION)) {
+        $arr_a = $_SESSION[$key];
+        if ( is_array ($arr_a) ) {
+            if ( ! array_value_exists ($val, $arr_a) ) {
+                array_push_inplace_of_name_of_value_of_array ($key, $val, $arr_a);
+                $_SESSION[$key] = $val;
+            }
+        }
+    }
+    
+    session_check_end_value_of_key_of_value ($key, $val);
+    
+    $log_str = "Value >$val< has been successfully pushed inplace in \$_SESSION['$key']['$sub_key'] array";
+    file_log_write ($here, $log_str);
+    
+    exiting_from_function ($here);
+return;
+}
+
+function session_array_push_inplace_of_key_of_sub_key_of_value ($key, $sub_key, $val) {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+# Example $_SESSION['irp_register']['newname'] 
+ 
+    if (isset ($_SESSION)) {
+        $arr_a = $_SESSION[$key][$sub_key];
+        if ( is_array ($arr_a) ) {
+            if ( ! array_value_exists ($val, $arr_a) ) {
+                array_push_inplace_of_name_of_value_of_array ($sub_key, $val, $arr_a);
+                $_SESSION[$key][$sub_key] = $val;
+            }
+        }
+    }
+    
+    session_check_value_of_key_of_sub_key_of_value ($key, $sub_key, $val);
+    
+    $log_str = "Value >$val< has been successfully pushed inplace in \$_SESSION['$key']['$sub_key'] array";
+    file_log_write ($here, $log_str);
+    
+    exiting_from_function ($here);
+return;
+}
+
+exiting_from_module ($module);
 
 ?>

@@ -4,7 +4,7 @@ require_once "language_translate_functions.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 $Documentation[$module]['module_fullnameoffile'] = "the name of the php file with its path"; 
 $Documentation[$module]['module_nameoffile'] = "the name of the php file without its path"; 
@@ -57,6 +57,6 @@ function link_to_return_of_return_module_nameoffile ($nof_mod) {
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

@@ -7,7 +7,7 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "the current content of current item as placeholder"; 
 $Documentation[$module]['what for'] = "to be modified by user"; 
 
-# entering_in_module ($module)
+entering_in_module ($module);
 
 function item_current_modify_form_current_content_title_build (){
   $here = __FUNCTION__;
@@ -64,6 +64,6 @@ function item_current_modify_form_current_content_build (){
   return $html_str;
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

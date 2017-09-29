@@ -6,24 +6,26 @@ require_once "string_functions.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
-# entering_in_module ($module);
+entering_in_module ($module);
 
 /* Improve block_surname are surname */
 
 function block_file_rename ($nam_ent, $old_nam_blo, $new_nam_blo, $ext_fil) {
-  $here = __FUNCTION__;
-  entering_in_function ($here . "($nam_ent, $old_nam_blo, $new_nam_blo, $ext_fil)");
-
-  $dir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
-
-  $old_nof = $dir . $old_nam_blo . '.' . $ext_fil;  
-  $new_nof = $dir . $new_nam_blo . '.' . $ext_fil;
-
-  file_rename ($old_nof, $new_nof);
-
-  debug_n_check ($here , "old block file name", $old_nof);
-  debug_n_check ($here , "new block file name", $new_nof);
-  exiting_from_function ($here);
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($nam_ent, $old_nam_blo, $new_nam_blo, $ext_fil)");
+    
+    $dir = specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
+    
+    $old_nof = $dir . $old_nam_blo . '.' . $ext_fil;  
+    $new_nof = $dir . $new_nam_blo . '.' . $ext_fil;
+    
+    file_rename ($old_nof, $new_nof);
+    
+    debug_n_check ($here , "old block file name", $old_nof);
+    debug_n_check ($here , "new block file name", $new_nof);
+    exiting_from_function ($here);
+    
+    return;
 }
 
 function block_current_rename_save_build (){
@@ -70,9 +72,9 @@ function block_current_rename_save_build (){
       surname_by_name_array_replace_n_write_of_name_of_newsurname_of_current_array ($new_nam_blo_cur, $new_sur_blo_cur, $sur_by_nam_a);
   }
   else {
-  surname_by_name_array_add_n_write_of_name_of_surname_of_current_array ($new_nam_blo_cur, $new_sur_blo_cur, $sur_by_nam_a);
+      surname_by_name_array_add_n_write_of_name_of_surname_of_current_array ($new_nam_blo_cur, $new_sur_blo_cur, $sur_by_nam_a);
   }
-
+  
   /* Git */
 
   $sur_by_nam_a = irp_provide ('surname_by_name_array', $here); /* Verify */
@@ -92,6 +94,6 @@ function block_current_rename_save_build (){
   
 }
 
-# exiting_from_module ($module);
+exiting_from_module ($module);
 
 ?>

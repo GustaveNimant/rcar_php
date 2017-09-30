@@ -2,6 +2,7 @@
 
 require_once "string_functions.php";
 require_once "array_functions.php";
+require_once "error_functions.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
 

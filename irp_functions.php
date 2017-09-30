@@ -1,14 +1,5 @@
 <?php
 
-require_once "entry_create_functions.php";
-require_once "entry_create_save_functions.php";
-require_once "entry_display_functions.php";
-require_once "entry_list_display_functions.php";
-require_once "entry_name_array_functions.php";
-require_once "entry_name_functions.php";
-
-require_once "error_functions.php";
-
 require_once "block_content_by_block_name_array_functions.php";
 require_once "block_content_linked_by_block_name_array_functions.php";
 
@@ -42,6 +33,14 @@ require_once "block_next_content_functions.php";
 require_once "block_rename_functions.php";
 require_once "block_surname_functions.php";
 
+require_once "entry_create_functions.php";
+require_once "entry_create_save_functions.php";
+require_once "entry_display_functions.php";
+require_once "entry_list_display_functions.php";
+require_once "entry_name_array_functions.php";
+require_once "entry_name_functions.php";
+
+require_once "error_functions.php";
 
 require_once "father_n_son_stack_entity_functions.php";
 require_once "father_n_son_stack_module_functions.php";

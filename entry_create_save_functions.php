@@ -1,5 +1,4 @@
 <?php
-
 require_once "array_functions.php";
 require_once "common_html_functions.php";
 require_once "language_translate_functions.php";
@@ -9,12 +8,9 @@ require_once "file_functions.php";
 $module = "entry_create_functions";
 entering_in_module ($module);
 
-function entry_create_save_subdirectory_create_of_entry_name_build () {
+function entry_create_save_subdirectory_create_of_entry_name ($nam_ent) {
   $here = __FUNCTION__;
   entering_in_function ($here);
-
-  $sur_ent = irp_provide ('entry_newsurname', $here);  
-  $nam_ent = word_name_capitalized_of_string_surname ($sur_ent);
 
   string_check_entry_name_of_string ($nam_ent);
   $lan = $_SESSION['parameters']['language'];
@@ -83,7 +79,7 @@ function entry_create_save_build () {
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_html_initial_section', $here);
-  $html_str .= irp_provide ('entry_create_save_subdirectory_create_of_entry_name', $here);
+  $html_str .= entry_create_save_subdirectory_create_of_entry_name ($nam_ent);
   $html_str .= entry_create_save_update_of_surname_by_name_array_of_entry_newsurname ($sur_by_nam_a, $new_sur_ent);
   $html_str .= irp_provide ('git_command_n_commit_html', $here);
 

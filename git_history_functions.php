@@ -1,5 +1,4 @@
 <?php
-include "session.php";
 require_once "irp_functions.php";
 require_once "common_html_functions.php";
 

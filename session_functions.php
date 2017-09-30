@@ -1,6 +1,5 @@
 <?php
 require_once "file_functions.php";
-require_once "session_array_initialize.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 

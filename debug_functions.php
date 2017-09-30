@@ -1,5 +1,5 @@
 <?php
-require_once "basics.php";
+require_once "basics_functions.php";
 require_once "file_functions.php";
 require_once "string_functions.php";
 require_once "debug_html_functions.php";

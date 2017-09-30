@@ -17,7 +17,7 @@ function button_close_window () {
     
     $lan = $_SESSION['parameters']['language'];
 
-    $scr_act = 'close.php';
+    $scr_act = 'close_script.php';
     $en_bub = 'close the window';
     $en_nam_act = 'leave';
     

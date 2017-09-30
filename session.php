@@ -1,11 +1,13 @@
 <?php
-require_once "basics.php";
+if(isset ($_SERVER['REMOTE_ADDR'])){
+    $usr_ip = $_SERVER['REMOTE_ADDR'];
+    $eol = '<br>';
+}
+else {
+    $usr_ip = "None";
+    $eol = "\n";
+}
 
-/*  session_name() retourne le nom de la session courante. Si le paramètre name est fourni, session_name() modifiera le nom de la session et retournera l'ancien nom de la session. */
-
-/* Le nom de la session est réinitialisé à la valeur par défaut, stockée dans session.name lors du démarrage. Ainsi, vous devez appeler session_name() pour chaque demande (et avant que les fonctions session_start() ou session_register() ne soient appelées).  */
-
-$usr_ip = user_ip ();
 $usr_ip_m = str_replace ('.', '-', $usr_ip);
 $usr_ip_m = str_replace (':', '-', $usr_ip_m);
 
@@ -22,8 +24,6 @@ if (empty($_SESSION['count'])) {
 } else {
    $_SESSION['count']++;
 }
-
-$eol = end_of_line ();
 
 #print "session id >$ses_id<" . $eol;
 print "session count >" . $_SESSION['count'] . "<" . $eol;

@@ -24,7 +24,7 @@ function tools_display ($what) {
         print_html_array ($here, $what, $ses_reg_a);
         break;
 
-    case 'dollar_get_array' :
+    case 'get_hash' :
         $def_var_a = get_defined_vars();
         print_html_array ($here, $what, $def_var_a);
         break;
@@ -88,8 +88,8 @@ function tools_display ($what) {
         print_html_array ($here, $what, $irp_sta_a);
         break;
         
-    case 'last_dollar_get_register' :
-        $ses_reg_a = $_SESSION['last_dollar_get_register'];
+    case 'top_key_in_get_hash_register' :
+        $ses_reg_a = $_SESSION['top_key_in_get_hash_register'];
         print_html_array ($here, $what, $ses_reg_a);
         break;
         
@@ -343,8 +343,8 @@ function tools_write ($what) {
         file_array_write ($fno, $arr_a);
         break;
         
-    case 'last_dollar_get_register' :
-        $arr_a = $_SESSION['last_dollar_get_register'];
+    case 'top_key_in_get_hash_register' :
+        $arr_a = $_SESSION['top_key_in_get_hash_register'];
         file_array_write ($fno, $arr_a);
         break;
         

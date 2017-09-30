@@ -30,7 +30,7 @@ function arce_menuselect_entry_build () {
   foreach ($nam_ent_a as $nam_ent) {
       $sur_ent = surname_of_name_of_surname_by_name_array ($nam_ent, $sur_by_nam_a);
 
-      $ent_sel = $_SESSION['last_dollar_get_register']['entry_name'];  /* entry already selected */
+      $ent_sel = $_SESSION['top_key_in_get_hash_register']['entry_name'];  /* entry already selected */
       if ( (isset ($ent_sel)) && $ent_sel == $nam_ent ) {
           $html_str .= '    <option value="' . $nam_ent . '" selected> ' . $sur_ent . '</option> ' . "\n";
       }else {

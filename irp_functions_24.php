@@ -6,7 +6,7 @@ require_once "block_content_by_block_name_array_functions.php";
 require_once "block_content_linked_by_block_name_array_functions.php";
 
 require_once "block_current_delete_functions.php";
-require_once "block_current_display_actions_functions.php";
+require_once "block_current_actions_display_functions.php";
 require_once "block_current_display_functions.php";
 require_once "block_current_functions.php";
 require_once "block_current_name_functions.php";
@@ -211,7 +211,7 @@ function irp_store_from_get ($get_key, $module) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($get_key)");
 
-  $get_val = array_dollar_get_retrieve_value_of_key ($get_key, $module);
+  $get_val = get_hash_retrieve_value_of_key ($get_key, $module);
   /* debug ($here , "get_key",  $get_key); */
   /* debug ($here , "get_val",  $get_val); */
 
@@ -367,7 +367,7 @@ function irp_build_n_store ($irp_key, $nam_fat) {
       irp_path_clean_register_of_top_key_of_bottom_key ('entry_display', $irp_key);
       trace ($here, "\$_GET['$irp_key'] path has been cleaned");
       
-      $irp_val_sal = array_dollar_get_retrieve_value_of_key ($irp_key, $here);
+      $irp_val_sal = get_hash_retrieve_value_of_key ($irp_key, $here);
       $irp_val = irp_clean_value_of_irp_key ($irp_key, $irp_val_sal);
       
 /* father_n_son_stack_entity */

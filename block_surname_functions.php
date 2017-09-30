@@ -14,14 +14,14 @@ function block_surname_build () {
   if ( isset ($_GET['block_current_name_input'])) {
    
 /* create surname from user GET */
-      $sur_blo = dollar_get_array_retrieve_value_of_key_of_where ('block_current_name_input', $here);
+      $sur_blo = get_hash_retrieve_value_of_key_of_where ('block_current_name_input', $here);
   }
   else {
 
       if ( isset ($_GET['block_surname'])) {
           
 /* get surname from user selection GET */
-          $sur_blo = dollar_get_array_retrieve_value_of_key_of_where ('block_surname', $here);
+          $sur_blo = get_hash_retrieve_value_of_key_of_where ('block_surname', $here);
       }
       else {
   

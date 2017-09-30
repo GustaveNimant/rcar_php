@@ -1,84 +1,6 @@
 <?php
 
-require_once "block_content_by_block_name_array_functions.php";
-require_once "block_content_linked_by_block_name_array_functions.php";
-
-require_once "block_current_delete_functions.php";
-require_once "block_current_display_actions_functions.php";
-require_once "block_current_display_functions.php";
-require_once "block_current_functions.php";
-require_once "block_current_name_functions.php";
-require_once "block_current_rename_form_functions.php";
-require_once "block_current_rename_justification_functions.php";
-require_once "block_current_rename_save_functions.php";
-
-require_once "block_list_neworder_functions.php";
-
-require_once "block_name_array_functions.php";
-
-require_once "block_new_content_functions.php";
-require_once "block_new_create_block_list_functions.php";
-require_once "block_new_create_button_save_functions.php";
-require_once "block_new_create_content_functions.php";
-require_once "block_new_create_content_textarea_functions.php";
-require_once "block_new_create_form_functions.php";
-require_once "block_new_create_form_page_title_functions.php";
-require_once "block_new_create_save_functions.php";
-require_once "block_new_create_surname_functions.php";
-require_once "block_new_create_surname_inputtypetext_functions.php";
-require_once "block_new_name_functions.php";
-
-require_once "block_next_content_functions.php";
-
-require_once "block_rename_functions.php";
-require_once "block_surname_functions.php";
-
-require_once "entry_create_functions.php";
-require_once "entry_create_save_functions.php";
-require_once "entry_display_functions.php";
-require_once "entry_list_display_functions.php";
-require_once "entry_name_array_functions.php";
-require_once "entry_name_functions.php";
-
-require_once "error_functions.php";
-
-require_once "father_n_son_stack_entity_functions.php";
-require_once "father_n_son_stack_module_functions.php";
-require_once "git_command_functions.php";
-
-require_once "home_functions.php";
-require_once "irp_path_functions.php";
-
-require_once "item_current_modify_display_functions.php";
-require_once "item_current_content_display_functions.php";
-require_once "item_current_content_linked_by_item_name_array_functions.php";
-require_once "item_current_justification_display_functions.php";
-
-require_once "item_current_modify_form_current_content_functions.php";
-require_once "item_current_modify_form_functions.php";
-require_once "item_current_modify_form_new_create_content_functions.php";
-require_once "item_current_modify_form_new_create_justification_functions.php";
-require_once "item_current_modify_form_page_title_functions.php";
-
-require_once "item_new_content_functions.php"; 
-
-require_once "item_new_create_content_form_functions.php"; 
-require_once "item_new_create_content_form_textarea_functions.php";
-require_once "item_new_create_content_form_title_n_help_functions.php";
-require_once "item_new_create_justification_functions.php"; 
-require_once "item_new_create_justification_textarea_functions.php";
-require_once "item_new_create_justification_title_n_help_functions.php";
-require_once "item_new_name_functions.php"; 
-
-require_once "item_previous_content_display_functions.php";
-
-require_once "label_functions.php";
-require_once "language_functions.php";
-require_once "language_selection_functions.php";
-require_once "pervasive_html_functions.php";
-require_once "quit_functions.php";
-require_once "surname_by_name_array_functions.php";
-require_once "user_information_functions.php";
+require_once "build_requirements.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
 
@@ -215,7 +137,7 @@ function irp_store_from_get ($get_key, $module) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($get_key)");
 
-  $get_val = dollar_get_array_retrieve_value_of_key_of_where ($get_key, $module);
+  $get_val = get_hash_retrieve_value_of_key_of_where ($get_key, $module);
   /* debug ($here , "get_key",  $get_key); */
   /* debug ($here , "get_val",  $get_val); */
 
@@ -366,7 +288,7 @@ function irp_build_n_store ($irp_key, $nam_fat) {
   else {
 /* $_GET */
 
-      $irp_val_sal = dollar_get_array_retrieve_value_of_key_of_where ($irp_key, $here);
+      $irp_val_sal = get_hash_retrieve_value_of_key_of_where ($irp_key, $here);
       $irp_val = irp_clean_value_of_irp_key ($irp_key, $irp_val_sal);
 
       $irp_fat = "GET";  /* Improve true ??? */

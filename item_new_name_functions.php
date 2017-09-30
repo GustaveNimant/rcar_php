@@ -11,7 +11,7 @@ function item_new_name_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $nam_ite_new = dollar_get_array_retrieve_value_of_key_of_where ('item_new_name', $here);
+  $nam_ite_new = get_hash_retrieve_value_of_key_of_where ('item_new_name', $here);
   
   exiting_from_function ($here);
 

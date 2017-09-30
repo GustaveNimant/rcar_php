@@ -43,8 +43,8 @@ function swap_two_blocks ($nam_blo_a) {
   entering_in_function ($here);
   # debug_n_check ($here , '$nam_blo_a', $nam_blo_a); 
 
-  $nam_blo_fr = dollar_get_array_retrieve_value_of_key_of_where ('from', $here);
-  $nam_blo_to = dollar_get_array_retrieve_value_of_key_of_where ('to', $here);
+  $nam_blo_fr = get_hash_retrieve_value_of_key_of_where ('from', $here);
+  $nam_blo_to = get_hash_retrieve_value_of_key_of_where ('to', $here);
 
   $pro_key_fr = array_retrieve_key_of_value ($nam_blo_fr, $nam_blo_a, $here);
   $pro_key_to = array_retrieve_key_of_value ($nam_blo_to , $nam_blo_a, $here);
@@ -62,8 +62,8 @@ function after_one_block ($nam_blo_a) {
   entering_in_function ($here);
   debug_n_check ($here , '$nam_blo_a', $nam_blo_a); 
  
-  $nam_blo_fr = dollar_get_array_retrieve_value_of_key_of_where ('from', $here);
-  $nam_blo_to = dollar_get_array_retrieve_value_of_key_of_where ('to', $here);
+  $nam_blo_fr = get_hash_retrieve_value_of_key_of_where ('from', $here);
+  $nam_blo_to = get_hash_retrieve_value_of_key_of_where ('to', $here);
 
   debug_n_check ($here , "block name from:", $nam_blo_fr); 
   debug_n_check ($here , "block name to:", $nam_blo_to);  
@@ -98,8 +98,8 @@ function before_one_block ($nam_blo_a) {
   entering_in_function ($here);
   debug_n_check ($here , '$nam_blo_a', $nam_blo_a); 
  
-  $nam_blo_fr = dollar_get_array_retrieve_value_of_key_of_where ('from', $here);
-  $nam_blo_to = dollar_get_array_retrieve_value_of_key_of_where ('to', $here);
+  $nam_blo_fr = get_hash_retrieve_value_of_key_of_where ('from', $here);
+  $nam_blo_to = get_hash_retrieve_value_of_key_of_where ('to', $here);
 
   debug_n_check ($here , "block name from:", $nam_blo_fr); 
   debug_n_check ($here , "block name to:", $nam_blo_to);  
@@ -135,7 +135,7 @@ function block_current_name_reordered_array_of_block_name_array_of_language ($ol
   entering_in_function ($here . " (... array, $lan)");
   # debug_n_check ($here , "old block order array", $old_pro_a);
 
-  $order_lan = dollar_get_array_retrieve_value_of_key_of_where ('order', $here);
+  $order_lan = get_hash_retrieve_value_of_key_of_where ('order', $here);
   debug_n_check ($here , '$order_lan', $order_lan);
   $order_lan = lcfirst ($order_lan);
   $order = language_translate_to_english_of_la_string ($lan, $order_lan);
@@ -317,7 +317,7 @@ function block_list_neworder_build () {
   $html_str .= irp_provide ('block_list_neworder_display', $here); 
   $html_str .= irp_provide ('block_list_neworder_justification', $here); 
   $html_str .= '<br><br> ';
-  $html_str .= button_submit_centered_of_button_value_en_of_language ('save', $lan); 
+  $html_str .= inputtypesubmit_of_en_action_name ('save'); 
   $html_str .= '</form> ' . "\n";
   $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent, $sur_ent, $nof_mod, $lan);
   $html_str .= irp_provide ('pervasive_html_final_section', $here); 

@@ -15,7 +15,7 @@ print $html_str;
 
 irp_path_clean_register_of_top_key_of_bottom_key ($module, 'GET');
 
-# irp_path_clean_from_dollar_get_key_of_module ($module);
+# irp_path_clean_from_get_hash_key_of_module ($module);
 /* irp_path_clean_register_of_top_key_of_bottom_key ($module, 'entry_name'); */
 /* irp_path_clean_register_of_top_key_of_bottom_key ($module, 'user_information'); */
 /* irp_path_clean_register_of_top_key_of_bottom_key ($module, 'justify'); */

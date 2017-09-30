@@ -9,7 +9,7 @@ $Documentation[$module]['what for'] = "to delete, show history, rename";
 
 entering_in_module ($module);
 
-function block_current_display_actions_title_build () {
+function block_current_actions_display_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -32,7 +32,7 @@ function block_current_display_actions_title_build () {
   return $html_str;
 }
 
-function block_current_display_actions_link_of_en_block_action ($nof_mod, $nam_ent, $nam_blo_cur, $la_act_blo) {
+function block_current_actions_display_link_of_en_block_action ($nof_mod, $nam_ent, $nam_blo_cur, $la_act_blo) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($en_act_blo)");
 
@@ -48,7 +48,7 @@ function block_current_display_actions_link_of_en_block_action ($nof_mod, $nam_e
   return $html_str;
 }
 
-function block_current_display_actions_links_build () {
+function block_current_actions_display_links_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
 
@@ -79,15 +79,16 @@ function block_current_display_actions_links_build () {
     return $html_str;
 }
 
-function block_current_display_actions_build () {
+function block_current_actions_display_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
+
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<br><br>';
-  $html_str .= irp_provide ('block_current_display_actions_title', $here);
+  $html_str .= irp_provide ('block_current_actions_display_title', $here);
   $html_str .= '<br>';
-  $html_str .= irp_provide ('block_current_display_actions_links', $here);
+  $html_str .= irp_provide ('block_current_actions_display_links', $here);
   $html_str .= comment_exiting_of_function_name ($here); 
 
   debug_n_check ($here , '$html_str',  $html_str);

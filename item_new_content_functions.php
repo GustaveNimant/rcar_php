@@ -10,7 +10,7 @@ function item_new_content_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $con_ite_new = dollar_get_array_retrieve_value_of_key_of_where ('item_new_content', $here);
+  $con_ite_new = get_hash_retrieve_value_of_key_of_where ('item_new_content', $here);
 
   debug_n_check ($here , '$con_ite_new', $con_ite_new);
 

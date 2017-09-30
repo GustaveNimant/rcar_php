@@ -44,7 +44,7 @@ function entry_name_build () {
         $nam_ent = word_name_capitalized_of_string_surname ($sur_ent);
     }
     else {
-        $nam_ent = dollar_get_array_retrieve_value_of_key_of_where ('entry_name', $here);
+        $nam_ent = get_hash_retrieve_value_of_key_of_where ('entry_name', $here);
     }
 
     string_check_entry_name_of_string ($nam_ent);

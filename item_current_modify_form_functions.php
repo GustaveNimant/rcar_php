@@ -31,7 +31,7 @@ function item_current_modify_form_build () {
   $html_str .= '<form ' . "\n";
   $html_str .= 'method="get" action="' . 'block_current_modify_save.php' . ">\n";
   
-  $html_str .= dollar_get_array_store_form_of_key_of_value_of_where ('item_current_action', 'modify', $here);
+  $html_str .= get_hash_store_form_of_key_of_value_of_where ('item_current_action', 'modify', $here);
 
   $html_str .= '<br><br>';
   $html_str .= irp_provide ('item_current_modify_form_current_content', $here);

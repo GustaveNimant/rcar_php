@@ -25,8 +25,8 @@ function entry_list_display_menuselect_entry_build () {
     foreach ($nam_ent_a as $nam_ent) {
         $sur_ent = surname_of_name_of_surname_by_name_array ($nam_ent, $sur_by_nam_a);
         
-        if (isset ($_SESSION['last_dollar_get_register']['entry_name'] ) ) {
-            $ent_sel = $_SESSION['last_dollar_get_register']['entry_name'];
+        if (isset ($_SESSION['top_key_in_get_hash_register']['entry_name'] ) ) {
+            $ent_sel = $_SESSION['top_key_in_get_hash_register']['entry_name'];
             if ($ent_sel == $nam_ent) {
                 $html_str .= '  <option value="' . $nam_ent . '" selected> ' . $sur_ent . '</option>' . "\n";
             }

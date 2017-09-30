@@ -1,10 +1,12 @@
- entry_list.php  ?
+# entry_list.php  ?
 
- block_new_create_form.php 
+# block_new_create_form.php 
    title
    form
      textarea item_new_content
      textarea item_new_justification
      inputtypetext block_new_surname
 
- block_current_rename_form.php
+# entry not bubbled in block_current_display
+
+# never GET an action => only solution is a missing require_once in build_requirements.php

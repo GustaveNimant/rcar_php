@@ -11,8 +11,6 @@ function block_current_rename_display_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $lan = $_SESSION['parameters']['language'];
-
   $nam_ent = irp_provide ('entry_name', $here);
   $sur_by_nam_a = irp_provide ('surname_by_name_array', $here);
   $sur_ent = surname_of_name_of_surname_by_name_array ($nam_ent, $sur_by_nam_a);

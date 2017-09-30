@@ -224,7 +224,7 @@ function irp_path_clean_register_of_top_key_of_bottom_key ($top_key, $bot_key) {
   return ;
 }
 
-function irp_path_clean_from_dollar_get_key_of_module ($module) {
+function irp_path_clean_from_get_hash_key_of_module ($module) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($module)");
     

@@ -19,7 +19,7 @@ $_SESSION['irp_stack'] = array ();
 $_SESSION['item_information_metadata_en_by_item_name_array'] = array ();
 include "language_translate_register.php";
 $_SESSION['language_translate_register'] = $language_translate_register;
-$_SESSION['last_dollar_get_register'] = array ();
+$_SESSION['top_key_in_get_hash_register'] = array ();
 
 $_SESSION['parameters']['absolute_path_arce'] = '/keep/sources/rcar';
 $_SESSION['parameters']['absolute_path_server'] = '/keep/sources/rcar/server';

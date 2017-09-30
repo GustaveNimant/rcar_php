@@ -3,7 +3,7 @@
 require_once "array_functions.php";
 require_once "common_html_functions.php";
 require_once "language_translate_functions.php";
-require_once "dollar_get_array_functions.php";
+require_once "get_hash_functions.php";
 require_once "irp_functions.php";
 require_once "file_functions.php";
 require_once "entry_functions.php";
@@ -75,7 +75,7 @@ function entry_create_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $new_sur_ent = dollar_get_array_retrieve_value_of_key_of_where ('entry_newsurname', $here);
+  $new_sur_ent = get_hash_retrieve_value_of_key_of_where ('entry_newsurname', $here);
   debug_n_check ($here, '$new_sur_ent', $new_sur_ent);
   irp_store_force ('entry_newsurname', $new_sur_ent, $here); 
 

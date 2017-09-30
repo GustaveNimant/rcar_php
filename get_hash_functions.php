@@ -6,17 +6,17 @@ require_once "error_functions.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
 
-$Documentation[$module]['what is it'] = "it is ...";
-$Documentation[$module]['what for'] = "to ...";
+$Documentation[$module]['what is it'] = "it is a set of functions";
+$Documentation[$module]['what for'] = "to manage the hash \$_GET";
 
 entering_in_module ($module);
 
-function dollar_get_array_store_form_of_key_of_value_of_where ($key, $val, $where) {
+function get_hash_store_form_of_key_of_value_of_where ($key, $val, $where) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($key, $val, $where)");
 
   if ($val == '') {
-      print_fatal_error ($her,
+      print_fatal_error ($where,
       "second argument \$val were NOT EMPTY<br>",
       "\$val is EMPTY",
       "Check");
@@ -35,11 +35,13 @@ function dollar_get_array_store_form_of_key_of_value_of_where ($key, $val, $wher
 
 }
 
-function dollar_get_array_retrieve_value_of_key_of_where ($key, $where) {
+function get_hash_retrieve_value_of_key_of_where ($key, $where) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($key, $where)");
 
-  if (array_is_empty_of_array ($_GET)){ /* Improve */
+  array_check_is_empty_of_what_of_array_of_where ("\$_GET", $_GET, $where);
+  
+  if (array_is_empty_of_array ($_GET[$key])){
       $nam_fun = $key . '_build';
       
       $mes  = 'Check that :<br>';
@@ -71,7 +73,7 @@ function dollar_get_array_retrieve_value_of_key_of_where ($key, $where) {
           $mes .= '2 line <br><i>  require_once "' . $key . '_functions.php";</i><br>  is present in build_functions.php';
       }
       
-      print_fatal_error ($her , 
+      print_fatal_error ($where, 
       '$_GET["' . $key . '"] were NOT empty',
       'it is EMPTY',
       $mes);
@@ -80,7 +82,7 @@ function dollar_get_array_retrieve_value_of_key_of_where ($key, $where) {
       
       check_is_key_unique_in_array ($key, $_GET);
 
-      $_SESSION['last_dollar_get_register'][$key] = $val;
+      $_SESSION['top_key_in_get_hash_register'][$key] = $val;
       $_SESSION['get_variable_register'][$key] = $val;
 
       father_n_son_stack_entity_push_of_father_of_son ($key, 'GET');
@@ -93,7 +95,6 @@ function dollar_get_array_retrieve_value_of_key_of_where ($key, $where) {
   exiting_from_function ($here);
   
   return $val;
-  
 }
 
 exiting_from_module ($module);

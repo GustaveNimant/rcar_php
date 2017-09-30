@@ -38,16 +38,18 @@ action :
    reorder
    save
 
-page :
+page : what is displayed
+
+section : an elemenet of a page
 
 sectiontype : 
    <page>_title
 
-   <section>_form
-   <section>_select
-   <section>_textarea
-   <section>_title
-   <section>_titlehelped
+   <section_name>_form
+   <section_name>_select
+   <section_name>_textarea
+   <section_name>_title
+   <section_name>_titlehelped
 
 moduletype : 
    page     page initial_section ... final_section
@@ -77,3 +79,5 @@ pervasive_html_final_section
 
 
 what is 'entry_create_save' ? 'entry_create_save_page' ?
+
+# $_GET key is never an action

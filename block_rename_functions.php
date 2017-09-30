@@ -169,7 +169,7 @@ function block_rename_build () {
   $html_str .= '<br><br><br> ';
   $html_str .= irp_provide ('block_rename_section_justify', $here);
   $html_str .= '<br><br> ';
-  $html_str .= button_submit_centered_of_button_value_en_of_language ('save', $lan);
+  $html_str .= inputtypesubmit_of_en_action_name ('save');
   $html_str .= '</form> ' . "\n";
   $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent, $sur_ent, $nof_mod, $lan);
   $html_str .= irp_provide ('pervasive_html_final_section', $here);

@@ -29,7 +29,7 @@ function block_new_create_form_build (){
   $html_str .= method_get_in_form_of_action_module_of_shift ('block_new_create_save.php', '  ');
   $html_str .= '> '; 
 
-  $html_str .= dollar_get_array_store_form_of_key_of_value_of_where ('block_new_action', 'create', $here);
+  $html_str .= get_hash_store_form_of_key_of_value_of_where ('block_new_action', 'create', $here);
 #  $html_str .= '<input type="hidden" name="block_new_action" value="create" /> ';
 
   $html_str .= '<br><br> ';

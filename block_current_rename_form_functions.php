@@ -11,8 +11,6 @@ function block_current_rename_form_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $lan = $_SESSION['parameters']['language'];
-
   $nam_ent = irp_provide ('entry_name', $here);
   $sur_by_nam_a = irp_provide ('surname_by_name_array', $here);
   $sur_ent = surname_of_name_of_surname_by_name_array ($nam_ent, $sur_by_nam_a);
@@ -21,9 +19,7 @@ function block_current_rename_form_build () {
 
   $html_str  = comment_entering_of_function_name ($here);
 
-  $html_str .= '<form' . "\n";
-  $html_str .= method_get_in_form_of_action_module_of_shift ('block_current_rename_save.php', '  ');
-  $html_str .= '>' . "\n"; 
+  $html_str .= '<form action="block_current_rename_save.php" method="get"> ' . "\n";
   $html_str .= '<br><br>';
   $html_str .= irp_provide ('block_current_rename_newname_surname', $here);
   $html_str .= '<br><br><br>';

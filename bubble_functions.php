@@ -19,6 +19,7 @@ function bubble_bubbled_text_of_text_of_bubble_text ($txt, $bub_txt) {
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<span title="' . $bub_txt . '">';
   $html_str .= '<u>' . $txt . '</u>';
+  $html_str .= '</span>';
   $html_str .= comment_exiting_of_function_name ($here);
 
   exiting_from_function ($here . ' with $html_str >' . $html_str . '<');

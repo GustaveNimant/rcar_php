@@ -15,7 +15,7 @@ function block_new_name_build () {
   trace ($here, "GET >$irp_key< cleaning done");
 
   if ( isset ($_GET['block_new_name'])) {
-      $nam_blo_new = dollar_get_array_retrieve_value_of_key_of_where ($irp_key, $here);
+      $nam_blo_new = get_hash_retrieve_value_of_key_of_where ($irp_key, $here);
   }
   else {
       $sur_blo_new = irp_provide ('block_new_surname', $here);

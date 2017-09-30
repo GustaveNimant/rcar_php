@@ -18,7 +18,7 @@ function block_current_name_build () {
   trace ($here, "GET >$irp_key< cleaning done");
 
   if ( isset ($_GET['block_current_name'])) {
-      $nam_blo = dollar_get_array_retrieve_value_of_key_of_where ($irp_key, $here);
+      $nam_blo = get_hash_retrieve_value_of_key_of_where ($irp_key, $here);
   }
   else {
 

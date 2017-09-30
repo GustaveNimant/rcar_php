@@ -1,0 +1,51 @@
+#  les keywords terminaux sont représentés tel-quels (Token == Lexeme).
+#  > < encadrent les pre-terminaux (Tokens)
+#  < > encadrent les non-terminaux. <non-terminal> ::= production
+#
+#  " " encadrent les symboles terminaux d’un seul caractère.
+#  ( ) servent au groupement.
+#  |   signifie l'alternative.
+#  [ ] indiquent une partie optionnelle.
+#  { } indiquent une partie qui peut être répétée un nombre quelconque de fois.
+#      tandis qu'un symbole + en exposant des accolades indique une partie répétée au moins une fois.
+
+ page ::= page_header { section } page_action return page_foot  
+
+ section ::= section_page_title | section_title | section_titlehelped | section_action | section_form 
+
+ section_form ::= section_titlehelped form 
+
+ section_titlehelped ::= section_title section_help
+ 
+ section_action ::= <div class="my-div"> [ form ] [a_href] [<span title="string"</span> </div>
+
+ a_href = <a href="url" title="string">string</a>	
+
+ url ::= module.php?get_key=get_value&get_key=get_value"
+
+ get_key ::= word
+ get_value ::= word
+
+# https://www.w3schools.com/html/html_forms.asp
+
+ form ::= form_bare | form_action
+ 
+ form_bare ::= <form> [{ inputtype }] [ {select_tag} ] [ {textarea_tag} ] </form>
+
+ form_action ::= <form action="module" method="get"> [ {fieldset} ] [inputtypegroup] [ {select_tag} ] </form>
+
+ inputtypegroup ::= [{ [string ] inputtype }]
+
+ fieldset ::=  <fieldset> <legend> string </legend>  </fieldset>
+
+
+ inputtype ::= inputtyperadio | inputtypesubmit | inputtypetext
+
+
+ select_tag ::= <select name="string"> { option_tag } </select>
+
+ option_tag ::= <option value="string">string</option> | <option value="string" selected="string">string</option>
+
+ textarea_tag ::= <textarea name="string" rows="integer" cols="integer">string</textarea> 
+
+ button_tag ::=  <button type="button" [ onclick="alert('string')"] >string</button> 

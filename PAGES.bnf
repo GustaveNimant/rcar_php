@@ -1,0 +1,56 @@
+# pages 
+
+ page_arce          ::= page_header 
+
+ page_header        ::= 
+                        label_home                            => home.php
+                        label_entry_list                      => entry_list_display.php 
+                        label_command
+
+
+ page_entry_list    ::= page_header                      <= entry_list_display.php
+
+                        section_select_entry_current_display  => entry_current_display.php
+                        section_select_entry_current_rename   => entry_current_rename.php
+                        section_entry_new_create              => entry_new_create.php
+              
+                        page_foot  
+
+
+ page_entry_current ::= page_header                       <= entry_current_display.php
+ 
+                        section_block_new_create              => block_new_create.php
+                        section_block_current_list_reorder    => block_current_list_reorder.php
+                        section_block_current_list_display    
+                      {
+                        section_block_current_display     ::=        
+                                         goto_block_module    => block_current_display.php
+                                         block_content
+                      }
+                        return                                => entry_list_display.php
+
+                        page_foot  
+
+ page_block_current ::= page_header                       <= block_current_display
+ 
+                        section_block_current_page_title
+
+                        section_item_current 
+                        section_item_current_modify           => item_next_create.php
+                        section_item_current_justification
+                        section_item_previous
+                        section_sha1_block_previous
+
+                        section_block_current_action_list ::=
+                                          section_block_current_action_title
+                                          {
+                                           section_block_current_delete  => block_current_delete.php
+                                           section_block_current_history => block_current_history.php
+                                           section_block_current_rename  => block_current_rename.php
+                                          }
+                        return                                 => entry_current_display.php
+                        page_foot  
+
+ 
+
+ page item_current_modify.php

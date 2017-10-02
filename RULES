@@ -11,14 +11,6 @@ entity : has a name and a content
    sha1
    surname_catalog
 
-entity part :
-   name
-   newname
-   surname
-   newsurname
-
-   content
-
 status :
    current
    modified
@@ -81,3 +73,5 @@ pervasive_html_final_section
 what is 'entry_create_save' ? 'entry_create_save_page' ?
 
 # $_GET key is never an action
+# an entity has an history next, current, previous
+# an item is never new, only blocks may be created

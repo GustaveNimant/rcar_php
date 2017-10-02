@@ -9,21 +9,57 @@
 #  { } indiquent une partie qui peut être répétée un nombre quelconque de fois.
 #      tandis qu'un symbole + en exposant des accolades indique une partie répétée au moins une fois.
 
- page ::= page_header { section } page_action return page_foot  
+ page ::= page_information | page_action
+
+ page_information ::= page_header { string }
+
+ page_action ::= page_header { section } [ return ] [ page_foot  
+
+ page_header ::=  {a_href_module} {a_href_entry} { form_action }
 
  section ::= section_page_title | section_title | section_titlehelped | section_action | section_form 
 
+ section_action ::= 
+                  | section_create
+                  | section_delete
+                  | section_display  (entry_list_select_display)
+                  | section_justify
+                  | section_modify
+                  | section_rename   (entry_list_select_rename)
+                  | section_reorder
+                  | section_save
+
  section_form ::= section_titlehelped form 
 
+ section_page_title ::= <div class="my-div">bubbled_text</div>
+
+ section_block_display ::= 
+ <a href="block_current_display.php?entry_name=Utilisation&block_current_name=Bouton_quitter" title="cliquer pour ouvrir la page"><b> Bouton quitter</b> </a>
+
+ bubbled_expression ::= <span title="bubbled_text"><u>expression</u></span>
+
+ bubbled_text ::= {[ string ] bubbled_expression [string] }
+
+ string_linked ::= [string] block_name_linked [string]
+
  section_titlehelped ::= section_title section_help
- 
+
+ section_action_list ::= section_titlehelped {section_action} 
+
  section_action ::= <div class="my-div"> [ form ] [a_href] [<span title="string"</span> </div>
 
- a_href = <a href="url" title="string">string</a>	
+ a_href ::= a_href_entry | a_href_get_key_get_value | a_href_module | goto_block_module
 
- url ::= module.php?get_key=get_value&get_key=get_value"
+ a_href_module ::= <a href="module.php" title="string">string</a>	
+
+ a_href_entry ::= <a href="module.php?entry_name=entry_name" title="string">string</a>	
+
+ a_href_get_key_get_value ::= <a href="module.php?get_key=get_value&get_key=get_value" title="string">string</a>
+
+ goto_block_module ::= <a href="module.php?entry_name=entry_name&block_name=block_name" title="click to open the page"><b>block_surname</b></a>
 
  get_key ::= word
+
  get_value ::= word
 
 # https://www.w3schools.com/html/html_forms.asp
@@ -38,9 +74,7 @@
 
  fieldset ::=  <fieldset> <legend> string </legend>  </fieldset>
 
-
  inputtype ::= inputtyperadio | inputtypesubmit | inputtypetext
-
 
  select_tag ::= <select name="string"> { option_tag } </select>
 
@@ -49,3 +83,6 @@
  textarea_tag ::= <textarea name="string" rows="integer" cols="integer">string</textarea> 
 
  button_tag ::=  <button type="button" [ onclick="alert('string')"] >string</button> 
+
+
+ goto_block ::= <a href="block_current_display.php?entry_name=entry_name&block_current_name=Bouton_quitter" title="cliquer pour ouvrir la page"><b> Bouton quitter</b> </a>

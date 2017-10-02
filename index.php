@@ -56,7 +56,7 @@ $dat_str = date("j F Y à G\hi:s");
 $log_str = $dat_str . "\n";
 file_put_contents ("debug", $log_str); 
 $nof_log = "$Program_name.log";
-file_put_contents ('nof_log', $log_str);
+file_put_contents ($nof_log, $log_str);
 
 # starts program 
 entering_in_module ($module);

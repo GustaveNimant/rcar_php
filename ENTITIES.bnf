@@ -1,0 +1,74 @@
+# entities 
+# 
+# <= means calculated from
+
+ entity ::= block | block_list | entry | entry_list | item | justification | rcar_server | sha1 | surname_catalog
+
+ entity_surname    user provided
+ entity_name    <= entity_surname
+ entity_newsurname user provided
+ entity_newname <= entity_newsurname
+
+# rcar_server 
+
+ rcar_server_git          ::= .git
+ rcar_server_content      ::= {entry_directory_list}
+
+# entry
+
+ entry         ::= entry_current | entry_new
+ 
+ entry_content ::= {block_list}
+
+ entry_list    ::= {entry_current} 
+
+ entry_name
+ entry_surname
+
+ entry_namenew      renaming an entry
+ entry_surnamenew   renaming an entry
+
+ entry_new_name     creating an entry
+ entry_new_surname  creating an entry
+
+# block
+
+ block            ::= block_current | block_next | block_new | block_previous
+
+ block_name       ::= word   
+ block_surname    ::= word
+
+ block_namenew    ::= word      renaming a block
+ block_surnamenew ::= word      renaming a block
+
+ block_new_name    ::= word     creating a new block
+ block_new_surname ::= word     creating a new block
+
+ block_current_content ::= item_current justification_current item_previous sha1_block_previous
+
+ block_next_content    ::= item_next justification_next item_current sha1_block_current
+
+ block_list            ::= {block}   
+
+# item
+
+ item ::= item_current | item_next | item_previous 
+
+ item_name       ::= word   
+ item_surname    ::= word
+
+ item_namenew    ::= word
+ item_surnamenew ::= word
+
+ item_current_content  ::= string
+ item_previous_content ::= string
+ item_next_content     ::= string
+
+# sha1 apply only on a block_content
+
+ sha1 ::= sha1_block_current | sha1_block_previous
+
+# 
+ 
+
+

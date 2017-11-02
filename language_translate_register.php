@@ -13,6 +13,12 @@ array (
         'it' => '???',
     ),
 
+    '?' => 
+    array (
+        'fr' => ' ?',
+        'it' => '???',
+    ),
+
     '<phrase_traduisible> for a property containing the text' =>
     array (
         'fr' => '<phrase_traduisible> pour une propri&eacute;t&eacute; contenant le texte',
@@ -31,9 +37,15 @@ array (
         'it' => '???',
     ),
 
+    'a block defines a property of an entry' =>
+    array (
+        'fr' => 'un bloc d&eacute;finit une propri&eacute;t&eacute d&rsquo;une entr&eacute;e',
+        'it' => '???',
+    ), 
+    
     'a justification proves that the&#010 modification done complies with the rules' =>
     array (
-        'fr' => 'une justification prouve qu&apos;une
+        'fr' => 'une justification prouve qu&rsquo;une
 modification est conforme aux r&egrave;gles',
         'it' => '',
     ),
@@ -52,21 +64,28 @@ modification est conforme aux r&egrave;gles',
 
     'a property of an entry&#010 is an assertion it should verify' =>
     array (
-		'fr' => 'une propri&eacute;t&eacute; d&apos;une entr&eacute;e 
-est une assertion qu&apos;elle doit v&eacute;rifier',
+		'fr' => 'une propri&eacute;t&eacute; d&rsquo;une entr&eacute;e 
+est une assertion qu&rsquo;elle doit v&eacute;rifier',
 		'it' => '???',
     ),
 	 
-    'an action is one off delete, modify, justify or rename' => 
+    'an action is one off remove, modify, justify or rename' => 
     array (
         'fr' => 'une action est supprimer, modifier, justifier ou renommer',
         'it' => '???',
     ),
 
+    'an item is a property of an entry&#010 it is a component of a block' =>
+    array (
+        'fr' => 'un item est une propri&eacute;t&eacute; d&rsquo;une entr&eacute;te 
+c&rsquo;est une composante d&rsquo;un bloc',
+        'it' => '???',
+    ),
+    
     'a property of an entry
 is an assertion it should verify' =>
     array (
-        'fr' => 'une propri&eacute;t&eacute; d&apos;une entr&eacute;e est une assertion qu&apos;elle doit v&eacute;rifier',
+        'fr' => 'une propri&eacute;t&eacute; d&rsquo;une entr&eacute;e est une assertion qu&rsquo;elle doit v&eacute;rifier',
         'it' => '???',
     ),
 
@@ -188,6 +207,18 @@ par la liste de ses propri&eacute;t&eacute;s',
         'it' => '???',
     ),
 
+    'back to' => 
+    array (
+		'fr' => 'retour &agrave;',
+		'it' => '???',
+    ),
+
+    'back to entry' =>
+    array (
+        'fr' => 'retour &agrave; l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ),
+    
     'back to entries' => 
     array (
 		'fr' => 'retour aux entr&eacute;es',
@@ -200,16 +231,15 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 
-
     'back to home' =>
     array (
-        'fr' => 'retour à l&apos;accueil',
+        'fr' => 'retour à l&rsquo;accueil',
         'it' => '???',
     ),
 
     'back to the entry' => 
     array (
-		'fr' => 'retour à l&apos;entr&eacute;e',
+		'fr' => 'retour à l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
@@ -230,7 +260,25 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'fr' => 'avant vers',
 		'it' => '???',
     ),
-	 
+    
+    'block' =>
+    array (
+        'fr' => 'bloc',
+        'it' => '???',
+   ), 
+
+    'blocks' =>
+    array (
+        'fr' => 'blocs',
+        'it' => '???',
+    ), 
+    
+    'block previous sha1' => 
+    array (
+        'fr' => 'sha1 du bloc pr&eacute;c&eacute;dent',
+        'it' => '???',
+    ),
+    
     'bubble' => 
     array (
 		'fr' => 'bulle',
@@ -245,7 +293,13 @@ par la liste de ses propri&eacute;t&eacute;s',
 
 	'change the name of the entry' =>
     array (
-        'fr' => 'changer le nom de l&apos;entr&eacute;e',
+        'fr' => 'changer le nom de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ),
+
+	'change the name of the entry below' =>
+    array (
+        'fr' => 'changer le nom de l&rsquo;entr&eacute;e ci-dessous',
         'it' => '???',
     ),
 
@@ -255,15 +309,21 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 
+    'change the order' => 
+    array (
+		'fr' => 'changer l&rsquo;ordre',
+		'it' => '???',
+    ),
+
     'change the order of properties for entry' => 
     array (
-		'fr' => 'changer l&apos;ordre des propri&eacute;t&eacute;s pour l&apos;entr&eacute;e"',
+		'fr' => 'changer l&rsquo;ordre des propri&eacute;t&eacute;s pour l&rsquo;entr&eacute;e"',
 		'it' => '???',
     ),
 
     'change the order of properties' => 
     array (
-		'fr' => 'modifier l&apos;ordre des propri&eacute;t&eacute;s',
+		'fr' => 'modifier l&rsquo;ordre des propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
       
@@ -273,10 +333,10 @@ par la liste de ses propri&eacute;t&eacute;s',
         'it' => '???',
     ),
 
-    'change the order' => 
+    'choose a property from the list below then select an action' =>
     array (
-		'fr' => 'changer l&apos;ordre',
-		'it' => '???',
+        'fr' => 'choisir une propri&eacute;t&eacute; dans la liste ci-dessous puis s&eacute;lectionner une action',
+        'it' => '???',
     ),
 
     'choose a question from the list below then select an action' =>
@@ -413,7 +473,7 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'create a new paragraph for entry' => 
     array (
-        'fr' => 'cr&eacute;er un nouveau paragraphe pour l&apos;entr&eacute;e',
+        'fr' => 'cr&eacute;er un nouveau paragraphe pour l&rsquo;entr&eacute;e',
         'it' => '???',
     ),
 
@@ -425,13 +485,13 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'create a new property for entry' =>
     array (
-        'fr' => 'cr&eacute;er une nouvelle propri&eacute;t&eacute; pour l&apos;entr&eacute;e',
+        'fr' => 'cr&eacute;er une nouvelle propri&eacute;t&eacute; pour l&rsquo;entr&eacute;e',
         'it' => '???',
     ),
 
     'create a new question for entry' =>
     array (
-        'fr' => 'cr&eacute;er une nouvelle question pour l&apos;entr&eacute;e',
+        'fr' => 'cr&eacute;er une nouvelle question pour l&rsquo;entr&eacute;e',
         'it' => '???',
     ),
 
@@ -449,7 +509,7 @@ par la liste de ses propri&eacute;t&eacute;s',
         
     'create a new rule for entry' =>
     array (
-        'fr' => 'cr&eacute;er une nouvelle r&egrave;gle pour l&apos;entr&eacute;e',
+        'fr' => 'cr&eacute;er une nouvelle r&egrave;gle pour l&rsquo;entr&eacute;e',
         'it' => '???',
     ),
 	 
@@ -467,7 +527,7 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'create a new usage item' => 
     array (
-        'fr' => 'cr&eacute;er un nouvel item d&apos;utilisation',
+        'fr' => 'cr&eacute;er un nouvel item d&rsquo;utilisation',
         'it' => '???',
     ),
 
@@ -533,13 +593,13 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'define a new paragraph for entry' => 
     array (
-		'fr' => 'd&eacute;finissez un nouveau paragraphe pour l&apos;entr&eacute;e',
+		'fr' => 'd&eacute;finissez un nouveau paragraphe pour l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
     'define a new property for entry' => 
     array (
-		'fr' => 'd&eacute;finissez une nouvelle propri&eacute;t&eacute; pour l&apos;entr&eacute;e',
+		'fr' => 'd&eacute;finissez une nouvelle propri&eacute;t&eacute; pour l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
@@ -551,7 +611,7 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'define a new question for entry' => 
     array (
-        'fr' => 'd&eacute;finissez une nouvelle question pour l&apos;entr&eacute;e',
+        'fr' => 'd&eacute;finissez une nouvelle question pour l&rsquo;entr&eacute;e',
         'it' => '???',
     ),
 
@@ -563,7 +623,7 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'define a new rule for entry' => 
     array (
-		'fr' => 'd&eacute;finissez une nouvelle r&egrave;gle pour l&apos;entr&eacute;e',
+		'fr' => 'd&eacute;finissez une nouvelle r&egrave;gle pour l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
@@ -573,42 +633,18 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 	 
-    'delete browsing data' => 
-    array (
-		'fr' => 'supprimer les donn&eacute;es de navigation',
-		'it' => '???',
-    ),
-
-    'delete the paragraph' =>
-    array (
-        'fr' => 'd&eacute;truire le paragraphe',
-        'it' => '???',
-    ),
-	 
-    'delete the property' => 
-    array (
-		'fr' => 'd&eacute;truire la propri&eacute;t&eacute;',
-        'it' => '???',
-    ),
-
-    'delete the rule' => 
-    array (
-		'fr' => 'd&eacute;truire la r&egrave;gle',
-		'it' => '???',
-    ),
-
-    'delete' => 
-    array (
-		'fr' => 'd&eacute;truire',
-		'it' => '???',
-    ),
-
     'display' => 
     array (
 		'fr' => 'afficher',
 		'it' => '???',
     ),
-	 
+
+    'display of paragraphs for entry' =>
+    array (
+        'fr' => 'affichage des paragraphes de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ),
+    
     'display options' => 
     array (
 		'fr' => 'afficher les options',
@@ -617,9 +653,21 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'do you want to create the entry' => 
     array (
-        'fr' => 'voulez-vous cr&eacute;er l&apos;entr&eacute;e',
+        'fr' => 'voulez-vous cr&eacute;er l&rsquo;entr&eacute;e',
         'it' => '???',
     ),
+
+    'do you want to save the new entry' => 
+    array (
+        'fr' => 'voulez-vous sauver la nouvelle entr&eacute;e',
+        'it' => '???',
+    ),
+
+    'do you want to save the new order' =>
+    array (
+        'fr' => 'voulez-vous sauver le nouvel ordre',
+        'it' => '???',
+    ), 
 
     'does not exist' =>
     array (
@@ -924,7 +972,7 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'for entry' => 
     array (
-		'fr' => 'pour l&apos;entr&eacute;e',
+		'fr' => 'pour l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
@@ -978,11 +1026,11 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'has been created' => 
     array (
-        'fr' => 'a &eacute;t&eacute; cr&eacute;&eacute;e',
+        'fr' => 'a &eacute;t&eacute; cr&eacute;&eacute;',
         'it' => '???',
     ),
 
-    'has been deleted' => 
+    'has been removed' => 
     array (
 		'fr' => 'a &eacute;t&eacute; supprim&eacute;',
 		'it' => '???',
@@ -1008,13 +1056,13 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'in entry name' =>
     array (
-		'fr' => 'dans l&apos;entr&eacute;e',
+		'fr' => 'dans l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
     'in entry' =>
     array (
-		'fr' => 'dans l&apos;entr&eacute;e',
+		'fr' => 'dans l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
@@ -1032,7 +1080,7 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'introduction to ARCE' => 
     array (
-        'fr' => 'pr&eacute;sentation d&apos;RCAR',
+        'fr' => 'pr&eacute;sentation d&rsquo;RCAR',
         'it' => '???',
     ),
 
@@ -1050,13 +1098,19 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'it is an usage item' =>
     array (
-        'fr' => 'c&apos;est un item d&apos;utilisation',
+        'fr' => 'c&rsquo;est un item d&rsquo;utilisation',
         'it' => '???',
     ),
 
     'item current content' => 
     array (
         'fr' => 'contenu de l&rsquo;item courant',
+        'it' => '???',
+    ),
+    
+    'item' => 
+    array (
+        'fr' => 'item',
         'it' => '???',
     ),
     
@@ -1152,26 +1206,26 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'list of paragraphs for entry' =>
     array (
-		'fr' => 'liste des paragraphes de l&apos;entr&eacute;e',
+		'fr' => 'liste des paragraphes de l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
     'list of paragraphs for entry' =>
     array (
-		'fr' => 'liste des paragraphes pour l&apos;entr&eacute;e',
+		'fr' => 'liste des paragraphes pour l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
 
     'list of property rules for ARCE' =>
     array (
-		'fr' => 'liste des r&egrave;gles des propri&eacute;t&eacute;s d&apos;RCAR',
+		'fr' => 'liste des r&egrave;gles des propri&eacute;t&eacute;s d&rsquo;RCAR',
 		'it' => '???',
     ),
 
     'list of paragraphs for label' =>
     array (
-		'fr' => 'liste des paragraphes de l&apos;&eacute;tiquette',
+		'fr' => 'liste des paragraphes de l&rsquo;&eacute;tiquette',
 		'it' => '???',
     ),
 
@@ -1195,13 +1249,13 @@ par la liste de ses propri&eacute;t&eacute;s',
 	 
     'list of properties for entry' =>
     array (
-		'fr' => 'liste des propri&eacute;t&eacute;s de l&apos;entr&eacute;e',
+		'fr' => 'liste des propri&eacute;t&eacute;s de l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
     'list of questions for entry' => 
     array (
-		'fr' => 'liste des questions de l&apos;entr&eacute;e',
+		'fr' => 'liste des questions de l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
@@ -1213,25 +1267,25 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'list of questions for label' =>
     array (
-		'fr' => 'liste des questions pour l&apos;&eacute;tiquette',
+		'fr' => 'liste des questions pour l&rsquo;&eacute;tiquette',
 		'it' => '???',
     ),
 
     'list of rules for ARCE' =>
     array (
-		'fr' => 'liste des r&egrave;gles d&apos;RCAR',
+		'fr' => 'liste des r&egrave;gles d&rsquo;RCAR',
 		'it' => '???',
     ),
 
     'list of rules for entry' =>
     array (
-        'fr' => 'liste des r&egrave;gles pour l&apos;entr&eacute;e',
+        'fr' => 'liste des r&egrave;gles pour l&rsquo;entr&eacute;e',
         'it' => '???',
     ),
 
     'list of usage items' => 
     array (
-        'fr' => 'liste des items d&apos;utilisation',
+        'fr' => 'liste des items d&rsquo;utilisation',
         'it' => '???',
     ),
 
@@ -1313,6 +1367,12 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),	 
 	 
+    'modify the name below' =>
+    array (
+		'fr' => 'modifier le nom ci-dessous',
+		'it' => '???',
+    ),	 
+	 
     'modify name for property' =>
     array (
 		'fr' => 'modifier le nom de la propri&eacute;t&eacute;',
@@ -1321,7 +1381,7 @@ par la liste de ses propri&eacute;t&eacute;s',
 	 
     'modify order of properties' =>
     array (
-		'fr' => 'modifier l&apos;ordre des propri&eacute;t&eacute;s',
+		'fr' => 'modifier l&rsquo;ordre des propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 
@@ -1343,27 +1403,39 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 	 
+    'new order of paragraphs for entry' =>
+    array (
+        'fr' => 'nouvel ordre des paragraphes de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+    
+    'no block yet in entry' =>
+    array (
+        'fr' => 'il n&rsquo;y a aucun bloc dans l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+
     'reorder the properties for entry' =>
     array (
-		'fr' => 'r&eacute;ordonner les propri&eacute;t&eacute;s pour l&apos;entr&eacute;e',
+		'fr' => 'r&eacute;ordonner les propri&eacute;t&eacute;s pour l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),	 
 
     'reorder the questions for entry' =>
     array (
-		'fr' => 'r&eacute;ordonner les questions pour l&apos;entr&eacute;e',
+		'fr' => 'r&eacute;ordonner les questions pour l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),	 
 	 
     'reorder the rules for entry' =>
     array (
-		'fr' => 'modifier l&apos;ordre des r&egrave;gles pour l&apos;entr&eacute;e',
+		'fr' => 'modifier l&rsquo;ordre des r&egrave;gles pour l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
     'modify the order' =>
     array (
-		'fr' => 'modifier l&apos;ordre',
+		'fr' => 'modifier l&rsquo;ordre',
 		'it' => '???',
     ),
 
@@ -1415,7 +1487,7 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 
-    'navigation data have been deleted' =>
+    'navigation data have been removed' =>
     array (
 		'fr' => 'les donn&eacute;es de navigation ont &eacute;t&eacute; supprim&eacute;es',
 		'it' => '???',
@@ -1423,13 +1495,13 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'new order of properties for entry' =>
     array (
-		'fr' => 'nouvel ordre des propri&eacute;t&eacute;s pour l&apos;entr&eacute;e',
+		'fr' => 'nouvel ordre des propri&eacute;t&eacute;s pour l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
     'new order of rules for entry' =>
     array (
-        'fr' => 'nouvel ordre des r&egrave;gles pour l&apos;entr&eacute;e',
+        'fr' => 'nouvel ordre des r&egrave;gles pour l&rsquo;entr&eacute;e',
         'it' => '???',
     ),
 
@@ -1483,19 +1555,19 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'no action is defined. Using action <i>display</i> as default' =>
    array (
-      'fr' => 'aucune action n&apos;est d&eacute;finie. l&apos;action <i>afficher</i> est utilis&eacute;e par d&eacute;faut',
+      'fr' => 'aucune action n&rsquo;est d&eacute;finie. l&rsquo;action <i>afficher</i> est utilis&eacute;e par d&eacute;faut',
       'it' => '???',
    ), 
 
     'no action is defined. Using <i>display</i> as default' => 
    array (
-       'fr' => 'aucune action n&apos;est d&eacute;finie. <i>afficher</i> est utilis&eacute; par d&eacute;faut',
+       'fr' => 'aucune action n&rsquo;est d&eacute;finie. <i>afficher</i> est utilis&eacute; par d&eacute;faut',
        'it' => '???',
    ),
 
     'no property yet for entry' =>
     array (
-		'fr' => 'il n&apos;y a encore aucune propri&eacute;t&eacute; pour l&apos;entr&eacute;e',
+		'fr' => 'il n&rsquo;y a encore aucune propri&eacute;t&eacute; pour l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
@@ -1505,7 +1577,7 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 
-    'not deleted' =>
+    'not removed' =>
     array (
         'fr' => 'pas d&eacute;truit',
         'it' => '???',
@@ -1534,7 +1606,121 @@ par la liste de ses propri&eacute;t&eacute;s',
         'fr' => 'ordre des r&egrave;gles',
         'it' => '???',
     ),
+
+    'page for asking a new question for the' =>
+    array (
+        'fr' => 'page de cr&eacute;ation d&rsquo;une nouvelle question pour la',
+        'it' => '???',
+    ), 
+    
+    'page for confirming the creation of a new entry' =>
+    array (
+        'fr' => 'page de confirmation de la cr&eacute;ation d&rsquo;une nouvelle entr&eacute;e',
+        'it' => '???',
+    ), 
+
+    'page for confirming the modification of paragraph' =>
+    array (
+        'fr' => 'page de confirmation de la modification du paragraphe',
+        'it' => '???',
+    ), 
+    
+    'page for confirming the modification of property' =>
+    array (
+        'fr' => 'page de confirmation de la modification de la propri&eacute;t&eacute',
+        'it' => '???',
+    ), 
+    
+    'page for confirming the modification of question' =>
+    array (
+        'fr' => 'page de confirmation de la modification de la question',
+        'it' => '???',
+    ), 
+    
+    'page for defining a new paragraph for entry' =>
+    array (
+        'fr' => 'page de d&eacute;finition d&rsquo;un nouveau paragraphe pour l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ),
+    
+    'page for displaying the list of all entries' =>
+    array (
+        'fr' => 'page d&rsquo;affichage de la liste de toutes les entr&eacute;es',
+        'it' => '???',
+    ), 
+    
+    'page for displaying the result of creation of a new paragraph for entry' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation d&rsquo;un nouveau paragraphe pour l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ),
+
+    'page for displaying the entry' =>
+    array (
+        'fr' => 'page d&rsquo;affichage de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+
+    'page for displaying the paragraph' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du paragraphe',
+        'it' => '???',
+    ), 
       
+    'page for displaying the rule' =>
+    array (
+        'fr' => 'page d&rsquo;affichage de la r&egrave;gle',
+        'it' => '???',
+    ), 
+    
+    'page for displaying the result of saving the renaming of the entry' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la sauvegarde du renommage de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+    
+    'page for displaying the result of the removal of the paragraph' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la suppression du paragraphe',
+        'it' => '???',
+    ),
+
+   'page for displaying the property' =>
+    array (
+        'fr' => 'page d&rsquo;affichage de la propri&eacute;t&eacute;',
+        'it' => '???',
+    ), 
+    
+    'page for modifying the content of the current paragraph' =>
+    array (
+        'fr' => 'page de modification du contenu du paragraphe courant',
+        'it' => '???',
+    ),
+    
+    'page for modifying the content of the current property' =>
+    array (
+        'fr' => 'page de modification du contenu de la propri&eacute;t&eacute courante',
+        'it' => '???',
+    ),
+    
+    'page for removing the paragraph' =>
+    array (
+        'fr' => 'page de suppression du paragraphe',
+        'it' => '???',
+    ), 
+    
+    'page for renaming the entry' =>
+    array (
+        'fr' => 'page de renommage de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+
+    'page for reordering the paragraphs of the entry' =>
+    array (
+        'fr' => 'page de changement de l&rsquo;ordre des paragraphes de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ),
+
     'please enter at least three words' =>
     array (
         'fr' => 'veuillez saisir au minimum trois mots',
@@ -1655,9 +1841,21 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),	 
 
+    'read' =>
+    array (
+        'fr' => 'lire',
+        'it' => '???',
+    ),
+
     'remove' => 
     array (
 		'fr' => 'supprimer',
+		'it' => '???',
+    ),
+
+    'remove browsing data' => 
+    array (
+		'fr' => 'supprimer les donn&eacute;es de navigation',
 		'it' => '???',
     ),
 	 
@@ -1667,21 +1865,21 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 
-    'read' =>
+    'remove the paragraph' =>
     array (
-        'fr' => 'lire',
+        'fr' => 'supprimer le paragraphe',
         'it' => '???',
     ),
-
-    'remove the paragraph' => 
-    array (
-		'fr' => 'supprimer le paragraphe',
-		'it' => '???',
-    ),
-
+	 
     'remove the property' => 
     array (
 		'fr' => 'supprimer la propri&eacute;t&eacute;',
+        'it' => '???',
+    ),
+
+    'remove the rule' => 
+    array (
+		'fr' => 'supprimer la r&egrave;gle',
 		'it' => '???',
     ),
 
@@ -1691,12 +1889,6 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),	 
 
-    'remove the rule' => 
-    array (
-		'fr' => 'supprimer la r&egrave;gle',
-		'it' => '???',
-    ),	 
-	 
     'rename' => 
     array (
 		'fr' => 'renommer',
@@ -1747,37 +1939,31 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'reorder the paragraphs for entry' =>
     array (
-		'fr' => 'modifier l&apos;ordre des paragraphes pour l&apos;entr&eacute;e',
+		'fr' => 'modifier l&rsquo;ordre des paragraphes pour l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
     'reorder the paragraphs' =>
     array (
-		'fr' => 'modifier l&apos;ordre des paragraphes',
+		'fr' => 'modifier l&rsquo;ordre des paragraphes',
 		'it' => '???',
     ),
 
     'reorder the questions' =>
     array (
-		'fr' => 'modifier l&apos;ordre des questions',
+		'fr' => 'modifier l&rsquo;ordre des questions',
 		'it' => '???',
     ),
 
     'reorder the rules' =>
     array (
-		'fr' => 'modifier l&apos;ordre des r&egrave;gles',
+		'fr' => 'modifier l&rsquo;ordre des r&egrave;gles',
 		'it' => '???',
     ),
 
     'reorder usage items' => 
     array (
-		'fr' => 'r&eacute;ordonner les items d&apos;utilisation',
-		'it' => '???',
-    ),
-
-    'reorder' => 
-    array (
-		'fr' => 'r&eacute;ordonner',
+		'fr' => 'r&eacute;ordonner les items d&rsquo;utilisation',
 		'it' => '???',
     ),
 
@@ -1799,18 +1985,6 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 
-    'rule' => 
-    array (
-		'fr' => 'r&egrave;gle',
-		'it' => '???',
-    ),
-
-    'rules' => 
-    array (
-		'fr' => 'r&egrave;gles',
-		'it' => '???',
-    ),
-
     'rules' => 
     array (
 		'fr' => 'r&egrave;gles',
@@ -1829,12 +2003,6 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
       
-    'choose a property from the list below then select an action' =>
-    array (
-        'fr' => 'choisir une propri&eacute;t&eacute; dans la liste ci-dessous puis s&eacute;lectionner une action',
-        'it' => '???',
-    ),
-
     'select a question and an action' => 
     array (
 		'fr' => 's&eacute;lectionner une question et une action',
@@ -1852,6 +2020,13 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'fr' => 's&eacute;lectionner une entr&eacute;e existante',
 		'it' => '???',
     ),
+
+    'select an existing entry to dislay its blocks' =>
+    array (
+		'fr' => 's&eacute;lectionner une entr&eacute;e existante pour afficher ses blocs',
+		'it' => '???',
+    ),
+
 
     'select an item from the drop-down list' => 
     array (
@@ -1943,21 +2118,33 @@ par la liste de ses propri&eacute;t&eacute;s',
         'it' => '???',
     ),
     
+    'the block' =>
+    array (
+        'fr' => 'le block',
+        'it' => '???',
+    ), 
+    
+    'the directory of entry' => 
+    array (
+		'fr' => 'le dossier de l&rsquo;entr&eacute;e',
+		'it' => '???',
+    ),
+	 
     'the entry' => 
     array (
-		'fr' => 'l&apos;entr&eacute;e',
+		'fr' => 'l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 	 
     'the item' => 
     array (
-        'fr' => 'l&apos;item',
+        'fr' => 'l&rsquo;item',
         'it' => '???',
     ),
     
     'the name provided by the User' =>
     array (
-        'fr' => 'le nom donn&eacute; par l&apos;utilisateur',
+        'fr' => 'le nom donn&eacute; par l&rsquo;utilisateur',
         'it' => '???',
     ),
 
@@ -1998,55 +2185,55 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
 
     'the order may be not pertinent' =>
     array (
-        'fr' => 'l&apos;ordre peut &ecirc;tre non pertinent',
+        'fr' => 'l&rsquo;ordre peut &ecirc;tre non pertinent',
 		'it' => '???',
     ),
 
     'the order may be not pertinent' =>
     array (
-        'fr' => 'l&apos;ordre peut &ecirc;tre non pertinent',
+        'fr' => 'l&rsquo;ordre peut &ecirc;tre non pertinent',
         'it' => '???',
     ),
 
     'the order of properties may be not pertinent' =>
     array (
-        'fr' => 'l&apos;ordre des propri&eacute;t&eacute;s peut &ecirc;tre non pertinent',
+        'fr' => 'l&rsquo;ordre des propri&eacute;t&eacute;s peut &ecirc;tre non pertinent',
 		'it' => '???',
     ),
 	 
     'the order of rules may be not pertinent' => 	  
     array (		
-		'fr' => 'l&apos;ordre des r&egrave;gles peut &ecirc;tre non pertinent',
+		'fr' => 'l&rsquo;ordre des r&egrave;gles peut &ecirc;tre non pertinent',
 		'it' => '???',
     ),
 	 
     'the order of paragraphs may be not pertinent' => 	  
     array (		
-		'fr' => 'l&apos;ordre des paragraphes peut &ecirc;tre non pertinent',
+		'fr' => 'l&rsquo;ordre des paragraphes peut &ecirc;tre non pertinent',
 		'it' => '???',
     ),
 	 
     'they are usage items' =>
     array (
-        'fr' => 'ce sont des items d&apos;utilisation',
+        'fr' => 'ce sont des items d&rsquo;utilisation',
         'it' => '???',
     ),
 
     'the paragraphs for entry' => 
     array (
-		'fr' => 'les paragraphes de l&apos;entr&eacute;e',
+		'fr' => 'les paragraphes de l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
     'the properties for entry' => 
     array (
-        'fr' => 'les propri&eacute;t&eacute;s de l&apos;entr&eacute;e',
+        'fr' => 'les propri&eacute;t&eacute;s de l&rsquo;entr&eacute;e',
         'it' => '???',
     ),
 
     'the questions for entry' =>
     array (
-        'fr' => 'les questions de l&apos;entr&eacute;e',
+        'fr' => 'les questions de l&rsquo;entr&eacute;e',
         'it' => '???',
     ),
 
@@ -2058,13 +2245,13 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
 
     'the rules for entry' => 
     array (
-		'fr' => 'les r&egrave;gles de l&apos;entr&eacute;e',
+		'fr' => 'les r&egrave;gles de l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
     'there is no issue waiting' => 
     array (
-		'fr' => 'il n&apos;y a aucune question en attente',
+		'fr' => 'il n&rsquo;y a aucune question en attente',
 		'it' => '???',
     ),
 
@@ -2106,13 +2293,13 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
 
     'usage item' => 
     array (
-		'fr' => 'item d&apos;utilisation',
+		'fr' => 'item d&rsquo;utilisation',
 		'it' => '???',
     ),
 
     'usage items' => 
     array (
-		'fr' => 'items d&apos;utilisation',
+		'fr' => 'items d&rsquo;utilisation',
 		'it' => '???',
     ),
 
@@ -2160,7 +2347,7 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
     
     'write a first property for entry' =>
     array (
-        'fr' => 'ecrire une premi&egrave;re propri&eacute;t&eacute; pour l&apos;entr&eacute;e',
+        'fr' => 'ecrire une premi&egrave;re propri&eacute;t&eacute; pour l&rsquo;entr&eacute;e',
         'it' => '???',
     ),
     

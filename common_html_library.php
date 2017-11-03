@@ -30,7 +30,7 @@ function common_html_page_head_build () {
   $html_str .= '  <META NAME="description" CONTENT="ARCE (Auto-Regulated Collaborative Editing - r&eacute;daction collaborative auto-r&eacute;gul&eacute;e) est conçu pour que les membres d&rsquo;une communaut&eacute; d&rsquo;internautes puissent se mettre d&rsquo;accord sur le pourquoi, le comment et la destination d&rsquo;un texte, avant d&rsquo;en entreprendre l&rsquo;&eacute;criture.">' . "\n";
   $html_str .= '  <meta http-equiv="content-type" content="text/html; charset=utf-8" />' . "\n";
   $html_str .= '  <link href="' . $www_filename_css . '" rel="stylesheet" media="all" type="text/css">' . "\n";
-  $html_str .= '  <link rel="icon" href="images/favicon.ico">' . "\n";
+  $html_str .= '  <link rel="icon" href="IMAGES/favicon.ico">' . "\n";
   $html_str .= ' </head>' . "\n";
   $html_str .= ' <body>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);

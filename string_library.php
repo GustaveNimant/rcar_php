@@ -140,6 +140,7 @@ function word_name_capitalized_of_string_surname ($str, $encoding='utf-8') {
   $str = trim ($str);
   $str = str_replace(' ', '_', $str);
   $str = str_replace('\'', '_', $str);
+  $str = str_replace('-', '_', $str);
   $str = strtolower ($str);
   $str = ucfirst ($str);
 
@@ -214,7 +215,10 @@ function string_check_is_block_name_of_string ($nam_blo){
   /* debug_n_check ($here , "input block name", $nam_blo); */
 
   if ( ! string_is_block_current_name_of_string ($nam_blo)) {
-    fatal_error ($here, "block name >$nam_blo< is NOT canonical");
+    print_fatal_error ($here, 
+    "block name >$nam_blo< were NOT canonical",
+    "it is NOT",
+    "Check function <i><b>word_name_capitalized_of_string_surname</b></i>");
   }
 
   exiting_from_function ($here . " ($nam_blo)");

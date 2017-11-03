@@ -208,14 +208,20 @@ function tools_remove ($what) {
           session_remove ($id_ses);
           break;
       default:
-          print_fatal_error ($here, 
-          "what to be removed were defined",
-          "$what",
-          "Please select one of irp_register |"
-          );
-    };
+          if (isset ($_SESSION['irp_register'][$what])) {
+              unset ($_SESSION['irp_register'][$what]);
+          }
+          else {
+              print_fatal_error ($here, 
+              "what to be removed were defined",
+              "$what",
+              "Please select one key of irp_register"
+              );
+          }
+    }
     
     $log_str = "$what has been removed";
+    print_d ($here, $log_str);
     file_log_write ($here, $log_str);
 
     exiting_from_function ($here . " ($what)");

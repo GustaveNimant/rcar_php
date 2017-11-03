@@ -61,9 +61,9 @@ function link_to_return_of_return_module_nameoffile ($nof_mod) {
 
 /* no ? => $_GET  */
 
-  $nam_mod = str_replace ('.php', '', $nof_mod);
+  $nam_scr = str_replace ('.php', '', $nof_mod);
 
-  $en_txt = 'back to';
+  $en_txt = 'back to script';
   $la_txt = language_translate_of_en_string ($en_txt);
   $la_Txt = string_html_capitalized_of_string ($la_txt);
 
@@ -71,7 +71,7 @@ function link_to_return_of_return_module_nameoffile ($nof_mod) {
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<a href="' . $nof_mod . '">';
-  $html_str .= $la_Txt. ' ' . '<b>' . $nam_mod . '</b>';
+  $html_str .= $la_Txt. ' ' . '<b>' . $nam_scr . '</b>';
   $html_str .= '</a>';
   $html_str .= comment_exiting_of_function_name ($here);
 

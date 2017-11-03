@@ -7,7 +7,7 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 
 entering_in_module ($module);
 
-function block_current_display_and_link_of_surname_by_name_hash_of_entry_name_of_block_current_name ($sur_by_nam_h, $nam_ent, $nam_blo_cur) {
+function block_current_display_and_link_of_surname_by_name_hash_of_entry_name_of_block_current_name_of_la_eol ($sur_by_nam_h, $nam_ent, $nam_blo_cur, $la_eol) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_ent, $nam_blo_cur");
 
@@ -25,7 +25,7 @@ function block_current_display_and_link_of_surname_by_name_hash_of_entry_name_of
   $html_str .= '&block_current_name=' . $nam_blo_cur . '" ';
   $html_str .= 'title="' . $la_tit . '"';
   $html_str .= '>';
-  $html_str .= '<b> ' . $sur_blo . '</b> ';
+  $html_str .= '<b> ' . $sur_blo . $la_eol . '</b> ';
   $html_str .= '</a>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
@@ -64,10 +64,14 @@ function section_block_current_list_display_display_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
     
-    $nam_ent = irp_provide ('entry_current_name', $here);
+    $nam_ent_cur = irp_provide ('entry_current_name', $here);
+    
+    $la_eol = '';
+    $kin_blo = irp_provide ('entry_block_kind', $here);
+    if ($kin_blo == 'question') {$la_eol = language_translate_of_en_string ('?');}
     
     $html_str  = comment_entering_of_function_name ($here);
-    if (block_current_nameoffile_array_is_empty_of_entry_name ($nam_ent)) {
+    if (block_current_nameoffile_array_is_empty_of_entry_name ($nam_ent_cur)) {
         $html_str .= '<br> '; 
     }
     else {
@@ -80,10 +84,10 @@ function section_block_current_list_display_display_build () {
         foreach ($con_blo_by_nam_blo_h as $nam_blo => $con_blo) {
             $con_ite_cur = item_current_content_of_block_current_content ($con_blo);
             
-            $html_str .= block_current_display_and_link_of_surname_by_name_hash_of_entry_name_of_block_current_name ($sur_by_nam_h, $nam_ent, $nam_blo);
-            $html_str .= '<br> ';  
+            $html_str .= block_current_display_and_link_of_surname_by_name_hash_of_entry_name_of_block_current_name_of_la_eol ($sur_by_nam_h, $nam_ent_cur, $nam_blo, $la_eol);
+            $html_str .= '<br>';  
             $html_str .= '&nbsp;&nbsp;&nbsp;<i>' . $con_ite_cur . '</i>';
-            $html_str .= '<br> '; 
+            $html_str .= '<br>'; 
         }
         
         $html_str .= '<br> ';

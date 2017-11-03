@@ -106,7 +106,7 @@ function git_initial () {
   return $html_str;
 }
 
-function git_is_nothing_to_commit_status () {
+function git_has_nothing_to_commit_status () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -134,7 +134,7 @@ function git_status_check_build () {
   $lang_err = language_translate_of_en_string ('Error');
   $lang_com = language_translate_of_en_string ('Take a previously committed');
 
-  if (git_is_nothing_to_commit_status ()){ 
+  if (git_has_nothing_to_commit_status ()){ 
     $html_str = '';
     $html_str .= irp_provide ('common_html_page_head', $here);
     $html_str .= common_html_entitled_text_of_title_of_text ($lang_err . ', ' . $lang_com);
@@ -344,7 +344,7 @@ function git_command_n_commit_html_build () {
  
   $html_cmd_git = str_replace(';git', '<br>git', $cmd_git);
 
-  if (git_is_nothing_to_commit_status ()) {
+  if (git_has_nothing_to_commit_status ()) {
       $log_status = language_translate_of_en_string ('commit successful : working directory clean');
       /* Improve translation */
       $html_log_status = str_replace(';git', '<br>git', $log_status);
@@ -376,7 +376,7 @@ function git_command_build () {
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_page_header', $here);
  
-  if (git_is_nothing_to_commit_status ()){
+  if (git_has_nothing_to_commit_status ()){
  
     $html_str .= '<span class="my-fieldset"> ';
     $html_str .= language_translate_of_en_string ('commit successful : working directory clean');

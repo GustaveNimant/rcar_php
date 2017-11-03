@@ -581,13 +581,16 @@ function irp_provide ($irp_key, $caller) {
     entering_in_function ($here . " ($irp_key, $caller)");
     
     if ( ! ( 
+        ($caller == "tools_display")
+        ||
         (is_substring_of_substring_off_string ("_build", $caller)) 
-        || (is_substring_of_substring_off_string ("_script", $caller))
+        || 
+        (is_substring_of_substring_off_string ("_script", $caller))
     )) { 
         print_fatal_error ($here, 
-        "the name of the current function contains \"_build\" as it uses an <b>irp_provide</b>",
-        "<i>$caller</i> as current function name",
-        "Please take out all the <b>irp_provide</b> inside"
+        "the name of the current function ends with \"_build\" as it uses an <i><b>irp_provide</b></i>",
+        "<i><b>$caller</b></i> as current function name",
+        "Please take out all the <i><b>irp_provide</b></i> inside"
         );
     }
 

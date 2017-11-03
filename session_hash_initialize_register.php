@@ -114,7 +114,15 @@ $_SESSION['top_key_in_get_hash_register'] = array ();
 $_SESSION['parameters']['absolute_path_arce'] = '/keep/sources/rcar';
 $_SESSION['parameters']['absolute_path_server'] = '/keep/sources/rcar/server';
 $_SESSION['parameters']['absolute_path_server_surname'] = '/keep/sources/rcar/server/SURNAMES';
+$_SESSION['parameters']['nameoffile_surname_catalog'] = 'Surname_catalog.cat';
+$_SESSION['parameters']['absolute_path_server_surname_catalog'] = $_SESSION['parameters']['absolute_path_server_surname'] . '/' . $_SESSION['parameters']['nameoffile_surname_catalog'];
+
 $_SESSION['parameters']['absolute_path_source'] = '/keep/sources/rcar/php';
+
+$_SESSION['parameters']['relative_path_server'] = '/rcar/server';
+$_SESSION['parameters']['relative_path_server_surname'] = '/rcar/server/SURNAMES';
+$_SESSION['parameters']['relative_path_source'] = '/rcar/php';
+$_SESSION['parameters']['relative_path_source_images'] = '/rcar/php/IMAGES';
 
 $_SESSION['parameters']['extension_action_log_filename'] = 'log';
 $_SESSION['parameters']['extension_block_filename'] = 'blo';
@@ -132,11 +140,6 @@ $_SESSION['parameters']['irp_nondata_storage_is_enabled'] = TRUE;
 $_SESSION['parameters']['language'] = 'fr';
 $_SESSION['parameters']['printed_html_string_max_size'] = 200;
 $_SESSION['parameters']['program_name'] = 'rcar';
-
-$_SESSION['parameters']['relative_path_server'] = '/rcar/server';
-$_SESSION['parameters']['relative_path_server_surname'] = '/rcar/server/SURNAMES';
-$_SESSION['parameters']['relative_path_source'] = '/rcar/php';
-$_SESSION['parameters']['relative_path_source_images'] = '/rcar/php/IMAGES';
 
 $_SESSION['parameters']['select_size'] = 6;
 

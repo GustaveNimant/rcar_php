@@ -249,6 +249,12 @@ par la liste de ses propri&eacute;t&eacute;s',
         'it' => '???',
     ),	 
 
+    'back to script' =>
+    array (
+        'fr' => 'retour au script',
+        'it' => '???',
+    ),
+
     'before' =>
     array (
 		'fr' => 'avant',
@@ -642,6 +648,12 @@ par la liste de ses propri&eacute;t&eacute;s',
     'display of paragraphs for entry' =>
     array (
         'fr' => 'affichage des paragraphes de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ),
+    
+    'display of questions for entry' =>
+    array (
+        'fr' => 'affichage des questions de l&rsquo;entr&eacute;e',
         'it' => '???',
     ),
     
@@ -1655,6 +1667,12 @@ par la liste de ses propri&eacute;t&eacute;s',
         'it' => '???',
     ),
 
+    'page for displaying the result of creation of a new question for the' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation d&rsquo;une nouvelle question pour l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+    
     'page for displaying the entry' =>
     array (
         'fr' => 'page d&rsquo;affichage de l&rsquo;entr&eacute;e',

@@ -57,6 +57,7 @@ function check_is_block_new_build () {
 
   $nam_blo_new = irp_provide ('block_new_name_from_block_new_surname', $here);
 
+  $log_str = '';
   try {
       $old_nam_blo_cur_a = irp_provide ('block_name_array', $here);
       debug_n_check ($here , '$old_nam_blo_cur_a', $old_nam_blo_cur_a);
@@ -86,7 +87,7 @@ function check_is_block_new_build () {
       }
   }
 
-  $log_str = "Block >$nam_blo_new< has been checked as new";
+  $log_str .= "Block >$nam_blo_new< has been checked as new";
 
   exiting_from_function ($here . " with $log_str");
   return $log_str; 
@@ -107,17 +108,85 @@ function block_new_content_write_build (){
 
   $con_blo_new = irp_provide ('block_new_content', $here);
 
-  $nam_ent = irp_provide ('entry_current_name', $here);
+  $nam_ent_cur = irp_provide ('entry_current_name', $here);
 
   debug_n_check ($here , '$nam_blo_new', $nam_blo_new);
   debug_n_check ($here , '$con_blo_new', $con_blo_new);
 
-  block_content_write ($nam_ent, $nam_blo_new, $con_blo_new);
+  block_content_write ($nam_ent_cur, $nam_blo_new, $con_blo_new);
 
-  $html_str  = irp_provide ('git_command_n_commit_html', $here);
+  $log_str .= "block_new_content >$con_blo_new< has been written on entry subdirectory $nam_ent_cur";
 
   exiting_from_function ($here);
-  return $html_str;
+  return $log_str;
+}
+
+function block_new_surname_write_build (){
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+  $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__);
+
+/* getting DATA $get_val */
+  $get_key = 'block_new_surname';
+  $sur_blo_new = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here);
+  $nam_blo_new = irp_provide ('block_new_name_from_block_new_surname', $here);
+  debug_n_check ($here , '$nam_blo_new', $nam_blo_new);
+
+  $log_str = irp_provide ('check_is_block_new', $here);
+  file_log_write ($here, $log_str);
+
+  $old_sur_by_nam_h = irp_provide ('surname_by_name_hash', $here); /* Verify */
+  $sur_by_nam_h = surname_by_name_hash_add_n_write_of_name_of_surname_of_current_hash ($nam_blo_new, $sur_blo_new, $old_sur_by_nam_h);
+  debug_n_check ($here , '$sur_by_nam_h', $sur_by_nam_h);
+
+  $fno_sur_cat = $_SESSION['parameters']['absolute_path_server_surname_catalog'];
+  $log_str .= "block_new_surname >$sur_blo_new< has been added to $fno_sur_cat";
+
+  exiting_from_function ($here);
+  return $log_str;
+}
+         
+function block_new_create_save_catalog_actualize_build (){
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+  $nam_ent_cur = irp_provide ('entry_current_name', $here);
+  $nam_blo_new = irp_provide ('block_new_name_from_block_new_surname', $here);
+
+  debug_n_check ($here , '$nam_ent_cur', $nam_ent_cur);
+  debug_n_check ($here , '$nam_blo_new', $nam_blo_new);
+
+  $glue = $_SESSION['parameters']['glue'];
+  try {
+      $cat_blo = irp_provide ('block_name_catalog_current', $here);
+      debug_n_check ($here , '$cat_blo', $cat_blo);
+      $wor_a = explode ($glue, $cat_blo);
+      if (! in_array ($nam_blo_new, $wor_a)) {
+          $new_cat_blo = $cat_blo . $glue . $nam_blo_new;
+      }
+      else {
+          print_fatal_error ($here,
+          "block_new_name >$nam_blo_new< were NOT in Block_name_catalog.cat",
+          "Block_name_catalog.cat is >$cat_blo<",
+          "Check");
+      }
+  }
+  catch (Exception $e) {  
+      $mes = $e->getMessage();
+      if ($mes = "Catalog is empty in function block_new_name_catalog_build for Entry name $nam_ent_cur"){
+          $new_cat_blo = $nam_blo_new;
+      }
+  }
+  
+  debug_n_check ($here , '$new_cat_blo', $new_cat_blo);
+
+#  irp_store_force ('block_new_name_catalog', $new_cat_blo, 'block_new_create_save');
+
+  block_name_catalog_write_of_entry_name_of_block_name_catalog ($nam_ent_cur, $new_cat_blo);
+  
+  exiting_from_function ($here);
+  return $new_cat_blo;
 }
 
 function block_new_create_save_link_to_return_build () {
@@ -149,6 +218,14 @@ function block_new_create_save_build (){
 
   $html_str .= irp_provide ('block_new_content_write', $here);
   $html_str .= '<br><br>' . "\n";
+
+  $html_str .= irp_provide ('block_new_surname_write', $here);
+  $html_str .= '<br><br>' . "\n";
+
+  $html_str .= irp_provide ('block_new_create_save_catalog_actualize', $here);
+  $html_str .= '<br><br>' . "\n";
+
+  $html_str  = irp_provide ('git_command_n_commit_html', $here);
 
   $html_str .= irp_provide ('block_new_create_save_link_to_return', $here);
   $html_str .= '<br><br>' . "\n";

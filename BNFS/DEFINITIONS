@@ -1,0 +1,6 @@
+data : an entity that may be a key for $_GET
+label : an entity surname clickable to go to the entity module 
+
+library   : a module with no irp_provide
+functions : a module with irp_provide and _build function
+script    : a module where there exists $html_str = irp_provide ($module, $module . "_script");

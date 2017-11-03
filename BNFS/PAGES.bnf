@@ -1,56 +1,212 @@
 # pages 
 
- page_arce          ::= page_header 
+ page arce             ::= header_of_page  
 
- page_header        ::= 
+ header_of_page        ::= 
                         label_home                            => home.php
                         label_entry_list                      => entry_list_display.php 
                         label_command
+                        ...
 
+ page entry_list_display ::=                                   <= home.php
+                         pervasive_page_header                  
 
- page_entry_list    ::= page_header                      <= entry_list_display.php
+                         section_entry_list_display_page_title
 
-                        section_select_entry_current_display  => entry_current_display.php
-                        section_select_entry_current_rename   => entry_current_rename.php
-                        section_entry_new_create              => entry_new_create.php
+                         section_select_entry_current_display ::=  
+                         (
+                           subsection_select_entry_current_display_title
+                           subsection_entry_current_display    => entry_current_display.php
+                         )
+
+                         section_select_entry_current_rename  ::=
+                         (
+                           subsection_select_entry_current_rename_title
+                           subsection_entry_current_rename     => entry_current_rename.php 
+                         )
+                 
+		         section_entry_new_create              ::= (section_entry_new_create_functions.php)
+
+                         (
+                           subsection_entry_new_create_title
+                           subsection_entry_new_create         => entry_new_create.php 
+                         )
               
-                        page_foot  
+                         pervasive_page_footer  
 
 
- page_entry_current ::= page_header                       <= entry_current_display.php
+ page entry_new_create ::=                                     <= subsection_entry_new_create
+                        pervasive_page_header          
  
+                        section_entry_new_create_page_title
+                        section_entry_new_create_save          ::=
+                        (
+                          subsection_entry_new_create_title 
+                          subsection_entry_new_create_save     => entry_new_create_save.php
+                        )
+                        section_return                         => entry_list_display.php
+
+                        pervasive_pervasive_page_footer  
+
+
+
+ page entry_current_display ::= 
+                        pervasive_page_header           <= entry_list_display.php
+ 
+                        section_entry_current_page_title
+
                         section_block_new_create              => block_new_create.php
                         section_block_current_list_reorder    => block_current_list_reorder.php
-                        section_block_current_list_display    
-                      {
-                        section_block_current_display     ::=        
-                                         goto_block_module    => block_current_display.php
-                                         block_content
-                      }
-                        return                                => entry_list_display.php
+                        section_block_current_list_display ::= 
+                          (  
+                            subsection_block_current_list_display_title
+                            {
+                              subsection_block_current_display    
+                              (       
+                                subsubsection_block_current_display_label => block_current_display.php
+                                subsubsection_block_content
+                              )
+                            }
+                          )
+                        section_return                       => entry_list_display.php
 
-                        page_foot  
+                        pervasive_page_footer  
 
- page_block_current ::= page_header                       <= block_current_display
+
+page entry_current_rename ::= 
+                        pervasive_page_header                   <= entry_list_display.php
+
+                        entry_current_rename_page_title
+
+                        entry_current_rename_form ::=
+                          (
+                          entry_current_rename_form_surnamenew_titled_gather
+                          entry_current_rename_form_justification_titled_gather
+                          entry_current_rename_form_submit      => entry_current_namenew_save.php
+                          )
+
+                        entry_current_rename_link_to_return     => entry_list_display.php
+
+                        pervasive_page_footer  
+
+
+page entry_current_namenew_save ::=
+
+                        pervasive_page_header                   <= entry_current_rename_form 
+
+                        entry_current_namenew_save_page_title
+
+                        entry_current_namenew_write
+
+                        entry_current_namenew_save_link_to_return => entry_list_display.php
+
+                        pervasive_page_footer
+
+
+# Blocks 
+
+ page block_new_create ::=                                     <= entry_current_display_script.php
+                        pervasive_page_header          
  
-                        section_block_current_page_title
+                        section_block_new_create_page_title
+                        section_block_new_create               ::=
+                        (
+                          subsection_block_new_create_title 
+                          subsection_block_new_create_save     => block_new_create_save.php
+                        )
+                        section_return                         => entry_current_display.php
 
-                        section_item_current 
-                        section_item_current_modify           => item_next_create.php
-                        section_item_current_justification
+                        pervasive_pervasive_page_footer  
+
+
+ page block_current_display ::= 
+                        pervasive_page_header            <= block_current_display.php
+ 
+                        section_block_current_display_page_title
+
+                        section_item_current_display ::=
+                          (
+                          subsection_item_current_display_title
+                          subsection_item_current_content
+                          )
+
+                        section_item_current_modify  => item_current_modify.php
+
                         section_item_previous
                         section_sha1_block_previous
 
-                        section_block_current_action_list ::=
-                                          section_block_current_action_title
-                                          {
-                                           section_block_current_delete  => block_current_delete.php
-                                           section_block_current_history => block_current_history.php
-                                           section_block_current_rename  => block_current_rename.php
-                                          }
-                        return                                 => entry_current_display.php
-                        page_foot  
+                        section_block_current_actions_title 
+                        section_block_current_delete  => block_current_delete.php
+                        section_block_current_history => block_current_history.php
+                        section_block_current_rename  => block_current_rename.php
 
+                        section_return                              => entry_current_display.php
+                        pervasive_page_footer  
+
+
+page block_current_delete ::= 
+                        pervasive_page_header                   <= block_current_display.php
+
+   blabla
+
+page block_current_history ::= 
+                        pervasive_page_header                  <= block_current_display.php
+
+   blabla
+
+page block_current_rename ::= 
+                        pervasive_page_header                   <= block_current_display.php
  
+                        section_block_current_rename_page_title
 
- page item_current_modify.php
+                        section_block_current_rename_form ::=
+                          (
+                          subsection_block_current_surnamenew_title
+                          subsection_block_current_surnamenew
+
+                          subsection_block_current_surnamenew_justify_title
+                          subsection_block_current_surnamenew_justification
+
+                          subsection_block_current_surnamenew_save  => block_current_namenew_save.php
+                          )
+
+                        section_return                              => block_current_display.php
+                        pervasive_page_footer  
+
+block_current_namenew_save.ph		     
+                       subsection_block_current_namenew_save     => 
+
+
+page block_next_save ::= 
+                       pervasive_page_header                   <= block_next_save.php
+ 
+                        section_block_next_save_page_title
+
+
+                        section_return                               
+                        pervasive_page_footer  
+
+# Items
+
+ page item_current_modify ::= 
+                        pervasive_page_header         <= block_current_display.php
+ 
+                        section_item_current_modify_page_title
+                        section_item_current_display ::=
+                        (
+                          subsection_item_current_display_title
+                          subsection_item_current_content
+                        )
+                        section_item_next_create_form ::=
+                        (
+                          subsection_item_next_create_title
+                          subsection_item_next_content
+
+                          subsection_item_next_justify_title
+                          subsection_item_next_justification
+
+                          subsection_item_next_save            => block_next_create.php
+                        )	
+
+                        section_return                         => entry_current_display.php
+                        pervasive_page_footer  

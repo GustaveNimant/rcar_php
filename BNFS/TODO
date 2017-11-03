@@ -1,0 +1,52 @@
+# ERROR entry not bubbled in block_current_display 'for entry' 
+
+# reorder twice => error
+
+# never GET an action => only solution is a missing require_once in build_requirements.php
+
+# bubble 'modify the order'
+
+# simplify link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent, $sur_ent, 'block_current_display');  
+
+# ? \n comment \n ?
+
+# retour à la liste des entrées :   human_name ['entry_list_display'] = 'list of entries'
+
+# save new => current 
+
+# entry rename check
+
+# modification of surname ???
+
+# Boxes 
+
+  Title Action
+
+  Title
+  Box + Action
+
+  Title
+  Select + Action
+
+  Title
+  Form + action
+
+  Link_to_return  + irp_path_clean 
+
+  Title_link
+  Content
+
+  List of Title_link + content
+
+
+#inside form :
+
+ gather_small_titled_of_title_of_get_key_of_initial_value 
+ Title
+ Input type text get_key initial_value
+
+ gather_wide_titled_of_title_of_get_key_of_initial_value 
+ Title
+ textarea get_key initial_value
+
+ submit

@@ -2,13 +2,26 @@
 # 
 # <= means calculated from
 
- entity ::= block | block_list | entry | entry_list | item | justification | rcar_server | sha1 | surname_catalog
+ entity ::= block | block_list | entry | entry_list | item | justification | module | rcar_server | sha1 | surname_catalog
 
- entity_surname    user provided
- entity_name    <= entity_surname
- entity_newsurname user provided
- entity_newname <= entity_newsurname
+ entity_surname         user provided
+ entity_name         <= entity_surname
+ entity_surnamenew      user provided
+ entity_namenew      <= entity_rename
+ entity_new_surname     user provided
+ entity_new_name     <= entity_new_surname
 
+# module
+
+  module_current_name 
+  module_current_nameoffile
+
+  module_toreturn_name 
+  module_toreturn_nameoffile 
+
+  module_wheretoact_name
+  module_wheretoact_nameoffile
+  
 # rcar_server 
 
  rcar_server_git          ::= .git
@@ -20,26 +33,26 @@
  
  entry_content ::= {block_list}
 
- entry_list    ::= {entry_current} 
+ entry_current_list    ::= {entry_current} 
 
- entry_name
- entry_surname
+ entry_current_name
+ entry_current_surname
 
- entry_namenew      renaming an entry
- entry_surnamenew   renaming an entry
+ entry_current_namenew      renaming a current entry
+ entry_current_surnamenew   renaming a current entry
 
- entry_new_name     creating an entry
- entry_new_surname  creating an entry
+ entry_new_name     creating a new entry
+ entry_new_surname  creating a new entry
 
 # block
 
- block            ::= block_current | block_next | block_new | block_previous
+ block            ::= block_current | block_next | block_previous | block_new 
 
- block_name       ::= word   
- block_surname    ::= word
+ block_current_name        ::= word   
+ block_current_surname     ::= word
 
- block_namenew    ::= word      renaming a block
- block_surnamenew ::= word      renaming a block
+ block_current_namenew     ::= word     renaming a block
+ block_current_surnamenew  ::= word     renaming a block
 
  block_new_name    ::= word     creating a new block
  block_new_surname ::= word     creating a new block
@@ -48,23 +61,23 @@
 
  block_next_content    ::= item_next justification_next item_current sha1_block_current
 
- block_list            ::= {block}   
+ block_current_list    ::= {block}   
 
 # item
 
  item ::= item_current | item_next | item_previous 
 
- item_name       ::= word   
- item_surname    ::= word
+ item_current_name       ::= word   
+ item_current_surname    ::= word
 
- item_namenew    ::= word
- item_surnamenew ::= word
+ item_current_namenew    ::= word
+ item_current_surnamenew ::= word
 
- item_current_content  ::= string
- item_previous_content ::= string
- item_next_content     ::= string
+ item_current_content    ::= string
+ item_previous_content   ::= string
+ item_next_content       ::= string
 
-# sha1 apply only on a block_content
+# sha1 applies only on a block_content
 
  sha1 ::= sha1_block_current | sha1_block_previous
 

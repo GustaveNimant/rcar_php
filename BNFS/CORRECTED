@@ -1,0 +1,73 @@
+#    "Author : François Colonna 30 septembre 2017 at 15:25:55+02:00";
+
+mw button_submit_centered_of_button_value_en_of_language  inputtypesubmit_of_en_action_name *php
+
+msw inputtypesubmit_of_en_action_name ', $lan)' ')' *php
+
+git mv  build_functions.php  build_requirements.php
+
+msrf block_current_display_actions block_current_actions_display *php
+msrf block_current_display_page_title block_current_page_title_display *php
+msrf block_previous_sha1_display_content block_previous_content_sha1_display *php
+msrf block_previous_content_sha1_display block_previous_sha1_value_display *php
+msrf block_previous_sha1_display_title  block_previous_sha1_title_display  *php
+
+#    "Author : François Colonna 02 octobre 2017 at 14:58:28+02:00";
+
+msrf entry_display   entry_current_display  *php
+msrf pervasive_html_initial_section   pervasive_section_page_header *php
+msrf pervasive_html_final_section     pervasive_page_footer_section *php
+msrf entry_create  entry_new_create *php
+msrf entry_new_create_message_of_entry_name  section_entry_new_create_title *php
+msrf entry_new_create_section_create_entry   section_entry_new_create *php
+
+#    "Author : François Colonna 03 octobre 2017 at 08:29:26+02:00";
+
+msw link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile  ', $lan)' ')' *php
+
+#   "Author : François Colonna 04 octobre 2017 at 14:18:06+02:00";
+
+msrf section_entry_current_display_page_title  section_entry_current_page_title *php 
+msrf item_current_content_display section_item_current_content_display *php
+msrf  block_current_actions_display section_block_current_actions_display *php
+mw pervasive_page_footer_section  pervasive_section_page_footer  *php
+msrf item_current_modify_form item_next_create_form  *php
+msrf item_next_create_modify_form item_next_create_form  *php
+
+#    "Author : François Colonna 08 octobre 2017 at 13:31:21+02:00";
+mw  stack_function_level_array stack_function_called_array *php
+
+#    "Author : François Colonna 09 octobre 2017 at 17:38:51+02:00";
+
+msrf entry_newname entry_namenew *php
+msrf entry_newsurname entry_surnamenew *php
+
+#   "Author : François Colonna 12 octobre 2017 at 10:07:58+02:00";
+
+   $prev = end ($_SESSION['parameters']['stack_function_called_array']);
+   NOT current !!!
+
+#    "Author : François Colonna 13 octobre 2017 at 18:36:26+02:00";
+
+msrf translate_language_texts_english_by_language_array language_translate_texts_english_by_language_hash *php
+msrf surname_of_name_of_surname_by_name_array surname_of_name_of_surname_by_name_hash *php
+msrf surname_by_name_array surname_by_name_hash *php
+
+#    "Author : François Colonna 16 octobre 2017 at 18:10:19+02:00";
+
+msw require_once  father_n_son_stack_module_functions father_n_son_stack_entity_functions *php
+
+#   "Author : François Colonna 23 octobre 2017 at 09:59:46+02:00";
+
+mw entry_surnamenew entry_current_surnamenew *php
+mw entry_namenew_justification  entry_current_namenew_justification *php
+
+#    "Author : François Colonna 25 octobre 2017 at 11:05:16+02:00";
+
+mw block_sequence_string block_name_catalog_new *php
+msrf session_array session_hash *php
+msrf block_list_neworder block_list_order_new *php
+
+mw irp_path_clean_register_of_top_key_of_bottom_key  irp_path_clean_register_of_top_key_of_bottom_key_of_where *php
+mw irp_path_clean_register_of_bottom_key irp_path_clean_register_of_bottom_key_of_where *php
+mw irp_path_data_clean_new_bottom_key_store_of_bottom_key_of_module_name irp_path_data_clean_new_bottom_key_store_of_bottom_key_of_module_name_of_where *php

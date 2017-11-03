@@ -9,15 +9,17 @@
 #  { } indiquent une partie qui peut être répétée un nombre quelconque de fois.
 #      tandis qu'un symbole + en exposant des accolades indique une partie répétée au moins une fois.
 
+ rcar ::= { page }
+
  page ::= page_information | page_action
 
- page_information ::= page_header { string }
+ page_information ::= section_page_header { string } 
 
- page_action ::= page_header { section } [ return ] [ page_foot  
+ page_action ::= section_page_header { section } [ section_return ] [ section_page_footer ]  
 
- page_header ::=  {a_href_module} {a_href_entry} { form_action }
+ section_page_header ::=  {a_href_module} {a_href_entry} { form_action }
 
- section ::= section_page_title | section_title | section_titlehelped | section_action | section_form 
+ section ::= section_page_title | section_action | section_form 
 
  section_action ::= 
                   | section_create
@@ -29,12 +31,16 @@
                   | section_reorder
                   | section_save
 
- section_form ::= section_titlehelped form 
+ section_create     ::=  (section_titlehelped | section_title) form 
+
+ section_form       ::=  section_titlehelped form | section_title form 
 
  section_page_title ::= <div class="my-div">bubbled_text</div>
 
  section_block_display ::= 
  <a href="block_current_display.php?entry_name=Utilisation&block_current_name=Bouton_quitter" title="cliquer pour ouvrir la page"><b> Bouton quitter</b> </a>
+
+ subsection ::= subsection_titlehelped | subsection_title
 
  bubbled_expression ::= <span title="bubbled_text"><u>expression</u></span>
 
@@ -47,6 +53,8 @@
  section_action_list ::= section_titlehelped {section_action} 
 
  section_action ::= <div class="my-div"> [ form ] [a_href] [<span title="string"</span> </div>
+
+ jumb ::= a_href | form
 
  a_href ::= a_href_entry | a_href_get_key_get_value | a_href_module | goto_block_module
 
@@ -83,6 +91,5 @@
  textarea_tag ::= <textarea name="string" rows="integer" cols="integer">string</textarea> 
 
  button_tag ::=  <button type="button" [ onclick="alert('string')"] >string</button> 
-
-
+ 
  goto_block ::= <a href="block_current_display.php?entry_name=entry_name&block_current_name=Bouton_quitter" title="cliquer pour ouvrir la page"><b> Bouton quitter</b> </a>

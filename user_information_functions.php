@@ -1,7 +1,6 @@
 <?php 
 
 require_once "management_library.php";
-require_once "string_library.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 

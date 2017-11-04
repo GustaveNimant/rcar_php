@@ -33,7 +33,7 @@ function section_block_new_create_title_build () {
   return $html_str;
 }
 
-function section_block_new_create_build () {
+function section_block_new_create_build () {  /* Generalize */
   $here = __FUNCTION__;
   entering_in_function ($here);
 

@@ -89,6 +89,12 @@ is an assertion it should verify' =>
         'it' => '???',
     ),
 
+    'a question is a sentence starting with what, why or how' =>
+    array (
+        'fr' => 'une question est une phrase commençant par quoi, pourquoi ou comment',
+        'it' => '???',
+    ), 
+
     'action' => 
     array (
         'fr' => 'action',
@@ -656,7 +662,14 @@ par la liste de ses propri&eacute;t&eacute;s',
         'fr' => 'affichage des questions de l&rsquo;entr&eacute;e',
         'it' => '???',
     ),
-    
+
+    'display of rules for entry' =>
+    array (
+        'fr' => 'affichage des r&egrave;gles de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+
+
     'display options' => 
     array (
 		'fr' => 'afficher les options',
@@ -1415,36 +1428,6 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 	 
-    'new order of paragraphs for entry' =>
-    array (
-        'fr' => 'nouvel ordre des paragraphes de l&rsquo;entr&eacute;e',
-        'it' => '???',
-    ), 
-    
-    'no block yet in entry' =>
-    array (
-        'fr' => 'il n&rsquo;y a aucun bloc dans l&rsquo;entr&eacute;e',
-        'it' => '???',
-    ), 
-
-    'reorder the properties for entry' =>
-    array (
-		'fr' => 'r&eacute;ordonner les propri&eacute;t&eacute;s pour l&rsquo;entr&eacute;e',
-		'it' => '???',
-    ),	 
-
-    'reorder the questions for entry' =>
-    array (
-		'fr' => 'r&eacute;ordonner les questions pour l&rsquo;entr&eacute;e',
-		'it' => '???',
-    ),	 
-	 
-    'reorder the rules for entry' =>
-    array (
-		'fr' => 'modifier l&rsquo;ordre des r&egrave;gles pour l&rsquo;entr&eacute;e',
-		'it' => '???',
-    ),
-
     'modify the order' =>
     array (
 		'fr' => 'modifier l&rsquo;ordre',
@@ -1505,12 +1488,24 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 
+    'new order of paragraphs for entry' =>
+    array (
+        'fr' => 'nouvel ordre des paragraphes de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+    
     'new order of properties for entry' =>
     array (
 		'fr' => 'nouvel ordre des propri&eacute;t&eacute;s pour l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
+    'new order of questions for entry' =>
+    array (
+		'fr' => 'nouvel ordre des questions pour l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+    
     'new order of rules for entry' =>
     array (
         'fr' => 'nouvel ordre des r&egrave;gles pour l&rsquo;entr&eacute;e',
@@ -1643,6 +1638,12 @@ par la liste de ses propri&eacute;t&eacute;s',
         'it' => '???',
     ), 
     
+    'page for confirming the modification of rule' =>
+    array (
+        'fr' => 'page de confirmation de la modification de la r&egrave;gle',
+        'it' => '???',
+    ),
+
     'page for confirming the modification of question' =>
     array (
         'fr' => 'page de confirmation de la modification de la question',
@@ -1721,6 +1722,12 @@ par la liste de ses propri&eacute;t&eacute;s',
         'it' => '???',
     ),
     
+    'page for modifying the content of the current rule' =>
+    array (
+        'fr' => 'page de modification du contenu de la r&egrave;gle courante',
+        'it' => '???',
+    ), 
+    
     'page for removing the paragraph' =>
     array (
         'fr' => 'page de suppression du paragraphe',
@@ -1739,6 +1746,12 @@ par la liste de ses propri&eacute;t&eacute;s',
         'it' => '???',
     ),
 
+    'page for reordering the questions of the entry' =>
+    array (
+        'fr' => 'page de changement de l&rsquo;ordre des questions de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+    
     'please enter at least three words' =>
     array (
         'fr' => 'veuillez saisir au minimum trois mots',
@@ -1949,9 +1962,33 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 
+    'reorder' => 
+    array (
+		'fr' => 'r&eacute;ordonner',
+		'it' => '???',
+    ),
+
     'reorder rules' => 
     array (
 		'fr' => 'r&eacute;ordonner les r&egrave;gles',
+		'it' => '???',
+    ),
+
+    'reorder the properties for entry' =>
+    array (
+		'fr' => 'r&eacute;ordonner les propri&eacute;t&eacute;s pour l&rsquo;entr&eacute;e',
+		'it' => '???',
+    ),	 
+
+    'reorder the questions for entry' =>
+    array (
+		'fr' => 'r&eacute;ordonner les questions pour l&rsquo;entr&eacute;e',
+		'it' => '???',
+    ),	 
+	 
+    'reorder the rules for entry' =>
+    array (
+		'fr' => 'modifier l&rsquo;ordre des r&egrave;gles pour l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
@@ -1982,12 +2019,6 @@ par la liste de ses propri&eacute;t&eacute;s',
     'reorder usage items' => 
     array (
 		'fr' => 'r&eacute;ordonner les items d&rsquo;utilisation',
-		'it' => '???',
-    ),
-
-    'reorder' => 
-    array (
-		'fr' => 'r&eacute;ordonner',
 		'it' => '???',
     ),
 
@@ -2172,6 +2203,12 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 
+    'there is no block yet in entry' =>
+    array (
+        'fr' => 'il n&rsquo;y a encore aucun bloc dans l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+
     'unset' => 
     array (
         'fr' => 'd&eacute;sactiver',
@@ -2204,12 +2241,6 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
     'the order may be not pertinent' =>
     array (
         'fr' => 'l&rsquo;ordre peut &ecirc;tre non pertinent',
-		'it' => '???',
-    ),
-
-    'the order may be not pertinent' =>
-    array (
-        'fr' => 'l&rsquo;ordre peut &ecirc;tre non pertinent',
         'it' => '???',
     ),
 
@@ -2225,9 +2256,9 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
 		'it' => '???',
     ),
 	 
-    'the order of paragraphs may be not pertinent' => 	  
+    'the order of paragraphs may be improved' => 	  
     array (		
-		'fr' => 'l&rsquo;ordre des paragraphes peut &ecirc;tre non pertinent',
+		'fr' => 'l&rsquo;ordre des paragraphes peut &ecirc;tre am&eacute;lior&eacute;',
 		'it' => '???',
     ),
 	 

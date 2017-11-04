@@ -24,12 +24,12 @@ function bubble_en_text_by_key_hash_make () {
         'new property' => 'new property',
         'new question' => 'new question',
         'new rule' => 'create a new rule to refine the editing criteria',
-        'order' => 'the order of paragraphs may be not pertinent',
+        'order' => 'the order of paragraphs may be improved',
         'order of properties' => 'the order of properties may be not pertinent',
         'order of rules' => 'the order of rules may be not pertinent',
         'paragraph' => 'a paragraph is a list of consecutive sentences',
         'property' => 'a property of an entry&#010 is an assertion it should verify',
-        'questions' => 'questions',
+        'question' => 'a question is a sentence starting with what, why or how',
         'reorder' => 'the order may be not pertinent',
         'rule' => 'ARCE has three kinds of rules : general rules, editing rules and property rules',
         'select' => 'select an item from the drop-down list',
@@ -45,6 +45,7 @@ function bubble_en_text_by_key_hash_make () {
   $bubble_en_text_by_key_hash['entries'] = $bubble_en_text_by_key_hash['entry'];
   $bubble_en_text_by_key_hash['paragraphes'] = $bubble_en_text_by_key_hash['paragraph'];
   $bubble_en_text_by_key_hash['properties'] = $bubble_en_text_by_key_hash['property'];
+  $bubble_en_text_by_key_hash['questions'] = $bubble_en_text_by_key_hash['question'];
   $bubble_en_text_by_key_hash['rules'] = $bubble_en_text_by_key_hash['rule'];
   $bubble_en_text_by_key_hash['surnames'] = $bubble_en_text_by_key_hash['surname'];
 

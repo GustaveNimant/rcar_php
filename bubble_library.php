@@ -14,10 +14,11 @@ function bubble_bubbled_text_of_text_of_bubble_text ($txt, $bub_txt) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($txt, $bub_txt)");
 
-  $html_str  = '';
+  $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<span title="' . $bub_txt . '">';
   $html_str .= '<u>' . $txt . '</u>';
-  $html_str .= '</span>' . "\n";
+  $html_str .= '</span>';
+  $html_str .= comment_exiting_of_function_name ($here);
 
   exiting_from_function ($here . " with >$html_str<");
 
@@ -32,11 +33,10 @@ function bubble_bubbled_text_of_text_of_bubble_text_array ($inp_txt, $bub_txt_a)
       $html_str = $inp_txt;
   }
   else {
-      debug_n_check ($here, '$bub_txt_a', $bub_txt_a);
+#      debug_n_check ($here, '$bub_txt_a', $bub_txt_a);
 
       $bub_key_a = array_keys ($bub_txt_a);
       $inp_txt_exp = str_replace ("squo;", "squo; ", $inp_txt);
-#      $inp_txt_exp = str_replace ("apos;", "apos; ", $inp_txt_exp);
       $inp_txt_a = explode (' ', $inp_txt_exp);
       
       debug_n_check ($here, '$inp_txt_a', $inp_txt_a);
@@ -48,17 +48,17 @@ function bubble_bubbled_text_of_text_of_bubble_text_array ($inp_txt, $bub_txt_a)
       foreach ($inp_txt_a as $key_inp => $wor) {
           $count++;
           if ( in_array ($wor, $bub_key_a)) {
-              debug_n_check ($here, '$key_inp', $key_inp);
-              debug_n_check ($here, '$wor', $wor);
+#              debug_n_check ($here, '$key_inp', $key_inp);
+#              debug_n_check ($here, '$wor', $wor);
 
               $bubble_text  = $bub_txt_a[$wor];
-              debug_n_check ($here, '$bubble_text', $bubble_text);
+#              debug_n_check ($here, '$bubble_text', $bubble_text);
 
               if ($count == 1) {
                   $wor = string_html_capitalized_of_string ($wor); 
               }
 
-              $str = bubble_bubbled_text_of_text_of_bubble_text ($wor, $bubble_text) . "\n";
+              $str = bubble_bubbled_text_of_text_of_bubble_text ($wor, $bubble_text);
               $html_str_a[$key_inp] = $str;
           }
           else {
@@ -81,12 +81,12 @@ function bubble_la_text_by_key_array_make_of_la_text ($la_txt) {
 
   $bubble_la_text_by_key_array = bubble_la_text_by_key_array_make ();
 
-  debug_n_check ($here , '$bubble_la_text_by_key_array', $bubble_la_text_by_key_array);
+#  debug_n_check ($here , '$bubble_la_text_by_key_array', $bubble_la_text_by_key_array);
 
   $la_txt = str_replace ("squo;", "squo; ", $la_txt);
   $la_wor_a = explode (' ', $la_txt);
 
-  debug_n_check ($here , '$la_wor_a', $la_wor_a);
+#  debug_n_check ($here , '$la_wor_a', $la_wor_a);
   
   $la_bub_txt_a = array ();
   foreach ($la_wor_a as $k => $la_wor) {
@@ -94,12 +94,13 @@ function bubble_la_text_by_key_array_make_of_la_text ($la_txt) {
           /* $la_wor is a bubbled word */
           $la_bub_txt = $bubble_la_text_by_key_array[$la_wor];
           $la_bub_txt_a [$la_wor] = $la_bub_txt;
-          debug_n_check ($here , '$la_wor', $la_wor);
-          debug_n_check ($here , '$la_bub_txt', $la_bub_txt);
+#          debug_n_check ($here , '$la_wor', $la_wor);
+#          debug_n_check ($here , '$la_bub_txt', $la_bub_txt);
       } 
   }
   
   debug ($here , '$la_bub_txt_a', $la_bub_txt_a);
+
   exiting_from_function ($here . " ($la_txt)");
   return $la_bub_txt_a;
 }

@@ -9,7 +9,7 @@ $Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);
 
-function block_list_reorder_of_surname_by_name_hash_of_entry_name_of_block_current_name_of_item_content ($sur_by_nam_h, $nam_ent, $nam_blo, $con_blo) {
+function block_list_reorder_of_surname_by_name_hash_of_entry_name_of_block_current_name_of_item_content_of_la_eol ($sur_by_nam_h, $nam_ent, $nam_blo, $con_blo, $la_eol) {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -21,7 +21,7 @@ function block_list_reorder_of_surname_by_name_hash_of_entry_name_of_block_curre
   
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<tr> '  . "\n";
-  $html_str .= '<td width=80%><b> ' . $sur_blo . '</b></td> ';
+  $html_str .= '<td width=80%><b> ' . $sur_blo . $la_eol . '</b></td> ';
   $html_str .= button_radio_from_to ($nam_blo);
   $html_str .= '</tr> ';
 
@@ -106,7 +106,10 @@ function block_list_reorder_order_loop_table_build () {
 
   $arr_a = array();
   $count = 0;
-
+  $la_eol = '';
+  $kin_blo = irp_provide ('entry_block_kind', $here);
+  if ($kin_blo == 'question') {$la_eol = language_translate_of_en_string ('?');}
+  
   $html_str  = comment_entering_of_function_name ($here);
 
   foreach ($nam_blo_a as $key => $nam_blo) {
@@ -114,7 +117,7 @@ function block_list_reorder_order_loop_table_build () {
       $con_ite_cur = item_current_content_of_block_current_content ($con_blo) ;
       $con_ite = str_replace ("\n", "<br>", $con_ite_cur);
 
-      $html_str .= block_list_reorder_of_surname_by_name_hash_of_entry_name_of_block_current_name_of_item_content ($sur_by_nam_h, $nam_ent, $nam_blo, $con_ite);
+      $html_str .= block_list_reorder_of_surname_by_name_hash_of_entry_name_of_block_current_name_of_item_content_of_la_eol ($sur_by_nam_h, $nam_ent, $nam_blo, $con_ite, $la_eol);
 
       $arr_a[$count] = $nam_blo;
       $count++;

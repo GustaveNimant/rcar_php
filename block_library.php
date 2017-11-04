@@ -67,7 +67,7 @@ function block_file_rename ($nam_ent, $old_nam_blo, $new_nam_blo, $ext_fil) {
     $old_nof = $dir . $old_nam_blo . '.' . $ext_fil;  
     $new_nof = $dir . $new_nam_blo . '.' . $ext_fil;
     
-    file_rename_of_old_of_new_of_where ($old_nof, $new_nof);
+    file_rename_of_old_of_new_of_where ($old_nof, $new_nof, $here);
     
     debug_n_check ($here , "old block file name", $old_nof);
     debug_n_check ($here , "new block file name", $new_nof);

@@ -72,7 +72,7 @@ function section_block_current_list_display_display_build () {
     
     $html_str  = comment_entering_of_function_name ($here);
     if (block_current_nameoffile_array_is_empty_of_entry_name ($nam_ent_cur)) {
-        $html_str .= '<br> '; 
+        $html_str .= '<br>'; 
     }
     else {
         
@@ -104,14 +104,22 @@ function section_block_current_list_display_display_build () {
 function section_block_current_list_display_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
+
+    $nam_ent_cur = irp_provide ('entry_current_name', $here);
+    if (block_current_nameoffile_array_is_empty_of_entry_name ($nam_ent_cur)) {
+        $html_str  = comment_entering_of_function_name ($here);
+        $html_str .= comment_exiting_of_function_name ($here);
+    }
+    else {
     
-    $html_str  = comment_entering_of_function_name ($here);
-    $html_str .= '<center>' . "\n";
-    $html_str .= irp_provide ('section_block_current_list_display_title', $here);
-    $html_str .= '</center>' . "\n";
-    $html_str .= irp_provide ('section_block_current_list_display_display', $here);
-    $html_str .= comment_exiting_of_function_name ($here);
-    
+        $html_str  = comment_entering_of_function_name ($here);
+        $html_str .= '<center>' . "\n";
+        $html_str .= irp_provide ('section_block_current_list_display_title', $here);
+        $html_str .= '</center>' . "\n";
+        $html_str .= irp_provide ('section_block_current_list_display_display', $here);
+        $html_str .= comment_exiting_of_function_name ($here);
+    }
+
     exiting_from_function ($here);
     
     return $html_str;

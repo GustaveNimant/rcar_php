@@ -34,18 +34,16 @@ function no_block_current_list_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
 
-    $nam_ent = irp_provide ('entry_current_name', $here);
-    
     $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
     
-    $en_tit = 'no block yet in entry';
+    $en_tit = 'there is no block yet in entry';
+
     $la_bub_tit  = bubble_bubbled_la_text_of_en_text ($en_tit);
     $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);
     $la_bub_Tit .= ' <i><b>' . $sur_ent_cur . '</b></i> ';
     
     $html_str  = comment_entering_of_function_name ($here);
     $html_str .= $la_bub_Tit;
-    $html_str .= '<br><br>';
     $html_str .= comment_exiting_of_function_name ($here);
 
     debug_n_check ($here , '$html_str',  $html_str);
@@ -54,7 +52,7 @@ function no_block_current_list_build () {
     return $html_str;
 }
 
-function more_than_one_block_current_list_build () {
+function more_than_one_block_current_list_build () {  /* Generalize */
     $here = __FUNCTION__;
     entering_in_function ($here);
 
@@ -77,7 +75,7 @@ function section_block_current_list_reorder_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $html_str = '&nbsp';
+  $html_str = '';
   try {
       $nam_blo_a = irp_provide ('block_name_array', $here);
       if (count ($nam_blo_a) > 1 ) {

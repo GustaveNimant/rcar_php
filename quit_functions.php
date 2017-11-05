@@ -2,7 +2,7 @@
 include "session.php";
 require_once "irp_library.php";
 require_once "session_library.php";
-require_once "html_tools_functions.php";
+require_once "html_tools_library.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
 

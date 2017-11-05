@@ -4,7 +4,7 @@ require_once "irp_library.php";
 require_once "management_library.php";
 require_once "entry_information_functions.php";
 require_once "entry_current_display_functions.php";
-require_once "tools_functions.php";
+require_once "tools_library.php";
 
 $module = "command_functions";
 entering_in_module ($module);

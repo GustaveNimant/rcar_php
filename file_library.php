@@ -1,7 +1,7 @@
 <?php
 
 require_once "array_library.php";
-require_once "file_log_functions.php";
+require_once "file_log_library.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 

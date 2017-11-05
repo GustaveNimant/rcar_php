@@ -25,24 +25,24 @@ function block_current_surname_from_block_current_name_build () {
   return $sur_blo_cur;
 }
 
-function block_current_name_from_block_current_surnamenew_build () {
+function block_current_namenew_from_block_current_surnamenew_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
 
 /* Improve */    
     if (irp_is_stored_of_irp_key ('block_current_surnamenew')) {  
         $sur_blo_cur = irp_provide ('block_current_surnamenew', $here);  
-        $nam_blo_cur = word_name_capitalized_of_string_surname ($sur_blo_cur);
+        $new_nam_blo_cur = word_name_capitalized_of_string_surname ($sur_blo_cur);
     }
     else {
-        $nam_blo_cur = get_hash_retrieve_value_of_get_key_of_where ('block_current_name', $here);
+        $new_nam_blo_cur = get_hash_retrieve_value_of_get_key_of_where ('block_current_namenew', $here);
     }
 
-    string_check_is_block_name_of_string ($nam_blo_cur);
+    string_check_is_block_name_of_string ($new_nam_blo_cur);
     
-    exiting_from_function ($here . " with \$nam_blo_cur >$nam_blo_cur<");
+    exiting_from_function ($here . " with \$new_nam_blo_cur >$new_nam_blo_cur<");
     
-    return $nam_blo_cur;
+    return $new_nam_blo_cur;
 }
 
 exiting_from_module ($module);

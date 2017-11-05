@@ -11,8 +11,6 @@ function subsection_block_current_surnamenew_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-/* Improve Constant fonction to be moved with Constant_functions.php */
-
   $en_tit = 'enter the new name below';
   
   $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
@@ -32,10 +30,10 @@ function subsection_block_current_surnamenew_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $pla_hol = irp_provide ('block_current_surname_from_block_current_name', $here);
+  $sur_blo_cur = irp_provide ('block_current_surname_from_block_current_name', $here);
 
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= inputtypetext_of_get_key_of_placeholder ('block_current_surnamenew', $pla_hol);
+  $html_str .= inputtypetext_of_get_key_of_default_value ('block_current_surnamenew', $sur_blo_cur);
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str',  $html_str);

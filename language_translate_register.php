@@ -1673,6 +1673,12 @@ par la liste de ses propri&eacute;t&eacute;s',
         'it' => '???',
     ), 
     
+   'page for displaying the question' =>
+   array (
+      'fr' => 'page d&rsquo;affichage de la question',
+      'it' => '???',
+   ),
+
     'page for displaying the result of creation of a new paragraph for entry' =>
     array (
         'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation d&rsquo;un nouveau paragraphe pour l&rsquo;entr&eacute;e',
@@ -1684,6 +1690,12 @@ par la liste de ses propri&eacute;t&eacute;s',
         'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation d&rsquo;une nouvelle question pour l&rsquo;entr&eacute;e',
         'it' => '???',
     ), 
+    
+    'page for displaying the result of the renaming of the question' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat du renommage de la question',
+        'it' => '???',
+    ),
     
     'page for displaying the entry' =>
     array (

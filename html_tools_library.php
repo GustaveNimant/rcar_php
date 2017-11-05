@@ -144,33 +144,6 @@ function inputtypesubmit_of_en_action_name_of_en_bubble ($en_nam_act, $en_bub) {
   return $html_str;
 }
 
-function inputtypetext_of_get_key_of_en_placeholder ($get_key, $en_pla) {
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($get_key, $en_pla)");
-
-  $la_Pla = ucfirst (language_translate_of_en_string ($en_pla));
-
-  $tex_siz = $_SESSION['parameters']['html_text_zone_size'];
-
-  $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<input type="text"' . "\n"; 
-  $html_str .= ' name="';
-  $html_str .= $get_key;
-  $html_str .= '"' . "\n";
-  $html_str .= ' placeholder="';
-  $html_str .= $la_Pla;
-  $html_str .= '"' . "\n";
-  $html_str .= ' size="';
-  $html_str .= $tex_siz;
-  $html_str .= '">' . "\n";
-  $html_str .= comment_exiting_of_function_name ($here);
-
-  debug_n_check ($here , '$html_str', $html_str);
-  exiting_from_function ($here);
-  
-  return $html_str;
-}
-
 function inputtypetext_of_get_key_of_placeholder ($get_key, $pla_hol) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($get_key, $pla_hol)");
@@ -184,6 +157,31 @@ function inputtypetext_of_get_key_of_placeholder ($get_key, $pla_hol) {
   $html_str .= '"' . "\n";
   $html_str .= ' placeholder="';
   $html_str .= $pla_hol;
+  $html_str .= '"' . "\n";
+  $html_str .= ' size="';
+  $html_str .= $tex_siz;
+  $html_str .= '">' . "\n";
+  $html_str .= comment_exiting_of_function_name ($here);
+
+  debug_n_check ($here , '$html_str', $html_str);
+  exiting_from_function ($here);
+  
+  return $html_str;
+}
+
+function inputtypetext_of_get_key_of_default_value ($get_key, $def_val) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($get_key, $def_val)");
+
+  $tex_siz = $_SESSION['parameters']['html_text_zone_size'];
+
+  $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= '<input type="text"' . "\n"; 
+  $html_str .= ' name="';
+  $html_str .= $get_key;
+  $html_str .= '"' . "\n";
+  $html_str .= ' value="';
+  $html_str .= $def_val;
   $html_str .= '"' . "\n";
   $html_str .= ' size="';
   $html_str .= $tex_siz;

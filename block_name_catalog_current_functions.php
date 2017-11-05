@@ -1,7 +1,8 @@
 <?php
 
 require_once "block_name_catalog_library.php";
-require_once "irp_functions.php";
+require_once "entry_library.php";
+require_once "irp_library.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 

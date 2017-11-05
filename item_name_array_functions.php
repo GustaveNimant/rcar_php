@@ -1,7 +1,7 @@
 <?php
 
 require_once "management_library.php";
-require_once "irp_functions.php";
+require_once "irp_library.php";
 
 $module = "item_name_array_functions";
 entering_in_module ($module);

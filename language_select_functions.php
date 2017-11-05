@@ -1,6 +1,6 @@
 <?php
 
-require_once "irp_functions.php";
+require_once "irp_library.php";
 
 $module = "language_select_functions";
 entering_in_module ($module);

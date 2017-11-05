@@ -1,7 +1,7 @@
 <?php
 
 require_once "management_library.php";
-require_once "irp_functions.php";
+require_once "irp_library.php";
 require_once "button_submit_functions.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);

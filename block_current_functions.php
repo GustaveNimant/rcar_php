@@ -2,7 +2,7 @@
 
 require_once "debug_array_library.php";
 require_once "block_library.php";
-require_once "irp_functions.php";
+require_once "irp_library.php";
 
 $module = "block_current_functions";
 

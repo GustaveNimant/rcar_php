@@ -1,7 +1,7 @@
 <?php
 
 require_once "management_library.php";
-require_once "irp_functions.php";
+require_once "irp_library.php";
 require_once "item_functions.php";
 require_once "bubble_library.php";
 require_once "button_submit_functions.php";

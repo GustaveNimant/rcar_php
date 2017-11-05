@@ -495,7 +495,7 @@ function file_array_of_directory_path_of_predicate ($dir_pat, $predicate) {
       $fno_fil_a = array_filter ($fno_a, $predicate);
 
       if (array_is_empty_of_array ($fno_fil_a)) {
-          $mest = "No file found according to predicate in Directory";
+          $mest = "No file found according to predicate $predicate in Directory";
           $log_str = "Throw new Exception from with message : $mest";
           file_log_write ($here, $log_str);
           

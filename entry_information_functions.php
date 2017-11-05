@@ -1,5 +1,5 @@
 <?php
-require_once "irp_functions.php";
+require_once "irp_library.php";
 
 $module = "entry_information_functions";
 

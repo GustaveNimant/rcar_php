@@ -7,7 +7,7 @@ require_once "block_content_by_block_name_hash_functions.php";
 require_once "block_create_functions.php";
 require_once "debug_library.php";
 require_once "button_submit_functions.php";
-require_once "irp_functions.php";
+require_once "irp_library.php";
 require_once "bubble_library.php";
 
 $module = "block_information_functions";

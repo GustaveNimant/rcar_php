@@ -1,6 +1,6 @@
 <?php
 
-require_once "irp_functions.php";
+require_once "irp_library.php";
 require_once "surname_library.php";
 require_once "surname_catalog_functions.php";
 

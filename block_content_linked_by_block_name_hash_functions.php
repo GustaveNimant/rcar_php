@@ -2,7 +2,7 @@
 
 require_once "debug_array_library.php";
 require_once "entry_name_array_functions.php";
-require_once "irp_functions.php";
+require_once "irp_library.php";
 
 $module = "block_content_linked_by_block_name_hash_functions";
 

@@ -669,7 +669,12 @@ par la liste de ses propri&eacute;t&eacute;s',
         'it' => '???',
     ), 
 
-
+    'display of properties for entry' =>
+    array (
+        'fr' => 'affichage des propri&eacute;t&eacute;s de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+    
     'display options' => 
     array (
 		'fr' => 'afficher les options',
@@ -1656,6 +1661,12 @@ par la liste de ses propri&eacute;t&eacute;s',
         'it' => '???',
     ),
     
+   'page for defining a new property for entry' =>
+    array (
+        'fr' => 'page de d&eacute;finition d&rsquo;une nouvelle propri&eacute;t&eacute; pour l&rsquo;entr&eacute;e',
+        'it' => '???',
+   ),
+
     'page for displaying the list of all entries' =>
     array (
         'fr' => 'page d&rsquo;affichage de la liste de toutes les entr&eacute;es',

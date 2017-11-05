@@ -1,14 +1,13 @@
 <?php
 
-require_once "array_library.php";
-require_once "common_html_library.php";
 require_once "language_translate_library.php";
-require_once "get_hash_functions.php";
-require_once "irp_functions.php";
-require_once "file_library.php";
-require_once "entry_functions.php";
+require_once "irp_library.php";
 
-$module = "entry_new_create_functions";
+$module = module_name_of_module_nameoffile (__FILE__);
+
+$Documentation[$module]['what is it'] = "it is ...";
+$Documentation[$module]['what for'] = "to ...";
+
 entering_in_module ($module);
 
 function section_entry_new_create_page_title_build () {
@@ -21,7 +20,7 @@ function section_entry_new_create_page_title_build () {
   $la_Tit = string_html_capitalized_of_string ($la_tit);
 
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= common_html_span_background_color_of_html ($la_Tit);
+  $html_str .= common_html_div_background_color_of_html ($la_Tit);
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str',  $html_str);

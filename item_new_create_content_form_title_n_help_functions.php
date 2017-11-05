@@ -1,6 +1,6 @@
 <?php
 
-require_once "irp_functions.php";
+require_once "irp_library.php";
 require_once "entry_information_functions.php";
 require_once "help_text_functions.php";
 

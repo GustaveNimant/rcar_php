@@ -4,7 +4,7 @@ require_once "array_library.php";
 require_once "file_library.php";
 require_once "debug_library.php";
 require_once "button_submit_functions.php";
-require_once "irp_functions.php";
+require_once "irp_library.php";
 require_once "bubble_library.php";
 
 $module = "apropos_functions";

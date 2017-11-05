@@ -1,6 +1,6 @@
 <?php
 
-require_once "irp_functions.php";
+require_once "irp_library.php";
 require_once "common_html_library.php";
 
 $module = "git_command_functions";

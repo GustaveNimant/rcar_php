@@ -1,8 +1,7 @@
 <?php
-require_once "management_library.php";
-require_once "debug_library.php";
-require_once "father_n_son_stack_entity_library.php";
 
+require_once "father_n_son_stack_entity_library.php";
+require_once "get_hash_library.php";
 require_once "build_requirements.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);

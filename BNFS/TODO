@@ -4,19 +4,15 @@
 
 # never GET an action => only solution is a missing require_once in build_requirements.php
 
-# bubble 'modify the order'
-
 # simplify link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent, $sur_ent, 'block_current_display');  
-
-# ? \n comment \n ?
 
 # retour à la liste des entrées :   human_name ['entry_list_display'] = 'list of entries'
 
-# save new => current 
-
-# entry rename check
+# translate home_functions with bubbles
 
 # modification of surname ???
+
+# block_new_create_save_functions : return $log_str => return_html_str
 
 # Boxes 
 

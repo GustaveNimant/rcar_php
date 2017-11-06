@@ -51,7 +51,7 @@ function block_new_create_save_page_title_build () {
   return $html_str;
 }
 
-function check_is_block_new_build () {
+function check_is_block_new_build () {  /* Improve return $html_str */
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -93,7 +93,7 @@ function check_is_block_new_build () {
   return $log_str; 
 }
 
-function block_new_content_write_build (){
+function block_new_content_write_build () { /* Improve return $html_str */
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -121,7 +121,7 @@ function block_new_content_write_build (){
   return $log_str;
 }
 
-function block_new_surname_write_build (){
+function block_new_surname_write_build (){  /* Improve return $html_str */
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -147,7 +147,7 @@ function block_new_surname_write_build (){
   return $log_str;
 }
          
-function block_new_create_save_catalog_actualize_build (){
+function block_name_catalog_new_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -178,15 +178,33 @@ function block_new_create_save_catalog_actualize_build (){
           $new_cat_blo = $nam_blo_new;
       }
   }
-  
+
   debug_n_check ($here , '$new_cat_blo', $new_cat_blo);
 
-#  irp_store_force ('block_new_name_catalog', $new_cat_blo, 'block_new_create_save');
+  exiting_from_function ($here);
+
+  return $new_cat_blo;
+}
+
+function block_new_create_save_catalog_actualize_build () {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+  $new_cat_blo = irp_provide ('block_name_catalog_new', $here);
+  $nam_ent_cur = irp_provide ('entry_current_name', $here);
 
   block_name_catalog_write_of_entry_name_of_block_name_catalog ($nam_ent_cur, $new_cat_blo);
-  
+
+  $nam_blo_new = irp_provide ('block_new_name_from_block_new_surname', $here);
+
+  $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= "Block $nam_blo_new has been saved in catalog";
+  $html_str .= comment_exiting_of_function_name ($here);
+
+  debug_n_check ($here , '$html_str',  $html_str);
   exiting_from_function ($here);
-  return $new_cat_blo;
+
+  return $html_str;
 }
 
 function block_new_create_save_link_to_return_build () {
@@ -225,7 +243,8 @@ function block_new_create_save_build (){
   $html_str .= irp_provide ('block_new_create_save_catalog_actualize', $here);
   $html_str .= '<br><br>' . "\n";
 
-  $html_str  = irp_provide ('git_command_n_commit_html', $here);
+  $html_str .= irp_provide ('git_command_n_commit_html', $here);
+  $html_str .= '<br><br>' . "\n";
 
   $html_str .= irp_provide ('block_new_create_save_link_to_return', $here);
   $html_str .= '<br><br>' . "\n";

@@ -20,6 +20,7 @@ function bubble_en_text_by_key_hash_make () {
         'item' => 'an item is a property of an entry&#010 it is a component of a block',
         'justify' => 'a justification proves that the&#010 modification done complies with the rules',
         'justification' => 'a justification proves that the&#010 modification done complies with the rules',
+        'modify the order' => 'the order of properties may be not pertinent',
         'name' => 'the name of an entity recast from its surname',
         'new paragraph' => 'new paragraph',
         'new property' => 'new property',

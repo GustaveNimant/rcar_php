@@ -2111,7 +2111,7 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 
-    'select an existing entry to dislay its blocks' =>
+    'select an existing entry to display its blocks' =>
     array (
 		'fr' => 's&eacute;lectionner une entr&eacute;e existante pour afficher ses blocs',
 		'it' => '???',

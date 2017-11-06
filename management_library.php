@@ -188,7 +188,7 @@ function exiting_from_function ($str_fun) {
         $nam_top = array_pop ($_SESSION['parameters']['stack_function_called_array']);
 
         if ( $nam_top != $nam_fun ) {
-            print_html_array ($here . ' called by ' . $nam_fun, ' stack_function_called_array ', $_SESSION['parameters']['stack_function_called_array']);
+#            print_html_array ($here . ' called by ' . $nam_fun, ' stack_function_called_array ', $_SESSION['parameters']['stack_function_called_array']);
 
             warning ($nam_fun,
             "name of current function >$nam_fun< were the top of stack",
@@ -271,7 +271,7 @@ function exiting_from_module ($str_mod) {
         if ( $nam_top != $nam_mod ) {
 
             array_push ($_SESSION['parameters']['stack_function_called_array'], $nam_top);
-            print_html_array ($here, 'stack_function_called_array', $_SESSION['parameters']['stack_function_called_array']);
+#            print_html_array ($here, 'stack_function_called_array', $_SESSION['parameters']['stack_function_called_array']);
             warning ($here,
             "name of current module >$nam_mod< were the top of stack",
             "top of stack >$nam_top<",

@@ -118,8 +118,9 @@ function common_html_entitled_text_of_title_of_text ($tit, $html_txt) {
   entering_in_function ($here . " ($tit, $html_txt)");
   
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= common_html_div_background_color_of_html ($tit);
-  $html_str .= $html_txt . "\n"; 
+  $html_str .= common_html_span_background_color_of_html ($tit);
+  $html_str .= '<br>' . "\n"; 
+  $html_str .= '&nbsp;&nbsp;&nbsp;&nbsp;' . $html_txt . "\n"; 
   $html_str .= comment_exiting_of_function_name ($here);
 
   exiting_from_function ($here);

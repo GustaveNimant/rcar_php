@@ -1,5 +1,4 @@
 <?php
-require_once "management_library.php";
 require_once "irp_library.php";
 require_once "pervasive_html_functions.php";
 

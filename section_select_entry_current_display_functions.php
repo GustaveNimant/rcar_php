@@ -12,7 +12,7 @@ function subsection_select_entry_current_display_title_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
     
-    $en_tit = 'select an existing entry to dislay its blocks';
+    $en_tit = 'select an existing entry to display its blocks';
 
     $la_bub_Tit = bubble_bubbled_capitalized_la_text_of_en_text ($en_tit);
    

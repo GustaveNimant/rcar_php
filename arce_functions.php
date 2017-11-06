@@ -1,8 +1,5 @@
 <?php
-require_once "management_library.php";
 require_once "irp_library.php";
-require_once "common_html_library.php";
-require_once "debug_html_library.php";
 
 /* Page  Entries */
 
@@ -45,8 +42,6 @@ function arce_menuselect_entry_build () {
 
   return $html_str;
 }
-
-/* First Section Select an Entry to display its content */
 
 function arce_section_select_entry_title_build () {
   $here = __FUNCTION__;

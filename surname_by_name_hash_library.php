@@ -77,13 +77,14 @@ function surname_by_name_hash_add_n_write_of_name_of_surname_of_current_hash ($n
 
       $old_sur = $old_sur_by_nam_h[$nam];
       if ($old_sur <> $sur_nam) {
-          print_fatal_error ($here, 
-          "name >$nam< already exists in array with old surname >$old_sur<",
-          "old surname >$old_sur< differs from new one >$sur_nam<",
-          "correct by hand file SURNAMES/Surname_catalog.cat");
+          warning ($here, 
+          "name >$nam< does NOT already exists in array with old surname >$old_sur<",
+          "old surname >$old_sur< exists and differs from new one >$sur_nam<",
+          "old surname is replaced by new one in Surname catalog");
+          $old_sur_by_nam_h[$nam] = $sur_nam;
       }
 
-      $new_sur_by_nam_h = $old_sur_by_nam_h; 
+      $new_sur_by_nam_h = $old_sur_by_nam_h; /* Improve ??? */
   }
   else {
       $new_sur_by_nam_h = surname_by_name_hash_put_of_name_of_surname_of_current_array ($nam, $sur_nam, $old_sur_by_nam_h);

@@ -64,7 +64,6 @@ function block_name_array_build () {
   }
 
   $nam_blo_a = array_unique ($nam_blo_a);
-
   debug ($here , '$nam_blo_a', $nam_blo_a);
 
   $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);

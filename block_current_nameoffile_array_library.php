@@ -28,9 +28,10 @@ function block_current_nameoffile_array_read_of_entry_name ($nam_ent) {
           || ($mesc == "No file found according to predicate in Directory") 
       ) {
           $log_str  = "Catch Exception with message : $mesc";
-          
+          file_log_write ($here, $log_str);
+
           $mest = "No Block file in Current Entry $nam_ent";
-          $log_str .= "Throw new Exception with message : $mest";
+          $log_str = "Throw new Exception with message : $mest";
           file_log_write ($here, $log_str);
           
           exiting_from_function ($here . ' with Exception ' . $mest); 

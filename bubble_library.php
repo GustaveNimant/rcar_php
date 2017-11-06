@@ -14,11 +14,9 @@ function bubble_bubbled_text_of_text_of_bubble_text ($txt, $bub_txt) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($txt, $bub_txt)");
 
-  $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<span title="' . $bub_txt . '">';
+  $html_str  = '<span title="' . $bub_txt . '">';
   $html_str .= '<u>' . $txt . '</u>';
   $html_str .= '</span>';
-  $html_str .= comment_exiting_of_function_name ($here);
 
   exiting_from_function ($here . " with >$html_str<");
 
@@ -123,11 +121,14 @@ function bubble_bubbled_capitalized_la_text_of_en_text ($en_bub_txt) {
   entering_in_function ($here . " ($en_bub_txt)");
 
   $la_bub_txt = bubble_bubbled_la_text_of_en_text ($en_bub_txt);
-  $la_bub_Txt = string_html_capitalized_of_string ($la_bub_txt); 
 
-  exiting_from_function ($here . ' with >' . $la_bub_Txt . '<');
+  $html_str  = "\n" . comment_entering_of_function_name ($here);
+  $html_str .= string_html_capitalized_of_string ($la_bub_txt); 
+  $html_str .= "\n" . comment_exiting_of_function_name ($here);
 
-  return $la_bub_Txt;
+  exiting_from_function ($here . ' with >' . $html_str . '<');
+
+  return $html_str;
 }
 
 exiting_from_module ($module);

@@ -1066,6 +1066,12 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 
+    'has been renamed as' =>
+    array (
+		'fr' => 'a &eacute;t&eacute; renom&eacute; en',
+        'it' => '???',
+    ),
+    
     'here' => 
     array (
 		'fr' => 'ici',
@@ -1487,6 +1493,18 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 
+    'name' =>
+    array (
+        'fr' => 'nom',
+        'it' => '???',
+    ), 
+    
+    'names' =>
+    array (
+        'fr' => 'noms',
+        'it' => '???',
+    ), 
+    
     'navigation data have been removed' =>
     array (
 		'fr' => 'les donn&eacute;es de navigation ont &eacute;t&eacute; supprim&eacute;es',
@@ -2196,6 +2214,12 @@ par la liste de ses propri&eacute;t&eacute;s',
         'it' => '???',
     ), 
     
+    'the current entry has been renamed as' =>
+    array (
+        'fr' => 'l&rsquo;entr&eacute;e courante a &eacute;t&eacute; renomm&eacute;e en',
+        'it' => '???',
+    ),
+    
     'the directory of entry' => 
     array (
 		'fr' => 'le dossier de l&rsquo;entr&eacute;e',
@@ -2244,6 +2268,18 @@ par la liste de ses propri&eacute;t&eacute;s',
         'it' => '???',
     ),
 
+    'the name of an entity recast from its surname' =>
+    array (
+        'fr' => 'le nom d&rsquo;une entit&eacute; est construit &agrave; partir du surnom',
+        'it' => '???',
+    ), 
+
+    'the new entry name and surname have been introduced in' =>
+    array (
+        'fr' => 'les nom et surnom de la nouvelle entr&eacute;e ont &eacute;t&eacute; introduits dans',
+        'it' => '???',
+    ), 
+    
     'the new property must be clear
 and not in contradiction
 with the other properties

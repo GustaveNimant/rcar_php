@@ -10,7 +10,7 @@ $Documentation[$module]['what for'] = "to create a new entry";
 
 entering_in_module ($module);
 
-function section_entry_list_display_page_title_build () {
+function entry_list_display_page_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -41,7 +41,7 @@ function entry_list_display_build () {
 
   $html_str .= '<center>' . "\n";
 
-  $html_str .= irp_provide ('section_entry_list_display_page_title', $here);
+  $html_str .= irp_provide ('entry_list_display_page_title', $here);
   $html_str .= '<br>' . "\n";
 
   $html_str .= irp_provide ('section_select_entry_current_display', $here);

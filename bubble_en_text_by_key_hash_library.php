@@ -20,6 +20,7 @@ function bubble_en_text_by_key_hash_make () {
         'item' => 'an item is a property of an entry&#010 it is a component of a block',
         'justify' => 'a justification proves that the&#010 modification done complies with the rules',
         'justification' => 'a justification proves that the&#010 modification done complies with the rules',
+        'name' => 'the name of an entity recast from its surname',
         'new paragraph' => 'new paragraph',
         'new property' => 'new property',
         'new question' => 'new question',
@@ -47,6 +48,7 @@ function bubble_en_text_by_key_hash_make () {
   $bubble_en_text_by_key_hash['properties'] = $bubble_en_text_by_key_hash['property'];
   $bubble_en_text_by_key_hash['questions'] = $bubble_en_text_by_key_hash['question'];
   $bubble_en_text_by_key_hash['rules'] = $bubble_en_text_by_key_hash['rule'];
+  $bubble_en_text_by_key_hash['names'] = $bubble_en_text_by_key_hash['name'];
   $bubble_en_text_by_key_hash['surnames'] = $bubble_en_text_by_key_hash['surname'];
 
   /* expressions */

@@ -1,11 +1,12 @@
 <?php
-require_once "array_library.php";
-require_once "common_html_library.php";
-require_once "language_translate_library.php";
-require_once "irp_library.php";
-require_once "file_library.php";
 
-$module = "entry_new_create_functions";
+require_once "irp_library.php";
+
+$module = module_name_of_module_nameoffile (__FILE__);
+
+$Documentation[$module]['what is it'] = "it is ...";
+$Documentation[$module]['what for'] = "to ...";
+
 entering_in_module ($module);
 
 function entry_new_create_save_subdirectory_create_of_entry_name ($nam_ent) {

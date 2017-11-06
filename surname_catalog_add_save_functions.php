@@ -1,8 +1,7 @@
 <?php
-
+/* to be recast */
 require_once "irp_library.php";
 require_once "surname_library.php";
-require_once "surname_catalog_functions.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
 
@@ -94,12 +93,13 @@ function surname_catalog_entry_add_save_build (){
 
   $nof_mod  = 'entry_current_display_script.php';
 
-  $html_str = '';
+  $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_page_header', $here);
   $html_str .= irp_provide ('git_command_n_commit_html', $here);
   $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_wos, $sur_wos, $nof_mod);
   $html_str .= irp_provide ('pervasive_page_footer', $here);
-  
+  $html_str .= comment_exiting_of_function_name ($here);
+
   debug_n_check ($here , '$html_str', $html_str);
   exiting_from_function ($here);
 

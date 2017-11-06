@@ -8,6 +8,26 @@ $Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);
 
+function subsection_select_entry_current_display_title_build () {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+    $en_tit = 'select an existing entry to dislay its blocks';
+
+    $la_bub_Tit = bubble_bubbled_capitalized_la_text_of_en_text ($en_tit);
+   
+    debug_n_check ($here , '$la_bub_Tit',  $la_bub_Tit);
+
+    $html_str  = comment_entering_of_function_name ($here);
+    $html_str .= common_html_span_background_color_of_html ($la_bub_Tit);
+    $html_str .= comment_exiting_of_function_name ($here);
+    
+    debug_n_check ($here , '$html_str',  $html_str);
+    exiting_from_function ($here);
+    
+    return $html_str;
+}
+
 function subsection_select_entry_current_display_menuselect_entry_build () { /* move in some tools */
     $here = __FUNCTION__;
     entering_in_function ($here);
@@ -37,26 +57,6 @@ function subsection_select_entry_current_display_menuselect_entry_build () { /* 
     }
     
     $html_str .= '</select>' . "\n";
-    $html_str .= comment_exiting_of_function_name ($here);
-    
-    debug_n_check ($here , '$html_str',  $html_str);
-    exiting_from_function ($here);
-    
-    return $html_str;
-}
-
-function subsection_select_entry_current_display_title_build () {
-    $here = __FUNCTION__;
-    entering_in_function ($here);
-    
-    $en_tit = 'select an existing entry to dislay its blocks';
-
-    $la_bub_Tit = bubble_bubbled_capitalized_la_text_of_en_text ($en_tit);
-   
-    debug_n_check ($here , '$la_bub_Tit',  $la_bub_Tit);
-
-    $html_str  = comment_entering_of_function_name ($here);
-    $html_str .= common_html_div_background_color_of_html ($la_bub_Tit);
     $html_str .= comment_exiting_of_function_name ($here);
     
     debug_n_check ($here , '$html_str',  $html_str);

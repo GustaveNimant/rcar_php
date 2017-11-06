@@ -106,8 +106,10 @@ require_once "section_select_entry_current_display_functions.php";
 require_once "section_select_entry_current_rename_functions.php";
 require_once "section_entry_new_create_functions.php";
 
+require_once "surname_catalog_add_save_functions.php";
 require_once "surname_catalog_functions.php";
 require_once "surname_by_name_hash_functions.php";
+
 require_once "user_information_functions.php";
 /* */
 ?>

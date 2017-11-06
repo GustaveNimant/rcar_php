@@ -9,6 +9,25 @@ require_once "file_library.php";
 $module = "entry_functions";
 entering_in_module ($module);
 
+function entry_current_rename_subdirectory ($old_nam_ent, $new_nam_ent_cur) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($old_nam_ent, $new_nam_ent_cur)");
+ 
+  $dir = file_basic_directory_of_name ('hd_php_server');
+
+  $old_nod = $dir . $old_nam_ent; 
+  $new_nod = $dir . $new_nam_ent_cur; 
+
+  file_rename_of_old_of_new_of_where ($old_nod, $new_nod, $here);
+
+  debug_n_check ($here , "old entry file name", $old_nod);
+  debug_n_check ($here , "new entry file name", $new_nod);
+
+  exiting_from_function ($here);
+
+  return; 
+}
+
 function entry_subdirectory_name_of_entry_name ($nam_ent) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_ent)");

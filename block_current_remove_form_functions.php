@@ -12,7 +12,7 @@ function block_current_remove_form_justification_titled_gather_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $en_tit = 'justify below your change';
+  $en_tit = 'justify below your deletion';
 
   $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_bub_Tit = string_html_capitalized_of_string ($la_bub_tit);
@@ -26,11 +26,8 @@ function block_current_remove_form_justification_titled_gather_build (){
   $col_hta = $_SESSION['parameters']['html_textarea_cols'];
 
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<span class="my-fieldset">' . "\n";
-  $html_str .= '<legend>' . "\n";
-  $html_str .= common_html_div_background_color_of_html ($la_bub_Tit);
-  $html_str .= '</legend>' . "\n";
-
+  $html_str .= common_html_span_background_color_of_html ($la_bub_Tit);
+  $html_str .= '<br>';
   $html_str .= '<textarea rows="' . $row_hta. '" cols="' . $col_hta . '" name="' . $get_key . '"/>'; 
   $html_str .= '</textarea>' . "\n";
   $html_str .= '</span>' . "\n";

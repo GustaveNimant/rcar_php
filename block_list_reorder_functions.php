@@ -158,7 +158,7 @@ function block_list_reorder_action_table_build () {
   $html_str .= inputtypesubmit_la_translate_of_en_action_name_of_button_name ('move after', 'block_list_reorder_la');
   $html_str .= '</td>' . "\n";
   $html_str .= '<td>';
-  $html_str .= inputtypesubmit_of_en_action_name ('reset');
+  $html_str .= inputtypereset_of_en_action_name ();
   $html_str .= '</td>' . "\n";
   $html_str .= '</tr>' . "\n";
   $html_str .= '</table>' . "\n";

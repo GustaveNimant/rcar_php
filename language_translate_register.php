@@ -788,12 +788,6 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'fr' => 'entrer une r&eacute;ponse',
 		'it' => '???',
     ),
-	 
-    'enter your modification below' => 
-    array (
-		'fr' => 'entrer ci-dessous votre modification',
-		'it' => '???',
-    ),
 
     'enter an answer for a question' => 
     array (
@@ -861,6 +855,18 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'it' => '???',
     ),
 
+    'enter your justification below' => 
+    array (
+		'fr' => 'entrer ci-dessous votre justification',
+		'it' => '???',
+    ),
+
+    'enter your modification below' => 
+    array (
+		'fr' => 'entrer ci-dessous votre modification',
+		'it' => '???',
+    ),
+
     'enter the text of the first property' => 
     array (
 		'fr' => 'entrer le texte de la premi&egrave;re propri&eacute;t&eacute;',
@@ -888,18 +894,6 @@ par la liste de ses propri&eacute;t&eacute;s',
     'enter the text of the rule' => 
     array (
 		'fr' => 'entrer le texte de la r&egrave;gle',
-		'it' => '???',
-    ),
-
-    'enter your justification below' => 
-    array (
-		'fr' => 'entrer ci-dessous votre justification',
-		'it' => '???',
-    ),
-
-    'enter your justification below' => 
-    array (
-		'fr' => 'entrer ci-dessous votre justification',
 		'it' => '???',
     ),
 
@@ -1730,6 +1724,12 @@ par la liste de ses propri&eacute;t&eacute;s',
     'page for displaying the result of the renaming of the question' =>
     array (
         'fr' => 'page d&rsquo;affichage du r&eacute;sultat du renommage de la question',
+        'it' => '???',
+    ),
+    
+    'page for displaying the result of the renaming of the paragraph' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat du renommage du paragraphe',
         'it' => '???',
     ),
     

@@ -18,13 +18,12 @@ function block_current_namenew_save_page_title_build (){
   $en_tit = 'page for displaying the result of the renaming of the ' . $kin_blo;
 
   $la_bub_tit  = bubble_bubbled_la_text_of_en_text ($en_tit);
-  $la_bub_tit .= ' <i><b>' . $sur_blo_cur . '</b></i>';
+  $la_bub_tit .= ' <i><b>' . $sur_blo_cur . '</b></i> ';
   $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);
 
   $en_tit = 'for entry';
-  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
-  $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);
-  $la_bub_Tit .= ' <i><b>' . $sur_ent_cur . '</b></i> '; 
+  $la_bub_Tit .= bubble_bubbled_la_text_of_en_text ($en_tit);
+  $la_bub_Tit .= ' <i><b>' . $sur_ent_cur . '</b></i>'; 
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>' . "\n";

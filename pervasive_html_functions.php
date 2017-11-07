@@ -76,10 +76,11 @@ function pervasive_page_header_build (){
 function pervasive_license_build () {
     $here = __FUNCTION__;
     
-    $lic_str = "This code is available under the Creative Commons License<br> https://creativecommons.org/licenses/by-sa/3.0/legalcode.fr";
+    $lic_str = 'This code is available under the Creative Commons License';
+    $str = '<a href="https://creativecommons.org/licenses/by-sa/3.0/legalcode.fr" title="' . $lic_str . '">License</a>';
     
     $html_str  = comment_entering_of_function_name ($here);
-    $html_str .= common_html_div_background_color_of_html ($lic_str);
+    $html_str .= common_html_div_background_color_of_html ($str);
     $html_str .= comment_exiting_of_function_name ($here);
     
     return $html_str;

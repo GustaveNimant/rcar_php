@@ -20,6 +20,7 @@ function section_block_next_page_title_build () {
   $sur_blo_cur = surname_of_name_of_surname_by_name_hash ($nam_blo_cur, $sur_by_nam_h);
 
   $en_tit = 'page for confirming the modification of ' . $en_kin_blo; 
+
   $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
 
   $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
@@ -70,8 +71,8 @@ function section_block_next_save_link_to_return_build () {
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>';
-  $html_str .= '</center>';
   $html_str .= link_to_return_of_return_module_nameoffile ('block_current_display_script.php');
+  $html_str .= '</center>';
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str',  $html_str);

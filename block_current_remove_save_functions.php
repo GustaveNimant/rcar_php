@@ -16,18 +16,18 @@ function block_current_remove_save_page_title_build (){
   $kin_blo = irp_provide ('entry_block_kind', $here);
 
   $en_tit = 'page for displaying the result of the removal of the ' . $kin_blo;
+
   $la_bub_tit  = bubble_bubbled_la_text_of_en_text ($en_tit);
-  $la_bub_tit .= ' <i><b>' . $sur_blo_cur . '</b></i>';
+  $la_bub_tit .= ' <i><b>' . $sur_blo_cur . '</b></i> ';
   $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);
 
   $en_tit = 'for entry';
-  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
-  $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);
+  $la_bub_Tit .= bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_bub_Tit .= ' <i><b>' . $sur_ent_cur . '</b></i> '; 
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>' . "\n";
-  $html_str .= common_html_span_background_color_of_html ($la_bub_Tit);
+  $html_str .= common_html_div_background_color_of_html ($la_bub_Tit);
   $html_str .= '</center>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
@@ -37,7 +37,7 @@ function block_current_remove_save_page_title_build (){
   return $html_str;
 }
 
-function block_current_remove_save_block_file_remove_build () {
+function block_current_remove_save_block_file_remove_build () { /* Improve no $log_str */
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -61,10 +61,10 @@ function block_current_remove_save_block_file_remove_build () {
 
   exiting_from_function ($here . " with $log_str");
  
-  return  $log_str;
+  return $log_str;
 }
 
-function block_current_remove_save_block_catalog_update_build () {
+function block_current_remove_save_block_catalog_update_build () { /* Improve no $log_str */
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -79,7 +79,6 @@ function block_current_remove_save_block_catalog_update_build () {
   $nam_blo_cur = irp_provide ('block_current_name', $here);
   debug_n_check ($here , "input block name", $nam_blo_cur);
 
-
   $log_str = '';
   if ( file_exists ($fno_cat_blo)) {
       unlink ($fno_cat_blo);
@@ -90,7 +89,7 @@ function block_current_remove_save_block_catalog_update_build () {
   }
 
   exiting_from_function ($here . " with $log_str");
-  return  $log_str;
+  return $log_str;
 }
 
 function block_current_remove_save_link_to_return_build () {
@@ -120,7 +119,8 @@ function block_current_remove_save_build () {
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_page_header', $here);
-
+  $html_str .= '<br><br> ';
+                            
   $html_str .= irp_provide ('block_current_remove_save_page_title', $here);
   $html_str .= '<br><br> ';
 

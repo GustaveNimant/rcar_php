@@ -470,7 +470,13 @@ par la liste de ses propri&eacute;t&eacute;s',
         'fr' => 'contenu de la question',
         'it' => '???',
     ),
-
+    
+    'content of new block' =>
+    array (
+        'fr' => 'contenu du nouveau bloc',
+        'it' => '???',
+    ), 
+    
     'content of the rule' => 
     array (
         'fr' => 'contenu de la r&egrave;gle',
@@ -1054,6 +1060,12 @@ par la liste de ses propri&eacute;t&eacute;s',
         'it' => '???',
     ),
 
+    'has been added to file' =>
+    array (
+        'fr' => 'a &eacute;t&eacute; ajout&eacute; au fichier',
+        'it' => '???',
+    ), 
+
     'has been created' => 
     array (
         'fr' => 'a &eacute;t&eacute; cr&eacute;&eacute;',
@@ -1071,6 +1083,12 @@ par la liste de ses propri&eacute;t&eacute;s',
 		'fr' => 'a &eacute;t&eacute; renom&eacute; en',
         'it' => '???',
     ),
+    
+    'has been written on disk space' =>
+    array (
+		'fr' => 'a &eacute;t&eacute; &eacute;crit sur le disque',
+        'it' => '???',
+    ), 
     
     'here' => 
     array (
@@ -2214,6 +2232,12 @@ par la liste de ses propri&eacute;t&eacute;s',
         'it' => '???',
     ), 
     
+    'the content of the new block' =>
+    array (
+        'fr' => 'le contenu du nouveau bloc',
+        'it' => '???',
+    ), 
+
     'the current entry has been renamed as' =>
     array (
         'fr' => 'l&rsquo;entr&eacute;e courante a &eacute;t&eacute; renomm&eacute;e en',
@@ -2256,6 +2280,12 @@ par la liste de ses propri&eacute;t&eacute;s',
         'it' => '???',
     ), 
 
+    'the surname of the new block' =>
+    array (
+        'fr' => 'le surnom du nouveau bloc',
+        'it' => '???',
+    ),
+    
     'unset' => 
     array (
         'fr' => 'd&eacute;sactiver',

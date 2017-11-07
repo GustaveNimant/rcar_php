@@ -1,7 +1,5 @@
 <?php
 
-# voir block_new_create_save_old_functions.php
-
 require_once "irp_library.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
@@ -93,21 +91,16 @@ function check_is_block_new_build () {  /* Improve return $html_str */
   return $log_str; 
 }
 
-function block_new_content_write_build () { /* Improve return $html_str */
+function block_new_content_write_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__);
-
-/* getting DATA $get_val */
-  $get_key = 'block_new_surname';
-  $sur_blo_new = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here);
+  $sur_blo_new = irp_provide ('block_new_surname', $here);
   $nam_blo_new = irp_provide ('block_new_name_from_block_new_surname', $here);
 
   $log_str = irp_provide ('check_is_block_new', $here);
 
   $con_blo_new = irp_provide ('block_new_content', $here);
-
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
 
   debug_n_check ($here , '$nam_blo_new', $nam_blo_new);
@@ -116,27 +109,36 @@ function block_new_content_write_build () { /* Improve return $html_str */
   block_content_write ($nam_ent_cur, $nam_blo_new, $con_blo_new);
 
   $log_str .= "block_new_content >$con_blo_new< has been written on entry subdirectory $nam_ent_cur";
+  file_log_write ($here, $log_str);
+
+  $en_tit = 'the content of the new block';
+  $la_bub_tit  = bubble_bubbled_la_text_of_en_text ($en_tit);
+  $la_bub_tit .= ' <i><b> ' . $sur_blo_new . '</b></i> ';
+
+  $en_tit = 'has been written on disk space';
+  $la_bub_tit .= bubble_bubbled_la_text_of_en_text ($en_tit);
+  $la_bub_Tit = string_html_capitalized_of_string ($la_bub_tit);
+
+  $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= $la_bub_Tit . "\n";
+  $html_str .= comment_exiting_of_function_name ($here);
 
   exiting_from_function ($here);
-  return $log_str;
+  return $html_str;
 }
 
-function block_new_surname_write_build (){  /* Improve return $html_str */
-  $here = __FUNCTION__;
+function block_new_surname_update_build (){  /* improve return $html_str */
+  $here = __function__;
   entering_in_function ($here);
 
-  $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__);
-
-/* getting DATA $get_val */
-  $get_key = 'block_new_surname';
-  $sur_blo_new = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here);
+  $sur_blo_new = irp_provide ('block_new_surname', $here);
   $nam_blo_new = irp_provide ('block_new_name_from_block_new_surname', $here);
   debug_n_check ($here , '$nam_blo_new', $nam_blo_new);
 
   $log_str = irp_provide ('check_is_block_new', $here);
   file_log_write ($here, $log_str);
 
-  $old_sur_by_nam_h = irp_provide ('surname_by_name_hash', $here); /* Verify */
+  $old_sur_by_nam_h = irp_provide ('surname_by_name_hash', $here); /* verify */
   $sur_by_nam_h = surname_by_name_hash_add_n_write_of_name_of_surname_of_current_hash ($nam_blo_new, $sur_blo_new, $old_sur_by_nam_h);
   debug_n_check ($here , '$sur_by_nam_h', $sur_by_nam_h);
 
@@ -148,7 +150,7 @@ function block_new_surname_write_build (){  /* Improve return $html_str */
 }
          
 function block_name_catalog_new_build () {
-  $here = __FUNCTION__;
+  $here = __function__;
   entering_in_function ($here);
 
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
@@ -167,14 +169,14 @@ function block_name_catalog_new_build () {
       }
       else {
           print_fatal_error ($here,
-          "block_new_name >$nam_blo_new< were NOT in Block_name_catalog.cat",
-          "Block_name_catalog.cat is >$cat_blo<",
-          "Check");
+          "block_new_name >$nam_blo_new< were not in block_name_catalog.cat",
+          "block_name_catalog.cat is >$cat_blo<",
+          "check");
       }
   }
-  catch (Exception $e) {  
-      $mes = $e->getMessage();
-      if ($mes = "Catalog is empty in function block_new_name_catalog_build for Entry name $nam_ent_cur"){
+  catch (exception $e) {  
+      $mes = $e->getmessage();
+      if ($mes = "catalog is empty in function block_new_name_catalog_build for entry name $nam_ent_cur"){
           $new_cat_blo = $nam_blo_new;
       }
   }
@@ -187,18 +189,32 @@ function block_name_catalog_new_build () {
 }
 
 function block_new_create_save_catalog_actualize_build () {
-  $here = __FUNCTION__;
+  $here = __function__;
   entering_in_function ($here);
 
   $new_cat_blo = irp_provide ('block_name_catalog_new', $here);
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
+  $sur_blo_new = irp_provide ('block_new_surname', $here);
+
+  $log_str = irp_provide ('block_new_surname_update', $here);
+  file_log_write ($here, $log_str);
 
   block_name_catalog_write_of_entry_name_of_block_name_catalog ($nam_ent_cur, $new_cat_blo);
 
   $nam_blo_new = irp_provide ('block_new_name_from_block_new_surname', $here);
+  $nof_sur_cat = $_SESSION['parameters']['nameoffile_surname_catalog'];
+
+  $en_tit = 'the surname of the new block';
+  $la_bub_tit  = bubble_bubbled_la_text_of_en_text ($en_tit);
+  $la_bub_tit .= ' <i><b> ' . $sur_blo_new . '</b></i> ';
+
+  $en_tit = 'has been added to file';
+  $la_bub_tit .= bubble_bubbled_la_text_of_en_text ($en_tit);
+  $la_bub_tit .= ' <i><b>' . $nof_sur_cat . '</b></i> ';
+  $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);
 
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= "Block $nam_blo_new has been saved in catalog";
+  $html_str .= $la_bub_Tit . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str',  $html_str);
@@ -208,7 +224,7 @@ function block_new_create_save_catalog_actualize_build () {
 }
 
 function block_new_create_save_link_to_return_build () {
-  $here = __FUNCTION__;
+  $here = __function__;
   entering_in_function ($here);
 
   $html_str  = comment_entering_of_function_name ($here);
@@ -227,6 +243,11 @@ function block_new_create_save_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
+  $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__);
+/* getting DATA $get_val */
+  $get_key = 'block_new_surname';
+  $sur_blo_new = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here);
+
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_page_header', $here);
   $html_str .= '<br><br>' . "\n";
@@ -235,9 +256,6 @@ function block_new_create_save_build (){
   $html_str .= '<br><br>' . "\n";
 
   $html_str .= irp_provide ('block_new_content_write', $here);
-  $html_str .= '<br><br>' . "\n";
-
-  $html_str .= irp_provide ('block_new_surname_write', $here);
   $html_str .= '<br><br>' . "\n";
 
   $html_str .= irp_provide ('block_new_create_save_catalog_actualize', $here);

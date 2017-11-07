@@ -59,8 +59,6 @@ function link_to_return_of_return_module_nameoffile ($nof_mod) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nof_mod)");
 
-/* no ? => $_GET  */
-
   $nam_scr = str_replace ('.php', '', $nof_mod);
 
   $en_txt = 'back to script';
@@ -72,7 +70,7 @@ function link_to_return_of_return_module_nameoffile ($nof_mod) {
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<a href="' . $nof_mod . '">';
   $html_str .= $la_Txt. ' ' . '<b>' . $nam_scr . '</b>';
-  $html_str .= '</a>';
+  $html_str .= '</a>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
   exiting_from_function ($here);
@@ -83,8 +81,6 @@ function link_to_return_of_return_module_nameoffile ($nof_mod) {
 function link_to_return_of_return_module_nameoffile_of_get_key_of_get_val ($nof_mod_ret, $get_key, $get_val) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nof_mod)");
-
-/* no ? => $_GET  */
 
   $nam_mod = str_replace ('.php', '', $nof_mod);
 
@@ -97,7 +93,7 @@ function link_to_return_of_return_module_nameoffile_of_get_key_of_get_val ($nof_
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<a href="' . $nof_mod_ret . '?' . $get_key . '=' . $get_val . '">';
   $html_str .= $la_Txt. ' ' . '<b>' . $nam_mod . '</b>';
-  $html_str .= '</a>';
+  $html_str .= '</a>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
   exiting_from_function ($here);
@@ -108,8 +104,6 @@ function link_to_return_of_return_module_nameoffile_of_get_key_of_get_val ($nof_
 function link_to_return_of_return_module_nameoffile_of_from_module_name ($nof_mod_ret, $nam_mod_fro) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nof_mod_ret)");
-
-/* no ? => $_GET  */
 
   $nam_mod_ret = str_replace ('.php', '', $nof_mod_ret);
 
@@ -122,7 +116,7 @@ function link_to_return_of_return_module_nameoffile_of_from_module_name ($nof_mo
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<a href="' . $nof_mod_ret . '?from_module_name=' . $nam_mod_fro . '">';
   $html_str .= $la_Txt. ' ' . '<b>' . $nam_mod_ret . '</b>';
-  $html_str .= '</a>';
+  $html_str .= '</a>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
   exiting_from_function ($here);

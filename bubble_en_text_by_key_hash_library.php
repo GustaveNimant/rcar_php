@@ -13,13 +13,13 @@ function bubble_en_text_by_key_hash_make () {
 
   $bubble_en_text_by_key_hash = 
     array (
-        'action' => 'an action is one off remove, modify, justify or rename',
-        'block' => 'a block defines a property of an entry',
+        'action' => 'an action is one off remove&#44; modify&#44; justify or rename',
+        'block' => 'a block is defined for a property. It contains 4 elements : the current item&#44; the justification for having created the current item&#44; the previous item and the sha1 of the previous block',
         'choose' => 'click on one of the radio buttons',
-        'entry' => 'an entry is a concept defined&#010 by the list of its properties',
-        'item' => 'an item is a property of an entry&#010 it is a component of a block',
-        'justify' => 'a justification proves that the&#010 modification done complies with the rules',
-        'justification' => 'a justification proves that the&#010 modification done complies with the rules',
+        'entry' => 'an entry is a concept defined by the list of its properties e.g. Democracy&#44; General will',
+        'item' => 'an item is a property of an entry it is a component of a block',
+        'justify' => 'a justification proves that the modification done complies with the rules',
+        'justification' => 'a justification proves that the modification done complies with the rules',
         'modify the order' => 'the order of properties may be not pertinent',
         'name' => 'the name of an entity recast from its surname',
         'new paragraph' => 'new paragraph',
@@ -30,7 +30,7 @@ function bubble_en_text_by_key_hash_make () {
         'order of properties' => 'the order of properties may be not pertinent',
         'order of rules' => 'the order of rules may be not pertinent',
         'paragraph' => 'a paragraph is a list of consecutive sentences',
-        'property' => 'a property of an entry&#010 is an assertion it should verify',
+        'property' => 'a property of an entry is an assertion it should verify',
         'question' => 'a question is a sentence starting with what, why or how',
         'reorder' => 'the order may be not pertinent',
         'rule' => 'ARCE has three kinds of rules : general rules, editing rules and property rules',

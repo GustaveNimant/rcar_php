@@ -42,8 +42,17 @@ array (
         'fr' => 'un bloc d&eacute;finit une propri&eacute;t&eacute d&rsquo;une entr&eacute;e',
         'it' => '???',
     ), 
-    
-    'a justification proves that the&#010 modification done complies with the rules' =>
+
+    'a block is defined for a property. It contains 4 elements : the current item&#44; the justification for having created the current item&#44; the previous item and the sha1 of the previous block' =>
+    array (
+        'fr' => 'un bloc est d&eacute;fini pour une propri&eacute;t&eacute
+Il contient 4 &eacute;l&eacute;ments : l&rsquo;item courant&#44; 
+la justification de la cr&eacute;ation de l&rsquo;item courant&#44;
+l&rsquo;item pr&eacute;c&eacute;dent et la sha1 du bloc pr&eacute;c&eacute;dent',
+        'it' => '???',
+    ), 
+
+    'a justification proves that the modification done complies with the rules' =>
     array (
         'fr' => 'une justification prouve qu&rsquo;une
 modification est conforme aux r&egrave;gles',
@@ -58,40 +67,36 @@ modification est conforme aux r&egrave;gles',
 
     'a paragraph is a list of consecutive sentences' =>
     array (
-        'fr' => 'un paragraphe est une liste de phrases cons&eacute;cutives',
+        'fr' => 'un paragraphe est une liste
+de phrases cons&eacute;cutives',
         'it' => '???',
     ),
 
-    'a property of an entry&#010 is an assertion it should verify' =>
+    'a property of an entry is an assertion it should verify' =>
     array (
 		'fr' => 'une propri&eacute;t&eacute; d&rsquo;une entr&eacute;e 
 est une assertion qu&rsquo;elle doit v&eacute;rifier',
 		'it' => '???',
     ),
 	 
-    'an action is one off remove, modify, justify or rename' => 
+    'an action is one off remove&#44; modify&#44; justify or rename' =>
     array (
-        'fr' => 'une action est supprimer, modifier, justifier ou renommer',
+        'fr' => 'une action est supprimer&#44; modifier&#44; justifier ou renommer',
         'it' => '???',
     ),
 
-    'an item is a property of an entry&#010 it is a component of a block' =>
-    array (
-        'fr' => 'un item est une propri&eacute;t&eacute; d&rsquo;une entr&eacute;te 
-c&rsquo;est une composante d&rsquo;un bloc',
-        'it' => '???',
-    ),
-    
     'a property of an entry
 is an assertion it should verify' =>
     array (
-        'fr' => 'une propri&eacute;t&eacute; d&rsquo;une entr&eacute;e est une assertion qu&rsquo;elle doit v&eacute;rifier',
+        'fr' => 'une propri&eacute;t&eacute; d&rsquo;une entr&eacute;e
+est une assertion qu&rsquo;elle doit v&eacute;rifier',
         'it' => '???',
     ),
 
     'a question is a sentence starting with what, why or how' =>
     array (
-        'fr' => 'une question est une phrase commençant par quoi, pourquoi ou comment',
+        'fr' => 'une question est une phrase
+commençant par quoi, pourquoi ou comment',
         'it' => '???',
     ), 
 
@@ -149,28 +154,21 @@ is an assertion it should verify' =>
         'it' => '???',
     ),
 
-    'an entry is a concept defined 
-by the list of its properties' =>
+    'an entry is a concept defined by the list of its properties e.g. Democracy&#44; General will' =>
     array (
         'fr' => 'une entr&eacute;e est un concept d&eacute;fini
-par la liste de ses propri&eacute;t&eacute;s',
+par la liste de ses propri&eacute;t&eacute;s 
+&#40;D&eacute;mocratie&#44; Volont&eacute; g&eacute;n&eacute;rale&#41;',
         'it' => '???',
     ),
 
-    'an entry is a concept defined&#010 by the list of its properties' =>
+    'an item is a property of an entry it is a component of a block' =>
     array (
-        'fr' => 'une entr&eacute;e est un concept d&eacute;fini&#010 par la liste de ses propri&eacute;t&eacute;s',
+        'fr' => 'un item est une propri&eacute;t&eacute; d&rsquo;une entr&eacute;te 
+c&rsquo;est une composante d&rsquo;un bloc',
         'it' => '???',
     ),
-
-    'an entry is characterised 
-by the list of its properties' => 
-    array (
-        'fr' => 'une entr&eacute;e est caract&eacute;ris&eacute;e
-par la liste de ses propri&eacute;t&eacute;s',
-        'it' => '???',
-    ),
-
+    
     'answer added to the registry' => 
     array (
         'fr' => 'r&eacute;ponse ajout&eacute;e au registre',
@@ -347,25 +345,29 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'choose a property from the list below then select an action' =>
     array (
-        'fr' => 'choisir une propri&eacute;t&eacute; dans la liste ci-dessous puis s&eacute;lectionner une action',
+        'fr' => 'choisir une propri&eacute;t&eacute; 
+dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
 
     'choose a question from the list below then select an action' =>
     array (
-        'fr' => 'choisir une question dans la liste ci-dessous puis s&eacute;lectionner une action',
+        'fr' => 'choisir une question 
+dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
 
     'choose a rule from the list below then select an action' =>
     array (
-        'fr' => 'choisir une r&egrave;gle dans la liste ci-dessous puis s&eacute;lectionner une action',
+        'fr' => 'choisir une r&egrave;gle
+dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
       
     'choose a paragraph from the list below then select an action' =>
     array (
-        'fr' => 'choisir un paragraphe dans la liste ci-dessous puis s&eacute;lectionner une action',
+        'fr' => 'choisir un paragraphe 
+dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
 
@@ -2138,7 +2140,7 @@ par la liste de ses propri&eacute;t&eacute;s',
 
     'select an item from the drop-down list' => 
     array (
-		'fr' => 's&eacute;lectionner un item dans la liste déroulante',
+		'fr' => 's&eacute;lectionner un item dans la liste d&eacute;roulante',
 		'it' => '???',
     ),
 
@@ -2404,6 +2406,12 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
 		'fr' => 'on doit suivre ces r&egrave;gles en r&eacute;digeant',
 		'it' => '???',
     ),
+
+    'this code is available under the Creative Commons License' =>
+    array (
+        'fr' => 'ce code est accessible sous la licence Creative Commons',
+        'it' => '???',
+    ), 
 
     'title' => 
     array (

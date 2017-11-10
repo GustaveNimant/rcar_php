@@ -120,11 +120,14 @@ function block_current_display_build (){
   $html_str .= '&nbsp;&nbsp;';
 
   $html_str .= irp_provide ('section_block_current_rename', $here);
+  $html_str .= '&nbsp;&nbsp;';
+
+  $html_str .= irp_provide ('section_block_current_undo', $here);
+# end of href_list
   $html_str .= '<br><br>';
 
-# end of href_list
-
   $html_str .= irp_provide ('block_current_display_link_to_return', $here);
+  $html_str .= '<br><br>';
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   $html_str .= comment_exiting_of_function_name ($here);

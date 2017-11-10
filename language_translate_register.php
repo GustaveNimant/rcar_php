@@ -1200,6 +1200,13 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
 
+
+    'justify below your revert' =>
+    array (
+        'fr' => 'justifier ci-dessous votre restauration',
+        'it' => '???',
+    ), 
+    
     'justify the paragraph' =>
     array (
         'fr' => 'modifier_justifier le paragraphe',
@@ -1242,6 +1249,13 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
     
+    'leave current version. Return to previous one' =>
+    array (
+        'fr' => 'abandonner la version courante. 
+Retourner &agrave; la version pr&eacute;c&eacute;dente',
+        'it' => '???',
+    ), 
+
     'list of editing rules' =>
     array (
 		'fr' => 'liste des r&egrave;gles de r&eacute;daction',
@@ -1735,6 +1749,12 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
     
+    'page for displaying the result of the revert of the paragraph' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la restauration du paragraphe',
+        'it' => '???',
+    ),
+
     'page for displaying the entry' =>
     array (
         'fr' => 'page d&rsquo;affichage de l&rsquo;entr&eacute;e',
@@ -1794,6 +1814,12 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
         'fr' => 'page de suppression du paragraphe',
         'it' => '???',
     ), 
+
+    'page for undoing the paragraph' =>
+    array (
+        'fr' => 'page de restauration du paragraphe pr&eacute;c&eacute;dent',
+        'it' => '???',
+    ),
     
     'page for renaming the entry' =>
     array (
@@ -2087,6 +2113,12 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
     array (
 		'fr' => 'restaurer',
 		'it' => '???',
+    ),
+
+    'revert' =>
+    array (
+        'fr' => 'a',
+        'it' => '???',
     ),
 
     'rule' => 
@@ -2449,9 +2481,9 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
 		'it' => '???',
     ),
 
-    'usage' => 
+    'undo' => 
     array (
-		'fr' => 'utilisation',
+		'fr' => 'd&eacute;faire',
 		'it' => '???',
     ),
 

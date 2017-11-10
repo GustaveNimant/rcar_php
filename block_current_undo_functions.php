@@ -8,7 +8,7 @@ $Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);
 
-function block_current_remove_page_title_build (){
+function block_current_undo_page_title_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -17,7 +17,7 @@ function block_current_remove_page_title_build (){
 
   $kin_blo = irp_provide ('entry_block_kind', $here);
 
-  $en_tit = 'page for removing the ' . $kin_blo;  
+  $en_tit = 'page for undoing the ' . $kin_blo;  
 
   $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);
@@ -40,7 +40,7 @@ function block_current_remove_page_title_build (){
   return $html_str;
 }
 
-function block_current_remove_section_justify_title_build (){
+function block_current_undo_section_justify_title_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -58,12 +58,12 @@ function block_current_remove_section_justify_title_build (){
 
   return $html_str;
 }
-function block_current_remove_section_justify_textarea_build (){
+function block_current_undo_section_justify_textarea_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<textarea name="block_current_remove_justification" rows="2" cols="100" />';
+  $html_str .= '<textarea name="block_current_undo_justification" rows="2" cols="100" />';
   $html_str .= '</textarea> ' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
@@ -73,13 +73,13 @@ function block_current_remove_section_justify_textarea_build (){
   return $html_str;
 }
 
-function block_current_remove_section_justify_build (){
+function block_current_undo_section_justify_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= irp_provide ('block_current_remove_section_justify_title', $here);
-  $html_str .= irp_provide ('block_current_remove_section_justify_textarea', $here);
+  $html_str .= irp_provide ('block_current_undo_section_justify_title', $here);
+  $html_str .= irp_provide ('block_current_undo_section_justify_textarea', $here);
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str',  $html_str);
@@ -88,13 +88,13 @@ function block_current_remove_section_justify_build (){
   return $html_str;
 }
 
-function block_current_remove_section_save_build () {
+function block_current_undo_section_save_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<input type="submit" value="';
-  $html_str .= ucfirst (language_translate_of_en_string ('remove'));
+  $html_str .= ucfirst (language_translate_of_en_string ('undo'));
   $html_str .= '" name="submitme"> ' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
@@ -104,7 +104,7 @@ function block_current_remove_section_save_build () {
   return $html_str;
 }
 
-function block_current_remove_link_to_return_build () {
+function block_current_undo_link_to_return_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -120,7 +120,8 @@ function block_current_remove_link_to_return_build () {
   return $html_str;
 }
 
-function block_current_remove_build (){
+
+function block_current_undo_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -130,13 +131,13 @@ function block_current_remove_build (){
   $html_str .= irp_provide ('pervasive_page_header', $here);
   $html_str .= '<br><br>';
 
-  $html_str .= irp_provide ('block_current_remove_page_title', $here);
+  $html_str .= irp_provide ('block_current_undo_page_title', $here);
   $html_str .= '<br><br>' . "\n";
 
-  $html_str .= irp_provide ('block_current_remove_form', $here);
+  $html_str .= irp_provide ('block_current_undo_form', $here);
   $html_str .= '<br><br>';
 
-  $html_str .= irp_provide ('block_current_remove_link_to_return', $here);
+  $html_str .= irp_provide ('block_current_undo_link_to_return', $here);
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   $html_str .= comment_exiting_of_function_name ($here);

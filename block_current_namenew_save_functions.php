@@ -1,6 +1,7 @@
 <?php
 
 require_once "irp_library.php";
+require_once "irp_path_library.php";
 require_once "block_library.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
@@ -117,8 +118,8 @@ function block_current_namenew_save_surname_catalog_update_build () {
 
   /* File server/SURNAMES/Surname_catalog.cat : add "$new_nam_blo : $new_sur_blo" */
 
-  $new_nam_blo_cur = irp_provide ('block_current_namenew_from_block_current_surnamenew', $here);
   $new_sur_blo_cur = irp_provide ('block_current_surnamenew', $here);
+  $new_nam_blo_cur = irp_provide ('block_current_namenew_from_block_current_surnamenew', $here);
 
   $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);
 
@@ -187,6 +188,9 @@ function block_current_namenew_save_build () {
 
   file_log_write ($here, $log_str);
 
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', $get_key, $here); 
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'block_name_catalog_current', $here); 
+  
   debug_n_check ($here, '$html_str', $html_str);
   exiting_from_function ($here);
 

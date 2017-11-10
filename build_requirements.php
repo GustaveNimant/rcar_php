@@ -20,6 +20,9 @@ require_once "block_current_remove_form_functions.php";
 require_once "block_current_remove_functions.php";
 require_once "block_current_remove_save_functions.php";
 require_once "block_current_rename_functions.php";
+require_once "block_current_undo_form_functions.php";
+require_once "block_current_undo_functions.php";
+require_once "block_current_undo_save_functions.php";
 
 require_once "block_list_order_new_functions.php";
 require_once "block_list_reorder_functions.php";
@@ -88,13 +91,13 @@ require_once "language_select_functions.php";
 require_once "pervasive_html_functions.php";
 require_once "quit_functions.php";
 
-require_once "section_block_current_remove_functions.php";
 require_once "section_block_current_history_functions.php";
 require_once "section_block_current_list_display_functions.php";
 require_once "section_block_current_list_reorder_functions.php";
+require_once "section_block_current_remove_functions.php";
 require_once "section_block_current_rename_form_functions.php";
 require_once "section_block_current_rename_functions.php";
-
+require_once "section_block_current_undo_functions.php";
 
 require_once "section_block_new_create_functions.php";
 

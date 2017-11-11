@@ -10,11 +10,11 @@ function block_current_remove_save_catalog_actualize_build (){
 
   $dir = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent_cur);
 
-  $cat_blo = irp_provide ('block_name_catalog_current', $here);
+  $cat_blo = irp_provide ('block_name_list_order_current', $here);
 
-  $con_cat_blo = block_name_catalog_remove_block_name_of_entry_name_of_block_name_catalog_of_block_current_name ($nam_ent_cur, $cat_blo, $nam_blo_cur);
-  $ext_cat = $_SESSION['parameters']['extension_block_name_catalog_filename'];
-  $nof = "Block_name_catalog." . $ext_cat;
+  $con_cat_blo = block_name_list_order_remove_block_name_of_entry_name_of_block_name_list_order_of_block_current_name ($nam_ent_cur, $cat_blo, $nam_blo_cur);
+  $ext_cat = $_SESSION['parameters']['extension_block_name_list_order_filename'];
+  $nof = "Block_name_list_order." . $ext_cat;
 
   if ($con_cat_blo == "") {
       $fno = $dir . $nof;

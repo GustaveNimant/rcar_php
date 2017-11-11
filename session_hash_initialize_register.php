@@ -79,7 +79,7 @@ $_SESSION['is_data_entity_name'] = array (
 );
 
 $_SESSION['is_read_entity_name'] = array (
-    'block_name_catalog_current' => TRUE,
+    'block_name_list_order_current' => TRUE,
     'surname_catalog' => TRUE,
     'entry_fullnameofdirectory_array' => TRUE,
 );
@@ -126,7 +126,7 @@ $_SESSION['parameters']['relative_path_source_images'] = '/rcar/php/IMAGES';
 
 $_SESSION['parameters']['extension_action_log_filename'] = 'log';
 $_SESSION['parameters']['extension_block_filename'] = 'blo';
-$_SESSION['parameters']['extension_block_name_catalog_filename'] = 'cat';
+$_SESSION['parameters']['extension_block_name_list_order_filename'] = 'lis';
 $_SESSION['parameters']['extension_item_comment_filename'] = 'com';
 $_SESSION['parameters']['extension_surname_nameoffile'] = 'sur';
 

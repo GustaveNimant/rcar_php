@@ -3,7 +3,6 @@ require_once "irp_library.php";
 require_once "git_history_functions.php";
 require_once "session_library.php";
 require_once "father_n_son_stack_entity_library.php";
-require_once "father_n_son_stack_entity_library.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 

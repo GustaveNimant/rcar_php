@@ -1,12 +1,14 @@
 <?php
 
 require_once "irp_library.php";
-require_once "management_library.php";
 require_once "entry_information_functions.php";
-require_once "entry_current_display_functions.php";
 require_once "tools_library.php";
 
-$module = "command_functions";
+$module = module_name_of_module_nameoffile (__FILE__);
+
+$Documentation[$module]['what is it'] = "it is ...";
+$Documentation[$module]['what for'] = "to ...";
+
 entering_in_module ($module);
 
 function command_action_of_action_name_of_argument ($nam_act, $str_arg) {
@@ -61,9 +63,9 @@ function command_selection_action_build () {
   father_n_son_stack_entity_push_of_father_of_son ($key, "BUTTON_$key");
 
 
-  $action_a = array ('debug', 'remove', 'display', 'load', 'read', 'remove', 'set', 'unset', 'write');
+  $action_a = array ('debug', 'remove', 'display', 'load', 'read', 'set', 'unset', 'write');
 
-  $html_str  = '';
+  $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<select name="command_action"> ' . "\n";
   $html_str .= '  <option value="default"> ';
   $html_str .= string_html_capitalized_of_string (language_translate_of_en_string ('actions'));
@@ -76,6 +78,7 @@ function command_selection_action_build () {
   }
 
   $html_str .= '</select> ' . "\n";
+  $html_str  = comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str', $html_str);
 

@@ -77,7 +77,7 @@ function section_block_current_list_reorder_build () {
 
   $html_str = '';
   try {
-      $nam_blo_a = irp_provide ('block_name_array', $here);
+      $nam_blo_a = irp_provide ('block_current_name_ordered_array', $here);
       if (count ($nam_blo_a) > 1 ) {
           $html_str .= irp_provide ('more_than_one_block_current_list', $here);
       }

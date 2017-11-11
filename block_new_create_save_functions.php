@@ -57,7 +57,7 @@ function check_is_block_new_build () {  /* Improve return $html_str */
 
   $log_str = '';
   try {
-      $old_nam_blo_cur_a = irp_provide ('block_name_array', $here);
+      $old_nam_blo_cur_a = irp_provide ('block_current_name_ordered_array', $here);
       debug_n_check ($here , '$old_nam_blo_cur_a', $old_nam_blo_cur_a);
 
       if (array_value_exists ($nam_blo_new, $old_nam_blo_cur_a) ) {
@@ -149,7 +149,7 @@ function block_new_surname_update_build (){  /* improve return $html_str */
   return $log_str;
 }
          
-function block_name_catalog_new_build () {
+function block_name_list_order_new_build () {
   $here = __function__;
   entering_in_function ($here);
 
@@ -161,7 +161,7 @@ function block_name_catalog_new_build () {
 
   $glue = $_SESSION['parameters']['glue'];
   try {
-      $cat_blo = irp_provide ('block_name_catalog_current', $here);
+      $cat_blo = irp_provide ('block_name_list_order_current', $here);
       debug_n_check ($here , '$cat_blo', $cat_blo);
       $wor_a = explode ($glue, $cat_blo);
       if (! in_array ($nam_blo_new, $wor_a)) {
@@ -169,8 +169,8 @@ function block_name_catalog_new_build () {
       }
       else {
           print_fatal_error ($here,
-          "block_new_name >$nam_blo_new< were not in block_name_catalog.cat",
-          "block_name_catalog.cat is >$cat_blo<",
+          "block_new_name >$nam_blo_new< were not in block_name_list_order.cat",
+          "block_name_list_order.cat is >$cat_blo<",
           "check");
       }
   }
@@ -192,14 +192,14 @@ function block_new_create_save_catalog_actualize_build () {
   $here = __function__;
   entering_in_function ($here);
 
-  $new_cat_blo = irp_provide ('block_name_catalog_new', $here);
+  $new_cat_blo = irp_provide ('block_name_list_order_new', $here);
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
   $sur_blo_new = irp_provide ('block_new_surname', $here);
 
   $log_str = irp_provide ('block_new_surname_update', $here);
   file_log_write ($here, $log_str);
 
-  block_name_catalog_write_of_entry_name_of_block_name_catalog ($nam_ent_cur, $new_cat_blo);
+  block_name_list_order_write_of_entry_name_of_block_name_list_order ($nam_ent_cur, $new_cat_blo);
 
   $nam_blo_new = irp_provide ('block_new_name_from_block_new_surname', $here);
   $nof_sur_cat = $_SESSION['parameters']['nameoffile_surname_catalog'];

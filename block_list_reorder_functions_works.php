@@ -74,7 +74,7 @@ function block_list_reorder_content_order_html_table_array_build () {
 
   $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);
   $con_by_nam_blo_a = irp_provide ('block_content_by_block_name_hash', $here);
-  $nam_blo_a = irp_provide ('block_name_array', $here);
+  $nam_blo_a = irp_provide ('block_current_name_ordered_array', $here);
 
   $arr_a = array();
   $count = 0;

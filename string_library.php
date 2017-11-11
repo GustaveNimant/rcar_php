@@ -461,7 +461,7 @@ function is_filename_extension ($ext) {
     entering_in_function ($here . " ($ext)");
     
     $ext_blo = $_SESSION['parameters']['extension_block_filename'];
-    $ext_cat = $_SESSION['parameters']['extension_block_name_catalog_filename'];
+    $ext_cat = $_SESSION['parameters']['extension_block_name_list_order_filename'];
     $ext_com = $_SESSION['parameters']['extension_item_comment_filename'];
     
     $result = ($ext == $ext_blo)

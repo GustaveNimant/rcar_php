@@ -68,7 +68,7 @@ function block_new_create_save_catalog_actualize_build (){
 
   $glue = $_SESSION['parameters']['glue'];
   try {
-      $cat_blo = irp_provide ('block_name_catalog_current', $here);
+      $cat_blo = irp_provide ('block_name_list_order_current', $here);
       debug_n_check ($here , '$cat_blo', $cat_blo);
       $new_cat_blo = $cat_blo . $glue . $nam_blo_new;
   }
@@ -83,7 +83,7 @@ function block_new_create_save_catalog_actualize_build (){
 
   irp_store_force ('block_new_name_catalog', $new_cat_blo, 'block_new_create_save');
 
-  block_name_catalog_write_of_entry_name_of_block_name_catalog ($nam_ent, $new_cat_blo);
+  block_name_list_order_write_of_entry_name_of_block_name_list_order ($nam_ent, $new_cat_blo);
   
   exiting_from_function ($here);
   return $new_cat_blo;
@@ -109,7 +109,7 @@ function block_new_create_save_build () {
   
 # Check that block name is new 
   try {
-      $old_nam_blo_cur_a = irp_provide ('block_name_array', $here);
+      $old_nam_blo_cur_a = irp_provide ('block_current_name_ordered_array', $here);
       debug_n_check ($here , '$old_nam_blo_cur_a', $old_nam_blo_cur_a);
       if (array_value_exists ($nam_blo_new, $old_nam_blo_cur_a) ) {
           $en_mes_1 = "the block";
@@ -140,20 +140,20 @@ function block_new_create_save_build () {
   $sur_by_nam_h = surname_by_name_hash_add_n_write_of_name_of_surname_of_current_hash ($nam_blo_new, $sur_blo_new, $old_sur_by_nam_h);
   debug_n_check ($here , '$sur_by_nam_h', $sur_by_nam_h);
 
-/* Actualize block_name_catalog_current and Write */
+/* Actualize block_name_list_order_current and Write */
 
   $new_cat_blo = irp_provide ('block_new_create_save_catalog_actualize', $here);
 
-/* Actualize block_name_array */
+/* Actualize block_current_name_ordered_array */
 /* Clean all Father Nodes and Store New as Current */
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('entry_list_display', 'block_new_create_save_catalog_actualize', $here); 
-  irp_store_data_of_get_key_of_get_value_of_where ('block_name_catalog_current', $new_cat_blo, $here);
+  irp_store_data_of_get_key_of_get_value_of_where ('block_name_list_order_current', $new_cat_blo, $here);
 
-  /* unset ($_SESSION['irp_register']['block_name_array']); /\* left *\/ */
-  /* $log_str .= "irp_key >block_name_array< removed from irp_register" . "\n";  */
+  /* unset ($_SESSION['irp_register']['block_current_name_ordered_array']); /\* left *\/ */
+  /* $log_str .= "irp_key >block_current_name_ordered_array< removed from irp_register" . "\n";  */
   /* file_log_write ($here, $log_str); */
 
-  /* $new_nam_blo_a = irp_provide ('block_name_array', $here); */
+  /* $new_nam_blo_a = irp_provide ('block_current_name_ordered_array', $here); */
   /* debug_n_check ($here , 'verify $new_nam_blo_a', $new_nam_blo_a); */
 
 /* Display Page */

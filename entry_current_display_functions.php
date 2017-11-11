@@ -10,7 +10,7 @@ $Documentation[$module]['entry_current_name'] = "is a directory name of php_serv
 $Documentation[$module]['what for'] = "to ...";
 $Documentation[$module]['entry_kind'] = "is a lower case word expressed in english. Ex.: text";
 $Documentation[$module]['entry_block_kind'] = "is a lower case word expressed in english. Ex.: paragraph";
-$Documentation[$module]['block_name_array'] = "is the same as item_name_array";
+$Documentation[$module]['block_current_name_ordered_array'] = "is the same as item_name_array";
 
 entering_in_module ($module);
 

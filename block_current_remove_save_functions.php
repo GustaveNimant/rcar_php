@@ -71,8 +71,8 @@ function block_current_remove_save_block_catalog_update_build () { /* Improve no
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
   $dir = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent_cur);
 
-  $ext_cat_blo = $_SESSION['parameters']['extension_block_name_catalog_filename'];
-  $nof_cat_blo = 'Block_name_catalog' . '.' . $ext_cat_blo;
+  $ext_cat_blo = $_SESSION['parameters']['extension_block_name_list_order_filename'];
+  $nof_cat_blo = 'Block_name_list_order' . '.' . $ext_cat_blo;
   $fno_cat_blo = $dir . $nof_cat_blo;
   debug_n_check ($here , '$fno_cat_blo', $fno_cat_blo);
 

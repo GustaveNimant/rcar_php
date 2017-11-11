@@ -40,7 +40,7 @@ function item_name_array_of_hd_directory_of_entry_name ($hdir, $nam_ent) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($hdir, $nam_ent, $ext_fil)");
 
-  $ext_fil = $_SESSION['parameters']['extension_block_name_catalog_filename'];
+  $ext_fil = $_SESSION['parameters']['extension_block_name_list_order_filename'];
   $nam_fil = $nam_ent . "/" . 'Item_name_catalog.' . $ext_fil;
  
   debug_n_check ($here , '$nam_fil', $nam_fil);
@@ -150,7 +150,7 @@ function git_status_information_retrieve ($str) {
   # debug_n_check ($here , "replace git status information remainder", $remainder_a);
 
   $ext_txt = $_SESSION['parameters']['extension_block_filename'];
-  $ext_cat = $_SESSION['parameters']['extension_block_name_catalog_filename'];
+  $ext_cat = $_SESSION['parameters']['extension_block_name_list_order_filename'];
   $ext_com = $_SESSION['parameters']['extension_item_comment_filename'];
 
   $ext_str = "($ext_cat|$ext_com|$ext_txt)";

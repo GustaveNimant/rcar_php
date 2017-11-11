@@ -75,13 +75,12 @@ function section_block_current_list_display_display_build () {
         $html_str .= '<br>'; 
     }
     else {
-        
         $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);
         $con_blo_by_nam_blo_h = irp_provide ('block_content_by_block_name_hash', $here);
+        $nam_blo_cur_ord_a = irp_provide ('block_current_name_ordered_array', $here);
 
-        debug_n_check ($here, '$con_blo_by_nam_blo_h', $con_blo_by_nam_blo_h);
-
-        foreach ($con_blo_by_nam_blo_h as $nam_blo => $con_blo) {
+        foreach ($nam_blo_cur_ord_a as $key => $nam_blo) {
+            $con_blo = array_retrieve_value_of_key_of_array ($nam_blo, $con_blo_by_nam_blo_h);
             $con_ite_cur = item_current_content_of_block_current_content ($con_blo);
             
             $html_str .= block_current_display_and_link_of_surname_by_name_hash_of_entry_name_of_block_current_name_of_la_eol ($sur_by_nam_h, $nam_ent_cur, $nam_blo, $la_eol);
@@ -111,7 +110,6 @@ function section_block_current_list_display_build () {
         $html_str .= comment_exiting_of_function_name ($here);
     }
     else {
-    
         $html_str  = comment_entering_of_function_name ($here);
         $html_str .= '<center>' . "\n";
         $html_str .= irp_provide ('section_block_current_list_display_title', $here);

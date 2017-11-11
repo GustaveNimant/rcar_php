@@ -86,8 +86,8 @@ function block_current_namenew_save_block_catalog_update_build () {
   $old_nam_blo_cur = irp_provide ('block_current_name', $here);
   debug_n_check ($here , '$old_nam_blo_cur', $old_nam_blo_cur);
 
-  $ext_cat_blo = $_SESSION['parameters']['extension_block_name_catalog_filename'];
-  $nof_cat_blo = 'Block_name_catalog' . '.' . $ext_cat_blo;
+  $ext_cat_blo = $_SESSION['parameters']['extension_block_name_list_order_filename'];
+  $nof_cat_blo = 'Block_name_list_order' . '.' . $ext_cat_blo;
   $fno_cat_blo = $dir . $nof_cat_blo;
   debug_n_check ($here , '$fno_cat_blo', $fno_cat_blo);
 
@@ -99,11 +99,11 @@ function block_current_namenew_save_block_catalog_update_build () {
       $log_str = "Block Catalog $fno_cat_blo does not exist not renamed";
   }
 
-  $old_nam_blo_a = irp_provide ('block_name_array', $here);
+  $old_nam_blo_a = irp_provide ('block_current_name_ordered_array', $here);
   check_is_array_unique_of_what_of_array ('block_nameold_array', $old_nam_blo_a);
 
   $new_nam_blo_cur = irp_provide ('block_current_namenew_from_block_current_surnamenew', $here);
-  $new_nam_blo_a = block_name_array_update_after_block_rename ($nam_ent_cur, $old_nam_blo_cur, $new_nam_blo_cur, $old_nam_blo_a);
+  $new_nam_blo_a = block_current_name_ordered_array_update_after_block_rename ($nam_ent_cur, $old_nam_blo_cur, $new_nam_blo_cur, $old_nam_blo_a);
 # SKIPPED  check_is_array_unique_of_what_of_array ('block_namenew_array', $new_nam_blo_a);
   debug_n_check ($here , '$old_nam_blo_a', $old_nam_blo_a);
   debug_n_check ($here , '$new_nam_blo_a', $new_nam_blo_a);
@@ -189,7 +189,7 @@ function block_current_namenew_save_build () {
   file_log_write ($here, $log_str);
 
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', $get_key, $here); 
-  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'block_name_catalog_current', $here); 
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'block_name_list_order_current', $here); 
   
   debug_n_check ($here, '$html_str', $html_str);
   exiting_from_function ($here);

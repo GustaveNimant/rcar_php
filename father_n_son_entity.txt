@@ -15,6 +15,7 @@ section_block_current_list_reorder -> block_current_name_ordered_array
 block_current_name_ordered_array -> entry_current_name
 block_current_name_ordered_array -> block_current_nameoffile_array
 block_current_nameoffile_array -> entry_current_name
+block_current_name_ordered_array -> READ_block_name_list_order
 block_current_name_ordered_array -> surname_by_name_hash
 section_block_current_list_reorder -> more_than_one_block_current_list
 entry_current_display -> section_block_current_list_display
@@ -59,7 +60,7 @@ block_list_order_new_link_to_return -> entry_current_surname_from_entry_current_
 block_list_order_new -> block_list_order_new_save
 block_name_list_order_new -> GET_block_name_list_order_new
 block_list_order_new_save -> entry_current_name
+WRITE_block_name_list_order -> block_name_list_order_new
 block_list_order_new_save -> block_list_order_new_save_link_to_return
 block_list_order_new_save_link_to_return -> entry_current_name
 block_list_order_new_save_link_to_return -> entry_current_surname_from_entry_current_name
-block_list_order_new_save -> entry_current_display

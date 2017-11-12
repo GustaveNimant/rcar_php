@@ -27,16 +27,16 @@ function block_name_list_order_current_build () {
         throw new Exception ($mest);
     }
     
-    $fno_cat = block_name_list_order_fullnameoffile_of_entry_name ($nam_ent);
-    debug_n_check ($here , '$fno_cat', $fno_cat);
+    $fno_nam_blo_lis = block_name_list_order_fullnameoffile_of_entry_name ($nam_ent);
+    debug_n_check ($here , '$fno_nam_blo_lis', $fno_nam_blo_lis);
     
-    if (file_exists ($fno_cat)) {
+    if (file_exists ($fno_nam_blo_lis)) {
         
-        $cat_blo = block_name_list_order_read_of_entry_name ($nam_ent);  
-        
+        $nam_blo_lis = block_name_list_order_read_of_entry_name ($nam_ent);  
+
     } else {
         print_fatal_error ($here,
-        "$fno_cat exist",
+        "$fno_nam_blo_lis exist",
         "it does NOT",
         "this module is obsolete");
     }
@@ -45,16 +45,15 @@ function block_name_list_order_current_build () {
     
     $nam_blo_a = array_map ("file_cut_dotted_3c_extension_of_nameoffile", $nof_blo_a);
     check_is_array_unique_of_what_of_array ('block_current_name_ordered_array', $nam_blo_a);
-    $cat_blo = block_name_list_order_of_block_current_name_ordered_array ($nam_blo_a);
-    
+    $nam_blo_lis = block_name_list_order_of_block_current_name_ordered_array ($nam_blo_a);
 
     $entity = entity_name_of_build_function_name ($here);
-    father_n_son_stack_entity_push_of_father_of_son ($entity, "READ_$entity");
+    father_n_son_stack_entity_push_of_father_of_son ($entity, 'READ_block_name_list_order');
     
-    debug ($here , '$cat_blo', $cat_blo);
-    exiting_from_function ($here . " ('$cat_blo', $cat_blo)");
+    debug ($here , '$nam_blo_lis', $nam_blo_lis);
+    exiting_from_function ($here . " ('$nam_blo_lis', $nam_blo_lis)");
     
-    return $cat_blo;
+    return $nam_blo_lis;
 }
 
 exiting_from_module ($module);

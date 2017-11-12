@@ -18,9 +18,6 @@ function command_action_of_action_name_of_argument ($nam_act, $str_arg) {
   switch ($nam_act) {
       case 'debug' :
           break;
-      case 'remove' :
-          tools_remove ($str_arg);
-          break;
       case 'display' :
           tools_display ($str_arg);
           break;
@@ -62,23 +59,36 @@ function command_selection_action_build () {
   $key = str_replace('_build', '', $here);
   father_n_son_stack_entity_push_of_father_of_son ($key, "BUTTON_$key");
 
-
-  $action_a = array ('debug', 'remove', 'display', 'load', 'read', 'set', 'unset', 'write');
+  $action_en_a = array ('debug', 'display', 'load', 'read', 'remove', 'set', 'unset', 'write');
 
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<select name="command_action"> ' . "\n";
-  $html_str .= '  <option value="default"> ';
+  $html_str .= '<select name="command_action">' . "\n";
+  $html_str .= '<option value="default">';
   $html_str .= string_html_capitalized_of_string (language_translate_of_en_string ('actions'));
-  $html_str .= '  </option> ' . "\n";
+  $html_str .= '</option>' . "\n";
 
-  foreach ($action_a as $act) {
-      $html_str .= '<option value="' . $act . '"> ' . "\n";
-      $html_str .= string_html_capitalized_of_string (ucfirst (language_translate_of_en_string ($act)));
+  $action_en_by_la_h = array ();
+  foreach ($action_en_a as $act_en) {
+    $act_la = language_translate_of_en_string ($act_en);
+    $action_en_by_la_h[$act_la] = $act_en; 
+  }
+
+  $act_la_a = array_keys ($action_en_by_la_h);
+  sort ($act_la_a);
+
+#  print_html_array ($here, '$action_en_by_la_h', $action_en_by_la_h);
+
+#  print_html_array ($here, '$act_la_a', $act_la_a);
+
+  foreach ($act_la_a as $act_la) {
+      $act_en = $action_en_by_la_h[$act_la];
+      $html_str .= '<option value="' . $act_en . '"> ' . "\n";
+      $html_str .= string_html_capitalized_of_string (ucfirst ($act_la));
       $html_str .= '</option> ' . "\n";
   }
 
   $html_str .= '</select> ' . "\n";
-  $html_str  = comment_exiting_of_function_name ($here);
+  $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str', $html_str);
 
@@ -94,8 +104,9 @@ function command_selection_argument_build () {
   $key = str_replace('_build', '', $here);
   father_n_son_stack_entity_push_of_father_of_son ($key, "BUTTON_$key");
 
-  $html_str  = '';
+  $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<input type="text" name="command_argument"> ';
+  $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str', $html_str);
 

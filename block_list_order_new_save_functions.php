@@ -40,6 +40,7 @@ function block_list_order_new_save_build () {
 /* Write */
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
   block_name_list_order_write_of_entry_name_of_block_name_list_order ($nam_ent_cur, $new_cat_blo);
+  father_n_son_stack_entity_push_of_father_of_son ("WRITE_block_name_list_order", $get_key);
 
 /* Clean all Father Nodes and Store New as Current */
 #  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('entry_list_display', 'block_name_list_order_current', $here); 
@@ -49,8 +50,7 @@ function block_list_order_new_save_build () {
   /* $usr_inf = irp_provide ('user_information', $here); */
   /* block_current_name_ordered_array_justification_write_of_entry_name_of_user_information ($nam_ent, $usr_inf); */
 
-
-  $html_str  = '';
+  $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_page_header', $here);
   $html_str .= '<br><br>';
 
@@ -60,6 +60,7 @@ function block_list_order_new_save_build () {
   $html_str .= irp_provide ('block_list_order_new_save_link_to_return', $here); 
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
+  $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str', $html_str);
 

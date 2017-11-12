@@ -13,6 +13,10 @@ function block_current_name_ordered_array_build () {
   $nof_blo_cur_a = irp_provide ('block_current_nameoffile_array', $here); /* blocks that are on disk */      
 
   $nam_blo_lis = block_name_list_order_read_of_entry_name ($nam_ent); /* get ordered list from disk */
+
+  $entity = entity_name_of_build_function_name ($here);
+  father_n_son_stack_entity_push_of_father_of_son ($entity, "READ_block_name_list_order");
+
   $glue = $_SESSION['parameters']['glue']; 
   $nam_blo_ord_a = explode ($glue, $nam_blo_lis);
 

@@ -1,7 +1,6 @@
 <?php
 include "session.php";
 require_once "irp_library.php";
-require_once "father_n_son_stack_entity_library.php";
 
 $entity = entity_name_of_module_script_fullnameoffile (__FILE__);
 $module = $entity . '_script';

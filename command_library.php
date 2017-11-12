@@ -1,10 +1,11 @@
 <?php
-require_once "irp_library.php";
-require_once "git_history_functions.php";
-require_once "session_library.php";
-require_once "father_n_son_stack_entity_library.php";
 
-$module = module_name_of_module_fullnameoffile (__FILE__);
+require_once "management_library.php";
+
+$module = module_name_of_module_nameoffile (__FILE__);
+
+$Documentation[$module]['what is it'] = "it is ...";
+$Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);
 
@@ -397,6 +398,47 @@ function tools_write ($what) {
     exiting_from_function ($here . " ($what)");
     return $log_str;
 
+}
+
+function command_action_of_action_name_of_argument ($nam_act, $str_arg) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($nam_act, $str_arg)");
+
+  switch ($nam_act) {
+      case 'debug' :
+          break;
+      case 'display' :
+          tools_display ($str_arg);
+          break;
+      case 'load' :
+          tools_load ($str_arg);
+          break;
+      case 'read' :
+          tools_read ($str_arg);
+          break;
+      case 'remove' :
+          tools_remove ($str_arg);
+          break;
+      case 'set' :
+          tools_set ($str_arg);
+          break;         
+      case 'unset' :
+          tools_unset ($str_arg);
+          break;         
+      case 'write' :
+          tools_write ($str_arg);
+          break;         
+      default:  
+          $en_mes = "no action is defined. Using action <i>display</i> as default";
+          $la_mes = language_translate_of_en_string ($en_mes); 
+          $la_Mes = string_html_capitalized_of_string ($la_mes);
+          warning ($here, $la_Mes);
+          tools_display ($str_arg);
+      }
+  
+  exiting_from_function ($here);
+
+  return;
 }
 
 exiting_from_module ($module);

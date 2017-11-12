@@ -51,6 +51,8 @@ require_once "block_new_name_functions.php";
 require_once "block_next_content_functions.php";
 require_once "block_previous_sha1_display_functions.php";
 
+require_once "command_functions.php";
+require_once "command_result_functions.php";
 
 require_once "entry_current_display_functions.php";
 require_once "entry_current_name_functions.php";
@@ -64,7 +66,6 @@ require_once "entry_new_create_save_functions.php";
 require_once "entry_new_name_functions.php";
 
 require_once "git_command_functions.php";
-
 
 require_once "item_current_modify_functions.php";
 require_once "item_current_content_display_functions.php";

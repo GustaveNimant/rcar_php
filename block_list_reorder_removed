@@ -1,0 +1,16 @@
+15:31:02: before_one_block : Key >4< has been removed from array $ren_arr_aKeys of array $ren_arr_a have been renumbered
+15:31:02: irp_remove_off_irp_register_of_irp_key : $irp_key >block_current_name_ordered_array< removed from irp_register
+15:31:06: irp_path_clean_register_of_top_key_of_bottom_key_of_where : irp_key >block_current_name_ordered_array< has been removed from irp_register
+15:31:06: irp_path_clean_register_of_top_key_of_bottom_key_of_where : irp_key >section_block_current_list_reorder< has been removed from irp_register
+15:31:06: irp_path_clean_register_of_top_key_of_bottom_key_of_where : irp_key >block_content_by_block_name_hash< has been removed from irp_register
+15:31:06: irp_path_clean_register_of_top_key_of_bottom_key_of_where : irp_key >section_block_current_list_display_display< has been removed from irp_register
+15:31:06: irp_path_clean_register_of_top_key_of_bottom_key_of_where : irp_key >block_list_reorder_order_loop_table< has been removed from irp_register
+15:31:06: irp_path_clean_register_of_top_key_of_bottom_key_of_where : irp_key >block_current_name_ordered_array_reorder< has been removed from irp_register
+15:31:06: irp_path_clean_register_of_top_key_of_bottom_key_of_where : irp_key >entry_current_display< has been removed from irp_register
+15:31:06: irp_path_clean_register_of_top_key_of_bottom_key_of_where : irp_key >section_block_current_list_display< has been removed from irp_register
+15:31:06: irp_path_clean_register_of_top_key_of_bottom_key_of_where : irp_key >block_list_reorder_form< has been removed from irp_register
+15:31:06: irp_path_clean_register_of_top_key_of_bottom_key_of_where : irp_key >block_list_reorder< has been removed from irp_register
+15:31:06: irp_path_clean_register_of_top_key_of_bottom_key_of_where : irp_key >block_list_order_new_display_blocks< has been removed from irp_register
+15:31:06: irp_path_clean_register_of_top_key_of_bottom_key_of_where : irp_key >block_list_order_new_display< has been removed from irp_register
+15:31:06: irp_path_clean_register_of_top_key_of_bottom_key_of_where : irp_key >block_list_order_new< has been removed from irp_register
+15:31:06: irp_path_clean_register_of_top_key_of_bottom_key_of_where : irp_path from >READ_block_name_list_order< to >entry_current_display< have been removed from irp_register from block_list_order_new_save_build

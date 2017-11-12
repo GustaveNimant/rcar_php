@@ -46,6 +46,9 @@ $_SESSION['is_data_entity_name'] = array (
 
     'block_previous_sha1' => TRUE, 
 
+    'command_action' => TRUE, 
+    'command_argument' => TRUE, 
+
     'entry_current_name' => TRUE,
     'entry_current_surname' => TRUE,
 

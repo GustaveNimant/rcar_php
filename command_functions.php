@@ -1,8 +1,6 @@
 <?php
 
 require_once "irp_library.php";
-require_once "entry_information_functions.php";
-require_once "tools_library.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
 
@@ -11,45 +9,25 @@ $Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);
 
-function command_action_of_action_name_of_argument ($nam_act, $str_arg) {
+function command_page_title_build () {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_act, $str_arg)");
+  entering_in_function ($here);
 
-  switch ($nam_act) {
-      case 'debug' :
-          break;
-      case 'display' :
-          tools_display ($str_arg);
-          break;
-      case 'load' :
-          tools_load ($str_arg);
-          break;
-      case 'read' :
-          tools_read ($str_arg);
-          break;
-      case 'remove' :
-          tools_remove ($str_arg);
-          break;
-      case 'set' :
-          tools_set ($str_arg);
-          break;         
-      case 'unset' :
-          tools_unset ($str_arg);
-          break;         
-      case 'write' :
-          tools_write ($str_arg);
-          break;         
-      default:  
-          $en_mes = "no action is defined. Using action <i>display</i> as default";
-          $la_mes = language_translate_of_en_string ($en_mes); 
-          $la_Mes = string_html_capitalized_of_string ($la_mes);
-          warning ($here, $la_Mes);
-          tools_display ($str_arg);
-      }
-  
+  $en_tit = 'page for executing a command'; 
+
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
+  $la_bub_Tit = string_html_capitalized_of_string ($la_bub_tit);
+
+  $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= '<center>' . "\n";
+  $html_str .= common_html_div_background_color_of_html ($la_bub_Tit);
+  $html_str .= '</center>' . "\n";
+  $html_str .= comment_exiting_of_function_name ($here);
+
+  debug_n_check ($here , '$html_str',  $html_str);
   exiting_from_function ($here);
-
-  return;
+  
+  return $html_str;
 }
 
 function command_selection_action_build () {
@@ -119,7 +97,7 @@ function command_button_form_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $script_action = 'command_script.php';
+  $script_action = 'command_result_script.php';
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form action="'. $script_action .'" method="get"> ' . "\n";
@@ -142,6 +120,11 @@ function command_build (){
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_page_header', $here);
+  $html_str .= '<br><br>' . "\n";
+
+  $html_str .= irp_provide ('command_page_title', $here);
+  $html_str .= '<br><br>' . "\n";
+
   $html_str .= irp_provide ('command_button_form', $here);
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   $html_str .= comment_exiting_of_function_name ($here); 

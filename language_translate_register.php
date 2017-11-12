@@ -1791,6 +1791,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ), 
     
+    'page for executing a command' =>
+    array (
+        'fr' => 'page d&rsquo;ex&eacute;cution d&rsquo;une commande',
+        'it' => '???',
+    ),
+
     'page for modifying the content of the current paragraph' =>
     array (
         'fr' => 'page de modification du contenu du paragraphe courant',

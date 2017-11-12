@@ -43,7 +43,7 @@ function block_list_order_new_save_build () {
   father_n_son_stack_entity_push_of_father_of_son ("WRITE_block_name_list_order", $get_key);
 
 /* Clean all Father Nodes and Store New as Current */
-#  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('entry_list_display', 'block_name_list_order_current', $here); 
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('entry_current_display', 'READ_block_name_list_order', $here); 
 #  irp_store_data_of_get_key_of_get_value_of_where ('block_name_list_order_current', $new_cat_blo, $here);
 
 /* Not yet used */  

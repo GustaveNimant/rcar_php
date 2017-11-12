@@ -5,7 +5,7 @@ require_once "irp_library.php";
 $entity = entity_name_of_module_script_fullnameoffile (__FILE__);
 $module = $entity . '_script';
 
-$Documentation[$module]['what is it'] = "it is ...";
+$Documentation[$module]['what is it'] = "it is the result of the execution of a command";
 $Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);

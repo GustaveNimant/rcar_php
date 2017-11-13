@@ -37,7 +37,7 @@ function block_list_order_new_save_build () {
   $get_key = 'block_name_list_order_new';
   $new_cat_blo = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here);
 
-/* Write */
+/* Write Improve */
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
   block_name_list_order_write_of_entry_name_of_block_name_list_order ($nam_ent_cur, $new_cat_blo);
   father_n_son_stack_entity_push_of_father_of_son ("WRITE_block_name_list_order", $get_key);

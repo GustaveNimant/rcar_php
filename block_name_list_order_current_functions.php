@@ -11,15 +11,15 @@ $Documentation[$module]['remark'] = "the order of the block names is defined by 
 
 entering_in_module ($module);
 
-function block_name_list_order_current_build () {
+function block_name_list_order_current_XXX_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
     
-    $nam_ent = irp_provide ('entry_current_name', $here);
-    $fnd_ent = entry_subdirectory_name_of_entry_name ($nam_ent);
+    $nam_ent_cur = irp_provide ('entry_current_name', $here);
+    $fnd_ent_cur = entry_subdirectory_name_of_entry_name ($nam_ent_cur);
     
-    if (file_directory_is_empty_of_directory_path ($fnd_ent) ){
-        $mest = "Entry Directory >$fnd_ent< is empty";
+    if (file_directory_is_empty_of_directory_path ($fnd_ent_cur) ){
+        $mest = "Entry Directory >$fnd_ent_cur< is empty";
         $log_str = "Throw new Exception with message : $mest";
         file_log_write ($here, $log_str);
         
@@ -27,12 +27,12 @@ function block_name_list_order_current_build () {
         throw new Exception ($mest);
     }
     
-    $fno_nam_blo_lis = block_name_list_order_fullnameoffile_of_entry_name ($nam_ent);
+    $fno_nam_blo_lis = block_name_list_order_fullnameoffile_of_entry_name ($nam_ent_cur);
     debug_n_check ($here , '$fno_nam_blo_lis', $fno_nam_blo_lis);
     
     if (file_exists ($fno_nam_blo_lis)) {
         
-        $nam_blo_lis = block_name_list_order_read_of_entry_name ($nam_ent);  
+        $nam_blo_lis = block_name_list_order_read_of_entry_name ($nam_ent_cur);  
 
     } else {
         print_fatal_error ($here,

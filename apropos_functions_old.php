@@ -10,12 +10,12 @@ require_once "bubble_library.php";
 $module = "apropos_functions";
 entering_in_module ($module);
 
-function apropos_content_by_block_current_name_ordered_array_build () {
+function apropos_content_by_block_name_list_order_current_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $nam_ent = irp_provide ('entry_current_name', $here);
-  $nam_blo_a = irp_provide ('block_current_name_ordered_array', $here);
+  $nam_blo_a = irp_provide ('block_name_list_order_current', $here);
 
   if (array_is_empty_of_array ($nam_blo_a)) {
     $con_by_nam_blo_a = array ();

@@ -99,11 +99,11 @@ function block_current_namenew_save_block_catalog_update_build () {
       $log_str = "Block Catalog $fno_cat_blo does not exist not renamed";
   }
 
-  $old_nam_blo_a = irp_provide ('block_current_name_ordered_array', $here);
+  $old_nam_blo_a = irp_provide ('block_name_list_order_current', $here);
   check_is_array_unique_of_what_of_array ('block_nameold_array', $old_nam_blo_a);
 
   $new_nam_blo_cur = irp_provide ('block_current_namenew_from_block_current_surnamenew', $here);
-  $new_nam_blo_a = block_current_name_ordered_array_update_after_block_rename ($nam_ent_cur, $old_nam_blo_cur, $new_nam_blo_cur, $old_nam_blo_a);
+  $new_nam_blo_a = block_name_list_order_current_update_after_block_rename ($nam_ent_cur, $old_nam_blo_cur, $new_nam_blo_cur, $old_nam_blo_a);
 # SKIPPED  check_is_array_unique_of_what_of_array ('block_namenew_array', $new_nam_blo_a);
   debug_n_check ($here , '$old_nam_blo_a', $old_nam_blo_a);
   debug_n_check ($here , '$new_nam_blo_a', $new_nam_blo_a);

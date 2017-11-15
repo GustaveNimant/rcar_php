@@ -109,7 +109,7 @@ function block_new_create_save_build () {
   
 # Check that block name is new 
   try {
-      $old_nam_blo_cur_a = irp_provide ('block_current_name_ordered_array', $here);
+      $old_nam_blo_cur_a = irp_provide ('block_name_list_order_current', $here);
       debug_n_check ($here , '$old_nam_blo_cur_a', $old_nam_blo_cur_a);
       if (array_value_exists ($nam_blo_new, $old_nam_blo_cur_a) ) {
           $en_mes_1 = "the block";
@@ -144,16 +144,16 @@ function block_new_create_save_build () {
 
   $new_cat_blo = irp_provide ('block_new_create_save_catalog_actualize', $here);
 
-/* Actualize block_current_name_ordered_array */
+/* Actualize block_name_list_order_current */
 /* Clean all Father Nodes and Store New as Current */
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('entry_list_display', 'block_new_create_save_catalog_actualize', $here); 
   irp_store_data_of_get_key_of_get_value_of_where ('block_name_list_order_current', $new_cat_blo, $here);
 
-  /* unset ($_SESSION['irp_register']['block_current_name_ordered_array']); /\* left *\/ */
-  /* $log_str .= "irp_key >block_current_name_ordered_array< removed from irp_register" . "\n";  */
+  /* unset ($_SESSION['irp_register']['block_name_list_order_current']); /\* left *\/ */
+  /* $log_str .= "irp_key >block_name_list_order_current< removed from irp_register" . "\n";  */
   /* file_log_write ($here, $log_str); */
 
-  /* $new_nam_blo_a = irp_provide ('block_current_name_ordered_array', $here); */
+  /* $new_nam_blo_a = irp_provide ('block_name_list_order_current', $here); */
   /* debug_n_check ($here , 'verify $new_nam_blo_a', $new_nam_blo_a); */
 
 /* Display Page */

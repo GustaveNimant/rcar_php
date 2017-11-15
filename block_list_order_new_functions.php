@@ -10,13 +10,13 @@ $Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);
 
-function block_current_name_ordered_array_reorder_build () {
+function block_name_list_order_current_reorder_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__);
 
-  $nam_blo_a = irp_provide ('block_current_name_ordered_array', $here);
+  $nam_blo_a = irp_provide ('block_name_list_order_current', $here);
 
 /* getting DATA $get_val */
   $get_key = 'block_list_reorder_la'; 
@@ -24,7 +24,7 @@ function block_current_name_ordered_array_reorder_build () {
 
   $la_order = strtolower ($la_Order);
   $en_order = language_translate_to_english_of_la_string ($la_order);
-  $new_nam_blo_a = block_current_name_reordered_array_of_en_order_of_block_current_name_ordered_array ($en_order, $nam_blo_a); 
+  $new_nam_blo_a = block_current_name_reordered_array_of_en_order_of_block_name_list_order_current ($en_order, $nam_blo_a); 
 
   debug_n_check ($here , '$new_nam_blo_a_a', $new_nam_blo_a);
   exiting_from_function ($here);
@@ -60,15 +60,15 @@ function block_list_order_new_display_blocks_build () {
   
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
 
-  $new_blo_a = irp_provide ('block_current_name_ordered_array_reorder', $here);
-  irp_store_force ('block_current_name_ordered_array', $new_blo_a, 'block_list_order_new');
+  $new_blo_a = irp_provide ('block_name_list_order_current_reorder', $here);
+  irp_store_force ('block_name_list_order_current', $new_blo_a, 'block_list_order_new');
   $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);
 
   $glue = $_SESSION['parameters']['glue'];
   $la_blo_l = implode ($glue, $new_blo_a);
 
   $html_str  = '';
-  $html_str .= block_current_name_ordered_array_of_surname_by_name_hash_of_block_current_name_ordered_array ($sur_by_nam_h, $new_blo_a);
+  $html_str .= block_name_list_order_current_of_surname_by_name_hash_of_block_name_list_order_current ($sur_by_nam_h, $new_blo_a);
   $html_str .= '<input type="hidden" name="block_name_list_order_new" value="' . $la_blo_l . '"> ';
 
   debug_n_check ($here , '$html_str', $html_str);

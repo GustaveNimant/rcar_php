@@ -28,9 +28,9 @@ function block_current_namenew_save_xxx (){
   debug_n_check ($here , '$new_nam_blo', $new_nam_blo);
   debug_n_check ($here , '$ext_blo', $ext_blo);
 
-  $old_nam_blo_a = irp_provide ('block_current_name_ordered_array', $here);
+  $old_nam_blo_a = irp_provide ('block_name_list_order_current', $here);
   check_is_array_unique_of_what_of_array ('block_nameold_array', $old_nam_blo_a);
-  $new_nam_blo_a = block_current_name_ordered_array_update_after_block_rename ($nam_ent_cur, $old_nam_blo, $new_nam_blo, $old_nam_blo_a);
+  $new_nam_blo_a = block_name_list_order_current_update_after_block_rename ($nam_ent_cur, $old_nam_blo, $new_nam_blo, $old_nam_blo_a);
 # SKIPPED  check_is_array_unique_of_what_of_array ('block_namenew_array', $new_nam_blo_a);
   debug_n_check ($here , '$old_nam_blo_a', $old_nam_blo_a);
   debug_n_check ($here , '$new_nam_blo_a', $new_nam_blo_a);
@@ -38,7 +38,7 @@ function block_current_namenew_save_xxx (){
   /* File renamed in catalog */
 
   block_file_rename ($nam_ent_cur, $old_nam_blo, $new_nam_blo, $ext_blo);
-  $new_cat_blo = block_name_list_order_of_block_current_name_ordered_array ($new_nam_blo_a);
+  $new_cat_blo = block_name_list_order_of_block_name_list_order_current ($new_nam_blo_a);
   debug_n_check ($here , '$new_cat_blo', $new_cat_blo);
 
   block_name_list_order_write_of_entry_name_of_block_name_list_order ($nam_ent_cur, $new_cat_blo);

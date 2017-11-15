@@ -9,7 +9,7 @@ $Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);
 
-function block_current_name_ordered_array_of_surname_by_name_hash_of_block_current_name_ordered_array ($sur_by_nam_h, $nam_blo_a) { /* to be moved */
+function block_name_list_order_current_of_surname_by_name_hash_of_block_name_list_order_current ($sur_by_nam_h, $nam_blo_a) { /* to be moved */
   $here = __FUNCTION__;
   entering_in_function ($here);
   # debug_n_check ($here , '$nam_blo_a', $nam_blo_a); 
@@ -130,7 +130,7 @@ function before_one_block ($nam_blo_a) {
 
 }
 
-function block_current_name_reordered_array_of_en_order_of_block_current_name_ordered_array ($en_order, $old_pro_a) {
+function block_current_name_reordered_array_of_en_order_of_block_name_list_order_current ($en_order, $old_pro_a) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($en_order, ... array)");
   # debug_n_check ($here , "old block order array", $old_pro_a);

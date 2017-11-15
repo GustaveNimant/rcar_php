@@ -59,11 +59,11 @@ function block_name_list_order_read_of_entry_name ($nam_ent) {
   return $nam_blo_lis;
 };
 
-function block_name_list_order_of_block_current_name_ordered_array ($nam_blo_a){
+function block_name_list_order_of_block_name_list_order_current ($nam_blo_a){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  array_check_is_empty_of_what_of_array_of_where ('block_current_name_ordered_array', $nam_blo_a, $here);
+  array_check_is_empty_of_what_of_array_of_where ('block_name_list_order_current', $nam_blo_a, $here);
 
   $glue = $_SESSION['parameters']['glue'];
   $str = implode ($glue, $nam_blo_a);
@@ -82,10 +82,9 @@ function block_name_list_order_write_of_entry_name_of_block_name_list_order ($na
   file_string_write ($fno_nam_blo_lis, $nam_blo_lis);
 
   $log_str = "block_name_list_order written as $fno_nam_blo_lis";
-  file_log_write ($here, $log_str);
 
   exiting_from_function ($here . " ($nam_ent, $nam_blo_lis)");
-  return;
+  return $log_str;
 }
 
 exiting_from_module ($module);

@@ -57,7 +57,7 @@ function check_is_block_new_build () {  /* Improve return $html_str */
 
   $log_str = '';
   try {
-      $old_nam_blo_cur_a = irp_provide ('block_current_name_ordered_array', $here);
+      $old_nam_blo_cur_a = irp_provide ('block_name_list_order_current', $here);
       debug_n_check ($here , '$old_nam_blo_cur_a', $old_nam_blo_cur_a);
 
       if (array_value_exists ($nam_blo_new, $old_nam_blo_cur_a) ) {

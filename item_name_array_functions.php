@@ -6,13 +6,13 @@ require_once "irp_library.php";
 $module = "item_name_array_functions";
 entering_in_module ($module);
 
-$Documentation[$module]['item_name_array'] = "is the same as block_current_name_ordered_array";
+$Documentation[$module]['item_name_array'] = "is the same as block_name_list_order_current";
 
 function item_name_array_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $nam_blo_a = irp_provide ('block_current_name_ordered_array', $here);
+  $nam_blo_a = irp_provide ('block_name_list_order_current', $here);
   debug ($here , '$nam_blo_a', $nam_blo_a);
 
   $nam_ite_a = $nam_blo_a;

@@ -106,9 +106,7 @@ function block_new_content_write_build () {
   debug_n_check ($here , '$nam_blo_new', $nam_blo_new);
   debug_n_check ($here , '$con_blo_new', $con_blo_new);
 
-  block_content_write ($nam_ent_cur, $nam_blo_new, $con_blo_new);
-
-  $log_str .= "block_new_content >$con_blo_new< has been written on entry subdirectory $nam_ent_cur";
+  $log_str = block_content_write ($nam_ent_cur, $nam_blo_new, $con_blo_new);
   file_log_write ($here, $log_str);
 
   $en_tit = 'the content of the new block';
@@ -149,7 +147,7 @@ function block_new_surname_update_build (){  /* improve return $html_str */
   return $log_str;
 }
          
-function block_name_list_order_new_build () {
+function block_name_list_order_addition_build () {
   $here = __function__;
   entering_in_function ($here);
 
@@ -160,46 +158,44 @@ function block_name_list_order_new_build () {
   debug_n_check ($here , '$nam_blo_new', $nam_blo_new);
 
   $glue = $_SESSION['parameters']['glue'];
-  try {
-      $cat_blo = irp_provide ('block_name_list_order_current', $here);
-      debug_n_check ($here , '$cat_blo', $cat_blo);
-      $wor_a = explode ($glue, $cat_blo);
-      if (! in_array ($nam_blo_new, $wor_a)) {
-          $new_cat_blo = $cat_blo . $glue . $nam_blo_new;
-      }
-      else {
-          print_fatal_error ($here,
-          "block_new_name >$nam_blo_new< were not in block_name_list_order.cat",
-          "block_name_list_order.cat is >$cat_blo<",
-          "check");
-      }
-  }
-  catch (exception $e) {  
-      $mes = $e->getmessage();
-      if ($mes = "catalog is empty in function block_new_name_catalog_build for entry name $nam_ent_cur"){
-          $new_cat_blo = $nam_blo_new;
-      }
-  }
+  $nam_blo_lis_cur = irp_provide ('block_name_list_order_current', $here);
+  debug_n_check ($here , '$nam_blo_lis_cur', $nam_blo_lis_cur);
+  
+  $nam_blo_lis_add = $nam_blo_lis_cur . $glue . $nam_blo_new;
 
-  debug_n_check ($here , '$new_cat_blo', $new_cat_blo);
+  debug_n_check ($here , '$nam_blo_lis_add', $nam_blo_lis_add);
+  exiting_from_function ($here);
+
+  return $nam_blo_lis_add;
+}
+
+function block_list_order_addition_write_build () {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+  $nam_ent_cur = irp_provide ('entry_current_name', $here);
+  $nam_blo_lis_add = irp_provide ('block_name_list_order_addition', $here);
+
+  $log_str = block_name_list_order_write_of_entry_name_of_block_name_list_order ($nam_ent_cur, $nam_blo_lis_add);
+  father_n_son_stack_entity_push_of_father_of_son ("WRITE_block_name_list_order_addition", 'block_list_order_addition');
+
+/* Clean all Father Nodes and Store New as Current */
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('entry_list_display', 'READ_block_name_list_order', $here); 
 
   exiting_from_function ($here);
 
-  return $new_cat_blo;
+  return $log_str;
 }
 
-function block_new_create_save_catalog_actualize_build () {
+function block_new_create_save_surname_catalog_actualize_build () {
   $here = __function__;
   entering_in_function ($here);
 
-  $new_cat_blo = irp_provide ('block_name_list_order_new', $here);
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
   $sur_blo_new = irp_provide ('block_new_surname', $here);
 
   $log_str = irp_provide ('block_new_surname_update', $here);
   file_log_write ($here, $log_str);
-
-  block_name_list_order_write_of_entry_name_of_block_name_list_order ($nam_ent_cur, $new_cat_blo);
 
   $nam_blo_new = irp_provide ('block_new_name_from_block_new_surname', $here);
   $nof_sur_cat = $_SESSION['parameters']['nameoffile_surname_catalog'];
@@ -258,7 +254,10 @@ function block_new_create_save_build (){
   $html_str .= irp_provide ('block_new_content_write', $here);
   $html_str .= '<br><br>' . "\n";
 
-  $html_str .= irp_provide ('block_new_create_save_catalog_actualize', $here);
+  $log_str = irp_provide ('block_list_order_addition_write', $here);
+  file_log_write ($here, $log_str);
+
+  $html_str .= irp_provide ('block_new_create_save_surname_catalog_actualize', $here);
   $html_str .= '<br><br>' . "\n";
 
   $html_str .= irp_provide ('git_command_n_commit_html', $here);

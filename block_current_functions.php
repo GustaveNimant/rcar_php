@@ -53,17 +53,19 @@ function block_content_write ($nam_ent, $nam_blo, $con_blo) {
     debug_n_check ($here , '$nof_blo', $nof_blo);
 
     file_string_write ($nof_blo, $con_blo); 
+
+    $log_str = "Block new content >$con_blo_new< has been written on entry subdirectory $nam_ent_cur";
     
-    exiting_from_function ($here);
-    return;
+    exiting_from_function ($here. " ($nam_ent, $nam_blo, $con_blo)");
+    return $log_str;
 }
 
 function block_current_file_fullname_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $nam_ent = irp_provide ('entry_current_name', $here);
-  $hdir = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
+  $nam_ent_cur = irp_provide ('entry_current_name', $here);
+  $hdir = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent_cur);
   debug_n_check ($here , '$hdir', $hdir);
 
   $ext_blo = $_SESSION['parameters']['extension_block_filename'];

@@ -29,7 +29,7 @@ function block_content_by_block_name_hash_build () {
   entering_in_function ($here);
 
   $nam_ent = irp_provide ('entry_current_name', $here);
-  $nam_blo_a = irp_provide ('block_name_list_order_current', $here); /* Use exception*/
+  $nam_blo_a = irp_provide ('block_name_array_order_current', $here); /* Use exception*/
 
 /* Use exception*/
 

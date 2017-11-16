@@ -69,7 +69,7 @@ function block_new_create_block_list_mouseover_content_build () {
   if (!empty ($_SESSION['irp_register']['block_content_by_block_name_hash'])) {
       $con_by_nam_ite_a = irp_provide ('block_content_by_block_name_hash', $here);
       
-      $html_str = '';
+      $html_str  = comment_entering_of_function_name ($here);
       foreach ($con_by_nam_ite_a as $nam_ite => $con_ite) {
           $html_str .= '<li> ' . "\n";
           $html_str .= '<b> ' . $nam_ite . '</b> ';
@@ -77,14 +77,14 @@ function block_new_create_block_list_mouseover_content_build () {
           $html_str .= $con_ite;
           $html_str .= '</li> ' . "\n";
       };
-      
+      $html_str .= comment_exiting_of_function_name ($here);    
   } else {
-      
+      $html_str  = comment_entering_of_function_name ($here);
       $html_str = language_translate_of_en_string ('first block');
+      $html_str .= comment_exiting_of_function_name ($here);
   }
-  
-  /* debug_n_check ($here , '$html_str', $html_str); */
-
+    
+  debug_n_check ($here , '$html_str', $html_str); 
   exiting_from_function ($here);
 
   return $html_str;
@@ -94,8 +94,8 @@ function block_new_create_block_list_mouseover_closetags_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $html_str = '';
-  $html_str .= '</ul></li></ul> ' . "\n";
+  $html_str  = '';
+  $html_str .= '</ul></li></ul>' . "\n";
 
   debug_n_check ($here , '$html_str', $html_str);
 
@@ -108,11 +108,13 @@ function block_new_create_block_list_mouseover_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $html_str = '';
+  $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('block_new_create_block_list_mouseover_opentags', $here);
   $html_str .= irp_provide ('block_new_create_block_list_mouseover_title', $here);
   $html_str .= irp_provide ('block_new_create_block_list_mouseover_content', $here);
   $html_str .= irp_provide ('block_new_create_block_list_mouseover_closetags', $here);
+  $html_str .= comment_exiting_of_function_name ($here);
+
   debug_n_check ($here , '$html_str', $html_str);
   exiting_from_function ($here);
 

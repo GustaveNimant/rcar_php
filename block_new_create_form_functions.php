@@ -36,11 +36,10 @@ function block_new_create_form_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $nam_ent = irp_provide ('entry_current_name', $here);
-  $sur_ent = irp_provide ('entry_current_surname_from_entry_current_name', $here);
+  $script_action = 'block_new_create_save_script.php';
 
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<form action="block_new_create_save_script.php" method="get">' . "\n";
+  $html_str .= '<form action="' . $script_action . '" method="get">' . "\n";
 
   $html_str .= get_hash_store_of_get_key_of_get_value_of_where ('block_new_create_form_action', 'create', $here);
   $html_str .= '<br><br> ';

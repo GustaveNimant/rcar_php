@@ -40,7 +40,7 @@ function block_name_list_order_remove_block_name_of_entry_name_of_block_name_lis
   return $nam_blo_lis_new;
 }
 
-function block_name_list_order_read_of_entry_name ($nam_ent) {
+function block_name_list_order_current_read_of_entry_name ($nam_ent) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_ent)");
 
@@ -59,11 +59,11 @@ function block_name_list_order_read_of_entry_name ($nam_ent) {
   return $nam_blo_lis;
 };
 
-function block_name_list_order_of_block_name_list_order_current ($nam_blo_a){
+function block_name_list_order_of_block_name_array_order ($nam_blo_a){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  array_check_is_empty_of_what_of_array_of_where ('block_name_list_order_current', $nam_blo_a, $here);
+  array_check_is_empty_of_what_of_array_of_where ('block_name_array_order', $nam_blo_a, $here);
 
   $glue = $_SESSION['parameters']['glue'];
   $str = implode ($glue, $nam_blo_a);

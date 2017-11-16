@@ -77,7 +77,7 @@ function section_block_current_list_display_display_build () {
     else {
         $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);
         $con_blo_by_nam_blo_h = irp_provide ('block_content_by_block_name_hash', $here);
-        $nam_blo_cur_ord_a = irp_provide ('block_name_list_order_current', $here);
+        $nam_blo_cur_ord_a = irp_provide ('block_name_array_order_current', $here);
 
         foreach ($nam_blo_cur_ord_a as $key => $nam_blo) {
             $con_blo = array_retrieve_value_of_key_of_array ($nam_blo, $con_blo_by_nam_blo_h);

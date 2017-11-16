@@ -10,3 +10,17 @@
 # entry not bubbled in block_current_display
 
 # never GET an action => only solution is a missing require_once in build_requirements.php
+
+block_list_order => block_name_list_order.lis string and file
+order_new = reordered
+block_list_order_new  => block_name_list_order_new 
+
+block_list_order_current  => block_name_list_order_current from read  $nam_blo_lis
+
+block_list_order_addition  => block_name_list_order_addition  add a new block at the end of list
+
+block_array vs block_list
+block_name_array vs block_name_list
+
+block_name_list_order_of_block_name_array_order
+block_name_array_order_of_block_name_list_order

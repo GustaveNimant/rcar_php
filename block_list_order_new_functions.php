@@ -16,7 +16,7 @@ function block_name_list_order_current_reorder_build () {
 
   $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__);
 
-  $nam_blo_a = irp_provide ('block_name_list_order_current', $here);
+  $nam_blo_a = irp_provide ('block_name_array_order_current', $here);
 
 /* getting DATA $get_val */
   $get_key = 'block_list_reorder_la'; 

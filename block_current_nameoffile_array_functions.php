@@ -28,6 +28,9 @@ function block_current_nameoffile_array_build () {
       debug ($here , '$nof_blo_a', $nof_blo_a);
   }
 
+  $entity = entity_name_of_build_function_name ($here);
+  father_n_son_stack_entity_push_of_father_of_son ($entity, "READ_" . $entity);
+
   debug ($here ,'$nof_blo_a', $nof_blo_a);
   exiting_from_function ($here);
   

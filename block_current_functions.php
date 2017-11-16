@@ -54,7 +54,7 @@ function block_content_write ($nam_ent, $nam_blo, $con_blo) {
 
     file_string_write ($nof_blo, $con_blo); 
 
-    $log_str = "Block new content >$con_blo_new< has been written on entry subdirectory $nam_ent_cur";
+    $log_str = "Block new content >$con_blo< has been written on entry subdirectory $nam_ent";
     
     exiting_from_function ($here. " ($nam_ent, $nam_blo, $con_blo)");
     return $log_str;

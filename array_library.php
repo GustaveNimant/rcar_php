@@ -328,25 +328,32 @@ function check_is_value_unique_in_array ($val, $arr_a) {
 }
 
 function is_key_unique_in_array ($key, $arr_a) {
-  $here = __FUNCTION__;
-  entering_in_function ($here);
-#  debug ($here , "input key", $key); 
-#  # debug ($here , "input array", $arr_a); 
-
-  foreach ($arr_a as $arr_key => $value) {
-    if ($key == $arr_key) {
-      $res_a[] = $value;
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    #  debug ($here , "input key", $key); 
+    #  # debug ($here , "input array", $arr_a); 
+    
+    if ( ! is_array ($arr_a)) {
+        print_fatal_error ($here,  
+        "second argument were an ARRAY",
+        "it is NOT",
+        "Check");
     }
-  }
-  $cou = count ($res_a);
 
-#  debug ($here , "output count", $cou);
-
-  $boo = ($cou == "1");
- 
-  exiting_from_function ($here);
-
-  return $boo;
+    foreach ($arr_a as $arr_key => $value) {
+        if ($key == $arr_key) {
+            $res_a[] = $value;
+        }
+    }
+    $cou = count ($res_a);
+    
+    #  debug ($here , "output count", $cou);
+    
+    $boo = ($cou == "1");
+    
+    exiting_from_function ($here);
+    
+    return $boo;
 }
 
 function check_is_key_unique_in_array ($key, $arr_a) {
@@ -366,8 +373,13 @@ function check_is_key_unique_in_array ($key, $arr_a) {
 function array_value_exists ($ele, $arr_a) {
     $here = __FUNCTION__;
     entering_in_function ($here);
-    #  debug ($here , "input key", $key); 
-    #  # debug ($here , "input array", $arr_a); 
+    
+    if ( ! is_array ($arr_a)) {
+        print_fatal_error ($here,  
+        "second argument were an ARRAY",
+        "it is NOT",
+        "Check");
+    }
     
     if (array_is_empty_of_array ($arr_a)) {
         $boo = false;

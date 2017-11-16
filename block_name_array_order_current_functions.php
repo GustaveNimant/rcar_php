@@ -4,6 +4,9 @@ require_once "block_name_list_order_library.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
+$Documentation[$module]['what is it'] = "it is the array of the Block name on disk";
+$Documentation[$module]['what for'] = "to ...";
+
 entering_in_module ($module);
 
 function block_name_array_order_current_build () {
@@ -12,22 +15,25 @@ function block_name_array_order_current_build () {
 
   $nam_ent = irp_provide ('entry_current_name', $here);
   $nof_blo_cur_a = irp_provide ('block_current_nameoffile_array', $here); /* blocks that are on disk */      
+  debug ($here , '$nof_blo_cur_a', $nof_blo_cur_a);
 
-  $nam_blo_lis = block_name_list_order_current_read_of_entry_name ($nam_ent); /* get ordered list from disk */
+  $nam_blo_lis_cur = block_name_list_order_current_read_of_entry_name ($nam_ent); /* get ordered list from disk */
+  debug ($here , '$nam_blo_lis_cur', $nam_blo_lis_cur);
 
   $entity = entity_name_of_build_function_name ($here);
   father_n_son_stack_entity_push_of_father_of_son ($entity, "READ_block_name_list_order");
 
   $glue = $_SESSION['parameters']['glue']; 
-  $nam_blo_ord_a = explode ($glue, $nam_blo_lis);
+  $nam_blo_ord_a = explode ($glue, $nam_blo_lis_cur);
 
   $ext_blo = $_SESSION['parameters']['extension_block_filename'];
   $nam_blo_cur_ord_a = array ();
 
   foreach ($nam_blo_ord_a as $key => $nam_blo) {
-      debug ($here , '$nam_blo', $nam_blo);
+      debug ($here , 'foreach 1 $nam_blo', $nam_blo);
       $nof_blo = $nam_blo . '.' . $ext_blo;
       if (in_array ($nof_blo, $nof_blo_cur_a)) {
+          debug ($here , 'in_array $nof_blo', $nof_blo);
           array_push ($nam_blo_cur_ord_a, $nam_blo);
           unset ($nof_blo_cur_a[$nof_blo]);
       }
@@ -36,6 +42,7 @@ function block_name_array_order_current_build () {
   if (count ($nof_blo_cur_a > 0)) {
       foreach ($nof_blo_cur_a as $key => $nof_blo) {
           $nam_blo = str_replace (".$ext_blo", '', $nof_blo);
+          debug ($here , 'foreach 2 $nam_blo', $nam_blo);
           array_push ($nam_blo_cur_ord_a, $nam_blo);
       }
   }

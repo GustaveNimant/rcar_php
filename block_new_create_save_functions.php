@@ -49,7 +49,7 @@ function block_new_create_save_page_title_build () {
   return $html_str;
 }
 
-function check_is_block_new_build () {  /* Improve return $html_str */
+function check_is_block_new_build () {  /* Improve return $html_str. No need of order */
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -57,7 +57,7 @@ function check_is_block_new_build () {  /* Improve return $html_str */
 
   $log_str = '';
   try {
-      $old_nam_blo_cur_a = irp_provide ('block_name_list_order_current', $here);
+      $old_nam_blo_cur_a = irp_provide ('block_name_array_order_current', $here);
       debug_n_check ($here , '$old_nam_blo_cur_a', $old_nam_blo_cur_a);
 
       if (array_value_exists ($nam_blo_new, $old_nam_blo_cur_a) ) {
@@ -133,9 +133,6 @@ function block_new_surname_update_build (){  /* improve return $html_str */
   $nam_blo_new = irp_provide ('block_new_name_from_block_new_surname', $here);
   debug_n_check ($here , '$nam_blo_new', $nam_blo_new);
 
-  $log_str = irp_provide ('check_is_block_new', $here);
-  file_log_write ($here, $log_str);
-
   $old_sur_by_nam_h = irp_provide ('surname_by_name_hash', $here); /* verify */
   $sur_by_nam_h = surname_by_name_hash_add_n_write_of_name_of_surname_of_current_hash ($nam_blo_new, $sur_blo_new, $old_sur_by_nam_h);
   debug_n_check ($here , '$sur_by_nam_h', $sur_by_nam_h);
@@ -180,8 +177,8 @@ function block_list_order_addition_write_build () {
   father_n_son_stack_entity_push_of_father_of_son ("WRITE_block_name_list_order_addition", 'block_list_order_addition');
 
 /* Clean all Father Nodes and Store New as Current */
-  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('entry_list_display', 'READ_block_name_list_order', $here); 
-
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order', $here); 
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_current_nameoffile_array', $here); 
   exiting_from_function ($here);
 
   return $log_str;
@@ -223,9 +220,11 @@ function block_new_create_save_link_to_return_build () {
   $here = __function__;
   entering_in_function ($here);
 
+  $script_to_return = 'entry_current_display_script.php';
+
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>' . "\n";
-  $html_str .= link_to_return_of_return_module_nameoffile ('entry_list_display_script.php');
+  $html_str .= link_to_return_of_return_module_nameoffile ($script_to_return);
   $html_str .= '</center>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
@@ -254,10 +253,10 @@ function block_new_create_save_build (){
   $html_str .= irp_provide ('block_new_content_write', $here);
   $html_str .= '<br><br>' . "\n";
 
-  $log_str = irp_provide ('block_list_order_addition_write', $here);
+  $log_str   = irp_provide ('block_list_order_addition_write', $here);
   file_log_write ($here, $log_str);
 
-  $html_str .= irp_provide ('block_new_create_save_surname_catalog_actualize', $here);
+  $html_str .= irp_provide ('block_new_create_save_surname_catalog_actualize', $here); /* move elsewhere ?? */
   $html_str .= '<br><br>' . "\n";
 
   $html_str .= irp_provide ('git_command_n_commit_html', $here);

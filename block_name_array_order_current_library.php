@@ -5,7 +5,7 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 
 entering_in_module ($module);
 
-function block_name_list_order_current_update_after_block_rename ($nam_ent, $old_nam_blo, $new_nam_blo, $old_nam_blo_a) {
+function block_name_array_order_current_update_after_block_rename ($nam_ent, $old_nam_blo, $new_nam_blo, $old_nam_blo_a) {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -27,7 +27,7 @@ function block_name_list_order_current_update_after_block_rename ($nam_ent, $old
   return $new_nam_blo_a;
 }
 
-function block_name_list_order_current_update_after_block_create ($nam_ent, $nam_blo, $nam_blo_a) {
+function block_name_array_order_current_update_after_block_create ($nam_ent, $nam_blo, $nam_blo_a) {
   $here = __FUNCTION__;
   entering_in_function ($here);
 

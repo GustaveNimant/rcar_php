@@ -59,36 +59,11 @@ function block_current_remove_save_block_file_remove_build () { /* Improve no $l
       $log_str = "Block file $fno_blo_cur does not exist not removed";
   }
 
+/* Clean all Father Nodes and Store New as Current */
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order', $here); 
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_current_nameoffile_array', $here); 
   exiting_from_function ($here . " with $log_str");
  
-  return $log_str;
-}
-
-function block_current_remove_save_block_catalog_update_build () { /* Improve no $log_str */
-  $here = __FUNCTION__;
-  entering_in_function ($here);
-
-  $nam_ent_cur = irp_provide ('entry_current_name', $here);
-  $dir = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent_cur);
-
-  $ext_cat_blo = $_SESSION['parameters']['extension_block_name_list_order_filename'];
-  $nof_cat_blo = 'Block_name_list_order' . '.' . $ext_cat_blo;
-  $fno_cat_blo = $dir . $nof_cat_blo;
-  debug_n_check ($here , '$fno_cat_blo', $fno_cat_blo);
-
-  $nam_blo_cur = irp_provide ('block_current_name', $here);
-  debug_n_check ($here , "input block name", $nam_blo_cur);
-
-  $log_str = '';
-  if ( file_exists ($fno_cat_blo)) {
-      unlink ($fno_cat_blo);
-      $log_str = "Block Catalog $fno_cat_blo has been removed";
-  }
-  else {
-      $log_str = "Block Catalog $fno_cat_blo does not exist not removed";
-  }
-
-  exiting_from_function ($here . " with $log_str");
   return $log_str;
 }
 
@@ -96,12 +71,14 @@ function block_current_remove_save_link_to_return_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
   
+  $script_to_return ='entry_current_display_script.php';
+
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
   $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
   
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>' . "\n";
-  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent_cur, $sur_ent_cur, 'entry_current_display_script.php'); 
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent_cur, $sur_ent_cur, $script_to_return); 
   $html_str .= '</center>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
   
@@ -115,8 +92,6 @@ function block_current_remove_save_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $log_str   = '';
-
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_page_header', $here);
   $html_str .= '<br><br> ';
@@ -124,9 +99,8 @@ function block_current_remove_save_build () {
   $html_str .= irp_provide ('block_current_remove_save_page_title', $here);
   $html_str .= '<br><br> ';
 
-  $log_str  .= irp_provide ('block_current_remove_save_block_file_remove', $here);
-
-  $log_str  .= irp_provide ('block_current_remove_save_block_catalog_update', $here);
+  $log_str   = irp_provide ('block_current_remove_save_block_file_remove', $here);
+  file_log_write ($here, $log_str);
 
   $html_str .= irp_provide ('git_command_n_commit_html', $here);
 
@@ -134,8 +108,6 @@ function block_current_remove_save_build () {
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   $html_str .= comment_exiting_of_function_name ($here);
-
-  file_log_write ($here, $log_str);
 
   debug_n_check ($here, '$html_str', $html_str);
   exiting_from_function ($here);

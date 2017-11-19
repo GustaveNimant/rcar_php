@@ -68,9 +68,14 @@ function block_current_display_link_to_return_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
+  $nam_ent_cur = irp_provide ('entry_current_name', $here);
+  $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
+
+  $script_to_return = 'entry_current_display_script.php';
+
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>';
-  $html_str .= link_to_return_of_return_module_nameoffile ('entry_current_display_script.php');
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent_cur, $sur_ent_cur, $script_to_return);
   $html_str .= '</center>';
   $html_str .= comment_exiting_of_function_name ($here);
 
@@ -89,6 +94,7 @@ function block_current_display_build (){
 /* getting DATA $get_val */
   $get_key = 'block_current_name'; 
   $nam_blo_cur = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here);
+
   $html_str  = comment_entering_of_function_name ($here);
 
   $html_str .= irp_provide ('pervasive_page_header', $here);

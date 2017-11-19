@@ -306,7 +306,10 @@ function file_string_write ($fno, $con) {
   check ($here, '$con', $con);
  
   file_put_contents ($fno, $con)
-    or fatal_error ($here, "file >" . $fno . "< has got a problem. Probably rights are uncorrect.Check");
+    or print_fatal_error ($here, 
+    "file >" . $fno . "< were ok",
+    "it has got a problem", 
+    "Probably rights are uncorrect");
 
   /* $boo = chmod ($fno, 0664); */
   /* if (! $boo){ */
@@ -513,6 +516,14 @@ function file_array_of_directory_path_of_predicate ($dir_pat, $predicate) {
 function file_rename_of_old_of_new_of_where ($old_nof, $new_nof, $where) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($old_nof, $new_nof, $where)"); 
+    
+    if ( file_exists ($new_nof) ) {
+        print_fatal_error ($here . ' in ' . $where , 
+        "file >$new_nof< does NOT exists",
+        "it DOES",
+        "Check"
+        );
+    }
     
     if ( ! file_exists ($old_nof) ) {
         print_fatal_error ($here . ' in ' . $where , 

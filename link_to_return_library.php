@@ -47,7 +47,7 @@ function link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffi
   $html_str .= '<a href="' . $nof_mod; 
   $html_str .= '?entry_current_name=' . $nam_ent;
   $html_str .= '">';
-  $html_str .= $la_Tit. ' ' . $sur_ent;
+  $html_str .= $la_Tit. ' <b><i>' . $sur_ent . '</i></b>';
   $html_str .= '</a>';
   $html_str .= comment_exiting_of_function_name ($here);
 

@@ -1820,18 +1820,24 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'fr' => 'page de suppression du paragraphe',
         'it' => '???',
     ), 
-
-    'page for undoing the paragraph' =>
-    array (
-        'fr' => 'page de restauration du paragraphe pr&eacute;c&eacute;dent',
-        'it' => '???',
-    ),
     
     'page for renaming the entry' =>
     array (
         'fr' => 'page de renommage de l&rsquo;entr&eacute;e',
         'it' => '???',
     ), 
+    
+    'page for renaming the paragraph' =>
+    array (
+        'fr' => 'page de renommage du paragraphe',
+        'it' => '???',
+    ),
+
+    'page for renaming the question' =>
+    array (
+        'fr' => 'page de renommage de la question',
+        'it' => '???',
+    ),
 
     'page for reordering the paragraphs of the entry' =>
     array (
@@ -1844,6 +1850,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'fr' => 'page de changement de l&rsquo;ordre des questions de l&rsquo;entr&eacute;e',
         'it' => '???',
     ), 
+
+    'page for undoing the paragraph' =>
+    array (
+        'fr' => 'page de restauration du paragraphe pr&eacute;c&eacute;dent',
+        'it' => '???',
+    ),
     
     'please enter at least three words' =>
     array (
@@ -2468,6 +2480,18 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
 		'fr' => 'afin de justifier la cr&eacute;ation de cette nouvelle propri&eacute;t&eacute;',
 		'it' => '???',
     ),
+
+    'to paragraph' =>
+    array (
+        'fr' => 'en paragraphe',
+        'it' => '???',
+   ), 
+
+    'to question' =>
+    array (
+        'fr' => 'en question',
+        'it' => '???',
+   ), 
 
     'undefined' => 
     array (

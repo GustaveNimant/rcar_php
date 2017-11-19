@@ -62,6 +62,7 @@ function block_name_list_order_current_read_of_entry_name ($nam_ent) {
 function block_name_list_order_of_block_name_array_order ($nam_blo_a){
   $here = __FUNCTION__;
   entering_in_function ($here);
+  debug_n_check ($here, '$nam_blo_a', $nam_blo_a); 
 
   array_check_is_empty_of_what_of_array_of_where ('block_name_array_order', $nam_blo_a, $here);
 
@@ -77,6 +78,8 @@ function block_name_list_order_of_block_name_array_order ($nam_blo_a){
 function block_name_list_order_write_of_entry_name_of_block_name_list_order ($nam_ent, $nam_blo_lis){
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_ent, $nam_blo_lis)");
+
+  debug_n_check ($here, '$nam_blo_lis', $nam_blo_lis); 
   
   $fno_nam_blo_lis = block_name_list_order_fullnameoffile_of_entry_name ($nam_ent);
   file_string_write ($fno_nam_blo_lis, $nam_blo_lis);

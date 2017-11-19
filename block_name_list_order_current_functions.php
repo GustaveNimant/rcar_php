@@ -3,6 +3,8 @@ require_once "irp_library.php";
 require_once "block_name_list_order_library.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
+$Documentation[$module]['what is it'] = "it reads the Block name list ordered from disk";
+$Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);
 

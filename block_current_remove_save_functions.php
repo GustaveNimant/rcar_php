@@ -104,7 +104,7 @@ function block_current_remove_save_irp_path_clean () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'GET_block_current_surnamenew', $here); 
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'GET_block_current_name', $here); 
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_current_nameoffile_array', $here); 
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order', $here); 
  

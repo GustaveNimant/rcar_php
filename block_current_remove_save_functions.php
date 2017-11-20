@@ -1,7 +1,7 @@
 <?php
 
-require_once "management_library.php";
 require_once "irp_library.php";
+require_once "irp_path_library.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
@@ -59,12 +59,57 @@ function block_current_remove_save_block_file_remove_build () { /* Improve no $l
       $log_str = "Block file $fno_blo_cur does not exist not removed";
   }
 
-/* Clean all Father Nodes and Store New as Current */
-  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order', $here); 
-  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_current_nameoffile_array', $here); 
   exiting_from_function ($here . " with $log_str");
  
   return $log_str;
+}
+
+function block_name_list_order_deletion_build () {
+  $here = __function__;
+  entering_in_function ($here);
+
+  $nam_blo_cur = irp_provide ('block_current_name', $here);
+  debug_n_check ($here , '$nam_blo_cur', $nam_blo_cur);
+
+  $glue = $_SESSION['parameters']['glue'];
+  $nam_blo_lis_cur = irp_provide ('block_name_list_order_current', $here);
+  debug_n_check ($here , '$nam_blo_lis_cur', $nam_blo_lis_cur);
+
+  $nam_blo_lis_del = list_remove_of_glue_of_element_of_list ($glue, $nam_blo_cur, $nam_blo_lis_cur);
+  string_check_is_empty_of_what_of_where_of_string ('$nam_blo_lis_del', $here, $nam_blo_lis_del);
+
+  debug_n_check ($here , '$nam_blo_lis_del', $nam_blo_lis_del);
+  exiting_from_function ($here);
+
+  return $nam_blo_lis_del;
+}
+
+function block_list_order_deletion_write_build () {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+  $nam_ent_cur = irp_provide ('entry_current_name', $here);
+  $nam_blo_lis_del = irp_provide ('block_name_list_order_deletion', $here);
+  debug_n_check ($here , '$nam_blo_lis_del', $nam_blo_lis_del);
+
+  $log_str = block_name_list_order_write_of_entry_name_of_block_name_list_order ($nam_ent_cur, $nam_blo_lis_del);
+  father_n_son_stack_entity_push_of_father_of_son ("WRITE_block_name_list_order_deletion", 'block_list_order_deletion');
+
+  exiting_from_function ($here);
+
+  return $log_str;
+}
+
+function block_current_remove_save_irp_path_clean () {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'GET_block_current_surnamenew', $here); 
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_current_nameoffile_array', $here); 
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order', $here); 
+ 
+  exiting_from_function ($here);
+  return;
 }
 
 function block_current_remove_save_link_to_return_build () {
@@ -101,6 +146,11 @@ function block_current_remove_save_build () {
 
   $log_str   = irp_provide ('block_current_remove_save_block_file_remove', $here);
   file_log_write ($here, $log_str);
+
+  $log_str   = irp_provide ('block_list_order_deletion_write', $here);
+  file_log_write ($here, $log_str);
+
+  block_current_remove_save_irp_path_clean (); /* Improve */
 
   $html_str .= irp_provide ('git_command_n_commit_html', $here);
 

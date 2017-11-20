@@ -114,8 +114,10 @@ function git_command_n_commit_html_build () {
       $html_str .= comment_exiting_of_function_name ($here);
   }
   else {
-      
-      fatal_error ($here, language_translate_of_en_string ("git commit failed"));
+      $la_exp = language_translate_of_en_string ("git commit succeeded");
+      $la_fou = language_translate_of_en_string ("git commit failed");
+      print_fatal_error ($here, 
+      $la_exp, $la_fou, "Check");
   }
 
   debug_n_check ($here , '$html_str', $html_str);

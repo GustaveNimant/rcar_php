@@ -370,7 +370,7 @@ function check_is_key_unique_in_array ($key, $arr_a) {
   return;
 }
 
-function array_value_exists ($ele, $arr_a) {
+function array_exists_of_value_of_array ($ele, $arr_a) {
     $here = __FUNCTION__;
     entering_in_function ($here);
     
@@ -391,6 +391,70 @@ function array_value_exists ($ele, $arr_a) {
     exiting_from_function ($here);
     
     return $boo;
+}
+
+function array_check_exists_of_value_of_array ($val, $arr_a) {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+    if ( ! array_exists_of_value_of_array ($val, $arr_a)) {
+        print_html_array ($here, '$arr_a', $arr_a);
+        print_fatal_error ($here,  
+        "value $val exists in array",
+        "it does NOT",
+        "Check array above");
+    }
+    exiting_from_function ($here);
+    
+    return;
+}
+
+function array_remove_all_of_value_of_array ($val, $arr_a) {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+
+    array_exists_of_value_of_array ($val, $arr_a);
+
+    $del_a = array ();
+    foreach ($arr_a as $k => $v) {
+        if ($v != $val) {
+            array_push ($del_a, $v);
+        }
+    }
+
+    exiting_from_function ($here);
+    return $del_a;
+}
+
+function array_first_key_of_value_of_array ($val, $arr_a) {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+
+    array_check_exists_of_value_of_array ($val, $arr_a);
+
+    foreach ($arr_a as $k => $v) {
+        if ($v == $val) {
+            $key = $k;
+            break;
+        }
+    }
+
+    exiting_from_function ($here);
+    return $key;
+}
+
+function array_remove_first_of_value_of_array ($val, $arr_a) {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+
+    array_check_exists_of_value_of_array ($val, $arr_a);
+
+    $del_a = $arr_a;
+    $key = array_first_key_of_value_of_array ($val, $del_a);
+    unset ($del_a[$key]);
+
+    exiting_from_function ($here);
+    return $del_a;
 }
 
 function array_merge_unique_of_array_of_array ($fir_a, $sec_a) {
@@ -658,6 +722,21 @@ function lowercase_n_sort_of_string_by_key_array ($str_by_key_a) {
     exiting_from_function ($here);
 
     return $str_low_a;
+}
+
+function list_remove_of_glue_of_element_of_list ($glu, $ele, $lis) {
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($glu, $ele, $lis)");
+
+    $arr_a = explode ($glu, $lis);
+    debug_n_check ($here , '$arr_a', $arr_a);
+    $del_a = array_remove_first_of_value_of_array ($ele, $arr_a);
+    $lis_del = implode ($glu, $del_a);
+
+    debug_n_check ($here, '$lis_del', $lis_del);
+    exiting_from_function ($here . " ($glu, $ele, $lis)");
+
+    return $lis_del;
 }
 
 function ___array_push_inplace_of_array_name_of_value_of_array ($nam_arr, $val, $arr_a) {

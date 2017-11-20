@@ -1038,6 +1038,12 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
 		'it' => '???',
     ),
 
+    'git commit succeeded' =>
+    array (
+		'fr' => 'succ&egrave;s de la sauvegarde par git',
+		'it' => '???',
+    ),
+
     'git' =>
     array (
 		'fr' => 'git',

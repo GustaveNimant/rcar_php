@@ -163,7 +163,7 @@ function session_hash_push_inplace_of_key_of_value ($key, $val) {
     if (isset ($_SESSION)) {
         if (isset ($_SESSION[$key])) {
             if ( is_array ($_SESSION[$key]) ) {
-                if ( ! array_value_exists ($val, $_SESSION[$key]) ) {
+                if ( ! array_exists_of_value_of_array ($val, $_SESSION[$key]) ) {
                     array_push ($_SESSION[$key], $val);
 #                    $nam_arr = '$_SESSION["'. $key. '"]';
 #                    array_push_inplace_of_array_name_of_value_of_array ($nam_arr, $val, $_SESSION[$key]);
@@ -199,7 +199,7 @@ function session_hash_push_inplace_of_key_of_sub_key_of_value ($key, $sub_key, $
     if (isset ($_SESSION)) {
         $arr_a = $_SESSION[$key][$sub_key];
         if ( is_array ($arr_a) ) {
-            if ( ! array_value_exists ($val, $arr_a) ) {
+            if ( ! array_exists_of_value_of_array ($val, $arr_a) ) {
                 array_push_inplace_of_array_name_of_value_of_array ($sub_key, $val, $arr_a);
                 $_SESSION[$key][$sub_key] = $val;
             }

@@ -5,7 +5,7 @@ require_once "block_name_list_order_library.php";
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
 $Documentation[$module]['what is it'] = "it is the array of the Block name on disk";
-$Documentation[$module]['what for'] = "to ...";
+$Documentation[$module]['remark'] = "to ...";
 
 entering_in_module ($module);
 

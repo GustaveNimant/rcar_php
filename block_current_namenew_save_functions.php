@@ -83,6 +83,32 @@ function block_current_namenew_save_block_file_rename_build () {
   return  $log_str;
 }
 
+function block_current_namenew_save_surname_catalog_update_build () {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+  /* File server/SURNAMES/Surname_catalog.cat : add "$new_nam_blo : $new_sur_blo" */
+
+  $new_sur_blo_cur = irp_provide ('block_current_surnamenew', $here);
+  $new_nam_blo_cur = irp_provide ('block_current_namenew_from_block_current_surnamenew', $here);
+
+  $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);
+
+  $log_str = ''; /* output of functions below ??? */
+  if (array_key_exists ($new_nam_blo_cur, $sur_by_nam_h)) {
+      $old_sur = $sur_by_nam_h[$new_nam_blo_cur];
+      surname_by_name_hash_replace_n_write_of_name_of_surnamenew_of_current_array ($new_nam_blo_cur, $new_sur_blo_cur, $sur_by_nam_h);
+      $log_str .= "Block Surname >$old_sur< has been replaced by itself ? >$new_sur_blo_cur< in Surname_catalog";
+  }
+  else {
+      surname_by_name_hash_add_n_write_of_name_of_surname_of_current_hash ($new_nam_blo_cur, $new_sur_blo_cur, $sur_by_nam_h);
+      $log_str .= "Block Surname >$new_sur_blo_cur< has been added to Surname_catalog";
+  }
+  
+  exiting_from_function ($here . " with $log_str");
+  return  $log_str;
+}
+
 function block_current_namenew_save_block_name_array_update_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
@@ -118,32 +144,6 @@ function block_current_namenew_save_block_name_array_update_build () {
 
   exiting_from_function ($here . " with $log_str");
   return $new_nam_blo_a;
-}
-
-function block_current_namenew_save_surname_catalog_update_build () {
-  $here = __FUNCTION__;
-  entering_in_function ($here);
-
-  /* File server/SURNAMES/Surname_catalog.cat : add "$new_nam_blo : $new_sur_blo" */
-
-  $new_sur_blo_cur = irp_provide ('block_current_surnamenew', $here);
-  $new_nam_blo_cur = irp_provide ('block_current_namenew_from_block_current_surnamenew', $here);
-
-  $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);
-
-  $log_str = ''; /* output of functions below ??? */
-  if (array_key_exists ($new_nam_blo_cur, $sur_by_nam_h)) {
-      $old_sur = $sur_by_nam_h[$new_nam_blo_cur];
-      surname_by_name_hash_replace_n_write_of_name_of_surnamenew_of_current_array ($new_nam_blo_cur, $new_sur_blo_cur, $sur_by_nam_h);
-      $log_str .= "Block Surname >$old_sur< has been replaced by itself ? >$new_sur_blo_cur< in Surname_catalog";
-  }
-  else {
-      surname_by_name_hash_add_n_write_of_name_of_surname_of_current_hash ($new_nam_blo_cur, $new_sur_blo_cur, $sur_by_nam_h);
-      $log_str .= "Block Surname >$new_sur_blo_cur< has been added to Surname_catalog";
-  }
-  
-  exiting_from_function ($here . " with $log_str");
-  return  $log_str;
 }
 
 function block_current_namenew_save_block_name_list_write_build () {
@@ -193,8 +193,7 @@ function block_current_namenew_save_irp_path_clean () {
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order', $here); 
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_current_nameoffile_array', $here); 
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'GET_block_current_surnamenew', $here); 
-  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'block_name_list_order_current', $here); 
-
+ 
   exiting_from_function ($here);
   return;
 }

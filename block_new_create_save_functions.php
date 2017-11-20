@@ -60,7 +60,7 @@ function check_is_block_new_build () {  /* Improve return $html_str. No need of 
       $old_nam_blo_cur_a = irp_provide ('block_name_array_order_current', $here);
       debug_n_check ($here , '$old_nam_blo_cur_a', $old_nam_blo_cur_a);
 
-      if (array_value_exists ($nam_blo_new, $old_nam_blo_cur_a) ) {
+      if (array_exists_of_value_of_array ($nam_blo_new, $old_nam_blo_cur_a) ) {
           $en_mes_1 = "the block";
           $en_mes_2 = "already exists";
           $la_mes_1 = language_translate_of_en_string ($en_mes_1); 
@@ -176,12 +176,20 @@ function block_list_order_addition_write_build () {
   $log_str = block_name_list_order_write_of_entry_name_of_block_name_list_order ($nam_ent_cur, $nam_blo_lis_add);
   father_n_son_stack_entity_push_of_father_of_son ("WRITE_block_name_list_order_addition", 'block_list_order_addition');
 
-/* Clean all Father Nodes and Store New as Current */
-  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order', $here); 
-  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_current_nameoffile_array', $here); 
   exiting_from_function ($here);
 
   return $log_str;
+}
+
+function block_new_create_save_irp_path_clean () {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+  
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order', $here); 
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_current_nameoffile_array', $here); 
+  
+  exiting_from_function ($here);
+  return;
 }
 
 function block_new_create_save_surname_catalog_actualize_build () {
@@ -258,6 +266,8 @@ function block_new_create_save_build (){
 
   $html_str .= irp_provide ('block_new_create_save_surname_catalog_actualize', $here); /* move elsewhere ?? */
   $html_str .= '<br><br>' . "\n";
+
+  block_new_create_save_irp_path_clean ();
 
   $html_str .= irp_provide ('git_command_n_commit_html', $here);
   $html_str .= '<br><br>' . "\n";

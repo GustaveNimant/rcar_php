@@ -2,6 +2,7 @@
 
 require_once "basics_library.php";
 require_once "module_name_library.php";
+require_once "script_name_library.php";
 require_once "error_library.php";
 
 $module = "management_functions";
@@ -270,7 +271,7 @@ function exiting_from_module ($str_mod) {
         if ( $nam_top != $nam_mod ) {
 
             array_push ($_SESSION['parameters']['stack_function_called_array'], $nam_top);
-#            print_html_array ($here, 'stack_function_called_array', $_SESSION['parameters']['stack_function_called_array']);
+            # print_html_array ($here, 'stack_function_called_array', $_SESSION['parameters']['stack_function_called_array']);
             warning ($here,
             "name of current module >$nam_mod< were the top of stack",
             "top of stack >$nam_top<",
@@ -283,6 +284,87 @@ function exiting_from_module ($str_mod) {
 
     return;
 };
+
+function entering_in_script ($str_mod) {
+    $here = __FUNCTION__;
+
+    if ( 
+        (isset ($_SESSION['parameters']['stack_function_called_array']))
+        &&    
+        (isset ($_SESSION['parameters']['stack_function_level_dot_list']))
+        &&    
+        (isset ($_SESSION['parameters']['stack_function_level_maximum']))
+        
+    ) {
+        $eol = end_of_line ();
+        /* print ($here . '>' . $str_mod . '<' . $eol); */
+        
+        $nam_mod = first_word_of_string ($str_mod);
+        
+        $prev = end ($_SESSION['parameters']['stack_function_called_array']);
+        
+        $lev_cur = management_entering_level_of_name ($nam_mod) ;
+        
+        $dot_list = $_SESSION['parameters']['stack_function_level_dot_list'];
+        $str_poi = substr ($dot_list, 0, $lev_cur);
+        
+        if ($prev == '') {
+            print_fatal_error ($here, 
+            "script calling >$nam_mod< were defined",
+            "it is NOT",
+            "Check");
+        }
+        
+        print_d ("\n$str_poi entering  in script " . $str_mod . "\n"); 
+
+        if ($prev == "irp_provide") {
+            $pre_pre = ante_previous_function_in_stack ();
+            print_d ("\tcalled by " . $prev . " also by " . $pre_pre . "\n"); 
+        }
+        else {
+            print_d ("\tcalled by " . $prev . "\n"); 
+        }
+    }
+    
+    return;
+}
+
+function exiting_from_script ($str_mod) {
+    $here = __FUNCTION__;
+
+    if ( 
+        (isset ($_SESSION['parameters']['stack_function_called_array']))
+        &&    
+        (isset ($_SESSION['parameters']['stack_function_level_dot_list']))
+        &&    
+        (isset ($_SESSION['parameters']['stack_function_level_maximum']))
+    ) {
+
+        $nam_mod = first_word_of_string ($str_mod);
+
+        $lev_cur = count ($_SESSION['parameters']['stack_function_called_array']);
+        $dot_list = $_SESSION['parameters']['stack_function_level_dot_list'];
+        $str_poi = substr ($dot_list, 0, $lev_cur);
+        
+        $nam_top = array_pop ($_SESSION['parameters']['stack_function_called_array']);
+
+        if ( $nam_top != $nam_mod ) {
+
+            array_push ($_SESSION['parameters']['stack_function_called_array'], $nam_top);
+            # print_html_array ($here, 'stack_function_called_array', $_SESSION['parameters']['stack_function_called_array']);
+            warning ($here,
+            "name of current script >$nam_mod< were the top of stack",
+            "top of stack >$nam_top<",
+            "Check");
+        }       
+
+        print_d ("\n$str_poi exiting from script " . $str_mod . "\n"); 
+        
+    }     
+
+    return;
+};
+
 
 function is_cpu ($nam_fun) {
   $here = __FUNCTION__;

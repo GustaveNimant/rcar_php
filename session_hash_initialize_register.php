@@ -101,6 +101,7 @@ $_SESSION['module_wheretoget_value_nameoffile'] = array ();
 $_SESSION['removed_irp_keys_array'] = array ();
 $_SESSION['father_n_son_stack_entity'] = array ();
 $_SESSION['father_n_son_stack_module'] = array ();
+$_SESSION['father_n_son_stack_script'] = array ();
 $_SESSION['get_variable_register'] = array ();
 
 $_SESSION['irp_register'] = array ();

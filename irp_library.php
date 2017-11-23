@@ -252,6 +252,17 @@ function irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($
   return $get_val;
 }
 
+function irp_data_value_retrieve_and_store_of_get_key_of_script_name_of_where ($get_key, $module, $where) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($get_key, $module, $where)");
+
+  $get_val = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $module, $where);
+
+  debug_n_check ($here, '$get_val', $get_val);
+  exiting_from_function ($here  . " ($get_key, $module, $where)");
+  return $get_val;
+}
+
 function irp_path_data_clean_new_bottom_key_store_of_bottom_key_of_module_name_of_where ($bot_key, $module, $where) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($bot_key, $module)");
@@ -275,6 +286,16 @@ function irp_path_data_clean_new_bottom_key_store_of_bottom_key_of_module_name_o
           irp_store_data_of_get_key_of_get_value_of_where ($bot_key, $bot_val, $here, $where);
       }
   }
+
+  exiting_from_function ($here . " ($bot_key, $module)");
+  return;
+}
+
+function irp_path_data_clean_new_bottom_key_store_of_bottom_key_of_script_name_of_where ($bot_key, $module, $where) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($bot_key, $module)");
+
+  irp_path_data_clean_new_bottom_key_store_of_bottom_key_of_module_name_of_where ($bot_key, $module, $where);
 
   exiting_from_function ($here . " ($bot_key, $module)");
   return;

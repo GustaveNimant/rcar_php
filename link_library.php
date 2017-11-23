@@ -70,6 +70,32 @@ function link_previous_module_name_make () {
   return $pre_mod;
 }
 
+function link_is_ok_of_script_name ($nam_scr) {
+  $here = __FUNCTION__;
+  $boo = link_is_ok_of_module_name ($nam_scr);
+    return $boo;
+}
+
+function link_previous_script_name_make () {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+  $pre_mod = link_previous_module_name_make ();
+  exiting_from_function ($here . " with \$pre_mod >$pre_mod<");
+
+  return $pre_mod;
+}
+
+function link_script_name_of_url_relative ($url_rel) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($url_rel)");
+
+  $nam_scr = link_module_name_of_url_relative ($url_rel);
+
+  exiting_from_function ($here . ' with \$nam_scr >' . $nam_scr . '<');
+
+  return $nam_scr;
+}
+
 exiting_from_module ($module);
 
 ?>

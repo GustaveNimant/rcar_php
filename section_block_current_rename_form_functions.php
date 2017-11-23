@@ -83,14 +83,14 @@ function section_block_current_rename_form_build () {
   entering_in_function ($here);
 
   $mod_cur = module_name_of_module_fullnameoffile (__FILE__);
-  $mod_act = 'block_current_namenew_save_script.php';
+  $script_action = 'block_current_namenew_save_script.php';
 
 # SKIPPED  $_SESSION['module_wheretoact_nameoffile']['block_current_surnamenew'] = $mod_cur ;
-# SKIPPED  $_SESSION['module_wheretoget_value_nameoffile']['block_current_surnamenew'] = $mod_act;
+# SKIPPED  $_SESSION['module_wheretoget_value_nameoffile']['block_current_surnamenew'] = $script_action;
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form ' . "\n";
-  $html_str .= 'method="get" action="' . $mod_act . '">' . "\n";
+  $html_str .= 'method="get" action="' . $script_action . '">' . "\n";
 
   $html_str .= irp_provide ('subsection_block_current_surnamenew_title', $here);
   $html_str .= '<br> ';

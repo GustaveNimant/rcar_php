@@ -52,12 +52,14 @@ function no_block_current_list_build () {
     return $html_str;
 }
 
-function more_than_one_block_current_list_build () {  /* Generalize */
+function more_than_one_block_current_list_form_build () {  /* Generalize */
     $here = __FUNCTION__;
     entering_in_function ($here);
 
+    $script_action = 'block_list_reorder_script.php';
+
     $html_str  = comment_entering_of_function_name ($here);
-    $html_str .= '<form action="block_list_reorder_script.php" method="get"> ' . "\n";
+    $html_str .= '<form action="' . $script_action . '" method="get"> ' . "\n";
     
     $html_str .= irp_provide ('section_block_current_list_reorder_title', $here);
     $html_str .= inputtypesubmit_of_en_action_name ('reorder');
@@ -79,7 +81,7 @@ function section_block_current_list_reorder_build () {
   try {
       $nam_blo_a = irp_provide ('block_name_array_order_current', $here);
       if (count ($nam_blo_a) > 1 ) {
-          $html_str .= irp_provide ('more_than_one_block_current_list', $here);
+          $html_str .= irp_provide ('more_than_one_block_current_list_form', $here);
       }
   }
   catch (Exception $e) {

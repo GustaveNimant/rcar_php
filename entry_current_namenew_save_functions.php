@@ -71,8 +71,8 @@ function entry_current_namenew_save_entry_subdirectory_rename_build (){
       entry_current_rename_subdirectory ($old_nam_ent_cur, $new_nam_ent_cur);
       $log_str = "Entry subdirectory >$old_fno_ent_cur< has been renamed as >$new_nam_ent_cur<";
   }
-  else {
-      print_fatal_error ($here,
+  else { 
+      print_warning ($here,/* Improve because of TWICE */
       "Entry subdirectory $old_fno_ent_cur exist",
       "it does NOT",
       "Check");
@@ -110,7 +110,7 @@ function entry_current_namenew_save_surname_catalog_update_build () {
     $log_str = '';
     if (array_key_exists ($new_nam_ent_cur, $sur_by_nam_h)) {
         $old_sur_ent_cur = $sur_by_nam_h[$new_nam_ent_cur];
-        surname_by_name_hash_replace_n_write_of_name_of_surnamenew_of_current_array ($new_nam_ent_cur, $new_sur_ent_cur, $sur_by_nam_h);
+        surname_by_name_hash_replace_n_write_of_name_of_surnamenew_of_current_hash ($new_nam_ent_cur, $new_sur_ent_cur, $sur_by_nam_h);
         $log_str .= "Entry Surname >$old_sur_ent_cur< has been replaced by itself ? >$new_sur_ent_cur< in Surname_catalog";
     }
     else {

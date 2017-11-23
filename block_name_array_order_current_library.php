@@ -15,12 +15,15 @@ function block_name_array_order_current_update_after_block_rename ($nam_ent, $ol
 # debug_n_check ($here , '$old_nam_blo_a', $old_nam_blo_a);
 
 /* Keep order */
-
-  $old_key_blo = array_retrieve_only_key_of_value_of_array_of_where ($old_nam_blo, $old_nam_blo_a, $here);
-  debug_n_check ($here , '$old_key_blo', $old_key_blo);
-  $new_nam_blo_a = $old_nam_blo_a;
-  $new_nam_blo_a[$old_key_blo] = $new_nam_blo;
-
+  if (in_array ($old_nam_blo, $old_nam_blo_a)) { /* Improve because of TWICE */
+      $old_key_blo = array_retrieve_only_key_of_value_of_array_of_where ($old_nam_blo, $old_nam_blo_a, $here);
+      debug_n_check ($here , '$old_key_blo', $old_key_blo);
+      $new_nam_blo_a = $old_nam_blo_a;
+      $new_nam_blo_a[$old_key_blo] = $new_nam_blo;
+  }
+  else {
+      $new_nam_blo_a = $old_nam_blo_a;
+  }
   debug_n_check ($here , '$new_nam_blo_a', $new_nam_blo_a);
   exiting_from_function ($here);
 

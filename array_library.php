@@ -720,7 +720,6 @@ function lowercase_n_sort_of_string_by_key_array ($str_by_key_a) {
 
     # debug_n_check ($here, '$str_low_a', $str_low_a);
     exiting_from_function ($here);
-
     return $str_low_a;
 }
 
@@ -729,13 +728,10 @@ function list_remove_of_glue_of_element_of_list ($glu, $ele, $lis) {
     entering_in_function ($here . " ($glu, $ele, $lis)");
 
     $arr_a = explode ($glu, $lis);
-    debug_n_check ($here , '$arr_a', $arr_a);
     $del_a = array_remove_first_of_value_of_array ($ele, $arr_a);
     $lis_del = implode ($glu, $del_a);
 
-    debug_n_check ($here, '$lis_del', $lis_del);
     exiting_from_function ($here . " ($glu, $ele, $lis)");
-
     return $lis_del;
 }
 

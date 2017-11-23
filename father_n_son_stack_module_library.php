@@ -13,8 +13,10 @@ function father_n_son_stack_module_push_of_father_of_son ($nam_fat, $nam_son) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_fat, $nam_son)");
 
-  debug_n_check ($here, '$nam_fat', $nam_fat);
-  debug_n_check ($here, '$nam_son', $nam_son);
+  if (! isset ($_SESSION)) {
+      exiting_from_function ($here . ' $_SESSION not yet set');
+      return;
+  }
 
   if ( ! (link_is_ok_of_module_name ($nam_fat) ) ) {
       print_fatal_error ($here,
@@ -30,41 +32,36 @@ function father_n_son_stack_module_push_of_father_of_son ($nam_fat, $nam_son) {
       "Check");
   }
 
-  if ( $nam_son != $nam_fat) {
-      $duo = $nam_fat . ' -> ' . $nam_son;
-
-      $fat_n_son_h = $_SESSION['father_n_son_stack_module'];
-      if (!array_is_empty_of_array ($fat_n_son_h)) { 
-          array_push ($fat_n_son_h, $duo);
-          trace ($here, "push \$duo >$duo< in father_n_son_stack_module" );
-      }
-      
-      # debug ($here, '$fat_n_son_h', $fat_n_son_h);
+  if ( $nam_son == $nam_fat) {
+      $log_str = "Names for Father module and Son are the same >$nam_son<";
+      file_log_write ($here, $log_str);
   }
-  
-  exiting_from_function ($here);
+  else {
+      $fat_to_son = $nam_fat . ' -> ' . $nam_son;
+      session_hash_push_inplace_of_key_of_value ('father_n_son_stack_module', $fat_to_son);
+      $fat_n_son_mod_h = $_SESSION['father_n_son_stack_module'];
+      debug ($here, '$fat_n_son_mod_h', $fat_n_son_mod_h);
+  }
+
+  exiting_from_function ($here . " ($nam_fat, $nam_son)");
 
   return;
 
 }
 
-function father_n_son_stack_module_push_of_current_module ($nam_son) {
+function father_n_son_stack_module_push_of_current_module ($cur_mod) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_son)");
+  entering_in_function ($here . " ($cur_mod)");
 
-  debug_n_check ($here, '$nam_son', $nam_son);
+  $pre_mod = link_previous_module_name_make ();
 
-  $nam_fat = link_previous_module_name_make ();
+  father_n_son_stack_module_push_of_father_of_son ($pre_mod, $cur_mod);
 
-  father_n_son_stack_module_push_of_father_of_son ($nam_fat, $nam_son);
-
-  $fat_n_son_h = $_SESSION['father_n_son_stack_module'];
-
-  # debug ($here, '$fat_n_son_h', $fat_n_son_h);
-
-  array_push ($_SESSION['irp_stack'], $nam_son);
-  trace ($here, ">$nam_son< pushed in irp_stack built by >$nam_fat<");
-
+  if ( isset ($_SESSION['father_n_son_stack_module'])) {
+      $fat_n_son_mod_h = $_SESSION['father_n_son_stack_module'];
+      debug_n_check ($here, '$fat_n_son_mod_h', $fat_n_son_mod_h);
+  }
+  
   exiting_from_function ($here);
 
   return ;

@@ -42,8 +42,6 @@ function section_block_current_rename_link_to_return_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $script_to_return = 'entry_current_display_script.php';
-
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
   $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
 
@@ -54,9 +52,13 @@ function section_block_current_rename_link_to_return_build () {
 
   debug_n_check ("$here", '$la_Txt', $la_Txt);
 
+  $script_to_return = 'entry_current_display_script.php';
+  $get_key = 'entry_current_name';
+  $get_val = $nam_ent_cur;
+
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>' . "\n";
-  $html_str .= link_to_return_of_string_of_get_key_of_get_val_of_module_nameoffile ($la_Txt,'entry_name_array', $nam_ent_cur, $script_to_return) . "\n";
+  $html_str .= link_to_return_of_string_of_get_key_of_get_val_of_module_nameoffile ($la_Txt, $get_key, $get_val, $script_to_return) . "\n";
   $html_str .= '</center>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 

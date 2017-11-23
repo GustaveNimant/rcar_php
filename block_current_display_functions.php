@@ -89,11 +89,11 @@ function block_current_display_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__);
+  /* $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__); */
 
 /* getting DATA $get_val */
-  $get_key = 'block_current_name'; 
-  $nam_blo_cur = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here);
+  /* $get_key = 'block_current_name';  */
+  /* $nam_blo_cur = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here); */
 
   $html_str  = comment_entering_of_function_name ($here);
 

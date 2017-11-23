@@ -207,11 +207,6 @@ function exiting_from_function ($str_fun) {
 function entering_in_module ($str_mod) {
     $here = __FUNCTION__;
 
-    $eol = end_of_line ();
-    /* print ($here . '>' . $str_mod . '<' . $eol); */
-
-    $nam_mod = first_word_of_string ($str_mod);
-
     if ( 
         (isset ($_SESSION['parameters']['stack_function_called_array']))
         &&    
@@ -220,7 +215,11 @@ function entering_in_module ($str_mod) {
         (isset ($_SESSION['parameters']['stack_function_level_maximum']))
         
     ) {
-
+        $eol = end_of_line ();
+        /* print ($here . '>' . $str_mod . '<' . $eol); */
+        
+        $nam_mod = first_word_of_string ($str_mod);
+        
         $prev = end ($_SESSION['parameters']['stack_function_called_array']);
         
         $lev_cur = management_entering_level_of_name ($nam_mod) ;

@@ -71,11 +71,12 @@ function block_current_namenew_save_block_file_rename_build () {
       block_file_rename ($nam_ent_cur, $old_nam_blo_cur, $new_nam_blo_cur, $ext_blo_cur);
       $log_str = "Block file >$old_fno_blo_cur< has been renamed as >$new_nam_blo_cur<";
   }
-  else {
-      print_fatal_error ($here,
+  else {/* Improve because of TWICE */
+      print_warning ($here,
       "Block file $old_fno_blo_cur exist",
       "it does NOT",
       "Check");
+      $log_str = "Warning :Block file $old_fno_blo_cur does NOT exits";
   }
 
   exiting_from_function ($here . " with $log_str");
@@ -94,15 +95,14 @@ function block_current_namenew_save_surname_catalog_update_build () {
 
   $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);
 
-  $log_str = ''; /* output of functions below ??? */
   if (array_key_exists ($new_nam_blo_cur, $sur_by_nam_h)) {
       $old_sur = $sur_by_nam_h[$new_nam_blo_cur];
-      surname_by_name_hash_replace_n_write_of_name_of_surnamenew_of_current_array ($new_nam_blo_cur, $new_sur_blo_cur, $sur_by_nam_h);
-      $log_str .= "Block Surname >$old_sur< has been replaced by itself ? >$new_sur_blo_cur< in Surname_catalog";
+      surname_by_name_hash_replace_n_write_of_name_of_surnamenew_of_current_hash ($new_nam_blo_cur, $new_sur_blo_cur, $sur_by_nam_h);
+      $log_str = "Block Surname >$old_sur< has been replaced by >$new_sur_blo_cur< in Surname_catalog name >$new_nam_blo_cur<";
   }
   else {
       surname_by_name_hash_add_n_write_of_name_of_surname_of_current_hash ($new_nam_blo_cur, $new_sur_blo_cur, $sur_by_nam_h);
-      $log_str .= "Block Surname >$new_sur_blo_cur< has been added to Surname_catalog";
+      $log_str = "Block Surname >$new_sur_blo_cur< has been added to Surname_catalog at name >$new_nam_blo_cur<";
   }
   
   exiting_from_function ($here . " with $log_str");
@@ -192,7 +192,7 @@ function block_current_namenew_save_irp_path_clean () {
 /* Clean all Father Nodes and Store New as Current */
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order', $here); 
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_current_nameoffile_array', $here); 
-  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'GET_block_current_surnamenew', $here); 
+#  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'GET_block_current_surnamenew', $here); 
  
   exiting_from_function ($here);
   return;
@@ -202,11 +202,11 @@ function block_current_namenew_save_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__);
+  /* $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__); */
 
 /* getting DATA $get_val */
-  $get_key = 'block_current_surnamenew'; 
-  $new_sur_blo = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here);
+  /* $get_key = 'block_current_surnamenew';  */
+  /* $new_sur_blo = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here); */
 
   $log_str   = '';
 
@@ -234,7 +234,6 @@ function block_current_namenew_save_build () {
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   $html_str .= comment_exiting_of_function_name ($here);
-
   
   debug_n_check ($here, '$html_str', $html_str);
   exiting_from_function ($here);

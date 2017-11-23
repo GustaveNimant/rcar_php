@@ -33,8 +33,6 @@ function entry_list_display_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  print_get_hash_of_where ($here);
-
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_page_header', $here);
   $html_str .= '<br>' . "\n";

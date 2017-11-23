@@ -99,7 +99,7 @@ function surname_by_name_hash_add_n_write_of_name_of_surname_of_current_hash ($n
   return $new_sur_by_nam_h;
 }
 
-function surname_by_name_hash_replace_n_write_of_name_of_surnamenew_of_current_array ($nam, $new_sur_nam, $sur_by_nam_h) {
+function surname_by_name_hash_replace_n_write_of_name_of_surnamenew_of_current_hash ($nam, $new_sur_nam, $sur_by_nam_h) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam, $new_sur_nam, \$sur_by_nam_h [...])");
 
@@ -128,8 +128,7 @@ function surname_by_name_hash_replace_n_write_of_name_of_surnamenew_of_current_a
 
   irp_store_force ('surname_by_name_hash', $sur_by_nam_h, 'entry_current_display');
 
-  exiting_from_function ($here);
-
+  exiting_from_function ($here . " ($nam, $new_sur_nam, \$sur_by_nam_h [...])");
   return;
 }
 

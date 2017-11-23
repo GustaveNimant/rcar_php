@@ -58,11 +58,11 @@ function entry_current_display_build (){
     $here = __FUNCTION__;
     entering_in_function ($here);
     
-    $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__);
+/*     $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__); */
 
-/* getting DATA $get_val */
-    $get_key = 'entry_current_name'; 
-    $get_val = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here);
+/* /\* creating DATA $get_val *\/ */
+/*     $get_key = 'entry_current_name';  */
+/*     $get_val = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here); */
 
     $html_str  = comment_entering_of_function_name ($here);
     
@@ -80,9 +80,10 @@ function entry_current_display_build (){
     $html_str .= irp_provide ('section_block_current_list_reorder', $here);
     $html_str .= '<br>' . "\n";
     
+
     $html_str .= irp_provide ('section_block_current_list_display', $here);
     $html_str .= '<br>' . "\n";
-    
+
     $html_str .= '<center>' . "\n";
     $html_str .= irp_provide ('entry_current_link_to_return', $here);
     $html_str .= '</center>' . "\n";

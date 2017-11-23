@@ -71,9 +71,10 @@ function block_name_list_order_deletion_build () {
   $nam_blo_cur = irp_provide ('block_current_name', $here);
   debug_n_check ($here , '$nam_blo_cur', $nam_blo_cur);
 
-  $glue = $_SESSION['parameters']['glue'];
   $nam_blo_lis_cur = irp_provide ('block_name_list_order_current', $here);
   debug_n_check ($here , '$nam_blo_lis_cur', $nam_blo_lis_cur);
+
+  $glue = $_SESSION['parameters']['glue'];
 
   $nam_blo_lis_del = list_remove_of_glue_of_element_of_list ($glue, $nam_blo_cur, $nam_blo_lis_cur);
   string_check_is_empty_of_what_of_where_of_string ('$nam_blo_lis_del', $here, $nam_blo_lis_del);

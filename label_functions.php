@@ -35,7 +35,7 @@ function label_html_href_make_of_label ($nam_lab) {
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<span id="menu-header-links">' . "\n";
-  $html_str .= ' <a href="' . $url_rel . '" title="' . $bub . '">';
+  $html_str .= '<a href="' . $url_rel . '" title="' . $bub . '">';
   $html_str .= $tit;
   $html_str .= '</a>' . "\n";
   $html_str .= '</span>' . "\n";

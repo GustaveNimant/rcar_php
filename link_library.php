@@ -49,6 +49,8 @@ function link_previous_module_name_make () {
       
       if (string_is_empty_of_string ($url_rel)) {
           $pre_mod = 'top.php';
+          $log_str = "Previous module URL is empty set as TOP";
+          file_log_write ($here, $log_str);
       }
       else {
           $pre_mod = link_module_name_of_url_relative ($url_rel);
@@ -59,6 +61,8 @@ function link_previous_module_name_make () {
   }  
   else {    
       $pre_mod = 'top.php';
+      $log_str = "Previous module URL is empty set as TOP";
+      file_log_write ($here, $log_str);
   }
   
   exiting_from_function ($here . " with \$pre_mod >$pre_mod<");

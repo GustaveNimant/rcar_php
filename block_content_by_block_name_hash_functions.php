@@ -1,7 +1,5 @@
 <?php
 
-require_once "array_library.php";
-require_once "file_library.php";
 require_once "irp_library.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);

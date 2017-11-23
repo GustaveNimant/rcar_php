@@ -92,17 +92,21 @@ $_SESSION['creation_step_count'] = 0;
 $_SESSION['creation_step'] = array () ; /* of any entity or page */
 $_SESSION['data_creation_function'] = array ();
 
+$_SESSION['get_value_by_get_key_hash'] = array ();
+
 /* $_SESSION['module_wheretoact_nameoffile']['entry_current_name'] = $nam_mod_act; */
 /* $_SESSION['module_wheretoact_nameoffile'][$nam_sel] = $nam_mod_act; */
 $_SESSION['module_wheretoact_nameoffile'] = array (); 
 
 $_SESSION['module_wheretoget_value_nameoffile'] = array ();
+$_SESSION['link_to_return'] = array ();
+
 
 $_SESSION['removed_irp_keys_array'] = array ();
 $_SESSION['father_n_son_stack_entity'] = array ();
 $_SESSION['father_n_son_stack_module'] = array ();
 $_SESSION['father_n_son_stack_script'] = array ();
-$_SESSION['get_variable_register'] = array ();
+
 
 $_SESSION['irp_register'] = array ();
 $_SESSION['irp_stack'] = array ();
@@ -110,10 +114,6 @@ $_SESSION['irp_stack'] = array ();
 $_SESSION['item_information_metadata_en_by_item_name_array'] = array ();
 include "language_translate_register.php";
 $_SESSION['language_translate_register'] = $language_translate_register;
-
-$_SESSION['link_to_return'] = array ();
-
-$_SESSION['top_key_in_get_hash_register'] = array ();
 
 $_SESSION['parameters']['absolute_path_arce'] = '/keep/sources/rcar';
 $_SESSION['parameters']['absolute_path_server'] = '/keep/sources/rcar/server';

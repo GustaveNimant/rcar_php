@@ -8,10 +8,10 @@ function script_name_of_script_fullnameoffile ($fno) {
     return $nam_scr;
 };
 
-function script_name_of_script_nameoffile ($nof_mod) {
+function script_name_of_script_nameoffile ($nof_scr) {
     $here = __FUNCTION__;    
-    $ind_php = stripos ($nof_mod, '.php');
-    $nam_scr = basename (substr ($nof_mod, 0, $ind_php));
+    $ind_php = stripos ($nof_scr, '.php');
+    $nam_scr = basename (substr ($nof_scr, 0, $ind_php));
     
     return $nam_scr;
 }
@@ -19,6 +19,14 @@ function script_name_of_script_nameoffile ($nof_mod) {
 function entity_name_of_script_name ($nam_scr) {
     $here = __FUNCTION__;    
     $nam_entity = str_replace ('_script', '', $nam_scr);
+    
+    return $nam_entity;
+}
+
+function entity_name_of_script_nameoffile ($nof_scr) {
+    $here = __FUNCTION__;    
+    $nam_scr = script_name_of_script_nameoffile ($nof_scr);
+    $nam_entity = entity_name_of_script_name ($nam_scr);
     
     return $nam_entity;
 }

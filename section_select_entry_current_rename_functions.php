@@ -41,8 +41,8 @@ function subsection_select_entry_current_rename_menuselect_entry_build () { /* m
 
         if ( ! isset ($_SESSION['is_label_entity_name'][$nam_ent])) {
             
-            if (isset ($_SESSION['top_key_in_get_hash_register']['entry_current_name'] ) ) {
-                $ent_sel = $_SESSION['top_key_in_get_hash_register']['entry_current_name'];
+            if (isset ($_SESSION['get_value_by_get_key_hash']['entry_current_name'] ) ) {
+                $ent_sel = $_SESSION['get_value_by_get_key_hash']['entry_current_name'];
                 if ($ent_sel == $nam_ent) {
                     $html_str .= '  <option value="' . $nam_ent . '" selected> ' . $sur_ent . '</option>' . "\n";
                 }

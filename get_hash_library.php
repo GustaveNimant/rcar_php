@@ -83,8 +83,7 @@ function get_hash_retrieve_value_of_get_key_of_where ($get_key, $where) {
       
       check_is_key_unique_in_array ($get_key, $_GET);
 
-      $_SESSION['top_key_in_get_hash_register'][$get_key] = $get_val;
-      $_SESSION['get_variable_register'][$get_key] = $get_val;
+      $_SESSION['get_value_by_get_key_hash'][$get_key] = $get_val;
 
       $_SESSION['data_creation_function'][$get_key] = $where;
       $_SESSION['creation_step_count'] = $_SESSION['creation_step_count'] + 1;

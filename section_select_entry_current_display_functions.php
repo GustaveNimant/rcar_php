@@ -42,8 +42,8 @@ function subsection_select_entry_current_display_menuselect_entry_build () { /* 
     foreach ($nam_ent_a as $nam_ent) {
         $sur_ent = surname_of_name_of_surname_by_name_hash ($nam_ent, $sur_by_nam_h);
         
-        if (isset ($_SESSION['top_key_in_get_hash_register']['entry_current_name'] ) ) {
-            $ent_sel = $_SESSION['top_key_in_get_hash_register']['entry_current_name'];
+        if (isset ($_SESSION['get_value_by_get_key_hash']['entry_current_name'] ) ) {
+            $ent_sel = $_SESSION['get_value_by_get_key_hash']['entry_current_name'];
             if ($ent_sel == $nam_ent) {
                 $html_str .= '  <option value="' . $nam_ent . '" selected> ' . $sur_ent . '</option>' . "\n";
             }
@@ -69,14 +69,14 @@ function subsection_select_entry_current_display_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
     
-    $nof_mod_act = 'entry_current_display_script.php';
-    $nam_mod_act = module_name_of_module_nameoffile ($nof_mod_act);
+    $script_action = 'entry_current_display_script.php';
+    $entity = entity_name_of_script_nameoffile ($script_action);
 
     $get_key_sel = 'entry_current_name';
-    $_SESSION['module_wheretoact_nameoffile']['entry_current_name'] = $nam_mod_act;
+    $_SESSION['get_key_by_script_name'][$entity] = $get_key_sel;
 
     $html_str  = comment_entering_of_function_name ($here); 
-    $html_str .= '<form action="' . $nof_mod_act .'" method="get"> ' . "\n";
+    $html_str .= '<form action="' . $script_action .'" method="get"> ' . "\n";
     $html_str .= '<br>' .  "\n";
     $html_str .= irp_provide ('subsection_select_entry_current_display_menuselect_entry', $here);
     $html_str .= inputtypesubmit_of_en_action_name ('select');

@@ -56,8 +56,8 @@ function tools_display ($what) {
         print_html_array ($here, $what, $def_var_a);
         break;
 
-    case 'get_variable_register' :
-        $ses_reg_a = $_SESSION['get_variable_register'];
+    case 'get_value_by_get_key_hash' :
+        $ses_reg_a = $_SESSION['get_value_by_get_key_hash'];
         print_html_array ($here, $what, $ses_reg_a);
         break;
 
@@ -104,8 +104,8 @@ function tools_display ($what) {
         print_html_array ($here, $what, $irp_sta_a);
         break;
         
-    case 'top_key_in_get_hash_register' :
-        $ses_reg_a = $_SESSION['top_key_in_get_hash_register'];
+    case 'get_value_by_get_key_hash' :
+        $ses_reg_a = $_SESSION['get_value_by_get_key_hash'];
         print_html_array ($here, $what, $ses_reg_a);
         break;
         
@@ -326,8 +326,8 @@ function tools_write ($what) {
         file_array_write ($fno, $arr_a);
         break;
         
-    case 'get_variable_register' :
-        $arr_a = $_SESSION['get_variable_register'];
+    case 'get_value_by_get_key_hash' :
+        $arr_a = $_SESSION['get_value_by_get_key_hash'];
         file_array_write ($fno, $arr_a);
         break;
 
@@ -364,8 +364,8 @@ function tools_write ($what) {
         file_array_write ($fno, $arr_a);
         break;
         
-    case 'top_key_in_get_hash_register' :
-        $arr_a = $_SESSION['top_key_in_get_hash_register'];
+    case 'get_value_by_get_key_hash' :
+        $arr_a = $_SESSION['get_value_by_get_key_hash'];
         file_array_write ($fno, $arr_a);
         break;
         

@@ -6,53 +6,77 @@ $Documentation[$module]['irp_stack'] = "stacks all \$irp_key. When retrieved (\$
 
 function irp_father_array_of_irp_key_of_father_n_son_hash ($irp_key, $fat_n_son_h) {
   $here = __FUNCTION__;
+#  entering_in_function ($here . " ($irp_key)");
   $eol = end_of_line ();
+
+#  debug ($here,'$fat_n_son_h', $fat_n_son_h);
 
   $son = $irp_key;
   $father_a = array ();
 
   foreach ($fat_n_son_h as $idx => $line) {
+
+#      debug ($here,'$line', $line);
+
       $son_cur = string_last_word_of_string ($line);
       $fat = string_word_of_ordinal_of_string (1, $line);
+#      debug_long ($here,'$son_cur >' . $son_cur . '< $fat >' . $fat .'<');
 
       if ($son_cur == $irp_key) {
           if ( ! in_array ($fat, $father_a)){
               array_push ($father_a, $fat);
+#              debug_long ($here,'$fat >' . $fat .'< pushed');
           }
       }
   }
 
+  if (array_is_empty_of_array ($father_a)) {
+      debug ($here, '$fat_n_son_h', $fat_n_son_h);
+      print_warning ($here,
+      "at least one father exists for \$irp_key >$irp_key<",
+      "NONE",
+      "Check \$irp_key name and \$fat_n_son_h hash upper");
+  }
+  
+#  debug ($here,'$father_a', $father_a);
+#  exiting_from_function ($here . " ($irp_key)");
   return $father_a;
 }
 
 function irp_path_of_bottom_key_of_step_of_top_key_of_father_n_son_hash ($ste, $bot_key, $top_key, $fat_n_son_h) {
     $here = __FUNCTION__;
+#    entering_in_function ($here . " ($ste, $bot_key, $top_key)");
+
     $eol = end_of_line ();
+
+#    debug ($here,'$fat_n_son_h', $fat_n_son_h);
     
     $max_ste = $_SESSION['parameters']['irp_path_step_number_maximum'];
     $fat_a = irp_father_array_of_irp_key_of_father_n_son_hash ($bot_key, $fat_n_son_h);
     
+#    debug ($here,'$fat_a', $fat_a);
     $cur_fat_a = $fat_a;
     
     foreach ($fat_a as $idx => $fat) {
 
+#        debug ($here,'$fat', $fat);
         if ($fat == $top_key) {
-#            print ('done' . $eol);
+#            debug_long ($here, 'done' . $eol);
         }
         else { 
             $ste = $ste + 1;
-#            print ('step # ' . $ste . $eol);
+#            debug_long ($here, 'step # ' . $ste . ' $fat ' . $fat . $eol);
             if ($ste < $max_ste ) {
                 $bot_key = $fat;
                 $inc_fat_a = irp_path_of_bottom_key_of_step_of_top_key_of_father_n_son_hash ($ste, $bot_key, $top_key, $fat_n_son_h);
                 if (array_is_empty_of_array ($inc_fat_a) ) {
- #                   print ('reached empty increment array at step # ' . $ste . $eol);
+#                    debug_long ($here, 'reached empty increment array at step # ' . $ste . $eol);
                     break;
                 }
                 else {
-#                    print_html_array ($here, '$inc_fat_a', $inc_fat_a);
+#                    debug ($here, '$inc_fat_a', $inc_fat_a);
                     $cur_fat_a = array_merge_unique_of_array_of_array ($cur_fat_a, $inc_fat_a);
-#                    print_html_array ($here, '$cur_fat_a', $cur_fat_a);
+#                    debug ($here, '$cur_fat_a', $cur_fat_a);
                 }
             }
             else {
@@ -63,6 +87,9 @@ function irp_path_of_bottom_key_of_step_of_top_key_of_father_n_son_hash ($ste, $
             }
         }
     }
+
+#    debug ($here,'$cur_fat_a', $cur_fat_a);
+#    exiting_from_function ($here . " ($ste, $bot_key, $top_key)");
     
     return $cur_fat_a;
 };
@@ -92,7 +119,7 @@ function irp_path_clean_register_of_top_key_of_bottom_key_of_where ($top_key, $b
   if ( is_array ($_SESSION['irp_register']) ) {  
       $irp_reg_a = $_SESSION['irp_register'];
       $irp_key_a = array_keys ($irp_reg_a);
-      debug ($here, 'saving $irp_key_a', $irp_key_a);
+      debug ($here, 'saved $irp_key_a', $irp_key_a);
   }
 
   $log_str = "irp_path from >$bot_key< to >$top_key< have been removed from irp_register from $where";

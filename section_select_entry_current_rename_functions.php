@@ -70,6 +70,8 @@ function subsection_select_entry_current_rename_build () {
   entering_in_function ($here);
 
   $script_action = 'entry_current_rename_script.php';
+  $entity = entity_name_of_script_nameoffile ($script_action);
+  $_SESSION['get_key_by_script_name'][$entity] = 'entry_current_name';
 
   $html_str  = comment_entering_of_function_name ($here); 
   $html_str .= '<form action="' . $script_action .'" method="get"> ' . "\n";

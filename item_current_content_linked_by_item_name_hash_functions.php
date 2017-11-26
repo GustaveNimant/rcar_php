@@ -61,7 +61,7 @@ function is_first_substring_of_substring_off_string ($sub_str, $str) {
         $boo = (substr ($str, 0, $sub_len +1) == $sub_str . ' ');
     }
 
-    print_long ($here, "surname $sub_str sub_sentence $str \$boo >$boo<");
+    debug_long ($here, "surname $sub_str sub_sentence $str \$boo >$boo<");
     /* exiting_from_function ($here); */
 
     return $boo; 
@@ -151,7 +151,7 @@ function sub_sentence_original_of_word_current_position_of_full_sentence_origina
     }
 
     $wor_ori_cur = $wor_ori_a [$wor_pos];
-    print_long ($here, '$wor_pos >' . $wor_pos . '< $wor_ori_cur >' . $wor_ori_cur . '<');
+    debug_long ($here, '$wor_pos >' . $wor_pos . '< $wor_ori_cur >' . $wor_ori_cur . '<');
 
     if ( string_is_empty_of_string ($wor_ori_cur)) {
         fatal_error (
@@ -222,7 +222,7 @@ function sub_sentence_original_matched_array_of_surname_by_name_hash_of_entry_na
     while ($wor_pos <= $max_pos) {
         
         $wor_ori_cur = $wor_ori_a[$wor_pos]; 
-        print_long ($here, 'while $wor_pos >' . $wor_pos . '< $wor_ori_cur >' . $wor_ori_cur . '<');
+        debug_long ($here, 'while $wor_pos >' . $wor_pos . '< $wor_ori_cur >' . $wor_ori_cur . '<');
         
         $len_cur = strlen ($wor_ori_cur);
         $sub_sen_ori = sub_sentence_original_of_word_current_position_of_full_sentence_original ($wor_pos, $sen_ori);
@@ -239,13 +239,13 @@ function sub_sentence_original_matched_array_of_surname_by_name_hash_of_entry_na
 
             $wor_sub_ori_a = explode (' ', $sub_sen_ori_mat);
             $wor_pos = $wor_pos + count ($wor_sub_ori_a);
-            print_long ($here, 'if   $wor_pos >' . $wor_pos . '< $sen_pos >' . $sen_pos . '<');
+            debug_long ($here, 'if   $wor_pos >' . $wor_pos . '< $sen_pos >' . $sen_pos . '<');
         }
         else {
             $wor_pos = $wor_pos + 1;
             $sub_sen_ori_a[$sen_pos] = $wor_ori_cur;
             $sen_pos = $sen_pos + 1;            
-            print_long ($here, 'else $wor_pos >' . $wor_pos . '< $sen_pos >' . $sen_pos . '<');
+            debug_long ($here, 'else $wor_pos >' . $wor_pos . '< $sen_pos >' . $sen_pos . '<');
         }
 
     }

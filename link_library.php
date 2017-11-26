@@ -45,7 +45,7 @@ function link_previous_module_name_make () {
   if (isset ($_SERVER["HTTP_REFERER"]) ) {
       $url_rel = $_SERVER["HTTP_REFERER"];
       
-      print_long ($here, '$url_rel >' . $url_rel . '<');
+      debug_long ($here, '$url_rel >' . $url_rel . '<');
       
       if (string_is_empty_of_string ($url_rel)) {
           $pre_mod = 'top.php';

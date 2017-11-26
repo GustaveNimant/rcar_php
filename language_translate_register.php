@@ -1839,6 +1839,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ),
 
+    'page for renaming the property' =>
+    array (
+        'fr' => 'page de renommage de la propri&eacute;t&eacute;',
+        'it' => '???',
+    ),
+    
     'page for renaming the question' =>
     array (
         'fr' => 'page de renommage de la question',

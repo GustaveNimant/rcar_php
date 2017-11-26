@@ -540,7 +540,7 @@ function file_rename_of_old_of_new_of_where ($old_nof, $new_nof, $where) {
         "Check");
     }
     
-    $log_str = "file >$old_nof< has been renamed as >$new_nof<";
+    $log_str = "file >$old_nof< has been renamed as >$new_nof< in $where";
     file_log_write ($here, $log_str);
  
     exiting_from_function ($here . ' with file >' . $old_nof . ' renamed as '. $new_nof);

@@ -155,16 +155,22 @@ function entry_current_namenew_save_link_to_return_build () {
   return $html_str;
 }
 
+function entry_current_namenew_save_irp_path_clean () {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+/* Clean all Father Nodes and Store New as Current */
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_entry_fullnameofdirectory_array', $here); 
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_surname_catalog_fullnameoffile_array', $here); 
+ 
+  exiting_from_function ($here);
+  return;
+}
+
 function entry_current_namenew_save_build (){
     $here = __FUNCTION__;
     entering_in_function ($here);
 
-  $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__);
-
-/* getting DATA $get_val */
-    $get_key = 'entry_current_surnamenew';
-    $new_sur_ent_cur = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here); 
-    
     $html_str  = comment_entering_of_function_name ($here);
     $html_str .= irp_provide ('pervasive_page_header', $here);
     $html_str .= '<br><br>' . "\n";
@@ -174,8 +180,11 @@ function entry_current_namenew_save_build (){
     
     $html_str .= irp_provide ('entry_current_namenew_save_entry_subdirectory_rename', $here);
     $html_str .= '<br>' . "\n";
+
     $html_str .= irp_provide ('entry_current_namenew_save_surname_catalog_update', $here);
     $html_str .= '<br><br>' . "\n";
+
+    entry_current_namenew_save_irp_path_clean (); /* Improve */
 
     $html_str .= irp_provide ('git_command_n_commit_html', $here);
     $html_str .= '<br><br>' . "\n";

@@ -106,8 +106,14 @@ function entry_current_namenew_form_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
+  $script_action = 'entry_current_namenew_save_script.php';
+  $entity = entity_name_of_script_nameoffile ($script_action);
+
+  $get_key_sel = 'entry_current_surnamenew';
+  $_SESSION['get_key_by_script_name'][$entity] = $get_key_sel;
+
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<form action="entry_current_namenew_save_script.php" method="get">' . "\n";
+  $html_str .= '<form action="' . $script_action .'" method="get">' . "\n";
 
   $html_str .= irp_provide ('entry_current_namenew_form_surnamenew_titled_gather', $here);
   $html_str .= '<br><br>' . "\n";

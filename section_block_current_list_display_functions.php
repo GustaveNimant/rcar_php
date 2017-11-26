@@ -7,9 +7,9 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 
 entering_in_module ($module);
 
-function block_current_display_and_link_of_surname_by_name_hash_of_entry_name_of_block_current_name_of_la_eol ($sur_by_nam_h, $nam_ent, $nam_blo_cur, $la_eol) {
+function block_current_display_and_link_of_surname_by_name_hash_of_block_current_name_of_la_eol ($sur_by_nam_h, $nam_blo_cur, $la_eol) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_ent, $nam_blo_cur");
+  entering_in_function ($here . " ($nam_blo_cur");
 
   $sur_blo = surname_of_name_of_surname_by_name_hash ($nam_blo_cur, $sur_by_nam_h);
   $sur_blo = string_html_capitalized_of_string ($sur_blo);
@@ -18,11 +18,16 @@ function block_current_display_and_link_of_surname_by_name_hash_of_entry_name_of
 
   $la_tit = language_translate_of_en_string ($en_tit);
 
+  $script_action = 'block_current_display_script.php';
+  $entity = entity_name_of_script_nameoffile ($script_action);
+
+  $get_key_sel = 'block_current_name';
+  $_SESSION['get_key_by_script_name'][$entity] = $get_key_sel;
+
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<br> '; /* keep */
-  $html_str .= '<a href="block_current_display_script.php';
-  $html_str .= '?entry_current_name=' . $nam_ent;
-  $html_str .= '&block_current_name=' . $nam_blo_cur . '" ';
+  $html_str .= '<a href="' . $script_action;
+  $html_str .= '?block_current_name=' . $nam_blo_cur . '" ';
   $html_str .= 'title="' . $la_tit . '"';
   $html_str .= '>';
   $html_str .= '<b> ' . $sur_blo . $la_eol . '</b> ';
@@ -83,7 +88,7 @@ function section_block_current_list_display_display_build () {
             $con_blo = array_retrieve_value_of_key_of_array ($nam_blo, $con_blo_by_nam_blo_h);
             $con_ite_cur = item_current_content_of_block_current_content ($con_blo);
             
-            $html_str .= block_current_display_and_link_of_surname_by_name_hash_of_entry_name_of_block_current_name_of_la_eol ($sur_by_nam_h, $nam_ent_cur, $nam_blo, $la_eol);
+            $html_str .= block_current_display_and_link_of_surname_by_name_hash_of_block_current_name_of_la_eol ($sur_by_nam_h, $nam_blo, $la_eol);
             $html_str .= '<br>';  
             $html_str .= '&nbsp;&nbsp;&nbsp;<i>' . $con_ite_cur . '</i>';
             $html_str .= '<br>'; 

@@ -11,7 +11,7 @@ function pretty_of_key_of_string ($key, $str) {
     print_d ( "[" . $key . "] = ". $value . "\n");
 };
 
-function print_long ($here, $str) {
+function debug_long ($here, $str) {
     if ( (isset ($_SESSION['is_debug_active']) 
     && $_SESSION['is_debug_active'] > 0)  ) {
         print_d ($here . ' ' . $str . "\n"); 

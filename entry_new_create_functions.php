@@ -103,7 +103,7 @@ function entry_new_create_build () {
   $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__);
   $nam_ent_new = irp_provide ('entry_new_name_from_entry_new_surname', $here);
 
-  if (entry_is_subdirectory_of_entry_name ($nam_ent_new) ) {
+  if (entry_is_subdirectory_of_entry_name ($nam_ent_new) ) { /* Improve */
       $en_mes_1 = "the entry";
       $en_mes_2 = "already exists";
       $la_mes_1 = language_translate_of_en_string ($en_mes_1); 

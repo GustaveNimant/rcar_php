@@ -1,8 +1,0 @@
-....|....|... entering  in function section_block_current_list_reorder_build
-....|....|.... entering  in function irp_provide (block_name_array, section_block_current_list_reorder_build)
-....|....|....| entering  in function irp_provide_nondata (block_name_array, section_block_current_list_reorder_build)
-....|....|....|. entering  in function irp_build_n_store (block_name_array, section_block_current_list_reorder)
-....|....|....|.. entering  in function irp_build (block_name_array, section_block_current_list_reorder)
-....|....|....|... entering  in function block_name_array_build
-
-....|....|....|....|.. exiting from function section_block_current_list_reorder_build

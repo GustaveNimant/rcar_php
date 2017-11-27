@@ -75,6 +75,8 @@ pervasive_html_final_section
 what is 'entry_create_save' ? 'entry_create_save_page' ?
 
 # $_GET key is never an action
+# NEVER save an action : always save en entity value.
+
 # an entity has an history next, current, previous
 # an item is never new, only blocks may be created
 # function_name [module_]section_name_build b
@@ -102,5 +104,8 @@ what is 'entry_create_save' ? 'entry_create_save_page' ?
   block_current_surname => GET -> name_of_surname -> block_current_name => irp_store -> surname_of_name -> block_current_surname
   block_current_name => GET -> irp_store -> surname_of_name -> block_current_surname
 
-# NEVER save an action : always save en entity value.
 # save an entity modified : write on disk. Remove all fathers. Let irp do the job from disk.
+
+# two kinds of scripts :
+  bare 
+  with_get_key_by_script_name_and_get_data

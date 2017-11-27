@@ -111,7 +111,7 @@ function irp_path_clean_register_of_top_key_of_bottom_key_of_where ($top_key, $b
       foreach ($irp_pat_a as $idx => $irp_key) {
 #          debug ($here, '$_SESSION["irp_register"]',$_SESSION['irp_register']);
           unset ($_SESSION['irp_register'][$irp_key]);
-          $log_str = "irp_key >$irp_key< has been removed from irp_register";
+          $log_str = "irp_key >$irp_key< has been removed off irp_register from $where";
           file_log_write ($here, $log_str);
       }
   }
@@ -122,7 +122,7 @@ function irp_path_clean_register_of_top_key_of_bottom_key_of_where ($top_key, $b
       debug ($here, 'saved $irp_key_a', $irp_key_a);
   }
 
-  $log_str = "irp_path from >$bot_key< to >$top_key< have been removed from irp_register from $where";
+  $log_str = "all irp_path from >$bot_key< to >$top_key< have been removed off irp_register from $where";
   file_log_write ($here, $log_str);
 
   exiting_from_function ($here);

@@ -535,7 +535,7 @@ function irp_provide_nondata ($irp_key, $caller) {
         }
     }
     else { /* not stored */
-        $log_str = "irp_key >$irp_key< not stored calling irp_build_n_store";
+        $log_str = "irp_key >$irp_key< not stored calling irp_build_n_store from $caller";
         file_log_write ($here, $log_str);
 
         $irp_val = irp_build_n_store ($irp_key, $irp_fat);
@@ -563,7 +563,7 @@ function irp_provide_data ($irp_key, $caller) {
         $nam_fat = preg_replace ('/_build/', '', $caller); 
         father_n_son_stack_entity_push_of_father_of_son ($nam_fat, $nam_son); /* may be not useful */
 
-        $log_str = "DATA irp_key >$irp_key< is stored and retrieved with value >$irp_val<";
+        $log_str = "DATA irp_key >$irp_key< is stored and retrieved with value >$irp_val< from $caller";
         file_log_write ($here, $log_str);
     }
     else { /* not stored */

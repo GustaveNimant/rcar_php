@@ -79,8 +79,8 @@ function check_is_block_new_build () {  /* Improve return $html_str. No need of 
   }
   catch (Exception $e) {  
       $mes = $e->getMessage();
-      $nam_ent = irp_provide ('entry_current_name', $here);
-      if ($mes = "Catalog is empty in function block_new_name_catalog_build for Entry name $nam_ent") {
+      $nam_ent_cur = irp_provide ('entry_current_name', $here);
+      if ($mes = "Catalog is empty in function block_new_name_catalog_build for Entry name $nam_ent_cur") {
           $log_str .= 'block_new_name_catalog is empty';
       }
   }
@@ -138,7 +138,7 @@ function block_new_surname_update_build (){  /* improve return $html_str */
   debug_n_check ($here , '$sur_by_nam_h', $sur_by_nam_h);
 
   $fno_sur_cat = $_SESSION['parameters']['absolute_path_server_surname_catalog'];
-  $log_str .= "block_new_surname >$sur_blo_new< has been added to $fno_sur_cat";
+  $log_str = "block_new_surname >$sur_blo_new< has been added to $fno_sur_cat";
 
   exiting_from_function ($here);
   return $log_str;
@@ -199,7 +199,7 @@ function block_new_create_save_surname_catalog_actualize_build () {
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
   $sur_blo_new = irp_provide ('block_new_surname', $here);
 
-  $log_str = irp_provide ('block_new_surname_update', $here);
+  $log_str     = irp_provide ('block_new_surname_update', $here);
   file_log_write ($here, $log_str);
 
   $nam_blo_new = irp_provide ('block_new_name_from_block_new_surname', $here);
@@ -225,17 +225,20 @@ function block_new_create_save_surname_catalog_actualize_build () {
 }
 
 function block_new_create_save_link_to_return_build () {
-  $here = __function__;
+  $here = __FUNCTION__;
   entering_in_function ($here);
+  
+  $script_to_return ='entry_current_display_script.php';
 
-  $script_to_return = 'entry_current_display_script.php';
-
+  $nam_ent_cur = irp_provide ('entry_current_name', $here);
+  $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
+  
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>' . "\n";
-  $html_str .= link_to_return_of_return_module_nameoffile ($script_to_return);
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent_cur, $sur_ent_cur, $script_to_return); 
   $html_str .= '</center>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
-
+  
   debug_n_check ($here , '$html_str',  $html_str);
   exiting_from_function ($here);
 

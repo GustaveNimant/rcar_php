@@ -37,8 +37,19 @@ function section_block_new_create_build () {  /* Generalize */
   $here = __FUNCTION__;
   entering_in_function ($here);
 
+  $module = module_name_of_module_nameoffile (__FILE__);
+
+  $irp_fat = str_replace('_build', '', $here);
+  father_n_son_stack_entity_push_of_father_of_son ($irp_fat, "BUTTON_$irp_fat");
+
+  $script_action = 'block_new_create_script.php';
+  $entity = entity_name_of_script_nameoffile ($script_action);
+
+  $get_key_sel = 'block_new_surname';
+  $_SESSION['get_key_by_script_name'][$entity] = $get_key_sel;
+
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<form action="block_new_create_script.php" method="get"> ' . "\n";
+  $html_str .= '<form action="' . $script_action . '" method="get"> ' . "\n";
   $html_str .= irp_provide ('section_block_new_create_title', $here);
   $html_str .= inputtypesubmit_of_en_action_name ('create');
   $html_str .= '</form> ' .  "\n";

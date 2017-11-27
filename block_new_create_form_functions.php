@@ -37,6 +37,12 @@ function block_new_create_form_build (){
   entering_in_function ($here);
 
   $script_action = 'block_new_create_save_script.php';
+  $entity = entity_name_of_script_nameoffile ($script_action);
+
+  $get_key_sel = 'block_new_surname';
+  $_SESSION['get_key_by_script_name'][$entity] = $get_key_sel;
+
+  print_html_array ($here, '$_GET', $_GET);
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form action="' . $script_action . '" method="get">' . "\n";

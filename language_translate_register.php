@@ -1742,6 +1742,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation d&rsquo;une nouvelle question pour l&rsquo;entr&eacute;e',
         'it' => '???',
     ), 
+
+    'page for displaying the result of creation of the new entry' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation de la nouvelle entr&eacute;e',
+        'it' => '???',
+    ),
     
     'page for displaying the result of the renaming of the question' =>
     array (

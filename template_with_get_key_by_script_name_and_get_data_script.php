@@ -8,6 +8,7 @@ $script = $entity . '_script';
 
 $Documentation[$script]['what is it'] = "it is ...";
 $Documentation[$script]['what for'] = "to ...";
+$Documentation[$script]['how it is done'] = "cp template_with_get_key_by_script_name_and_get_data_script.php";
 
 entering_in_script ($script);
 

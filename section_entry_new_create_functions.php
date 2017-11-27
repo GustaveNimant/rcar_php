@@ -34,8 +34,14 @@ function subsection_entry_new_create_build () {
   $irp_fat = str_replace('_build', '', $here);
   father_n_son_stack_entity_push_of_father_of_son ($irp_fat, "BUTTON_$irp_fat");
 
+  $script_action = 'entry_new_create_script.php';
+  $entity = entity_name_of_script_nameoffile ($script_action);
+
+  $get_key_sel = 'entry_new_surname';
+  $_SESSION['get_key_by_script_name'][$entity] = $get_key_sel;
+
   $html_str  = comment_entering_of_function_name ($here); 
-  $html_str .= '<form action="entry_new_create_script.php" method="get"> ' . "\n";
+  $html_str .= '<form action="' . $script_action . '" method="get"> ' . "\n";
   $html_str .= '<br>' . "\n";
   $html_str .= '<input type="text" size="20" name="entry_new_surname" value=""/>' .  "\n";
   $html_str .= inputtypesubmit_of_en_action_name ('create');

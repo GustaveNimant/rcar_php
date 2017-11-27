@@ -13,7 +13,8 @@ function father_n_son_stack_module_push_of_father_of_son ($nam_fat, $nam_son) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_fat, $nam_son)");
 
-  if (! isset ($_SESSION)) {
+  if ((! isset ($_SESSION))  
+  || (! isset ($_SESSION['father_n_son_stack_module'])) ) {
       exiting_from_function ($here . ' $_SESSION not yet set');
       return;
   }

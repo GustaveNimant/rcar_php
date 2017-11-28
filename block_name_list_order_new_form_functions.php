@@ -43,7 +43,7 @@ function block_name_list_order_new_form_blocks_display_build () {
     $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);
     
     $glue = $_SESSION['parameters']['glue'];
-    $la_blo_l = implode ($glue, $nam_blo_ord_new_a);
+    $nam_blo_ord_new_str = implode ($glue, $nam_blo_ord_new_a);
     
     $entity_inputtype = 'block_name_list_order_new_string';
 
@@ -52,7 +52,7 @@ function block_name_list_order_new_form_blocks_display_build () {
     $html_str .= block_name_list_order_current_of_surname_by_name_hash_of_block_name_list_order_current ($sur_by_nam_h, $nam_blo_ord_new_a);
 
     $html_str .= '<input type="hidden" name="' . $entity_inputtype;
-    $html_str .= '" value="' . $la_blo_l;
+    $html_str .= '" value="' . $nam_blo_ord_new_str;
     $html_str .= '">';
     $html_str .= comment_exiting_of_function_name ($here);
     

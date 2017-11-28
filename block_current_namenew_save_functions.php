@@ -120,7 +120,7 @@ function block_current_namenew_save_block_name_array_update_build () {
   debug_n_check ($here , '$old_nam_blo_cur', $old_nam_blo_cur);
 
   $ext_lis_blo = $_SESSION['parameters']['extension_block_name_list_order_filename'];
-  $nof_lis_blo = 'Block_name_list_order' . '.' . $ext_lis_blo;
+  $nof_lis_blo = 'Block_name_list_order_string' . '.' . $ext_lis_blo;
   $fno_lis_blo = $dir . $nof_lis_blo;
   debug_n_check ($here , '$fno_lis_blo', $fno_lis_blo);
 
@@ -157,7 +157,7 @@ function block_current_namenew_save_block_name_list_write_build () {
 
 /* Write Improve */
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
-  $log_str = block_name_list_order_write_of_entry_name_of_block_name_list_order ($nam_ent_cur, $new_nam_blo_lis);
+  $log_str = block_name_list_order_write_of_entry_name_of_block_name_list_order_string ($nam_ent_cur, $new_nam_blo_lis);
 
   $entity = entity_name_of_build_function_name ($here);
   father_n_son_stack_entity_push_of_father_of_son ("WRITE_block_name_list_order", $entity);
@@ -190,7 +190,7 @@ function block_current_namenew_save_irp_path_clean () {
   entering_in_function ($here);
 
 /* Clean all Father Nodes and Store New as Current */
-  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order', $here); 
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order_current', $here); 
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_current_nameoffile_array', $here); 
 #  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'GET_block_current_surnamenew', $here); 
  

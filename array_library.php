@@ -69,8 +69,10 @@ function has_values_unique_of_any_array ($arr_a) {
   $here = __FUNCTION__;
   entering_in_function ($here . " (\$arr_a...)");
 
-  $new_a = array_unique ($arr_a);
-  $boo = count ($new_a) == count ($arr_a);
+  debug ($here, '$arr_a', $arr_a);
+  $uni_a = array_unique ($arr_a);
+  debug ($here, '$uni_a', $uni_a);
+  $boo = count ($uni_a) == count ($arr_a);
   
   exiting_from_function ($here . " is " . string_of_boolean ($boo));
 
@@ -119,8 +121,6 @@ function check_has_no_empty_value_of_any_array ($arr_a) {
 function array_duplicated_value_by_count_of_array ($arr_a) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($arr_a)");
-
-  $new_a = array_unique ($arr_a);
 
   $cou_by_val_a = array();
   $tem_cou_by_val_a = array_count_values ($arr_a);
@@ -257,15 +257,15 @@ function check_is_array_unique_of_what_of_array ($nam_arr, $arr_a) {
   return;
 }
 
-function check_is_array_unique_of_nameofarray_of_associative_array ($nam_arr, $val_by_key_h) {
+function check_is_array_unique_of_what_of_hash ($nam_arr, $val_by_key_h) {
   $here = __FUNCTION__;
-  entering_in_function ($here);
-#  # debug ($here , "input array", $arr_a); 
+  entering_in_function ($here . " ($nam_arr)");
+#  # debug ($here , '$arr_a', $arr_a); 
 
   if ( ! has_values_unique_of_any_array ($val_by_key_h) ){
       $cou_by_val_a = array_duplicated_value_by_count_of_array ($val_by_key_h);
 
-      # debug ($here , '$cou_by_val_a', $cou_by_val_a);
+      debug ($here , '$cou_by_val_a', $cou_by_val_a);
       print_html_array ($here , '$cou_by_val_a', $cou_by_val_a);
 
       print ($here . '<br>'. 'Duplicated values:<br>');
@@ -273,6 +273,7 @@ function check_is_array_unique_of_nameofarray_of_associative_array ($nam_arr, $v
           
           foreach ($val_by_key_h as $k => $v) {
               if ($v == $val) {
+                  debug_long ($here, "value $val from key $k<br>");
                   print ("value $val from key $k<br>");
               }
           }

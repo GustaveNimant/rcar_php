@@ -21,6 +21,9 @@ $_SESSION['is_goto_entity_name'] = array ();     /* '<a href="module_name.php" *
 /* ?name=value => name is a data entity */
 /* &name=value => name is a data entity */
 
+$_SESSION['is_calculated_entity_name'] = array (
+);
+
 $_SESSION['is_data_entity_name'] = array (
     'block_current_name' => TRUE,
     'block_current_surname' => TRUE,
@@ -30,8 +33,8 @@ $_SESSION['is_data_entity_name'] = array (
 
     'block_current_content' => TRUE, 
 
-#    'block_list_order_new' => TRUE,
-#    'block_list_order_new_justification' => TRUE,
+    'block_name_list_order_new_string' => TRUE,
+#    'block_name_list_order_new_justification' => TRUE,
 
     'block_list_reorder_la' => TRUE,
 

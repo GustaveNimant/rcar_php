@@ -1,0 +1,3 @@
+print_html_array ($script, '$_GET', $_GET);
+print_html_array ($script, '$_SESSION["get_key_by_script_name"]', $_SESSION['get_key_by_script_name']);
+print_html_scalar ($script, '$get_key', $get_key);

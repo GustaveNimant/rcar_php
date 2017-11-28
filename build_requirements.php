@@ -24,12 +24,12 @@ require_once "block_current_undo_form_functions.php";
 require_once "block_current_undo_functions.php";
 require_once "block_current_undo_save_functions.php";
 
-require_once "block_list_order_new_functions.php";
+require_once "block_name_list_order_new_functions.php";
+require_once "block_name_list_order_new_string_save_functions.php";
 require_once "block_list_reorder_functions.php";
-require_once "block_list_order_new_save_functions.php";
 
 require_once "block_name_array_order_current_functions.php";
-require_once "block_name_list_order_current_functions.php";
+require_once "block_name_list_order_current_string_functions.php";
 
 require_once "block_next_save_functions.php";
 

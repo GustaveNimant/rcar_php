@@ -93,7 +93,7 @@ function block_list_order_deletion_write_build () {
   $nam_blo_lis_del = irp_provide ('block_name_list_order_deletion', $here);
   debug_n_check ($here , '$nam_blo_lis_del', $nam_blo_lis_del);
 
-  $log_str = block_name_list_order_write_of_entry_name_of_block_name_list_order ($nam_ent_cur, $nam_blo_lis_del);
+  $log_str = block_name_list_order_write_of_entry_name_of_block_name_list_order_string ($nam_ent_cur, $nam_blo_lis_del);
   father_n_son_stack_entity_push_of_father_of_son ("WRITE_block_name_list_order_deletion", 'block_list_order_deletion');
 
   exiting_from_function ($here);
@@ -107,7 +107,7 @@ function block_current_remove_save_irp_path_clean () {
 
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'GET_block_current_name', $here); 
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_current_nameoffile_array', $here); 
-  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order', $here); 
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order_current', $here); 
  
   exiting_from_function ($here);
   return;

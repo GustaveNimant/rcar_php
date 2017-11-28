@@ -61,7 +61,7 @@ function block_content_by_block_name_hash_build () {
   return $con_blo_by_nam_blo_a;
 };
 
-function block_content_formatted_by_block_name_list_order_current_build () {
+function block_content_formatted_by_block_name_list_order_current_string_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 

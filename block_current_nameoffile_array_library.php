@@ -39,7 +39,7 @@ function block_current_nameoffile_array_read_of_entry_name ($nam_ent) {
       }
   }
 
-  $log_str  = "Block name list read from subdirectory $nam_ent";
+  $log_str  = "Block nameoffile array read from subdirectory $nam_ent";
   file_log_write ($here, $log_str);
   
   debug ($here , '$nof_blo_a', $nof_blo_a);

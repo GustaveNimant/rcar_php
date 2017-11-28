@@ -27,7 +27,7 @@ function surname_by_name_hash_of_surname_catalog ($str_sur) {
 
   $unser_a = array_by_key_unserialize_of_separator_of_string (" : ", $str_sur);
   # debug_n_check ($here , '$unser_a', $unser_a);
-  check_is_array_unique_of_nameofarray_of_associative_array ('surname_by_name_hash', $unser_a);
+  check_is_array_unique_of_what_of_hash ('surname_by_name_hash', $unser_a);
 
   $sur_by_nam_h = array_filter ($unser_a);
 

@@ -350,7 +350,7 @@ function tools_write ($what) {
         
     case 'irp_register' :
         $val_by_key_h = $_SESSION['irp_register'];
-        file_associative_array_write ($fno, $val_by_key_h);
+        file_hash_write ($fno, $val_by_key_h);
         break;
         
     case 'irp_register_keys' :
@@ -370,7 +370,7 @@ function tools_write ($what) {
         break;
         
     case 'session' :
-        file_associative_array_write ($fno, $_SESSION);
+        file_hash_write ($fno, $_SESSION);
         break;
         
     case 'session_keys' :

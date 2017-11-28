@@ -1761,6 +1761,18 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ),
     
+    'page for displaying the result of reordering the paragraphs for entry' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du changement de l&rsquo;ordre des paragraphes de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+
+    'page for displaying the result of reordering the questions for entry' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du changement de l&rsquo;ordre des questions de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+
     'page for displaying the result of the revert of the paragraph' =>
     array (
         'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la restauration du paragraphe',

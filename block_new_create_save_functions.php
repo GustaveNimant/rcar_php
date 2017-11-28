@@ -173,7 +173,7 @@ function block_list_order_addition_write_build () {
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
   $nam_blo_lis_add = irp_provide ('block_name_list_order_addition', $here);
 
-  $log_str = block_name_list_order_write_of_entry_name_of_block_name_list_order ($nam_ent_cur, $nam_blo_lis_add);
+  $log_str = block_name_list_order_write_of_entry_name_of_block_name_list_order_string ($nam_ent_cur, $nam_blo_lis_add);
   father_n_son_stack_entity_push_of_father_of_son ("WRITE_block_name_list_order_addition", 'block_list_order_addition');
 
   exiting_from_function ($here);
@@ -185,7 +185,7 @@ function block_new_create_save_irp_path_clean () {
   $here = __FUNCTION__;
   entering_in_function ($here);
   
-  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order', $here); 
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order_current', $here); 
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_current_nameoffile_array', $here); 
   
   exiting_from_function ($here);
@@ -249,8 +249,9 @@ function block_new_create_save_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
+/* move to script */
   $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__);
-/* getting DATA $get_val */
+/* getting DATA $get_val */ 
   $get_key = 'block_new_surname';
   $sur_blo_new = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here);
 

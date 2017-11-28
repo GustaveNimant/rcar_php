@@ -338,7 +338,7 @@ function file_array_write ($fno, $arr_a) {
   return;
 }
 
-function file_associative_array_write ($fno, $arr_a) {
+function file_hash_write ($fno, $arr_a) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($fno, ... some content ...");
 
@@ -496,6 +496,7 @@ function file_array_of_directory_path_of_predicate ($dir_pat, $predicate) {
   else {      
       $fno_a = fullnameoffile_array_of_directory_path ($dir_pat);
       $fno_fil_a = array_filter ($fno_a, $predicate);
+      $fno_fil_a = array_values ($fno_fil_a);
 
       if (array_is_empty_of_array ($fno_fil_a)) {
           $mest = "No file found according to predicate $predicate in Directory";

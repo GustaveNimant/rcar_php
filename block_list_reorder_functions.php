@@ -149,13 +149,13 @@ function block_list_reorder_action_table_build () {
   $html_str .= '<table>';
   $html_str .= '<tr>' . "\n";
   $html_str .= '<td>';
-  $html_str .= inputtypesubmit_la_translate_of_en_action_name_of_button_name ('swap', 'block_list_reorder_la');
+  $html_str .= inputtypesubmit_la_translate_of_en_action_name_of_button_name ('swap', 'block_name_list_reorder_action_la');
   $html_str .= '</td>' . "\n";
   $html_str .= '<td>';
-  $html_str .= inputtypesubmit_la_translate_of_en_action_name_of_button_name ('move before', 'block_list_reorder_la');
+  $html_str .= inputtypesubmit_la_translate_of_en_action_name_of_button_name ('move before', 'block_name_list_reorder_action_la');
   $html_str .= '</td>' . "\n";
   $html_str .= '<td>';
-  $html_str .= inputtypesubmit_la_translate_of_en_action_name_of_button_name ('move after', 'block_list_reorder_la');
+  $html_str .= inputtypesubmit_la_translate_of_en_action_name_of_button_name ('move after', 'block_name_list_reorder_action_la');
   $html_str .= '</td>' . "\n";
   $html_str .= '<td>';
   $html_str .= inputtypereset_of_en_action_name ();
@@ -174,8 +174,10 @@ function block_list_reorder_form_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
+  $script_action = 'block_name_list_order_new_script.php';
+
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<form action="block_name_list_order_new_script.php" method="get"> ' . "\n";
+  $html_str .= '<form action="' . $script_action . '" method="get"> ' . "\n";
 
   $html_str .= '<center>' . "\n";
   $html_str .= irp_provide ('block_list_reorder_action_table', $here);

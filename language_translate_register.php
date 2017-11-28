@@ -1725,6 +1725,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ), 
     
+    'page for displaying the new order of the paragraphs for entry' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du nouvel ordre des paragraphes pour l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+
    'page for displaying the question' =>
    array (
       'fr' => 'page d&rsquo;affichage de la question',
@@ -1769,7 +1775,7 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
 
     'page for displaying the result of reordering the questions for entry' =>
     array (
-        'fr' => 'page d&rsquo;affichage du changement de l&rsquo;ordre des questions de l&rsquo;entr&eacute;e',
+        'fr' => 'page d&rsquo;affichage de modification de l&rsquo;ordre des questions de l&rsquo;entr&eacute;e',
         'it' => '???',
     ), 
 
@@ -1871,13 +1877,13 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
 
     'page for reordering the paragraphs of the entry' =>
     array (
-        'fr' => 'page de changement de l&rsquo;ordre des paragraphes de l&rsquo;entr&eacute;e',
+        'fr' => 'page de modification de l&rsquo;ordre des paragraphes de l&rsquo;entr&eacute;e',
         'it' => '???',
     ),
 
     'page for reordering the questions of the entry' =>
     array (
-        'fr' => 'page de changement de l&rsquo;ordre des questions de l&rsquo;entr&eacute;e',
+        'fr' => 'page de modification de l&rsquo;ordre des questions de l&rsquo;entr&eacute;e',
         'it' => '???',
     ), 
 

@@ -1,7 +1,7 @@
 <?php 
 require_once "management_library.php";
 
-$module = module_name_of_msuodule_fullnameoffile (__FILE__);
+$module = module_name_of_module_fullnameoffile (__FILE__);
 
 entering_in_module ($module);
 

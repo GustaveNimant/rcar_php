@@ -36,7 +36,7 @@ $_SESSION['is_data_entity_name'] = array (
     'block_name_list_order_new_string' => TRUE,
 #    'block_name_list_order_new_justification' => TRUE,
 
-    'block_list_reorder_la' => TRUE,
+    'block_name_list_reorder_action_la' => TRUE,
 
     'block_next_name' => TRUE,
     'block_next_surname' => TRUE,

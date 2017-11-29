@@ -22,6 +22,8 @@ function block_name_list_order_current_string_build () {
   if (file_is_existing_of_fullnameoffile ($fno_nam_blo_lis)) {
       /* get ordered list from disk */
       $nam_blo_lis = block_name_list_order_current_string_read_of_entry_name ($nam_ent); 
+
+      /* Improve check adequacy of Block_name_list_order_string.lis and array of nameoffile  */
   }
   else {
       /* create blocks order string from what is on disk */      

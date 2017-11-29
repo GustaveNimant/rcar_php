@@ -1727,7 +1727,13 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
     
     'page for displaying the new order of the paragraphs for entry' =>
     array (
-        'fr' => 'page d&rsquo;affichage du nouvel ordre des paragraphes pour l&rsquo;entr&eacute;e',
+        'fr' => 'page d&rsquo;affichage du nouvel ordre des paragraphes de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+
+    'page for displaying the new order of the rules for entry' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du nouvel ordre des r&egrave;gles de l&rsquo;entr&eacute;e',
         'it' => '???',
     ), 
 
@@ -1739,13 +1745,19 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
 
     'page for displaying the result of creation of a new paragraph for entry' =>
     array (
-        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation d&rsquo;un nouveau paragraphe pour l&rsquo;entr&eacute;e',
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation d&rsquo;un nouveau paragraphe de l&rsquo;entr&eacute;e',
         'it' => '???',
     ),
 
+    'page for displaying the result of reordering the rules for entry' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la modification de l&rsquo;ordre des r&egrave;gles de l&rsquo;entr&eacute;e',
+        'it' => '???',
+   ), 
+
     'page for displaying the result of creation of a new question for the' =>
     array (
-        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation d&rsquo;une nouvelle question pour l&rsquo;entr&eacute;e',
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation d&rsquo;une nouvelle question de l&rsquo;entr&eacute;e',
         'it' => '???',
     ), 
 
@@ -1884,6 +1896,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
     'page for reordering the questions of the entry' =>
     array (
         'fr' => 'page de modification de l&rsquo;ordre des questions de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+
+    'page for reordering the rules of the entry' =>
+    array (
+        'fr' => 'page de modification de l&rsquo;ordre des r&egrave;gles de l&rsquo;entr&eacute;e',
         'it' => '???',
     ), 
 
@@ -2123,25 +2141,25 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
 
     'reorder the properties for entry' =>
     array (
-		'fr' => 'r&eacute;ordonner les propri&eacute;t&eacute;s pour l&rsquo;entr&eacute;e',
+		'fr' => 'r&eacute;ordonner les propri&eacute;t&eacute;s de l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),	 
 
     'reorder the questions for entry' =>
     array (
-		'fr' => 'r&eacute;ordonner les questions pour l&rsquo;entr&eacute;e',
+		'fr' => 'r&eacute;ordonner les questions de l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),	 
 	 
     'reorder the rules for entry' =>
     array (
-		'fr' => 'modifier l&rsquo;ordre des r&egrave;gles pour l&rsquo;entr&eacute;e',
+		'fr' => 'modifier l&rsquo;ordre des r&egrave;gles de l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
     'reorder the paragraphs for entry' =>
     array (
-		'fr' => 'modifier l&rsquo;ordre des paragraphes pour l&rsquo;entr&eacute;e',
+		'fr' => 'modifier l&rsquo;ordre des paragraphes de l&rsquo;entr&eacute;e',
 		'it' => '???',
     ),
 
@@ -2603,7 +2621,7 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
     
     'write a first property for entry' =>
     array (
-        'fr' => 'ecrire une premi&egrave;re propri&eacute;t&eacute; pour l&rsquo;entr&eacute;e',
+        'fr' => 'ecrire une premi&egrave;re propri&eacute;t&eacute; de l&rsquo;entr&eacute;e',
         'it' => '???',
     ),
     

@@ -16,12 +16,12 @@ function block_name_array_order_current_build () {
 /* $nof_blo_cur_a is the array of files */
 /* $nam_blo_ord_a is the array of order */
 
-  $nam_ent = irp_provide ('entry_current_name', $here);
+  $nam_ent_cur = irp_provide ('entry_current_name', $here);
   $nof_blo_cur_a = irp_provide ('block_current_nameoffile_array', $here); /* blocks that are on disk */      
   debug ($here , '$nof_blo_cur_a', $nof_blo_cur_a);
 
   /* get ordered list from disk */
-  /* $nam_blo_lis_cur = block_name_list_order_current_string_read_of_entry_name ($nam_ent); */
+  /* $nam_blo_lis_cur = block_name_list_order_current_string_read_of_entry_name ($nam_ent_cur); */
   $nam_blo_lis_cur = irp_provide ('block_name_list_order_current_string', $here);
   debug ($here , '$nam_blo_lis_cur', $nam_blo_lis_cur);
 
@@ -37,8 +37,11 @@ function block_name_array_order_current_build () {
   $cou_nof_blo_cur = count ($nof_blo_cur_a);
   $cou_nam_blo_ord = count ($nam_blo_ord_a);
 
+  $is_obsolete_block_name_list_order_string = TRUE;
+
   if ($cou_nam_blo_ord == $cou_nof_blo_cur) {
       $nam_blo_cur_ord_a = $nam_blo_ord_a;
+      $is_obsolete_block_name_list_order_string = FALSE;
   }
   elseif ($cou_nam_blo_ord > $cou_nof_blo_cur) {
       $nam_blo_cur_ord_a = $nam_blo_ord_a;
@@ -67,8 +70,19 @@ function block_name_array_order_current_build () {
               debug_long ($here , 'Block $nam_blo has been added to list');
           }
       }
-      
   }   
+
+  /* Improve delete file Block_name_list_order_string.lis */
+
+  if ($is_obsolete_block_name_list_order_string) {
+      $dir_pat = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent_cur);
+      $ext_nam_blo_lis = $_SESSION['parameters']['extension_block_name_list_order_filename'];
+      $fno_nam_blo_lis = $dir_pat . 'Block_name_list_order_string.' . $ext_nam_blo_lis;
+
+      irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'block_name_list_order_current_string', $here);
+
+      file_remove_of_fullnameoffile ($fno_nam_blo_lis);
+  }
 
   check_is_array_unique_of_what_of_array ('$nam_blo_cur_ord_a', $nam_blo_cur_ord_a);
    

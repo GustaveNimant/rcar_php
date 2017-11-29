@@ -15,7 +15,26 @@ function block_name_list_order_current_string_build () {
   $nam_ent = irp_provide ('entry_current_name', $here);
   $nof_blo_cur_a = irp_provide ('block_current_nameoffile_array', $here); /* blocks that are on disk */      
 
-  $nam_blo_lis = block_name_list_order_current_string_read_of_entry_name ($nam_ent); /* get ordered list from disk */
+  $dir_pat = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
+  $ext_nam_blo_lis = $_SESSION['parameters']['extension_block_name_list_order_filename'];
+  $fno_nam_blo_lis = $dir_pat . 'Block_name_list_order_string.' . $ext_nam_blo_lis;
+
+  if (file_is_existing_of_fullnameoffile ($fno_nam_blo_lis)) {
+      /* get ordered list from disk */
+      $nam_blo_lis = block_name_list_order_current_string_read_of_entry_name ($nam_ent); 
+  }
+  else {
+      /* create blocks order string from what is on disk */      
+      $nof_blo_cur_a = irp_provide ('block_current_nameoffile_array', $here); 
+      debug ($here , '$nof_blo_cur_a', $nof_blo_cur_a);
+      $nam_blo_lis = block_name_list_order_of_block_nameoffile_array_order ($nof_blo_cur_a);
+
+      $log_str = block_name_list_order_write_of_entry_name_of_block_name_list_order_string ($nam_ent, $nam_blo_lis);
+      file_log_write ($here, $log_str);
+      $entity = entity_name_of_build_function_name ($here);
+/* Improve is that correct ? */
+      father_n_son_stack_entity_push_of_father_of_son ("WRITE_block_name_list_order_current", $entity);
+  }
 
   $entity = entity_name_of_build_function_name ($here);
   father_n_son_stack_entity_push_of_father_of_son ($entity, "READ_block_name_list_order_current");

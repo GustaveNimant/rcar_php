@@ -12,6 +12,25 @@ $Documentation[$module]['WRITE_'] = "WRITE_block_name_list_order";
 
 entering_in_module ($module);
 
+function block_name_array_of_block_nameoffile_array ($nof_blo_a) {
+    $here = __FUNCTION__;
+    entering_in_function ($here . " (\$nam_blo_a)");
+
+    $ext_blo = $_SESSION['parameters']['extension_block_filename'];
+
+    $nam_blo_a = array ();
+    foreach ($nof_blo_a as $key => $nof_blo) {
+        $nam_blo = str_replace (".$ext_blo", '', $nof_blo);
+        array_push ($nam_blo_a, $nam_blo);
+    }
+    
+    debug_n_check ($here , '$nam_blo_a', $nam_blo_a);
+    exiting_from_function ($here);
+    
+    return $nam_blo_a;
+}
+    
+
 function block_name_list_order_fullnameoffile_of_entry_name ($nam_ent) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_ent)");
@@ -75,11 +94,22 @@ function block_name_list_order_of_block_name_array_order ($nam_blo_a){
   return $nam_blo_lis;
 }
 
+function block_name_list_order_of_block_nameoffile_array_order ($nof_blo_a){
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+  debug_n_check ($here, '$nof_blo_a', $nof_blo_a); 
+
+  $nam_blo_a = block_name_array_of_block_nameoffile_array ($nof_blo_a); 
+  $nam_blo_lis = block_name_list_order_of_block_name_array_order ($nam_blo_a);
+
+  exiting_from_function ($here . " with \$nam_blo_lis >$nam_blo_lis<");
+
+  return $nam_blo_lis;
+}
+
 function block_name_list_order_write_of_entry_name_of_block_name_list_order_string ($nam_ent, $nam_blo_lis){
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_ent, $nam_blo_lis)");
-
-  debug_n_check ($here, '$nam_blo_lis', $nam_blo_lis); 
   
   $fno_nam_blo_lis = block_name_list_order_fullnameoffile_of_entry_name ($nam_ent);
   file_string_write ($fno_nam_blo_lis, $nam_blo_lis);

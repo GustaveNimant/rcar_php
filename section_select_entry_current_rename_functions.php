@@ -16,7 +16,7 @@ function subsection_select_entry_current_rename_title_build () {
   $la_bub_Tit = bubble_bubbled_capitalized_la_text_of_en_text ($en_bub_tit);
 
   $html_str  = comment_entering_of_function_name ($here); 
-  $html_str .= common_html_div_background_color_of_html ($la_bub_Tit);
+  $html_str .= common_html_span_background_color_of_html ($la_bub_Tit);
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str',  $html_str);

@@ -20,7 +20,9 @@ function block_name_array_order_current_build () {
   $nof_blo_cur_a = irp_provide ('block_current_nameoffile_array', $here); /* blocks that are on disk */      
   debug ($here , '$nof_blo_cur_a', $nof_blo_cur_a);
 
-  $nam_blo_lis_cur = block_name_list_order_current_string_read_of_entry_name ($nam_ent); /* get ordered list from disk */
+  /* get ordered list from disk */
+  /* $nam_blo_lis_cur = block_name_list_order_current_string_read_of_entry_name ($nam_ent); */
+  $nam_blo_lis_cur = irp_provide ('block_name_list_order_current_string', $here);
   debug ($here , '$nam_blo_lis_cur', $nam_blo_lis_cur);
 
   $entity = entity_name_of_build_function_name ($here);

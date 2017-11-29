@@ -14,7 +14,7 @@ function entry_list_display_page_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $en_tit = 'page for displaying the list of all entries';
+  $en_tit = 'page for selecting an entry to act on it';
 
   $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);

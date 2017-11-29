@@ -1887,6 +1887,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ), 
 
+    'page for selecting an entry to act on it' =>
+    array (
+        'fr' => 'page de s&eacute;lection d&rsquo;une entr&eacute;e pour agir sur elle',
+        'it' => '???',
+    ),
+
     'page for undoing the paragraph' =>
     array (
         'fr' => 'page de restauration du paragraphe pr&eacute;c&eacute;dent',
@@ -2362,6 +2368,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
 		'it' => '???',
     ),
 
+    'there is only one block in entry' =>
+    array (
+        'fr' => 'il n&rsquo;y a qu&rsquo;un seul bloc dans l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ),
+    
     'there is no block yet in entry' =>
     array (
         'fr' => 'il n&rsquo;y a encore aucun bloc dans l&rsquo;entr&eacute;e',
@@ -2380,12 +2392,6 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ),
     
-    'warning in' => 
-    array (
-        'fr' => 'warning dans',
-        'it' => '???',
-    ),
-
     'the name of an entity recast from its surname' =>
     array (
         'fr' => 'le nom d&rsquo;une entit&eacute; est construit &agrave; partir du surnom',
@@ -2571,6 +2577,12 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
         'it' => '???',
     ), 
     
+    'warning in' => 
+    array (
+        'fr' => 'warning dans',
+        'it' => '???',
+    ),
+
     'welcome to our website' => 
     array (
         'fr' => 'bienvenue sur notre site',

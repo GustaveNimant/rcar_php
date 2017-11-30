@@ -1158,17 +1158,23 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
 
+    'item' => 
+    array (
+        'fr' => 'item',
+        'it' => '???',
+    ),
+    
     'item current content' => 
     array (
         'fr' => 'contenu de l&rsquo;item courant',
         'it' => '???',
     ),
     
-    'item' => 
+    'item current justification' =>
     array (
-        'fr' => 'item',
+        'fr' => 'justification de l&rsquo;item courant',
         'it' => '???',
-    ),
+    ), 
     
     'item previous content' => 
     array (
@@ -1176,12 +1182,6 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
     
-    'justification' =>
-    array (
-        'fr' => 'justification',
-        'it' => '???',
-    ),
-
     'justification' =>
     array (
         'fr' => 'justification',
@@ -1215,7 +1215,7 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
     
     'justify the paragraph' =>
     array (
-        'fr' => 'modifier_justifier le paragraphe',
+        'fr' => 'justifier le paragraphe',
         'it' => '???',
     ),
 
@@ -1225,15 +1225,9 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
 
-    'justify the property' =>
-    array (
-        'fr' => 'modifier_justifier la propri&eacute;t&eacute;',
-        'it' => '???',
-    ),
-
     'justify the rule' =>
     array (
-        'fr' => 'modifier_justifier la r&egrave;gle',
+        'fr' => 'justifier la r&egrave;gle',
         'it' => '???',
     ),
 
@@ -1286,7 +1280,6 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
 		'it' => '???',
     ),
 
-
     'list of property rules for ARCE' =>
     array (
 		'fr' => 'liste des r&egrave;gles des propri&eacute;t&eacute;s d&rsquo;RCAR',
@@ -1296,12 +1289,6 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
     'list of paragraphs for label' =>
     array (
 		'fr' => 'liste des paragraphes de l&rsquo;&eacute;tiquette',
-		'it' => '???',
-    ),
-
-    'list of paragraphs' =>
-    array (
-		'fr' => 'liste des paragraphes',
 		'it' => '???',
     ),
 
@@ -1725,6 +1712,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ), 
     
+    'page for displaying the new order of the properties for entry' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du nouvel ordre des propri&eacute;t&eacute;s de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+    
     'page for displaying the new order of the paragraphs for entry' =>
     array (
         'fr' => 'page d&rsquo;affichage du nouvel ordre des paragraphes de l&rsquo;entr&eacute;e',
@@ -1748,6 +1741,24 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation d&rsquo;un nouveau paragraphe de l&rsquo;entr&eacute;e',
         'it' => '???',
     ),
+
+    'page for displaying the history of the paragraph' =>
+    array (
+        'fr' => 'page d&rsquo;affichage de l&rsquo;historique du paragraphe',
+        'it' => '???',
+   ), 
+
+    'page for displaying the history of the question' =>
+    array (
+        'fr' => 'page d&rsquo;affichage de l&rsquo;historique de la question',
+        'it' => '???',
+   ), 
+
+    'page for displaying the history of the rule' =>
+    array (
+        'fr' => 'page d&rsquo;affichage de l&rsquo;historique de la r&egrave;gle',
+        'it' => '???',
+   ), 
 
     'page for displaying the result of reordering the rules for entry' =>
     array (

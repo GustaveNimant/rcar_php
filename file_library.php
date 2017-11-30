@@ -566,7 +566,7 @@ function file_remove_of_fullnameoffile ($fno) {
         file_log_write ($here, $log_str);
     }
     
-    exiting_from_function ($here . ' with file >' . $old_nof . ' removed');
+    exiting_from_function ($here . ' with file >' . $fno . ' removed');
     return;
 };
 
@@ -575,7 +575,7 @@ function file_content_remove_last_line ($con_raw) {
     entering_in_function ($here . " ($con_raw)");
     
     $str_a = explode ("\n", $con_raw);
-    $last_key = array_pop ($str_a);
+    array_pop ($str_a);
     $con = implode ("\n", $str_a);
     
     exiting_from_function ($here . ' with last line removed from file content');

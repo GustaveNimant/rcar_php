@@ -48,6 +48,8 @@ open(OUT, ">$block_file");
 print OUT $block_str;
 close OUT;
 
+# chown "33", "1001", $block_file;
+
 print " cat ${block_file}\n";
 
 exit;

@@ -17,6 +17,7 @@ function block_new_content_build (){
   
   $con_ite_new = $irp_val;
 
+/* getting DATA $get_val */
   $get_key = 'item_new_justification';
   $irp_val = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here); 
   $jus_ite_new = $irp_val;

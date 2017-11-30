@@ -1388,12 +1388,18 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
 		'it' => '???',
     ),
 
+    'modify' =>
+    array (
+		'fr' => 'modifier',
+		'it' => '???',
+    ),
+    
     'modify the answer to the question' =>
     array (
         'fr' => 'modifier la r&eacute;ponse &agrave; la question',
         'it' => '???',
     ),
-
+    
     'modify the content of the paragraph' =>
     array (
         'fr' => 'modifier le contenu du paragraphe',
@@ -1411,31 +1417,31 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'fr' => 'modifier le contenu de la question',
         'it' => '???',
     ),
-
+    
     'modify the content of the rule' =>
     array (
 		'fr' => 'modifier le contenu de la r&egrave;gle',
 		'it' => '???',
     ),
-
+    
     'modify the justification for' =>
     array (
 		'fr' => 'modifier la justification de',
 		'it' => '???',
     ),	 
-	 
+    
     'modify the name below' =>
     array (
 		'fr' => 'modifier le nom ci-dessous',
 		'it' => '???',
     ),	 
-	 
+    
     'modify name for property' =>
     array (
 		'fr' => 'modifier le nom de la propri&eacute;t&eacute;',
 		'it' => '???',
     ),	 
-	 
+    
     'modify order of properties' =>
     array (
 		'fr' => 'modifier l&rsquo;ordre des propri&eacute;t&eacute;s',
@@ -1484,18 +1490,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
 		'it' => '???',
     ),
 
-    'modify' =>
+    'modify the text below' =>
     array (
-		'fr' => 'modifier',
-		'it' => '???',
+        'fr' => 'modifier le texte ci-dessous',
+        'it' => '???',
     ),
-
-    'modify' =>
-    array (
-		'fr' => 'modifier',
-		'it' => '???',
-    ),
-
+    
     'move after' =>
     array (
 		'fr' => 'd&eacute;placer apr&egrave;s',

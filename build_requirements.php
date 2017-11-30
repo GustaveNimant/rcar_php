@@ -69,10 +69,11 @@ require_once "entry_new_name_functions.php";
 
 require_once "git_command_functions.php";
 
-require_once "item_current_modify_functions.php";
-require_once "item_current_content_display_functions.php";
+# require_once "item_current_content_display_functions.php";
+require_once "item_current_content_display_n_modify_functions.php";
 require_once "item_current_content_linked_by_item_name_hash_functions.php";
 require_once "item_current_justification_display_functions.php";
+require_once "item_current_modify_functions.php";
 
 require_once "item_next_create_form_current_content_functions.php";
 require_once "item_next_create_form_functions.php";
@@ -104,7 +105,6 @@ require_once "section_block_current_undo_functions.php";
 
 require_once "section_block_new_create_functions.php";
 
-require_once "item_current_modify_href_functions.php";
 require_once "section_item_next_create_form_functions.php";
 require_once "item_previous_content_display_functions.php";
 

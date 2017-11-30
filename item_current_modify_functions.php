@@ -61,7 +61,9 @@ function item_current_modify_link_to_return_build () {
   debug_n_check ("$here", '$la_Txt', $la_Txt);
 
   $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= '<center>' . "\n";
   $html_str .= link_to_return_of_string_of_get_key_of_get_val_of_module_nameoffile ($la_Txt, $get_key, $get_val, $nof_mod) . "\n";
+  $html_str .= '</center>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str',  $html_str);
@@ -83,7 +85,9 @@ function item_current_modify_build () {
   $html_str .= '</center>' . "\n";
   $html_str .= '<br>' . "\n";
 
-  $html_str .= irp_provide ('item_current_content_display', $here);
+  $html_str .= irp_provide ('item_current_content_display_title', $here);
+  $html_str .= '<br>' . "\n";
+  $html_str .= irp_provide ('item_current_content_display_content', $here);
   $html_str .= '<br>' . "\n";
 
   $html_str .= irp_provide ('section_item_next_create_form', $here);

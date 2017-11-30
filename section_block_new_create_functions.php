@@ -37,8 +37,6 @@ function section_block_new_create_build () {  /* Generalize */
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $module = module_name_of_module_nameoffile (__FILE__);
-
   $irp_fat = str_replace('_build', '', $here);
   father_n_son_stack_entity_push_of_father_of_son ($irp_fat, "BUTTON_$irp_fat");
 

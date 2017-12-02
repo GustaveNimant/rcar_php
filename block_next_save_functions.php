@@ -66,19 +66,35 @@ function section_block_next_save_build () {
 };
 
 function section_block_next_save_link_to_return_build () {
-  $here = __FUNCTION__;
-  entering_in_function ($here);
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+    
+    $get_key = 'block_current_name';
+    $get_val = irp_provide ($get_key, $here);
+    $sur_blo_cur = irp_provide ('block_current_surname_from_block_current_name', $here);
+    
+    $script_to_return = 'block_current_display_script.php';
 
-  $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<center>';
-  $html_str .= link_to_return_of_return_module_nameoffile ('block_current_display_script.php');
-  $html_str .= '</center>';
-  $html_str .= comment_exiting_of_function_name ($here);
+    $kin_blo = irp_provide ('entry_block_kind', $here);
 
-  debug_n_check ($here , '$html_str',  $html_str);
-  exiting_from_function ($here);
+    $en_txt = 'back to the ' . $kin_blo;
+    $la_txt  = language_translate_of_en_string ($en_txt);
+    $la_Txt  = string_html_capitalized_of_string ($la_txt);
+    $la_Txt .= ' ' . $sur_blo_cur;
 
-  return $html_str;
+    debug_n_check ("$here", '$la_Txt', $la_Txt);
+    
+    $html_str  = comment_entering_of_function_name ($here);
+    $html_str .= '<center>' . "\n";
+    $html_str .= link_to_return_of_string_of_get_key_of_get_val_of_script_to_return ($la_Txt, $get_key, $get_val, $script_to_return) . "\n";
+    $html_str .= '</center>' . "\n";
+    $html_str .= comment_exiting_of_function_name ($here);
+    
+    debug_n_check ($here , '$html_str',  $html_str);
+    exiting_from_function ($here);
+    
+    return $html_str;
 }
 
 function block_next_save_build () {

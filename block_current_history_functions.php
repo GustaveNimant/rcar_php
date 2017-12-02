@@ -135,7 +135,7 @@ function block_current_history_build (){
   $html_str .= '    </form> ' . "\n";
 
   $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
-  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent, $sur_ent_cur, $nof_mod); 
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_script_to_return ($nam_ent, $sur_ent_cur, $nof_mod); 
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   debug_n_check ($here , '$html_str', $html_str);

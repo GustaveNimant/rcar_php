@@ -29,7 +29,7 @@ function block_modify_save_build () {
   $html_str = '';
   $html_str .= irp_provide ('pervasive_page_header', $here);
   $html_str .= irp_provide ('git_command_n_commit_html', $here);
-  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent, $sur_ent, $nof_mod);
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_script_to_return ($nam_ent, $sur_ent, $nof_mod);
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   
   debug_n_check ($here , '$html_str', $html_str);

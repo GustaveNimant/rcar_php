@@ -102,7 +102,7 @@ function entry_new_create_save_link_to_return_build () {
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>' . "\n";
-  $html_str .= link_to_return_of_return_module_nameoffile ($script_to_return);
+  $html_str .= link_to_return_of_script_to_return ($script_to_return);
   $html_str .= '</center>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 

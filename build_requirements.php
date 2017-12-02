@@ -69,7 +69,6 @@ require_once "entry_new_name_functions.php";
 
 require_once "git_command_functions.php";
 
-# require_once "item_current_content_display_functions.php";
 require_once "item_current_content_display_n_modify_functions.php";
 require_once "item_current_content_linked_by_item_name_hash_functions.php";
 require_once "item_current_justification_display_functions.php";

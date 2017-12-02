@@ -86,8 +86,6 @@ function subsection_select_entry_current_display_build () {
     $html_str .= '</form>' .  "\n";
     $html_str .= comment_exiting_of_function_name ($here);
 
-#    $_SESSION['link_to_return'][$nof_mod]['entry_current_name'] = $get_val;
-
     exiting_from_function ($here);
     debug_n_check ($here, '$html_str', $html_str);
     

@@ -601,7 +601,7 @@ function irp_provide ($irp_key, $caller) {
     entering_in_function ($here . " ($irp_key, $caller)");
     
     if ( ! ( 
-        ($caller == "tools_display")
+        ($caller == "command_display")
         ||
         (is_substring_of_substring_off_string ("_build", $caller)) 
         || 

@@ -229,22 +229,83 @@ function goto_of_script_action_of_message_of_action_name ($scr_act, $mes, $nam_a
 
 
 function textarea_of_get_key_of_en_placeholder ($get_key, $en_pla) {
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($get_key, $en_pla)");
+    
+    $la_Pla = ucfirst (language_translate_of_en_string ($en_pla));
+    
+    $row_hta = $_SESSION['parameters']['html_textarea_rows'];
+    $col_hta = $_SESSION['parameters']['html_textarea_cols'];
+    
+    $html_str  = comment_entering_of_function_name ($here);
+    $html_str .= '<textarea name="' . $get_key . '" ';
+    $html_str .= 'placeholder="';
+    $html_str .= $la_Pla;
+    $html_str .= '" ';
+    $html_str .= 'rows="' . $row_hta . '" cols="' .$col_hta;
+    $html_str .= '</textarea> ' . "\n";
+    $html_str .= comment_exiting_of_function_name ($here);
+    
+    debug_n_check ($here , '$html_str', $html_str);
+    exiting_from_function ($here . " ($get_key, $en_pla)");
+    
+    return $html_str;
+}
+
+function textarea_of_la_string ($str) {
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($str)");
+    
+    $row_hta = $_SESSION['parameters']['html_textarea_rows'];
+    $col_hta = $_SESSION['parameters']['html_textarea_cols'];
+    
+    $html_str  = comment_entering_of_function_name ($here);
+    $html_str  = '<textarea ';
+    $html_str .= 'rows="' . $row_hta . '" cols="' .$col_hta;
+    $html_str .= '">';
+    $html_str .= $str;
+    $html_str .= '</textarea> ' . "\n";
+    $html_str .= comment_exiting_of_function_name ($here);
+    
+    debug_n_check ($here , '$html_str', $html_str);
+    exiting_from_function ($here . " ($str)");
+    
+    return $html_str;
+}
+
+function textarea_disabled_of_la_string ($str) {
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($str)");
+    
+    $row_hta = $_SESSION['parameters']['html_textarea_rows'];
+    $col_hta = $_SESSION['parameters']['html_textarea_cols'];
+    
+    $html_str  = comment_entering_of_function_name ($here);
+    $html_str .= '<textarea disabled ';
+    $html_str .= 'rows="' . $row_hta . '" cols="' .$col_hta;
+    $html_str .= '">';
+    $html_str .= $str;
+    $html_str .= '</textarea> ' . "\n";
+    $html_str .= comment_exiting_of_function_name ($here);
+      
+    debug_n_check ($here , '$html_str', $html_str);
+    exiting_from_function ($here . " ($str)");
+    
+    return $html_str;
+}
+
+function div_of_string ($str) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($get_key, $en_pla)");
-
-  $la_Pla = ucfirst (language_translate_of_en_string ($en_pla));
-
+  entering_in_function ($here . " ($str)");
+  
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<textarea name="' . $get_key . '" ';
-  $html_str .= 'placeholder="';
-  $html_str .= $la_Pla;
-  $html_str .= '" ';
-  $html_str .= 'rows="2" cols="100">' . "\n";
-  $html_str .= '</textarea> ' . "\n";
+  $html_str .= '<div style="width:500px; height:50px">';
+  $html_str .= $str;
+  $html_str .= '</div>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
-
+  
   debug_n_check ($here , '$html_str', $html_str);
-  exiting_from_function ($here);
+  exiting_from_function ($here . " ($str)");
   
   return $html_str;
 }

@@ -243,7 +243,7 @@ function item_modify_build () {
   $html_str .= inputtypesubmit_of_en_action_name ('save');
   $html_str .= '</form> ' . "\n";
 
-  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent, $sur_ent, $nof_mod);
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_script_to_return ($nam_ent, $sur_ent, $nof_mod);
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
 

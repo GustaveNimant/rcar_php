@@ -44,7 +44,7 @@ function item_next_create_form_build () {
   $html_str .= '</center>';
   $html_str .= '</form> ' . "\n";
 
-  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent, $sur_ent, 'block_current_display_script.php');
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_script_to_return ($nam_ent, $sur_ent, 'block_current_display_script.php');
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   $html_str .= comment_exiting_of_function_name ($here);

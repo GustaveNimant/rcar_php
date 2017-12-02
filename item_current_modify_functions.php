@@ -40,29 +40,72 @@ function item_current_modify_page_title_build () {
   return $html_str;
 }
 
+function item_current_content_display_content_textarea_build () {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+    $nam_blo_cur = irp_provide ('block_current_name', $here);
+    $con_blo_by_nam_blo_h = irp_provide ('block_content_by_block_name_hash', $here);
+    $con_blo_cur = array_retrieve_value_of_key_of_array ($nam_blo_cur, $con_blo_by_nam_blo_h);
+    $ite_cur_con = item_current_content_of_block_current_content ($con_blo_cur);
+    
+    $row_hta = $_SESSION['parameters']['html_textarea_rows'];
+    $col_hta = $_SESSION['parameters']['html_textarea_cols'];
+    
+    $html_str  = comment_entering_of_function_name ($here);
+    $html_str .= textarea_of_la_string ($ite_cur_con);
+    $html_str .= comment_exiting_of_function_name ($here);
+
+    
+    debug_n_check ($here , '$html_str',  $html_str);
+    exiting_from_function ($here);
+    
+    return $html_str;
+}
+
+function item_current_content_display_content_textarea_disabled_build () {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+    $nam_blo_cur = irp_provide ('block_current_name', $here);
+    $con_blo_by_nam_blo_h = irp_provide ('block_content_by_block_name_hash', $here);
+    $con_blo_cur = array_retrieve_value_of_key_of_array ($nam_blo_cur, $con_blo_by_nam_blo_h);
+    $ite_cur_con = item_current_content_of_block_current_content ($con_blo_cur);
+    
+    $row_hta = $_SESSION['parameters']['html_textarea_rows'];
+    $col_hta = $_SESSION['parameters']['html_textarea_cols'];
+    
+    $html_str  = comment_entering_of_function_name ($here);
+    $html_str .= textarea_disabled_of_la_string ($ite_cur_con);
+    $html_str .= comment_exiting_of_function_name ($here);
+
+    
+    debug_n_check ($here , '$html_str',  $html_str);
+    exiting_from_function ($here);
+    
+    return $html_str;
+}
+
 function item_current_modify_link_to_return_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-#  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent, $sur_ent, 'block_current_display');
-
   $get_key = 'entry_current_name';
   $get_val = irp_provide ($get_key, $here);
-  $sur_ent = irp_provide ('entry_current_surname_from_entry_current_name', $here);
+  $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
 
-  $nof_mod = 'block_current_display_script.php';
-  $nam_mod = str_replace ('.php', '', $nof_mod);
+  $script_to_return = 'entry_current_display_script.php';
 
   $en_txt = 'back to the entry';
   $la_txt  = language_translate_of_en_string ($en_txt);
   $la_Txt  = string_html_capitalized_of_string ($la_txt);
-  $la_Txt .= ' ' . $sur_ent;
+  $la_Txt .= ' ' . $sur_ent_cur;
 
   debug_n_check ("$here", '$la_Txt', $la_Txt);
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>' . "\n";
-  $html_str .= link_to_return_of_string_of_get_key_of_get_val_of_module_nameoffile ($la_Txt, $get_key, $get_val, $nof_mod) . "\n";
+  $html_str .= link_to_return_of_string_of_get_key_of_get_val_of_script_to_return ($la_Txt, $get_key, $get_val, $script_to_return) . "\n";
   $html_str .= '</center>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
@@ -87,7 +130,7 @@ function item_current_modify_build () {
 
   $html_str .= irp_provide ('item_current_content_display_title', $here);
   $html_str .= '<br>' . "\n";
-  $html_str .= irp_provide ('item_current_content_display_content', $here);
+  $html_str .= irp_provide ('item_current_content_display_content_textarea_disabled', $here);
   $html_str .= '<br>' . "\n";
 
   $html_str .= irp_provide ('section_item_next_create_form', $here);

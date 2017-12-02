@@ -101,7 +101,8 @@ function surname_check_couple_consistency_of_name_of_surname ($nam, $sur) {
 
 function name_of_surname_lowercase_of_surname_by_name_hash ($sur_low, $sur_by_nam_h) {
     $here = __FUNCTION__;
-    entering_in_function ($here . " ($sur_low, $sur_by_nam_h[0])");
+    entering_in_function ($here . " ($sur_low)");
+    debug ($here, '$sur_by_nam_h', $sur_by_nam_h);
 
     foreach ($sur_by_nam_h as $nam_cur => $sur_cur) {
         $sur_low_cur = strtolower ($sur_cur);
@@ -119,7 +120,7 @@ function name_of_surname_lowercase_of_surname_by_name_hash ($sur_low, $sur_by_na
         /* } */
     }
 
-    exiting_from_function ($here . " with name >$nam< from surname >$sur_low<");
+    exiting_from_function ($here . " with >$nam< = \$sur_by_nam_h ($sur_low)");
     
     return $nam;
 }

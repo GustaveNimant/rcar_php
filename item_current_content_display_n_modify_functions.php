@@ -42,13 +42,10 @@ function item_current_content_display_content_build () {
     $col_hta = $_SESSION['parameters']['html_textarea_cols'];
     
     $html_str  = comment_entering_of_function_name ($here);
-    $html_str .= '<textarea "';
-    $html_str .= '" rows="' . $row_hta .'" cols="' .$col_hta;
-    $html_str .= '" disabled/>';
+    $html_str .= '<i>';
     $html_str .= $ite_cur_con;
-    $html_str .= '</textarea> ' . "\n";
+    $html_str .= '</i>';
     $html_str .= comment_exiting_of_function_name ($here);
-
     
     debug_n_check ($here , '$html_str',  $html_str);
     exiting_from_function ($here);
@@ -66,15 +63,11 @@ function item_current_content_modify_form_build () {
   $script_action = 'item_current_modify_script.php';
   $entity = entity_name_of_script_nameoffile ($script_action);
 
-  /* $get_key_sel = 'block_new_surname'; */
-  /* $_SESSION['get_key_by_script_name'][$entity] = $get_key_sel; */
-
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form action="' . $script_action . '" method="get"> ' . "\n";
   $html_str .= irp_provide ('item_current_content_display_title', $here);
   $html_str .= inputtypesubmit_of_en_action_name ('modify');
   $html_str .= '</form> ' .  "\n";
-
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str',  $html_str);
@@ -91,7 +84,6 @@ function item_current_content_display_n_modify_build () {
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('item_current_content_modify_form', $here);
-  $html_str .= '<br>' . "\n";
   $html_str .= irp_provide ('item_current_content_display_content', $here);
   $html_str .= "\n";
   $html_str .= comment_exiting_of_function_name ($here);

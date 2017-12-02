@@ -13,14 +13,14 @@ $Documentation[$module]['module_name_of_module_fullnameoffile'] = "the name of t
 $Documentation[$module]['link_to_return'] = '<a href="module_name.php">clickable_text</a>';
 $Documentation[$module]['link_to_return_with_get'] = '<a href="module_name.php?get_key=get_val">clickable_text</a>';
 
-function link_to_return_of_string_of_get_key_of_get_val_of_module_nameoffile ($str, $get_key, $get_val, $nof_mod) {
+function link_to_return_of_string_of_get_key_of_get_val_of_script_to_return ($str, $get_key, $get_val, $scr_ret) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($str, $get_key, $get_val, $nof_mod)");
+  entering_in_function ($here . " ($str, $get_key, $get_val, $scr_ret)");
 
-  $_SESSION['link_to_return'][$nof_mod][$get_key] = $get_val;
+  $_SESSION['link_to_return'][$scr_ret][$get_key] = $get_val;
 
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<a href="' . $nof_mod; 
+  $html_str .= '<a href="' . $scr_ret; 
   $html_str .= '?'. $get_key .'=' . $get_val;
   $html_str .= '">';
   $html_str .= $str;
@@ -32,9 +32,34 @@ function link_to_return_of_string_of_get_key_of_get_val_of_module_nameoffile ($s
   return $html_str;
 }
 
-function link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffile ($nam_ent, $sur_ent, $nof_mod) {
+function link_to_return_of_script_to_return_of_get_key_of_get_val ($scr_ret, $get_key, $get_val) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_ent, $sur_ent, $nof_mod)");
+  entering_in_function ($here . " ($scr_ret)");
+
+  $_SESSION['link_to_return'][$scr_ret][$get_key] = $get_val;
+
+  $nam_mod = str_replace ('.php', '', $scr_ret);
+
+  $en_tit = 'back to';
+  $la_tit = language_translate_of_en_string ($en_tit);
+  $la_Tit = string_html_capitalized_of_string ($la_tit);
+
+  debug_n_check ("$here", '$la_Tit', $la_Tit);
+
+  $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= '<a href="' . $scr_ret . '?' . $get_key . '=' . $get_val . '">';
+  $html_str .= $la_Tit. ' ' . '<b>' . $nam_mod . '</b>';
+  $html_str .= '</a>' . "\n";
+  $html_str .= comment_exiting_of_function_name ($here);
+
+  exiting_from_function ($here);
+
+  return $html_str;
+}
+
+function link_to_return_of_entry_name_of_entry_surname_of_script_to_return ($nam_ent, $sur_ent, $scr_ret) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($nam_ent, $sur_ent, $scr_ret)");
 
   $en_tit = 'back to entry';
 
@@ -44,7 +69,7 @@ function link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffi
   debug_n_check ("$here", '$la_Tit', $la_Tit);
 
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<a href="' . $nof_mod; 
+  $html_str .= '<a href="' . $scr_ret; 
   $html_str .= '?entry_current_name=' . $nam_ent;
   $html_str .= '">';
   $html_str .= $la_Tit. ' <b><i>' . $sur_ent . '</i></b>';
@@ -56,20 +81,21 @@ function link_to_return_of_entry_name_of_entry_surname_of_return_module_nameoffi
   return $html_str;
 }
 
-function link_to_return_of_return_module_nameoffile ($nof_mod) {
+function link_to_return_of_script_to_return ($scr_ret) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nof_mod)");
+  entering_in_function ($here . " ($scr_ret)");
 
-  $nam_scr = str_replace ('.php', '', $nof_mod);
+  $nam_scr = str_replace ('.php', '', $scr_ret);
 
   $en_tit = 'back to script';
+
   $la_tit = language_translate_of_en_string ($en_tit);
   $la_Tit = string_html_capitalized_of_string ($la_tit);
 
   debug_n_check ("$here", '$la_Tit', $la_Tit);
 
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<a href="' . $nof_mod . '">';
+  $html_str .= '<a href="' . $scr_ret . '">';
   $html_str .= $la_Tit. ' ' . '<b>' . $nam_scr . '</b>';
   $html_str .= '</a>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
@@ -79,47 +105,16 @@ function link_to_return_of_return_module_nameoffile ($nof_mod) {
   return $html_str;
 }
 
-function link_to_return_of_return_module_nameoffile_of_get_key_of_get_val ($nof_mod_ret, $get_key, $get_val) {
+function link_to_return_of_la_title_of_script_to_return ($la_tit, $scr_ret) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nof_mod)");
-
-  $nam_mod = str_replace ('.php', '', $nof_mod);
-
-  $en_tit = 'back to';
-  $la_tit = language_translate_of_en_string ($en_tit);
-  $la_Tit = string_html_capitalized_of_string ($la_tit);
-
-  debug_n_check ("$here", '$la_Tit', $la_Tit);
+  entering_in_function ($here . " ($la_tit, $scr_ret)");
 
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<a href="' . $nof_mod_ret . '?' . $get_key . '=' . $get_val . '">';
-  $html_str .= $la_Tit. ' ' . '<b>' . $nam_mod . '</b>';
+  $html_str .= '<a href="' . $scr_ret . '">';
+  $html_str .= $la_tit;
   $html_str .= '</a>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
-
-  exiting_from_function ($here);
-
-  return $html_str;
-}
-
-function link_to_return_of_return_module_nameoffile_of_from_module_name ($nof_mod_ret, $nam_mod_fro) {
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($nof_mod_ret)");
-
-  $nam_mod_ret = str_replace ('.php', '', $nof_mod_ret);
-
-  $en_tit = 'back to';
-  $la_tit = language_translate_of_en_string ($en_tit);
-  $la_Tit = string_html_capitalized_of_string ($la_tit);
-
-  debug_n_check ("$here", '$la_Tit', $la_Tit);
-
-  $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<a href="' . $nof_mod_ret . '?from_module_name=' . $nam_mod_fro . '">';
-  $html_str .= $la_Tit. ' ' . '<b>' . $nam_mod_ret . '</b>';
-  $html_str .= '</a>' . "\n";
-  $html_str .= comment_exiting_of_function_name ($here);
-
+  
   exiting_from_function ($here);
 
   return $html_str;

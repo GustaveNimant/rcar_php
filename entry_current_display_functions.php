@@ -42,9 +42,16 @@ function entry_current_link_to_return_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
 
+    $en_tit = 'back to the entry list';
+    
+    $la_bub_tit  = bubble_bubbled_la_text_of_en_text ($en_tit);
+    $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);
+    
+    $script_to_return = 'entry_list_display_script.php';
+
     $html_str  = comment_entering_of_function_name ($here);
     $html_str .= '<center>';
-    $html_str .= link_to_return_of_return_module_nameoffile ('entry_list_display_script.php');
+    $html_str .= link_to_return_of_la_title_of_script_to_return ($la_bub_Tit, $script_to_return);
     $html_str .= '</center>';
     $html_str .= comment_exiting_of_function_name ($here);
     

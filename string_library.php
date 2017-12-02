@@ -374,6 +374,13 @@ function string_word_of_index_of_string ($idx, $str) {
     return $wor;
 }
 
+function string_word_of_glue_of_ordinal_of_string ($glue, $ord, $str) {
+    $here = __FUNCTION__;
+    $wor_a = explode ($glue, $str);
+    $wor = $wor_a[$ord-1];
+    return $wor;
+}
+
 function string_word_of_ordinal_of_string ($ord, $str) {
     $here = __FUNCTION__;
     $wor_a = explode (" ", $str);

@@ -2,7 +2,7 @@
 
 require_once "irp_library.php";
 require_once "entry_information_functions.php";
-require_once "help_text_functions.php";
+require_once "help_text_library.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 

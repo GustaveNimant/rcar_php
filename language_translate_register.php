@@ -81,7 +81,7 @@ est une assertion qu&rsquo;elle doit v&eacute;rifier',
 	 
     'an action is one off remove&#44; modify&#44; justify or rename' =>
     array (
-        'fr' => 'une action est supprimer&#44; modifier&#44; justifier ou renommer',
+        'fr' => 'une action possible est supprimer&#44; modifier&#44; justifier ou renommer',
         'it' => '???',
     ),
 
@@ -241,9 +241,21 @@ c&rsquo;est une composante d&rsquo;un bloc',
         'it' => '???',
     ),
 
+    'back to the block' =>
+    array (
+        'fr' => 'retour au bloc',
+        'it' => '???',
+    ), 
+    
     'back to the entry' => 
     array (
 		'fr' => 'retour à l&rsquo;entr&eacute;e',
+		'it' => '???',
+    ),
+
+    'back to the entry list' => 
+    array (
+		'fr' => 'retour à la liste des entr&eacute;es',
 		'it' => '???',
     ),
 
@@ -253,6 +265,24 @@ c&rsquo;est une composante d&rsquo;un bloc',
         'it' => '???',
     ),	 
 
+    'back to the paragraph' =>
+    array (
+        'fr' => 'retour au paragraphe',
+        'it' => '???',
+    ), 
+    
+    'back to the question' =>
+    array (
+        'fr' => 'retour &agrave; la question',
+        'it' => '???',
+    ), 
+    
+    'back to the rule' =>
+    array (
+        'fr' => 'retour &agrave; la r&egrave;gle',
+        'it' => '???',
+    ), 
+    
     'back to script' =>
     array (
         'fr' => 'retour au script',
@@ -2228,6 +2258,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
 		'it' => '???',
     ),
 
+    'select an action and enter its argument in the window below' =>
+    array (
+        'fr' => 's&eacute;lectionner une action et entrer son argument dans la fen&ecirc;tre ci-dessous',
+        'it' => '???',
+    ), 
+    
     'select a property and an action' => 
     array (
 		'fr' => 's&eacute;lectionner une propri&eacute;t&eacute; et une action',

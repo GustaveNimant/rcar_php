@@ -9,7 +9,7 @@ $Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);
 
-function tools_display ($what) {
+function command_display ($what) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($what)");
 
@@ -164,7 +164,7 @@ function tools_display ($what) {
     return $log_str;
 }
 
-function tools_read ($what) {
+function command_read ($what) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($what)");
 
@@ -173,7 +173,7 @@ function tools_read ($what) {
     return;
 }
 
-function tools_load ($what) {
+function command_load ($what) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($what)");
 
@@ -195,7 +195,7 @@ function tools_load ($what) {
     return;
 }
 
-function tools_remove ($what) {
+function command_remove ($what) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($what)");
 
@@ -229,7 +229,7 @@ function tools_remove ($what) {
 
 }
 
-function tools_set ($what) {
+function command_set ($what) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($what)");
 
@@ -262,7 +262,7 @@ function tools_set ($what) {
 
 }
 
-function tools_unset ($what) {
+function command_unset ($what) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($what)");
 
@@ -295,7 +295,7 @@ function tools_unset ($what) {
 
 }
 
-function tools_write ($what) {
+function command_write ($what) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($what)");
 
@@ -407,33 +407,39 @@ function command_action_of_action_name_of_argument ($nam_act, $str_arg) {
   switch ($nam_act) {
       case 'debug' :
           break;
+      case 'default' :
+          command_display ($str_arg);
+          break;
       case 'display' :
-          tools_display ($str_arg);
+          command_display ($str_arg);
           break;
       case 'load' :
-          tools_load ($str_arg);
+          command_load ($str_arg);
           break;
       case 'read' :
-          tools_read ($str_arg);
+          command_read ($str_arg);
           break;
       case 'remove' :
-          tools_remove ($str_arg);
+          command_remove ($str_arg);
           break;
       case 'set' :
-          tools_set ($str_arg);
+          command_set ($str_arg);
           break;         
       case 'unset' :
-          tools_unset ($str_arg);
+          command_unset ($str_arg);
           break;         
       case 'write' :
-          tools_write ($str_arg);
+          command_write ($str_arg);
           break;         
       default:  
           $en_mes = "no action is defined. Using action <i>display</i> as default";
           $la_mes = language_translate_of_en_string ($en_mes); 
           $la_Mes = string_html_capitalized_of_string ($la_mes);
-          warning ($here, $la_Mes);
-          tools_display ($str_arg);
+          print_warning ($here, 
+          "some action were defined",
+          "Using action <i>display</i> as default",
+          "");
+          command_display ($str_arg);
       }
   
   exiting_from_function ($here);

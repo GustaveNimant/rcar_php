@@ -31,9 +31,6 @@ function pervasive_page_header_build (){
     $here = __FUNCTION__;
     entering_in_function ($here);
     
-    /* $path =  $_SERVER['PHP_SELF']; */
-    /* $http = basename($path); */
-    
     $nam_pro = $_SESSION['parameters']['program_name'];
     $NAM_PRO = strtoupper ($nam_pro);
     
@@ -82,7 +79,7 @@ function pervasive_license_build () {
     $str = '<a href="https://creativecommons.org/licenses/by-sa/3.0/legalcode.fr" title="' . $la_Lic . '">License</a>';
     
     $html_str  = comment_entering_of_function_name ($here);
-    $html_str .= $str;
+    $html_str .= $str . "\n";
     $html_str .= comment_exiting_of_function_name ($here);
     
     return $html_str;
@@ -92,12 +89,14 @@ function pervasive_page_footer_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
     
-    $html_str  = '<br><br>';
+    $html_str  = comment_entering_of_function_name ($here);
+    $html_str  = '<br><br>' . "\n";
     $html_str .= '<center>' . "\n";
     $html_str .= irp_provide ('pervasive_license', $here);
     $html_str .= '</center>' . "\n";
     $html_str .= irp_provide ('common_html_page_tail', $here);
-    
+    $html_str .= comment_exiting_of_function_name ($here);
+
     exiting_from_function ($here);
     
     return $html_str;

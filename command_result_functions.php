@@ -10,25 +10,95 @@ $Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);
 
+function command_result_page_title_build () {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+  $en_tit = 'page for displaying the result of the execution of command'; 
+
+  $en_com_act = irp_provide ('command_action', $here);
+  $la_com_act = language_translate_of_en_string ($en_com_act);
+
+  $la_bub_tit  = bubble_bubbled_la_text_of_en_text ($en_tit);
+  $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);
+  $la_bub_Tit .= " <b><i>$la_com_act</i></b>";
+
+  $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= '<center>' . "\n";
+  $html_str .= common_html_div_background_color_of_html ($la_bub_Tit);
+  $html_str .= '</center>' . "\n";
+  $html_str .= comment_exiting_of_function_name ($here);
+
+  debug_n_check ($here , '$html_str',  $html_str);
+  exiting_from_function ($here);
+  
+  return $html_str;
+}
+
+function command_html_result_build () {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+  
+  $com_act = irp_provide ('command_action', $here);
+  $com_arg = irp_provide ('command_argument', $here);
+  
+  switch ($com_act) {
+  case 'debug' :
+      break;
+  case 'default' :
+  case 'display' :
+      if (irp_is_providable_of_irp_key ($com_arg) ) {
+          $com_res = irp_provide ($com_arg, $here);
+      }
+      else {
+          $com_res = command_display ($com_arg);
+      }
+      break;
+  case 'load' :
+      $com_res = command_load ($com_arg);
+      break;
+  case 'read' :
+      $com_res = command_read ($com_arg);
+      break;
+  case 'remove' :
+      $com_res = command_remove ($com_arg);
+      break;
+  case 'set' :
+     $com_res =  command_set ($com_arg);
+      break;         
+  case 'unset' :
+      $com_res = command_unset ($com_arg);
+      break;         
+  case 'write' :
+      $com_res = command_write ($com_arg);
+      break;         
+  default:  
+      $com_res;
+  }
+
+  debug_n_check ($here , '$com_res', $com_res);
+  $html_str = string_html_of_variable ($com_res);
+  
+  debug_n_check ($here , '$html_str', $html_str);
+  exiting_from_function ($here);
+
+  return $html_str;
+}
+
 function command_result_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-/* getting DATA $get_val */
-
-  $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__);
-
-  $get_key = 'command_action';
-  $com_act = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here);
-
-  $get_key = 'command_argument';
-  $com_arg = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here);
-
-  command_action_of_action_name_of_argument ($com_act, $com_arg);
-
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_page_header', $here);
   $html_str .= '<br><br>' . "\n";
+
+  $html_str .= irp_provide ('command_result_page_title', $here);
+  $html_str .= '<br><br>' . "\n";
+
+  $html_str .= irp_provide ('command_html_result', $here);
+  $html_str .= '<br><br>' . "\n";
+
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   $html_str .= comment_exiting_of_function_name ($here); 
 

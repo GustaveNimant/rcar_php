@@ -10,6 +10,16 @@ entering_in_module ($module);
 
 $Documentation[$module]['irp_stack'] = "stacks all \$irp_key. When retrieved (\$irp_val) is added"; 
 
+function irp_is_providable_of_irp_key ($irp_key) {
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($irp_key)");
+    
+    $irp_build = $irp_key . "_build";
+
+    $boo = function_exists ($irp_build);
+    return $boo;
+}
+
 function irp_is_data_of_irp_key ($irp_key) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($irp_key)");

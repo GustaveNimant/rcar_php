@@ -144,17 +144,10 @@ function command_display ($what) {
         break;
 
     default:
-        $res = irp_provide ($what, $here);
-        debug_n_check ($here , '$res', $res);
-        
-        debug ($here , "XXX irp_register", $_SESSION['irp_register']); 
-
-        if (is_array ($res)) {
-            print_html_array ($here, $what, $res);
-        }
-        else {
-            print_html_scalar ($here, $what, $res);
-        }
+        print_fatal_error ($here, 
+        "what to be displayed were defined",
+        "$what",
+        "Check");
     };
     
     $log_str = "Entity $what displayed";
@@ -380,24 +373,17 @@ function command_write ($what) {
         break;
 
     default:
-        $res = irp_provide ($what, $here);
-        debug_n_check ($here , '$res', $res);
-
-        if (is_array ($res)) {
-            file_array_write ($fno, $res);
-        }
-        else {
-            file_string_write ($fno, $res);
-        }
-
+        print_fatal_error ($here, 
+        "what to be written were defined",
+        "$what",
+        "Check");
     };
     
-    $log_str = "Entity $what displayed";
+    $log_str = "Entity $what has been written on file $fno";
     file_log_write ($here, $log_str);
     
     exiting_from_function ($here . " ($what)");
     return $log_str;
-
 }
 
 function command_action_of_action_name_of_argument ($nam_act, $str_arg) {
@@ -406,9 +392,6 @@ function command_action_of_action_name_of_argument ($nam_act, $str_arg) {
 
   switch ($nam_act) {
       case 'debug' :
-          break;
-      case 'default' :
-          command_display ($str_arg);
           break;
       case 'display' :
           command_display ($str_arg);

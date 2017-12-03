@@ -615,7 +615,13 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
     array (
         'fr' => 'debugging',
         'it' => 'debugging',
-    ),	 
+    ),
+    
+    'default' =>
+    array (
+        'fr' => 'd&eacute;faut',
+        'it' => '???',
+    ), 
         
     'define a first property for' => 
     array (
@@ -1769,6 +1775,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
     'page for displaying the result of creation of a new paragraph for entry' =>
     array (
         'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation d&rsquo;un nouveau paragraphe de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ),
+
+    'page for displaying the result of the execution of command' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de l&rsquo;ex&eacute;cution de la commande',
         'it' => '???',
     ),
 

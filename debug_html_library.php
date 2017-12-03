@@ -34,44 +34,11 @@ function string_html_shorten_of_key_of_string ($key, $str_big){
             $str_cut = $str_big;
         }
         else {
-            $str_cut = substr ($val, 0, $max_len);
+            $str_cut = substr ($str_big, 0, $max_len);
         }
     }
 
     return $str_cut;
-}
-
-function string_html_of_array ($html_str_a) {	
-    $here = __FUNCTION__;
-
-    if (is_array ($html_str_a)) {
-        $str_a = array ();
-        foreach ($html_str_a as $key => $str_big) {
-            $str_a[$key] = string_html_shorten_of_key_of_string ($key, $str_big);
-        }
-        $html_str = string_of_array ($str_a);
-    }
-    else {
-        print_fatal_error ($here, 
-        "argument were an array",
-        "it is NOT",
-        "Check");
-    }
-    
-    return $html_str;
-}
-
-
-function string_html_of_variable ($var){
-
-    if (is_array ($var)) {
-        $html_str = string_html_of_array ($var);
-    }
-    else {
-        $html_str = $var;
-    }
-    
-    return $html_str;
 }
 
 function print_html_array ($where, $mes, $var_a){	

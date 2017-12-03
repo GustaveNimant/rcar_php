@@ -1,5 +1,4 @@
 <?php
-
 require_once "link_library.php";
 require_once "session_library.php";
 

@@ -597,6 +597,16 @@ function string_of_variable ($var){
     return $str;
 }
 
+function string_html_of_variable ($var){
+    $here = __FUNCTION__;
+    
+    $html_str  = '<pre>' . "\n";
+    $html_str .= string_of_variable ($var);
+    $html_str .= '</pre>' . "\n";	
+
+    return $html_str;
+}
+
 function string_pretty_of_array_of_index_of_eol ($str_a, $ind, $eol) {
     $here = __FUNCTION__;
 

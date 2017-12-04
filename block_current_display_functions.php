@@ -43,25 +43,28 @@ function block_current_display_page_title_build () {
 }
 
 function block_current_actions_title_build () {
-  $here = __FUNCTION__;
-  entering_in_function ($here);
-
-  $en_tit = 'select one of the actions to be performed on current block';
-
-  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
-  $la_Tit = string_html_capitalized_of_string ($la_bub_tit);
-  $la_colon = language_translate_of_en_string (':');
-
-  $la_Tit = '<b>' . $la_Tit . $la_colon . '</b>';
-
-  $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= common_html_span_background_color_of_html ($la_Tit);
-  $html_str .= comment_exiting_of_function_name ($here);
-
-  debug_n_check ($here , '$html_str',  $html_str);
-  exiting_from_function ($here);
-
-  return $html_str;
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+    $entity = entity_name_of_build_function_name ($here);
+    father_n_son_stack_entity_push_of_father_of_son ($entity, 'CONSTANT_' . $entity);
+    
+    $en_tit = 'select one of the actions to be performed on current block';
+    
+    $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
+    $la_Tit = string_html_capitalized_of_string ($la_bub_tit);
+    $la_colon = language_translate_of_en_string (':');
+    
+    $la_Tit = '<b>' . $la_Tit . $la_colon . '</b>';
+    
+    $html_str  = comment_entering_of_function_name ($here);
+    $html_str .= common_html_span_background_color_of_html ($la_Tit);
+    $html_str .= comment_exiting_of_function_name ($here);
+    
+    debug_n_check ($here , '$html_str',  $html_str);
+    exiting_from_function ($here);
+    
+    return $html_str;
 }
 
 function block_current_display_link_to_return_build () {

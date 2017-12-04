@@ -213,12 +213,8 @@ function entry_information_array_lan_of_entry_name ($nam_ent) {
 function entry_block_kind_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
-
-  $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__);  
-/* Improve getting DATA $get_val */
-  $get_key = 'entry_current_name';
-  $nam_ent_cur = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here); 
   
+  $nam_ent_cur = irp_provide ('entry_current_name', $here);
   $inf_ent_a = entry_information_array_en_of_entry_name ($nam_ent_cur);
   $kin_blo = $inf_ent_a['block_kind'];
 

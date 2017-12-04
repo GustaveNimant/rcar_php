@@ -12,6 +12,9 @@ entering_in_module ($module);
 function command_page_title_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
+
+    $entity = entity_name_of_build_function_name ($here);
+    father_n_son_stack_entity_push_of_father_of_son ($entity, 'CONSTANT_' . $entity);
     
     $en_tit = 'page for executing a command'; 
     
@@ -33,6 +36,9 @@ function command_page_title_build () {
 function command_selection_action_n_argument_title_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
+
+    $entity = entity_name_of_build_function_name ($here);
+    father_n_son_stack_entity_push_of_father_of_son ($entity, 'CONSTANT_' . $entity);
     
     $en_tit = 'select an action and enter its argument in the window below';
     

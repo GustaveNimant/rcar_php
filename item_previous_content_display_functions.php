@@ -11,6 +11,8 @@ function item_previous_content_display_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
+  $entity = entity_name_of_build_function_name ($here);
+  father_n_son_stack_entity_push_of_father_of_son ($entity, 'CONSTANT_' . $entity);
 
   $en_tit = 'item previous content';
 

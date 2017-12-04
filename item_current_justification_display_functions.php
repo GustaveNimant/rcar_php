@@ -11,6 +11,9 @@ function item_current_justification_display_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
+  $entity = entity_name_of_build_function_name ($here);
+  father_n_son_stack_entity_push_of_father_of_son ($entity, 'CONSTANT_' . $entity);
+
   $en_tit = "item current justification";
 
   $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);

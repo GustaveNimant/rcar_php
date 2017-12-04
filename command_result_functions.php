@@ -85,21 +85,24 @@ function command_html_result_build () {
 }
 
 function command_result_link_to_return_build () {
-  $here = __FUNCTION__;
-  entering_in_function ($here);
-
-  $script_to_return = 'command_script.php';
-
-  $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<center>';
-  $html_str .= link_to_return_of_script_to_return ($script_to_return);
-  $html_str .= '</center>';
-  $html_str .= comment_exiting_of_function_name ($here);
-
-  debug_n_check ($here , '$html_str',  $html_str);
-  exiting_from_function ($here);
-
-  return $html_str;
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+    $entity = entity_name_of_build_function_name ($here);
+    father_n_son_stack_entity_push_of_father_of_son ($entity, 'JUMP_' . $entity);
+    
+    $script_to_return = 'command_script.php';
+    
+    $html_str  = comment_entering_of_function_name ($here);
+    $html_str .= '<center>';
+    $html_str .= link_to_return_of_script_to_return ($script_to_return);
+    $html_str .= '</center>';
+    $html_str .= comment_exiting_of_function_name ($here);
+    
+    debug_n_check ($here , '$html_str',  $html_str);
+    exiting_from_function ($here);
+    
+    return $html_str;
 }
 
 function command_result_build (){

@@ -90,7 +90,6 @@ function pervasive_page_footer_build () {
     entering_in_function ($here);
     
     $html_str  = comment_entering_of_function_name ($here);
-    $html_str  = '<br><br>' . "\n";
     $html_str .= '<center>' . "\n";
     $html_str .= irp_provide ('pervasive_license', $here);
     $html_str .= '</center>' . "\n";

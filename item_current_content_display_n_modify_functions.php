@@ -38,6 +38,9 @@ function item_current_content_display_content_build () {
     $con_blo_cur = array_retrieve_value_of_key_of_array ($nam_blo_cur, $con_blo_by_nam_blo_h);
     $ite_cur_con = item_current_content_of_block_current_content ($con_blo_cur);
     
+
+#    replace_all_sub_sentence_by_links_of_surname_by_name_hash_of_entry_name_array_of_item_content_of_surname_lowercase_array ($sur_by_nam_h, $nam_ent_a, $con_ite, $sur_low_a);
+
     $row_hta = $_SESSION['parameters']['html_textarea_rows'];
     $col_hta = $_SESSION['parameters']['html_textarea_cols'];
     

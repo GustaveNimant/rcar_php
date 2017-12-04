@@ -425,15 +425,15 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
 
-    'command page' =>
-    array (
-        'fr' => 'page de commande',
-        'it' => '???',
-    ),
-
     'command' =>
     array (
         'fr' => 'commande',
+        'it' => '???',
+    ),
+
+    'command page' =>
+    array (
+        'fr' => 'page de commande',
         'it' => '???',
     ),
 
@@ -452,12 +452,6 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
     'commit' => 
     array (
         'fr' => 'commit',
-        'it' => '???',
-    ),
-
-    'compl' => 
-    array (
-        'fr' => 'compl',
         'it' => '???',
     ),
 
@@ -761,6 +755,18 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
 		'it' => '???',
     ),
 
+    'edit' => 
+    array (
+		'fr' => 'editer',
+		'it' => 'modifica',
+    ),
+	 
+    'edit the bubble' => 
+    array (
+		'fr' => 'editer la bulle',
+		'it' => '???',
+    ),
+
     'edit the paragraph' => 
     array (
 		'fr' => 'editer le paragraphe',
@@ -776,18 +782,6 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
     'edit the question' => 
     array (
 		'fr' => 'editer la question',
-		'it' => '???',
-    ),
-
-    'edit' => 
-    array (
-		'fr' => 'editer',
-		'it' => 'modifica',
-    ),
-	 
-    'edit the bubble' => 
-    array (
-		'fr' => 'editer la bulle',
 		'it' => '???',
     ),
 
@@ -941,13 +935,6 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
 		'it' => '???',
     ),
 
-
-    'entries' => 
-    array (
-		'fr' => 'entr&eacute;es',
-		'it' => '???',
-    ),
-
     'entry' => 
     array (
 		'fr' => 'entr&eacute;e',
@@ -1068,6 +1055,12 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
 		'it' => '???',
     ),
 
+    'git' =>
+    array (
+		'fr' => 'git',
+		'it' => '???',
+    ),
+
     'git commit failed' =>
     array (
 		'fr' => 'echec de la sauvegarde par git',
@@ -1077,12 +1070,6 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
     'git commit succeeded' =>
     array (
 		'fr' => 'succ&egrave;s de la sauvegarde par git',
-		'it' => '???',
-    ),
-
-    'git' =>
-    array (
-		'fr' => 'git',
 		'it' => '???',
     ),
 
@@ -2463,12 +2450,6 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ),
     
-    'unset' => 
-    array (
-        'fr' => 'd&eacute;sactiver',
-        'it' => '???',
-    ),
-    
     'the name of an entity recast from its surname' =>
     array (
         'fr' => 'le nom d&rsquo;une entit&eacute; est construit &agrave; partir du surnom',
@@ -2564,15 +2545,15 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
 		'it' => '???',
     ),
 
-    'these rules need to be followed when editing any property' =>
-    array (
-		'fr' => 'on doit suivre ces r&egrave;gles en r&eacute;digeantune propri&eacute;t&eacute',
-		'it' => '???',
-    ),
-
     'these rules need to be followed when editing' => 
     array (
 		'fr' => 'on doit suivre ces r&egrave;gles en r&eacute;digeant',
+		'it' => '???',
+    ),
+
+    'these rules need to be followed when editing any property' =>
+    array (
+		'fr' => 'on doit suivre ces r&egrave;gles en r&eacute;digeant une propri&eacute;t&eacute',
 		'it' => '???',
     ),
 
@@ -2618,6 +2599,18 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
 		'it' => '???',
     ),
 
+    'undo' => 
+    array (
+		'fr' => 'd&eacute;faire',
+		'it' => '???',
+    ),
+
+    'unset' => 
+    array (
+        'fr' => 'd&eacute;sactiver',
+        'it' => '???',
+    ),
+    
     'usage item' => 
     array (
 		'fr' => 'item d&rsquo;utilisation',
@@ -2627,12 +2620,6 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
     'usage items' => 
     array (
 		'fr' => 'items d&rsquo;utilisation',
-		'it' => '???',
-    ),
-
-    'undo' => 
-    array (
-		'fr' => 'd&eacute;faire',
 		'it' => '???',
     ),
 
@@ -2678,6 +2665,12 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
 		'it' => '???',
     ),
     
+    'write' =>
+    array (
+        'fr' => '&eacute;crire',
+        'it' => '???',
+    ),
+
     'write a first property for entry' =>
     array (
         'fr' => 'ecrire une premi&egrave;re propri&eacute;t&eacute; de l&rsquo;entr&eacute;e',
@@ -2687,12 +2680,6 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
     'write a short text defining property' =>
     array (
         'fr' => 'ecrire un texte court d&eacute;finissant la propri&eacute;t&eacute;',
-        'it' => '???',
-    ),
-
-    'write' =>
-    array (
-        'fr' => '&eacute;crire',
         'it' => '???',
     ),
 

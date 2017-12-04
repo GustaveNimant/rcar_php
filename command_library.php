@@ -38,8 +38,8 @@ function command_display ($what) {
         break;
 
     case 'father_n_son_entity' :
-        $fat_n_son_h = $_SESSION['father_n_son_stack_entity'];
-        print_html_array ($here, "father_n_son_stack_entity", $fat_n_son_h);
+        $com_res = $_SESSION['father_n_son_stack_entity'];
+#        print_html_array ($here, "father_n_son_stack_entity", $fat_n_son_h);
         break;
         
     case 'father_n_son_module' :
@@ -150,11 +150,9 @@ function command_display ($what) {
         "Check");
     };
     
-    $log_str = "Entity $what displayed";
-    file_log_write ($here, $log_str);
-    
+    debug_n_check ($here, '$com_res', $com_res);
     exiting_from_function ($here . " ($what)");
-    return $log_str;
+    return $com_res;
 }
 
 function command_read ($what) {

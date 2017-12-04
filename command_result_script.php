@@ -14,7 +14,6 @@ entering_in_script ($script);
 
 father_n_son_stack_script_push_of_current_script ($script);
 
-
 /* removing entity page */
 
 $get_key_l = $_SESSION['get_key_by_script_name'][$entity];

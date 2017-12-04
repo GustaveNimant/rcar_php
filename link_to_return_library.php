@@ -41,6 +41,7 @@ function link_to_return_of_script_to_return_of_get_key_of_get_val ($scr_ret, $ge
   $nam_mod = str_replace ('.php', '', $scr_ret);
 
   $en_tit = 'back to';
+
   $la_tit = language_translate_of_en_string ($en_tit);
   $la_Tit = string_html_capitalized_of_string ($la_tit);
 
@@ -85,18 +86,21 @@ function link_to_return_of_script_to_return ($scr_ret) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($scr_ret)");
 
-  $nam_scr = str_replace ('.php', '', $scr_ret);
+  $en_nam_lab = str_replace ('_script.php', '', $scr_ret);
+  $la_nam_lab = language_translate_of_en_string ($en_nam_lab);
+  $la_nam_Lab = string_html_capitalized_of_string ($la_nam_lab);
 
-  $en_tit = 'back to script';
+  $en_tit = 'back to';
 
-  $la_tit = language_translate_of_en_string ($en_tit);
-  $la_Tit = string_html_capitalized_of_string ($la_tit);
+  $la_tit  = language_translate_of_en_string ($en_tit);
+  $la_Tit  = string_html_capitalized_of_string ($la_tit);
+  $la_Tit .= ' ' . '<b><i>' . $la_nam_Lab . '</i></b>';
 
   debug_n_check ("$here", '$la_Tit', $la_Tit);
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<a href="' . $scr_ret . '">';
-  $html_str .= $la_Tit. ' ' . '<b>' . $nam_scr . '</b>';
+  $html_str .= $la_Tit;
   $html_str .= '</a>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 

@@ -100,9 +100,6 @@ function block_current_display_build (){
   $html_str .= irp_provide ('item_current_content_display_n_modify', $here);
   $html_str .= '<br><br>' . "\n";
 
-  /* $html_str .= irp_provide ('item_current_modify_href', $here); */
-  /* $html_str .= '<br><br>' . "\n"; */
-
   $html_str .= irp_provide ('item_current_justification_display', $here);
   $html_str .= '<br><br>' . "\n";
 

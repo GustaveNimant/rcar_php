@@ -45,7 +45,6 @@ function command_html_result_build () {
   switch ($com_act) {
   case 'debug' :
       break;
-  case 'default' :
   case 'display' :
       if (irp_is_providable_of_irp_key ($com_arg) ) {
           $com_res = irp_provide ($com_arg, $here);
@@ -85,6 +84,24 @@ function command_html_result_build () {
   return $html_str;
 }
 
+function command_result_link_to_return_build () {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+  $script_to_return = 'command_script.php';
+
+  $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= '<center>';
+  $html_str .= link_to_return_of_script_to_return ($script_to_return);
+  $html_str .= '</center>';
+  $html_str .= comment_exiting_of_function_name ($here);
+
+  debug_n_check ($here , '$html_str',  $html_str);
+  exiting_from_function ($here);
+
+  return $html_str;
+}
+
 function command_result_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
@@ -97,6 +114,9 @@ function command_result_build (){
   $html_str .= '<br><br>' . "\n";
 
   $html_str .= irp_provide ('command_html_result', $here);
+  $html_str .= '<br><br>' . "\n";
+
+  $html_str .= irp_provide ('command_result_link_to_return', $here);
   $html_str .= '<br><br>' . "\n";
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);

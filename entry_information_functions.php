@@ -211,17 +211,17 @@ function entry_information_array_lan_of_entry_name ($nam_ent) {
 /* } */
 
 function entry_block_kind_build () {
-  $here = __FUNCTION__;
-  entering_in_function ($here);
-  
-  $nam_ent_cur = irp_provide ('entry_current_name', $here);
-  $inf_ent_a = entry_information_array_en_of_entry_name ($nam_ent_cur);
-  $kin_blo = $inf_ent_a['block_kind'];
-
-  debug_n_check ($here , '$kin_blo',  $kin_blo); 
-  exiting_from_function ($here);
-
-  return $kin_blo;
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+    $nam_ent_cur = irp_provide ('entry_current_name', $here);
+    $inf_ent_a = entry_information_array_en_of_entry_name ($nam_ent_cur);
+    $kin_blo = $inf_ent_a['block_kind'];
+    
+    debug_n_check ($here , '$kin_blo',  $kin_blo); 
+    exiting_from_function ($here);
+    
+    return $kin_blo;
 }
 
 exiting_from_module ($module);

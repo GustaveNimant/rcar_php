@@ -94,7 +94,7 @@ function label_information_array_lan_of_label ($nam_lab) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_lab)");
 
-  include "language_translate_register.php";
+  include "language_translate_hash.php";
   $lan = $_SESSION['parameters']['language'];
 
   $ent_inf_lan_a = array ();

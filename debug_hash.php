@@ -1,6 +1,6 @@
 <?php
 
-$debug_register = 
+$debug_hash = 
   array (
 
 	 'all' => array (),

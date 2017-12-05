@@ -139,7 +139,7 @@ function entry_information_array_lan_of_entry_name ($nam_ent) {
 
   $lan = $_SESSION['parameters']['language'];
 
-  include "language_translate_register.php";
+  include "language_translate_hash.php";
 
   $ent_inf_lan_a = array ();
   switch ($lan) {

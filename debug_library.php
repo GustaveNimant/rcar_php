@@ -158,9 +158,9 @@ function debug_href_html_make () {
   return $html_str;
 }
 
-function debug_register ($her, $irp_key) {
+function debug_hash ($her, $irp_key) {
 
-    $fno = 'debug_register.txt';
+    $fno = 'debug_hash.txt';
     $str  = "\nFunction " . $her . "\n";
     $str .= '>' . $irp_key . '<' . "\n";
     $str .= '>>' . $_SESSION['irp_register'][$irp_key] . '<<' . "\n";

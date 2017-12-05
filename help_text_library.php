@@ -9,7 +9,7 @@ function help_text_of_help_key ($key_hel) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($key_hel)");
 
-  include "help_text_translate_register.php";
+  include "help_text_translate_hash.php";
 
   # debug_n_check ($here, '$help_text_by_language_by_item_a', $help_text_by_language_by_item_a);
 

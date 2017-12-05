@@ -18,8 +18,8 @@ if (file_exists ("install.php")) {
     }
 }
 
-# print "index.php : include session_hash_initialize_register.php$eol";
-include "session_hash_initialize_register.php";
+# print "index.php : include session_hash_initialize_hash.php$eol";
+include "session_hash_initialize_hash.php";
 
 /* --- Debugging --- */
 

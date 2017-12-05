@@ -2,7 +2,7 @@
 
 require_once "array_library.php";
 require_once "language_library.php";
-require_once "language_translate_register.php";
+require_once "language_translate_hash.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
@@ -16,12 +16,12 @@ function language_translate_of_en_string ($en_str) {
   entering_in_function ($here . " ($en_str)");
 
   $lan = $_SESSION['parameters']['language'];
-  $language_translate_register = $_SESSION['language_translate_register'];
+  $language_translate_hash = $_SESSION['language_translate_hash'];
   
   if ($lan == 'en') {
       $la_str = $en_str;
   } else {
-      $la_str = $language_translate_register[$en_str][$lan];
+      $la_str = $language_translate_hash[$en_str][$lan];
   }
 
   if (isset ($la_str)){
@@ -29,13 +29,13 @@ function language_translate_of_en_string ($en_str) {
           print_fatal_error ($here, 
           "english sentence >$en_str< had a translation to language >$lan<",
           "translation has not yet been given",
-          "replace ... by the translation in <b><i>language_translate_register.php</i></b>");
+          "replace ... by the translation in <b><i>language_translate_hash.php</i></b>");
       }
   }
   else {
-      debug ($here, '$language_translate_register', $language_translate_register);
+      debug ($here, '$language_translate_hash', $language_translate_hash);
       
-      $mes = "add these lines to module language_translate_register.php :<br><br>" . 
+      $mes = "add these lines to module language_translate_hash.php :<br><br>" . 
           "&nbsp;&nbsp;&nbsp;'" . $en_str ."' => <br>" . 
           "&nbsp;&nbsp;&nbsp;array (<br>" . 
           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'fr' => '...',<br>" . 
@@ -59,9 +59,9 @@ function language_translate_texts_english_by_language_hash () {
   entering_in_function ($here);
 
   $lan = $_SESSION['parameters']['language'];
-  include "language_translate_register.php";
+  include "language_translate_hash.php";
 
-  foreach ($language_translate_register as $en_str => $val_a) {
+  foreach ($language_translate_hash as $en_str => $val_a) {
 
     $la_str = $val_a [$lan];
     /* debug_n_check ($here , "en_str", $en_str); */

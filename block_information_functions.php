@@ -131,7 +131,7 @@ function block_information_texts_array_lan_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  include "language_translate_register.php";
+  include "language_translate_hash.php";
 
   $en_txt_by_en_key_txt_a = irp_provide ('block_information_texts_array_en', $here);
 

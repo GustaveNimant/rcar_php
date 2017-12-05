@@ -79,9 +79,9 @@ est une assertion qu&rsquo;elle doit v&eacute;rifier',
 		'it' => '???',
     ),
 	 
-    'an action is one off remove&#44; modify&#44; justify or rename' =>
+    'an action is one off remove&#44; history&#44; rename or undo' =>
     array (
-        'fr' => 'une action possible est supprimer&#44; modifier&#44; justifier ou renommer',
+        'fr' => 'une action possible est supprimer&#44; historique&#44; renommer or d&eacute;faire',
         'it' => '???',
     ),
 
@@ -1956,6 +1956,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'fr' => 'page de restauration du paragraphe pr&eacute;c&eacute;dent',
         'it' => '???',
     ),
+    
+    'page for undoing the property' =>
+    array (
+        'fr' => 'page de restauration de la propri&eacute;t&eacute pr&eacute;c&eacute;dente',
+        'it' => '???',
+    ), 
     
     'please enter at least three words' =>
     array (

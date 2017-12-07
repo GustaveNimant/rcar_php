@@ -111,8 +111,10 @@ function command_selection_action_build () {
     father_n_son_stack_entity_push_of_father_of_son ($key, "BUTTON_$key");
     
 /* Actions Button */
+    $get_key_sel = 'command_action';
+
     $html_str  = comment_entering_of_function_name ($here);
-    $html_str .= '<select name="command_action">' . "\n";
+    $html_str .= '<select name="' . $get_key_sel . '">' . "\n";
     $html_str .= '<option value="display">';
     $html_str .= string_html_capitalized_of_string (language_translate_of_en_string ('actions'));
     $html_str .= '</option>' . "\n";
@@ -145,9 +147,14 @@ function command_selection_argument_build () {
     
     $key = str_replace('_build', '', $here);
     father_n_son_stack_entity_push_of_father_of_son ($key, "BUTTON_$key");
-    
+ 
+    $siz_hit = $_SESSION['parameters']['html_input_text_size'];
+    $get_key_sel = 'command_argument';
+
     $html_str  = comment_entering_of_function_name ($here);
-    $html_str .= '<input type="text" name="command_argument">' . "\n";
+    $html_str .= '<input type="text" name="' . $get_key_sel;
+    $html_str .= '" size="' . $siz_hit;
+    $html_str .= '">' . "\n";
     $html_str .= comment_exiting_of_function_name ($here);
     
     debug_n_check ($here , '$html_str', $html_str);
@@ -197,6 +204,8 @@ function command_build (){
     $html_str .= '<br><br>' . "\n";
     
     $html_str .= irp_provide ('command_button_form', $here);
+    $html_str .= '<br><br>' . "\n";
+
     $html_str .= irp_provide ('pervasive_page_footer', $here);
     $html_str .= comment_exiting_of_function_name ($here); 
     

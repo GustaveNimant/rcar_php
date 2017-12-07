@@ -164,7 +164,7 @@ function inputtypetext_of_get_key_of_placeholder ($get_key, $pla_hol) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($get_key, $pla_hol)");
 
-  $tex_siz = $_SESSION['parameters']['html_text_zone_size'];
+  $tex_siz = $_SESSION['parameters']['html_input_text_size'];
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<input type="text"' . "\n"; 
@@ -189,7 +189,7 @@ function inputtypetext_of_get_key_of_default_value ($get_key, $def_val) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($get_key, $def_val)");
 
-  $tex_siz = $_SESSION['parameters']['html_text_zone_size'];
+  $tex_siz = $_SESSION['parameters']['html_input_text_size'];
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<input type="text"' . "\n"; 

@@ -99,10 +99,13 @@ function block_current_undo_section_save_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
+  $en_tit = 'undo';
+  $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
+
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<input type="submit" value="';
-  $html_str .= ucfirst (language_translate_of_en_string ('undo'));
-  $html_str .= '" name="submitme"> ' . "\n";
+  $html_str .= $la_Tit;
+  $html_str .= '">' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str', $html_str);

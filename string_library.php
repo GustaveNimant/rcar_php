@@ -377,7 +377,22 @@ function string_word_of_index_of_string ($idx, $str) {
 function string_word_of_glue_of_ordinal_of_string ($glue, $ord, $str) {
     $here = __FUNCTION__;
     $wor_a = explode ($glue, $str);
+    $cou = count ($wor_a);
+    if ($cou < $ord) {
+        print_fatal_error ($here,
+        "word number $ord were NOT lower than array cardinal",
+        'array cardinal is $cou',
+        'Check');
+    }
+    if ($ord < 1) {
+        print_fatal_error ($here,
+        "word number $ord were NOT lower than 1",
+        'it is < 1',
+        'Check');
+    }
+
     $wor = $wor_a[$ord-1];
+
     if ($wor == '') {
         print_fatal_error ($here,
         "word number $ord exists in string $str",

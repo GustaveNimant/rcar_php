@@ -27,6 +27,26 @@ function git_command_add_all_files_build () {
   return $log_git;
 }
 
+function git_command_status_build () {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+  $hdir = file_basic_directory_of_name ("hd_php_server");
+  debug_n_check ($here , "hd directory", $hdir);
+  
+  $cmd_git  = 'cd ' . $hdir . ';';
+  $cmd_git .= 'git add .;';
+  $cmd_git .= 'git status';
+  debug_n_check ($here , '$cmd_git', $cmd_git);
+
+  $log_git = shell_exec ($cmd_git);
+ 
+  debug_n_check ($here , '$log_git', $log_git);
+  exiting_from_function ($here);
+
+  return $log_git;
+}
+
 function git_command_status_check_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
@@ -38,7 +58,7 @@ function git_command_status_check_build () {
     $html_str = '';
     $html_str .= irp_provide ('common_html_page_head', $here);
     $html_str .= common_html_entitled_text_of_title_of_text ($la_err . ', ' . $la_com);
-    $html_str .= git_initial ();
+    $html_str .= irp_provide ('git_command_initial', $here);
     $html_str .= irp_provide ('button_submit_select_language', $here);
     $html_str .= irp_provide ('common_html_page_tail', $here);
 
@@ -125,6 +145,20 @@ function git_command_n_commit_html_build () {
   
   return $html_str;
  } 
+
+function git_command_initial_build () {
+  $here = __FUNCTION__;
+
+  entering_in_function ($here);
+
+  $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= '<br>git commit -a -m &lt;message&gt;<br>' . "\n";
+  $html_str .= comment_exiting_of_function_name ($here);
+  debug_n_check ($here , '$html_str', $html_str);
+  exiting_from_function ($here);
+
+  return $html_str;
+}
 
 function git_command_build () {
   $here = __FUNCTION__;

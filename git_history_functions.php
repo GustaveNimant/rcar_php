@@ -3,7 +3,7 @@ require_once "irp_library.php";
 require_once "git_history_library.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
-
+# https://www.atlassian.com/git/tutorials/git-log
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['git_history_quatuor'] = "since, before, entry_current_name, blob_name";
 

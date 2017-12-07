@@ -109,6 +109,53 @@ function git_blob_sha_of_entry_name_of_blob_name_of_commit_sha ($nam_ent, $nam_b
   return $sha_blo;
 }
 
+function git_log_of_count_of_directory_path_of_entry_name_of_block_name ($cou, $hdir, $nam_ent, $nam_blo) {
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($cou, $hdir, $nam_ent, $nam_blo)");
+
+    $ext_blo = $_SESSION['parameters']['extension_block_filename'];
+    $nof_blo = $nam_blo . '.' . $ext_blo; 
+
+    $cmd_git  = "cd $hdir; ";
+    $cmd_git .= 'git log -' . $cou . ' --pretty=format:"%H %s" ./' . $nam_ent . '/'. $nof_blo;
+
+    $log_git = shell_exec ($cmd_git);
+    
+    if (string_is_empty_of_string ($log_git)) {
+        print_fatal_error ($here,
+        "log of git command >$cmd_git< were NOT empty",
+        'it is empty',
+        'chown -R www-data.www-data server  will probably do the job'
+        );
+    } 
+    debug ($here , '$log_git', $log_git);
+    
+    exiting_from_function ($here);
+    return $log_git;
+}
+
+function git_log_array_of_count_of_directory_path_of_entry_name_of_block_name ($cou, $hdir, $nam_ent, $nam_blo) {
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($cou, $hdir, $nam_ent, $nam_blo)");
+
+    $log_git = git_log_of_count_of_directory_path_of_entry_name_of_block_name ($cou, $hdir, $nam_ent, $nam_blo);
+    debug_n_check ($here , '$log_git', $log_git);
+
+    $log_git_a = explode ("\n", $log_git);
+    if (array_is_empty_of_array ($log_git_a)) {
+        print_fatal_error ($here,
+        "selected commit array were NOT empty",
+        'it is EMPTY',
+        'Check'
+        );
+    }
+
+    debug_n_check ($here, '$log_git_a', $log_git_a);
+
+    exiting_from_function ($here);
+    return $log_git_a;
+}
+
 function git_sha_commit_array_of_directory_path_of_quatuor ($hdir, $since, $before, $nam_ent, $nam_blo) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($hdir, $since, $before, $nam_ent, $nam_blo)");

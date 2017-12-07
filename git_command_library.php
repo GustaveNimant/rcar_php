@@ -47,7 +47,8 @@ function git_checkout_of_git_commit_previous_sha1_of_entry_name_of_nameoffile ($
   $cmd_git .= "git checkout $com_pre_sha $nof_blo_cur";
   debug ($here , '$cmd_git', $cmd_git);
 
-  $log_str = shell_exec ($cmd_git);
+  $log_str  = $cmd_git . ' results in '; 
+  $log_str .= shell_exec ($cmd_git); 
   debug ($here, '$log_str', $log_str);
 
   if ( ! string_is_empty_of_string ($log_str)) {
@@ -61,26 +62,6 @@ function git_checkout_of_git_commit_previous_sha1_of_entry_name_of_nameoffile ($
   exiting_from_function ($here);
   return $log_str;
 
-}
-
-function git_command_status () {
-  $here = __FUNCTION__;
-  entering_in_function ($here);
-
-  $hdir = file_basic_directory_of_name ("hd_php_server");
-  debug_n_check ($here , "hd directory", $hdir);
-  
-  $cmd_git  = 'cd ' . $hdir . ';';
-  $cmd_git .= 'git add .;';
-  $cmd_git .= 'git status';
-  debug_n_check ($here , '$cmd_git', $cmd_git);
-
-  $log_git = shell_exec ($cmd_git);
- 
-  debug_n_check ($here , '$log_git', $log_git);
-  exiting_from_function ($here);
-
-  return $log_git;
 }
 
 function git_command_add_all_files ($dir, $nof_a) {
@@ -101,25 +82,11 @@ function git_command_add_all_files ($dir, $nof_a) {
   return $cmd_git;
 }
 
-function git_initial () {
-  $here = __FUNCTION__;
-
-  entering_in_function ($here);
-
-  $html_str  = '';
-  $html_str .= "<br>git commit -a -m &lt;message&gt;<br>";
-
-  debug_n_check ($here , '$html_str', $html_str);
-  exiting_from_function ($here);
-
-  return $html_str;
-}
-
 function git_has_nothing_to_commit_status () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $log_sta = git_command_status ();
+  $log_sta = git_command_status_build ();
   debug_n_check ($here , '$log_sta', $log_sta);
   $cou_en1 = substr_count ($log_sta, 'nothing to commit (working directory clean)');
   $cou_en2 = substr_count ($log_sta, 'nothing to commit, working directory clean');
@@ -263,7 +230,7 @@ function git_command_provide () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $log_sta = git_command_status ();
+  $log_sta = git_command_status_build ();
   debug_n_check ($here , "git log status", $log_sta);
 
   $git_sta_inf_a = git_status_information_retrieve ($log_sta);

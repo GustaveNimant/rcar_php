@@ -13,11 +13,47 @@ function git_commit_previous_sha1_build () {
   return $com_pre_sha;
 }
 
+function git_commit_block_previous_log_array_build () {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+  $hdir = file_basic_directory_of_name ("hd_php_server");
+  $nam_ent_cur = irp_provide ('entry_current_name', $here);
+  $nam_blo_cur = irp_provide ('block_current_name', $here);
+  
+  $cou = 2;
+  $log_git_a = git_log_array_of_count_of_directory_path_of_entry_name_of_block_name ($cou, $hdir, $nam_ent_cur, $nam_blo_cur);
+  debug_n_check ($here, '$log_git_a', $log_git_a);
+  exiting_from_function ($here);
+  return $log_git_a;
+}
+
+function git_commit_block_previous_sha1_build () {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+  $hdir = file_basic_directory_of_name ("hd_php_server");
+  $nam_ent_cur = irp_provide ('entry_current_name', $here);
+  $nam_blo_cur = irp_provide ('block_current_name', $here);
+  
+  $log_git_a = irp_provide ('git_commit_block_previous_log_array', $here);
+  debug_n_check ($here, '$log_git_a', $log_git_a);
+  
+  $pre_lin = $log_git_a[1];
+  debug_n_check ($here, '$pre_lin', $pre_lin);
+  $blo_pre_sha = string_word_of_glue_of_ordinal_of_string (' ', 1, $pre_lin); 
+
+  exiting_from_function ($here . " with \$blo_pre_sha >$blo_pre_sha<");
+  return $blo_pre_sha;
+}
+
 function git_commit_all_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $serv = "../server";
+  $hdir = file_basic_directory_of_name ("hd_php_server");
+  debug_n_check ($here , '$hdir', $hdir);
+
   $git_cmd = "git show entry_list_display_functions.php";
   
   $cmd = "$git_cmd";
@@ -28,6 +64,5 @@ function git_commit_all_build () {
 
   return $out_str;
 }
-
 
 ?>

@@ -20,7 +20,7 @@ function entry_current_namenew_form_surnamenew_titled_gather_build (){
   $get_key = 'entry_current_surnamenew';
   $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
 
-  $siz_htz = $_SESSION['parameters']['html_text_zone_size'];
+  $siz_htz = $_SESSION['parameters']['html_input_text_size'];
 
 /* Improve gather_small_of_get_key_of_initial_value */
 /* Improve gather_small_titled_of_title_of_get_key_of_initial_value */

@@ -45,11 +45,13 @@ function block_current_undo_save_block_previous_checkout_build () {
 
   $log_str = '';
   if ($con_ite_pre == 'no previous content') {
+      $nam_blo_cur = irp_provide ('block_current_name', $here);
+
       $html_str  = comment_entering_of_function_name ($here);
       $html_str .= 'No previous block';
       $html_str .= comment_exiting_of_function_name ($here);
 
-      $log_str .= 'No previous block';
+      $log_str .= "No previous block for >$nam_blo_cur<";
   }
   else {
       $nam_ent_cur = irp_provide ('entry_current_name', $here);
@@ -57,9 +59,9 @@ function block_current_undo_save_block_previous_checkout_build () {
       $ext_blo_cur = $_SESSION['parameters']['extension_block_filename'];
       $nof_blo_cur = $nam_blo_cur . '.' . $ext_blo_cur;
 
-      $com_pre_sha = irp_provide ('git_commit_previous_sha1', $here);
+      $blo_pre_sha = irp_provide ('git_commit_block_previous_sha1', $here);
 
-      $log_str = git_checkout_of_git_commit_previous_sha1_of_entry_name_of_nameoffile ($com_pre_sha, $nam_ent_cur, $nof_blo_cur);
+      $log_str = git_checkout_of_git_commit_previous_sha1_of_entry_name_of_nameoffile ($blo_pre_sha, $nam_ent_cur, $nof_blo_cur);
 
       $html_str  = comment_entering_of_function_name ($here);
       $html_str .= 'Previous block checked out';

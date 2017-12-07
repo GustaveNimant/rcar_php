@@ -136,7 +136,8 @@ $_SESSION['parameters']['extension_item_comment_filename'] = 'com';
 $_SESSION['parameters']['extension_surname_nameoffile'] = 'sur';
 
 $_SESSION['parameters']['glue'] = ' '; /* explode implode */
-$_SESSION['parameters']['html_text_zone_size'] = 40;
+
+$_SESSION['parameters']['html_input_text_size'] = 50;
 $_SESSION['parameters']['html_textarea_rows'] = 2 ;
 $_SESSION['parameters']['html_textarea_cols'] = 50;
 

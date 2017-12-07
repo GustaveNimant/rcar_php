@@ -68,6 +68,8 @@ require_once "entry_new_create_save_functions.php";
 require_once "entry_new_name_functions.php";
 
 require_once "git_command_functions.php";
+require_once "git_history_functions.php";
+require_once "git_retrieve_functions.php";
 
 require_once "item_current_content_display_n_modify_functions.php";
 require_once "item_current_content_linked_functions.php";

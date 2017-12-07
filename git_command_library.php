@@ -21,7 +21,7 @@ function git_checkout_of_entry_name_of_nameoffile ($nam_ent_cur, $nof_blo_cur) {
   debug ($here , '$cmd_git', $cmd_git);
 
   $log_str = shell_exec ($cmd_git);
-  debug ($here , '$log_str', $log_str);
+  debug ($here, '$log_str', $log_str);
 
   if ( ! string_is_empty_of_string ($log_str)) {
       print_fatal_error ($here,
@@ -36,34 +36,31 @@ function git_checkout_of_entry_name_of_nameoffile ($nam_ent_cur, $nof_blo_cur) {
 
 }
 
-function item_name_array_of_hd_directory_of_entry_name ($hdir, $nam_ent) {
+function git_checkout_of_git_commit_previous_sha1_of_entry_name_of_nameoffile ($com_pre_sha, $nam_ent_cur, $nof_blo_cur) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($hdir, $nam_ent, $ext_fil)");
+  entering_in_function ($here . " ($com_pre_sha, $nam_ent_cur, $nof_blo_cur)");
 
-  $ext_fil = $_SESSION['parameters']['extension_block_name_list_order_filename'];
-  $nam_fil = $nam_ent . "/" . 'Item_name_catalog.' . $ext_fil;
- 
-  debug_n_check ($here , '$nam_fil', $nam_fil);
+  $hdir = file_basic_directory_of_name ("hd_php_server");
+  debug_n_check ($here , '$hdir', $hdir);
+  
+  $cmd_git  = "cd $hdir" . "$nam_ent_cur; "; 
+  $cmd_git .= "git checkout $com_pre_sha $nof_blo_cur";
+  debug ($here , '$cmd_git', $cmd_git);
+
+  $log_str = shell_exec ($cmd_git);
+  debug ($here, '$log_str', $log_str);
+
+  if ( ! string_is_empty_of_string ($log_str)) {
+      print_fatal_error ($here,
+      "message from git command >$cmd_git< were empty",
+      "it is NOT empty >$log_str<",
+      'chown -R www-data.www-data server will probably do the job'
+      );
+  } 
+
   exiting_from_function ($here);
+  return $log_str;
 
-  return $nam_fil;
-}
-
-function item_any_text_filename ($hdir, $nam_ent, $nam_ite, $ext_fil) {
-  $here = __FUNCTION__;
-  entering_in_function ($here);
-
-  debug_n_check ($here , " input hdir", $hdir);
-  debug_n_check ($here , " input item name", $nam_ite);
-  debug_n_check ($here , " input entry_current_name", $nam_ent);
-  debug_n_check ($here , " input file extension", $ext_fil);
-
-  $nam_fil = $nam_ent . "/" . $nam_ite . '.' . $ext_fil;
- 
-  debug_n_check ($here , '$nam_fil', $nam_fil);
-  exiting_from_function ($here);
-
-  return $nam_fil;
 }
 
 function git_command_status () {

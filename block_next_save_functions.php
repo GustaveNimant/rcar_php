@@ -69,7 +69,6 @@ function section_block_next_save_link_to_return_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
     
-    
     $get_key = 'block_current_name';
     $get_val = irp_provide ($get_key, $here);
     $sur_blo_cur = irp_provide ('block_current_surname_from_block_current_name', $here);

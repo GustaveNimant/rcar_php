@@ -361,7 +361,7 @@ function check_is_substring_of_substring_off_string ($sub_str, $str) {
 }
 
 function string_last_word_of_string ($str) {
-  $here = __FUNCTION__;
+    $here = __FUNCTION__;
     $wor_a = explode (" ", $str);
     $wor = end ($wor_a);
     return $wor;
@@ -378,6 +378,12 @@ function string_word_of_glue_of_ordinal_of_string ($glue, $ord, $str) {
     $here = __FUNCTION__;
     $wor_a = explode ($glue, $str);
     $wor = $wor_a[$ord-1];
+    if ($wor == '') {
+        print_fatal_error ($here,
+        "word number $ord exists in string $str",
+        'it does NOT',
+        'Check');
+    }
     return $wor;
 }
 

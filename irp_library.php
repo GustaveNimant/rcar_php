@@ -17,6 +17,8 @@ function irp_is_providable_of_irp_key ($irp_key) {
     $irp_build = $irp_key . "_build";
 
     $boo = function_exists ($irp_build);
+
+    exiting_from_function ($here . " is " . string_of_boolean ($boo));
     return $boo;
 }
 
@@ -30,7 +32,6 @@ function irp_is_data_of_irp_key ($irp_key) {
         );
     
     exiting_from_function ($here . " is " . string_of_boolean ($boo));
-    
     return $boo;
 }
 

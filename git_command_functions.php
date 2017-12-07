@@ -10,7 +10,7 @@ $Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);
 
-function git_commands_all_files_build () {
+function git_command_add_all_files_build () {
   $here = __FUNCTION__;
 
   $hdir = file_basic_directory_of_name ("hd_php_server");
@@ -27,18 +27,17 @@ function git_commands_all_files_build () {
   return $log_git;
 }
 
-function git_status_check_build () {
+function git_command_status_check_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-
-  $lang_err = language_translate_of_en_string ('Error');
-  $lang_com = language_translate_of_en_string ('Take a previously committed');
+  $la_err = language_translate_of_en_string ('Error');
+  $la_com = language_translate_of_en_string ('Take a previously committed');
 
   if (git_has_nothing_to_commit_status ()){ 
     $html_str = '';
     $html_str .= irp_provide ('common_html_page_head', $here);
-    $html_str .= common_html_entitled_text_of_title_of_text ($lang_err . ', ' . $lang_com);
+    $html_str .= common_html_entitled_text_of_title_of_text ($la_err . ', ' . $la_com);
     $html_str .= git_initial ();
     $html_str .= irp_provide ('button_submit_select_language', $here);
     $html_str .= irp_provide ('common_html_page_tail', $here);

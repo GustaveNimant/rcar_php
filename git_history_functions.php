@@ -1,50 +1,51 @@
 <?php
 require_once "irp_library.php";
+require_once "git_history_library.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
 
 $Documentation[$module]['what is it'] = "it is ...";
-$Documentation[$module]['what for'] = "to ...";
+$Documentation[$module]['git_history_quatuor'] = "since, before, entry_current_name, blob_name";
 
 entering_in_module ($module);
 
 /* 6deee17 fait par ::1 le 9 March 2017 à 17h49:05 */
 
-function git_history_quatuor_build () {
+function git_quatuor_array_build () {
   $here = __FUNCTION__;
   entering_in_function ($here . " ()");
   
   $qua_by_a = array (
       "since" => "2016-05-18",
-      "before" => "2017-03-10",
-      "entry_current_name" => "Population", 
-      "blob_name" => "Citoyen.ite",
+      "before" => "2017-12-31",
+      "entry_current_name" => "Utilisation", 
+      "blob_name" => "Menu_faq.blo",
   );
  
-  debug ($here, '$qua_a', $qua_a);
+  debug ($here, '$qua_by_a', $qua_by_a);
   exiting_from_function ($here);
   return $qua_by_a;
 }
 
-function git_history_build () {
+function git_quatuor_history_array_build () {
   $here = __FUNCTION__;
   entering_in_function ($here . " ()");
 
   $hdir = file_basic_directory_of_name ("hd_php_server");
   debug_n_check ($here , '$hdir', $hdir);
    
-  $qua_by_a = git_history_quatuor_build ();
+  $qua_by_a = git_quatuor_array_build ();
   $since = $qua_by_a['since'];
   $before = $qua_by_a['before'];
   $nam_ent = $qua_by_a['entry_current_name'];
   $nam_blo = $qua_by_a['blob_name'];
   
   $str = git_log_shaipdate_of_directory_path_of_quatuor ($hdir, $since, $before, $nam_ent, $nam_blo);
-  $str_a = explode ("\n", $str);
+  $git_qua_his_a = explode ("\n", $str);
   
-  debug ($here, '$str_a', $str_a);
+  debug ($here, '$git_qua_his_a', $git_qua_his_a);
   exiting_from_function ($here);
-  return $str_a;
+  return $git_qua_his_a;
 }
 
 function git_blob_content_array_build () {
@@ -54,7 +55,7 @@ function git_blob_content_array_build () {
   $hdir = file_basic_directory_of_name ("hd_php_server");
   debug_n_check ($here , '$hdir', $hdir);
 
-  $qua_by_a = git_history_quatuor_build ();
+  $qua_by_a = git_quatuor_history_array_build ();
   $since = $qua_by_a['since'];
   $before = $qua_by_a['before'];
   $nam_ent = $qua_by_a['entry_current_name'];

@@ -1,6 +1,7 @@
 <?php
 
 require_once "management_library.php";
+require_once "build_requirements.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
 
@@ -71,8 +72,13 @@ function command_display ($what) {
         print $html_str;
         break;
 
-    case 'git_history' :
-        $str_a = git_history_build ();
+    case 'git_quatuor_array' :
+        $str_a = git_quatuor_array_build ();
+        print_html_array ($here, $what, $str_a);
+        break;
+
+    case 'git_history_quatuor_array' :
+        $str_a = git_history_quatuor_array_build ();
         print_html_array ($here, $what, $str_a);
         break;
         

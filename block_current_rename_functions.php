@@ -45,20 +45,11 @@ function section_block_current_rename_link_to_return_build () {
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
   $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
 
-  $en_txt = 'back to the entry';
-  $la_txt  = language_translate_of_en_string ($en_txt);
-  $la_Txt  = string_html_capitalized_of_string ($la_txt);
-  $la_Txt .= ' ' . $sur_ent_cur;
-
-  debug_n_check ("$here", '$la_Txt', $la_Txt);
-
   $script_to_return = 'entry_current_display_script.php';
-  $get_key = 'entry_current_name';
-  $get_val = $nam_ent_cur;
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>' . "\n";
-  $html_str .= link_to_return_of_string_of_get_key_of_get_val_of_script_to_return ($la_Txt, $get_key, $get_val, $script_to_return) . "\n";
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_script_to_return ($nam_ent_cur, $sur_ent_cur, $script_to_return);
   $html_str .= '</center>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 

@@ -39,6 +39,7 @@ function father_n_son_stack_script_push_of_father_of_son ($nam_fat, $nam_son) {
   else {
       $fat_to_son = $nam_fat . ' -> ' . $nam_son;
       session_hash_push_inplace_of_key_of_value ('father_n_son_stack_script', $fat_to_son);
+#      print_html_array ($here, '$_SESSION', $_SESSION);
       $fat_n_son_mod_h = $_SESSION['father_n_son_stack_script'];
       debug ($here, '$fat_n_son_mod_h', $fat_n_son_mod_h);
   }

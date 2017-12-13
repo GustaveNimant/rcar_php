@@ -159,34 +159,37 @@ function session_hash_push_inplace_of_key_of_value ($key, $val) {
     entering_in_function ($here . " ($key, \$val)");
     
 # Example array $_SESSION['father_n_son_stack_entity'] 
- 
+    if (!isset ($val)) {
+        print_fatal_error ($here,
+        "value were defined for \$_SESSION['$key']",
+        "it is NOT",
+        "Check");
+    }
     if (isset ($_SESSION)) {
         if (isset ($_SESSION[$key])) {
             if ( is_array ($_SESSION[$key]) ) {
                 if ( ! array_exists_of_value_of_array ($val, $_SESSION[$key]) ) {
                     array_push ($_SESSION[$key], $val);
-#                    $nam_arr = '$_SESSION["'. $key. '"]';
-#                    array_push_inplace_of_array_name_of_value_of_array ($nam_arr, $val, $_SESSION[$key]);
                 }
             }
         }  
     }
-
-  /* print "in $here ici<br>"; */
-  /* print "key is \"$key\"<br>"; */
-  /* print "val is :<br>"; */
-  /* print_r ($val);  */
-  /* print "<br>end is :<br>"; */
-  /* print_r (end ($_SESSION[$key]));  */
-  /* print "<br>count is :" . count ($_SESSION[$key]);  */
-  /* print "<br>fin<br>"; */
     
-#    session_check_end_value_of_key_of_value ($key, $val);
+    /* print "in $here ici<br>"; */
+    /* print "key is \"$key\"<br>"; */
+    /* print "val is :<br>"; */
+    /* print_r ($val);  */
+    /* print "<br>end is :<br>"; */
+    /* print_r (end ($_SESSION[$key]));  */
+    /* print "<br>count is :" . count ($_SESSION[$key]);  */
+    /* print "<br>fin<br>"; */
+    
+    #    session_check_end_value_of_key_of_value ($key, $val);
     
     $log_str = "Value >$val< has been successfully pushed inplace in \$_SESSION['$key'] array";
     file_log_write ($here, $log_str);
     
-    exiting_from_function ($here);
+    exiting_from_function ($here . " ($key, \$val)");
 return;
 }
 

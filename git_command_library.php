@@ -47,17 +47,18 @@ function git_checkout_of_git_commit_previous_sha1_of_entry_name_of_nameoffile ($
   $cmd_git .= "git checkout $com_pre_sha $nof_blo_cur";
   debug ($here , '$cmd_git', $cmd_git);
 
-  $log_str  = $cmd_git . ' results in '; 
-  $log_str .= shell_exec ($cmd_git); 
-  debug ($here, '$log_str', $log_str);
+  $she_str  = shell_exec ($cmd_git); 
+  debug ($here, '$she_str', $she_str);
 
-  if ( ! string_is_empty_of_string ($log_str)) {
+  if ( ! string_is_empty_of_string ($she_str)) {
       print_fatal_error ($here,
       "message from git command >$cmd_git< were empty",
-      "it is NOT empty >$log_str<",
+      "it is NOT empty >$she_str<",
       'chown -R www-data.www-data server will probably do the job'
       );
   } 
+
+  $log_str  = $cmd_git; 
 
   exiting_from_function ($here);
   return $log_str;

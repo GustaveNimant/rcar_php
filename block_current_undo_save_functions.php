@@ -37,7 +37,7 @@ function block_current_undo_save_page_title_build (){
   return $html_str;
 }
 
-function block_current_undo_save_block_previous_checkout_build () { 
+function block_current_undo_save_block_previous_checkout_XXX () { 
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -74,7 +74,6 @@ function block_current_undo_save_block_previous_checkout_build () {
   return $html_str;
 }
 
-
 function block_current_undo_save_link_to_return_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
@@ -98,8 +97,6 @@ function block_current_undo_save_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $log_str   = '';
-
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_page_header', $here);
   $html_str .= '<br><br> ';
@@ -107,8 +104,8 @@ function block_current_undo_save_build () {
   $html_str .= irp_provide ('block_current_undo_save_page_title', $here);
   $html_str .= '<br><br> ';
 
-  $html_str  .= irp_provide ('block_current_undo_save_block_previous_checkout', $here);
-  $html_str .= '<br><br> ';
+  $log_str   = irp_provide ('git_checkout_block_previous', $here);
+  file_log_write ($here, $log_str);
 
   $html_str .= irp_provide ('git_command_n_commit_html', $here);
   $html_str .= '<br><br> ';
@@ -117,8 +114,6 @@ function block_current_undo_save_build () {
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   $html_str .= comment_exiting_of_function_name ($here);
-
-  file_log_write ($here, $log_str);
 
   debug_n_check ($here, '$html_str', $html_str);
   exiting_from_function ($here);

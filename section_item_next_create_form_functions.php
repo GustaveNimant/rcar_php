@@ -35,6 +35,7 @@ function subsection_item_next_content_build (){
     debug_n_check ($here , '$con_ite_cur', $con_ite_cur);
     
     $entity_textarea = 'item_next_content';
+
     $row_hta = $_SESSION['parameters']['html_textarea_rows'];
     $col_hta = $_SESSION['parameters']['html_textarea_cols'];
     
@@ -77,6 +78,7 @@ function subsection_item_next_justification_build (){
     entering_in_function ($here);
     
     $entity_textarea = 'item_next_justification';
+
     $row_hta = $_SESSION['parameters']['html_textarea_rows'];
     $col_hta = $_SESSION['parameters']['html_textarea_cols'];
     
@@ -97,12 +99,12 @@ function section_item_next_create_form_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
+  $script_action = 'block_next_save_script.php';
+ 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form ' . "\n";
-  $html_str .= 'method="get" action="block_next_save_script.php">' . "\n";
+  $html_str .= 'method="get" action="' . $script_action. '">' . "\n";
   
-  $html_str .= get_hash_store_of_get_key_of_get_value_of_where ('item_current_action', 'modify', $here);
-
   $html_str .= '<br>';
   $html_str .= irp_provide ('subsection_item_next_create_title', $here);
   $html_str .= '<br>';

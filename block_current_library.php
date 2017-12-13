@@ -28,7 +28,7 @@ function block_current_content_of_four_elements ($con_ite_cur, $jus_ite_cur, $co
 
   $con_blo_cur .= 'item_previous_content :';
   $con_blo_cur .= "\n";
-  $con_blo_cur .= $con_ite_cur;
+  $con_blo_cur .= $con_ite_pre;
   $con_blo_cur .= "\n";
 
   $con_blo_cur .= 'block_previous_sha1 :';

@@ -65,4 +65,22 @@ function git_commit_all_build () {
   return $out_str;
 }
 
+function git_checkout_block_previous_build () {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+    $nam_ent_cur = irp_provide ('entry_current_name', $here);
+    $nam_blo_cur = irp_provide ('block_current_name', $here);
+    $ext_blo_cur = $_SESSION['parameters']['extension_block_filename'];
+    $nof_blo_cur = $nam_blo_cur . '.' . $ext_blo_cur;
+
+    $com_pre_sha = irp_provide ('git_commit_block_previous_sha1', $here);
+    
+    $log_str = git_checkout_of_git_commit_previous_sha1_of_entry_name_of_nameoffile ($com_pre_sha, $nam_ent_cur, $nof_blo_cur);
+    
+    exiting_from_function ($here);
+    
+    return $log_str;
+}
+
 ?>

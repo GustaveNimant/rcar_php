@@ -53,7 +53,8 @@ function section_block_next_save_build () {
   $nam_blo_cur = irp_provide ('block_current_name', $here);
   $con_blo_nex = irp_provide ('block_next_content', $here);
 
-  block_content_write ($nam_ent, $nam_blo_cur, $con_blo_nex);
+  $log_str = block_content_write ($nam_ent, $nam_blo_cur, $con_blo_nex);
+  file_log_write ($here, $log_str);
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('git_command_n_commit_html', $here);

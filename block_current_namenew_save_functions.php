@@ -173,9 +173,11 @@ function block_current_namenew_save_link_to_return_build () {
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
   $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
   
+  $script_to_return = 'entry_current_display_script.php'; 
+
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>' . "\n";
-  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_script_to_return ($nam_ent_cur, $sur_ent_cur, 'entry_current_display_script.php'); 
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_script_to_return ($nam_ent_cur, $sur_ent_cur, $script_to_return); 
   $html_str .= '</center>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
   
@@ -192,6 +194,7 @@ function block_current_namenew_save_irp_path_clean () {
 /* Clean all Father Nodes and Store New as Current */
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order_current', $here); 
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_current_nameoffile_array', $here); 
+
 #  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'GET_block_current_surnamenew', $here); 
  
   exiting_from_function ($here);
@@ -201,14 +204,6 @@ function block_current_namenew_save_irp_path_clean () {
 function block_current_namenew_save_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
-
-  /* $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__); */
-
-/* getting DATA $get_val */
-  /* $get_key = 'block_current_surnamenew';  */
-  /* $new_sur_blo = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here); */
-
-  $log_str   = '';
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_page_header', $here);

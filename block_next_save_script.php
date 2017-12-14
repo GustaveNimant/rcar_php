@@ -13,7 +13,7 @@ entering_in_script ($script);
 
 father_n_son_stack_script_push_of_current_script ($script);
 
-print_html_array ($here, '$_GET', $_GET);
+print_html_array ($script, '$_GET', $_GET);
 
 foreach ($_GET as $get_key => $get_val) {
     $xxx = irp_data_value_retrieve_and_store_of_get_key_of_script_name_of_where ($get_key, $script, $script);

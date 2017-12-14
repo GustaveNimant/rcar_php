@@ -53,6 +53,7 @@ function section_block_next_save_build () {
   $nam_blo_cur = irp_provide ('block_current_name', $here);
   $con_blo_nex = irp_provide ('block_next_content', $here);
 
+/* WRITE */
   $log_str = block_content_write ($nam_ent, $nam_blo_cur, $con_blo_nex);
   file_log_write ($here, $log_str);
 
@@ -97,6 +98,17 @@ function section_block_next_save_link_to_return_build () {
     return $html_str;
 }
 
+function block_next_save_irp_path_clean () {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+/* Clean all Father Nodes from READ : block_current_content has changed */
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_current_nameoffile_array', $here);
+ 
+  exiting_from_function ($here);
+  return;
+}
+
 function block_next_save_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
@@ -110,6 +122,8 @@ function block_next_save_build () {
 
   $html_str .= irp_provide ('section_block_next_save', $here);
   $html_str .= '<br><br>';
+
+  block_next_save_irp_path_clean (); /* Improve */
 
   $html_str .= irp_provide ('section_block_next_save_link_to_return', $here);
   $html_str .= '<br><br>';

@@ -86,6 +86,8 @@ function link_to_return_of_script_to_return ($scr_ret) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($scr_ret)");
 
+/* Improve this works only for back to Command : need link between script and its label*/
+
   $en_nam_lab = str_replace ('_script.php', '', $scr_ret);
   $la_nam_lab = language_translate_of_en_string ($en_nam_lab);
   $la_nam_Lab = string_html_capitalized_of_string ($la_nam_lab);
@@ -112,6 +114,23 @@ function link_to_return_of_script_to_return ($scr_ret) {
 function link_to_return_of_la_title_of_script_to_return ($la_tit, $scr_ret) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($la_tit, $scr_ret)");
+
+  $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= '<a href="' . $scr_ret . '">';
+  $html_str .= $la_tit;
+  $html_str .= '</a>' . "\n";
+  $html_str .= comment_exiting_of_function_name ($here);
+  
+  exiting_from_function ($here);
+
+  return $html_str;
+}
+
+function link_to_return_of_en_title_of_script_to_return ($en_tit, $scr_ret) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($en_tit, $scr_ret)");
+
+  $la_tit = language_translate_of_en_string ($en_tit);
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<a href="' . $scr_ret . '">';

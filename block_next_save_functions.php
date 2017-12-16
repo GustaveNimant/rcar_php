@@ -7,7 +7,7 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 
 entering_in_module ($module);
 
-function section_block_next_page_title_build () {
+function block_next_page_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -41,7 +41,7 @@ function section_block_next_page_title_build () {
   return $html_str;
 }
 
-function section_block_next_save_build () {
+function block_next_save_write_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -117,10 +117,10 @@ function block_next_save_build () {
   $html_str .= irp_provide ('pervasive_page_header', $here);
   $html_str .= '<br><br>';
 
-  $html_str .= irp_provide ('section_block_next_page_title', $here);
+  $html_str .= irp_provide ('block_next_page_title', $here);
   $html_str .= '<br><br>';
 
-  $html_str .= irp_provide ('section_block_next_save', $here);
+  $html_str .= irp_provide ('block_next_save_write', $here);
   $html_str .= '<br><br>';
 
   block_next_save_irp_path_clean (); /* Improve */

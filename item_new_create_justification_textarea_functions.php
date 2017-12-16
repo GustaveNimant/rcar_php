@@ -13,10 +13,25 @@ function item_new_create_justification_textarea_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $kin_blo = irp_provide ('entry_block_kind', $here);
-  $en_pla = 'enter the text of the ' . $kin_blo;
+  $en_pla = 'enter your justification';
+  $la_Pla = ucfirst (language_translate_of_en_string ($en_pla));
+
+  debug_n_check ($here , '$la_Pla',  $la_Pla);  
+  $entity_textarea = 'item_new_justification';
   
-  $html_str  = textarea_of_get_key_of_en_placeholder ('item_new_justification', $en_pla, '  ');
+  $row_hta = $_SESSION['parameters']['html_textarea_rows'];
+  $col_hta = $_SESSION['parameters']['html_textarea_cols'];
+  
+  $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= '<textarea name="' . $entity_textarea . '" ';
+  $html_str .= 'placeholder="';
+  $html_str .= $la_Pla;
+  $html_str .= '" ';
+  $html_str .= 'rows="' . $row_hta . '" cols="' .$col_hta;
+  $html_str .= '</textarea> ' . "\n";
+  $html_str .= comment_exiting_of_function_name ($here);
+
+#  $html_str  = textarea_of_get_key_of_en_placeholder ('item_new_justification', $en_pla, '  ');
 
   debug_n_check ($here , '$html_str',  $html_str);
   exiting_from_function ($here);

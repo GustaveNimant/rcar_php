@@ -203,9 +203,11 @@ function block_list_reorder_link_to_return_build () {
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
   $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
 
+  $script_to_return = 'entry_current_display_script.php';
+
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>' . "\n";
-  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_script_to_return ($nam_ent_cur, $sur_ent_cur, 'entry_current_display_script.php'); 
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_script_to_return ($nam_ent_cur, $sur_ent_cur, $script_to_return); 
   $html_str .= '</center>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 

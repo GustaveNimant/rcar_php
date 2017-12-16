@@ -223,6 +223,12 @@ c&rsquo;est une composante d&rsquo;un bloc',
         'it' => '???',
     ),
     
+    'back to entry list' => 
+    array (
+		'fr' => 'retour &agrave; la liste des entr&eacute;es',
+		'it' => '???',
+    ),
+
     'back to entries' => 
     array (
 		'fr' => 'retour aux entr&eacute;es',
@@ -932,12 +938,6 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
     'entries' => 
     array (
 		'fr' => 'entr&eacute;es',
-		'it' => '???',
-    ),
-
-    'entry' => 
-    array (
-		'fr' => 'entr&eacute;e',
 		'it' => '???',
     ),
 
@@ -1717,6 +1717,24 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ), 
     
+    'page for creating a new block of paragraphs for entry' =>
+    array (
+        'fr' => 'page de cr&eacute;ation d&rsquo;un nouveau bloc de paragraphes pour l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ),
+
+    'page for creating a new block of properties for entry' =>
+    array (
+        'fr' => 'page de cr&eacute;ation d&rsquo;un nouveau bloc de propri&eacute;t&eacute;s pour l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ),
+
+    'page for creating a new paragraph for entry' =>
+    array (
+        'fr' => 'page de cr&eacute;ation d&rsquo;un nouveau paragraphe pour l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ),
+
     'page for defining a new paragraph for entry' =>
     array (
         'fr' => 'page de d&eacute;finition d&rsquo;un nouveau paragraphe pour l&rsquo;entr&eacute;e',

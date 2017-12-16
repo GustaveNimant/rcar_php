@@ -14,18 +14,14 @@ function block_new_create_page_title_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $sur_ent = irp_provide ('entry_current_surname_from_entry_current_name', $here);
+  $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
   $kin_blo = irp_provide ('entry_block_kind', $here);
+  $kin_blo_plu = block_kind_plural_of_block_kind ($kin_blo);
 
-  if ($kin_blo == 'question'){
-      $en_tit = 'page for asking a new ' . $kin_blo . ' for the'; 
-  } 
-  else {
-      $en_tit = 'page for defining a new ' . $kin_blo . ' for entry'; 
-  }
+  $en_tit = 'page for creating a new block of ' . $kin_blo_plu . ' for entry';
   $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);
-  $la_bub_Tit .= ' <i><b> ' . $sur_ent . '</b></i> ';
+  $la_bub_Tit .= ' <i><b> ' . $sur_ent_cur . '</b></i> ';
   
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>' . "\n";
@@ -44,11 +40,14 @@ function block_new_create_link_to_return_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
+  $nam_ent_cur = irp_provide ('entry_current_name', $here);
+  $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
+
   $script_to_return = 'entry_current_display_script.php';
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>' . "\n";
-  $html_str .= link_to_return_of_script_to_return ($script_to_return);
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_script_to_return ($nam_ent_cur, $sur_ent_cur, $script_to_return); 
   $html_str .= '</center>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 

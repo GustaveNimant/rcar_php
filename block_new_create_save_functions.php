@@ -271,7 +271,7 @@ function block_new_create_save_build (){
   $html_str .= irp_provide ('block_new_create_save_surname_catalog_actualize', $here); /* move elsewhere ?? */
   $html_str .= '<br><br>' . "\n";
 
-  block_new_create_save_irp_path_clean ();
+  block_new_create_save_irp_path_clean (); /* Improve */
 
   $html_str .= irp_provide ('git_command_n_commit_html', $here);
   $html_str .= '<br><br>' . "\n";

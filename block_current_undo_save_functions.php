@@ -37,43 +37,6 @@ function block_current_undo_save_page_title_build (){
   return $html_str;
 }
 
-function block_current_undo_save_block_previous_checkout_XXX () { 
-  $here = __FUNCTION__;
-  entering_in_function ($here);
-
-  $con_ite_pre = irp_provide ('item_previous_content_from_block_current_content', $here);
-
-  $log_str = '';
-  if ($con_ite_pre == 'no previous content') {
-      $nam_blo_cur = irp_provide ('block_current_name', $here);
-
-      $html_str  = comment_entering_of_function_name ($here);
-      $html_str .= 'No previous block';
-      $html_str .= comment_exiting_of_function_name ($here);
-
-      $log_str .= "No previous block for >$nam_blo_cur<";
-  }
-  else {
-      $nam_ent_cur = irp_provide ('entry_current_name', $here);
-      $nam_blo_cur = irp_provide ('block_current_name', $here);
-      $ext_blo_cur = $_SESSION['parameters']['extension_block_filename'];
-      $nof_blo_cur = $nam_blo_cur . '.' . $ext_blo_cur;
-
-      $blo_pre_sha = irp_provide ('git_commit_block_previous_sha1', $here);
-
-      $log_str = git_checkout_of_git_commit_previous_sha1_of_entry_name_of_nameoffile ($blo_pre_sha, $nam_ent_cur, $nof_blo_cur);
-
-      $html_str  = comment_entering_of_function_name ($here);
-      $html_str .= 'Previous block checked out';
-      $html_str .= comment_exiting_of_function_name ($here);
-  }
-
-  file_log_write ($here, $log_str);
-  exiting_from_function ($here . " with $html_str");
- 
-  return $html_str;
-}
-
 function block_current_undo_save_link_to_return_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
@@ -93,6 +56,17 @@ function block_current_undo_save_link_to_return_build () {
   return $html_str;
 }
 
+function block_current_undo_save_irp_path_clean () {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+/* Clean all Father Nodes from READ : block_current_content has changed */
+    irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_current_nameoffile_array', $here);
+    
+    exiting_from_function ($here);
+    return;
+}
+
 function block_current_undo_save_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
@@ -104,8 +78,10 @@ function block_current_undo_save_build () {
   $html_str .= irp_provide ('block_current_undo_save_page_title', $here);
   $html_str .= '<br><br> ';
 
-  $log_str   = irp_provide ('git_checkout_block_previous', $here);
+  $log_str   = irp_provide ('git_checkout_block_previous', $here);  /* WRITE */
   file_log_write ($here, $log_str);
+
+  block_current_undo_save_irp_path_clean (); /* Improve */
 
   $html_str .= irp_provide ('git_command_n_commit_html', $here);
   $html_str .= '<br><br> ';

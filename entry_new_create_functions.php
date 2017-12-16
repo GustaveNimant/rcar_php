@@ -127,8 +127,8 @@ function entry_new_create_build () {
   $html_str .= irp_provide ('section_entry_new_create_save', $here);
   $html_str .= '<br><br>' . "\n";
 
-  $html_str .= irp_provide ('section_entry_new_create_link_to_return', $here);
-  $html_str .= '<br><br>' . "\n";
+  /* $html_str .= irp_provide ('section_entry_new_create_link_to_return', $here); */
+  /* $html_str .= '<br><br>' . "\n"; */
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   $html_str .= comment_exiting_of_function_name ($here);

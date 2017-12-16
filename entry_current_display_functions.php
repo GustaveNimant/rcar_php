@@ -42,6 +42,10 @@ function entry_current_display_build (){
     $here = __FUNCTION__;
     entering_in_function ($here);
     
+    $nam_ent_cur = irp_provide ('entry_current_name', $here);
+    $fnd_ent_cur = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent_cur);
+    debug_n_check ($here , '$fnd_ent_cur', $fnd_ent_cur);
+
     $html_str  = comment_entering_of_function_name ($here);
     
     $html_str .= irp_provide ('pervasive_page_header', $here);
@@ -54,12 +58,16 @@ function entry_current_display_build (){
     
     $html_str .= irp_provide ('section_block_new_create', $here);
     $html_str .= '<br>' . "\n";
-    
-    $html_str .= irp_provide ('section_block_current_list_reorder', $here);
-    $html_str .= '<br><br>' . "\n";
 
-    $html_str .= irp_provide ('section_block_current_list_display', $here);
-    $html_str .= '<br>' . "\n";
+    if (file_directory_is_not_empty_of_directory_path ($fnd_ent_cur)) {/* Improve */
+
+        $html_str .= irp_provide ('section_block_current_list_reorder', $here);
+        $html_str .= '<br><br>' . "\n";
+        
+        $html_str .= irp_provide ('section_block_current_list_display', $here);
+        $html_str .= '<br>' . "\n";
+        
+    } /* Improve */
 
     $html_str .= irp_provide ('pervasive_page_footer', $here);
     $html_str .= comment_exiting_of_function_name ($here);

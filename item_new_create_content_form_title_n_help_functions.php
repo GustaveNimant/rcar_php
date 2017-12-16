@@ -52,7 +52,9 @@ function item_new_create_content_form_title_n_help_build (){
   $la_Tit .= ' : ';
   $la_Tit .= irp_provide ('item_new_create_content_form_title_help', $here);
 
-  $html_str = common_html_div_background_color_of_html ($la_Tit);
+  $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= common_html_span_background_color_of_html ($la_Tit);
+  $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str',  $html_str);
   exiting_from_function ($here);

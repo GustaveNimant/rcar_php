@@ -85,7 +85,7 @@ $_SESSION['is_data_entity_name'] = array (
 );
 
 $_SESSION['is_read_entity_name'] = array (
-    'block_name_list_order_current' => TRUE,
+    'block_name_list_order_current_string' => TRUE,
     'surname_catalog' => TRUE,
     'entry_fullnameofdirectory_array' => TRUE,
 );

@@ -36,10 +36,7 @@ function block_name_list_order_new_form_blocks_display_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
 
-/* Improve store_force */    
     $nam_blo_ord_new_a = irp_provide ('block_name_list_order_new_array', $here);
-    irp_store_force ('block_name_list_order_current', $nam_blo_ord_new_a, 'block_name_list_order_new_string');
-
     $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);
     
     $glue = $_SESSION['parameters']['glue'];

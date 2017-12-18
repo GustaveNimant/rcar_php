@@ -1843,6 +1843,24 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ),
     
+    'page for displaying the result of the removal of the paragraph' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la suppression du paragraphe',
+        'it' => '???',
+    ), 
+
+    'page for displaying the result of the removal of the property' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la suppression de la propri&eacute;t&eacute;',
+        'it' => '???',
+    ), 
+
+    'page for displaying the result of the removal of the question' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la suppression de la question',
+        'it' => '???',
+    ), 
+
     'page for displaying the result of the renaming of the question' =>
     array (
         'fr' => 'page d&rsquo;affichage du r&eacute;sultat du renommage de la question',
@@ -1858,6 +1876,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
     'page for displaying the result of reordering the paragraphs for entry' =>
     array (
         'fr' => 'page d&rsquo;affichage du changement de l&rsquo;ordre des paragraphes de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+
+    'page for displaying the result of reordering the properties for entry' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du changement de l&rsquo;ordre des propri&eacute;t&eacute;s de l&rsquo;entr&eacute;e',
         'it' => '???',
     ), 
 
@@ -1939,6 +1963,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ), 
     
+   'page for removing the property' =>
+    array (
+        'fr' => 'page de suppression de la propri&eacute;t&eacute;',
+        'it' => '???',
+   ), 
+
     'page for renaming the entry' =>
     array (
         'fr' => 'page de renommage de l&rsquo;entr&eacute;e',
@@ -1968,7 +1998,13 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'fr' => 'page de modification de l&rsquo;ordre des paragraphes de l&rsquo;entr&eacute;e',
         'it' => '???',
     ),
-
+    
+    'page for reordering the properties of the entry' =>
+    array ( 
+        'fr' => 'page de modification de l&rsquo;ordre des propri&eacute;t&eacute;s de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+    
     'page for reordering the questions of the entry' =>
     array (
         'fr' => 'page de modification de l&rsquo;ordre des questions de l&rsquo;entr&eacute;e',

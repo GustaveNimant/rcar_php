@@ -71,7 +71,7 @@ function block_name_list_order_deletion_build () {
   $nam_blo_cur = irp_provide ('block_current_name', $here);
   debug_n_check ($here , '$nam_blo_cur', $nam_blo_cur);
 
-  $nam_blo_lis_cur = irp_provide ('block_name_list_order_current', $here);
+  $nam_blo_lis_cur = irp_provide ('block_name_list_order_current_string', $here);
   debug_n_check ($here , '$nam_blo_lis_cur', $nam_blo_lis_cur);
 
   $glue = $_SESSION['parameters']['glue'];
@@ -107,7 +107,7 @@ function block_current_remove_save_irp_path_clean () {
 
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'GET_block_current_name', $here); 
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_current_nameoffile_array', $here); 
-  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order_current', $here); 
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order_current_string', $here); 
  
   exiting_from_function ($here);
   return;

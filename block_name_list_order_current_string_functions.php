@@ -35,11 +35,11 @@ function block_name_list_order_current_string_build () {
       file_log_write ($here, $log_str);
       $entity = entity_name_of_build_function_name ($here);
 /* Improve is that correct ? */
-      father_n_son_stack_entity_push_of_father_of_son ("WRITE_block_name_list_order_current", $entity);
+      father_n_son_stack_entity_push_of_father_of_son ("WRITE_block_name_list_order_current_string", $entity);
   }
 
   $entity = entity_name_of_build_function_name ($here);
-  father_n_son_stack_entity_push_of_father_of_son ($entity, "READ_block_name_list_order_current");
+  father_n_son_stack_entity_push_of_father_of_son ($entity, "READ_block_name_list_order_current_string");
 
   exiting_from_function ($here . " with \$nam_blo_lis >$nam_blo_lis<");
 

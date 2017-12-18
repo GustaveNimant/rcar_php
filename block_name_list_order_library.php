@@ -70,7 +70,7 @@ function block_name_list_order_current_string_read_of_entry_name ($nam_ent) {
   $str = file_content_read_of_fullnameoffile ($fno_nam_blo_lis);
   $nam_blo_lis = trim ($str, " \t\n\r\0\x0B");
 
-  $log_str = "block_name_list_order_current read from $fno_nam_blo_lis";
+  $log_str = "block_name_list_order_current_string read from $fno_nam_blo_lis";
   file_log_write ($here, $log_str);
 
   exiting_from_function ($here . " with \$nam_blo_lis >$nam_blo_lis<");

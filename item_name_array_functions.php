@@ -9,7 +9,7 @@ $Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);
 
-$Documentation[$module]['item_name_array'] = "is the same as block_name_list_order_current";
+$Documentation[$module]['item_name_array'] = "is the same as block_name_list_order_current_string";
 
 function item_name_array_build () {
   $here = __FUNCTION__;

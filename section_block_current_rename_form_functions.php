@@ -85,7 +85,7 @@ function section_block_current_rename_form_build () {
   $script_action = 'block_current_namenew_save_script.php';
   $entity = entity_name_of_script_nameoffile ($script_action);
 
-  $get_key_sel = 'block_current_name';
+  $get_key_sel = 'block_current_surnamenew';
   $_SESSION['get_key_by_script_name'][$entity] = $get_key_sel;
 
   $html_str  = comment_entering_of_function_name ($here);

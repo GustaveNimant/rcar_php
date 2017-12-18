@@ -1879,6 +1879,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ),
     
+    'page for displaying the result of the renaming of the property' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat du renommage de la propri&eacute;t&eacute;',
+        'it' => '???',
+    ),
+    
     'page for displaying the result of reordering the paragraphs for entry' =>
     array (
         'fr' => 'page d&rsquo;affichage du changement de l&rsquo;ordre des paragraphes de l&rsquo;entr&eacute;e',
@@ -2674,6 +2680,12 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
     'to paragraph' =>
     array (
         'fr' => 'en paragraphe',
+        'it' => '???',
+   ), 
+
+    'to property' =>
+    array (
+        'fr' => 'en propri&eacute;t&eacute;',
         'it' => '???',
    ), 
 

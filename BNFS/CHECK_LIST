@@ -14,9 +14,9 @@ Bloc :
 * modifier              OK
 * supprimer             OK
 * restauration          OK
-* renommer
+* renommer              OK   to be cleaned
 
 BUGS : 
 * renommer avec le meme nom
 * retour au nouveau nom de l'entrée
-
+* entrée vide

@@ -1729,6 +1729,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ),
 
+    'page for creating a new block of rules for entry' =>
+    array (
+        'fr' => 'page de cr&eacute;ation d&rsquo;un nouveau bloc de r&egrave;gles pour l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+
     'page for creating a new paragraph for entry' =>
     array (
         'fr' => 'page de cr&eacute;ation d&rsquo;un nouveau paragraphe pour l&rsquo;entr&eacute;e',
@@ -1783,6 +1789,18 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ),
 
+    'page for displaying the result of creation of a new property for entry' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation d&rsquo;une nouvelle propri&eacute;t&eacute; de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+
+    'page for displaying the result of creation of a new rule for entry' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation d&rsquo;une nouvelle r&egrave;gle de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ),
+    
     'page for displaying the result of the execution of command' =>
     array (
         'fr' => 'page d&rsquo;affichage du r&eacute;sultat de l&rsquo;ex&eacute;cution de la commande',

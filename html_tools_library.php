@@ -238,11 +238,11 @@ function textarea_of_get_key_of_en_placeholder ($get_key, $en_pla) {
     $col_hta = $_SESSION['parameters']['html_textarea_cols'];
     
     $html_str  = comment_entering_of_function_name ($here);
-    $html_str .= '<textarea name="' . $get_key . '" ';
+    $html_str .= '<textarea name="' . $entity_textarea . '" ';
     $html_str .= 'placeholder="';
     $html_str .= $la_Pla;
     $html_str .= '" ';
-    $html_str .= 'rows="' . $row_hta . '" cols="' .$col_hta;
+    $html_str .= 'rows="' . $row_hta . '" cols="' .$col_hta . '">';
     $html_str .= '</textarea> ' . "\n";
     $html_str .= comment_exiting_of_function_name ($here);
     

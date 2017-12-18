@@ -27,11 +27,9 @@ function item_new_create_justification_textarea_build (){
   $html_str .= 'placeholder="';
   $html_str .= $la_Pla;
   $html_str .= '" ';
-  $html_str .= 'rows="' . $row_hta . '" cols="' .$col_hta;
+  $html_str .= 'rows="' . $row_hta . '" cols="' .$col_hta . '">';
   $html_str .= '</textarea> ' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
-
-#  $html_str  = textarea_of_get_key_of_en_placeholder ('item_new_justification', $en_pla, '  ');
 
   debug_n_check ($here , '$html_str',  $html_str);
   exiting_from_function ($here);

@@ -140,12 +140,15 @@ function entry_current_namenew_save_link_to_return_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-/* Improve clean paths */
-/* when returned to entry_list_display_script.php need to remove paths */
-
+  $en_tit = 'back to entry list';
+  
+  $la_tit = language_translate_of_en_string ($en_tit);
+  
+  $script_to_return = 'entry_list_display_script.php';
+  
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>' . "\n";
-  $html_str .= link_to_return_of_script_to_return ('entry_list_display_script.php');
+  $html_str .= link_to_return_of_la_title_of_script_to_return ($la_tit, $script_to_return);
   $html_str .= '</center>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 

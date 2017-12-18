@@ -32,6 +32,7 @@ function block_new_create_form_submit_build () {
 
   return $html_str;
 }
+
 function block_new_create_form_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);

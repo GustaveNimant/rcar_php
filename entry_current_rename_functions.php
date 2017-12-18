@@ -36,9 +36,10 @@ function entry_current_rename_link_to_return_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
+  $script_to_return = 'entry_list_display_script.php';
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>' . "\n";
-  $html_str .= link_to_return_of_script_to_return ('entry_list_display_script.php');
+  $html_str .= link_to_return_of_script_to_return ($script_to_return);
   $html_str .= '</center>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
@@ -52,14 +53,6 @@ function entry_current_rename_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-/*   $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__); */
-
-/* /\* getting DATA $get_val *\/ */
-/*   $get_key = 'entry_current_name'; */
-/*   $nam_ent_cur = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here);  */
-
-  $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
-
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_page_header', $here);
   $html_str .= '<br><br>' . "\n";
@@ -70,7 +63,7 @@ function entry_current_rename_build () {
   $html_str .= irp_provide ('entry_current_namenew_form', $here);
   $html_str .= '<br><br>' . "\n";
 
-  $html_str .= irp_provide ('entry_current_rename_link_to_return', $here);
+#  $html_str .= irp_provide ('entry_current_rename_link_to_return', $here);
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   $html_str .= comment_exiting_of_function_name ($here);

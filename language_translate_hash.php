@@ -277,6 +277,12 @@ c&rsquo;est une composante d&rsquo;un bloc',
         'it' => '???',
     ), 
     
+    'back to the property' => 
+    array (
+		'fr' => 'retour à la propri&eacute;t&eacute',
+		'it' => '???',
+    ),
+
     'back to the question' =>
     array (
         'fr' => 'retour &agrave; la question',
@@ -1897,6 +1903,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ),
 
+    'page for displaying the result of the revert of the property' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la restauration de la propri&eacute;t&eacute',
+        'it' => '???',
+    ), 
+    
     'page for displaying the entry' =>
     array (
         'fr' => 'page d&rsquo;affichage de l&rsquo;entr&eacute;e',

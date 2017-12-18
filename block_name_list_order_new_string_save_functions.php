@@ -14,13 +14,9 @@ function block_name_list_order_new_string_save_page_title_build () {
 
   $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
   $kin_blo = irp_provide ('entry_block_kind', $here);
+  $kin_blo_plu = block_kind_plural_of_block_kind ($kin_blo);
 
-  if ($kin_blo == 'question'){
-      $en_tit = 'page for displaying the result of reordering the ' . $kin_blo . 's for the'; 
-  } 
-  else {
-      $en_tit = 'page for displaying the result of reordering the ' . $kin_blo . 's for entry'; 
-  }
+  $en_tit = 'page for displaying the result of reordering the ' . $kin_blo_plu . ' for entry'; 
 
   $la_bub_tit  = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_bub_tit .= '<i><b> ' . $sur_ent_cur . '</b></i>';

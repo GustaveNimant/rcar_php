@@ -1,0 +1,22 @@
+Index : 
+
+Entrées :
+* afficher une entrée   OK
+* renommer une entrée   OK
+* créer une entrée      OK
+
+Entrée :
+* créer un bloc         OK
+* réordonner les blocs  OK
+
+Bloc :
+* affichage             OK
+* modifier              OK
+* supprimer             OK
+* restauration          OK
+* renommer
+
+BUGS : 
+* renommer avec le meme nom
+* retour au nouveau nom de l'entrée
+

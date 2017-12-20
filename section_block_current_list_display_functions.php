@@ -15,14 +15,13 @@ function block_current_display_and_link_of_surname_by_name_hash_of_block_current
   $sur_blo = string_html_capitalized_of_string ($sur_blo);
 
   $en_tit = 'click to open the page';
-
   $la_tit = language_translate_of_en_string ($en_tit);
 
   $script_action = 'block_current_display_script.php';
   $entity = entity_name_of_script_nameoffile ($script_action);
 
-  $get_key_sel = 'block_current_name';
-  $_SESSION['get_key_by_script_name'][$entity] = $get_key_sel;
+  $get_key = 'block_current_name';
+  $_SESSION['get_key_by_script_name'][$entity] = $get_key;
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<br> '; /* keep */

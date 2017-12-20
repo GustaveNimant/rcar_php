@@ -37,10 +37,10 @@ function section_entry_new_create_save_title_build () {
   $nam_ent_new = word_name_capitalized_of_string_surname ($sur_ent_new);
   string_check_entry_name_of_string ($nam_ent_new);
 
-  $en_tit  = 'do you want to save the new entry';
+  $en_tit  = 'do you want to create the entry';
   
   $la_tit  = language_translate_of_en_string ($en_tit);
-  $la_tit .= ' ' . $sur_ent_new . ' ?';
+  $la_tit .= ' <i><b>' . $sur_ent_new . '</b></i> ?';
   $la_Tit  = string_html_capitalized_of_string ($la_tit);
 
   $html_str  = comment_entering_of_function_name ($here);

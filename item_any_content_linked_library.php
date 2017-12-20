@@ -14,6 +14,8 @@ let sub_sentence in their original case
 $sen_ori="Toutes les populations ont une Volonté générale et une volonté populaire";
 #           0     1       2       3   4    5         6     7  8    9      10  
 
+$sen_ori="l'objet de la volonté générale est l'intérêt général";
+#         0   1   2  3     4        5     6  7    8       9    
 */
 
 entering_in_module ($module);
@@ -261,7 +263,7 @@ function replace_all_sub_sentence_by_links_of_surname_by_name_hash_of_entry_name
     $sub_sen_ori_a = sub_sentence_original_matched_array_of_surname_by_name_hash_of_entry_name_array_of_full_sentence_original_of_surname_lowercase_array ($sur_by_nam_h, $nam_ent_a, $con_ite, $sur_low_a);
     debug_n_check ($here, '$sub_sen_ori_a[0]...', $sub_sen_ori_a[0]);
 
-    $con_ite_rep = "";
+    $con_ite_rep = '';
     foreach ($sub_sen_ori_a as $sub_sen_ori) {
 
         debug_n_check ($here, 'foreach $sub_sen_ori', $sub_sen_ori);

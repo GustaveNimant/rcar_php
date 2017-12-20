@@ -7,7 +7,7 @@ $entity = entity_name_of_script_fullnameoffile (__FILE__);
 $script = $entity . '_script';
 
 $Documentation[$script]['what is it'] = "it is ...";
-$Documentation[$script]['how it is done'] = "cp template_with_only_store_script.php";
+$Documentation[$script]['how it is done'] = "cp template_only_store_script.php";
 
 entering_in_script ($script);
 

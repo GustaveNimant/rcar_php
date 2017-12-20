@@ -11,11 +11,12 @@ $Documentation[$module]['surname_local_array'] = "the array of the surnames that
 /*
 let sub_sentence in their original case
 
-$sen_ori="Toutes les populations ont une Volonté générale et une volonté populaire";
-#           0     1       2       3   4    5         6     7  8    9      10  
-
 $sen_ori="l'objet de la volonté générale est l'intérêt général";
-#         0   1   2  3     4        5     6  7    8       9    
+#             0   1   2    3        4     5     6        7      
+
+$sen_ori_rep="l' objet de la volonté générale est l' intérêt général";
+#             0   1     2  3     4        5    6  7    8       9    
+
 */
 
 entering_in_module ($module);
@@ -125,7 +126,7 @@ function surname_local_array_of_surname_reduced_array_of_word_original ($sur_red
     $here = __FUNCTION__;
     entering_in_function ($here . " (\$sur_red_a, $wor_ori)");
 
-    # debug ($here, '$sur_red_a', $sur_red_a);
+    #debug ($here, '$sur_red_a', $sur_red_a);
 
     $sur_loc_a = string_array_extract_of_string_array_of_substring ($sur_red_a, $wor_ori);
  
@@ -135,32 +136,32 @@ function surname_local_array_of_surname_reduced_array_of_word_original ($sur_red
     return $sur_loc_a;
 }
 
-function sub_sentence_original_of_word_current_position_of_full_sentence_original ($wor_pos, $sen_ori) {
+function sub_sentence_original_of_word_current_position_of_full_sentence_original_replaced ($wor_pos, $sen_ori) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($wor_pos, $sen_ori)");
 
     $wor_ori_a = explode (" ", $sen_ori);
-    # debug_n_check ($here, '$wor_ori_a', $wor_ori_a);
+    debug_n_check ($here, '$wor_ori_a', $wor_ori_a);
 
     if ($wor_pos >= count ($wor_ori_a)) {
-        fatal_error (
-            "\$wor_pos = $wor_pos were < " . count ($wor_ori_a),
-            "count (\$wor_ori_a) = " . count ($wor_ori_a),
-            "Check"
+        print_fatal_error ($here,
+        "\$wor_pos = $wor_pos were < " . count ($wor_ori_a) . " in full_sentence_original >$sen_ori<",
+        "count (\$wor_ori_a) = " . count ($wor_ori_a),
+        "Check"
         );
     }
-
+    
     $wor_ori_cur = $wor_ori_a [$wor_pos];
     debug_long ($here, '$wor_pos >' . $wor_pos . '< $wor_ori_cur >' . $wor_ori_cur . '<');
-
+    
     if ( string_is_empty_of_string ($wor_ori_cur)) {
-        fatal_error (
-            "\$wor_ori_cur for \$wor_pos = >$wor_pos< were NOT empty",
-            "\$wor_ori_cur = >$wor_ori_cur<",
-            "count (\$wor_ori_a) = " . count ($wor_ori_a)
+        print_fatal_error ($here,
+        "\$wor_ori_cur for \$wor_pos = >$wor_pos< were NOT empty",
+        "\$wor_ori_cur = >$wor_ori_cur<",
+        "count (\$wor_ori_a) = " . count ($wor_ori_a)
         );
     }
-
+    
     $sub_wor_ori_a = array_slice ($wor_ori_a, $wor_pos);
     $sub_sen_ori = implode (" ", $sub_wor_ori_a);
 
@@ -205,15 +206,17 @@ function sub_sentence_original_matched_array_of_surname_by_name_hash_of_entry_na
     $here = __FUNCTION__;
     entering_in_function ($here . " ($sen_ori, \$sur_low_a)");
 
-    $wor_ori_a = explode (" ", $sen_ori);
-    # debug_n_check ($here, '$wor_ori_a', $wor_ori_a);
+    $sen_ori_rep = str_replace ('\'', "' ", $sen_ori); 
+    debug ($here, '\$sen_ori_rep', $sen_ori_rep);
+    $wor_ori_a = explode (" ", $sen_ori_rep);
+    debug_n_check ($here, '$wor_ori_a', $wor_ori_a);
 
     $sur_red_a = surname_reduced_array_of_surname_by_name_hash_of_entry_name_array_of_surname_lowercase_array_of_full_sentence_original ($sur_by_nam_h, $nam_ent_a, $sur_low_a, $sen_ori);
-    # debug ($here, '$sur_red_a', $sur_red_a);
+    debug ($here, '$sur_red_a', $sur_red_a);
 
     $sub_sen_ori_a = array ();
     $max_pos = count ($wor_ori_a) -1;
-    $sub_sen_cur = $sen_ori;
+    $sub_sen_cur = $sen_ori_rep;
     $sen_pos=0;
     $wor_pos=0;
     
@@ -225,7 +228,7 @@ function sub_sentence_original_matched_array_of_surname_by_name_hash_of_entry_na
         debug_long ($here, 'while $wor_pos >' . $wor_pos . '< $wor_ori_cur >' . $wor_ori_cur . '<');
         
         $len_cur = strlen ($wor_ori_cur);
-        $sub_sen_ori = sub_sentence_original_of_word_current_position_of_full_sentence_original ($wor_pos, $sen_ori);
+        $sub_sen_ori = sub_sentence_original_of_word_current_position_of_full_sentence_original_replaced ($wor_pos, $sen_ori_rep);
 
         debug_n_check ($here, '$sub_sen_ori', $sub_sen_ori); 
 
@@ -261,9 +264,9 @@ function replace_all_sub_sentence_by_links_of_surname_by_name_hash_of_entry_name
     entering_in_function ($here . " ($con_ite, $sur_low_a[0], ...)");
 
     $sub_sen_ori_a = sub_sentence_original_matched_array_of_surname_by_name_hash_of_entry_name_array_of_full_sentence_original_of_surname_lowercase_array ($sur_by_nam_h, $nam_ent_a, $con_ite, $sur_low_a);
-    debug_n_check ($here, '$sub_sen_ori_a[0]...', $sub_sen_ori_a[0]);
+    debug_n_check ($here, '$sub_sen_ori_a', $sub_sen_ori_a);
 
-    $con_ite_rep = '';
+    $con_ite_rep = "";
     foreach ($sub_sen_ori_a as $sub_sen_ori) {
 
         debug_n_check ($here, 'foreach $sub_sen_ori', $sub_sen_ori);

@@ -80,16 +80,21 @@ function section_block_current_list_display_display_build () {
     }
     else {
         $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);
+        $sur_low_a = lowercase_n_sort_of_string_by_key_array ($sur_by_nam_h);
+        $nam_ent_a = irp_provide ('entry_name_array', $here);
+
         $con_blo_by_nam_blo_h = irp_provide ('block_content_by_block_name_hash', $here);
         $nam_blo_cur_ord_a = irp_provide ('block_name_array_order_current', $here);
 
         foreach ($nam_blo_cur_ord_a as $key => $nam_blo) {
             $con_blo = array_retrieve_value_of_key_of_array ($nam_blo, $con_blo_by_nam_blo_h);
             $con_ite_cur = item_current_content_of_block_current_content ($con_blo);
+
+            $con_ite_cur_lin = replace_all_sub_sentence_by_links_of_surname_by_name_hash_of_entry_name_array_of_item_content_of_surname_lowercase_array ($sur_by_nam_h, $nam_ent_a, $con_ite_cur, $sur_low_a);
             
             $html_str .= block_current_display_and_link_of_surname_by_name_hash_of_block_current_name_of_la_eol ($sur_by_nam_h, $nam_blo, $la_eol);
             $html_str .= '<br>';  
-            $html_str .= '&nbsp;&nbsp;&nbsp;<i>' . $con_ite_cur . '</i>';
+            $html_str .= '&nbsp;&nbsp;&nbsp;<i>' . $con_ite_cur_lin . '</i>';
             $html_str .= '<br>'; 
         }
         

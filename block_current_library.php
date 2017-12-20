@@ -72,6 +72,7 @@ function item_current_content_of_block_current_content ($con_blo_cur) {
     
     debug_n_check ($here, '$ite_cur_con', $ite_cur_con);
     exiting_from_function ($here);
+
     return $ite_cur_con;
 }
 

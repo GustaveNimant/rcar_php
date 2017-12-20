@@ -28,7 +28,7 @@ require_once "block_name_list_order_new_array_functions.php";
 require_once "block_name_list_order_new_form_functions.php";
 require_once "block_name_list_order_new_functions.php";
 require_once "block_name_list_order_new_string_save_functions.php";
-require_once "block_list_reorder_functions.php";
+require_once "block_name_list_reorder_functions.php";
 
 require_once "block_name_array_order_current_functions.php";
 require_once "block_name_list_order_current_string_functions.php";

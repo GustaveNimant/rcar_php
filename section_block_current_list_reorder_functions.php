@@ -78,7 +78,7 @@ function more_than_one_block_current_list_form_build () {  /* Generalize */
     $here = __FUNCTION__;
     entering_in_function ($here);
 
-    $script_action = 'block_list_reorder_script.php';
+    $script_action = 'block_name_list_reorder_script.php';
 
     $html_str  = comment_entering_of_function_name ($here);
     $html_str .= '<form action="' . $script_action . '" method="get"> ' . "\n";

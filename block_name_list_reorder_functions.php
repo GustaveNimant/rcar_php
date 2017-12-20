@@ -9,7 +9,7 @@ $Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);
 
-function block_list_reorder_of_surname_by_name_hash_of_entry_name_of_block_current_name_of_item_content_of_la_eol ($sur_by_nam_h, $nam_ent, $nam_blo, $con_blo, $la_eol) {
+function block_name_list_reorder_of_surname_by_name_hash_of_entry_name_of_block_current_name_of_item_content_of_la_eol ($sur_by_nam_h, $nam_ent, $nam_blo, $con_blo, $la_eol) {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -39,7 +39,7 @@ function block_list_reorder_of_surname_by_name_hash_of_entry_name_of_block_curre
   return $html_str;
 }
 
-function block_list_reorder_page_title_build (){
+function block_name_list_reorder_page_title_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -65,7 +65,7 @@ function block_list_reorder_page_title_build (){
   return $html_str;
 }
 
-function block_list_reorder_order_table_header_build () {
+function block_name_list_reorder_order_table_header_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -93,7 +93,7 @@ function block_list_reorder_order_table_header_build () {
   return $html_str;
 }
 
-function block_list_reorder_order_loop_table_build () {
+function block_name_list_reorder_order_loop_table_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -117,7 +117,7 @@ function block_list_reorder_order_loop_table_build () {
       $con_ite_cur = item_current_content_of_block_current_content ($con_blo) ;
       $con_ite = str_replace ("\n", "<br>", $con_ite_cur);
 
-      $html_str .= block_list_reorder_of_surname_by_name_hash_of_entry_name_of_block_current_name_of_item_content_of_la_eol ($sur_by_nam_h, $nam_ent, $nam_blo, $con_ite, $la_eol);
+      $html_str .= block_name_list_reorder_of_surname_by_name_hash_of_entry_name_of_block_current_name_of_item_content_of_la_eol ($sur_by_nam_h, $nam_ent, $nam_blo, $con_ite, $la_eol);
 
       $arr_a[$count] = $nam_blo;
       $count++;
@@ -138,7 +138,7 @@ function block_list_reorder_order_loop_table_build () {
   return $html_str;
 }
 
-function block_list_reorder_action_table_build () {
+function block_name_list_reorder_action_table_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -171,7 +171,7 @@ function block_list_reorder_action_table_build () {
   return $html_str;
 }
 
-function block_list_reorder_form_build (){
+function block_name_list_reorder_form_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -181,12 +181,12 @@ function block_list_reorder_form_build (){
   $html_str .= '<form action="' . $script_action . '" method="get"> ' . "\n";
 
   $html_str .= '<center>' . "\n";
-  $html_str .= irp_provide ('block_list_reorder_action_table', $here);
+  $html_str .= irp_provide ('block_name_list_reorder_action_table', $here);
   $html_str .= '</center>' . "\n";
 
-  $html_str .= irp_provide ('block_list_reorder_order_table_header', $here);
+  $html_str .= irp_provide ('block_name_list_reorder_order_table_header', $here);
   $html_str .= '<br>' . "\n";
-  $html_str .= irp_provide ('block_list_reorder_order_loop_table', $here);
+  $html_str .= irp_provide ('block_name_list_reorder_order_loop_table', $here);
 
   $html_str .= comment_exiting_of_function_name ($here);
 
@@ -196,7 +196,7 @@ function block_list_reorder_form_build (){
   return $html_str;
 }
 
-function block_list_reorder_link_to_return_build () {
+function block_name_list_reorder_link_to_return_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -217,7 +217,7 @@ function block_list_reorder_link_to_return_build () {
   return $html_str;
 }
 
-function block_list_reorder_build () {
+function block_name_list_reorder_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -225,13 +225,13 @@ function block_list_reorder_build () {
   $html_str .= irp_provide ('pervasive_page_header', $here);
   $html_str .= '<br>';
 
-  $html_str .= irp_provide ('block_list_reorder_page_title', $here);
+  $html_str .= irp_provide ('block_name_list_reorder_page_title', $here);
   $html_str .= '<br><br>';
 
-  $html_str .= irp_provide ('block_list_reorder_form', $here);
+  $html_str .= irp_provide ('block_name_list_reorder_form', $here);
   $html_str .= '<br>';
 
-  $html_str .= irp_provide ('block_list_reorder_link_to_return', $here);
+  $html_str .= irp_provide ('block_name_list_reorder_link_to_return', $here);
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   $html_str .= comment_exiting_of_function_name ($here);

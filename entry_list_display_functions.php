@@ -42,10 +42,13 @@ function entry_list_display_build () {
   $html_str .= irp_provide ('entry_list_display_page_title', $here);
   $html_str .= '<br>' . "\n";
 
-  $html_str .= irp_provide ('section_select_entry_current_display', $here);
+  /* $html_str .= irp_provide ('entry_list_display_select', $here); */
+  /* $html_str .= '<br>' . "\n"; */
+
+  $html_str .= irp_provide ('entry_current_selection_display', $here);
   $html_str .= '<br>' . "\n";
 
-  $html_str .= irp_provide ('section_select_entry_current_rename', $here);
+  $html_str .= irp_provide ('entry_current_selection_rename', $here);
   $html_str .= '<br>' . "\n";
 
   $html_str .= irp_provide ('section_entry_new_create', $here);

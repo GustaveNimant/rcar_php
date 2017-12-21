@@ -16,6 +16,8 @@ function command_display ($what) {
 
     $eol = end_of_line ();
 
+    $com_res = 'Nothing to be displayed';
+
     switch ($what) {
 
     case 'cpu_n_function' :

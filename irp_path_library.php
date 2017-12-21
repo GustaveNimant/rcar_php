@@ -105,6 +105,8 @@ function irp_path_clean_register_of_top_key_of_bottom_key_of_where ($top_key, $b
   $irp_pat_a = irp_path_of_bottom_key_of_step_of_top_key_of_father_n_son_hash ($ste, $bot_key, $top_key, $fat_n_son_h);
   
   $_SESSION['removed_irp_keys_array'] = $irp_pat_a;
+  debug ($here, '$top_key', $top_key);
+  debug ($here, '$bot_key', $bot_key);
   debug ($here, 'removed irp_path array', $irp_pat_a);
   
   if ( ! (array_is_empty_of_array ($irp_pat_a))) {
@@ -127,6 +129,16 @@ function irp_path_clean_register_of_top_key_of_bottom_key_of_where ($top_key, $b
 
   exiting_from_function ($here);
 
+  return ;
+}
+
+function irp_path_clean_register_of_top_key_of_bottom_key_excluded_of_where ($top_key, $bot_key, $where) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($bot_key, $where)");
+
+  irp_path_clean_register_of_top_key_of_bottom_key_of_where ($top_key, $bot_key, $where); 
+
+  exiting_from_function ($here);
   return ;
 }
 

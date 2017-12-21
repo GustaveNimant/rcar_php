@@ -8,7 +8,7 @@ $Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);
 
-function subsection_select_entry_current_rename_title_build () {
+function entry_current_selection_rename_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -25,7 +25,7 @@ function subsection_select_entry_current_rename_title_build () {
   return $html_str;
 }
 
-function subsection_select_entry_current_rename_menuselect_entry_build () { /* move in some tools */
+function entry_current_selection_rename_menuselect_build () { /* move in some tools */
     $here = __FUNCTION__;
     entering_in_function ($here);
     
@@ -39,11 +39,15 @@ function subsection_select_entry_current_rename_menuselect_entry_build () { /* m
     foreach ($nam_ent_a as $nam_ent) {
         $sur_ent = surname_of_name_of_surname_by_name_hash ($nam_ent, $sur_by_nam_h);
 
+        debug_n_check ($here, 'foreach $nam_ent', $nam_ent);
+
         if ( ! isset ($_SESSION['is_label_entity_name'][$nam_ent])) {
             
             if (isset ($_SESSION['get_value_by_get_key_hash']['entry_current_name'] ) ) {
-                $ent_sel = $_SESSION['get_value_by_get_key_hash']['entry_current_name'];
-                if ($ent_sel == $nam_ent) {
+                $nam_ent_las = $_SESSION['get_value_by_get_key_hash']['entry_current_name'];
+                debug_n_check ($here, '$nam_ent_las', $nam_ent_las);
+
+                if ($nam_ent_las == $nam_ent) {
                     $html_str .= '  <option value="' . $nam_ent . '" selected> ' . $sur_ent . '</option>' . "\n";
                 }
                 else {
@@ -65,7 +69,7 @@ function subsection_select_entry_current_rename_menuselect_entry_build () { /* m
     return $html_str;
 }
 
-function subsection_select_entry_current_rename_build () {
+function entry_current_selection_rename_form_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -76,7 +80,7 @@ function subsection_select_entry_current_rename_build () {
   $html_str  = comment_entering_of_function_name ($here); 
   $html_str .= '<form action="' . $script_action .'" method="get"> ' . "\n";
   $html_str .= '<br>' . "\n";
-  $html_str .= irp_provide ('subsection_select_entry_current_rename_menuselect_entry', $here);
+  $html_str .= irp_provide ('entry_current_selection_rename_menuselect', $here);
   $html_str .= inputtypesubmit_of_en_action_name ('select');
   $html_str .= '</form> ' .  "\n";
   $html_str .= comment_exiting_of_function_name ($here);
@@ -87,13 +91,13 @@ function subsection_select_entry_current_rename_build () {
   return $html_str;
 };
 
-function section_select_entry_current_rename_build () {
+function entry_current_selection_rename_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $html_str  = comment_entering_of_function_name ($here); 
-  $html_str .= irp_provide ('subsection_select_entry_current_rename_title', $here);
-  $html_str .= irp_provide ('subsection_select_entry_current_rename', $here);
+  $html_str .= irp_provide ('entry_current_selection_rename_title', $here);
+  $html_str .= irp_provide ('entry_current_selection_rename_form', $here);
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str',  $html_str);

@@ -19,6 +19,8 @@ $get_key = $_SESSION['get_key_by_script_name'][$entity]; /* 'entry_current_name'
 /* removing entity page */
 irp_path_clean_register_of_top_key_of_bottom_key_of_where ($entity, 'GET_' . $get_key, $script);
 
+irp_path_clean_register_of_top_key_of_bottom_key_of_where ($entity, 'entry_current_selection_display_menuselect', $script);
+
 /* getting DATA $get_val */
 $log_str = irp_data_value_only_store_of_get_key_of_script_name_of_where ($get_key, $script, $script);
 file_log_write ($script, $log_str);

@@ -26,7 +26,7 @@ function common_html_page_head_build () {
   $html_str .= ' <head>' . "\n";
   $html_str .= '  <title>' . $Nam_pro . '</title>' . "\n";
   $html_str .= '  <meta name="robots" CONTENT="index,follow">' . "\n";
-  $html_str .= '  <META NAME="keywords" CONTENT="democracy, d&eacute;mocratie, collaborative editing, r&eacute;daction collaborative, general will, volont&eacute; g&eacute;n&eacute;rale, auto regulated collaborative editing, r&eacute;daction collaborative auto-r&eacute;gul&eacute;e">' . "\n";
+  $html_str .= '  <META NAME="keywords" CONTENT="democracy, d&eacute;mocratie, crowd editing, collaborative editing, cooperating editing, collective intelligence, intelligence collective; r&eacute;daction collaborative, r&eacute;daction collective, general will, volont&eacute; g&eacute;n&eacute;rale, auto regulated collaborative editing, r&eacute;daction collaborative auto-r&eacute;gul&eacute;e">' . "\n";
   $html_str .= '  <META NAME="description" CONTENT="ARCE (Auto-Regulated Collaborative Editing - r&eacute;daction collaborative auto-r&eacute;gul&eacute;e) est conçu pour que les membres d&rsquo;une communaut&eacute; d&rsquo;internautes puissent se mettre d&rsquo;accord sur le pourquoi, le comment et la destination d&rsquo;un texte, avant d&rsquo;en entreprendre l&rsquo;&eacute;criture.">' . "\n";
   $html_str .= '  <meta http-equiv="content-type" content="text/html; charset=utf-8" />' . "\n";
   $html_str .= '  <link href="' . $www_filename_css . '" rel="stylesheet" media="all" type="text/css">' . "\n";

@@ -94,6 +94,7 @@ $_SESSION['is_read_entity_name'] = array (
 $_SESSION['creation_step_count'] = 0;
 $_SESSION['creation_step'] = array () ; /* of any entity or page */
 $_SESSION['data_creation_function'] = array ();
+$_SESSION['leaf_creation_function'] = array ();
 
 $_SESSION['get_value_by_get_key_hash'] = array ();
 

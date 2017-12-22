@@ -260,7 +260,10 @@ function string_check_entry_name_of_string ($nam_ent){
     /* debug_n_check ($here , "input entry_current_name name", $nam_ent); */
     
     if ( ! string_is_entry_name_of_string ($nam_ent)) {
-        fatal_error ($here, "entry_current_name >$nam_ent< is NOT canonical");
+        print_fatal_error ($here, 
+        "entry_current_name >$nam_ent< were canonical",
+        "it is NOT",
+        "Check");
     }
     
     exiting_from_function ($here . " ($nam_ent)");

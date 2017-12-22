@@ -44,6 +44,33 @@ function entry_current_namenew_from_entry_current_surnamenew_build () {
     return $new_nam_ent_cur;
 }
 
+function entry_current_name_last_build () {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+
+    if (isset ($_SESSION['get_value_by_get_key_hash']['entry_current_name'] ) ) {
+        $nam_ent_las = $_SESSION['get_value_by_get_key_hash']['entry_current_name'];
+        debug_n_check ($here, '$nam_ent_las', $nam_ent_las);
+    }
+    else {
+        $nam_ent_las = 'no selection done yet';
+    }
+    
+    $entity_leaf = 'entry_current_name_last';
+    $_SESSION['leaf_creation_function'][$entity_leaf] = $here;
+    $_SESSION['creation_step_count'] = $_SESSION['creation_step_count'] + 1;
+    $cre_ste = $_SESSION['creation_step_count'];
+    $_SESSION['creation_step'][$entity_leaf] = $cre_ste;
+
+    father_n_son_stack_entity_push_of_father_of_son ($entity_leaf, "LEAF_$entity_leaf");
+
+    $log_str = "LEAF >$entity_leaf< built with value >$nam_ent_las< in $here at creation step # $cre_ste";
+    file_log_write ($here, $log_str);
+
+    exiting_from_function ($here . " with \$nam_ent_las >$nam_ent_las<");
+    return $nam_ent_las;
+}
+
 exiting_from_module ($module);
 
 ?>

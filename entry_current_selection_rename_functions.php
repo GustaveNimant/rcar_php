@@ -43,9 +43,12 @@ function entry_current_selection_rename_menuselect_build () { /* move in some to
 
         if ( ! isset ($_SESSION['is_label_entity_name'][$nam_ent])) {
             
-            if (isset ($_SESSION['get_value_by_get_key_hash']['entry_current_name'] ) ) {
-                $nam_ent_las = $_SESSION['get_value_by_get_key_hash']['entry_current_name'];
-                debug_n_check ($here, '$nam_ent_las', $nam_ent_las);
+            /* labels are accessed directly */
+
+            $nam_ent_las = irp_provide ('entry_current_name_last', $here);       
+            debug_n_check ($here, '$nam_ent_las', $nam_ent_las);
+
+            if ($nam_ent_las != 'no selection done yet') {
 
                 if ($nam_ent_las == $nam_ent) {
                     $html_str .= '  <option value="' . $nam_ent . '" selected> ' . $sur_ent . '</option>' . "\n";

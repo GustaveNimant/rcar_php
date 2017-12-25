@@ -8,7 +8,7 @@ $Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);
 
-function section_entry_new_create_page_title_build () {
+function entry_new_create_page_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -29,13 +29,13 @@ function section_entry_new_create_page_title_build () {
   return $html_str;
 }
 
-function section_entry_new_create_save_title_build () {
+function entry_new_create_save_form_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $sur_ent_new = irp_provide ('entry_new_surname', $here);  
-  $nam_ent_new = word_name_capitalized_of_string_surname ($sur_ent_new);
-  string_check_entry_name_of_string ($nam_ent_new);
+  /* $nam_ent_new = word_name_capitalized_of_string_surname ($sur_ent_new); */
+  /* string_check_entry_name_of_string ($nam_ent_new); */
 
   $en_tit  = 'do you want to create the entry';
   
@@ -46,7 +46,7 @@ function section_entry_new_create_save_title_build () {
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= common_html_span_background_color_of_html ($la_Tit);
 
-/* set this instead  bubble_bubbled_la_text_of_en_text ($en_tit) */
+/* Improve : set this instead  bubble_bubbled_la_text_of_en_text ($en_tit) */
 
   $html_str .= comment_exiting_of_function_name ($here);
   
@@ -56,7 +56,7 @@ function section_entry_new_create_save_title_build () {
   return $html_str;
 }
 
-function section_entry_new_create_save_build () {
+function entry_new_create_save_form_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -69,8 +69,7 @@ function section_entry_new_create_save_build () {
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form action="' . $script_action . '" method="get"> ' . "\n";
 
-  $html_str .= irp_provide ('section_entry_new_create_save_title', $here);
-
+  $html_str .= irp_provide ('entry_new_create_save_form_title', $here);
   $html_str .= inputtypesubmit_of_en_action_name ('yes');
 
   $html_str .= '</form> ' .  "\n";
@@ -80,27 +79,10 @@ function section_entry_new_create_save_build () {
   return $html_str;
 };
 
-function section_entry_new_create_link_to_return_build () {
-  $here = __FUNCTION__;
-  entering_in_function ($here);
-
-  $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<center>' . "\n";
-  $html_str .= link_to_return_of_script_to_return ('entry_list_display_script.php');
-  $html_str .= '</center>' . "\n";
-  $html_str .= comment_exiting_of_function_name ($here);
-
-  debug_n_check ($here , '$html_str',  $html_str);
-  exiting_from_function ($here);
-
-  return $html_str;
-}
-
 function entry_new_create_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__);
   $nam_ent_new = irp_provide ('entry_new_name_from_entry_new_surname', $here);
 
   if (entry_is_subdirectory_of_entry_name ($nam_ent_new) ) { /* Improve */
@@ -121,14 +103,11 @@ function entry_new_create_build () {
   $html_str .= irp_provide ('pervasive_page_header', $here);
   $html_str .= '<br><br>' . "\n";
 
-  $html_str .= irp_provide ('section_entry_new_create_page_title', $here);
+  $html_str .= irp_provide ('entry_new_create_page_title', $here);
   $html_str .= '<br><br>' . "\n";
    
-  $html_str .= irp_provide ('section_entry_new_create_save', $here);
+  $html_str .= irp_provide ('entry_new_create_save_form', $here);
   $html_str .= '<br><br>' . "\n";
-
-  /* $html_str .= irp_provide ('section_entry_new_create_link_to_return', $here); */
-  /* $html_str .= '<br><br>' . "\n"; */
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   $html_str .= comment_exiting_of_function_name ($here);

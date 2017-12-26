@@ -51,7 +51,7 @@ function entry_list_display_build () {
   $html_str .= irp_provide ('entry_current_selection_rename', $here);
   $html_str .= '<br>' . "\n";
 
-  $html_str .= irp_provide ('section_entry_new_create', $here);
+  $html_str .= irp_provide ('toward_entry_new_create', $here);
   $html_str .= '</center>' . "\n";
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);

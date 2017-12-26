@@ -8,7 +8,7 @@ $Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);
 
-function entry_new_create_page_title_build () {
+function entry_new_create_confirm_page_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -29,7 +29,7 @@ function entry_new_create_page_title_build () {
   return $html_str;
 }
 
-function entry_new_create_save_form_title_build () {
+function entry_new_create_confirm_form_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -56,12 +56,16 @@ function entry_new_create_save_form_title_build () {
   return $html_str;
 }
 
-function entry_new_create_save_form_build () {
+function entry_new_create_confirm_form_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
+  $irp_fat = str_replace('_build', '', $here);
+  father_n_son_stack_entity_push_of_father_of_son ($irp_fat, "BUTTON_$irp_fat");
+
   $script_action = 'entry_new_create_save_script.php';
   $entity = entity_name_of_script_nameoffile ($script_action);
+  father_n_son_stack_entity_push_of_father_of_son ($irp_fat, "$entity");
 
   $get_key_sel = 'entry_new_surname';
   $_SESSION['get_key_by_script_name'][$entity] = $get_key_sel;
@@ -69,7 +73,7 @@ function entry_new_create_save_form_build () {
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form action="' . $script_action . '" method="get"> ' . "\n";
 
-  $html_str .= irp_provide ('entry_new_create_save_form_title', $here);
+  $html_str .= irp_provide ('entry_new_create_confirm_form_title', $here);
   $html_str .= inputtypesubmit_of_en_action_name ('yes');
 
   $html_str .= '</form> ' .  "\n";
@@ -103,10 +107,10 @@ function entry_new_create_build () {
   $html_str .= irp_provide ('pervasive_page_header', $here);
   $html_str .= '<br><br>' . "\n";
 
-  $html_str .= irp_provide ('entry_new_create_page_title', $here);
+  $html_str .= irp_provide ('entry_new_create_confirm_page_title', $here);
   $html_str .= '<br><br>' . "\n";
    
-  $html_str .= irp_provide ('entry_new_create_save_form', $here);
+  $html_str .= irp_provide ('entry_new_create_confirm_form', $here);
   $html_str .= '<br><br>' . "\n";
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);

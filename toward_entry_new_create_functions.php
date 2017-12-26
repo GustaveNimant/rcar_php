@@ -8,7 +8,7 @@ $Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);
 
-function subsection_entry_new_create_title_build () {
+function toward_entry_new_create_form_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -25,7 +25,7 @@ function subsection_entry_new_create_title_build () {
   return $html_str;
 }
 
-function subsection_entry_new_create_build () {
+function toward_entry_new_create_form_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -36,6 +36,8 @@ function subsection_entry_new_create_build () {
 
   $script_action = 'entry_new_create_script.php';
   $entity = entity_name_of_script_nameoffile ($script_action);
+
+  father_n_son_stack_entity_push_of_father_of_son ($irp_fat, $entity);
 
   $get_key_sel = 'entry_new_surname';
   $_SESSION['get_key_by_script_name'][$entity] = $get_key_sel;
@@ -55,13 +57,13 @@ function subsection_entry_new_create_build () {
   return $html_str;
 };
 
-function section_entry_new_create_build () {
+function toward_entry_new_create_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $html_str  = comment_entering_of_function_name ($here); 
-  $html_str .= irp_provide ('subsection_entry_new_create_title', $here);
-  $html_str .= irp_provide ('subsection_entry_new_create', $here);
+  $html_str .= irp_provide ('toward_entry_new_create_form_title', $here);
+  $html_str .= irp_provide ('toward_entry_new_create_form', $here);
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str',  $html_str);

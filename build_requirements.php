@@ -113,7 +113,7 @@ require_once "item_previous_content_display_functions.php";
 
 require_once "entry_current_selection_display_functions.php";
 require_once "entry_current_selection_rename_functions.php";
-require_once "section_entry_new_create_functions.php";
+require_once "toward_entry_new_create_functions.php";
 
 require_once "surname_catalog_add_save_functions.php";
 require_once "surname_catalog_functions.php";

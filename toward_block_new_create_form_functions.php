@@ -10,7 +10,7 @@ $Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);
 
-function section_block_new_create_title_build () {
+function toward_block_new_create_form_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -33,22 +33,23 @@ function section_block_new_create_title_build () {
   return $html_str;
 }
 
-function section_block_new_create_build () {  /* Generalize */
+function toward_block_new_create_form_build () {  /* Generalize */
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $irp_fat = str_replace('_build', '', $here);
-  father_n_son_stack_entity_push_of_father_of_son ($irp_fat, "BUTTON_$irp_fat");
+  $entity_fat = entity_name_of_build_function_name ($here);
+  father_n_son_stack_entity_push_of_father_of_son ($entity_fat, "BUTTON_$entity_fat");
 
   $script_action = 'block_new_create_script.php';
-  $entity = entity_name_of_script_nameoffile ($script_action);
+  $entity_son = entity_name_of_script_nameoffile ($script_action);
+  father_n_son_stack_entity_push_of_father_of_son ($entity_fat, "$entity_son");
 
   $get_key_sel = 'block_new_surname';
-  $_SESSION['get_key_by_script_name'][$entity] = $get_key_sel;
+  $_SESSION['get_key_by_script_name'][$entity_son] = $get_key_sel;
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form action="' . $script_action . '" method="get"> ' . "\n";
-  $html_str .= irp_provide ('section_block_new_create_title', $here);
+  $html_str .= irp_provide ('toward_block_new_create_form_title', $here);
   $html_str .= inputtypesubmit_of_en_action_name ('create');
   $html_str .= '</form> ' .  "\n";
 

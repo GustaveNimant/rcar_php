@@ -56,7 +56,7 @@ function entry_current_display_build (){
     $html_str .= '</center>' . "\n";
     $html_str .= '<br>' . "\n";
     
-    $html_str .= irp_provide ('section_block_new_create', $here);
+    $html_str .= irp_provide ('toward_block_new_create_form', $here);
     $html_str .= '<br>' . "\n";
 
     if (file_directory_is_not_empty_of_directory_path ($fnd_ent_cur)) {/* Improve */

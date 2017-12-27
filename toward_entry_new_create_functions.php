@@ -36,7 +36,6 @@ function toward_entry_new_create_form_build () {
 
   $script_action = 'entry_new_create_script.php';
   $entity = entity_name_of_script_nameoffile ($script_action);
-
   father_n_son_stack_entity_push_of_father_of_son ($irp_fat, $entity);
 
   $get_key_sel = 'entry_new_surname';

@@ -13,6 +13,9 @@ function block_new_create_form_submit_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
+  $entity_fat = entity_name_of_build_function_name ($here);
+  father_n_son_stack_entity_push_of_father_of_son ($entity_fat, "BUTTON_$entity_fat");
+
   $en_tit = 'create';
 
   $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
@@ -40,10 +43,8 @@ function block_new_create_form_build (){
   $script_action = 'block_new_create_save_script.php';
   $entity = entity_name_of_script_nameoffile ($script_action);
 
-  $get_key_sel = 'block_new_surname';
-  $_SESSION['get_key_by_script_name'][$entity] = $get_key_sel;
-
-  print_html_array ($here, '$_GET', $_GET);
+  $get_key = 'block_new_surname';
+  $_SESSION['get_key_by_script_name'][$entity] = $get_key;
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form action="' . $script_action . '" method="get">' . "\n";

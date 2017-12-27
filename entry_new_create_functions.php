@@ -34,8 +34,6 @@ function entry_new_create_confirm_form_title_build () {
   entering_in_function ($here);
 
   $sur_ent_new = irp_provide ('entry_new_surname', $here);  
-  /* $nam_ent_new = word_name_capitalized_of_string_surname ($sur_ent_new); */
-  /* string_check_entry_name_of_string ($nam_ent_new); */
 
   $en_tit  = 'do you want to create the entry';
   

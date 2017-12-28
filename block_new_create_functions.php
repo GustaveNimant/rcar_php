@@ -19,6 +19,7 @@ function block_new_create_page_title_build (){
   $kin_blo_plu = block_kind_plural_of_block_kind ($kin_blo);
 
   $en_tit = 'page for creating a new block of ' . $kin_blo_plu . ' for entry';
+
   $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);
   $la_bub_Tit .= ' <i><b> ' . $sur_ent_cur . '</b></i> ';

@@ -1740,7 +1740,13 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'fr' => 'page de cr&eacute;ation d&rsquo;un nouveau bloc de r&egrave;gles pour l&rsquo;entr&eacute;e',
         'it' => '???',
     ), 
-
+    
+    'page for creating of a new entry' =>
+    array (
+        'fr' => 'page de cr&eacute;ation d&rsquo;une nouvelle entr&eacute;e',
+        'it' => '???',
+    ), 
+    
     'page for creating a new paragraph for entry' =>
     array (
         'fr' => 'page de cr&eacute;ation d&rsquo;un nouveau paragraphe pour l&rsquo;entr&eacute;e',

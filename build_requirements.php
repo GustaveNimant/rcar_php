@@ -44,7 +44,7 @@ require_once "block_new_create_content_textarea_functions.php";
 require_once "block_new_create_form_functions.php";
 require_once "block_new_create_functions.php";
 require_once "block_new_create_save_functions.php";
-require_once "block_new_create_surname_library.php";
+require_once "block_new_create_surname_functions.php";
 require_once "block_new_create_surname_inputtypetext_functions.php";
 require_once "block_new_create_surname_title_n_help_functions.php";
 
@@ -94,6 +94,8 @@ require_once "item_new_create_justification_textarea_functions.php";
 require_once "item_new_create_justification_title_n_help_functions.php";
 require_once "item_new_name_functions.php"; 
 
+require_once "item_previous_content_display_functions.php";
+
 require_once "language_select_functions.php";
 require_once "pervasive_html_functions.php";
 require_once "quit_functions.php";
@@ -106,14 +108,14 @@ require_once "section_block_current_rename_form_functions.php";
 require_once "section_block_current_rename_functions.php";
 require_once "section_block_current_undo_functions.php";
 
-require_once "toward_block_new_create_form_functions.php";
-
 require_once "section_item_next_create_form_functions.php";
-require_once "item_previous_content_display_functions.php";
+
 
 require_once "entry_current_selection_display_functions.php";
 require_once "entry_current_selection_rename_functions.php";
-require_once "toward_entry_new_create_functions.php";
+
+require_once "toward_block_new_create_form_functions.php";
+require_once "toward_entry_new_create_form_functions.php";
 
 require_once "surname_catalog_add_save_functions.php";
 require_once "surname_catalog_functions.php";

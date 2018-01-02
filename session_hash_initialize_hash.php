@@ -117,7 +117,11 @@ $_SESSION['item_information_metadata_en_by_item_name_array'] = array ();
 include "language_translate_hash.php";
 $_SESSION['language_translate_hash'] = $language_translate_hash;
 
-$_SESSION['parameters']['absolute_path_arce'] = '/keep/sources/rcar';
+
+# $roo_doc = $_SERVER['DOCUMENT_ROOT'];
+# print "\$roo_doc $roo_doc<br>";
+
+$_SESSION['parameters']['absolute_path_rcar'] = '/keep/sources/rcar';
 $_SESSION['parameters']['absolute_path_server'] = '/keep/sources/rcar/server';
 $_SESSION['parameters']['absolute_path_server_surname'] = '/keep/sources/rcar/server/SURNAMES';
 $_SESSION['parameters']['nameoffile_surname_catalog'] = 'Surname_catalog.cat';

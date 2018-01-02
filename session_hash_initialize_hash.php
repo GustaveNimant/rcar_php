@@ -30,6 +30,7 @@ $_SESSION['is_data_entity_name'] = array (
 
     'block_current_namenew' => TRUE,
     'block_current_surnamenew' => TRUE,
+    'block_current_surnamenew_justification' => TRUE,
 
     'block_current_content' => TRUE, 
 

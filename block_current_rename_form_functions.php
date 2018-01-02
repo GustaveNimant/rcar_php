@@ -7,7 +7,7 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 
 entering_in_module ($module);
 
-function block_current_surnamenew_title_build () { 
+function block_current_rename_form_title_build () { 
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -26,7 +26,7 @@ function block_current_surnamenew_title_build () {
   return $html_str;
 }
 
-function block_current_surnamenew_build (){
+function block_current_rename_form_surnamenew_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -42,7 +42,7 @@ function block_current_surnamenew_build (){
   return $html_str;
 }
 
-function block_current_surnamenew_justify_title_build () { 
+function block_current_rename_form_justify_title_build () { 
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -63,19 +63,27 @@ function block_current_surnamenew_justify_title_build () {
   return $html_str;
 }
 
-function block_current_surnamenew_justification_build (){
-  $here = __FUNCTION__;
-  entering_in_function ($here);
-
-  $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<textarea name="block_current_surnamenew_justification" rows="2" cols="100" />';
-  $html_str .= '</textarea> ' . "\n";
-  $html_str .= comment_exiting_of_function_name ($here);
-
-  debug_n_check ($here , '$html_str',  $html_str);
-  exiting_from_function ($here);
-
-  return $html_str;
+function block_current_rename_form_justification_build (){
+/* justification of the renaming action */
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+    $get_key = 'block_current_surnamenew_justification';
+    
+    $row_hta = $_SESSION['parameters']['html_textarea_rows'];
+    $col_hta = $_SESSION['parameters']['html_textarea_cols'];
+    
+    $html_str  = comment_entering_of_function_name ($here);
+    $html_str .= '<textarea name="' . $get_key;
+    $html_str .= '" rows="' . $row_hta .'" cols="' .$col_hta;
+    $html_str .= '"/>';
+    $html_str .= '</textarea> ' . "\n";
+    $html_str .= comment_exiting_of_function_name ($here);
+    
+    debug_n_check ($here , '$html_str',  $html_str);
+    exiting_from_function ($here);
+    
+    return $html_str;
 }
 
 function block_current_rename_form_build () {
@@ -85,23 +93,25 @@ function block_current_rename_form_build () {
   $script_action = 'block_current_namenew_save_script.php';
   $entity = entity_name_of_script_nameoffile ($script_action);
 
-  $get_key_sel = 'block_current_name';
-  $_SESSION['get_key_by_script_name'][$entity] = $get_key_sel;
+  $get_key_lis  = 'block_current_surnamenew';
+  $get_key_lis .= ':' ;
+  $get_key_lis .= 'block_current_surnamenew_justification';
+  $_SESSION['get_key_by_script_name'][$entity] = $get_key_lis;
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form ' . "\n";
   $html_str .= 'method="get" action="' . $script_action . '">' . "\n";
 
-  $html_str .= irp_provide ('block_current_surnamenew_title', $here);
+  $html_str .= irp_provide ('block_current_rename_form_title', $here);
   $html_str .= '<br> ';
 
-  $html_str .= irp_provide ('block_current_surnamenew', $here);
+  $html_str .= irp_provide ('block_current_rename_form_surnamenew', $here);
   $html_str .= '<br> ';
 
-  $html_str .= irp_provide ('block_current_surnamenew_justify_title', $here);
+  $html_str .= irp_provide ('block_current_rename_form_justify_title', $here);
   $html_str .= '<br> ';
 
-  $html_str .= irp_provide ('block_current_surnamenew_justification', $here);
+  $html_str .= irp_provide ('block_current_rename_form_justification', $here);
   $html_str .= '<br>';
 
   $html_str .= '<center>';

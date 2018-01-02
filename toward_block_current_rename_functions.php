@@ -9,7 +9,7 @@ $Documentation[$module]['what for'] = "to rename, show history, rename";
 
 entering_in_module ($module);
 
-function section_block_current_rename_build () {
+function toward_block_current_rename_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
 

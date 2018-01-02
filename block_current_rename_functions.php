@@ -6,7 +6,7 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 
 entering_in_module ($module);
 
-function section_block_current_rename_page_title_build () {
+function block_current_rename_page_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -38,7 +38,7 @@ function section_block_current_rename_page_title_build () {
   return $html_str;
 }
 
-function section_block_current_rename_link_to_return_build () {
+function block_current_rename_link_to_return_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -67,13 +67,13 @@ function block_current_rename_build () {
   $html_str .= irp_provide ('pervasive_page_header', $here);
   $html_str .= '<br>' . "\n";
 
-  $html_str .= irp_provide ('section_block_current_rename_page_title', $here);
+  $html_str .= irp_provide ('block_current_rename_page_title', $here);
   $html_str .= '<br>' . "\n";
 
-  $html_str .= irp_provide ('section_block_current_rename_form', $here);
+  $html_str .= irp_provide ('block_current_rename_form', $here);
   $html_str .= '<br>' . "\n";
 
-  $html_str .= irp_provide ('section_block_current_rename_link_to_return', $here);
+  $html_str .= irp_provide ('block_current_rename_link_to_return', $here);
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   $html_str .= comment_exiting_of_function_name ($here);

@@ -9,7 +9,7 @@ $Documentation[$module]['what for'] = "";
 
 entering_in_module ($module);
 
-function section_block_current_remove_build () {
+function toward_block_current_remove_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
 

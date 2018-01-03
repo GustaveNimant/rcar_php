@@ -119,7 +119,7 @@ function block_current_display_build (){
   $html_str .= irp_provide ('toward_block_current_remove', $here);
   $html_str .= '&nbsp;&nbsp;';
 
-  $html_str .= irp_provide ('section_block_current_history', $here);
+  $html_str .= irp_provide ('toward_block_current_history', $here);
   $html_str .= '&nbsp;&nbsp;';
 
   $html_str .= irp_provide ('toward_block_current_rename', $here);

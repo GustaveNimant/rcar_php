@@ -39,7 +39,7 @@ function block_current_display_and_link_of_surname_by_name_hash_of_block_current
   return $html_str;
 }
 
-function section_block_current_list_display_title_build (){
+function toward_block_current_list_display_title_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -64,7 +64,7 @@ function section_block_current_list_display_title_build (){
   return $html_str;
 }
 
-function section_block_current_list_display_display_build () {
+function toward_block_current_list_display_display_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
     
@@ -109,7 +109,7 @@ function section_block_current_list_display_display_build () {
     return $html_str;
 }
 
-function section_block_current_list_display_build () {
+function toward_block_current_list_display_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
 
@@ -121,9 +121,9 @@ function section_block_current_list_display_build () {
     else {
         $html_str  = comment_entering_of_function_name ($here);
         $html_str .= '<center>' . "\n";
-        $html_str .= irp_provide ('section_block_current_list_display_title', $here);
+        $html_str .= irp_provide ('toward_block_current_list_display_title', $here);
         $html_str .= '</center>' . "\n";
-        $html_str .= irp_provide ('section_block_current_list_display_display', $here);
+        $html_str .= irp_provide ('toward_block_current_list_display_display', $here);
         $html_str .= comment_exiting_of_function_name ($here);
     }
 

@@ -64,7 +64,7 @@ function entry_current_display_build (){
         $html_str .= irp_provide ('section_block_current_list_reorder', $here);
         $html_str .= '<br><br>' . "\n";
         
-        $html_str .= irp_provide ('section_block_current_list_display', $here);
+        $html_str .= irp_provide ('toward_block_current_list_display', $here);
         $html_str .= '<br>' . "\n";
         
     } /* Improve */

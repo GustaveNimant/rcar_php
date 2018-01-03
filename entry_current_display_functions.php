@@ -61,7 +61,7 @@ function entry_current_display_build (){
 
     if (file_directory_is_not_empty_of_directory_path ($fnd_ent_cur)) {/* Improve */
 
-        $html_str .= irp_provide ('section_block_current_list_reorder', $here);
+        $html_str .= irp_provide ('toward_block_current_list_reorder', $here);
         $html_str .= '<br><br>' . "\n";
         
         $html_str .= irp_provide ('toward_block_current_list_display', $here);

@@ -9,7 +9,7 @@ $Documentation[$module]['what for'] = "to undo, show history, rename";
 
 entering_in_module ($module);
 
-function section_block_current_undo_build () {
+function toward_block_current_undo_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
 

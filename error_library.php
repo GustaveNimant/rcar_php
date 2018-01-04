@@ -59,7 +59,7 @@ function print_warning ($her, $mes_exp, $mes_fou, $mes_cur){
 function html_fatal_error ($her, $en_mes){
     $here = __FUNCTION__; 
 
-    $html_str  = '';
+    $html_str  = comment_entering_of_function_name ($here);
     $html_str .= '<html>' . "\n";
     $html_str .= '  <body>' . "\n";
     $html_str .= '     <b><font color=red>Fatal Error</font></b> ';
@@ -70,6 +70,7 @@ function html_fatal_error ($her, $en_mes){
     $html_str .= $en_mes;
     $html_str .= '  </body>';
     $html_str .= '</html>';
+    $html_str .= comment_exiting_of_function_name ($here);
 
     return $html_str;
 }

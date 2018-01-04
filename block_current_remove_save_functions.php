@@ -140,10 +140,10 @@ function block_current_remove_save_build () {
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_page_header', $here);
-  $html_str .= '<br><br> ';
+  $html_str .= '<br><br>' . "\n";
                             
   $html_str .= irp_provide ('block_current_remove_save_page_title', $here);
-  $html_str .= '<br><br> ';
+  $html_str .= '<br><br>' . "\n";
 
   $log_str   = irp_provide ('block_current_remove_save_block_file_remove', $here);
   file_log_write ($here, $log_str);
@@ -154,8 +154,10 @@ function block_current_remove_save_build () {
   block_current_remove_save_irp_path_clean (); /* Improve */
 
   $html_str .= irp_provide ('git_command_n_commit_html', $here);
+  $html_str .= '<br><br>' . "\n";
 
   $html_str .= irp_provide ('block_current_remove_save_link_to_return', $here);
+  $html_str .= '<br><br>' . "\n";
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   $html_str .= comment_exiting_of_function_name ($here);

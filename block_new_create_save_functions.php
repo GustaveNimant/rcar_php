@@ -65,18 +65,20 @@ function check_is_block_new_build () {  /* Improve return $html_str. No need of 
           $en_mes_2 = "already exists";
           $la_mes_1 = language_translate_of_en_string ($en_mes_1); 
           $la_mes_2 = language_translate_of_en_string ($en_mes_2);   
-          $la_mes =  $la_mes_1 . ' ' . $nam_blo_new . ' ' . $la_mes_2;
+          $la_mes  =  $la_mes_1 . ' >' . $nam_blo_new . '< ' . $la_mes_2;
           $la_Mes = string_html_capitalized_of_string ($la_mes);
-          warning ($here, $la_Mes);
-          
+          file_log_write ($here, $la_Mes);
+ 
+          $log_str = 'returning to block_new_create_script.php';
+          file_log_write ($here, $log_str);
           exiting_from_function ($here);
   
-          $_SESSION['message'] = $la_Mes;
+          /* $_SESSION['message'] = $la_Mes; */
 
           include 'block_new_create_script.php'; /* Return to block creation */
           exit;
       }
-  }
+  } /* Improve no Exception */
   catch (Exception $e) {  
       $mes = $e->getMessage();
       $nam_ent_cur = irp_provide ('entry_current_name', $here);
@@ -99,6 +101,7 @@ function block_new_content_write_build () {
   $nam_blo_new = irp_provide ('block_new_name_from_block_new_surname', $here);
 
   $log_str = irp_provide ('check_is_block_new', $here);
+  file_log_write ($here, $log_str);
 
   $con_blo_new = irp_provide ('block_new_content', $here);
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
@@ -187,7 +190,6 @@ function block_new_create_save_irp_path_clean () {
   
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order_current_string', $here); 
   irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_current_nameoffile_array', $here); 
-  
   exiting_from_function ($here);
   return;
 }
@@ -248,12 +250,6 @@ function block_new_create_save_link_to_return_build () {
 function block_new_create_save_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
-
-/* move to script */
-  $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__);
-/* getting DATA $get_val */ 
-  $get_key = 'block_new_surname';
-  $sur_blo_new = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here);
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_page_header', $here);

@@ -85,8 +85,6 @@ require_once "item_next_create_form_new_create_content_functions.php";
 require_once "item_next_create_form_new_create_justification_functions.php";
 require_once "item_next_create_form_page_title_functions.php";
 
-require_once "item_new_content_functions.php"; 
-
 require_once "item_new_create_content_form_functions.php"; 
 require_once "item_new_create_justification_functions.php"; 
 require_once "item_new_name_functions.php"; 

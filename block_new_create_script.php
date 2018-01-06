@@ -13,6 +13,11 @@ entering_in_script ($script);
 
 father_n_son_stack_script_push_of_current_script ($script);
 
+# print_html_array ($script, '$_SESSION["irp_register"]', $_SESSION['irp_register']);
+
+$get_key = 'block_new_surname';
+irp_path_clean_register_of_top_key_of_bottom_key_of_where ('block_new_content_write', 'GET_' . $get_key, $script);
+
 $html_str = irp_provide ($entity, $script);
 
 print $html_str;

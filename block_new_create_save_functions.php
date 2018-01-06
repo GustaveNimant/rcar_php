@@ -54,8 +54,8 @@ function check_is_block_new_build () {  /* Improve return $html_str. No need of 
   entering_in_function ($here);
 
   $nam_blo_new = irp_provide ('block_new_name_from_block_new_surname', $here);
+  debug_n_check ($here , '$nam_blo_new', $nam_blo_new);
 
-  $log_str = '';
   try {
       $old_nam_blo_cur_a = irp_provide ('block_name_array_order_current', $here);
       debug_n_check ($here , '$old_nam_blo_cur_a', $old_nam_blo_cur_a);
@@ -66,8 +66,8 @@ function check_is_block_new_build () {  /* Improve return $html_str. No need of 
           $la_mes_1 = language_translate_of_en_string ($en_mes_1); 
           $la_mes_2 = language_translate_of_en_string ($en_mes_2);   
           $la_mes  =  $la_mes_1 . ' >' . $nam_blo_new . '< ' . $la_mes_2;
-          $la_Mes = string_html_capitalized_of_string ($la_mes);
-          file_log_write ($here, $la_Mes);
+          $log_str = string_html_capitalized_of_string ($la_mes);
+          file_log_write ($here, $log_str);
  
           $log_str = 'returning to block_new_create_script.php';
           file_log_write ($here, $log_str);
@@ -83,11 +83,12 @@ function check_is_block_new_build () {  /* Improve return $html_str. No need of 
       $mes = $e->getMessage();
       $nam_ent_cur = irp_provide ('entry_current_name', $here);
       if ($mes = "Catalog is empty in function block_new_name_catalog_build for Entry name $nam_ent_cur") {
-          $log_str .= 'block_new_name_catalog is empty';
+          $log_str = 'block_new_name_catalog is empty';
+          file_log_write ($here, $log_str);
       }
   }
 
-  $log_str .= "Block >$nam_blo_new< has been checked as new";
+  $log_str = "Block >$nam_blo_new< has been checked as new";
 
   exiting_from_function ($here . " with $log_str");
   return $log_str; 

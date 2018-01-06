@@ -27,9 +27,7 @@ function block_content_by_block_name_hash_build () {
   entering_in_function ($here);
 
   $nam_ent = irp_provide ('entry_current_name', $here);
-  $nam_blo_a = irp_provide ('block_name_array_order_current', $here); /* Use exception*/
-
-/* Use exception*/
+  $nam_blo_a = irp_provide ('block_name_array_order_current', $here);
 
   if (array_is_empty_of_array ($nam_blo_a)) {
     $con_by_nam_blo_a = array ();
@@ -70,7 +68,6 @@ function block_content_formatted_by_block_name_list_order_current_string_build (
   $con_blo_for_by_nam_blo_a = array ();
   foreach ($con_by_nam_blo_a as $nam_blo => $con_blo) {
       $con_blo_for = block_content_formatting_of_block_content ($con_blo);
-      /* $con_blo_for = block_content_filtered_after_ckeditor_of_string ($con_blo_for) */;
       $con_blo_for_by_nam_blo_a[$nam_blo] = $con_blo_for;
   }
 

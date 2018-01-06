@@ -91,7 +91,7 @@ function item_current_modify_link_to_return_build () {
   entering_in_function ($here);
 
   $get_key = 'entry_current_name';
-  $get_val = irp_provide ($get_key, $here);
+  $get_val = irp_provide ('entry_current_name', $here);
   $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
 
   $script_to_return = 'entry_current_display_script.php';

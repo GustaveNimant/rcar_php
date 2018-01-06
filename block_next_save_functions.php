@@ -72,7 +72,7 @@ function section_block_next_save_link_to_return_build () {
     entering_in_function ($here);
     
     $get_key = 'block_current_name';
-    $get_val = irp_provide ($get_key, $here);
+    $get_val = irp_provide ('block_current_name', $here);
     $sur_blo_cur = irp_provide ('block_current_surname_from_block_current_name', $here);
     
     $script_to_return = 'block_current_display_script.php';

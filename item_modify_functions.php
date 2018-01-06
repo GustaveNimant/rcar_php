@@ -16,7 +16,6 @@ function item_modify_section_page_title_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-
   $sur_ent = irp_provide ('entry_current_surname_from_entry_current_name', $here);
   $sur_ite = irp_provide ('item_surname', $here);
   $kin_blo = irp_provide ('entry_block_kind', $here);

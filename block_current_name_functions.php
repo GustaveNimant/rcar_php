@@ -30,7 +30,7 @@ function block_current_namenew_from_block_current_surnamenew_build () {
     entering_in_function ($here);
 
 /* Improve */    
-    if (irp_is_stored_of_irp_key ('block_current_surnamenew')) {  
+    if (irp_is_stored_of_irp_key ('block_current_surnamenew', $here)) {  
         $sur_blo_cur = irp_provide ('block_current_surnamenew', $here);  
         $new_nam_blo_cur = word_name_capitalized_of_string_surname ($sur_blo_cur);
     }

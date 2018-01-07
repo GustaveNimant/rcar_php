@@ -30,7 +30,7 @@ function entry_current_namenew_from_entry_current_surnamenew_build () {
     entering_in_function ($here);
 
 /* Improve */    
-    if (irp_is_stored_of_irp_key ('entry_current_surnamenew')) {  
+    if (irp_is_stored_of_irp_key ('entry_current_surnamenew', $here)) {  
         $new_sur_ent_cur = irp_provide ('entry_current_surnamenew', $here);  
         $new_nam_ent_cur = word_name_capitalized_of_string_surname ($new_sur_ent_cur);
     }

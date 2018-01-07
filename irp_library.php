@@ -10,9 +10,9 @@ entering_in_module ($module);
 
 $Documentation[$module]['irp_stack'] = "stacks all \$irp_key. When retrieved (\$irp_val) is added"; 
 
-function irp_is_providable_of_irp_key ($irp_key) {
+function irp_is_providable_of_irp_key ($irp_key, $caller) {
     $here = __FUNCTION__;
-    entering_in_function ($here . " ($irp_key)");
+    entering_in_function ($here . " ($irp_key, $caller)");
     
     $irp_build = $irp_key . "_build";
 
@@ -22,9 +22,9 @@ function irp_is_providable_of_irp_key ($irp_key) {
     return $boo;
 }
 
-function irp_is_data_of_irp_key ($irp_key) {
+function irp_is_data_of_irp_key ($irp_key, $caller) {
     $here = __FUNCTION__;
-    entering_in_function ($here . " ($irp_key)");
+    entering_in_function ($here . " ($irp_key, $caller)");
 
     $boo = ( (isset ($_SESSION))
         && (isset ($_SESSION['is_data_entity_name'][$irp_key])) 
@@ -35,9 +35,9 @@ function irp_is_data_of_irp_key ($irp_key) {
     return $boo;
 }
 
-function irp_is_stored_of_irp_key ($irp_key) {
+function irp_is_stored_of_irp_key ($irp_key, $caller) {
     $here = __FUNCTION__;
-    entering_in_function ($here . " ($irp_key)");
+    entering_in_function ($here . " ($irp_key, $caller)");
 
     if ( ! (   
         (isset ($_SESSION))
@@ -55,23 +55,21 @@ function irp_is_stored_of_irp_key ($irp_key) {
         break;
     default:
         if (array_key_exists ($irp_key, $_SESSION['irp_register']) ){
-            $log_str = "Value for key >$irp_key< is already stored $boo\n";
+            $log_str = "Value for key >$irp_key< is already stored " . string_of_boolean ($boo) . " from $caller\n";
             file_log_write ($here, $log_str);
             $boo = TRUE;
         }
     };
     
-    $str_boo = string_of_boolean ($boo);
-    
     debug ($here , 'irp_register_keys', array_keys ($_SESSION['irp_register']));
-    exiting_from_function ($here . " with irp_key >" . $irp_key . "< is " . $str_boo);
+    exiting_from_function ($here . " with irp_key >" . $irp_key . "< is " . string_of_boolean ($boo));
     
     return $boo;
 }
 
-function irp_store_nondata ($irp_key, $irp_val) {
+function irp_store_nondata ($irp_key, $irp_val, $caller) {
     $here = __FUNCTION__;
-    entering_in_function ($here . " ($irp_key, \$irp_val)");
+    entering_in_function ($here . " ($irp_key, \$irp_val, $caller)");
 
     if (
         ($irp_key == "git_command") 
@@ -82,21 +80,21 @@ function irp_store_nondata ($irp_key, $irp_val) {
         ||  
         ($irp_key == "user_information")
     ){
-        $log_str = "Value storage skipped for key >$irp_key<"; 
+        $log_str = "Value storage skipped for key >$irp_key< from $caller"; 
         file_log_write ($here, $log_str);
 
-        exiting_from_function ($here . " ($irp_key, \$irp_val)");
+        exiting_from_function ($here . " ($irp_key, \$irp_val, $caller)");
         return;
     }
     
     if ($_SESSION['parameters']['irp_nondata_storage_is_enabled']) {  
         
-        if (irp_is_stored_of_irp_key ($irp_key)) {
+        if (irp_is_stored_of_irp_key ($irp_key, $here)) {
             $old_value = $_SESSION['irp_register'][$irp_key];
             
             if ($irp_val == $old_value) {
                 $cre_ste = $_SESSION['creation_step'][$irp_key];
-                $log_str = "Warning storage skipped for already stored NONDATA (step # $cre_ste) irp_key >$irp_key< with the same value". "\n"; 
+                $log_str = "Warning storage skipped for already stored NONDATA (step # $cre_ste) irp_key >$irp_key< with the same value from $caller". "\n"; 
                 file_log_write ($here, $log_str);
                 exiting_from_function ($here  . " ($irp_key, \$irp_val)");
                 return;
@@ -115,13 +113,13 @@ function irp_store_nondata ($irp_key, $irp_val) {
         else { /* nondata NOT yet stored and storage enabled */
 
             $_SESSION['irp_register'][$irp_key] = $irp_val;
-            $log_str = "storage done for NONDATA >$irp_key<"; 
+            $log_str = "storage done for NONDATA >$irp_key< from $caller"; 
             file_log_write ($here, $log_str);
         }
     } 
     else { /* NONDATA storage disabled */
         $log_str  = "NONDATA irp_key >$irp_key< is not stored" . "\n"; 
-        $log_str .= "Warning irp_key >$irp_key< storage disabled for NONDATA" . "\n"; 
+        $log_str .= "Warning irp_key >$irp_key< storage disabled for NONDATA from $caller" . "\n"; 
         file_log_write ($here, $log_str);
     }
 
@@ -134,15 +132,16 @@ function irp_remove_off_irp_register_of_irp_key ($irp_key, $where) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($irp_key, $where)");
     
-    $log_str = "$where :irp_register[$irp_key] cleaned";
-    
+    $log_str = "irp_register[$irp_key] cleaned from $where";
+    file_log_write ($here, $log_str);
+
     if ($irp_key == "all"){
         unset ($_SESSION['irp_register']);
         $log_str = "All irp_key removed from irp_register";    
     }
     else {
         unset ($_SESSION['irp_register'][$irp_key]);
-        $log_str = "\$irp_key >$irp_key< removed from irp_register";    
+        $log_str = "\$irp_key >$irp_key< removed from irp_register from $where";    
     }
     
     file_log_write ($here, $log_str);
@@ -151,9 +150,9 @@ function irp_remove_off_irp_register_of_irp_key ($irp_key, $where) {
     return;
 }
 
-function irp_clean_value_of_irp_key ($irp_key, $irp_val_sal) {
+function irp_clean_value_of_irp_key ($irp_key, $irp_val_sal, $caller) {
     $here = __FUNCTION__;
-    entering_in_function ($here . " ($irp_key, $irp_val_sal)");
+    entering_in_function ($here . " ($irp_key, $irp_val_sal, $caller)");
     /* Improve what is it ? */
     switch ($irp_key) {
         /* case 'item_name' : */
@@ -172,24 +171,24 @@ function irp_clean_value_of_irp_key ($irp_key, $irp_val_sal) {
         $irp_val_cle = $irp_val_sal;
     }
 
-    $log_str =  "Value cleaned as >$irp_val_cle< for irp_key >$irp_key<";
+    $log_str =  "Value cleaned as >$irp_val_cle< for irp_key >$irp_key< from $caller";
     file_log_write ($here, $log_str);
 
-    exiting_from_function ($here . " ($irp_key, $irp_val_sal)");
+    exiting_from_function ($here . " ($irp_key, $irp_val_sal, $caller)");
     return $irp_val_cle;
     
 }
 
-function irp_store_data ($irp_key, $irp_val) {
+function irp_store_data ($irp_key, $irp_val, $caller) {
     $here = __FUNCTION__;
-    entering_in_function ($here . " ($irp_key, \$irp_val)");
+    entering_in_function ($here . " ($irp_key, \$irp_val, $caller)");
     
-    if (irp_is_stored_of_irp_key ($irp_key)) {
+    if (irp_is_stored_of_irp_key ($irp_key, $here)) {
         $old_value = $_SESSION['irp_register'][$irp_key];
         
         if ($irp_val == $old_value) {
             $log_str  = "Warning DATA irp_key >$irp_key< is already stored with the same value" . "\n";
-            $log_str .= "Warning storage for DATA irp_key >$irp_key< skipped" . "\n"; 
+            $log_str .= "Warning storage for DATA irp_key >$irp_key< skipped from caller" . "\n"; 
             file_log_write ($here, $log_str);
             exiting_from_function ($here . " ($irp_key, \$irp_val)");
             return;
@@ -197,7 +196,7 @@ function irp_store_data ($irp_key, $irp_val) {
         else {
             $_SESSION['irp_register'][$irp_key] = $irp_val;
             $log_str  = "Warning DATA irp_key >$irp_key< is already stored with an other value" . "\n"; 
-            $log_str .= "Warning DATA irp_key >$irp_key< storage redone" . "\n"; 
+            $log_str .= "Warning DATA irp_key >$irp_key< storage redone from caller" . "\n"; 
             file_log_write ($here, $log_str);
         }
     }
@@ -217,11 +216,11 @@ function irp_store_data ($irp_key, $irp_val) {
         }
 
         $cre_ste = $_SESSION['creation_step'][$irp_key];
-        $log_str = "first storage done for DATA >$irp_key< with value >$irp_val< at creation step # $cre_ste"; 
+        $log_str = "first storage done for DATA >$irp_key< with value >$irp_val< from $caller";
         file_log_write ($here, $log_str);
     }
     
-    exiting_from_function ($here . " ($irp_key, \$irp_val)");
+    exiting_from_function ($here . " ($irp_key, \$irp_val, $caller)");
     return;
 }
 
@@ -234,7 +233,7 @@ function irp_store_data_of_get_key_of_get_value_of_where ($get_key, $get_val, $w
     /* print_html_array ($here, '$_SESSION["data_creation_function"]', $_SESSION['data_creation_function']); */
     /* print_html_array ($here, '$_SESSION["module_wheretoact_nameoffile"]', $_SESSION['module_wheretoact_nameoffile']); */
 
-    irp_store_data ($get_key, $get_val);
+    irp_store_data ($get_key, $get_val, $where);
     
     $log_str = "DATA irp_key >$get_key< has been stored with value >$get_val< in $where";
     file_log_write ($here, $log_str);
@@ -248,14 +247,14 @@ function irp_data_value_only_store_of_get_key_of_module_name_of_where ($get_key,
   $here = __FUNCTION__;
   entering_in_function ($here . " ($get_key, $module, $where)");
 
-  if (irp_is_stored_of_irp_key ($get_key)) { /* occurs when returning to module really ?*/
-      $get_val = irp_retrieve ($get_key);
+  if (irp_is_stored_of_irp_key ($get_key, $here)) { /* occurs when returning to module really ?*/
+      $get_val = irp_retrieve ($get_key, $here);
       $log_str = "WARNING : irp_key >$get_key< irp_val >$get_val< is already stored";
   }
   else {
       $get_val = get_hash_retrieve_value_of_get_key_of_where ($get_key, $where);
       irp_store_data_of_get_key_of_get_value_of_where ($get_key, $get_val, $where);
-      $log_str = "with irp_key >$get_key< irp_val >$get_val< at creation_step " . $_SESSION['creation_step_count'];
+      $log_str = "with irp_key >$get_key< irp_val >$get_val< from $where";
   }
 
   debug_n_check ($here, '$get_val', $get_val);
@@ -280,14 +279,14 @@ function irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($
   $here = __FUNCTION__;
   entering_in_function ($here . " ($get_key, $module, $where)");
 
-  if (irp_is_stored_of_irp_key ($get_key)) { /* occurs when returning to module */
-      $get_val = irp_retrieve ($get_key);
-      $mes = " recovering DATA irp_key >$get_key< irp_val >$get_val< at creation_step " . $_SESSION['creation_step_count'];
+  if (irp_is_stored_of_irp_key ($get_key, $here)) { /* occurs when returning to module */
+      $get_val = irp_retrieve ($get_key, $here);
+      $mes = " recovering DATA irp_key >$get_key< irp_val >$get_val<";
   }
   else {
       $get_val = get_hash_retrieve_value_of_get_key_of_where ($get_key, $where);
       irp_store_data_of_get_key_of_get_value_of_where ($get_key, $get_val, $where);
-      $mes = " with irp_key >$get_key< irp_val >$get_val< at creation_step " . $_SESSION['creation_step_count'];
+      $mes = " with irp_key >$get_key< irp_val >$get_val<";
   }
 
   debug_n_check ($here, '$get_val', $get_val);
@@ -311,8 +310,8 @@ function irp_path_data_clean_new_bottom_key_store_of_bottom_key_of_module_name_o
   $here = __FUNCTION__;
   entering_in_function ($here . " ($bot_key, $module)");
   
-  if (irp_is_stored_of_irp_key ($bot_key)) {
-      $bot_val = irp_retrieve ($bot_key);
+  if (irp_is_stored_of_irp_key ($bot_key, $here)) {
+      $bot_val = irp_retrieve ($bot_key, $here);
       debug ($here, '$bot_val', $bot_val);
       if (isset ($_GET[$bot_key])) {
           if ($bot_val != $_GET[$bot_key]) {
@@ -321,7 +320,7 @@ function irp_path_data_clean_new_bottom_key_store_of_bottom_key_of_module_name_o
               irp_store_data_of_get_key_of_get_value_of_where ($bot_key, $get_val, $here);
           }
           else {
-              $log_str = "No path cleaning. bottom key >$bot_key< value >$bot_val< unchanged";
+              $log_str = "No path cleaning. bottom key >$bot_key< value >$bot_val< unchanged from where";
               file_log_write ($here, $log_str);
           }
       }
@@ -353,9 +352,9 @@ function irp_path_read_clean_new_bottom_key_store_of_bottom_key_of_module_name_o
   return;
 }
 
-function irp_store ($irp_key, $irp_val) {
+function irp_store ($irp_key, $irp_val, $caller) {
     $here = __FUNCTION__;
-    entering_in_function ($here . " ($irp_key, \$irp_val)");
+    entering_in_function ($here . " ($irp_key, \$irp_val, $caller)");
     
     $eol = end_of_line ();
 
@@ -374,20 +373,20 @@ function irp_store ($irp_key, $irp_val) {
         "Check");
     }
 
-    if (irp_is_data_of_irp_key ($irp_key)) {
-        $irp_val = irp_store_data ($irp_key, $irp_val);
+    if (irp_is_data_of_irp_key ($irp_key, $here)) {
+        $irp_val = irp_store_data ($irp_key, $irp_val, $caller);
     }
     else {
-        $irp_val = irp_store_nondata ($irp_key, $irp_val);
+        $irp_val = irp_store_nondata ($irp_key, $irp_val, $caller);
     }
 
-    exiting_from_function ($here . " ($irp_key, \$irp_val)");
+    exiting_from_function ($here . " ($irp_key, \$irp_val, $caller)");
     return;
 }
 
-function irp_store_force ($irp_key, $irp_val, $irp_fat) {
+function irp_store_force ($irp_key, $irp_val, $irp_fat, $caller) {
     $here = __function__;
-    entering_in_function ($here . " ($irp_key, \$irp_val, $irp_fat)");
+    entering_in_function ($here . " ($irp_key, \$irp_val, $irp_fat, $caller)");
 
     if (empty ($irp_val)) {  
         print_html_array ($here , "irp_register", $_SESSION['irp_register']);
@@ -412,13 +411,13 @@ function irp_store_force ($irp_key, $irp_val, $irp_fat) {
     $_SESSION['creation_step_count'] = $_SESSION['creation_step_count'] + 1;
     $_SESSION['creation_step'][$irp_key] = $_SESSION['creation_step_count'];  
 
-    irp_store ($irp_key, $irp_val);
+    irp_store ($irp_key, $irp_val, $here);
 
     $log_str .= "Value storage forced for irp_key >$irp_key<" . "\n"; 
-    $log_str .= "irp_key >$irp_key< re-built at creation step # " . $_SESSION['creation_step_count'];
+    $log_str .= "irp_key >$irp_key< re-built from $caller";
     file_log_write ($here, $log_str);
 
-    exiting_from_function ($here . " ($irp_key, \$irp_val, $irp_fat)");
+    exiting_from_function ($here . " ($irp_key, \$irp_val, $irp_fat, $caller)");
     return;
 }
 
@@ -441,14 +440,14 @@ function irp_stack_path_of_key ($irp_key) {
     return $irp_sta_b ;
 }
 
-function irp_retrieve ($irp_key) {
+function irp_retrieve ($irp_key, $caller) {
     $here = __FUNCTION__;
-    entering_in_function ($here . " ($irp_key)");
+    entering_in_function ($here . " ($irp_key, $caller)");
     
     $irp_reg_a = $_SESSION['irp_register'];
     debug ($here , 'irp_register_keys', array_keys ($_SESSION['irp_register']));
     
-    if (irp_is_stored_of_irp_key ($irp_key)) {
+    if (irp_is_stored_of_irp_key ($irp_key, $here)) {
         
         $irp_val = $_SESSION['irp_register'][$irp_key];
         /* debug ($here , "irp_val",  $irp_val); */
@@ -466,10 +465,14 @@ function irp_retrieve ($irp_key) {
         
         $str_val = string_of_separator_of_any_variable ('::', $irp_val);
         array_push ($_SESSION['irp_stack'], $irp_key . " ($str_val)");
-        $log_str = "already stored Value pushed in irp_stack for irp_key >$irp_key< pushed in irp_stack";
+
+        $log_str = "already stored Value pushed in irp_stack for irp_key >$irp_key< pushed in irp_stack from $caller";
         file_log_write ($here, $log_str);
 
-        exiting_from_function ($here . " ($irp_key)");
+        $log_str = "irp_key >$irp_key< has been retrieved from $caller";
+        file_log_write ($here, $log_str);
+
+        exiting_from_function ($here . " ($irp_key, $caller)");
 
         return $irp_val;
     }
@@ -484,9 +487,9 @@ function irp_retrieve ($irp_key) {
     }
 }
 
-function irp_build ($irp_key, $nam_fat) {
+function irp_build ($irp_key, $nam_fat, $caller) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($irp_key, $nam_fat)");
+  entering_in_function ($here . " ($irp_key, $nam_fat, $caller)");
   
   $irp_build = $irp_key . "_build";
 
@@ -511,13 +514,13 @@ function irp_build ($irp_key, $nam_fat) {
     if ($irp_fat != $irp_key) {
         array_push ($_SESSION['irp_stack'], $irp_key);
 
-        $log_str = "irp_key >$irp_key< pushed in irp_stack built by >$irp_fat<";
+        $log_str = "irp_key >$irp_key< pushed in irp_stack built by >$irp_fat< from $caller";
         file_log_write ($here, $log_str);
         $nam_son = $irp_key;
         father_n_son_stack_entity_push_of_father_of_son ($nam_fat, $nam_son);
     }
     else {
-        $log_str = "irp_key >$irp_key< not pushed in irp_stack built by itself >$irp_fat<";
+        $log_str = "irp_key >$irp_key< not pushed in irp_stack built by itself >$irp_fat< from $caller";
         file_log_write ($here, $log_str);
     }
 
@@ -534,7 +537,7 @@ function irp_build ($irp_key, $nam_fat) {
     $_SESSION['creation_step_count'] = $_SESSION['creation_step_count'] + 1;
     $_SESSION['creation_step'][$irp_key] = $_SESSION['creation_step_count'];  
 
-    $log_str = "irp_key >$irp_key< built at creation step # " . $_SESSION['creation_step_count'];
+    $log_str = "irp_key >$irp_key< built from $caller";
     file_log_write ($here, $log_str);
   
     exiting_from_function ($here . " ($irp_key, $nam_fat)");
@@ -542,15 +545,15 @@ function irp_build ($irp_key, $nam_fat) {
     return $irp_val;
 }
 
-function irp_build_n_store ($irp_key, $nam_fat) {
+function irp_build_n_store ($irp_key, $nam_fat, $caller) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($irp_key, $nam_fat)");
+  entering_in_function ($here . " ($irp_key, $nam_fat, $caller)");
   
-  $irp_val = irp_build ($irp_key, $nam_fat);
+  $irp_val = irp_build ($irp_key, $nam_fat, $here);
 
-  irp_store ($irp_key, $irp_val);
+  irp_store ($irp_key, $irp_val, $here);
 
-  $log_str = "irp_key >$irp_key<  has been built and stored";
+  $log_str = "irp_key >$irp_key< has been built and stored from $caller";
   file_log_write ($here, $log_str);
 
   exiting_from_function ($here . " ($irp_key, $nam_fat)");
@@ -564,15 +567,15 @@ function irp_provide_nondata ($irp_key, $caller) {
 
     $irp_fat = preg_replace ('/_build/', '', $caller); 
 
-    if (irp_is_stored_of_irp_key ($irp_key)) {
+    if (irp_is_stored_of_irp_key ($irp_key, $here)) {
         if ($_SESSION['parameters']['irp_nondata_storage_is_enabled']) {
-            $irp_val = irp_retrieve ($irp_key);
+            $irp_val = irp_retrieve ($irp_key, $here);
             $nam_son = $irp_key;
             $nam_fat = $irp_fat;  
             father_n_son_stack_entity_push_of_father_of_son ($nam_fat, $nam_son); /* may be not useful */
         }
         else {
-            $log_str = "irp_store NONDATA NOT active : irp_key >$irp_key< is stored. Calling irp_build_n_store anyway";
+            $log_str = "irp_store NONDATA NOT active : irp_key >$irp_key< is stored. Calling irp_build_n_store anyway from $caller";
             file_log_write ($here, $log_str);
 
             $irp_val = irp_build_n_store ($irp_key, $irp_fat);
@@ -582,7 +585,7 @@ function irp_provide_nondata ($irp_key, $caller) {
         $log_str = "irp_key >$irp_key< not stored calling irp_build_n_store from $caller";
         file_log_write ($here, $log_str);
 
-        $irp_val = irp_build_n_store ($irp_key, $irp_fat);
+        $irp_val = irp_build_n_store ($irp_key, $irp_fat, $here);
     }
     
     exiting_from_function ($here . " ($irp_key, $caller)");
@@ -593,7 +596,7 @@ function irp_provide_data ($irp_key, $caller) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($irp_key, $caller)");
 
-    if ( ! irp_is_data_of_irp_key ($irp_key)) {
+    if ( ! irp_is_data_of_irp_key ($irp_key, $here)) {
         print_fatal_error ($here, 
         "irp_key >$irp_key< were a DATA",
         "it is NOT",
@@ -601,8 +604,8 @@ function irp_provide_data ($irp_key, $caller) {
         );
     }
                 
-    if (irp_is_stored_of_irp_key ($irp_key)) {
-        $irp_val = irp_retrieve ($irp_key);
+    if (irp_is_stored_of_irp_key ($irp_key, $here)) {
+        $irp_val = irp_retrieve ($irp_key, $here);
         $nam_son = $irp_key;
         $nam_fat = preg_replace ('/_build/', '', $caller); 
         father_n_son_stack_entity_push_of_father_of_son ($nam_fat, $nam_son); /* may be not useful */
@@ -658,7 +661,7 @@ function irp_provide ($irp_key, $caller) {
         );
     }
 
-    if (irp_is_data_of_irp_key ($irp_key)) {
+    if (irp_is_data_of_irp_key ($irp_key, $here)) {
         $irp_val = irp_provide_data ($irp_key, $caller);
     }
     else {
@@ -674,6 +677,9 @@ function irp_provide ($irp_key, $caller) {
     }
     
     $_SESSION['count_entity'] = $_SESSION['count_entity'] +1;
+
+    $log_str =  "irp_key >$irp_key< has been provided from $caller";
+    file_log_write ($here, $log_str);
 
     exiting_from_function ($here . " ($irp_key, $caller)");
     return $irp_val;

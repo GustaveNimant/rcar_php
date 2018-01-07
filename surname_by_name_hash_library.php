@@ -90,7 +90,7 @@ function surname_by_name_hash_add_n_write_of_name_of_surname_of_current_hash ($n
       $new_sur_by_nam_h = surname_by_name_hash_put_of_name_of_surname_of_current_array ($nam, $sur_nam, $old_sur_by_nam_h);
   }
 
-  irp_store_force ('surname_by_name_hash', $new_sur_by_nam_h, 'entry_current_display');
+  irp_store_force ('surname_by_name_hash', $new_sur_by_nam_h, 'entry_current_display', $here);
 
   surname_catalog_write_of_surname_by_name_hash ($new_sur_by_nam_h);
 

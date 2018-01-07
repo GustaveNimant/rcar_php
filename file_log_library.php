@@ -30,9 +30,9 @@ function file_log_en_informations_of_action ($get_act) {
   date_default_timezone_set ("Europe/Paris");
   $dat_act = date("j F Y/G\hi");
   
-  $con_pro =language_translate_of_en_string ('content of the property');
+  $con_pro = language_translate_of_en_string ('content of the property');
   $con_pro = html_entity_decode ($con_pro);
-  $ent_nam =language_translate_of_en_string ('in entry name');
+  $ent_nam = language_translate_of_en_string ('in entry name');
   $ent_nam = html_entity_decode ($ent_nam);
   $in =language_translate_of_en_string ('in');
   
@@ -141,13 +141,15 @@ function file_log_write ($where, $log_str) {
       
       $nof_log = "$Nam_pro.$ext_log";
       
-      $now = now();
-      
-      $head = "\n$now" . ': ' . $where . ' : ';
+#      $now = now();
+#      $head = "\n$now" . ': ' . $where . ' : ';
+      $ste_cur = $_SESSION['creation_step_count'];
+      $str_ste_cur = sprintf("step %'.04d", $ste_cur);
+      $head = "$str_ste_cur : $where : ";
       $htm_tri = trim ($log_str, " \t\n\r\0\x0B"); 
-      $str = preg_replace ('/\n/', $head, $htm_tri); /* to have "here : " on every line */ 
+      $str = preg_replace ('/\n/', "\n" . $head, $htm_tri); /* to have "here : " on every line */ 
       
-      $txt_log = $now . ': ' . $where . ' : ' . $str;
+      $txt_log = $head . $str;
       
       file_content_append ($nof_log, $txt_log . "\n");
   }

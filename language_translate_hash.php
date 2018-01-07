@@ -150,7 +150,7 @@ commençant par quoi, pourquoi ou comment',
             
     'already exists' => 
     array (
-        'fr' => 'existe d&eacutej&agrave;',
+        'fr' => 'existe d&eacute;j&agrave;',
         'it' => '???',
     ),
 

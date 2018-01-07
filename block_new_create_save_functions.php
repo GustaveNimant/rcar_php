@@ -65,16 +65,14 @@ function check_is_block_new_build () {  /* Improve return $html_str. No need of 
           $en_mes_2 = "already exists";
           $la_mes_1 = language_translate_of_en_string ($en_mes_1); 
           $la_mes_2 = language_translate_of_en_string ($en_mes_2);   
-          $la_mes  =  $la_mes_1 . ' >' . $nam_blo_new . '< ' . $la_mes_2;
-          $log_str = string_html_capitalized_of_string ($la_mes);
+          $la_mes   =  $la_mes_1 . ' >' . $nam_blo_new . '< ' . $la_mes_2;
+          $log_str  = string_html_capitalized_of_string ($la_mes);
           file_log_write ($here, $log_str);
  
           $log_str = 'returning to block_new_create_script.php';
           file_log_write ($here, $log_str);
           exiting_from_function ($here);
   
-          /* $_SESSION['message'] = $la_Mes; */
-
           include 'block_new_create_script.php'; /* Return to block creation */
           exit;
       }

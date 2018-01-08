@@ -13,31 +13,26 @@ entering_in_script ($script);
 
 father_n_son_stack_script_push_of_current_script ($script);
 
-$get_key = 'block_new_surname';
+$get_key_1 = 'block_new_surname';
+$get_key_2 = 'item_new_content';
+$get_key_3 = 'item_new_justification';
 
 /* removing entity page */
-irp_path_clean_register_of_top_key_of_bottom_key_of_where ($entity, 'GET_' . $get_key, $script);
+irp_path_clean_register_of_top_key_of_bottom_key_of_where ($entity, 'GET_' . $get_key_1, $script);
+
+irp_path_clean_register_of_top_key_of_bottom_key_of_where ($entity, 'GET_' . $get_key_2, $script);
+
+irp_path_clean_register_of_top_key_of_bottom_key_of_where ($entity, 'GET_' . $get_key_3, $script);
+
 
 /* getting DATA and storing */
-$log_str = irp_data_value_only_store_of_get_key_of_script_name_of_where ($get_key, $script, $script);
+$log_str = irp_data_value_only_store_of_get_key_of_script_name_of_where ($get_key_1, $script, $script);
 file_log_write ($script, $log_str);
 
-
-$get_key = 'item_new_content';
-/* removing entity page */
-irp_path_clean_register_of_top_key_of_bottom_key_of_where ($entity, 'GET_' . $get_key, $script);
-
-/* getting DATA and storing */
-$log_str = irp_data_value_only_store_of_get_key_of_script_name_of_where ($get_key, $script, $script);
+$log_str = irp_data_value_only_store_of_get_key_of_script_name_of_where ($get_key_2, $script, $script);
 file_log_write ($script, $log_str);
 
-
-$get_key = 'item_new_justification';
-/* removing entity page */
-irp_path_clean_register_of_top_key_of_bottom_key_of_where ($entity, 'GET_' . $get_key, $script);
-
-/* getting DATA and storing */
-$log_str = irp_data_value_only_store_of_get_key_of_script_name_of_where ($get_key, $script, $script);
+$log_str = irp_data_value_only_store_of_get_key_of_script_name_of_where ($get_key_3, $script, $script);
 file_log_write ($script, $log_str);
 
 $html_str = irp_provide ($entity, $script);

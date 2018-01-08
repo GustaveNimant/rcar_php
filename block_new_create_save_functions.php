@@ -50,46 +50,36 @@ function block_new_create_save_page_title_build () {
 }
 
 function check_is_block_new_build () {  /* Improve return $html_str. No need of order */
-  $here = __FUNCTION__;
-  entering_in_function ($here);
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+    $nam_blo_new = irp_provide ('block_new_name_from_block_new_surname', $here);
+    debug_n_check ($here , '$nam_blo_new', $nam_blo_new);
+    
+    $old_nam_blo_cur_a = irp_provide ('block_name_array_order_current', $here);
+    debug_n_check ($here , '$old_nam_blo_cur_a', $old_nam_blo_cur_a);
+    
+    if (array_exists_of_value_of_array ($nam_blo_new, $old_nam_blo_cur_a) ) {
+        $en_mes_1 = "the block";
+        $en_mes_2 = "already exists";
+        $la_mes_1 = language_translate_of_en_string ($en_mes_1); 
+        $la_mes_2 = language_translate_of_en_string ($en_mes_2);   
+        $la_mes   =  $la_mes_1 . ' >' . $nam_blo_new . '< ' . $la_mes_2;
+        $log_str  = string_html_capitalized_of_string ($la_mes);
+        file_log_write ($here, $log_str);
 
-  $nam_blo_new = irp_provide ('block_new_name_from_block_new_surname', $here);
-  debug_n_check ($here , '$nam_blo_new', $nam_blo_new);
-
-  try {
-      $old_nam_blo_cur_a = irp_provide ('block_name_array_order_current', $here);
-      debug_n_check ($here , '$old_nam_blo_cur_a', $old_nam_blo_cur_a);
-
-      if (array_exists_of_value_of_array ($nam_blo_new, $old_nam_blo_cur_a) ) {
-          $en_mes_1 = "the block";
-          $en_mes_2 = "already exists";
-          $la_mes_1 = language_translate_of_en_string ($en_mes_1); 
-          $la_mes_2 = language_translate_of_en_string ($en_mes_2);   
-          $la_mes   =  $la_mes_1 . ' >' . $nam_blo_new . '< ' . $la_mes_2;
-          $log_str  = string_html_capitalized_of_string ($la_mes);
-          file_log_write ($here, $log_str);
- 
-          $log_str = 'returning to block_new_create_script.php';
-          file_log_write ($here, $log_str);
-          exiting_from_function ($here);
-  
-          include 'block_new_create_script.php'; /* Return to block creation */
-          exit;
-      }
-  } /* Improve no Exception */
-  catch (Exception $e) {  
-      $mes = $e->getMessage();
-      $nam_ent_cur = irp_provide ('entry_current_name', $here);
-      if ($mes = "Catalog is empty in function block_new_name_catalog_build for Entry name $nam_ent_cur") {
-          $log_str = 'block_new_name_catalog is empty';
-          file_log_write ($here, $log_str);
-      }
-  }
-
-  $log_str = "Block >$nam_blo_new< has been checked as new";
-
-  exiting_from_function ($here . " with $log_str");
-  return $log_str; 
+        $log_str = 'returning to block_new_create_script.php';
+        file_log_write ($here, $log_str);
+        exiting_from_function ($here);
+        
+        include 'block_new_create_script.php'; /* Return to block creation */
+        exit;
+    }
+    
+    $log_str = "Block >$nam_blo_new< has been checked as new";
+    
+    exiting_from_function ($here . " with $log_str");
+    return $log_str; 
 }
 
 function block_new_content_write_build () {
@@ -183,16 +173,6 @@ function block_list_order_addition_write_build () {
   return $log_str;
 }
 
-function block_new_create_save_irp_path_clean () {
-  $here = __FUNCTION__;
-  entering_in_function ($here);
-  
-  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_name_list_order_current_string', $here); 
-  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_block_current_nameoffile_array', $here); 
-  exiting_from_function ($here);
-  return;
-}
-
 function block_new_create_save_surname_catalog_actualize_build () {
   $here = __function__;
   entering_in_function ($here);
@@ -265,8 +245,6 @@ function block_new_create_save_build (){
 
   $html_str .= irp_provide ('block_new_create_save_surname_catalog_actualize', $here); /* move elsewhere ?? */
   $html_str .= '<br><br>' . "\n";
-
-  block_new_create_save_irp_path_clean (); /* Improve */
 
   $html_str .= irp_provide ('git_command_n_commit_html', $here);
   $html_str .= '<br><br>' . "\n";

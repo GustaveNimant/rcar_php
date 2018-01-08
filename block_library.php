@@ -1,5 +1,4 @@
 <?php
-
 require_once "string_library.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);

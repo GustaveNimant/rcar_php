@@ -31,21 +31,22 @@ function toward_entry_new_create_form_build () {
 
   $module = module_name_of_module_nameoffile (__FILE__);
 
-  $irp_fat = str_replace('_build', '', $here);
-  father_n_son_stack_entity_push_of_father_of_son ($irp_fat, "BUTTON_$irp_fat");
+  $entity_fat = entity_name_of_build_function_name ($here);
+  father_n_son_stack_entity_push_of_father_of_son ($entity_fat, "BUTTON_$entity_fat");
 
   $script_action = 'entry_new_create_script.php';
-  $entity = entity_name_of_script_nameoffile ($script_action);
+  $entity_son = entity_name_of_script_nameoffile ($script_action);
+  father_n_son_stack_entity_push_of_father_of_son ($entity_fat, $entity_son);
 
-  father_n_son_stack_entity_push_of_father_of_son ($irp_fat, $entity);
+  $get_key = 'entry_new_surname';
+  $_SESSION['get_key_by_script_name'][$entity_son] = $get_key;
 
-  $get_key_sel = 'entry_new_surname';
-  $_SESSION['get_key_by_script_name'][$entity] = $get_key_sel;
+  $siz_hit = $_SESSION['parameters']['html_input_text_size'];
 
   $html_str  = comment_entering_of_function_name ($here); 
   $html_str .= '<form action="' . $script_action . '" method="get"> ' . "\n";
   $html_str .= '<br>' . "\n";
-  $html_str .= '<input type="text" size="20" name="entry_new_surname" value=""/>' .  "\n";
+  $html_str .= '<input type="text" size=$siz_hit name="entry_new_surname" value=""/>' .  "\n";
   $html_str .= inputtypesubmit_of_en_action_name ('create');
   $html_str .= inputtypehidden_store_of_clicked_module_name ($module);
   $html_str .= '</form>' .  "\n";

@@ -7,7 +7,7 @@ $Documentation[$module]['what for'] = "to display the form page where one can mo
 
 entering_in_module ($module);
 
-function subsection_item_next_create_title_build () { 
+function toward_item_next_create_title_build () { 
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -27,7 +27,7 @@ function subsection_item_next_create_title_build () {
   return $html_str;
 }
 
-function subsection_item_next_content_build (){
+function toward_item_next_content_build (){
     $here = __FUNCTION__;
     entering_in_function ($here);
     
@@ -53,7 +53,7 @@ function subsection_item_next_content_build (){
   return $html_str;
 }
 
-function subsection_item_next_justify_title_build () { 
+function toward_item_next_justify_title_build () { 
     $here = __FUNCTION__;
     entering_in_function ($here);
     
@@ -73,7 +73,7 @@ function subsection_item_next_justify_title_build () {
     return $html_str;
 }
 
-function subsection_item_next_justification_build (){
+function toward_item_next_justification_build (){
     $here = __FUNCTION__;
     entering_in_function ($here);
     
@@ -99,24 +99,32 @@ function toward_item_next_create_form_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
+  $entity_fat = entity_name_of_build_function_name ($here);
+  father_n_son_stack_entity_push_of_father_of_son ($entity_fat, "BUTTON_$entity_fat");
+
   $script_action = 'block_next_save_script.php';
- 
+  $entity_son = entity_name_of_script_nameoffile ($script_action);
+  father_n_son_stack_entity_push_of_father_of_son ($entity_fat, $entity_son);
+
+  /* $get_key = '???'; */
+  /* $_SESSION['get_key_by_script_name'][$entity_son] = $get_key; */
+
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form ' . "\n";
   $html_str .= 'method="get" action="' . $script_action. '">' . "\n";
   
   $html_str .= '<br>';
-  $html_str .= irp_provide ('subsection_item_next_create_title', $here);
+  $html_str .= irp_provide ('toward_item_next_create_title', $here);
   $html_str .= '<br>';
 
-  $html_str .= irp_provide ('subsection_item_next_content', $here);
+  $html_str .= irp_provide ('toward_item_next_content', $here);
 
   $html_str .= '<br><br>';
 
-  $html_str .= irp_provide ('subsection_item_next_justify_title', $here);
+  $html_str .= irp_provide ('toward_item_next_justify_title', $here);
   $html_str .= '<br>';
 
-  $html_str .= irp_provide ('subsection_item_next_justification', $here);
+  $html_str .= irp_provide ('toward_item_next_justification', $here);
   $html_str .= '<br>';
 
   $html_str .= '<center>';

@@ -64,6 +64,9 @@ function item_new_create_content_form_textarea_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
+  $entity_fat = entity_name_of_build_function_name ($here);
+  father_n_son_stack_entity_push_of_father_of_son ($entity_fat, "TEXTAREA_$entity_fat");
+
   $kin_blo = irp_provide ('entry_block_kind', $here);
   $en_pla = 'enter the text of the ' . $kin_blo;
   $la_Pla = ucfirst (language_translate_of_en_string ($en_pla));

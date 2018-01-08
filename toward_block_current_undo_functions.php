@@ -18,7 +18,13 @@ function toward_block_current_undo_build () {
     $nam_blo_cur = irp_provide ('block_current_name', $here);
     $nam_ent = irp_provide ('entry_current_name', $here);
 
+    $entity_fat = entity_name_of_build_function_name ($here);
+    father_n_son_stack_entity_push_of_father_of_son ($entity_fat, "BUTTON_$entity_fat");
+
     $script_action = 'block_current_undo_script.php';
+    $entity_son = entity_name_of_script_nameoffile ($script_action);
+    father_n_son_stack_entity_push_of_father_of_son ($entity_fat, $entity_son);
+
     debug_n_check ($here , '$script_action',  $script_action);
     $la_act_blo = language_translate_of_en_string ('undo');
 

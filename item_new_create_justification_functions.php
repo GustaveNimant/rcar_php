@@ -58,6 +58,9 @@ function item_new_create_justification_textarea_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
+  $entity_fat = entity_name_of_build_function_name ($here);
+  father_n_son_stack_entity_push_of_father_of_son ($entity_fat, "TEXTAREA_$entity_fat");
+
   $en_pla = 'enter your justification';
   $la_Pla = ucfirst (language_translate_of_en_string ($en_pla));
 

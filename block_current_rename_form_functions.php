@@ -64,9 +64,10 @@ function block_current_rename_form_justify_title_build () {
 }
 
 function block_current_rename_form_justification_build (){
-/* justification of the renaming action */
     $here = __FUNCTION__;
     entering_in_function ($here);
+
+/* justification of the renaming action */
     
     $get_key = 'block_current_surnamenew_justification';
     

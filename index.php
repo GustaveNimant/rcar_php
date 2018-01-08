@@ -5,8 +5,6 @@ require_once "irp_library.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
-entering_in_module ($module);
-
 $Documentation[$module]['Usage'] = "Initialize \$_SESSION. Calls home";
 
 if (file_exists ("install.php")) {
@@ -17,6 +15,8 @@ if (file_exists ("install.php")) {
         shell_exec ('mv install.php install');
     }
 }
+
+entering_in_module ($module);
 
 # print "index.php : include session_hash_initialize_hash.php$eol";
 include "session_hash_initialize_hash.php";
@@ -31,7 +31,11 @@ if (file_exists ($nof_deb) ){
 }
 else {	
      $_SESSION['debug'] = array ();
-     warning ($module, "File >$nof_deb< is missing");
+     print_warning ($module, 
+     "File >$nof_deb< exists",
+     "it does NOT",
+     "Run perl script"
+     );
 }
 
 $program_name = $_SESSION['parameters']['program_name'];

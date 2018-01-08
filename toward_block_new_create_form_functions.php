@@ -42,7 +42,7 @@ function toward_block_new_create_form_build () {  /* Generalize */
 
   $script_action = 'block_new_create_script.php';
   $entity_son = entity_name_of_script_nameoffile ($script_action);
-  father_n_son_stack_entity_push_of_father_of_son ($entity_fat, "$entity_son");
+  father_n_son_stack_entity_push_of_father_of_son ($entity_fat, $entity_son);
 
   $get_key = 'block_new_surname';
   $_SESSION['get_key_by_script_name'][$entity_son] = $get_key;

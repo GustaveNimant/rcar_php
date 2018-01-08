@@ -1,18 +1,22 @@
 <?php
 include "session.php";
-require_once "father_n_son_stack_entity_library.php";
-require_once "surname_catalog_add_functions.php";
+require_once "irp_library.php";
+require_once "father_n_son_stack_script_library.php";
 
-$module = "surname_catalog_add";
+$entity = entity_name_of_script_fullnameoffile (__FILE__);
+$script = $entity . '_script';
 
-entering_in_module ($module);
+$Documentation[$script]['what is it'] = "it is ...";
+$Documentation[$script]['how it is done'] = "cp template_bare_script.php";
 
-father_n_son_stack_entity_push_of_current_entity ($module);
+entering_in_script ($script);
 
-$html_str = irp_provide ($module, $module . "_build");
+father_n_son_stack_script_push_of_current_script ($script);
+
+$html_str = irp_provide ($entity, $script);
 
 print $html_str;
 
-exiting_from_module ($module);
+exiting_from_script ($script);
 
 ?>

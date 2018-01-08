@@ -30,4 +30,6 @@ function help_text_of_help_key ($key_hel) {
 
 }
 
+exiting_from_module ($module);
+
 ?>

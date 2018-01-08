@@ -254,7 +254,10 @@ function irp_data_value_only_store_of_get_key_of_module_name_of_where ($get_key,
   else {
       $get_val = get_hash_retrieve_value_of_get_key_of_where ($get_key, $where);
       irp_store_data_of_get_key_of_get_value_of_where ($get_key, $get_val, $where);
-      $log_str = "with irp_key >$get_key< irp_val >$get_val< from $where";
+      $log_str = "DATA with irp_key >$get_key< irp_val >$get_val< has been stored from $where";
+
+      $entity_fat = entity_name_of_module_name ($module);
+      father_n_son_stack_entity_push_of_father_of_son ($entity_fat, $get_key);
   }
 
   debug_n_check ($here, '$get_val', $get_val);
@@ -264,14 +267,14 @@ function irp_data_value_only_store_of_get_key_of_module_name_of_where ($get_key,
   return $log_str;
 }
 
-function irp_data_value_only_store_of_get_key_of_script_name_of_where ($get_key, $module, $where) {
+function irp_data_value_only_store_of_get_key_of_script_name_of_where ($get_key, $script, $where) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($get_key, $module, $where)");
+  entering_in_function ($here . " ($get_key, $script, $where)");
 
-  $log_str = irp_data_value_only_store_of_get_key_of_module_name_of_where ($get_key, $module, $where);
+  $log_str = irp_data_value_only_store_of_get_key_of_module_name_of_where ($get_key, $script, $where);
 
   debug_n_check ($here, '$log_str', $log_str);
-  exiting_from_function ($here  . " ($get_key, $module, $where)");
+  exiting_from_function ($here  . " ($get_key, $script, $where)");
   return $log_str;
 }
 
@@ -281,13 +284,15 @@ function irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($
 
   if (irp_is_stored_of_irp_key ($get_key, $here)) { /* occurs when returning to module */
       $get_val = irp_retrieve ($get_key, $here);
-      $mes = " recovering DATA irp_key >$get_key< irp_val >$get_val<";
+      $log_str = " recovering DATA irp_key >$get_key< irp_val >$get_val<";
   }
   else {
       $get_val = get_hash_retrieve_value_of_get_key_of_where ($get_key, $where);
       irp_store_data_of_get_key_of_get_value_of_where ($get_key, $get_val, $where);
-      $mes = " with irp_key >$get_key< irp_val >$get_val<";
+      $log_str = " with irp_key >$get_key< irp_val >$get_val<";
   }
+
+  file_log_write ($here, $log_str);
 
   debug_n_check ($here, '$get_val', $get_val);
   exiting_from_function ($here  . " ($get_key, $module, $where)");

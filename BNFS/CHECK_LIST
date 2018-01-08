@@ -3,7 +3,7 @@ Index :
 Entrées :
 * afficher une entrée   OK
 * renommer une entrée   OK
-* créer une entrée      OK
+* créer une entrée      OK  message création entrée faux
 
 Entrée :
 * créer un bloc         OK
@@ -13,7 +13,7 @@ Bloc :
 * affichage             OK
 * modifier              OK
 * supprimer             OK
-* restauration          OK
+* restauration          OK   pas si le premier
 * renommer              OK   to be cleaned
 
 BUGS : 

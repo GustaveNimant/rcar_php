@@ -120,13 +120,13 @@ function surname_by_name_hash_replace_n_write_of_name_of_surnamenew_of_current_h
   surname_catalog_write_of_surname_by_name_hash ($sur_by_nam_h);
 
   if (file_is_entry_nameoffile_of_string ($nam)) { 
-      irp_store_force ('entry_current_surname', $new_sur_nam, 'entry_current_display');
+      irp_store_force ('entry_current_surname', $new_sur_nam, 'entry_current_display', $here);
   }
   else {
-      irp_store_force ('block_current_surname', $new_sur_nam, 'entry_current_display');
+      irp_store_force ('block_current_surname', $new_sur_nam, 'entry_current_display', $here);
   }
 
-  irp_store_force ('surname_by_name_hash', $sur_by_nam_h, 'entry_current_display');
+  irp_store_force ('surname_by_name_hash', $sur_by_nam_h, 'entry_current_display', $here);
 
   exiting_from_function ($here . " ($nam, $new_sur_nam, \$sur_by_nam_h [...])");
   return;

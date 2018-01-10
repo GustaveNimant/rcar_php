@@ -60,6 +60,8 @@ function entry_current_name_last_build () {
     $_SESSION['leaf_creation_function'][$entity_leaf] = $here;
     $_SESSION['creation_step_count'] = $_SESSION['creation_step_count'] + 1;
     $cre_ste = $_SESSION['creation_step_count'];
+    $log_str = "step # $cre_ste created from $here";
+    file_log_write ($here, $log_str);
     $_SESSION['creation_step'][$entity_leaf] = $cre_ste;
 
     father_n_son_stack_entity_push_of_father_of_son ($entity_leaf, "LEAF_$entity_leaf");

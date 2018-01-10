@@ -228,14 +228,14 @@ function irp_store_data_of_get_key_of_get_value_of_where ($get_key, $get_val, $w
     $here = __FUNCTION__;
     entering_in_function ($here . " ($get_key, $get_val, $where)");
     
-    /* print_html_array ($here, '$_SESSION["is_data_entity_name"]', $_SESSION['is_data_entity_name']); */
-    /* print_html_array ($here, '$_SESSION["creation_step"]', $_SESSION['creation_step']); */
-    /* print_html_array ($here, '$_SESSION["data_creation_function"]', $_SESSION['data_creation_function']); */
-    /* print_html_array ($here, '$_SESSION["module_wheretoact_nameoffile"]', $_SESSION['module_wheretoact_nameoffile']); */
-
     irp_store_data ($get_key, $get_val, $where);
-    
-    $log_str = "DATA irp_key >$get_key< has been stored with value >$get_val< in $where";
+    $_SESSION['creation_step_count'] = $_SESSION['creation_step_count'] + 1;
+    $cre_ste = $_SESSION['creation_step_count'];
+    $log_str = "step # $cre_ste created from $where";
+    file_log_write ($here, $log_str);
+    $_SESSION['creation_step'][$get_key] = $cre_ste;
+
+    $log_str = "DATA creation irp_key >$get_key< has been stored with value >$get_val< from $where";
     file_log_write ($here, $log_str);
     
     exiting_from_function ($here . " ($get_key, $get_val, $where)");
@@ -414,7 +414,10 @@ function irp_store_force ($irp_key, $irp_val, $irp_fat, $caller) {
     irp_remove_off_irp_register_of_irp_key ($irp_key, $here);
     
     $_SESSION['creation_step_count'] = $_SESSION['creation_step_count'] + 1;
-    $_SESSION['creation_step'][$irp_key] = $_SESSION['creation_step_count'];  
+    $cre_ste = $_SESSION['creation_step_count'];
+    $_SESSION['creation_step'][$irp_key] = $cre_ste;  
+    $log_str = "step # $cre_ste created from $here";
+    file_log_write ($here, $log_str);
 
     irp_store ($irp_key, $irp_val, $here);
 
@@ -540,7 +543,11 @@ function irp_build ($irp_key, $nam_fat, $caller) {
     }
   
     $_SESSION['creation_step_count'] = $_SESSION['creation_step_count'] + 1;
-    $_SESSION['creation_step'][$irp_key] = $_SESSION['creation_step_count'];  
+    $cre_ste = $_SESSION['creation_step_count'];
+    $_SESSION['creation_step'][$irp_key] = $cre_ste;  
+
+    $log_str = "step # $cre_ste created from $here";
+    file_log_write ($here, $log_str);
 
     $log_str = "irp_key >$irp_key< built from $caller";
     file_log_write ($here, $log_str);

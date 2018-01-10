@@ -86,14 +86,12 @@ function get_hash_retrieve_value_of_get_key_of_where ($get_key, $where) {
       $_SESSION['get_value_by_get_key_hash'][$get_key] = $get_val;
 
       $_SESSION['data_creation_function'][$get_key] = $where;
-      $_SESSION['creation_step_count'] = $_SESSION['creation_step_count'] + 1;
       $cre_ste = $_SESSION['creation_step_count'];
-      
       $_SESSION['creation_step'][$get_key] = $cre_ste;
 
       father_n_son_stack_entity_push_of_father_of_son ($get_key, "GET_$get_key");
  
-      $log_str = "DATA >$get_key< built with value >$get_val< in $where at creation step # $cre_ste";
+      $log_str = "DATA >$get_key< with value >$get_val< get from $where";
       file_log_write ($here, $log_str);
   }
   

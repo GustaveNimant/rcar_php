@@ -35,7 +35,7 @@ function command_result_page_title_build () {
     return $html_str;
 }
 
-function command_html_result_build () {
+function command_result_html_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
     
@@ -46,7 +46,7 @@ function command_html_result_build () {
     case 'debug' :
         break;
     case 'display' :
-        if (irp_is_providable_of_irp_key ($com_arg) ) {
+        if (irp_is_providable_of_irp_key ($com_arg, $here) ) {
             $com_res = irp_provide ($com_arg, $here);
         }
         else {
@@ -69,8 +69,26 @@ function command_html_result_build () {
         $com_res = command_unset ($com_arg);
         break;         
     case 'write' :
-        $com_res = command_write ($com_arg);
-        break;         
+        if (irp_is_providable_of_irp_key ($com_arg, $here) ) {
+            $com_res = irp_provide ($com_arg, $here);
+            $dir = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", 'FILES');
+            $nof = $com_arg . '.txt';
+            $fno = $dir . $nof;
+            file_string_write ($fno, $com_res);
+
+            debug_n_check ($here , '$com_res', $com_res);
+            $html_str = "File $fno has been written";
+            
+            debug_n_check ($here , '$html_str', $html_str);
+            exiting_from_function ($here);
+            
+            return $html_str;
+
+        }
+        else {
+            $com_res = command_write ($com_arg);
+        }
+        break;
     default:  
         $com_res;
     }
@@ -116,7 +134,7 @@ function command_result_build (){
   $html_str .= irp_provide ('command_result_page_title', $here);
   $html_str .= '<br><br>' . "\n";
 
-  $html_str .= irp_provide ('command_html_result', $here);
+  $html_str .= irp_provide ('command_result_html', $here);
   $html_str .= '<br><br>' . "\n";
 
   $html_str .= irp_provide ('command_result_link_to_return', $here);

@@ -133,7 +133,7 @@ function entry_new_create_save_build () {
   $log_str   = irp_provide ('entry_new_create_save_surname_update', $here);
   file_log_write ($here, $log_str);
 
-  entry_new_create_save_irp_path_clean ();
+#  entry_new_create_save_irp_path_clean ();
 
   $html_str .= irp_provide ('git_command_n_commit_html', $here);
   $html_str .= '<br><br>' . "\n";

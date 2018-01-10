@@ -64,10 +64,16 @@ function entry_new_create_form_build () {
   $get_key = 'entry_new_surname';
   $_SESSION['get_key_by_script_name'][$entity_son] = $get_key;
 
+  $siz_hit = $_SESSION['parameters']['html_input_text_size'];
+
   $html_str  = comment_entering_of_function_name ($here); 
   $html_str .= '<form action="' . $script_action . '" method="get"> ' . "\n";
   $html_str .= '<br>' . "\n";
-  $html_str .= '<input type="text" size="20" name="entry_new_surname" value=""/>' .  "\n";
+  $html_str .= '<input type="text"';
+  $html_str .= ' name="' . $get_key . '"';
+  $html_str .= ' value=""';
+  $html_str .= ' size="' . $siz_hit . '"';
+  $html_str .= '/>' .  "\n";
   $html_str .= inputtypesubmit_of_en_action_name ('create');
   $html_str .= inputtypehidden_store_of_clicked_module_name ($module);
   $html_str .= '</form>' .  "\n";

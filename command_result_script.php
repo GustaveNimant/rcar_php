@@ -23,14 +23,14 @@ irp_path_clean_register_of_top_key_of_bottom_key_of_where ($get_key, 'GET_' . $g
 irp_path_clean_register_of_top_key_of_bottom_key_of_where ($entity, 'GET_' . $get_key, $script);
 
 /* getting DATA $get_val */
-$nam_blo_cur = irp_data_value_retrieve_and_store_of_get_key_of_script_name_of_where ($get_key, $script, $script);
+irp_data_value_only_store_of_get_key_of_script_name_of_where ($get_key, $script, $script);
 
 $get_key = string_word_of_glue_of_ordinal_of_string (':', 2, $get_key_l);
 irp_path_clean_register_of_top_key_of_bottom_key_of_where ($get_key, 'GET_' . $get_key, $script);
 irp_path_clean_register_of_top_key_of_bottom_key_of_where ($entity, 'GET_' . $get_key, $script);
 
 /* getting DATA $get_val */
-$nam_blo_cur = irp_data_value_retrieve_and_store_of_get_key_of_script_name_of_where ($get_key, $script, $script);
+irp_data_value_only_store_of_get_key_of_script_name_of_where ($get_key, $script, $script);
 
 $html_str = irp_provide ($entity, $script);
 

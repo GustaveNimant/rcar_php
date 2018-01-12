@@ -79,6 +79,7 @@ function link_is_ok_of_script_name ($nam_scr) {
 function link_previous_script_name_make () {
   $here = __FUNCTION__;
   entering_in_function ($here);
+
   $pre_mod = link_previous_module_name_make ();
   exiting_from_function ($here . " with \$pre_mod >$pre_mod<");
 

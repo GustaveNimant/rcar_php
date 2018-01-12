@@ -1,13 +1,12 @@
 <?php
-
 require_once "management_library.php";
 
-$script = script_name_of_script_nameoffile (__FILE__);
+$module = module_name_of_module_nameoffile (__FILE__);
 
-$Documentation[$script]['what is it'] = "it is ...";
-$Documentation[$script]['what for'] = "to ...";
+entering_in_module ($module);
 
-entering_in_script ($script);
+$Documentation[$module]['what is it'] = "it is ...";
+$Documentation[$module]['what for'] = "to ...";
 
 function father_n_son_stack_script_push_of_father_of_son ($nam_fat, $nam_son) {
   $here = __FUNCTION__;
@@ -68,6 +67,6 @@ function father_n_son_stack_script_push_of_current_script ($cur_mod) {
   return ;
   }
 
-exiting_from_script ($script);
+exiting_from_module ($module);
 
 ?>

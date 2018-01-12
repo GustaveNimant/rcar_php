@@ -38,7 +38,7 @@ function warning ($where, $la_mes){
 #    print $html_str;
     print_d ($html_str);
 
-    file_log_write ($where, 'Warning :' . $la_mes);
+    file_log_write ($where, 'Warning : ' . $la_mes);
     return;
 }
 

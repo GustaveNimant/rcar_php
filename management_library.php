@@ -191,7 +191,7 @@ function exiting_from_function ($str_fun) {
         if ( $nam_top != $nam_fun ) {
 #            print_html_array ($here . ' called by ' . $nam_fun, ' stack_function_called_array ', $_SESSION['parameters']['stack_function_called_array']);
 
-            warning ($nam_fun,
+            print_warning ($nam_fun,
             "name of current function >$nam_fun< were the top of stack",
             "top of stack >$nam_top<",
             "Check array upper");
@@ -228,7 +228,7 @@ function entering_in_module ($str_mod) {
         $dot_list = $_SESSION['parameters']['stack_function_level_dot_list'];
         $str_poi = substr ($dot_list, 0, $lev_cur);
         
-        if ($prev == '') {
+        if (string_is_empty_of_string ($prev)) {
             print_fatal_error ($here, 
             "module calling >$nam_mod< were defined",
             "it is NOT",
@@ -272,7 +272,7 @@ function exiting_from_module ($str_mod) {
 
             array_push ($_SESSION['parameters']['stack_function_called_array'], $nam_top);
             # print_html_array ($here, 'stack_function_called_array', $_SESSION['parameters']['stack_function_called_array']);
-            warning ($here,
+            print_warning ($here,
             "name of current module >$nam_mod< were the top of stack",
             "top of stack >$nam_top<",
             "Check");
@@ -285,7 +285,7 @@ function exiting_from_module ($str_mod) {
     return;
 };
 
-function entering_in_script ($str_mod) {
+function entering_in_script ($str_scr) {
     $here = __FUNCTION__;
 
     if ( 
@@ -297,25 +297,33 @@ function entering_in_script ($str_mod) {
         
     ) {
         $eol = end_of_line ();
-        /* print ($here . '>' . $str_mod . '<' . $eol); */
+        print ($here . ' $str_scr >' . $str_scr . '<' . $eol); 
         
-        $nam_mod = first_word_of_string ($str_mod);
-        
+        $nam_scr = first_word_of_string ($str_scr);
+        print ($here . ' $nam_scr >' . $nam_scr . '<' . $eol); 
+
+        $arr = ($_SESSION['parameters']['stack_function_called_array']);
+        print_html_array ($here , 'stack_function_called_array', $arr);
+
         $prev = end ($_SESSION['parameters']['stack_function_called_array']);
-        
-        $lev_cur = management_entering_level_of_name ($nam_mod) ;
-        
+        print ($here . ' $prev >' . $prev . '<' . $eol); 
+
+        $lev_cur = management_entering_level_of_name ($nam_scr) ;
+        print ($here . ' $lev_cur >' . $lev_cur . '<' . $eol); 
+
         $dot_list = $_SESSION['parameters']['stack_function_level_dot_list'];
         $str_poi = substr ($dot_list, 0, $lev_cur);
         
-        if ($prev == '') {
+        if (string_is_empty_of_string ($prev)) {
             print_fatal_error ($here, 
-            "script calling >$nam_mod< were defined",
+            "script calling >$nam_scr< were defined",
             "it is NOT",
             "Check");
         }
-        
-        print_d ("\n$str_poi entering  in script " . $str_mod . "\n"); 
+
+        print ("\n$str_poi entering  in script " . $str_scr . $eol); 
+
+        print_d ("\n$str_poi entering  in script " . $str_scr . "\n"); 
 
         if ($prev == "irp_provide") {
             $pre_pre = ante_previous_function_in_stack ();
@@ -329,7 +337,7 @@ function entering_in_script ($str_mod) {
     return;
 }
 
-function exiting_from_script ($str_mod) {
+function exiting_from_script ($str_scr) {
     $here = __FUNCTION__;
 
     if ( 
@@ -340,7 +348,7 @@ function exiting_from_script ($str_mod) {
         (isset ($_SESSION['parameters']['stack_function_level_maximum']))
     ) {
 
-        $nam_mod = first_word_of_string ($str_mod);
+        $nam_scr = first_word_of_string ($str_scr);
 
         $lev_cur = count ($_SESSION['parameters']['stack_function_called_array']);
         $dot_list = $_SESSION['parameters']['stack_function_level_dot_list'];
@@ -348,17 +356,17 @@ function exiting_from_script ($str_mod) {
         
         $nam_top = array_pop ($_SESSION['parameters']['stack_function_called_array']);
 
-        if ( $nam_top != $nam_mod ) {
+        if ( $nam_top != $nam_scr ) {
 
             array_push ($_SESSION['parameters']['stack_function_called_array'], $nam_top);
             # print_html_array ($here, 'stack_function_called_array', $_SESSION['parameters']['stack_function_called_array']);
-            warning ($here,
-            "name of current script >$nam_mod< were the top of stack",
+            print_warning ($here,
+            "name of current script >$nam_scr< were the top of stack",
             "top of stack >$nam_top<",
             "Check");
         }       
 
-        print_d ("\n$str_poi exiting from script " . $str_mod . "\n"); 
+        print_d ("\n$str_poi exiting from script " . $str_scr . "\n"); 
         
     }     
 

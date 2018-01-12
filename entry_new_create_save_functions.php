@@ -13,6 +13,7 @@ function entry_new_create_save_page_title_build () {
   entering_in_function ($here);
 
   $sur_ent_cur = irp_provide ('entry_new_surname', $here);
+  debug_n_check ($here , '$sur_ent_cur',  $sur_ent_cur);
 
   $en_tit = 'page for displaying the result of creation of the new entry'; 
 
@@ -39,9 +40,8 @@ function entry_new_create_save_subdirectory_create_build () {
   $sur_ent_new = irp_provide ('entry_new_surname', $here); /* ??? */ 
   $nam_ent_new = irp_provide ('entry_new_name_from_entry_new_surname', $here); 
   
+  debug_n_check ($here, '$sur_ent_new', $sur_ent_new);
   debug_n_check ($here, '$nam_ent_new', $nam_ent_new);
-
-  $eol = end_of_line ();
 
   $en_tit = 'the directory of entry';
   $la_tit = language_translate_of_en_string ($en_tit);
@@ -70,6 +70,7 @@ function entry_new_create_save_surname_update_build () {
     $sur_ent_new = irp_provide ('entry_new_surname', $here); /* ??? */ 
     $nam_ent_new = irp_provide ('entry_new_name_from_entry_new_surname', $here); 
     
+    debug_n_check ($here, '$sur_ent_new', $sur_ent_new);
     debug_n_check ($here, '$nam_ent_new', $nam_ent_new);
     
     $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);
@@ -130,6 +131,12 @@ function entry_new_create_save_build () {
   $html_str .= irp_provide ('entry_new_create_save_subdirectory_create', $here);
   $html_str .= '<br><br>' . "\n";
 
+  debug_n_check ($here , '$html_str',  $html_str);
+  exiting_from_function ($here);
+  return $html_str;
+  exit;
+
+
   $log_str   = irp_provide ('entry_new_create_save_surname_update', $here);
   file_log_write ($here, $log_str);
 
@@ -145,7 +152,6 @@ function entry_new_create_save_build () {
   $html_str .= comment_exiting_of_function_name ($here);
   
   debug_n_check ($here , '$html_str',  $html_str);
-
   exiting_from_function ($here);
 
   return $html_str;

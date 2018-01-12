@@ -1,0 +1,3146 @@
+
+... entering  in module language_library
+	called by TOP
+
+... exiting from module language_library
+
+... entering  in module language_translate_library
+	called by TOP
+
+... exiting from module language_translate_library
+
+... entering  in module string_library
+	called by TOP
+
+... exiting from module string_library
+
+... entering  in module array_library
+	called by TOP
+
+... exiting from module array_library
+
+... entering  in module file_log_library
+	called by TOP
+
+... exiting from module file_log_library
+
+... entering  in module file_library
+	called by TOP
+
+... exiting from module file_library
+
+... entering  in module link_library
+	called by TOP
+
+... exiting from module link_library
+
+... entering  in module session_library
+	called by TOP
+
+... exiting from module session_library
+
+... entering  in module father_n_son_stack_entity_library
+	called by TOP
+
+... exiting from module father_n_son_stack_entity_library
+
+... entering  in module get_hash_library
+	called by TOP
+
+... exiting from module get_hash_library
+
+... entering  in module pervasive_html_functions
+	called by TOP
+
+... exiting from module pervasive_html_functions
+
+... entering  in module home_library
+	called by TOP
+
+... exiting from module home_library
+
+... entering  in module home_functions
+	called by TOP
+
+... exiting from module home_functions
+
+... entering  in module common_html_library
+	called by TOP
+
+... exiting from module common_html_library
+
+... entering  in module button_functions
+	called by TOP
+
+... exiting from module button_functions
+
+... entering  in module label_information_library
+	called by TOP
+
+... exiting from module label_information_library
+
+... entering  in module entry_information_functions
+	called by TOP
+
+... exiting from module entry_information_functions
+
+... entering  in module button_submit_functions
+	called by TOP
+
+... exiting from module button_submit_functions
+
+... entering  in module label_functions
+	called by TOP
+
+... exiting from module label_functions
+
+... entering  in module bubble_en_text_by_key_hash_library
+	called by TOP
+
+... exiting from module bubble_en_text_by_key_hash_library
+
+... entering  in module bubble_library
+	called by TOP
+
+... exiting from module bubble_library
+
+... entering  in module apropos_functions
+	called by TOP
+
+... exiting from module apropos_functions
+
+... entering  in module block_content_by_block_name_hash_functions
+	called by TOP
+
+... exiting from module block_content_by_block_name_hash_functions
+
+... entering  in module entry_name_array_functions
+	called by TOP
+
+... exiting from module entry_name_array_functions
+
+... entering  in module block_content_linked_by_block_name_hash_functions
+	called by TOP
+
+... exiting from module block_content_linked_by_block_name_hash_functions
+
+... entering  in module block_current_display_functions
+	called by TOP
+
+... exiting from module block_current_display_functions
+
+... entering  in module block_library
+	called by TOP
+
+... exiting from module block_library
+
+... entering  in module block_current_library
+	called by TOP
+
+... exiting from module block_current_library
+
+... entering  in module block_current_functions
+	called by TOP
+
+... exiting from module block_current_functions
+
+... entering  in module block_current_name_functions
+	called by TOP
+
+... exiting from module block_current_name_functions
+
+... entering  in module block_current_nameoffile_array_library
+	called by TOP
+
+... exiting from module block_current_nameoffile_array_library
+
+... entering  in module block_current_nameoffile_array_functions
+	called by TOP
+
+... exiting from module block_current_nameoffile_array_functions
+
+... entering  in module father_n_son_stack_module_library
+	called by TOP
+
+... exiting from module father_n_son_stack_module_library
+
+... entering  in module block_name_array_order_current_library
+	called by TOP
+
+... exiting from module block_name_array_order_current_library
+
+... entering  in module block_current_namenew_save_functions
+	called by TOP
+
+... exiting from module block_current_namenew_save_functions
+
+... entering  in module block_current_remove_form_functions
+	called by TOP
+
+... exiting from module block_current_remove_form_functions
+
+... entering  in module block_current_remove_functions
+	called by TOP
+
+... exiting from module block_current_remove_functions
+
+... entering  in module block_current_remove_save_functions
+	called by TOP
+
+... exiting from module block_current_remove_save_functions
+
+... entering  in module block_current_rename_functions
+	called by TOP
+
+... exiting from module block_current_rename_functions
+
+... entering  in module block_current_rename_form_functions
+	called by TOP
+
+... exiting from module block_current_rename_form_functions
+
+... entering  in module block_current_undo_form_functions
+	called by TOP
+
+... exiting from module block_current_undo_form_functions
+
+... entering  in module block_current_undo_functions
+	called by TOP
+
+... exiting from module block_current_undo_functions
+
+... entering  in module git_command_library
+	called by TOP
+
+... exiting from module git_command_library
+
+... entering  in module block_current_undo_save_functions
+	called by TOP
+
+... exiting from module block_current_undo_save_functions
+
+... entering  in module block_list_order_new_library
+	called by TOP
+
+... exiting from module block_list_order_new_library
+
+... entering  in module block_name_list_order_new_array_functions
+	called by TOP
+
+... exiting from module block_name_list_order_new_array_functions
+
+... entering  in module block_name_list_order_new_form_functions
+	called by TOP
+
+... exiting from module block_name_list_order_new_form_functions
+
+... entering  in module block_name_list_order_new_functions
+	called by TOP
+
+... exiting from module block_name_list_order_new_functions
+
+... entering  in module block_name_list_order_new_string_save_functions
+	called by TOP
+
+... exiting from module block_name_list_order_new_string_save_functions
+
+... entering  in module block_name_list_reorder_functions
+	called by TOP
+
+... exiting from module block_name_list_reorder_functions
+
+... entering  in module block_name_list_order_library
+	called by TOP
+
+... exiting from module block_name_list_order_library
+
+... entering  in module block_name_array_order_current_functions
+	called by TOP
+
+... exiting from module block_name_array_order_current_functions
+
+... entering  in module block_name_list_order_current_string_functions
+	called by TOP
+
+... exiting from module block_name_list_order_current_string_functions
+
+... entering  in module block_next_save_functions
+	called by TOP
+
+... exiting from module block_next_save_functions
+
+... entering  in module block_new_content_functions
+	called by TOP
+
+... exiting from module block_new_content_functions
+
+... entering  in module link_to_return_library
+	called by TOP
+
+... exiting from module link_to_return_library
+
+... entering  in module entry_current_display_functions
+	called by TOP
+
+... exiting from module entry_current_display_functions
+
+... entering  in module block_new_create_block_list_functions
+	called by TOP
+
+... exiting from module block_new_create_block_list_functions
+
+... entering  in module block_new_create_button_save_functions
+	called by TOP
+
+... exiting from module block_new_create_button_save_functions
+
+... entering  in module block_new_create_content_functions
+	called by TOP
+
+... exiting from module block_new_create_content_functions
+
+... entering  in module block_new_create_content_textarea_functions
+	called by TOP
+
+... exiting from module block_new_create_content_textarea_functions
+
+... entering  in module block_new_create_form_functions
+	called by TOP
+
+... exiting from module block_new_create_form_functions
+
+... entering  in module block_new_create_functions
+	called by TOP
+
+... exiting from module block_new_create_functions
+
+... entering  in module block_new_create_save_functions
+	called by TOP
+
+... exiting from module block_new_create_save_functions
+
+... entering  in module block_new_create_surname_functions
+	called by TOP
+
+... exiting from module block_new_create_surname_functions
+
+... entering  in module block_new_create_surname_inputtypetext_functions
+	called by TOP
+
+... exiting from module block_new_create_surname_inputtypetext_functions
+
+... entering  in module block_new_create_surname_title_n_help_functions
+	called by TOP
+
+... exiting from module block_new_create_surname_title_n_help_functions
+
+... entering  in module block_new_name_functions
+	called by TOP
+
+... exiting from module block_new_name_functions
+
+... entering  in module block_next_content_functions
+	called by TOP
+
+... exiting from module block_next_content_functions
+
+... entering  in module block_previous_sha1_display_functions
+	called by TOP
+
+... exiting from module block_previous_sha1_display_functions
+
+... entering  in module command_functions
+	called by TOP
+
+... exiting from module command_functions
+
+... entering  in module command_library
+	called by TOP
+
+... exiting from module command_library
+
+... entering  in module command_result_functions
+	called by TOP
+
+... exiting from module command_result_functions
+
+... entering  in module entry_current_name_functions
+	called by TOP
+
+... exiting from module entry_current_name_functions
+
+... entering  in module entry_current_rename_functions
+	called by TOP
+
+... exiting from module entry_current_rename_functions
+
+... entering  in module entry_current_namenew_form_functions
+	called by TOP
+
+... exiting from module entry_current_namenew_form_functions
+
+... entering  in module entry_functions
+	called by TOP
+
+... exiting from module entry_functions
+
+... entering  in module entry_current_namenew_save_functions
+	called by TOP
+
+... exiting from module entry_current_namenew_save_functions
+
+... entering  in module entry_list_display_functions
+	called by TOP
+
+... exiting from module entry_list_display_functions
+
+... entering  in module entry_new_create_functions
+	called by TOP
+
+... exiting from module entry_new_create_functions
+
+... entering  in module entry_new_create_save_functions
+	called by TOP
+
+... exiting from module entry_new_create_save_functions
+
+... entering  in module entry_new_name_functions
+	called by TOP
+
+... exiting from module entry_new_name_functions
+
+... entering  in module git_command_functions
+	called by TOP
+
+... exiting from module git_command_functions
+
+... entering  in module git_history_library
+	called by TOP
+
+... exiting from module git_history_library
+
+... entering  in module git_history_functions
+	called by TOP
+
+... exiting from module git_history_functions
+
+... entering  in module item_current_content_display_n_modify_functions
+	called by TOP
+
+... exiting from module item_current_content_display_n_modify_functions
+
+... entering  in module item_any_content_linked_library
+	called by TOP
+
+... exiting from module item_any_content_linked_library
+
+... entering  in module item_current_content_linked_functions
+	called by TOP
+
+... exiting from module item_current_content_linked_functions
+
+... entering  in module item_previous_content_linked_functions
+	called by TOP
+
+... exiting from module item_previous_content_linked_functions
+
+... entering  in module item_current_justification_display_functions
+	called by TOP
+
+... exiting from module item_current_justification_display_functions
+
+... entering  in module item_current_modify_functions
+	called by TOP
+
+... exiting from module item_current_modify_functions
+
+... entering  in module item_next_create_form_current_content_functions
+	called by TOP
+
+... exiting from module item_next_create_form_current_content_functions
+
+... entering  in module item_next_create_form_functions
+	called by TOP
+
+... exiting from module item_next_create_form_functions
+
+... entering  in module item_next_create_form_new_create_content_functions
+	called by TOP
+
+... exiting from module item_next_create_form_new_create_content_functions
+
+... entering  in module item_next_create_form_new_create_justification_functions
+	called by TOP
+
+... exiting from module item_next_create_form_new_create_justification_functions
+
+... entering  in module item_next_create_form_page_title_functions
+	called by TOP
+
+... exiting from module item_next_create_form_page_title_functions
+
+... entering  in module help_text_library
+	called by TOP
+
+... exiting from module help_text_library
+
+... entering  in module item_new_create_content_form_functions
+	called by TOP
+
+... exiting from module item_new_create_content_form_functions
+
+... entering  in module item_new_create_justification_functions
+	called by TOP
+
+... exiting from module item_new_create_justification_functions
+
+... entering  in module item_new_name_functions
+	called by TOP
+
+... exiting from module item_new_name_functions
+
+... entering  in module item_previous_content_display_functions
+	called by TOP
+
+... exiting from module item_previous_content_display_functions
+
+... entering  in module language_select_functions
+	called by TOP
+
+... exiting from module language_select_functions
+
+... entering  in module html_tools_library
+	called by TOP
+
+... exiting from module html_tools_library
+
+... entering  in module quit_functions
+	called by TOP
+
+... exiting from module quit_functions
+
+... entering  in module toward_block_current_history_functions
+	called by TOP
+
+... exiting from module toward_block_current_history_functions
+
+... entering  in module toward_block_current_list_display_functions
+	called by TOP
+
+... exiting from module toward_block_current_list_display_functions
+
+... entering  in module toward_block_current_list_reorder_functions
+	called by TOP
+
+... exiting from module toward_block_current_list_reorder_functions
+
+... entering  in module toward_block_current_remove_functions
+	called by TOP
+
+... exiting from module toward_block_current_remove_functions
+
+... entering  in module toward_block_current_rename_functions
+	called by TOP
+
+... exiting from module toward_block_current_rename_functions
+
+... entering  in module toward_block_current_undo_functions
+	called by TOP
+
+... exiting from module toward_block_current_undo_functions
+
+... entering  in module toward_item_next_create_form_functions
+	called by TOP
+
+... exiting from module toward_item_next_create_form_functions
+
+... entering  in module entry_current_selection_display_functions
+	called by TOP
+
+... exiting from module entry_current_selection_display_functions
+
+... entering  in module entry_current_selection_rename_functions
+	called by TOP
+
+... exiting from module entry_current_selection_rename_functions
+
+... entering  in module toward_block_new_create_form_functions
+	called by TOP
+
+... exiting from module toward_block_new_create_form_functions
+
+... entering  in module toward_entry_new_create_form_functions
+	called by TOP
+
+... exiting from module toward_entry_new_create_form_functions
+
+... entering  in module surname_catalog_library
+	called by TOP
+
+... exiting from module surname_catalog_library
+
+... entering  in module surname_by_name_hash_library
+	called by TOP
+
+... exiting from module surname_by_name_hash_library
+
+... entering  in module surname_by_name_hash_functions
+	called by TOP
+
+... exiting from module surname_by_name_hash_functions
+
+... entering  in module surname_catalog_add_functions
+	called by TOP
+
+... exiting from module surname_catalog_add_functions
+
+... entering  in module surname_library
+	called by TOP
+
+... exiting from module surname_library
+
+... entering  in module surname_catalog_add_save_functions
+	called by TOP
+
+... exiting from module surname_catalog_add_save_functions
+
+... entering  in module surname_catalog_functions
+	called by TOP
+
+... exiting from module surname_catalog_functions
+
+... entering  in module user_information_functions
+	called by TOP
+
+... exiting from module user_information_functions
+
+... entering  in module irp_library
+	called by TOP
+
+... exiting from module irp_library
+
+... entering  in script father_n_son_stack_script_library
+	called by TOP
+
+... exiting from script father_n_son_stack_script_library
+
+... entering  in script entry_new_create_save_script
+	called by TOP
+
+.... entering  in function father_n_son_stack_script_push_of_current_script (entry_new_create_save_script)
+	called by entry_new_create_save_script
+
+....| entering  in function link_previous_script_name_make
+	called by father_n_son_stack_script_push_of_current_script
+
+....|. entering  in function link_previous_module_name_make
+	called by link_previous_script_name_make
+link_previous_module_name_make $url_rel >http://localhost/rcar/php/entry_new_create_script.php<
+
+....|.. entering  in function link_module_name_of_url_relative (http://localhost/rcar/php/entry_new_create_script.php)
+	called by link_previous_module_name_make
+
+....|.. exiting from function link_module_name_of_url_relative with \$nam_mod >entry_new_create_script<
+
+....|. exiting from function link_previous_module_name_make with $pre_mod >entry_new_create_script<
+
+....| exiting from function link_previous_script_name_make with $pre_mod >entry_new_create_script<
+
+....| entering  in function father_n_son_stack_script_push_of_father_of_son (entry_new_create_script, entry_new_create_save_script)
+	called by father_n_son_stack_script_push_of_current_script
+
+....|. entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_script, $val)
+	called by father_n_son_stack_script_push_of_father_of_son
+
+<TRACE> in session_hash_push_inplace_of_key_of_value : Value >entry_new_create_script -> entry_new_create_save_script< has been successfully pushed inplace in $_SESSION['father_n_son_stack_script'] array
+
+....|. exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_script, $val)
+
+<DEBUG> in function : father_n_son_stack_script_push_of_father_of_son:
+$fat_n_son_mod_h
+>
+  [0] = index -> entry_list_display_script
+  [1] = entry_list_display_script -> entry_new_create_script
+  [2] = entry_new_create_script -> entry_new_create_save_script
+<
+
+....| exiting from function father_n_son_stack_script_push_of_father_of_son (entry_new_create_script, entry_new_create_save_script)
+
+<DEBUG> in function : father_n_son_stack_script_push_of_current_script:
+$fat_n_son_mod_h
+>
+  [0] = index -> entry_list_display_script
+  [1] = entry_list_display_script -> entry_new_create_script
+  [2] = entry_new_create_script -> entry_new_create_save_script
+<
+
+.... exiting from function father_n_son_stack_script_push_of_current_script
+
+.... entering  in function irp_path_clean_register_of_top_key_of_bottom_key_of_where (entry_new_create_save, GET_entry_new_surname, entry_new_create_save_script)
+	called by entry_new_create_save_script
+
+<DEBUG> in function : irp_path_clean_register_of_top_key_of_bottom_key_of_where:
+$fat_n_son_h
+>
+  [0] = index -> home
+  [1] = home -> pervasive_page_header
+  [2] = pervasive_page_header -> common_html_page_head
+  [3] = pervasive_page_header -> pervasive_html_Auto_Regulated_Collaborative_Editing
+  [4] = pervasive_page_header -> label_html_initial_section
+  [5] = label_html_initial_section -> label_pure_html_initial_section
+  [6] = label_html_initial_section -> label_entry_html_initial_section_as_row
+  [7] = home -> pervasive_page_footer
+  [8] = pervasive_page_footer -> pervasive_license
+  [9] = pervasive_page_footer -> common_html_page_tail
+  [10] = entry_list_display -> pervasive_page_header
+  [11] = entry_list_display -> entry_list_display_page_title
+  [12] = entry_list_display -> entry_current_selection_display
+  [13] = entry_current_selection_display -> entry_current_selection_display_form_title
+  [14] = entry_current_selection_display -> entry_current_selection_display_form
+  [15] = entry_current_selection_display_form -> entry_current_selection_display_menuselect
+  [16] = entry_current_selection_display_menuselect -> entry_name_array
+  [17] = entry_name_array -> entry_fullnameofdirectory_array
+  [18] = entry_fullnameofdirectory_array -> READ_entry_fullnameofdirectory_array
+  [19] = entry_name_array -> surname_by_name_hash
+  [20] = surname_by_name_hash -> surname_catalog
+  [21] = surname_catalog -> surname_catalog_fullnameoffile
+  [22] = surname_catalog_fullnameoffile -> READ_surname_catalog_fullnameoffile
+  [23] = entry_current_selection_display_menuselect -> surname_by_name_hash
+  [24] = entry_current_selection_display_menuselect -> entry_current_name_last
+  [25] = entry_current_name_last -> LEAF_entry_current_name_last
+  [26] = entry_list_display -> entry_current_selection_rename
+  [27] = entry_current_selection_rename -> entry_current_selection_rename_title
+  [28] = entry_current_selection_rename -> entry_current_selection_rename_form
+  [29] = entry_current_selection_rename_form -> entry_current_selection_rename_menuselect
+  [30] = entry_current_selection_rename_menuselect -> entry_name_array
+  [31] = entry_current_selection_rename_menuselect -> surname_by_name_hash
+  [32] = entry_current_selection_rename_menuselect -> entry_current_name_last
+  [33] = entry_list_display -> toward_entry_new_create_form
+  [34] = toward_entry_new_create_form -> BUTTON_toward_entry_new_create_form
+  [35] = toward_entry_new_create_form -> entry_new_create
+  [36] = toward_entry_new_create_form -> toward_entry_new_create_form_title
+  [37] = entry_list_display -> pervasive_page_footer
+  [38] = entry_new_create -> pervasive_page_header
+  [39] = entry_new_create -> entry_new_create_page_title
+  [40] = entry_new_create -> entry_new_create_form_title
+  [41] = entry_new_create -> entry_new_create_form
+  [42] = entry_new_create_form -> BUTTON_entry_new_create_form
+  [43] = entry_new_create_form -> entry_new_create_save
+  [44] = entry_new_create -> pervasive_page_footer
+  [45] = entry_new_surname -> GET_entry_new_surname
+  [46] = entry_new_create_save -> entry_new_surname
+  [47] = entry_new_create_save -> pervasive_page_header
+  [48] = entry_new_create_save -> entry_new_create_save_page_title
+  [49] = entry_new_create_save_page_title -> entry_new_surname
+  [50] = entry_new_create_save -> entry_new_create_save_subdirectory_create
+  [51] = entry_new_create_save_subdirectory_create -> entry_new_surname
+  [52] = entry_new_create_save_subdirectory_create -> entry_new_name_from_entry_new_surname
+  [53] = entry_new_name_from_entry_new_surname -> entry_new_surname
+<
+
+<DEBUG> in function : irp_path_clean_register_of_top_key_of_bottom_key_of_where: >$top_key< >entry_new_create_save<
+
+<DEBUG> in function : irp_path_clean_register_of_top_key_of_bottom_key_of_where: >$bot_key< >GET_entry_new_surname<
+
+<DEBUG> in function : irp_path_clean_register_of_top_key_of_bottom_key_of_where:
+removed irp_path array
+>
+  [0] = entry_new_surname
+  [1] = entry_new_create_save
+  [2] = entry_new_create_save_page_title
+  [3] = entry_new_create_save_subdirectory_create
+  [4] = entry_new_name_from_entry_new_surname
+<
+
+<TRACE> in irp_path_clean_register_of_top_key_of_bottom_key_of_where : irp_key >entry_new_surname< has been removed off irp_register from entry_new_create_save_script
+
+<TRACE> in irp_path_clean_register_of_top_key_of_bottom_key_of_where : irp_key >entry_new_create_save< has been removed off irp_register from entry_new_create_save_script
+
+<TRACE> in irp_path_clean_register_of_top_key_of_bottom_key_of_where : irp_key >entry_new_create_save_page_title< has been removed off irp_register from entry_new_create_save_script
+
+<TRACE> in irp_path_clean_register_of_top_key_of_bottom_key_of_where : irp_key >entry_new_create_save_subdirectory_create< has been removed off irp_register from entry_new_create_save_script
+
+<TRACE> in irp_path_clean_register_of_top_key_of_bottom_key_of_where : irp_key >entry_new_name_from_entry_new_surname< has been removed off irp_register from entry_new_create_save_script
+
+<DEBUG> in function : irp_path_clean_register_of_top_key_of_bottom_key_of_where:
+saved $irp_key_a
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+<
+
+<TRACE> in irp_path_clean_register_of_top_key_of_bottom_key_of_where : all irp_path from >GET_entry_new_surname< to >entry_new_create_save< have been removed off irp_register from entry_new_create_save_script
+
+.... exiting from function irp_path_clean_register_of_top_key_of_bottom_key_of_where
+
+.... entering  in function irp_data_value_only_store_of_get_key_of_script_name_of_where (entry_new_surname, entry_new_create_save_script, entry_new_create_save_script)
+	called by entry_new_create_save_script
+
+....| entering  in function irp_data_value_only_store_of_get_key_of_module_name_of_where (entry_new_surname, entry_new_create_save_script, entry_new_create_save_script)
+	called by irp_data_value_only_store_of_get_key_of_script_name_of_where
+
+....|. entering  in function irp_is_stored_of_irp_key (entry_new_surname, irp_data_value_only_store_of_get_key_of_module_name_of_where)
+	called by irp_data_value_only_store_of_get_key_of_module_name_of_where
+
+<DEBUG> in function : irp_is_stored_of_irp_key:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+<
+
+....|. exiting from function irp_is_stored_of_irp_key with irp_key >entry_new_surname< is FALSE
+
+....|. entering  in function get_hash_retrieve_value_of_get_key_of_where (entry_new_surname, entry_new_create_save_script)
+	called by irp_data_value_only_store_of_get_key_of_module_name_of_where
+
+....|... entering  in function is_key_unique_in_array
+	called by check_is_key_unique_in_array
+
+....|... exiting from function is_key_unique_in_array
+
+....|.. entering  in function father_n_son_stack_entity_push_of_father_of_son (entry_new_surname, GET_entry_new_surname)
+	called by get_hash_retrieve_value_of_get_key_of_where
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$nam_fat_mod< >entry_new_surname<
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$entity< >entry_new_surname<
+
+....|... entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+	called by father_n_son_stack_entity_push_of_father_of_son
+
+<TRACE> in session_hash_push_inplace_of_key_of_value : Value >entry_new_surname -> GET_entry_new_surname< has been successfully pushed inplace in $_SESSION['father_n_son_stack_entity'] array
+
+....|... exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+
+....|.. exiting from function father_n_son_stack_entity_push_of_father_of_son (entry_new_surname, GET_entry_new_surname)
+
+<TRACE> in get_hash_retrieve_value_of_get_key_of_where : DATA >entry_new_surname< with value >zozo< get from entry_new_create_save_script
+
+....|. exiting from function get_hash_retrieve_value_of_get_key_of_where DATA >entry_new_surname< created with value >zozo< at step # 80
+
+....|. entering  in function irp_store_data_of_get_key_of_get_value_of_where (entry_new_surname, zozo, entry_new_create_save_script)
+	called by irp_data_value_only_store_of_get_key_of_module_name_of_where
+
+....|.. entering  in function irp_store_data (entry_new_surname, $irp_val, entry_new_create_save_script)
+	called by irp_store_data_of_get_key_of_get_value_of_where
+
+....|... entering  in function irp_is_stored_of_irp_key (entry_new_surname, irp_store_data)
+	called by irp_store_data
+
+<DEBUG> in function : irp_is_stored_of_irp_key:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+<
+
+....|... exiting from function irp_is_stored_of_irp_key with irp_key >entry_new_surname< is FALSE
+
+<TRACE> in irp_store_data : first storage done for DATA >entry_new_surname< with value >zozo< from entry_new_create_save_script
+
+....|.. exiting from function irp_store_data (entry_new_surname, $irp_val, entry_new_create_save_script)
+
+<TRACE> in irp_store_data_of_get_key_of_get_value_of_where : step # 81 created from entry_new_create_save_script
+
+<TRACE> in irp_store_data_of_get_key_of_get_value_of_where : DATA creation irp_key >entry_new_surname< has been stored with value >zozo< from entry_new_create_save_script
+
+....|. exiting from function irp_store_data_of_get_key_of_get_value_of_where (entry_new_surname, zozo, entry_new_create_save_script)
+
+....|. entering  in function father_n_son_stack_entity_push_of_father_of_son (entry_new_create_save, entry_new_surname)
+	called by irp_data_value_only_store_of_get_key_of_module_name_of_where
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$nam_fat_mod< >entry_new_create_save<
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$entity< >entry_new_create_save<
+
+....|.. entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+	called by father_n_son_stack_entity_push_of_father_of_son
+
+<TRACE> in session_hash_push_inplace_of_key_of_value : Value >entry_new_create_save -> entry_new_surname< has been successfully pushed inplace in $_SESSION['father_n_son_stack_entity'] array
+
+....|.. exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+
+....|. exiting from function father_n_son_stack_entity_push_of_father_of_son (entry_new_create_save, entry_new_surname)
+
+<DEBUG> in function : irp_data_value_only_store_of_get_key_of_module_name_of_where: >$get_val< >zozo<
+
+<DEBUG> in function : irp_data_value_only_store_of_get_key_of_module_name_of_where: >$log_str< >DATA with irp_key >entry_new_surname< irp_val >zozo< has been stored from entry_new_create_save_script<
+
+....| exiting from function irp_data_value_only_store_of_get_key_of_module_name_of_where (entry_new_surname, entry_new_create_save_script, entry_new_create_save_script)
+
+<DEBUG> in function : irp_data_value_only_store_of_get_key_of_script_name_of_where: >$log_str< >DATA with irp_key >entry_new_surname< irp_val >zozo< has been stored from entry_new_create_save_script<
+
+.... exiting from function irp_data_value_only_store_of_get_key_of_script_name_of_where (entry_new_surname, entry_new_create_save_script, entry_new_create_save_script)
+
+<TRACE> in entry_new_create_save_script : DATA with irp_key >entry_new_surname< irp_val >zozo< has been stored from entry_new_create_save_script
+
+.... entering  in function irp_provide (entry_new_create_save, entry_new_create_save_script)
+	called by entry_new_create_save_script
+
+....| entering  in function irp_is_data_of_irp_key (entry_new_create_save, irp_provide)
+	called by irp_provide also by entry_new_create_save_script
+
+....| exiting from function irp_is_data_of_irp_key is FALSE
+
+....| entering  in function irp_provide_nondata (entry_new_create_save, entry_new_create_save_script)
+	called by irp_provide also by entry_new_create_save_script
+
+....|. entering  in function irp_is_stored_of_irp_key (entry_new_create_save, irp_provide_nondata)
+	called by irp_provide_nondata
+
+<DEBUG> in function : irp_is_stored_of_irp_key:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+<
+
+....|. exiting from function irp_is_stored_of_irp_key with irp_key >entry_new_create_save< is FALSE
+
+<TRACE> in irp_provide_nondata : irp_key >entry_new_create_save< not stored calling irp_build_n_store from entry_new_create_save_script
+
+....|. entering  in function irp_build_n_store (entry_new_create_save, entry_new_create_save_script, irp_provide_nondata)
+	called by irp_provide_nondata
+
+....|.. entering  in function irp_build (entry_new_create_save, entry_new_create_save_script, irp_build_n_store)
+	called by irp_build_n_store
+
+<TRACE> in irp_build : irp_key >entry_new_create_save< pushed in irp_stack built by >entry_new_create_save_script< from irp_build_n_store
+
+....|... entering  in function father_n_son_stack_entity_push_of_father_of_son (entry_new_create_save_script, entry_new_create_save)
+	called by irp_build
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$nam_fat_mod< >entry_new_create_save_script<
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$entity< >entry_new_create_save<
+
+<TRACE> in father_n_son_stack_entity_push_of_father_of_son : Names for Father entity and Son are the same >entry_new_create_save<
+
+....|... exiting from function father_n_son_stack_entity_push_of_father_of_son (entry_new_create_save_script, entry_new_create_save)
+
+....|... entering  in function entry_new_create_save_build
+	called by irp_build
+
+....|.... entering  in function irp_provide (pervasive_page_header, entry_new_create_save_build)
+	called by entry_new_create_save_build
+
+....|....| entering  in function irp_is_data_of_irp_key (pervasive_page_header, irp_provide)
+	called by irp_provide also by entry_new_create_save_build
+
+....|....| exiting from function irp_is_data_of_irp_key is FALSE
+
+....|....| entering  in function irp_provide_nondata (pervasive_page_header, entry_new_create_save_build)
+	called by irp_provide also by entry_new_create_save_build
+
+....|....|. entering  in function irp_is_stored_of_irp_key (pervasive_page_header, irp_provide_nondata)
+	called by irp_provide_nondata
+
+<TRACE> in irp_is_stored_of_irp_key : Value for key >pervasive_page_header< is already stored FALSE from irp_provide_nondata
+
+
+<DEBUG> in function : irp_is_stored_of_irp_key:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+<
+
+....|....|. exiting from function irp_is_stored_of_irp_key with irp_key >pervasive_page_header< is TRUE
+
+....|....|. entering  in function irp_retrieve (pervasive_page_header, irp_provide_nondata)
+	called by irp_provide_nondata
+
+<DEBUG> in function : irp_retrieve:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+<
+
+....|....|.. entering  in function irp_is_stored_of_irp_key (pervasive_page_header, irp_retrieve)
+	called by irp_retrieve
+
+<TRACE> in irp_is_stored_of_irp_key : Value for key >pervasive_page_header< is already stored FALSE from irp_retrieve
+
+
+<DEBUG> in function : irp_is_stored_of_irp_key:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+<
+
+....|....|.. exiting from function irp_is_stored_of_irp_key with irp_key >pervasive_page_header< is TRUE
+
+<TRACE> in irp_retrieve : already stored Value pushed in irp_stack for irp_key >pervasive_page_header< pushed in irp_stack from irp_provide_nondata
+
+<TRACE> in irp_retrieve : irp_key >pervasive_page_header< has been retrieved from irp_provide_nondata
+
+....|....|. exiting from function irp_retrieve (pervasive_page_header, irp_provide_nondata)
+
+....|....|. entering  in function father_n_son_stack_entity_push_of_father_of_son (entry_new_create_save, pervasive_page_header)
+	called by irp_provide_nondata
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$nam_fat_mod< >entry_new_create_save<
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$entity< >entry_new_create_save<
+
+....|....|.. entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+	called by father_n_son_stack_entity_push_of_father_of_son
+
+<TRACE> in session_hash_push_inplace_of_key_of_value : Value >entry_new_create_save -> pervasive_page_header< has been successfully pushed inplace in $_SESSION['father_n_son_stack_entity'] array
+
+....|....|.. exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+
+....|....|. exiting from function father_n_son_stack_entity_push_of_father_of_son (entry_new_create_save, pervasive_page_header)
+
+....|....| exiting from function irp_provide_nondata (pervasive_page_header, entry_new_create_save_build)
+
+<TRACE> in irp_provide : irp_key >pervasive_page_header< has been provided from entry_new_create_save_build
+
+....|.... exiting from function irp_provide (pervasive_page_header, entry_new_create_save_build)
+
+....|.... entering  in function irp_provide (entry_new_create_save_page_title, entry_new_create_save_build)
+	called by entry_new_create_save_build
+
+....|....| entering  in function irp_is_data_of_irp_key (entry_new_create_save_page_title, irp_provide)
+	called by irp_provide also by entry_new_create_save_build
+
+....|....| exiting from function irp_is_data_of_irp_key is FALSE
+
+....|....| entering  in function irp_provide_nondata (entry_new_create_save_page_title, entry_new_create_save_build)
+	called by irp_provide also by entry_new_create_save_build
+
+....|....|. entering  in function irp_is_stored_of_irp_key (entry_new_create_save_page_title, irp_provide_nondata)
+	called by irp_provide_nondata
+
+<DEBUG> in function : irp_is_stored_of_irp_key:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+<
+
+....|....|. exiting from function irp_is_stored_of_irp_key with irp_key >entry_new_create_save_page_title< is FALSE
+
+<TRACE> in irp_provide_nondata : irp_key >entry_new_create_save_page_title< not stored calling irp_build_n_store from entry_new_create_save_build
+
+....|....|. entering  in function irp_build_n_store (entry_new_create_save_page_title, entry_new_create_save, irp_provide_nondata)
+	called by irp_provide_nondata
+
+....|....|.. entering  in function irp_build (entry_new_create_save_page_title, entry_new_create_save, irp_build_n_store)
+	called by irp_build_n_store
+
+<TRACE> in irp_build : irp_key >entry_new_create_save_page_title< pushed in irp_stack built by >entry_new_create_save< from irp_build_n_store
+
+....|....|... entering  in function father_n_son_stack_entity_push_of_father_of_son (entry_new_create_save, entry_new_create_save_page_title)
+	called by irp_build
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$nam_fat_mod< >entry_new_create_save<
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$entity< >entry_new_create_save<
+
+....|....|.... entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+	called by father_n_son_stack_entity_push_of_father_of_son
+
+<TRACE> in session_hash_push_inplace_of_key_of_value : Value >entry_new_create_save -> entry_new_create_save_page_title< has been successfully pushed inplace in $_SESSION['father_n_son_stack_entity'] array
+
+....|....|.... exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+
+....|....|... exiting from function father_n_son_stack_entity_push_of_father_of_son (entry_new_create_save, entry_new_create_save_page_title)
+
+....|....|... entering  in function entry_new_create_save_page_title_build
+	called by irp_build
+
+....|....|.... entering  in function irp_provide (entry_new_surname, entry_new_create_save_page_title_build)
+	called by entry_new_create_save_page_title_build
+
+....|....|....| entering  in function irp_is_data_of_irp_key (entry_new_surname, irp_provide)
+	called by irp_provide also by entry_new_create_save_page_title_build
+
+....|....|....| exiting from function irp_is_data_of_irp_key is TRUE
+
+....|....|....| entering  in function irp_provide_data (entry_new_surname, entry_new_create_save_page_title_build)
+	called by irp_provide also by entry_new_create_save_page_title_build
+
+....|....|....|. entering  in function irp_is_data_of_irp_key (entry_new_surname, irp_provide_data)
+	called by irp_provide_data
+
+....|....|....|. exiting from function irp_is_data_of_irp_key is TRUE
+
+....|....|....|. entering  in function irp_is_stored_of_irp_key (entry_new_surname, irp_provide_data)
+	called by irp_provide_data
+
+<TRACE> in irp_is_stored_of_irp_key : Value for key >entry_new_surname< is already stored FALSE from irp_provide_data
+
+
+<DEBUG> in function : irp_is_stored_of_irp_key:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+<
+
+....|....|....|. exiting from function irp_is_stored_of_irp_key with irp_key >entry_new_surname< is TRUE
+
+....|....|....|. entering  in function irp_retrieve (entry_new_surname, irp_provide_data)
+	called by irp_provide_data
+
+<DEBUG> in function : irp_retrieve:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+<
+
+....|....|....|.. entering  in function irp_is_stored_of_irp_key (entry_new_surname, irp_retrieve)
+	called by irp_retrieve
+
+<TRACE> in irp_is_stored_of_irp_key : Value for key >entry_new_surname< is already stored FALSE from irp_retrieve
+
+
+<DEBUG> in function : irp_is_stored_of_irp_key:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+<
+
+....|....|....|.. exiting from function irp_is_stored_of_irp_key with irp_key >entry_new_surname< is TRUE
+
+<TRACE> in irp_retrieve : already stored Value pushed in irp_stack for irp_key >entry_new_surname< pushed in irp_stack from irp_provide_data
+
+<TRACE> in irp_retrieve : irp_key >entry_new_surname< has been retrieved from irp_provide_data
+
+....|....|....|. exiting from function irp_retrieve (entry_new_surname, irp_provide_data)
+
+....|....|....|. entering  in function father_n_son_stack_entity_push_of_father_of_son (entry_new_create_save_page_title, entry_new_surname)
+	called by irp_provide_data
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$nam_fat_mod< >entry_new_create_save_page_title<
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$entity< >entry_new_create_save_page_title<
+
+....|....|....|.. entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+	called by father_n_son_stack_entity_push_of_father_of_son
+
+<TRACE> in session_hash_push_inplace_of_key_of_value : Value >entry_new_create_save_page_title -> entry_new_surname< has been successfully pushed inplace in $_SESSION['father_n_son_stack_entity'] array
+
+....|....|....|.. exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+
+....|....|....|. exiting from function father_n_son_stack_entity_push_of_father_of_son (entry_new_create_save_page_title, entry_new_surname)
+
+<TRACE> in irp_provide_data : DATA irp_key >entry_new_surname< is stored and retrieved with value >zozo< from entry_new_create_save_page_title_build
+
+....|....|....| exiting from function irp_provide_data (entry_new_surname, entry_new_create_save_page_title_build)
+
+<TRACE> in irp_provide : irp_key >entry_new_surname< has been provided from entry_new_create_save_page_title_build
+
+....|....|.... exiting from function irp_provide (entry_new_surname, entry_new_create_save_page_title_build)
+
+<DEBUG> in function : entry_new_create_save_page_title_build: >$sur_ent_cur< >zozo<
+
+....|....|.... entering  in function bubble_bubbled_la_text_of_en_text (page for displaying the result of creation of the new entry)
+	called by entry_new_create_save_page_title_build
+
+....|....|....| entering  in function bubble_la_text_by_key_array_make_of_la_text (page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation de la nouvelle entr&eacute;e)
+	called by bubble_bubbled_la_text_of_en_text
+
+....|....|....|. entering  in function bubble_la_text_by_key_array_make
+	called by bubble_la_text_by_key_array_make_of_la_text
+
+....|....|....|.. entering  in function bubble_en_text_by_key_hash_make
+	called by bubble_la_text_by_key_array_make
+
+<DEBUG> in function : bubble_en_text_by_key_hash_make:
+$bubble_en_text_by_key_hash
+>
+  [action] = an action is one off remove&#44; history&#44; rename or undo
+  [block] = a block is defined for a property. It contains 4 elements : the current item&#44; the justification for having created the current item&#44; the previous item and the sha1 of the previous block
+  [choose] = click on one of the radio buttons
+  [entry] = an entry is a concept defined by the list of its properties e.g. Democracy&#44; General will
+  [item] = an item is a property of an entry it is a component of a block
+  [justify] = a justification proves that the modification done complies with the rules
+  [justification] = a justification proves that the modification done complies with the rules
+  [modify the order] = the order of properties may be not pertinent
+  [name] = the name of an entity recast from its surname
+  [new paragraph] = new paragraph
+  [new property] = new property
+  [new question] = new question
+  [new rule] = create a new rule to refine the editing criteria
+  [order] = the order of paragraphs may be improved
+  [order of properties] = the order of properties may be not pertinent
+  [order of rules] = the order of rules may be not pertinent
+  [paragraph] = a paragraph is a list of consecutive sentences
+  [property] = a property of an entry is an assertion it should verify
+  [question] = a question is a sentence starting with what, why or how
+  [reorder] = the order may be not pertinent
+  [rule] = ARCE has three kinds of rules : general rules, editing rules and property rules
+  [select] = select an item from the drop-down list
+  [surname] = the name provided by the User
+  [usage item] = it is an usage item
+  [usage items] = they are usage items
+  [blocks] = a block is defined for a property. It contains 4 elements : the current item&#44; the justification for having created the current item&#44; the previous item and the sha1 of the previous block
+  [entries] = an entry is a concept defined by the list of its properties e.g. Democracy&#44; General will
+  [paragraphes] = a paragraph is a list of consecutive sentences
+  [properties] = a property of an entry is an assertion it should verify
+  [questions] = a question is a sentence starting with what, why or how
+  [rules] = ARCE has three kinds of rules : general rules, editing rules and property rules
+  [names] = the name of an entity recast from its surname
+  [surnames] = the name provided by the User
+  [new properties] = new property
+<
+
+....|....|....|.. exiting from function bubble_en_text_by_key_hash_make
+
+<DEBUG> in function : bubble_la_text_by_key_array_make:
+$en_txt_bub_a
+>
+  [action] = an action is one off remove&#44; history&#44; rename or undo
+  [block] = a block is defined for a property. It contains 4 elements : the current item&#44; the justification for having created the current item&#44; the previous item and the sha1 of the previous block
+  [choose] = click on one of the radio buttons
+  [entry] = an entry is a concept defined by the list of its properties e.g. Democracy&#44; General will
+  [item] = an item is a property of an entry it is a component of a block
+  [justify] = a justification proves that the modification done complies with the rules
+  [justification] = a justification proves that the modification done complies with the rules
+  [modify the order] = the order of properties may be not pertinent
+  [name] = the name of an entity recast from its surname
+  [new paragraph] = new paragraph
+  [new property] = new property
+  [new question] = new question
+  [new rule] = create a new rule to refine the editing criteria
+  [order] = the order of paragraphs may be improved
+  [order of properties] = the order of properties may be not pertinent
+  [order of rules] = the order of rules may be not pertinent
+  [paragraph] = a paragraph is a list of consecutive sentences
+  [property] = a property of an entry is an assertion it should verify
+  [question] = a question is a sentence starting with what, why or how
+  [reorder] = the order may be not pertinent
+  [rule] = ARCE has three kinds of rules : general rules, editing rules and property rules
+  [select] = select an item from the drop-down list
+  [surname] = the name provided by the User
+  [usage item] = it is an usage item
+  [usage items] = they are usage items
+  [blocks] = a block is defined for a property. It contains 4 elements : the current item&#44; the justification for having created the current item&#44; the previous item and the sha1 of the previous block
+  [entries] = an entry is a concept defined by the list of its properties e.g. Democracy&#44; General will
+  [paragraphes] = a paragraph is a list of consecutive sentences
+  [properties] = a property of an entry is an assertion it should verify
+  [questions] = a question is a sentence starting with what, why or how
+  [rules] = ARCE has three kinds of rules : general rules, editing rules and property rules
+  [names] = the name of an entity recast from its surname
+  [surnames] = the name provided by the User
+  [new properties] = new property
+<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >action<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >action<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >an action is one off remove&#44; history&#44; rename or undo<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >une action possible est supprimer&#44; historique&#44; renommer or d&eacute;faire<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >block<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >bloc<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >a block is defined for a property. It contains 4 elements : the current item&#44; the justification for having created the current item&#44; the previous item and the sha1 of the previous block<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >un bloc est d&eacute;fini pour une propri&eacute;t&eacute
+Il contient 4 &eacute;l&eacute;ments : l&rsquo;item courant&#44; 
+la justification de la cr&eacute;ation de l&rsquo;item courant&#44;
+l&rsquo;item pr&eacute;c&eacute;dent et la sha1 du bloc pr&eacute;c&eacute;dent<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >choose<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >choisir<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >click on one of the radio buttons<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >cliquer sur un des boutons radio<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >entry<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >entr&eacute;e<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >an entry is a concept defined by the list of its properties e.g. Democracy&#44; General will<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >une entr&eacute;e est un concept d&eacute;fini
+par la liste de ses propri&eacute;t&eacute;s 
+&#40;D&eacute;mocratie&#44; Volont&eacute; g&eacute;n&eacute;rale&#41;<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >item<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >item<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >an item is a property of an entry it is a component of a block<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >un item est une propri&eacute;t&eacute; d&rsquo;une entr&eacute;te 
+c&rsquo;est une composante d&rsquo;un bloc<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >justify<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >justifier<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >a justification proves that the modification done complies with the rules<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >une justification prouve qu&rsquo;une
+modification est conforme aux r&egrave;gles<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >justification<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >justification<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >a justification proves that the modification done complies with the rules<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >une justification prouve qu&rsquo;une
+modification est conforme aux r&egrave;gles<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >modify the order<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >modifier l&rsquo;ordre<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >the order of properties may be not pertinent<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >l&rsquo;ordre des propri&eacute;t&eacute;s peut &ecirc;tre non pertinent<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >name<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >nom<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >the name of an entity recast from its surname<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >le nom d&rsquo;une entit&eacute; est construit &agrave; partir du surnom<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >new paragraph<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >nouveau paragraphe<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >new paragraph<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >nouveau paragraphe<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >new property<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >nouvelle propri&eacute;t&eacute;<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >new property<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >nouvelle propri&eacute;t&eacute;<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >new question<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >nouvelle question<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >new question<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >nouvelle question<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >new rule<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >nouvelle r&egrave;gle<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >create a new rule to refine the editing criteria<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >cr&eacute;er une nouvelle r&egrave;gle pour affiner les crit&egrave;res de r&eacute;daction<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >order<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >ordre<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >the order of paragraphs may be improved<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >l&rsquo;ordre des paragraphes peut &ecirc;tre am&eacute;lior&eacute;<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >order of properties<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >ordre des propri&eacute;t&eacute;s<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >the order of properties may be not pertinent<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >l&rsquo;ordre des propri&eacute;t&eacute;s peut &ecirc;tre non pertinent<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >order of rules<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >ordre des r&egrave;gles<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >the order of rules may be not pertinent<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >l&rsquo;ordre des r&egrave;gles peut &ecirc;tre non pertinent<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >paragraph<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >paragraphe<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >a paragraph is a list of consecutive sentences<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >un paragraphe est une liste
+de phrases cons&eacute;cutives<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >property<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >propri&eacute;t&eacute;<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >a property of an entry is an assertion it should verify<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >une propri&eacute;t&eacute; d&rsquo;une entr&eacute;e 
+est une assertion qu&rsquo;elle doit v&eacute;rifier<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >question<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >question<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >a question is a sentence starting with what, why or how<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >une question est une phrase
+commençant par quoi, pourquoi ou comment<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >reorder<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >r&eacute;ordonner<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >the order may be not pertinent<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >l&rsquo;ordre peut &ecirc;tre non pertinent<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >rule<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >r&egrave;gle<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >ARCE has three kinds of rules : general rules, editing rules and property rules<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >RCAR a trois sortes de r&egrave;gles : les r&egrave;gles g&eacute;n&eacute;rales, les r&egrave;gles de r&eacute;daction et les r&egrave;gles des propri&eacute;t&eacute;s<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >select<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >s&eacute;lectionner<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >select an item from the drop-down list<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >s&eacute;lectionner un item dans la liste d&eacute;roulante<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >surname<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >surnom<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >the name provided by the User<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >le nom donn&eacute; par l&rsquo;utilisateur<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >usage item<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >item d&rsquo;utilisation<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >it is an usage item<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >c&rsquo;est un item d&rsquo;utilisation<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >usage items<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >items d&rsquo;utilisation<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >they are usage items<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >ce sont des items d&rsquo;utilisation<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >blocks<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >blocs<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >a block is defined for a property. It contains 4 elements : the current item&#44; the justification for having created the current item&#44; the previous item and the sha1 of the previous block<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >un bloc est d&eacute;fini pour une propri&eacute;t&eacute
+Il contient 4 &eacute;l&eacute;ments : l&rsquo;item courant&#44; 
+la justification de la cr&eacute;ation de l&rsquo;item courant&#44;
+l&rsquo;item pr&eacute;c&eacute;dent et la sha1 du bloc pr&eacute;c&eacute;dent<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >entries<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >entr&eacute;es<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >an entry is a concept defined by the list of its properties e.g. Democracy&#44; General will<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >une entr&eacute;e est un concept d&eacute;fini
+par la liste de ses propri&eacute;t&eacute;s 
+&#40;D&eacute;mocratie&#44; Volont&eacute; g&eacute;n&eacute;rale&#41;<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >paragraphes<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >paragraphes<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >a paragraph is a list of consecutive sentences<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >un paragraphe est une liste
+de phrases cons&eacute;cutives<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >properties<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >propri&eacute;t&eacute;s<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >a property of an entry is an assertion it should verify<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >une propri&eacute;t&eacute; d&rsquo;une entr&eacute;e 
+est une assertion qu&rsquo;elle doit v&eacute;rifier<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >questions<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >questions<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >a question is a sentence starting with what, why or how<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >une question est une phrase
+commençant par quoi, pourquoi ou comment<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >rules<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >r&egrave;gles<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >ARCE has three kinds of rules : general rules, editing rules and property rules<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >RCAR a trois sortes de r&egrave;gles : les r&egrave;gles g&eacute;n&eacute;rales, les r&egrave;gles de r&eacute;daction et les r&egrave;gles des propri&eacute;t&eacute;s<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >names<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >noms<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >the name of an entity recast from its surname<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >le nom d&rsquo;une entit&eacute; est construit &agrave; partir du surnom<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >surnames<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >surnoms<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >the name provided by the User<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >le nom donn&eacute; par l&rsquo;utilisateur<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_key_bub< >new properties<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_key_bub< >nouvelles propri&eacute;t&eacute;s<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$en_txt_bub< >new property<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make: >$la_txt_bub< >nouvelle propri&eacute;t&eacute;<
+
+<DEBUG> in function : bubble_la_text_by_key_array_make:
+$la_txt_bub_a
+>
+  [action] = une action possible est supprimer&#44; historique&#44; renommer or d&eacute;faire
+  [bloc] = un bloc est d&eacute;fini pour une propri&eacute;t&eacute
+Il contient 4 &eacute;l&eacute;ments : l&rsquo;item courant&#44; 
+la justification de la cr&eacute;ation de l&rsquo;item courant&#44;
+l&rsquo;item pr&eacute;c&eacute;dent et la sha1 du bloc pr&eacute;c&eacute;dent
+  [choisir] = cliquer sur un des boutons radio
+  [entr&eacute;e] = une entr&eacute;e est un concept d&eacute;fini
+par la liste de ses propri&eacute;t&eacute;s 
+&#40;D&eacute;mocratie&#44; Volont&eacute; g&eacute;n&eacute;rale&#41;
+  [item] = un item est une propri&eacute;t&eacute; d&rsquo;une entr&eacute;te 
+c&rsquo;est une composante d&rsquo;un bloc
+  [justifier] = une justification prouve qu&rsquo;une
+modification est conforme aux r&egrave;gles
+  [justification] = une justification prouve qu&rsquo;une
+modification est conforme aux r&egrave;gles
+  [modifier l&rsquo;ordre] = l&rsquo;ordre des propri&eacute;t&eacute;s peut &ecirc;tre non pertinent
+  [nom] = le nom d&rsquo;une entit&eacute; est construit &agrave; partir du surnom
+  [nouveau paragraphe] = nouveau paragraphe
+  [nouvelle propri&eacute;t&eacute;] = nouvelle propri&eacute;t&eacute;
+  [nouvelle question] = nouvelle question
+  [nouvelle r&egrave;gle] = cr&eacute;er une nouvelle r&egrave;gle pour affiner les crit&egrave;res de r&eacute;daction
+  [ordre] = l&rsquo;ordre des paragraphes peut &ecirc;tre am&eacute;lior&eacute;
+  [ordre des propri&eacute;t&eacute;s] = l&rsquo;ordre des propri&eacute;t&eacute;s peut &ecirc;tre non pertinent
+  [ordre des r&egrave;gles] = l&rsquo;ordre des r&egrave;gles peut &ecirc;tre non pertinent
+  [paragraphe] = un paragraphe est une liste
+de phrases cons&eacute;cutives
+  [propri&eacute;t&eacute;] = une propri&eacute;t&eacute; d&rsquo;une entr&eacute;e 
+est une assertion qu&rsquo;elle doit v&eacute;rifier
+  [question] = une question est une phrase
+commençant par quoi, pourquoi ou comment
+  [r&eacute;ordonner] = l&rsquo;ordre peut &ecirc;tre non pertinent
+  [r&egrave;gle] = RCAR a trois sortes de r&egrave;gles : les r&egrave;gles g&eacute;n&eacute;rales, les r&egrave;gles de r&eacute;daction et les r&egrave;gles des propri&eacute;t&eacute;s
+  [s&eacute;lectionner] = s&eacute;lectionner un item dans la liste d&eacute;roulante
+  [surnom] = le nom donn&eacute; par l&rsquo;utilisateur
+  [item d&rsquo;utilisation] = c&rsquo;est un item d&rsquo;utilisation
+  [items d&rsquo;utilisation] = ce sont des items d&rsquo;utilisation
+  [blocs] = un bloc est d&eacute;fini pour une propri&eacute;t&eacute
+Il contient 4 &eacute;l&eacute;ments : l&rsquo;item courant&#44; 
+la justification de la cr&eacute;ation de l&rsquo;item courant&#44;
+l&rsquo;item pr&eacute;c&eacute;dent et la sha1 du bloc pr&eacute;c&eacute;dent
+  [entr&eacute;es] = une entr&eacute;e est un concept d&eacute;fini
+par la liste de ses propri&eacute;t&eacute;s 
+&#40;D&eacute;mocratie&#44; Volont&eacute; g&eacute;n&eacute;rale&#41;
+  [paragraphes] = un paragraphe est une liste
+de phrases cons&eacute;cutives
+  [propri&eacute;t&eacute;s] = une propri&eacute;t&eacute; d&rsquo;une entr&eacute;e 
+est une assertion qu&rsquo;elle doit v&eacute;rifier
+  [questions] = une question est une phrase
+commençant par quoi, pourquoi ou comment
+  [r&egrave;gles] = RCAR a trois sortes de r&egrave;gles : les r&egrave;gles g&eacute;n&eacute;rales, les r&egrave;gles de r&eacute;daction et les r&egrave;gles des propri&eacute;t&eacute;s
+  [noms] = le nom d&rsquo;une entit&eacute; est construit &agrave; partir du surnom
+  [surnoms] = le nom donn&eacute; par l&rsquo;utilisateur
+  [nouvelles propri&eacute;t&eacute;s] = nouvelle propri&eacute;t&eacute;
+<
+
+....|....|....|. exiting from function bubble_la_text_by_key_array_make
+
+<DEBUG> in function : bubble_la_text_by_key_array_make_of_la_text:
+$la_bub_txt_a
+>
+  [entr&eacute;e] = une entr&eacute;e est un concept d&eacute;fini
+par la liste de ses propri&eacute;t&eacute;s 
+&#40;D&eacute;mocratie&#44; Volont&eacute; g&eacute;n&eacute;rale&#41;
+<
+
+....|....|....| exiting from function bubble_la_text_by_key_array_make_of_la_text (page d&rsquo; affichage du r&eacute;sultat de la cr&eacute;ation de la nouvelle entr&eacute;e)
+
+....|....|....| entering  in function bubble_bubbled_text_of_text_of_bubble_text_array (page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation de la nouvelle entr&eacute;e, $bub_txt_a)
+	called by bubble_bubbled_la_text_of_en_text
+
+<DEBUG> in function : bubble_bubbled_text_of_text_of_bubble_text_array:
+$inp_txt_a
+>
+  [0] = page
+  [1] = d&rsquo;
+  [2] = affichage
+  [3] = du
+  [4] = r&eacute;sultat
+  [5] = de
+  [6] = la
+  [7] = cr&eacute;ation
+  [8] = de
+  [9] = la
+  [10] = nouvelle
+  [11] = entr&eacute;e
+<
+
+....|....|....|. entering  in function bubble_bubbled_text_of_text_of_bubble_text (entr&eacute;e, une entr&eacute;e est un concept d&eacute;fini
+par la liste de ses propri&eacute;t&eacute;s 
+&#40;D&eacute;mocratie&#44; Volont&eacute; g&eacute;n&eacute;rale&#41;)
+	called by bubble_bubbled_text_of_text_of_bubble_text_array
+
+....|....|....|. exiting from function bubble_bubbled_text_of_text_of_bubble_text with ><span title="une entr&eacute;e est un concept d&eacute;fini
+par la liste de ses propri&eacute;t&eacute;s 
+&#40;D&eacute;mocratie&#44; Volont&eacute; g&eacute;n&eacute;rale&#41;"><u>entr&eacute;e</u></span><
+
+....|....|....| exiting from function bubble_bubbled_text_of_text_of_bubble_text_array with >page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation de la nouvelle <span title="une entr&eacute;e est un concept d&eacute;fini
+par la liste de ses propri&eacute;t&eacute;s 
+&#40;D&eacute;mocratie&#44; Volont&eacute; g&eacute;n&eacute;rale&#41;"><u>entr&eacute;e</u></span><
+
+....|....|.... exiting from function bubble_bubbled_la_text_of_en_text with >page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation de la nouvelle <span title="une entr&eacute;e est un concept d&eacute;fini
+par la liste de ses propri&eacute;t&eacute;s 
+&#40;D&eacute;mocratie&#44; Volont&eacute; g&eacute;n&eacute;rale&#41;"><u>entr&eacute;e</u></span><
+
+....|....|.... entering  in function common_html_div_background_color_of_html
+	called by entry_new_create_save_page_title_build
+
+....|....|.... exiting from function common_html_div_background_color_of_html
+
+<DEBUG> in function : entry_new_create_save_page_title_build: >$html_str< ><!-- ....|....|... going in function entry_new_create_save_page_title_build -->
+<center>
+<!-- ....|....|.... going in function common_html_div_background_color_of_html -->
+<div class="my-div">
+Page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation de la nouvelle <span title="une entr&eacute;e est un concept d&eacute;fini
+par la liste de ses propri&eacute;t&eacute;s 
+&#40;D&eacute;mocratie&#44; Volont&eacute; g&eacute;n&eacute;rale&#41;"><u>entr&eacute;e</u></span><i><b> zozo</b></i></div>
+<!-- ....|....|.... out  off function common_html_div_background_color_of_html -->
+</center>
+<!-- ....|....|... out  off function entry_new_create_save_page_title_build -->
+<
+
+....|....|... exiting from function entry_new_create_save_page_title_build
+
+<TRACE> in irp_build : step # 82 created from irp_build
+
+<TRACE> in irp_build : irp_key >entry_new_create_save_page_title< built from irp_build_n_store
+
+....|....|.. exiting from function irp_build (entry_new_create_save_page_title, entry_new_create_save)
+
+....|....|.. entering  in function irp_store (entry_new_create_save_page_title, $irp_val, irp_build_n_store)
+	called by irp_build_n_store
+
+....|....|... entering  in function irp_is_data_of_irp_key (entry_new_create_save_page_title, irp_store)
+	called by irp_store
+
+....|....|... exiting from function irp_is_data_of_irp_key is FALSE
+
+....|....|... entering  in function irp_store_nondata (entry_new_create_save_page_title, $irp_val, irp_build_n_store)
+	called by irp_store
+
+....|....|.... entering  in function irp_is_stored_of_irp_key (entry_new_create_save_page_title, irp_store_nondata)
+	called by irp_store_nondata
+
+<DEBUG> in function : irp_is_stored_of_irp_key:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+<
+
+....|....|.... exiting from function irp_is_stored_of_irp_key with irp_key >entry_new_create_save_page_title< is FALSE
+
+<TRACE> in irp_store_nondata : storage done for NONDATA >entry_new_create_save_page_title< from irp_build_n_store
+
+<DEBUG> in function : irp_store_nondata:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+  [33] = entry_new_create_save_page_title
+<
+
+....|....|... exiting from function irp_store_nondata (entry_new_create_save_page_title, $irp_val)
+
+....|....|.. exiting from function irp_store (entry_new_create_save_page_title, $irp_val, irp_build_n_store)
+
+<TRACE> in irp_build_n_store : irp_key >entry_new_create_save_page_title< has been built and stored from irp_provide_nondata
+
+....|....|. exiting from function irp_build_n_store (entry_new_create_save_page_title, entry_new_create_save)
+
+....|....| exiting from function irp_provide_nondata (entry_new_create_save_page_title, entry_new_create_save_build)
+
+<TRACE> in irp_provide : irp_key >entry_new_create_save_page_title< has been provided from entry_new_create_save_build
+
+....|.... exiting from function irp_provide (entry_new_create_save_page_title, entry_new_create_save_build)
+
+....|.... entering  in function irp_provide (entry_new_create_save_subdirectory_create, entry_new_create_save_build)
+	called by entry_new_create_save_build
+
+....|....| entering  in function irp_is_data_of_irp_key (entry_new_create_save_subdirectory_create, irp_provide)
+	called by irp_provide also by entry_new_create_save_build
+
+....|....| exiting from function irp_is_data_of_irp_key is FALSE
+
+....|....| entering  in function irp_provide_nondata (entry_new_create_save_subdirectory_create, entry_new_create_save_build)
+	called by irp_provide also by entry_new_create_save_build
+
+....|....|. entering  in function irp_is_stored_of_irp_key (entry_new_create_save_subdirectory_create, irp_provide_nondata)
+	called by irp_provide_nondata
+
+<DEBUG> in function : irp_is_stored_of_irp_key:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+  [33] = entry_new_create_save_page_title
+<
+
+....|....|. exiting from function irp_is_stored_of_irp_key with irp_key >entry_new_create_save_subdirectory_create< is FALSE
+
+<TRACE> in irp_provide_nondata : irp_key >entry_new_create_save_subdirectory_create< not stored calling irp_build_n_store from entry_new_create_save_build
+
+....|....|. entering  in function irp_build_n_store (entry_new_create_save_subdirectory_create, entry_new_create_save, irp_provide_nondata)
+	called by irp_provide_nondata
+
+....|....|.. entering  in function irp_build (entry_new_create_save_subdirectory_create, entry_new_create_save, irp_build_n_store)
+	called by irp_build_n_store
+
+<TRACE> in irp_build : irp_key >entry_new_create_save_subdirectory_create< pushed in irp_stack built by >entry_new_create_save< from irp_build_n_store
+
+....|....|... entering  in function father_n_son_stack_entity_push_of_father_of_son (entry_new_create_save, entry_new_create_save_subdirectory_create)
+	called by irp_build
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$nam_fat_mod< >entry_new_create_save<
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$entity< >entry_new_create_save<
+
+....|....|.... entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+	called by father_n_son_stack_entity_push_of_father_of_son
+
+<TRACE> in session_hash_push_inplace_of_key_of_value : Value >entry_new_create_save -> entry_new_create_save_subdirectory_create< has been successfully pushed inplace in $_SESSION['father_n_son_stack_entity'] array
+
+....|....|.... exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+
+....|....|... exiting from function father_n_son_stack_entity_push_of_father_of_son (entry_new_create_save, entry_new_create_save_subdirectory_create)
+
+....|....|... entering  in function entry_new_create_save_subdirectory_create_build
+	called by irp_build
+
+....|....|.... entering  in function irp_provide (entry_new_surname, entry_new_create_save_subdirectory_create_build)
+	called by entry_new_create_save_subdirectory_create_build
+
+....|....|....| entering  in function irp_is_data_of_irp_key (entry_new_surname, irp_provide)
+	called by irp_provide also by entry_new_create_save_subdirectory_create_build
+
+....|....|....| exiting from function irp_is_data_of_irp_key is TRUE
+
+....|....|....| entering  in function irp_provide_data (entry_new_surname, entry_new_create_save_subdirectory_create_build)
+	called by irp_provide also by entry_new_create_save_subdirectory_create_build
+
+....|....|....|. entering  in function irp_is_data_of_irp_key (entry_new_surname, irp_provide_data)
+	called by irp_provide_data
+
+....|....|....|. exiting from function irp_is_data_of_irp_key is TRUE
+
+....|....|....|. entering  in function irp_is_stored_of_irp_key (entry_new_surname, irp_provide_data)
+	called by irp_provide_data
+
+<TRACE> in irp_is_stored_of_irp_key : Value for key >entry_new_surname< is already stored FALSE from irp_provide_data
+
+
+<DEBUG> in function : irp_is_stored_of_irp_key:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+  [33] = entry_new_create_save_page_title
+<
+
+....|....|....|. exiting from function irp_is_stored_of_irp_key with irp_key >entry_new_surname< is TRUE
+
+....|....|....|. entering  in function irp_retrieve (entry_new_surname, irp_provide_data)
+	called by irp_provide_data
+
+<DEBUG> in function : irp_retrieve:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+  [33] = entry_new_create_save_page_title
+<
+
+....|....|....|.. entering  in function irp_is_stored_of_irp_key (entry_new_surname, irp_retrieve)
+	called by irp_retrieve
+
+<TRACE> in irp_is_stored_of_irp_key : Value for key >entry_new_surname< is already stored FALSE from irp_retrieve
+
+
+<DEBUG> in function : irp_is_stored_of_irp_key:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+  [33] = entry_new_create_save_page_title
+<
+
+....|....|....|.. exiting from function irp_is_stored_of_irp_key with irp_key >entry_new_surname< is TRUE
+
+<TRACE> in irp_retrieve : already stored Value pushed in irp_stack for irp_key >entry_new_surname< pushed in irp_stack from irp_provide_data
+
+<TRACE> in irp_retrieve : irp_key >entry_new_surname< has been retrieved from irp_provide_data
+
+....|....|....|. exiting from function irp_retrieve (entry_new_surname, irp_provide_data)
+
+....|....|....|. entering  in function father_n_son_stack_entity_push_of_father_of_son (entry_new_create_save_subdirectory_create, entry_new_surname)
+	called by irp_provide_data
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$nam_fat_mod< >entry_new_create_save_subdirectory_create<
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$entity< >entry_new_create_save_subdirectory_create<
+
+....|....|....|.. entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+	called by father_n_son_stack_entity_push_of_father_of_son
+
+<TRACE> in session_hash_push_inplace_of_key_of_value : Value >entry_new_create_save_subdirectory_create -> entry_new_surname< has been successfully pushed inplace in $_SESSION['father_n_son_stack_entity'] array
+
+....|....|....|.. exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+
+....|....|....|. exiting from function father_n_son_stack_entity_push_of_father_of_son (entry_new_create_save_subdirectory_create, entry_new_surname)
+
+<TRACE> in irp_provide_data : DATA irp_key >entry_new_surname< is stored and retrieved with value >zozo< from entry_new_create_save_subdirectory_create_build
+
+....|....|....| exiting from function irp_provide_data (entry_new_surname, entry_new_create_save_subdirectory_create_build)
+
+<TRACE> in irp_provide : irp_key >entry_new_surname< has been provided from entry_new_create_save_subdirectory_create_build
+
+....|....|.... exiting from function irp_provide (entry_new_surname, entry_new_create_save_subdirectory_create_build)
+
+....|....|.... entering  in function irp_provide (entry_new_name_from_entry_new_surname, entry_new_create_save_subdirectory_create_build)
+	called by entry_new_create_save_subdirectory_create_build
+
+....|....|....| entering  in function irp_is_data_of_irp_key (entry_new_name_from_entry_new_surname, irp_provide)
+	called by irp_provide also by entry_new_create_save_subdirectory_create_build
+
+....|....|....| exiting from function irp_is_data_of_irp_key is FALSE
+
+....|....|....| entering  in function irp_provide_nondata (entry_new_name_from_entry_new_surname, entry_new_create_save_subdirectory_create_build)
+	called by irp_provide also by entry_new_create_save_subdirectory_create_build
+
+....|....|....|. entering  in function irp_is_stored_of_irp_key (entry_new_name_from_entry_new_surname, irp_provide_nondata)
+	called by irp_provide_nondata
+
+<DEBUG> in function : irp_is_stored_of_irp_key:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+  [33] = entry_new_create_save_page_title
+<
+
+....|....|....|. exiting from function irp_is_stored_of_irp_key with irp_key >entry_new_name_from_entry_new_surname< is FALSE
+
+<TRACE> in irp_provide_nondata : irp_key >entry_new_name_from_entry_new_surname< not stored calling irp_build_n_store from entry_new_create_save_subdirectory_create_build
+
+....|....|....|. entering  in function irp_build_n_store (entry_new_name_from_entry_new_surname, entry_new_create_save_subdirectory_create, irp_provide_nondata)
+	called by irp_provide_nondata
+
+....|....|....|.. entering  in function irp_build (entry_new_name_from_entry_new_surname, entry_new_create_save_subdirectory_create, irp_build_n_store)
+	called by irp_build_n_store
+
+<TRACE> in irp_build : irp_key >entry_new_name_from_entry_new_surname< pushed in irp_stack built by >entry_new_create_save_subdirectory_create< from irp_build_n_store
+
+....|....|....|... entering  in function father_n_son_stack_entity_push_of_father_of_son (entry_new_create_save_subdirectory_create, entry_new_name_from_entry_new_surname)
+	called by irp_build
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$nam_fat_mod< >entry_new_create_save_subdirectory_create<
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$entity< >entry_new_create_save_subdirectory_create<
+
+....|....|....|.... entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+	called by father_n_son_stack_entity_push_of_father_of_son
+
+<TRACE> in session_hash_push_inplace_of_key_of_value : Value >entry_new_create_save_subdirectory_create -> entry_new_name_from_entry_new_surname< has been successfully pushed inplace in $_SESSION['father_n_son_stack_entity'] array
+
+....|....|....|.... exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+
+....|....|....|... exiting from function father_n_son_stack_entity_push_of_father_of_son (entry_new_create_save_subdirectory_create, entry_new_name_from_entry_new_surname)
+
+....|....|....|... entering  in function entry_new_name_from_entry_new_surname_build
+	called by irp_build
+
+....|....|....|.... entering  in function irp_provide (entry_new_surname, entry_new_name_from_entry_new_surname_build)
+	called by entry_new_name_from_entry_new_surname_build
+
+....|....|....|....| entering  in function irp_is_data_of_irp_key (entry_new_surname, irp_provide)
+	called by irp_provide also by entry_new_name_from_entry_new_surname_build
+
+....|....|....|....| exiting from function irp_is_data_of_irp_key is TRUE
+
+....|....|....|....| entering  in function irp_provide_data (entry_new_surname, entry_new_name_from_entry_new_surname_build)
+	called by irp_provide also by entry_new_name_from_entry_new_surname_build
+
+....|....|....|....|. entering  in function irp_is_data_of_irp_key (entry_new_surname, irp_provide_data)
+	called by irp_provide_data
+
+....|....|....|....|. exiting from function irp_is_data_of_irp_key is TRUE
+
+....|....|....|....|. entering  in function irp_is_stored_of_irp_key (entry_new_surname, irp_provide_data)
+	called by irp_provide_data
+
+<TRACE> in irp_is_stored_of_irp_key : Value for key >entry_new_surname< is already stored FALSE from irp_provide_data
+
+
+<DEBUG> in function : irp_is_stored_of_irp_key:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+  [33] = entry_new_create_save_page_title
+<
+
+....|....|....|....|. exiting from function irp_is_stored_of_irp_key with irp_key >entry_new_surname< is TRUE
+
+....|....|....|....|. entering  in function irp_retrieve (entry_new_surname, irp_provide_data)
+	called by irp_provide_data
+
+<DEBUG> in function : irp_retrieve:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+  [33] = entry_new_create_save_page_title
+<
+
+....|....|....|....|.. entering  in function irp_is_stored_of_irp_key (entry_new_surname, irp_retrieve)
+	called by irp_retrieve
+
+<TRACE> in irp_is_stored_of_irp_key : Value for key >entry_new_surname< is already stored FALSE from irp_retrieve
+
+
+<DEBUG> in function : irp_is_stored_of_irp_key:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+  [33] = entry_new_create_save_page_title
+<
+
+....|....|....|....|.. exiting from function irp_is_stored_of_irp_key with irp_key >entry_new_surname< is TRUE
+
+<TRACE> in irp_retrieve : already stored Value pushed in irp_stack for irp_key >entry_new_surname< pushed in irp_stack from irp_provide_data
+
+<TRACE> in irp_retrieve : irp_key >entry_new_surname< has been retrieved from irp_provide_data
+
+....|....|....|....|. exiting from function irp_retrieve (entry_new_surname, irp_provide_data)
+
+....|....|....|....|. entering  in function father_n_son_stack_entity_push_of_father_of_son (entry_new_name_from_entry_new_surname, entry_new_surname)
+	called by irp_provide_data
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$nam_fat_mod< >entry_new_name_from_entry_new_surname<
+
+<DEBUG> in function : father_n_son_stack_entity_push_of_father_of_son: >$entity< >entry_new_name_from_entry_new_surname<
+
+....|....|....|....|.. entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+	called by father_n_son_stack_entity_push_of_father_of_son
+
+<TRACE> in session_hash_push_inplace_of_key_of_value : Value >entry_new_name_from_entry_new_surname -> entry_new_surname< has been successfully pushed inplace in $_SESSION['father_n_son_stack_entity'] array
+
+....|....|....|....|.. exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+
+....|....|....|....|. exiting from function father_n_son_stack_entity_push_of_father_of_son (entry_new_name_from_entry_new_surname, entry_new_surname)
+
+<TRACE> in irp_provide_data : DATA irp_key >entry_new_surname< is stored and retrieved with value >zozo< from entry_new_name_from_entry_new_surname_build
+
+....|....|....|....| exiting from function irp_provide_data (entry_new_surname, entry_new_name_from_entry_new_surname_build)
+
+<TRACE> in irp_provide : irp_key >entry_new_surname< has been provided from entry_new_name_from_entry_new_surname_build
+
+....|....|....|.... exiting from function irp_provide (entry_new_surname, entry_new_name_from_entry_new_surname_build)
+
+....|....|....|... exiting from function entry_new_name_from_entry_new_surname_build with $nam_ent_new >Zozo<
+
+<TRACE> in irp_build : step # 83 created from irp_build
+
+<TRACE> in irp_build : irp_key >entry_new_name_from_entry_new_surname< built from irp_build_n_store
+
+....|....|....|.. exiting from function irp_build (entry_new_name_from_entry_new_surname, entry_new_create_save_subdirectory_create)
+
+....|....|....|.. entering  in function irp_store (entry_new_name_from_entry_new_surname, $irp_val, irp_build_n_store)
+	called by irp_build_n_store
+
+....|....|....|... entering  in function irp_is_data_of_irp_key (entry_new_name_from_entry_new_surname, irp_store)
+	called by irp_store
+
+....|....|....|... exiting from function irp_is_data_of_irp_key is FALSE
+
+....|....|....|... entering  in function irp_store_nondata (entry_new_name_from_entry_new_surname, $irp_val, irp_build_n_store)
+	called by irp_store
+
+....|....|....|.... entering  in function irp_is_stored_of_irp_key (entry_new_name_from_entry_new_surname, irp_store_nondata)
+	called by irp_store_nondata
+
+<DEBUG> in function : irp_is_stored_of_irp_key:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+  [33] = entry_new_create_save_page_title
+<
+
+....|....|....|.... exiting from function irp_is_stored_of_irp_key with irp_key >entry_new_name_from_entry_new_surname< is FALSE
+
+<TRACE> in irp_store_nondata : storage done for NONDATA >entry_new_name_from_entry_new_surname< from irp_build_n_store
+
+<DEBUG> in function : irp_store_nondata:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+  [33] = entry_new_create_save_page_title
+  [34] = entry_new_name_from_entry_new_surname
+<
+
+....|....|....|... exiting from function irp_store_nondata (entry_new_name_from_entry_new_surname, $irp_val)
+
+....|....|....|.. exiting from function irp_store (entry_new_name_from_entry_new_surname, $irp_val, irp_build_n_store)
+
+<TRACE> in irp_build_n_store : irp_key >entry_new_name_from_entry_new_surname< has been built and stored from irp_provide_nondata
+
+....|....|....|. exiting from function irp_build_n_store (entry_new_name_from_entry_new_surname, entry_new_create_save_subdirectory_create)
+
+....|....|....| exiting from function irp_provide_nondata (entry_new_name_from_entry_new_surname, entry_new_create_save_subdirectory_create_build)
+
+<TRACE> in irp_provide : irp_key >entry_new_name_from_entry_new_surname< has been provided from entry_new_create_save_subdirectory_create_build
+
+....|....|.... exiting from function irp_provide (entry_new_name_from_entry_new_surname, entry_new_create_save_subdirectory_create_build)
+
+<DEBUG> in function : entry_new_create_save_subdirectory_create_build: >$sur_ent_new< >zozo<
+
+<DEBUG> in function : entry_new_create_save_subdirectory_create_build: >$nam_ent_new< >Zozo<
+
+....|....|.... entering  in function entry_is_subdirectory_of_entry_name (Zozo)
+	called by entry_new_create_save_subdirectory_create_build
+
+....|....|....| entering  in function entry_subdirectory_name_of_entry_name (Zozo)
+	called by entry_is_subdirectory_of_entry_name
+
+<DEBUG> in function : entry_subdirectory_name_of_entry_name: >$fnd< >/keep/sources/rcar/server/Zozo<
+
+....|....|....| exiting from function entry_subdirectory_name_of_entry_name
+
+....|....|.... exiting from function entry_is_subdirectory_of_entry_name is TRUE
+
+<DEBUG> in function : entry_new_create_save_subdirectory_create_build: >$html_str< >le dossier de l&rsquo;entr&eacute;e <b><i>Zozo</i></b> existe d&eacute;j&agrave;<
+
+....|....|... exiting from function entry_new_create_save_subdirectory_create_build
+
+<TRACE> in irp_build : step # 84 created from irp_build
+
+<TRACE> in irp_build : irp_key >entry_new_create_save_subdirectory_create< built from irp_build_n_store
+
+....|....|.. exiting from function irp_build (entry_new_create_save_subdirectory_create, entry_new_create_save)
+
+....|....|.. entering  in function irp_store (entry_new_create_save_subdirectory_create, $irp_val, irp_build_n_store)
+	called by irp_build_n_store
+
+....|....|... entering  in function irp_is_data_of_irp_key (entry_new_create_save_subdirectory_create, irp_store)
+	called by irp_store
+
+....|....|... exiting from function irp_is_data_of_irp_key is FALSE
+
+....|....|... entering  in function irp_store_nondata (entry_new_create_save_subdirectory_create, $irp_val, irp_build_n_store)
+	called by irp_store
+
+....|....|.... entering  in function irp_is_stored_of_irp_key (entry_new_create_save_subdirectory_create, irp_store_nondata)
+	called by irp_store_nondata
+
+<DEBUG> in function : irp_is_stored_of_irp_key:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+  [33] = entry_new_create_save_page_title
+  [34] = entry_new_name_from_entry_new_surname
+<
+
+....|....|.... exiting from function irp_is_stored_of_irp_key with irp_key >entry_new_create_save_subdirectory_create< is FALSE
+
+<TRACE> in irp_store_nondata : storage done for NONDATA >entry_new_create_save_subdirectory_create< from irp_build_n_store
+
+<DEBUG> in function : irp_store_nondata:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+  [33] = entry_new_create_save_page_title
+  [34] = entry_new_name_from_entry_new_surname
+  [35] = entry_new_create_save_subdirectory_create
+<
+
+....|....|... exiting from function irp_store_nondata (entry_new_create_save_subdirectory_create, $irp_val)
+
+....|....|.. exiting from function irp_store (entry_new_create_save_subdirectory_create, $irp_val, irp_build_n_store)
+
+<TRACE> in irp_build_n_store : irp_key >entry_new_create_save_subdirectory_create< has been built and stored from irp_provide_nondata
+
+....|....|. exiting from function irp_build_n_store (entry_new_create_save_subdirectory_create, entry_new_create_save)
+
+....|....| exiting from function irp_provide_nondata (entry_new_create_save_subdirectory_create, entry_new_create_save_build)
+
+<TRACE> in irp_provide : irp_key >entry_new_create_save_subdirectory_create< has been provided from entry_new_create_save_build
+
+....|.... exiting from function irp_provide (entry_new_create_save_subdirectory_create, entry_new_create_save_build)
+
+<DEBUG> in function : entry_new_create_save_build: >$html_str< ><!-- ....|... going in function entry_new_create_save_build -->
+<!-- ....|....|... going in function pervasive_page_header_build -->
+<!-- ....|....|....|... going in function common_html_page_head_build -->
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Rcar</title>
+  <meta name="robots" CONTENT="index,follow">
+  <META NAME="keywords" CONTENT="democracy, d&eacute;mocratie, crowd editing, collaborative editing, cooperating editing, collective intelligence, intelligence collective; r&eacute;daction collaborative, r&eacute;daction collective, general will, volont&eacute; g&eacute;n&eacute;rale, auto regulated collaborative editing, r&eacute;daction collaborative auto-r&eacute;gul&eacute;e">
+  <META NAME="description" CONTENT="ARCE (Auto-Regulated Collaborative Editing - r&eacute;daction collaborative auto-r&eacute;gul&eacute;e) est conçu pour que les membres d&rsquo;une communaut&eacute; d&rsquo;internautes puissent se mettre d&rsquo;accord sur le pourquoi, le comment et la destination d&rsquo;un texte, avant d&rsquo;en entreprendre l&rsquo;&eacute;criture.">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link href="CSS/style.css" rel="stylesheet" media="all" type="text/css">
+  <link rel="icon" href="IMAGES/favicon.ico">
+ </head>
+ <body>
+<!-- ....|....|....|... out  off function common_html_page_head_build -->
+<table> 
+ <tr> 
+  <td rowspan="3">
+   <header_sitename> 
+RCAR
+   </header_sitename> 
+  </td> 
+  <td colspan="6">
+<b>R</b><i>&eacute;daction</i> <b>C</b><i>ollaborative</i> <b>A</b><i>uto-</i><b>R</b><i>&eacute;gul&eacute;e</i>
+  </td>
+ </tr>
+<!-- ....|....|....|... going in function label_html_initial_section_build -->
+<!-- ....|....|....|....|... going in function label_pure_html_initial_section_build -->
+<tr>
+ <td>
+<!-- ....|....|....|....|.... going in function label_html_href_make_of_label -->
+<span id="menu-header-links">
+<a href="home_script.php" title="accueil">Accueil</a>
+</span>
+<!-- ....|....|....|....|.... out  off function label_html_href_make_of_label -->
+ </td>
+ <td><b>
+<!-- ....|....|....|....|.... going in function label_html_href_make_of_label -->
+<span id="menu-header-links">
+<a href="entry_list_display_script.php" title="liste des entr&eacute;es">Entr&eacute;es</a>
+</span>
+<!-- ....|....|....|....|.... out  off function label_html_href_make_of_label -->
+ </b></td>
+ <td>
+<!-- ....|....|....|....|.... going in function label_html_href_make_of_label -->
+<span id="menu-header-links">
+<a href="command_script.php" title="s&eacute;lectionner et ex&eacute;cuter une commande">Commande</a>
+</span>
+<!-- ....|....|....|....|.... out  off function label_html_href_make_of_label -->
+ </td>
+ <td>
+<!-- ....|....|....|....|.... going in function label_html_href_make_of_label -->
+<span id="menu-header-links">
+<a href="apropos_script.php" title="RCAR Version">A propos</a>
+</span>
+<!-- ....|....|....|....|.... out  off function label_html_href_make_of_label -->
+ </td>
+ <td>
+<!-- ....|....|....|....|.... going in function button_submit_quit_html_make -->
+<form action="quit_script.php" method="get">
+  <input type="submit" value="Quitter" title="Supprimer les donn&eacute;es de navigation" font-variant:small-caps; background-color:red>
+</form> 
+<!-- ....|....|....|....|.... out  off function button_submit_quit_html_make -->
+ </td>
+ </tr>
+<!-- ....|....|....|....|... out  off function label_pure_html_initial_section_build -->
+<!-- ....|....|....|....|... going in function label_entry_html_initial_section_as_row_build -->
+<tr>
+ <td colspan="2">
+<!-- ....|....|....|....|.... going in function label_html_href_make_of_en_label_name -->
+<span id="menu-header-links">
+<a href="entry_current_display_script.php?entry_current_name=Regles_de_redaction" title="on doit suivre ces r&egrave;gles en r&eacute;digeant">R&egrave;gles de r&eacute;daction</a>
+</span>
+<!-- ....|....|....|....|.... out  off function label_html_href_make_of_en_label_name -->
+ </td>
+ <td>
+<!-- ....|....|....|....|.... going in function label_html_href_make_of_en_label_name -->
+<span id="menu-header-links">
+<a href="entry_current_display_script.php?entry_current_name=Faq" title="foire aux questions">Faq</a>
+</span>
+<!-- ....|....|....|....|.... out  off function label_html_href_make_of_en_label_name -->
+ </td>
+ <td colspan="2">
+<!-- ....|....|....|....|.... going in function label_html_href_make_of_en_label_name -->
+<span id="menu-header-links">
+<a href="entry_current_display_script.php?entry_current_name=Regles_des_proprietes" title="on doit suivre ces r&egrave;gles en r&eacute;digeant une propri&eacute;t&eacute">R&egrave;gles des propri&eacute;t&eacute;s</a>
+</span>
+<!-- ....|....|....|....|.... out  off function label_html_href_make_of_en_label_name -->
+ </td>
+ <td>
+<!-- ....|....|....|....|.... going in function label_html_href_make_of_en_label_name -->
+<span id="menu-header-links">
+<a href="entry_current_display_script.php?entry_current_name=Presentation" title="pr&eacute;sentation d&rsquo;RCAR">Pr&eacute;sentation</a>
+</span>
+<!-- ....|....|....|....|.... out  off function label_html_href_make_of_en_label_name -->
+ </td>
+ <td>
+<!-- ....|....|....|....|.... going in function label_html_href_make_of_en_label_name -->
+<span id="menu-header-links">
+<a href="entry_current_display_script.php?entry_current_name=Utilisation" title="texte de la bulle pour">Utilisation</a>
+</span>
+<!-- ....|....|....|....|.... out  off function label_html_href_make_of_en_label_name -->
+ </td>
+</tr>
+<!-- ....|....|....|....|... out  off function label_entry_html_initial_section_as_row_build -->
+<!-- ....|....|....|... out  off function label_html_initial_section_build -->
+</table>
+<!-- ....|....|... out  off function pervasive_page_header_build -->
+
+<!-- === end of page header === -->
+
+<br><br>
+<!-- ....|....|... going in function entry_new_create_save_page_title_build -->
+<center>
+<!-- ....|....|.... going in function common_html_div_background_color_of_html -->
+<div class="my-div">
+Page d&rsquo;affichage du r&eacute;sultat de la cr&eacute;ation de la nouvelle <span title="une entr&eacute;e est un concept d&eacute;fini
+par la liste de ses propri&eacute;t&eacute;s 
+&#40;D&eacute;mocratie&#44; Volont&eacute; g&eacute;n&eacute;rale&#41;"><u>entr&eacute;e</u></span><i><b> zozo</b></i></div>
+<!-- ....|....|.... out  off function common_html_div_background_color_of_html -->
+</center>
+<!-- ....|....|... out  off function entry_new_create_save_page_title_build -->
+<br><br>
+le dossier de l&rsquo;entr&eacute;e <b><i>Zozo</i></b> existe d&eacute;j&agrave;<br><br>
+<
+
+....|... exiting from function entry_new_create_save_build
+
+<TRACE> in irp_build : step # 85 created from irp_build
+
+<TRACE> in irp_build : irp_key >entry_new_create_save< built from irp_build_n_store
+
+....|.. exiting from function irp_build (entry_new_create_save, entry_new_create_save_script)
+
+....|.. entering  in function irp_store (entry_new_create_save, $irp_val, irp_build_n_store)
+	called by irp_build_n_store
+
+....|... entering  in function irp_is_data_of_irp_key (entry_new_create_save, irp_store)
+	called by irp_store
+
+....|... exiting from function irp_is_data_of_irp_key is FALSE
+
+....|... entering  in function irp_store_nondata (entry_new_create_save, $irp_val, irp_build_n_store)
+	called by irp_store
+
+....|.... entering  in function irp_is_stored_of_irp_key (entry_new_create_save, irp_store_nondata)
+	called by irp_store_nondata
+
+<DEBUG> in function : irp_is_stored_of_irp_key:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+  [33] = entry_new_create_save_page_title
+  [34] = entry_new_name_from_entry_new_surname
+  [35] = entry_new_create_save_subdirectory_create
+<
+
+....|.... exiting from function irp_is_stored_of_irp_key with irp_key >entry_new_create_save< is FALSE
+
+<TRACE> in irp_store_nondata : storage done for NONDATA >entry_new_create_save< from irp_build_n_store
+
+<DEBUG> in function : irp_store_nondata:
+irp_register_keys
+>
+  [0] = common_html_page_head
+  [1] = pervasive_html_Auto_Regulated_Collaborative_Editing
+  [2] = label_pure_html_initial_section
+  [3] = label_entry_html_initial_section_as_row
+  [4] = label_html_initial_section
+  [5] = pervasive_page_header
+  [6] = pervasive_license
+  [7] = common_html_page_tail
+  [8] = pervasive_page_footer
+  [9] = home
+  [10] = entry_list_display_page_title
+  [11] = entry_current_selection_display_form_title
+  [12] = entry_current_selection_rename_title
+  [13] = toward_entry_new_create_form_title
+  [14] = toward_entry_new_create_form
+  [15] = entry_fullnameofdirectory_array
+  [16] = surname_catalog_fullnameoffile
+  [17] = surname_catalog
+  [18] = surname_by_name_hash
+  [19] = entry_name_array
+  [20] = entry_current_name_last
+  [21] = entry_current_selection_display_menuselect
+  [22] = entry_current_selection_display_form
+  [23] = entry_current_selection_display
+  [24] = entry_current_selection_rename_menuselect
+  [25] = entry_current_selection_rename_form
+  [26] = entry_current_selection_rename
+  [27] = entry_list_display
+  [28] = entry_new_create_page_title
+  [29] = entry_new_create_form_title
+  [30] = entry_new_create_form
+  [31] = entry_new_create
+  [32] = entry_new_surname
+  [33] = entry_new_create_save_page_title
+  [34] = entry_new_name_from_entry_new_surname
+  [35] = entry_new_create_save_subdirectory_create
+  [36] = entry_new_create_save
+<
+
+....|... exiting from function irp_store_nondata (entry_new_create_save, $irp_val)
+
+....|.. exiting from function irp_store (entry_new_create_save, $irp_val, irp_build_n_store)
+
+<TRACE> in irp_build_n_store : irp_key >entry_new_create_save< has been built and stored from irp_provide_nondata
+
+....|. exiting from function irp_build_n_store (entry_new_create_save, entry_new_create_save_script)
+
+....| exiting from function irp_provide_nondata (entry_new_create_save, entry_new_create_save_script)
+
+<TRACE> in irp_provide : irp_key >entry_new_create_save< has been provided from entry_new_create_save_script
+
+.... exiting from function irp_provide (entry_new_create_save, entry_new_create_save_script)
+
+... exiting from script entry_new_create_save_script

@@ -1,12 +1,11 @@
 <?php
-require_once "pervasive_html_functions.php";
+require_once "comment_library.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
 
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-entering_in_module ($module);
 
 function arce_home_header_en () {
     $here = __FUNCTION__; 
@@ -141,6 +140,5 @@ function arce_home_text_accent_fr () {
     return $html_str;
 }
 
-exiting_from_module ($module);
 
 ?>

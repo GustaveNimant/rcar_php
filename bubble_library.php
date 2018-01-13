@@ -8,7 +8,6 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "functions to make bubbles";
 $Documentation[$module]['what for'] = "to bubble a sentence divided into words";
 
-entering_in_module ($module);
 
 function bubble_bubbled_text_of_text_of_bubble_text ($txt, $bub_txt) {
   $here = __FUNCTION__;
@@ -131,6 +130,5 @@ function bubble_bubbled_capitalized_la_text_of_en_text ($en_bub_txt) {
   return $html_str;
 }
 
-exiting_from_module ($module);
 
 ?>

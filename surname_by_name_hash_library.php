@@ -7,7 +7,6 @@ $module = module_name_of_module_nameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is an array equivalent to the surname_catalog";
 $Documentation[$module]['what for'] = "to ...";
 
-entering_in_module ($module);
 
 function surname_by_name_hash_keysort ($sur_by_nam_h) {
   $here = __FUNCTION__;
@@ -164,6 +163,5 @@ function surname_by_name_hash_check_are_surnamed_of_nameofarray_of_current_array
   return;
 }
 
-exiting_from_module ($module);
 
 ?>

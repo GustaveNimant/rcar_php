@@ -7,7 +7,6 @@ require_once "irp_library.php";
 require_once "file_library.php";
 
 $module = "entry_functions";
-entering_in_module ($module);
 
 function entry_current_rename_subdirectory ($old_nam_ent, $new_nam_ent_cur) {
   $here = __FUNCTION__;
@@ -86,6 +85,5 @@ function entry_subdirectory_create_of_entry_name ($nam_ent) {
   return;
 };
 
-exiting_from_module ($module);
 
 ?>

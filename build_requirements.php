@@ -1,5 +1,4 @@
 <?php
-
 require_once "home_functions.php";
 require_once "common_html_library.php";
 require_once "label_functions.php";

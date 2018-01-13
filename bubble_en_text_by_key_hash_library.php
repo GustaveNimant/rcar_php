@@ -5,7 +5,6 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is key'] = "it is a word to be bubbled in english";
 $Documentation[$module]['what is value'] = "it is the bubble text in english";
 
-entering_in_module ($module);
 
 function bubble_en_text_by_key_hash_make () {
   $here = __FUNCTION__;
@@ -91,6 +90,5 @@ function bubble_la_text_by_key_array_make () {
 
 }
 
-exiting_from_module ($module);
 
 ?>

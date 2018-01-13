@@ -3,7 +3,6 @@
 require_once "debug_library.php";
 
 $module = "button_functions";
-entering_in_module ($module);
 
 function button_radio ($key_get, $val_but) {
   $here = __FUNCTION__;
@@ -88,6 +87,5 @@ function button_radio_from_to ($nam_ite) {
 
 }
 
-exiting_from_module ($module);
 
 ?>

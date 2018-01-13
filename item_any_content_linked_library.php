@@ -19,7 +19,6 @@ $sen_ori_rep="l' objet de la volonté générale est l' intérêt général";
 
 */
 
-entering_in_module ($module);
 
 function sub_sentence_linked_of_sub_sentence_matched ($sub_sen_mat){
     $here = __FUNCTION__;
@@ -293,6 +292,5 @@ function replace_all_sub_sentence_by_links_of_surname_by_name_hash_of_entry_name
 }
 
 
-exiting_from_module ($module);
 
 ?>

@@ -6,7 +6,6 @@ $module = module_name_of_module_nameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-entering_in_module ($module);
 
 function git_log_shaipdate_of_directory_path_of_quatuor ($hdir, $since, $before, $nam_ent, $nam_blo) {
   $here = __FUNCTION__;
@@ -224,6 +223,5 @@ function git_blob_content_of_blob_sha ($sha_blo) {
   return $con_blo;
 }
 
-  exiting_from_module ($module);
 
 ?>

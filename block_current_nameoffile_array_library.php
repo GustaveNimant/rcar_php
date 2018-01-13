@@ -8,7 +8,6 @@ $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 $Documentation[$module]['block_current_nameoffile'] = "block_current_name.blo";
 
-entering_in_module ($module);
 
 function block_current_nameoffile_array_read_of_entry_name ($nam_ent) {
   $here = __FUNCTION__;
@@ -69,6 +68,5 @@ function block_current_nameoffile_array_is_empty_of_entry_name ($nam_ent) {
   return $boo;
 }
 
-exiting_from_module ($module);
 
 ?>

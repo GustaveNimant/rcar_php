@@ -8,7 +8,6 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-entering_in_module ($module);
 
 function file_fullnameoffile_parse_array ($fno) {
     $here = __FUNCTION__;
@@ -583,6 +582,5 @@ function file_content_remove_last_line ($con_raw) {
     
 }
 
-exiting_from_module ($module);
 
 ?>

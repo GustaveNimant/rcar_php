@@ -3,7 +3,6 @@ require_once "management_library.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
 
-entering_in_module ($module);
 
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
@@ -67,6 +66,5 @@ function father_n_son_stack_script_push_of_current_script ($cur_mod) {
   return ;
   }
 
-exiting_from_module ($module);
 
 ?>

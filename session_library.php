@@ -3,7 +3,6 @@ require_once "file_library.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
-entering_in_module ($module);
 
 function session_check_not_empty_array_of_key ($key) {
   $here = __FUNCTION__;
@@ -219,6 +218,5 @@ return;
 }
 
 
-exiting_from_module ($module);
 
 ?>

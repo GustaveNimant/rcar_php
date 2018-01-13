@@ -7,7 +7,6 @@ $module = module_name_of_module_nameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-entering_in_module ($module);
 
 function git_checkout_of_entry_name_of_nameoffile ($nam_ent_cur, $nof_blo_cur) {
   $here = __FUNCTION__;
@@ -246,6 +245,5 @@ function git_command_provide () {
   return $cmd_git;
 }
 
-exiting_from_module ($module);
 
 ?>

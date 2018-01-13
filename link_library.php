@@ -5,7 +5,6 @@ require_once "debug_library.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
 
-entering_in_module ($module);
 
 $Documentation[$module]['module_fullnameoffile'] = "the name of the php file with its path"; 
 $Documentation[$module]['module_nameoffile'] = "the name of the php file without its path"; 
@@ -97,6 +96,5 @@ function link_script_name_of_url_relative ($url_rel) {
   return $nam_scr;
 }
 
-exiting_from_module ($module);
 
 ?>

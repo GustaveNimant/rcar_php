@@ -7,7 +7,6 @@ $module = module_name_of_module_nameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-entering_in_module ($module);
 
 function array_first_dots_last_element_of_array ($arr_a) {
   $here = __FUNCTION__;
@@ -775,6 +774,5 @@ function ___array_push_inplace_of_array_name_of_value_of_array ($nam_arr, $val, 
     return;
 }
 
-exiting_from_module ($module);
 
 ?>

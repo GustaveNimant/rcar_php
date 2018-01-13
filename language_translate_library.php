@@ -9,7 +9,6 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-entering_in_module ($module);
 
 function language_translate_of_en_string ($en_str) {
   $here = __FUNCTION__;
@@ -106,6 +105,5 @@ function language_translate_to_english_of_la_string ($la_str) {
   return $en_str;  
 }
 
-exiting_from_module ($module);
 
 ?>

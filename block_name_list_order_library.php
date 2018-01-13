@@ -10,7 +10,6 @@ $Documentation[$module]['not irp_provided'] = "the order of the block names is n
 $Documentation[$module]['READ_'] = "READ_block_name_list_order_current";
 $Documentation[$module]['WRITE_'] = "WRITE_block_name_list_order";
 
-entering_in_module ($module);
 
 function block_name_array_of_block_nameoffile_array ($nof_blo_a) {
     $here = __FUNCTION__;
@@ -120,6 +119,5 @@ function block_name_list_order_write_of_entry_name_of_block_name_list_order_stri
   return $log_str;
 }
 
-exiting_from_module ($module);
 
 ?>

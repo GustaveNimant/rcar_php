@@ -7,7 +7,6 @@ $module = module_name_of_module_nameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-entering_in_module ($module);
 
 function father_n_son_stack_module_push_of_father_of_son ($nam_fat, $nam_son) {
   $here = __FUNCTION__;
@@ -68,6 +67,5 @@ function father_n_son_stack_module_push_of_current_module ($cur_mod) {
   return ;
   }
 
-exiting_from_module ($module);
 
 ?>

@@ -7,7 +7,6 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-entering_in_module ($module);
 
 function string_remove_control_M ($str) {
   $here = __FUNCTION__;
@@ -659,6 +658,5 @@ function string_pretty_of_array ($str_a) {
     return $str;
 };
 
-exiting_from_module ($module);
 
 ?>

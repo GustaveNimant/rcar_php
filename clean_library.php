@@ -8,7 +8,6 @@ $module = module_name_of_module_nameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-entering_in_module ($module);
 
 function clean () {
   $here = __FUNCTION__;
@@ -40,4 +39,3 @@ function clean () {
   return;
 };
 
-exiting_from_module ($module);

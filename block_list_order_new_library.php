@@ -7,7 +7,6 @@ $module = module_name_of_module_nameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-entering_in_module ($module);
 
 function block_name_list_order_current_of_surname_by_name_hash_of_block_name_list_order_current ($sur_by_nam_h, $nam_blo_a) { /* to be moved */
   $here = __FUNCTION__;
@@ -157,6 +156,5 @@ function block_current_name_reordered_array_of_en_order_of_block_name_list_order
   return $new_pro_a;
 }
 
-exiting_from_module ($module);
 
 ?>

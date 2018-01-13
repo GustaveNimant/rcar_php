@@ -3,7 +3,6 @@ require_once "management_library.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
-entering_in_module ($module);
 
 function help_text_of_help_key ($key_hel) {
   $here = __FUNCTION__;
@@ -30,6 +29,5 @@ function help_text_of_help_key ($key_hel) {
 
 }
 
-exiting_from_module ($module);
 
 ?>

@@ -7,7 +7,6 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 
 $Documentation[$module]['placeholder'] = "in a textarea a documentation or example text to be over-written";
 
-entering_in_module ($module);
 
 function a_href_of_entry_name_of_script_nameoffile_of_block_current_name_of_en_action ($nam_ent, $nof_scr, $nam_blo_cur, $en_act) {
   $here = __FUNCTION__;
@@ -333,6 +332,5 @@ function span_class_of_name_of_en_text ($nam, $en_txt) {
   return $html_str;
 }
 
-exiting_from_module ($module);
 
 ?>

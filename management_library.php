@@ -51,29 +51,6 @@ function management_is_verbose_of_function_name ($nam_fun) {
   return $boo;
 }
 
-function comment_entering_of_function_name ($nam_fun) {
-    $here = __FUNCTION__;
-
-    $dot_list = $_SESSION['parameters']['stack_function_level_dot_list'];
-    $lev_cur = count ($_SESSION['parameters']['stack_function_called_array']);
-    $str_poi = substr ($dot_list, 0, $lev_cur);
-    
-    $com = "<!-- $str_poi going in function $nam_fun -->\n"; 
-    return $com;
-};
-
-function comment_exiting_of_function_name ($nam_fun) {
-    $here = __FUNCTION__;
-
-    $dot_list = $_SESSION['parameters']['stack_function_level_dot_list'];
-    $lev_cur = count ($_SESSION['parameters']['stack_function_called_array']);
-    $str_poi = substr ($dot_list, 0, $lev_cur);
-    
-    $com = "<!-- $str_poi out  off function $nam_fun -->\n"; 
-    
-    return $com;
-};
-
 function management_entering_level_of_name ($nam) {
     $here = __FUNCTION__;
 
@@ -297,19 +274,19 @@ function entering_in_script ($str_scr) {
         
     ) {
         $eol = end_of_line ();
-        print ($here . ' $str_scr >' . $str_scr . '<' . $eol); 
+##        print ($here . ' $str_scr >' . $str_scr . '<' . $eol); 
         
         $nam_scr = first_word_of_string ($str_scr);
-        print ($here . ' $nam_scr >' . $nam_scr . '<' . $eol); 
+##        print ($here . ' $nam_scr >' . $nam_scr . '<' . $eol); 
 
         $arr = ($_SESSION['parameters']['stack_function_called_array']);
-        print_html_array ($here , 'stack_function_called_array', $arr);
+##        print_html_array ($here , 'stack_function_called_array', $arr);
 
         $prev = end ($_SESSION['parameters']['stack_function_called_array']);
-        print ($here . ' $prev >' . $prev . '<' . $eol); 
+##        print ($here . ' $prev >' . $prev . '<' . $eol); 
 
         $lev_cur = management_entering_level_of_name ($nam_scr) ;
-        print ($here . ' $lev_cur >' . $lev_cur . '<' . $eol); 
+##        print ($here . ' $lev_cur >' . $lev_cur . '<' . $eol); 
 
         $dot_list = $_SESSION['parameters']['stack_function_level_dot_list'];
         $str_poi = substr ($dot_list, 0, $lev_cur);
@@ -321,7 +298,7 @@ function entering_in_script ($str_scr) {
             "Check");
         }
 
-        print ("\n$str_poi entering  in script " . $str_scr . $eol); 
+##        print ("\n$str_poi entering  in script " . $str_scr . $eol); 
 
         print_d ("\n$str_poi entering  in script " . $str_scr . "\n"); 
 
@@ -408,6 +385,5 @@ function exiting_withcpu_from_function ($nam_fun, $cpu_in) {
     
     return;
 };
-
 
 ?>

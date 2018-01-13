@@ -5,7 +5,6 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is a string as a list of name:surname separated by \\n";
 $Documentation[$module]['what for'] = "to fill file Surname_catalog.cat";
 
-entering_in_module ($module);
 
 function surname_catalog_of_surname_by_name_hash ($sur_by_nam_h) {
   $here = __FUNCTION__;
@@ -37,6 +36,5 @@ function surname_catalog_write_of_surname_by_name_hash ($sur_by_nam_h) {
   return;
 }
 
-exiting_from_module ($module);
 
 ?>

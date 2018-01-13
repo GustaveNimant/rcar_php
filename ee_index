@@ -1,0 +1,279 @@
+.... entering  in function irp_provide (home, index_build)
+....| entering  in function irp_is_data_of_irp_key (home, irp_provide)
+....| exiting from function irp_is_data_of_irp_key is FALSE
+....| entering  in function irp_provide_nondata (home, index_build)
+....|. entering  in function irp_is_stored_of_irp_key (home, irp_provide_nondata)
+....|. exiting from function irp_is_stored_of_irp_key with irp_key >home< is FALSE
+....|. entering  in function irp_build_n_store (home, index, irp_provide_nondata)
+....|.. entering  in function irp_build (home, index, irp_build_n_store)
+....|... entering  in function father_n_son_stack_entity_push_of_father_of_son (index, home)
+....|.... entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|.... exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|... exiting from function father_n_son_stack_entity_push_of_father_of_son (index, home)
+....|... entering  in function home_build
+....|.... entering  in function irp_provide (pervasive_page_header, home_build)
+....|....| entering  in function irp_is_data_of_irp_key (pervasive_page_header, irp_provide)
+....|....| exiting from function irp_is_data_of_irp_key is FALSE
+....|....| entering  in function irp_provide_nondata (pervasive_page_header, home_build)
+....|....|. entering  in function irp_is_stored_of_irp_key (pervasive_page_header, irp_provide_nondata)
+....|....|. exiting from function irp_is_stored_of_irp_key with irp_key >pervasive_page_header< is FALSE
+....|....|. entering  in function irp_build_n_store (pervasive_page_header, home, irp_provide_nondata)
+....|....|.. entering  in function irp_build (pervasive_page_header, home, irp_build_n_store)
+....|....|... entering  in function father_n_son_stack_entity_push_of_father_of_son (home, pervasive_page_header)
+....|....|.... entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|....|.... exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|....|... exiting from function father_n_son_stack_entity_push_of_father_of_son (home, pervasive_page_header)
+....|....|... entering  in function pervasive_page_header_build
+....|....|.... entering  in function irp_provide (common_html_page_head, pervasive_page_header_build)
+....|....|....| entering  in function irp_is_data_of_irp_key (common_html_page_head, irp_provide)
+....|....|....| exiting from function irp_is_data_of_irp_key is FALSE
+....|....|....| entering  in function irp_provide_nondata (common_html_page_head, pervasive_page_header_build)
+....|....|....|. entering  in function irp_is_stored_of_irp_key (common_html_page_head, irp_provide_nondata)
+....|....|....|. exiting from function irp_is_stored_of_irp_key with irp_key >common_html_page_head< is FALSE
+....|....|....|. entering  in function irp_build_n_store (common_html_page_head, pervasive_page_header, irp_provide_nondata)
+....|....|....|.. entering  in function irp_build (common_html_page_head, pervasive_page_header, irp_build_n_store)
+....|....|....|... entering  in function father_n_son_stack_entity_push_of_father_of_son (pervasive_page_header, common_html_page_head)
+....|....|....|.... entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|....|....|.... exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|....|....|... exiting from function father_n_son_stack_entity_push_of_father_of_son (pervasive_page_header, common_html_page_head)
+....|....|....|... entering  in function common_html_page_head_build
+....|....|....|... exiting from function common_html_page_head_build
+....|....|....|.. exiting from function irp_build (common_html_page_head, pervasive_page_header)
+....|....|....|.. entering  in function irp_store (common_html_page_head, $irp_val, irp_build_n_store)
+....|....|....|... entering  in function irp_is_data_of_irp_key (common_html_page_head, irp_store)
+....|....|....|... exiting from function irp_is_data_of_irp_key is FALSE
+....|....|....|... entering  in function irp_store_nondata (common_html_page_head, $irp_val, irp_build_n_store)
+....|....|....|.... entering  in function irp_is_stored_of_irp_key (common_html_page_head, irp_store_nondata)
+....|....|....|.... exiting from function irp_is_stored_of_irp_key with irp_key >common_html_page_head< is FALSE
+....|....|....|... exiting from function irp_store_nondata (common_html_page_head, $irp_val)
+....|....|....|.. exiting from function irp_store (common_html_page_head, $irp_val, irp_build_n_store)
+....|....|....|. exiting from function irp_build_n_store (common_html_page_head, pervasive_page_header)
+....|....|....| exiting from function irp_provide_nondata (common_html_page_head, pervasive_page_header_build)
+....|....|.... exiting from function irp_provide (common_html_page_head, pervasive_page_header_build)
+....|....|.... entering  in function irp_provide (pervasive_html_Auto_Regulated_Collaborative_Editing, pervasive_page_header_build)
+....|....|....| entering  in function irp_is_data_of_irp_key (pervasive_html_Auto_Regulated_Collaborative_Editing, irp_provide)
+....|....|....| exiting from function irp_is_data_of_irp_key is FALSE
+....|....|....| entering  in function irp_provide_nondata (pervasive_html_Auto_Regulated_Collaborative_Editing, pervasive_page_header_build)
+....|....|....|. entering  in function irp_is_stored_of_irp_key (pervasive_html_Auto_Regulated_Collaborative_Editing, irp_provide_nondata)
+....|....|....|. exiting from function irp_is_stored_of_irp_key with irp_key >pervasive_html_Auto_Regulated_Collaborative_Editing< is FALSE
+....|....|....|. entering  in function irp_build_n_store (pervasive_html_Auto_Regulated_Collaborative_Editing, pervasive_page_header, irp_provide_nondata)
+....|....|....|.. entering  in function irp_build (pervasive_html_Auto_Regulated_Collaborative_Editing, pervasive_page_header, irp_build_n_store)
+....|....|....|... entering  in function father_n_son_stack_entity_push_of_father_of_son (pervasive_page_header, pervasive_html_Auto_Regulated_Collaborative_Editing)
+....|....|....|.... entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|....|....|.... exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|....|....|... exiting from function father_n_son_stack_entity_push_of_father_of_son (pervasive_page_header, pervasive_html_Auto_Regulated_Collaborative_Editing)
+....|....|....|... entering  in function pervasive_html_Auto_Regulated_Collaborative_Editing_build
+....|....|....|... exiting from function pervasive_html_Auto_Regulated_Collaborative_Editing_build
+....|....|....|.. exiting from function irp_build (pervasive_html_Auto_Regulated_Collaborative_Editing, pervasive_page_header)
+....|....|....|.. entering  in function irp_store (pervasive_html_Auto_Regulated_Collaborative_Editing, $irp_val, irp_build_n_store)
+....|....|....|... entering  in function irp_is_data_of_irp_key (pervasive_html_Auto_Regulated_Collaborative_Editing, irp_store)
+....|....|....|... exiting from function irp_is_data_of_irp_key is FALSE
+....|....|....|... entering  in function irp_store_nondata (pervasive_html_Auto_Regulated_Collaborative_Editing, $irp_val, irp_build_n_store)
+....|....|....|.... entering  in function irp_is_stored_of_irp_key (pervasive_html_Auto_Regulated_Collaborative_Editing, irp_store_nondata)
+....|....|....|.... exiting from function irp_is_stored_of_irp_key with irp_key >pervasive_html_Auto_Regulated_Collaborative_Editing< is FALSE
+....|....|....|... exiting from function irp_store_nondata (pervasive_html_Auto_Regulated_Collaborative_Editing, $irp_val)
+....|....|....|.. exiting from function irp_store (pervasive_html_Auto_Regulated_Collaborative_Editing, $irp_val, irp_build_n_store)
+....|....|....|. exiting from function irp_build_n_store (pervasive_html_Auto_Regulated_Collaborative_Editing, pervasive_page_header)
+....|....|....| exiting from function irp_provide_nondata (pervasive_html_Auto_Regulated_Collaborative_Editing, pervasive_page_header_build)
+....|....|.... exiting from function irp_provide (pervasive_html_Auto_Regulated_Collaborative_Editing, pervasive_page_header_build)
+....|....|.... entering  in function irp_provide (label_html_initial_section, pervasive_page_header_build)
+....|....|....| entering  in function irp_is_data_of_irp_key (label_html_initial_section, irp_provide)
+....|....|....| exiting from function irp_is_data_of_irp_key is FALSE
+....|....|....| entering  in function irp_provide_nondata (label_html_initial_section, pervasive_page_header_build)
+....|....|....|. entering  in function irp_is_stored_of_irp_key (label_html_initial_section, irp_provide_nondata)
+....|....|....|. exiting from function irp_is_stored_of_irp_key with irp_key >label_html_initial_section< is FALSE
+....|....|....|. entering  in function irp_build_n_store (label_html_initial_section, pervasive_page_header, irp_provide_nondata)
+....|....|....|.. entering  in function irp_build (label_html_initial_section, pervasive_page_header, irp_build_n_store)
+....|....|....|... entering  in function father_n_son_stack_entity_push_of_father_of_son (pervasive_page_header, label_html_initial_section)
+....|....|....|.... entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|....|....|.... exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|....|....|... exiting from function father_n_son_stack_entity_push_of_father_of_son (pervasive_page_header, label_html_initial_section)
+....|....|....|.... entering  in function irp_provide (label_pure_html_initial_section, label_html_initial_section_build)
+....|....|....|....| entering  in function irp_is_data_of_irp_key (label_pure_html_initial_section, irp_provide)
+....|....|....|....| exiting from function irp_is_data_of_irp_key is FALSE
+....|....|....|....| entering  in function irp_provide_nondata (label_pure_html_initial_section, label_html_initial_section_build)
+....|....|....|....|. entering  in function irp_is_stored_of_irp_key (label_pure_html_initial_section, irp_provide_nondata)
+....|....|....|....|. exiting from function irp_is_stored_of_irp_key with irp_key >label_pure_html_initial_section< is FALSE
+....|....|....|....|. entering  in function irp_build_n_store (label_pure_html_initial_section, label_html_initial_section, irp_provide_nondata)
+....|....|....|....|.. entering  in function irp_build (label_pure_html_initial_section, label_html_initial_section, irp_build_n_store)
+....|....|....|....|... entering  in function father_n_son_stack_entity_push_of_father_of_son (label_html_initial_section, label_pure_html_initial_section)
+....|....|....|....|.... entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|....|....|....|.... exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|....|....|....|... exiting from function father_n_son_stack_entity_push_of_father_of_son (label_html_initial_section, label_pure_html_initial_section)
+....|....|....|....|.... entering  in function button_submit_quit_html_make
+....|....|....|....|.... exiting from function button_submit_quit_html_make
+....|....|....|....|.. exiting from function irp_build (label_pure_html_initial_section, label_html_initial_section)
+....|....|....|....|.. entering  in function irp_store (label_pure_html_initial_section, $irp_val, irp_build_n_store)
+....|....|....|....|... entering  in function irp_is_data_of_irp_key (label_pure_html_initial_section, irp_store)
+....|....|....|....|... exiting from function irp_is_data_of_irp_key is FALSE
+....|....|....|....|... entering  in function irp_store_nondata (label_pure_html_initial_section, $irp_val, irp_build_n_store)
+....|....|....|....|.... entering  in function irp_is_stored_of_irp_key (label_pure_html_initial_section, irp_store_nondata)
+....|....|....|....|.... exiting from function irp_is_stored_of_irp_key with irp_key >label_pure_html_initial_section< is FALSE
+....|....|....|....|... exiting from function irp_store_nondata (label_pure_html_initial_section, $irp_val)
+....|....|....|....|.. exiting from function irp_store (label_pure_html_initial_section, $irp_val, irp_build_n_store)
+....|....|....|....|. exiting from function irp_build_n_store (label_pure_html_initial_section, label_html_initial_section)
+....|....|....|....| exiting from function irp_provide_nondata (label_pure_html_initial_section, label_html_initial_section_build)
+....|....|....|.... exiting from function irp_provide (label_pure_html_initial_section, label_html_initial_section_build)
+....|....|....|.... entering  in function irp_provide (label_entry_html_initial_section_as_row, label_html_initial_section_build)
+....|....|....|....| entering  in function irp_is_data_of_irp_key (label_entry_html_initial_section_as_row, irp_provide)
+....|....|....|....| exiting from function irp_is_data_of_irp_key is FALSE
+....|....|....|....| entering  in function irp_provide_nondata (label_entry_html_initial_section_as_row, label_html_initial_section_build)
+....|....|....|....|. entering  in function irp_is_stored_of_irp_key (label_entry_html_initial_section_as_row, irp_provide_nondata)
+....|....|....|....|. exiting from function irp_is_stored_of_irp_key with irp_key >label_entry_html_initial_section_as_row< is FALSE
+....|....|....|....|. entering  in function irp_build_n_store (label_entry_html_initial_section_as_row, label_html_initial_section, irp_provide_nondata)
+....|....|....|....|.. entering  in function irp_build (label_entry_html_initial_section_as_row, label_html_initial_section, irp_build_n_store)
+....|....|....|....|... entering  in function father_n_son_stack_entity_push_of_father_of_son (label_html_initial_section, label_entry_html_initial_section_as_row)
+....|....|....|....|.... entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|....|....|....|.... exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|....|....|....|... exiting from function father_n_son_stack_entity_push_of_father_of_son (label_html_initial_section, label_entry_html_initial_section_as_row)
+....|....|....|....|....| entering  in function entry_information_array_lan_of_entry_name (Regles_de_redaction)
+....|....|....|....|....|. entering  in function entry_information_array_en_of_entry_name (Regles_de_redaction)
+....|....|....|....|....|. exiting from function entry_information_array_en_of_entry_name
+....|....|....|....|....| exiting from function entry_information_array_lan_of_entry_name
+....|....|....|....|....| entering  in function entry_information_array_lan_of_entry_name (Faq)
+....|....|....|....|....|. entering  in function entry_information_array_en_of_entry_name (Faq)
+....|....|....|....|....|. exiting from function entry_information_array_en_of_entry_name
+....|....|....|....|....| exiting from function entry_information_array_lan_of_entry_name
+....|....|....|....|....| entering  in function entry_information_array_lan_of_entry_name (Regles_des_proprietes)
+....|....|....|....|....|. entering  in function entry_information_array_en_of_entry_name (Regles_des_proprietes)
+....|....|....|....|....|. exiting from function entry_information_array_en_of_entry_name
+....|....|....|....|....| exiting from function entry_information_array_lan_of_entry_name
+....|....|....|....|....| entering  in function entry_information_array_lan_of_entry_name (Presentation)
+....|....|....|....|....|. entering  in function entry_information_array_en_of_entry_name (Presentation)
+....|....|....|....|....|. exiting from function entry_information_array_en_of_entry_name
+....|....|....|....|....| exiting from function entry_information_array_lan_of_entry_name
+....|....|....|....|....| entering  in function entry_information_array_lan_of_entry_name (Utilisation)
+....|....|....|....|....|. entering  in function entry_information_array_en_of_entry_name (Utilisation)
+....|....|....|....|....|. exiting from function entry_information_array_en_of_entry_name
+....|....|....|....|....| exiting from function entry_information_array_lan_of_entry_name
+....|....|....|....|.. exiting from function irp_build (label_entry_html_initial_section_as_row, label_html_initial_section)
+....|....|....|....|.. entering  in function irp_store (label_entry_html_initial_section_as_row, $irp_val, irp_build_n_store)
+....|....|....|....|... entering  in function irp_is_data_of_irp_key (label_entry_html_initial_section_as_row, irp_store)
+....|....|....|....|... exiting from function irp_is_data_of_irp_key is FALSE
+....|....|....|....|... entering  in function irp_store_nondata (label_entry_html_initial_section_as_row, $irp_val, irp_build_n_store)
+....|....|....|....|.... entering  in function irp_is_stored_of_irp_key (label_entry_html_initial_section_as_row, irp_store_nondata)
+....|....|....|....|.... exiting from function irp_is_stored_of_irp_key with irp_key >label_entry_html_initial_section_as_row< is FALSE
+....|....|....|....|... exiting from function irp_store_nondata (label_entry_html_initial_section_as_row, $irp_val)
+....|....|....|....|.. exiting from function irp_store (label_entry_html_initial_section_as_row, $irp_val, irp_build_n_store)
+....|....|....|....|. exiting from function irp_build_n_store (label_entry_html_initial_section_as_row, label_html_initial_section)
+....|....|....|....| exiting from function irp_provide_nondata (label_entry_html_initial_section_as_row, label_html_initial_section_build)
+....|....|....|.... exiting from function irp_provide (label_entry_html_initial_section_as_row, label_html_initial_section_build)
+....|....|....|.. exiting from function irp_build (label_html_initial_section, pervasive_page_header)
+....|....|....|.. entering  in function irp_store (label_html_initial_section, $irp_val, irp_build_n_store)
+....|....|....|... entering  in function irp_is_data_of_irp_key (label_html_initial_section, irp_store)
+....|....|....|... exiting from function irp_is_data_of_irp_key is FALSE
+....|....|....|... entering  in function irp_store_nondata (label_html_initial_section, $irp_val, irp_build_n_store)
+....|....|....|.... entering  in function irp_is_stored_of_irp_key (label_html_initial_section, irp_store_nondata)
+....|....|....|.... exiting from function irp_is_stored_of_irp_key with irp_key >label_html_initial_section< is FALSE
+....|....|....|... exiting from function irp_store_nondata (label_html_initial_section, $irp_val)
+....|....|....|.. exiting from function irp_store (label_html_initial_section, $irp_val, irp_build_n_store)
+....|....|....|. exiting from function irp_build_n_store (label_html_initial_section, pervasive_page_header)
+....|....|....| exiting from function irp_provide_nondata (label_html_initial_section, pervasive_page_header_build)
+....|....|.... exiting from function irp_provide (label_html_initial_section, pervasive_page_header_build)
+....|....|... exiting from function pervasive_page_header_build
+....|....|.. exiting from function irp_build (pervasive_page_header, home)
+....|....|.. entering  in function irp_store (pervasive_page_header, $irp_val, irp_build_n_store)
+....|....|... entering  in function irp_is_data_of_irp_key (pervasive_page_header, irp_store)
+....|....|... exiting from function irp_is_data_of_irp_key is FALSE
+....|....|... entering  in function irp_store_nondata (pervasive_page_header, $irp_val, irp_build_n_store)
+....|....|.... entering  in function irp_is_stored_of_irp_key (pervasive_page_header, irp_store_nondata)
+....|....|.... exiting from function irp_is_stored_of_irp_key with irp_key >pervasive_page_header< is FALSE
+....|....|... exiting from function irp_store_nondata (pervasive_page_header, $irp_val)
+....|....|.. exiting from function irp_store (pervasive_page_header, $irp_val, irp_build_n_store)
+....|....|. exiting from function irp_build_n_store (pervasive_page_header, home)
+....|....| exiting from function irp_provide_nondata (pervasive_page_header, home_build)
+....|.... exiting from function irp_provide (pervasive_page_header, home_build)
+....|.... entering  in function arce_home_header_accent_fr
+....|.... exiting from function arce_home_header_accent_fr
+....|.... entering  in function arce_home_text_accent_fr
+....|.... exiting from function arce_home_text_accent_fr
+....|.... entering  in function irp_provide (pervasive_page_footer, home_build)
+....|....| entering  in function irp_is_data_of_irp_key (pervasive_page_footer, irp_provide)
+....|....| exiting from function irp_is_data_of_irp_key is FALSE
+....|....| entering  in function irp_provide_nondata (pervasive_page_footer, home_build)
+....|....|. entering  in function irp_is_stored_of_irp_key (pervasive_page_footer, irp_provide_nondata)
+....|....|. exiting from function irp_is_stored_of_irp_key with irp_key >pervasive_page_footer< is FALSE
+....|....|. entering  in function irp_build_n_store (pervasive_page_footer, home, irp_provide_nondata)
+....|....|.. entering  in function irp_build (pervasive_page_footer, home, irp_build_n_store)
+....|....|... entering  in function father_n_son_stack_entity_push_of_father_of_son (home, pervasive_page_footer)
+....|....|.... entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|....|.... exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|....|... exiting from function father_n_son_stack_entity_push_of_father_of_son (home, pervasive_page_footer)
+....|....|... entering  in function pervasive_page_footer_build
+....|....|.... entering  in function irp_provide (pervasive_license, pervasive_page_footer_build)
+....|....|....| entering  in function irp_is_data_of_irp_key (pervasive_license, irp_provide)
+....|....|....| exiting from function irp_is_data_of_irp_key is FALSE
+....|....|....| entering  in function irp_provide_nondata (pervasive_license, pervasive_page_footer_build)
+....|....|....|. entering  in function irp_is_stored_of_irp_key (pervasive_license, irp_provide_nondata)
+....|....|....|. exiting from function irp_is_stored_of_irp_key with irp_key >pervasive_license< is FALSE
+....|....|....|. entering  in function irp_build_n_store (pervasive_license, pervasive_page_footer, irp_provide_nondata)
+....|....|....|.. entering  in function irp_build (pervasive_license, pervasive_page_footer, irp_build_n_store)
+....|....|....|... entering  in function father_n_son_stack_entity_push_of_father_of_son (pervasive_page_footer, pervasive_license)
+....|....|....|.... entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|....|....|.... exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|....|....|... exiting from function father_n_son_stack_entity_push_of_father_of_son (pervasive_page_footer, pervasive_license)
+....|....|....|.. exiting from function irp_build (pervasive_license, pervasive_page_footer)
+....|....|....|.. entering  in function irp_store (pervasive_license, $irp_val, irp_build_n_store)
+....|....|....|... entering  in function irp_is_data_of_irp_key (pervasive_license, irp_store)
+....|....|....|... exiting from function irp_is_data_of_irp_key is FALSE
+....|....|....|... entering  in function irp_store_nondata (pervasive_license, $irp_val, irp_build_n_store)
+....|....|....|.... entering  in function irp_is_stored_of_irp_key (pervasive_license, irp_store_nondata)
+....|....|....|.... exiting from function irp_is_stored_of_irp_key with irp_key >pervasive_license< is FALSE
+....|....|....|... exiting from function irp_store_nondata (pervasive_license, $irp_val)
+....|....|....|.. exiting from function irp_store (pervasive_license, $irp_val, irp_build_n_store)
+....|....|....|. exiting from function irp_build_n_store (pervasive_license, pervasive_page_footer)
+....|....|....| exiting from function irp_provide_nondata (pervasive_license, pervasive_page_footer_build)
+....|....|.... exiting from function irp_provide (pervasive_license, pervasive_page_footer_build)
+....|....|.... entering  in function irp_provide (common_html_page_tail, pervasive_page_footer_build)
+....|....|....| entering  in function irp_is_data_of_irp_key (common_html_page_tail, irp_provide)
+....|....|....| exiting from function irp_is_data_of_irp_key is FALSE
+....|....|....| entering  in function irp_provide_nondata (common_html_page_tail, pervasive_page_footer_build)
+....|....|....|. entering  in function irp_is_stored_of_irp_key (common_html_page_tail, irp_provide_nondata)
+....|....|....|. exiting from function irp_is_stored_of_irp_key with irp_key >common_html_page_tail< is FALSE
+....|....|....|. entering  in function irp_build_n_store (common_html_page_tail, pervasive_page_footer, irp_provide_nondata)
+....|....|....|.. entering  in function irp_build (common_html_page_tail, pervasive_page_footer, irp_build_n_store)
+....|....|....|... entering  in function father_n_son_stack_entity_push_of_father_of_son (pervasive_page_footer, common_html_page_tail)
+....|....|....|.... entering  in function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|....|....|.... exiting from function session_hash_push_inplace_of_key_of_value (father_n_son_stack_entity, $val)
+....|....|....|... exiting from function father_n_son_stack_entity_push_of_father_of_son (pervasive_page_footer, common_html_page_tail)
+....|....|....|... entering  in function common_html_page_tail_build
+....|....|....|... exiting from function common_html_page_tail_build
+....|....|....|.. exiting from function irp_build (common_html_page_tail, pervasive_page_footer)
+....|....|....|.. entering  in function irp_store (common_html_page_tail, $irp_val, irp_build_n_store)
+....|....|....|... entering  in function irp_is_data_of_irp_key (common_html_page_tail, irp_store)
+....|....|....|... exiting from function irp_is_data_of_irp_key is FALSE
+....|....|....|... entering  in function irp_store_nondata (common_html_page_tail, $irp_val, irp_build_n_store)
+....|....|....|.... entering  in function irp_is_stored_of_irp_key (common_html_page_tail, irp_store_nondata)
+....|....|....|.... exiting from function irp_is_stored_of_irp_key with irp_key >common_html_page_tail< is FALSE
+....|....|....|... exiting from function irp_store_nondata (common_html_page_tail, $irp_val)
+....|....|....|.. exiting from function irp_store (common_html_page_tail, $irp_val, irp_build_n_store)
+....|....|....|. exiting from function irp_build_n_store (common_html_page_tail, pervasive_page_footer)
+....|....|....| exiting from function irp_provide_nondata (common_html_page_tail, pervasive_page_footer_build)
+....|....|.... exiting from function irp_provide (common_html_page_tail, pervasive_page_footer_build)
+....|....|... exiting from function pervasive_page_footer_build
+....|....|.. exiting from function irp_build (pervasive_page_footer, home)
+....|....|.. entering  in function irp_store (pervasive_page_footer, $irp_val, irp_build_n_store)
+....|....|... entering  in function irp_is_data_of_irp_key (pervasive_page_footer, irp_store)
+....|....|... exiting from function irp_is_data_of_irp_key is FALSE
+....|....|... entering  in function irp_store_nondata (pervasive_page_footer, $irp_val, irp_build_n_store)
+....|....|.... entering  in function irp_is_stored_of_irp_key (pervasive_page_footer, irp_store_nondata)
+....|....|.... exiting from function irp_is_stored_of_irp_key with irp_key >pervasive_page_footer< is FALSE
+....|....|... exiting from function irp_store_nondata (pervasive_page_footer, $irp_val)
+....|....|.. exiting from function irp_store (pervasive_page_footer, $irp_val, irp_build_n_store)
+....|....|. exiting from function irp_build_n_store (pervasive_page_footer, home)
+....|....| exiting from function irp_provide_nondata (pervasive_page_footer, home_build)
+....|.... exiting from function irp_provide (pervasive_page_footer, home_build)
+....|... exiting from function home_build
+....|.. exiting from function irp_build (home, index)
+....|.. entering  in function irp_store (home, $irp_val, irp_build_n_store)
+....|... entering  in function irp_is_data_of_irp_key (home, irp_store)
+....|... exiting from function irp_is_data_of_irp_key is FALSE
+....|... entering  in function irp_store_nondata (home, $irp_val, irp_build_n_store)
+....|.... entering  in function irp_is_stored_of_irp_key (home, irp_store_nondata)
+....|.... exiting from function irp_is_stored_of_irp_key with irp_key >home< is FALSE
+....|... exiting from function irp_store_nondata (home, $irp_val)
+....|.. exiting from function irp_store (home, $irp_val, irp_build_n_store)
+....|. exiting from function irp_build_n_store (home, index)
+....| exiting from function irp_provide_nondata (home, index_build)
+.... exiting from function irp_provide (home, index_build)
+... exiting from module index

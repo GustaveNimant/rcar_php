@@ -3,7 +3,6 @@ require_once "string_library.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
-entering_in_module ($module);
 
 function four_elements_array_off_block_content ($con_blo) {
   $here = __FUNCTION__;
@@ -75,6 +74,5 @@ function block_file_rename ($nam_ent, $old_nam_blo, $new_nam_blo, $ext_fil) {
     return;
 }
 
-exiting_from_module ($module);
 
 ?>

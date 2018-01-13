@@ -9,7 +9,6 @@ $Documentation[$module]['how is it done'] = "a side effect function returns a \$
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
-entering_in_module ($module);
 
 function file_log_en_informations_of_action ($get_act) {
   $here = __FUNCTION__;
@@ -158,6 +157,5 @@ function file_log_write ($where, $log_str) {
   return;
 };
 
-exiting_from_module ($module);
 
 ?>

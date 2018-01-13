@@ -6,7 +6,6 @@ require_once "build_requirements.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
 
-entering_in_module ($module);
 
 $Documentation[$module]['irp_stack'] = "stacks all \$irp_key. When retrieved (\$irp_val) is added"; 
 
@@ -743,6 +742,5 @@ function irp_father_of_module_of_son__XX ($nam_fat, $nam_son) {
     
 }
 
-exiting_from_module ($module);
 
 ?>

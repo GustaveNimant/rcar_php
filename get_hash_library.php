@@ -9,7 +9,6 @@ $module = module_name_of_module_nameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is a set of functions";
 $Documentation[$module]['what for'] = "to manage the hash \$_GET";
 
-entering_in_module ($module);
 
 function get_hash_store_of_get_key_of_get_value_of_where ($get_key, $get_val, $where) {
   $here = __FUNCTION__;
@@ -100,6 +99,5 @@ function get_hash_retrieve_value_of_get_key_of_where ($get_key, $where) {
   return $get_val;
 }
 
-exiting_from_module ($module);
 
 ?>

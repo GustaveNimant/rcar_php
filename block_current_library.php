@@ -9,7 +9,6 @@ $Documentation[$module]['what for'] = "to ...";
 
 # $Documentation[$module]['surname_local_array'] = "the array of the surnames that begins as the current word";
 
-entering_in_module ($module);
 
 function block_current_content_of_four_elements ($con_ite_cur, $jus_ite_cur, $con_ite_pre, $blo_pre_sha) {
   $here = __FUNCTION__;
@@ -90,6 +89,5 @@ function item_current_justification_of_block_current_content ($con_blo_cur) {
     return $ite_cur_jus;
 }
 
-exiting_from_module ($module);
 
 ?>

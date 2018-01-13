@@ -8,7 +8,6 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-entering_in_module ($module);
 
 $Documentation[$module]['surname'] = "it is any name as it has been rentered by a user";
 
@@ -137,6 +136,5 @@ function surname_is_entry_of_entry_name_array_of_surname_lowercase_of_surname_by
     return $boo;
 }
 
-exiting_from_module ($module);
 
 ?>

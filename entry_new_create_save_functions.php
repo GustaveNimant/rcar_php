@@ -131,11 +131,10 @@ function entry_new_create_save_build () {
   $html_str .= irp_provide ('entry_new_create_save_subdirectory_create', $here);
   $html_str .= '<br><br>' . "\n";
 
-  debug_n_check ($here , '$html_str',  $html_str);
-  exiting_from_function ($here);
-  return $html_str;
-  exit;
-
+  /* debug_n_check ($here , '$html_str',  $html_str); */
+  /* exiting_from_function ($here); */
+  /* return $html_str; */
+  /* exit; */
 
   $log_str   = irp_provide ('entry_new_create_save_surname_update', $here);
   file_log_write ($here, $log_str);

@@ -20,7 +20,7 @@ function toward_entry_new_create_form_title_build () {
   $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);
 
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= common_html_span_background_color_of_html ($la_bub_Tit);
+  $html_str .= common_html_span_background_color_of_html ($la_bub_Tit); /* span */
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str',  $html_str);
@@ -43,10 +43,12 @@ function toward_entry_new_create_form_build () {  /* Generalize */
   /* $get_key = 'entry_new_surname'; */
   /* $_SESSION['get_key_by_script_name'][$entity_son] = $get_key; */
 
+  $la_Nam_act = ucfirst (language_translate_of_en_string ('create'));
+
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form action="' . $script_action . '" method="get"> ' . "\n";
   $html_str .= irp_provide ('toward_entry_new_create_form_title', $here);
-  $html_str .= inputtypesubmit_of_en_action_name ('create');
+  $html_str .= '<input type="submit" value="' . $la_Nam_act . '">' . "\n";
   $html_str .= '</form> ' .  "\n";
 
   $html_str .= comment_exiting_of_function_name ($here);

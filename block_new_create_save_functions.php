@@ -149,9 +149,14 @@ function block_name_list_order_addition_build () {
   $glue = $_SESSION['parameters']['glue'];
   $nam_blo_lis_cur = irp_provide ('block_name_list_order_current_string', $here);
   debug_n_check ($here , '$nam_blo_lis_cur', $nam_blo_lis_cur);
-  
-  $nam_blo_lis_add = $nam_blo_lis_cur . $glue . $nam_blo_new;
 
+  if ($nam_blo_lis_cur == 'No_block_file_yet') { /* Improve : to avoid exception */
+      $nam_blo_lis_add = $nam_blo_new;
+  }
+  else {
+      $nam_blo_lis_add = $nam_blo_lis_cur . $glue . $nam_blo_new;
+  }
+      
   debug_n_check ($here , '$nam_blo_lis_add', $nam_blo_lis_add);
   exiting_from_function ($here);
 

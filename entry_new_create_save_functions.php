@@ -117,6 +117,33 @@ function entry_new_create_save_link_to_return_build () {
   return $html_str;
 }
 
+function entry_new_create_save_link_to_go_build () {
+  $here = __function__;
+  entering_in_function ($here);
+
+  $sur_ent_cur = irp_provide ('entry_new_surname', $here);
+  debug_n_check ($here , '$sur_ent_cur',  $sur_ent_cur);
+
+  $en_tit = 'go to new entry list';
+  $la_tit = language_translate_of_en_string ($en_tit);
+
+  $la_tit .= ' <i><b> ' . $sur_ent_cur . '</b></i>';
+  $la_Tit = string_html_capitalized_of_string ($la_tit);
+
+  $script_to_return = 'entry_current_display_script.php';
+
+  $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= '<center>' . "\n";
+  $html_str .= link_to_return_of_la_title_of_script_to_return ($la_Tit, $script_to_return);
+  $html_str .= '</center>' . "\n";
+  $html_str .= comment_exiting_of_function_name ($here);
+
+  debug_n_check ($here , '$html_str',  $html_str);
+  exiting_from_function ($here);
+
+  return $html_str;
+}
+
 function entry_new_create_save_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
@@ -131,15 +158,8 @@ function entry_new_create_save_build () {
   $html_str .= irp_provide ('entry_new_create_save_subdirectory_create', $here);
   $html_str .= '<br><br>' . "\n";
 
-  /* debug_n_check ($here , '$html_str',  $html_str); */
-  /* exiting_from_function ($here); */
-  /* return $html_str; */
-  /* exit; */
-
   $log_str   = irp_provide ('entry_new_create_save_surname_update', $here);
   file_log_write ($here, $log_str);
-
-#  entry_new_create_save_irp_path_clean ();
 
   $html_str .= irp_provide ('git_command_n_commit_html', $here);
   $html_str .= '<br><br>' . "\n";

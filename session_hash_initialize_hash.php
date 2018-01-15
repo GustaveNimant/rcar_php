@@ -1,6 +1,8 @@
 <?php
 /* --- $_SESSION --- */
 
+#$points = "....x....x....x....x....x....x....x....x....x....x....x....x....x....x";
+#$points = "    x    x    x    x    x    x    x    x    x    x    x    x    x    x";
 $points = "....|....|....|....|....|....|....|....|....|....|....|....|....|....|";
 
 $_SESSION['message'] = '';
@@ -12,6 +14,7 @@ $_SESSION['is_cpu_active'] = FALSE;
 $_SESSION['is_verbose'] = TRUE;
 $_SESSION['is_very_verbose'] = FALSE;
 $_SESSION['is_debug_active'] = TRUE;
+$_SESSION['is_comment_active'] = FALSE;
 
 $_SESSION['is_constant_module_name'] = array (); /* constant html text  */
 $_SESSION['is_leaf_entity_name'] = array ();     /* constant ? */
@@ -121,6 +124,8 @@ $_SESSION['language_translate_hash'] = $language_translate_hash;
 
 # $roo_doc = $_SERVER['DOCUMENT_ROOT'];
 # print "\$roo_doc $roo_doc<br>";
+
+$_SESSION['parameters']['array_is_empty'] = 'Array_is_empty';
 
 $_SESSION['parameters']['absolute_path_rcar'] = '/keep/sources/rcar';
 $_SESSION['parameters']['absolute_path_server'] = '/keep/sources/rcar/server';

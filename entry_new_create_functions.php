@@ -71,11 +71,11 @@ function entry_new_create_form_build () {
   $html_str .= '<br>' . "\n";
   $html_str .= '<input type="text"';
   $html_str .= ' name="' . $get_key . '"';
-  $html_str .= ' value=""';
+#  $html_str .= ' value=""';
   $html_str .= ' size="' . $siz_hit . '"';
   $html_str .= '/>' .  "\n";
   $html_str .= inputtypesubmit_of_en_action_name ('create');
-  $html_str .= inputtypehidden_store_of_clicked_module_name ($module);
+#  $html_str .= inputtypehidden_store_of_clicked_module_name ($module);
   $html_str .= '</form>' .  "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 

@@ -44,7 +44,6 @@ require_once "block_new_create_form_functions.php";
 require_once "block_new_create_functions.php";
 require_once "block_new_create_save_functions.php";
 require_once "block_new_create_surname_functions.php";
-require_once "block_new_create_surname_inputtypetext_functions.php";
 require_once "block_new_create_surname_title_n_help_functions.php";
 
 require_once "block_new_name_functions.php";

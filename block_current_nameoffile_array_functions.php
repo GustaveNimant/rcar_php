@@ -18,10 +18,9 @@ function block_current_nameoffile_array_build () {
   $nam_ent = irp_provide ('entry_current_name', $here);
 
   if (block_current_nameoffile_array_is_empty_of_entry_name ($nam_ent) ) {
-      $mest = "Value is empty in function block_current_nameoffile_array_is_empty_of_entry_name for Entry name $nam_ent";
-      debug ($here , 'Throw new Exception with message', $mest);
-      exiting_from_function ($here . ' with Exception ' . $mest);
-      throw new Exception ($mest);
+      $log_str = "block_current_nameoffile_array is empty for Entry >$nam_ent<";
+      file_log_write ($here, $log_str);
+      $nof_blo_a = array ("No_block_file_yet");
   }
   else {
       $nof_blo_a = block_current_nameoffile_array_read_of_entry_name ($nam_ent);

@@ -20,7 +20,7 @@ function father_n_son_stack_entity_push_of_father_of_son ($nam_fat_mod, $nam_son
   $entity = entity_name_of_module_name ($nam_fat_mod);
   debug_n_check ($here, '$nam_fat_mod', $nam_fat_mod);
   debug_n_check ($here, '$entity', $entity);
-  string_check_is_empty_of_what_of_where_of_string ('current entity name', $nam_fat_mod, $entity);
+  string_check_is_not_empty_of_what_of_where_of_string ('current entity name', $nam_fat_mod, $entity);
 
   if (isset ($_SESSION['count_entity'])) {
       $cou_ent = $_SESSION['count_entity'];

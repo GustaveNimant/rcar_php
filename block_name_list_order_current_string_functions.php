@@ -30,11 +30,13 @@ function block_name_list_order_current_string_build () {
       $nof_blo_cur_a = irp_provide ('block_current_nameoffile_array', $here); 
       debug ($here , '$nof_blo_cur_a', $nof_blo_cur_a);
       $nam_blo_lis = block_name_list_order_of_block_nameoffile_array_order ($nof_blo_cur_a);
+      debug ($here , '$nam_blo_lis', $nam_blo_lis);
 
       $log_str = block_name_list_order_write_of_entry_name_of_block_name_list_order_string ($nam_ent, $nam_blo_lis);
       file_log_write ($here, $log_str);
-      $entity = entity_name_of_build_function_name ($here);
+
 /* Improve is that correct ? */
+      $entity = entity_name_of_build_function_name ($here);
       father_n_son_stack_entity_push_of_father_of_son ("WRITE_block_name_list_order_current_string", $entity);
   }
 

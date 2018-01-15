@@ -29,6 +29,11 @@ function user_information_build () {
 function who_made_a_change () {
   $here = __FUNCTION__;
   entering_in_function ($here);
+   "Author : François Colonna 15 janvier 2018 at 08:21:25+01:00";
+   "Author : François Colonna 15 janvier 2018 at 08:21:25+01:00";
+   "License : This code is available under the Creative Commons License https://creativecommons.org/licenses/by-sa/3.0/legalcode.fr";
+   "License : This code is available under the Creative Commons License https://creativecommons.org/licenses/by-sa/3.0/legalcode.fr";
+   "License : This code is available under the Creative Commons License https://creativecommons.org/licenses/by-sa/3.0/legalcode.fr";
 
   exiting_from_function ($here);
   return;

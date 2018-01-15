@@ -47,8 +47,8 @@ function surname_by_name_hash_put_of_name_of_surname_of_current_array ($nam, $su
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam, $sur_nam)");
 
-  string_check_is_empty_of_what_of_where_of_string ("???", $here, $nam);
-  string_check_is_empty_of_what_of_where_of_string ("???", $here, $sur_nam);
+  string_check_is_not_empty_of_what_of_where_of_string ("???", $here, $nam);
+  string_check_is_not_empty_of_what_of_where_of_string ("???", $here, $sur_nam);
   # debug_n_check ($here , '$sur_by_nam_h', $sur_by_nam_h);
 
   $sur_by_nam_h [$nam] = $sur_nam;
@@ -64,8 +64,8 @@ function surname_by_name_hash_add_n_write_of_name_of_surname_of_current_hash ($n
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam, $sur_nam, \$old_sur_by_nam_h [...])");
 
-  string_check_is_empty_of_what_of_where_of_string ("???", $here, $nam);
-  string_check_is_empty_of_what_of_where_of_string ("???", $here, $sur_nam);
+  string_check_is_not_empty_of_what_of_where_of_string ("???", $here, $nam);
+  string_check_is_not_empty_of_what_of_where_of_string ("???", $here, $sur_nam);
   # debug_n_check ($here , '$old_sur_by_nam_h', $old_sur_by_nam_h);
 
   if ($sur_nam <> ucfirst($sur_nam)){
@@ -102,8 +102,8 @@ function surname_by_name_hash_replace_n_write_of_name_of_surnamenew_of_current_h
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam, $new_sur_nam, \$sur_by_nam_h [...])");
 
-  string_check_is_empty_of_what_of_where_of_string ("???", $here, $nam);
-  string_check_is_empty_of_what_of_where_of_string ("???", $here, $new_sur_nam);
+  string_check_is_not_empty_of_what_of_where_of_string ("???", $here, $nam);
+  string_check_is_not_empty_of_what_of_where_of_string ("???", $here, $new_sur_nam);
 
   if ($new_sur_nam <> ucfirst($new_sur_nam)){
       $new_sur_nam = ucfirst($new_sur_nam);

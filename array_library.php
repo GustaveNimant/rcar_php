@@ -107,7 +107,7 @@ function check_has_no_empty_value_of_any_array ($arr_a) {
           array_check_is_empty_of_what_of_array_of_where ("Value for key >$key<", $val, $here); 
       }
       else {
-          string_check_is_empty_of_what_of_where_of_string ("Value for key >$key<", $here, $val);
+          string_check_is_not_empty_of_what_of_where_of_string ("Value for key >$key<", $here, $val);
       }
   }
   

@@ -112,7 +112,7 @@ function string_is_empty_of_string ($str) {
   return $bol;
 };
 
-function string_check_is_empty_of_what_of_where_of_string ($what, $where, $str) {
+function string_check_is_not_empty_of_what_of_where_of_string ($what, $where, $str) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($what, $where, $str)");
 

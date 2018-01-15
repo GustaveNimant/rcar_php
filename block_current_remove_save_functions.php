@@ -77,7 +77,7 @@ function block_name_list_order_deletion_build () {
   $glue = $_SESSION['parameters']['glue'];
 
   $nam_blo_lis_del = list_remove_of_glue_of_element_of_list ($glue, $nam_blo_cur, $nam_blo_lis_cur);
-  string_check_is_empty_of_what_of_where_of_string ('$nam_blo_lis_del', $here, $nam_blo_lis_del);
+  string_check_is_not_empty_of_what_of_where_of_string ('$nam_blo_lis_del', $here, $nam_blo_lis_del);
 
   debug_n_check ($here , '$nam_blo_lis_del', $nam_blo_lis_del);
   exiting_from_function ($here);

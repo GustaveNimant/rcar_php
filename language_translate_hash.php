@@ -1669,6 +1669,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'fr' => 'pas d&eacute;truit',
         'it' => '???',
     ), 
+
+    'no undo' =>
+    array (
+        'fr' => 'pas de d&eacute;faire',
+        'it' => '???',
+    ),
     
     'on' => 
     array (

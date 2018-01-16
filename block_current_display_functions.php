@@ -126,6 +126,7 @@ function block_current_display_build (){
   $html_str .= '&nbsp;&nbsp;';
 
   $html_str .= irp_provide ('toward_block_current_undo', $here);
+
 # end of href_list
   $html_str .= '<br><br>';
 

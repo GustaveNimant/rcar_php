@@ -1,4 +1,6 @@
 <?php
+require_once "site_dependant_data.php";
+
 /* --- $_SESSION --- */
 
 #$points = "....x....x....x....x....x....x....x....x....x....x....x....x....x....x";
@@ -14,12 +16,14 @@ $_SESSION['is_cpu_active'] = FALSE;
 $_SESSION['is_verbose'] = TRUE;
 $_SESSION['is_very_verbose'] = FALSE;
 $_SESSION['is_debug_active'] = TRUE;
-$_SESSION['is_comment_active'] = FALSE;
+$_SESSION['is_comment_html_active'] = FALSE;
 
 $_SESSION['is_constant_module_name'] = array (); /* constant html text  */
 $_SESSION['is_leaf_entity_name'] = array ();     /* constant ? */
 $_SESSION['is_label_entity_name'] = array ();    /* keys are entry_name */
 $_SESSION['is_goto_entity_name'] = array ();     /* '<a href="module_name.php" */
+
+$_SESSION['parameters']['array_is_empty'] = 'Array_is_empty';
 
 /* ?name=value => name is a data entity */
 /* &name=value => name is a data entity */
@@ -121,19 +125,15 @@ $_SESSION['item_information_metadata_en_by_item_name_array'] = array ();
 include "language_translate_hash.php";
 $_SESSION['language_translate_hash'] = $language_translate_hash;
 
+$_SESSION['parameters']['absolute_path_rcar'] = $roo_doc . '/rcar';
 
-# $roo_doc = $_SERVER['DOCUMENT_ROOT'];
-# print "\$roo_doc $roo_doc<br>";
+$_SESSION['parameters']['absolute_path_server'] = $roo_doc . '/rcar/server';
+$_SESSION['parameters']['absolute_path_server_surname'] = $roo_doc . '/rcar/server/SURNAMES';
 
-$_SESSION['parameters']['array_is_empty'] = 'Array_is_empty';
-
-$_SESSION['parameters']['absolute_path_rcar'] = '/keep/sources/rcar';
-$_SESSION['parameters']['absolute_path_server'] = '/keep/sources/rcar/server';
-$_SESSION['parameters']['absolute_path_server_surname'] = '/keep/sources/rcar/server/SURNAMES';
 $_SESSION['parameters']['nameoffile_surname_catalog'] = 'Surname_catalog.cat';
 $_SESSION['parameters']['absolute_path_server_surname_catalog'] = $_SESSION['parameters']['absolute_path_server_surname'] . '/' . $_SESSION['parameters']['nameoffile_surname_catalog'];
 
-$_SESSION['parameters']['absolute_path_source'] = '/keep/sources/rcar/php';
+$_SESSION['parameters']['absolute_path_source'] = $roo_doc . '/rcar/php';
 
 $_SESSION['parameters']['relative_path_server'] = '/rcar/server';
 $_SESSION['parameters']['relative_path_server_surname'] = '/rcar/server/SURNAMES';
@@ -164,8 +164,9 @@ $_SESSION['parameters']['stack_function_called_array'] = array ();
 array_push ($_SESSION['parameters']['stack_function_called_array'], "UP");
 array_push ($_SESSION['parameters']['stack_function_called_array'], "TOP");
 
-$_SESSION['parameters']['stack_function_level_maximum'] = 250;
 $_SESSION['parameters']['irp_path_step_number_maximum'] = 50;
+
+$_SESSION['parameters']['stack_function_level_maximum'] = 250;
 $_SESSION['parameters']['stack_function_level_dot_list'] = $points;
 
 $_SESSION['parameters']['version'] = 0.01;

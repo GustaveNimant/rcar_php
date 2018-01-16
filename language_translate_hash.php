@@ -1091,6 +1091,13 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
 
+
+    'go to new entry' =>
+    array (
+        'fr' => 'aller &agrave; la nouvelle entr&eacute;e',
+        'it' => '???',
+    ), 
+
     'has been added to file' =>
     array (
         'fr' => 'a &eacute;t&eacute; ajout&eacute; au fichier',

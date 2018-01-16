@@ -634,7 +634,7 @@ function irp_provide_data ($irp_key, $caller) {
         $cure .= "<br>"; 
         $cure .= '   $get_key = \'' . $irp_key .'\';'; 
         $cure .= "<br>"; 
-        $cure .= '   $irp_val = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here);';
+        $cure .= '   $irp_val = irp_data_value_only_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here);';
 
         print_fatal_error ($here,
         "DATA >$irp_key< were already stored",

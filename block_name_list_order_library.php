@@ -113,7 +113,20 @@ function block_name_list_order_write_of_entry_name_of_block_name_list_order_stri
   $fno_nam_blo_lis = block_name_list_order_fullnameoffile_of_entry_name ($nam_ent);
   file_string_write ($fno_nam_blo_lis, $nam_blo_lis);
 
-  $log_str = "block_name_list_order_new written as $fno_nam_blo_lis";
+  $log_str = "New block_name_list_order has been written as $fno_nam_blo_lis";
+
+  exiting_from_function ($here . " ($nam_ent, $nam_blo_lis)");
+  return $log_str;
+}
+
+function block_name_list_order_remove_of_entry_name_of_block_name_list_order_string ($nam_ent, $nam_blo_lis){
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($nam_ent, $nam_blo_lis)");
+  
+  $fno_nam_blo_lis = block_name_list_order_fullnameoffile_of_entry_name ($nam_ent);
+  file_remove_of_fullnameoffile ($fno_nam_blo_lis);
+
+  $log_str = "File >$fno_nam_blo_lis< has been removed from entry subdirectory >$nam_ent<"; 
 
   exiting_from_function ($here . " ($nam_ent, $nam_blo_lis)");
   return $log_str;

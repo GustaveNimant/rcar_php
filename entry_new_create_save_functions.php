@@ -18,7 +18,7 @@ function entry_new_create_save_page_title_build () {
   $en_tit = 'page for displaying the result of creation of the new entry'; 
 
   $la_bub_tit  = bubble_bubbled_la_text_of_en_text ($en_tit);
-  $la_bub_tit .= '<i><b> ' . $sur_ent_cur . '</b></i>';
+  $la_bub_tit .= ' <i><b>' . ucfirst ($sur_ent_cur) . '</b></i>';
   $la_bub_Tit = string_html_capitalized_of_string ($la_bub_tit);
 
   $html_str  = comment_entering_of_function_name ($here);
@@ -121,16 +121,17 @@ function entry_new_create_save_link_to_go_build () {
   $here = __function__;
   entering_in_function ($here);
 
-  $sur_ent_cur = irp_provide ('entry_new_surname', $here);
-  debug_n_check ($here , '$sur_ent_cur',  $sur_ent_cur);
+  $sur_ent_new = irp_provide ('entry_new_surname', $here);
+  debug_n_check ($here , '$sur_ent_new',  $sur_ent_new);
+  $nam_ent_new = irp_provide ('entry_new_name_from_entry_new_surname', $here);
 
-  $en_tit = 'go to new entry list';
+  $en_tit = 'go to new entry';
   $la_tit = language_translate_of_en_string ($en_tit);
 
-  $la_tit .= ' <i><b> ' . $sur_ent_cur . '</b></i>';
+  $la_tit .= ' <i><b>' . ucfirst ($sur_ent_new) . '</b></i>';
   $la_Tit = string_html_capitalized_of_string ($la_tit);
 
-  $script_to_return = 'entry_current_display_script.php';
+  $script_to_return = 'entry_current_display_script.php?entry_current_name=' . $nam_ent_new;
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>' . "\n";
@@ -163,7 +164,8 @@ function entry_new_create_save_build () {
 
   $html_str .= irp_provide ('git_command_n_commit_html', $here);
   $html_str .= '<br><br>' . "\n";
-
+  $html_str .= irp_provide ('entry_new_create_save_link_to_go', $here);
+  $html_str .= '<br>' . "\n";
   $html_str .= irp_provide ('entry_new_create_save_link_to_return', $here);
   $html_str .= '<br><br>' . "\n";
   

@@ -12,11 +12,6 @@ $_SESSION['message'] = '';
 $_SESSION['count_entity'] = 1;
 $_SESSION['cpu_n_function'] = array ();
 
-$_SESSION['is_cpu_active'] = FALSE;
-$_SESSION['is_verbose'] = TRUE;
-$_SESSION['is_very_verbose'] = FALSE;
-$_SESSION['is_debug_active'] = TRUE;
-$_SESSION['is_comment_html_active'] = FALSE;
 
 $_SESSION['is_constant_module_name'] = array (); /* constant html text  */
 $_SESSION['is_leaf_entity_name'] = array ();     /* constant ? */

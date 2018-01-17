@@ -1,4 +1,5 @@
 <?php
+
 $nam_ser = $_SERVER['SERVER_NAME'];
 
 switch ($nam_ser) {

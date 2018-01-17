@@ -9,21 +9,9 @@ $Documentation[$module]['what for'] = "to undo, show history, rename";
 
 entering_in_module ($module);
 
-function toward_block_current_undo_build () {
+function toward_block_current_undo_previous_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
-
-    $pre_ite_con = irp_provide ('item_previous_content_display_content', $here);
-    debug_n_check ($here , '$pre_ite_con',  $pre_ite_con);
-
-    if (trim ($pre_ite_con) == 'no previous content' ) {
-        $en_str = 'no undo';
-        $html_str = '(' . language_translate_of_en_string ($en_str) . ')';
-        debug_n_check ($here , '$html_str', $html_str);
-        exiting_from_function ($here);
-        
-        return $html_str;
-    }
 
     $module = module_name_of_module_fullnameoffile (__FILE__);
 
@@ -55,6 +43,39 @@ function toward_block_current_undo_build () {
     $html_str .= '</a>';
     $html_str .= comment_exiting_of_function_name ($here); 
 
+    debug_n_check ($here , '$html_str', $html_str);
+    exiting_from_function ($here);
+    
+    return $html_str;
+}
+
+function toward_block_current_undo_skip_build () {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+
+    $en_str = 'no undo';
+    $html_str = '(' . language_translate_of_en_string ($en_str) . ')';
+
+    debug_n_check ($here , '$html_str', $html_str);
+    exiting_from_function ($here);
+
+    return $html_str;
+}
+
+function toward_block_current_undo_build () {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+
+    $pre_ite_con = irp_provide ('item_previous_content_display_content', $here);
+    debug_n_check ($here , '$pre_ite_con',  $pre_ite_con);
+    
+    if (trim ($pre_ite_con) == 'no previous content' ) {
+        $html_str = irp_provide ('toward_block_current_undo_skip', $here);
+    }
+    else {
+        $html_str = irp_provide ('toward_block_current_undo_previous', $here);
+    }
+    
     debug_n_check ($here , '$html_str', $html_str);
     exiting_from_function ($here);
     

@@ -1,4 +1,5 @@
 <?php
+require_once "session_hash_initialize_hash.php";
 
 function comment_entering_of_function_name ($nam_fun) {
     $here = __FUNCTION__;

@@ -2755,7 +2755,7 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
         'fr' => 'voir les questions sans r&eacute;ponse',
         'it' => '???',
     ),
-
+    
     'warning' =>
     array (
         'fr' => 'attention',
@@ -2764,7 +2764,7 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
     
     'warning in' => 
     array (
-        'fr' => 'warning dans',
+        'fr' => 'attention dans',
         'it' => '???',
     ),
 

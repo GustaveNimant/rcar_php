@@ -67,7 +67,7 @@ function toward_block_current_undo_build () {
     entering_in_function ($here);
 
     $pre_ite_con = irp_provide ('item_previous_content_display_content', $here);
-    debug_n_check ($here , '$pre_ite_con',  $pre_ite_con);
+    debug_n_check ($here , 'trim($pre_ite_con)',  trim($pre_ite_con));
     
     if (trim ($pre_ite_con) == 'no previous content' ) {
         $html_str = irp_provide ('toward_block_current_undo_skip', $here);

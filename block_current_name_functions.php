@@ -7,9 +7,9 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-$Documentation[$module]['block_current_name'] = "is a directory name of php_server. i.e. any string expressed in the current language transformed in a Capitalized word, with blank transformed in underscores, without any accents.";
-$Documentation[$module]['block_kind'] = "is a lower case word expressed in english. Ex.: text";
-$Documentation[$module]['block_block_kind'] = "is a lower case word expressed in english. Ex.: paragraph";
+$Documentation[$module]['block_current_name'] = "is a file name of php_server. i.e. any string expressed in the current language transformed in a Capitalized word, with blank transformed in underscores, without any accents.";
+$Documentation[$module]['block_current_name'] = "it is a DATA";
+$Documentation[$module]['block_current_surnamenew'] = "it is a DATA";
 
 entering_in_module ($module);
 
@@ -39,7 +39,7 @@ function block_current_namenew_from_block_current_surnamenew_build () {
     }
 
     string_check_is_block_name_of_string ($new_nam_blo_cur);
-    
+
     exiting_from_function ($here . " with \$new_nam_blo_cur >$new_nam_blo_cur<");
     
     return $new_nam_blo_cur;

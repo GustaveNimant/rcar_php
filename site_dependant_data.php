@@ -21,7 +21,7 @@ case 'www.willforge.fr' :
     $_SESSION['is_verbose'] = FALSE;
     $_SESSION['is_very_verbose'] = FALSE;
     $_SESSION['is_debug_active'] = FALSE;
-    $_SESSION['is_comment_html_active'] = TRUE;
+    $_SESSION['is_comment_html_active'] = FALSE;
 
     break;
     

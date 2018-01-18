@@ -89,9 +89,10 @@ function entry_current_namenew_form_submit_build () {
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>' . "\n";
-  $html_str .= '<input type="submit" value="';
+  $html_str .= '<input type="submit"';
+  $html_str .= ' value="';
   $html_str .= $la_bub_Tit;
-  $html_str .= '" name="submitme">' . "\n";
+  $html_str .= '">' . "\n";
   $html_str .= '</center>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 

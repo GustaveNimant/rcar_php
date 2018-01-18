@@ -2258,6 +2258,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
 		'it' => '???',
     ),
 
+    'rename the entry' => 
+    array (
+		'fr' => 'renommer l&rsquo;entr&eacute;e',
+		'it' => '???',
+    ),	 
+	 
     'rename the paragraph' => 
     array (
 		'fr' => 'renommer le paragraphe',

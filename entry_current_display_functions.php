@@ -59,6 +59,9 @@ function entry_current_display_build (){
     $html_str .= irp_provide ('toward_block_new_create_form', $here);
     $html_str .= '<br>' . "\n";
 
+    $html_str .= irp_provide ('toward_entry_current_rename', $here);
+    $html_str .= '<br><br>' . "\n";
+
     if (file_directory_is_not_empty_of_directory_path ($fnd_ent_cur)) {/* Improve */
 
         $html_str .= irp_provide ('toward_block_current_list_reorder', $here);

@@ -1759,6 +1759,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'fr' => 'page de cr&eacute;ation d&rsquo;une nouvelle entr&eacute;e',
         'it' => '???',
     ), 
+
+    'page for creating or selecting an entry' =>
+    array (
+        'fr' => 'page de cr&eacute;ation ou de s&eacute;lection d&rsquo;une entr&eacute;e',
+        'it' => '???',
+    ),
     
     'page for creating a new paragraph for entry' =>
     array (
@@ -2057,6 +2063,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
     'page for selecting an entry to act on it' =>
     array (
         'fr' => 'page de s&eacute;lection d&rsquo;une entr&eacute;e pour agir sur elle',
+        'it' => '???',
+    ),
+
+    'page for selecting or creating an entry' =>
+    array (
+        'fr' => 'page de s&eacute;lection ou de cr&eacute;ation d&rsquo;une entr&eacute;e',
         'it' => '???',
     ),
 

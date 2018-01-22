@@ -69,12 +69,13 @@ require_once "git_command_functions.php";
 require_once "git_history_functions.php";
 require_once "git_retrieve_functions.php";
 
+require_once "item_any_content_linked_library.php";
 require_once "item_current_content_display_n_modify_functions.php";
 require_once "item_current_content_linked_functions.php";
-require_once "item_previous_content_linked_functions.php";
-require_once "item_any_content_linked_library.php";
 require_once "item_current_justification_display_functions.php";
+require_once "item_current_justification_linked_functions.php";
 require_once "item_current_modify_functions.php";
+require_once "item_previous_content_linked_functions.php";
 
 require_once "item_next_create_form_current_content_functions.php";
 require_once "item_next_create_form_functions.php";

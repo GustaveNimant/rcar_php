@@ -14,7 +14,7 @@ function entry_list_display_page_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $en_tit = 'page for selecting an entry to act on it';
+  $en_tit = 'page for creating or selecting an entry';
 
   $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);
@@ -42,17 +42,12 @@ function entry_list_display_build () {
   $html_str .= irp_provide ('entry_list_display_page_title', $here);
   $html_str .= '<br>' . "\n";
 
-  /* $html_str .= irp_provide ('entry_list_display_select', $here); */
-  /* $html_str .= '<br>' . "\n"; */
+  $html_str .= irp_provide ('toward_entry_new_create_form', $here);
+  $html_str .= '<br>' . "\n";
 
   $html_str .= irp_provide ('entry_current_selection_display', $here);
   $html_str .= '<br>' . "\n";
 
-  /* $html_str .= irp_provide ('entry_current_selection_rename', $here); */
-  /* $html_str .= '<br>' . "\n"; */
-
-  $html_str .= irp_provide ('toward_entry_new_create_form', $here);
-  $html_str .= '<br>' . "\n";
   $html_str .= '</center>' . "\n";
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);

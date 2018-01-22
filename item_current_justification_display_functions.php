@@ -34,16 +34,12 @@ function item_current_justification_display_content_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
     
-    $nam_blo_cur = irp_provide ('block_current_name', $here);
-    $con_blo_by_nam_blo_h = irp_provide ('block_content_by_block_name_hash', $here);
-    $con_blo_cur = array_retrieve_value_of_key_of_array ($nam_blo_cur, $con_blo_by_nam_blo_h);
-    $ite_cur_jus = item_current_justification_of_block_current_content ($con_blo_cur);
-
-    $ite_cur_jus = string_replace_if_exists ($here, "\n", '<br><br>', $ite_cur_jus);
+    $jus_ite_cur_lin = irp_provide ('item_current_justification_linked', $here);
+    $jus_ite_cur_lin = string_replace_if_exists ($here, "  ", '<br><br>', $jus_ite_cur_lin);
 
     $html_str  = comment_entering_of_function_name ($here);
     $html_str .= '<i>';
-    $html_str .= $ite_cur_jus;
+    $html_str .= $jus_ite_cur_lin;
     $html_str .= '</i>';
     $html_str .= comment_exiting_of_function_name ($here);
     

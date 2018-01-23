@@ -47,38 +47,14 @@ function item_current_content_display_content_build () {
     return $html_str;
 }
 
-function item_current_content_modify_form_build () { 
+function item_current_content_display_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $irp_fat = str_replace('_build', '', $here);
-  father_n_son_stack_entity_push_of_father_of_son ($irp_fat, "BUTTON_$irp_fat");
-
-  $script_action = 'item_current_modify_script.php';
-  $entity = entity_name_of_script_nameoffile ($script_action);
-
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<form action="' . $script_action . '" method="get"> ' . "\n";
   $html_str .= irp_provide ('item_current_content_display_title', $here);
-  $html_str .= inputtypesubmit_of_en_action_name ('modify');
-  $html_str .= '</form> ' .  "\n";
-  $html_str .= comment_exiting_of_function_name ($here);
-
-  debug_n_check ($here , '$html_str',  $html_str);
-
-  exiting_from_function ($here);
-
-  return $html_str;
-}
-
-function item_current_content_display_n_modify_build () {
-  $here = __FUNCTION__;
-  entering_in_function ($here);
-
-  $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= irp_provide ('item_current_content_modify_form', $here);
+  $html_str .= '<br>';
   $html_str .= irp_provide ('item_current_content_display_content', $here);
-  $html_str .= "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str',  $html_str);

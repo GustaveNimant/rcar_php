@@ -1436,6 +1436,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ),
     
+    'modify the content of the current item' =>
+    array (
+        'fr' => 'modifier le contenu de l&rsquo;item courant',
+        'it' => '???',
+    ),
+
     'modify the content of the paragraph' =>
     array (
         'fr' => 'modifier le contenu du paragraphe',

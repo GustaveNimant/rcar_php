@@ -1790,6 +1790,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
    ),
 
+    'page for displaying the history of the property' =>
+    array (
+        'fr' => 'page d&rsquo;affichage de l&rsquo;historique de la propri&eacute;t&eacute;',
+        'it' => '???',
+    ), 
+    
     'page for displaying the list of all entries' =>
     array (
         'fr' => 'page d&rsquo;affichage de la liste de toutes les entr&eacute;es',

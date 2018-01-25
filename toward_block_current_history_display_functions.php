@@ -13,7 +13,7 @@ function toward_block_current_history_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
 
-    $script_action = 'block_current_history_script.php';
+    $script_action = 'block_current_history_display_script.php';
     $la_act_blo = language_translate_of_en_string ('history');
 
     $html_str  = comment_entering_of_function_name ($here);    

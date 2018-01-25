@@ -130,6 +130,7 @@ function item_current_modify_build () {
 
   $html_str .= irp_provide ('item_current_content_display_title', $here);
   $html_str .= '<br>' . "\n";
+
   $html_str .= irp_provide ('item_current_content_display_content_textarea_disabled', $here);
   $html_str .= '<br>' . "\n";
 

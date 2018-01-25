@@ -731,6 +731,12 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
 		'it' => '???',
     ),
 
+    'display the history of the current block' =>
+    array (
+        'fr' => 'affichage de l&rsquo;historique du bloc courant',
+        'it' => '???',
+    ),
+    
     'do you want to create the entry' => 
     array (
         'fr' => 'voulez-vous cr&eacute;er l&rsquo;entr&eacute;e',

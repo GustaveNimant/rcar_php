@@ -95,7 +95,7 @@ function block_current_remove_section_save_build () {
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<input type="submit" value="';
   $html_str .= ucfirst (language_translate_of_en_string ('remove'));
-  $html_str .= '" name="submitme"> ' . "\n";
+  $html_str .= '">' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str', $html_str);

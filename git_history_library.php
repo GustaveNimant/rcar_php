@@ -117,6 +117,7 @@ function git_log_of_count_of_directory_path_of_entry_name_of_block_name ($cou, $
 
     $cmd_git  = "cd $hdir; ";
     $cmd_git .= 'git log -' . $cou . ' --pretty=format:"%H %s" ./' . $nam_ent . '/'. $nof_blo;
+    debug ($here , '$cmd_git', $cmd_git);
 
     $log_git = shell_exec ($cmd_git);
     
@@ -145,8 +146,16 @@ function git_log_array_of_count_of_directory_path_of_entry_name_of_block_name ($
         print_fatal_error ($here,
         "selected commit array were NOT empty",
         'it is EMPTY',
-        'Check'
-        );
+        'Check array upper');
+    }
+
+    if (count ($log_git_a) < $cou) {
+        print_html_array ($here, '$log_git_a', $log_git_a);
+
+        print_fatal_error ($here,
+        "count for \$log_git_a were > $cou for block $nam_ent/$nam_blo.blo",
+        "count for \$log_git_a is = ". count ($log_git_a),
+        "Check");
     }
 
     debug_n_check ($here, '$log_git_a', $log_git_a);

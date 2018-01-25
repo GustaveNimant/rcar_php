@@ -50,7 +50,7 @@ function block_current_undo_form_submit_build () {
   $html_str .= '<center>' . "\n";
   $html_str .= '<input type="submit" value="';
   $html_str .= $la_bub_Tit;
-  $html_str .= '" name="submitme">' . "\n";
+  $html_str .= '">' . "\n";
   $html_str .= '</center>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 

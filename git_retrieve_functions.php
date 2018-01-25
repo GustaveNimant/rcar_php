@@ -23,6 +23,7 @@ function git_commit_block_previous_log_array_build () {
   
   $cou = 2;
   $log_git_a = git_log_array_of_count_of_directory_path_of_entry_name_of_block_name ($cou, $hdir, $nam_ent_cur, $nam_blo_cur);
+
   debug_n_check ($here, '$log_git_a', $log_git_a);
   exiting_from_function ($here);
   return $log_git_a;
@@ -38,8 +39,9 @@ function git_commit_block_previous_sha1_build () {
   
   $log_git_a = irp_provide ('git_commit_block_previous_log_array', $here);
   debug_n_check ($here, '$log_git_a', $log_git_a);
-  
+
   $pre_lin = $log_git_a[1];
+
   debug_n_check ($here, '$pre_lin', $pre_lin);
   $blo_pre_sha = string_word_of_glue_of_ordinal_of_string (' ', 1, $pre_lin); 
 

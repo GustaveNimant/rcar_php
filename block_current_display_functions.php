@@ -103,6 +103,9 @@ function block_current_display_build (){
   $html_str .= irp_provide ('toward_item_current_modify_form', $here);
   $html_str .= '<br><br>' . "\n";
 
+  $html_str .= irp_provide ('toward_block_current_history_form', $here);
+  $html_str .= '<br><br>' . "\n";
+
   $html_str .= irp_provide ('item_current_content_display', $here);
   $html_str .= '<br><br>' . "\n";
 
@@ -120,9 +123,6 @@ function block_current_display_build (){
   $html_str .= '<br>' . "\n";
 
   $html_str .= irp_provide ('toward_block_current_remove', $here);
-  $html_str .= '&nbsp;&nbsp;';
-
-  $html_str .= irp_provide ('toward_block_current_history', $here);
   $html_str .= '&nbsp;&nbsp;';
 
   $html_str .= irp_provide ('toward_block_current_rename', $here);

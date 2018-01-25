@@ -25,7 +25,7 @@ function block_new_create_form_submit_build () {
   $html_str .= '<center>' . "\n";
   $html_str .= '<input type="submit" value="';
   $html_str .= $la_bub_Tit;
-  $html_str .= '" name="submitme">' . "\n";
+  $html_str .= '">' . "\n";
   $html_str .= '</center>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
@@ -52,9 +52,6 @@ function block_new_create_form_build (){
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form action="' . $script_action . '" method="get">' . "\n";
-
-  $html_str .= get_hash_store_of_get_key_of_get_value_of_where ('block_new_create_form_action', 'create', $here);
-  $html_str .= '<br><br> ';
 
   $html_str .= irp_provide ('item_new_create_content_form', $here);
   $html_str .= '<br><br> ';

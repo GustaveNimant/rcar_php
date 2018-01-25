@@ -1,0 +1,15 @@
+select commit boundaries since and before
+
+display for each commit selected :
+ 
+commit_current_sha1 ?
+item_current_content
+item_current_justification
+...
+
+commit_current_sha1 ?
+item_current_content
+item_current_justification
+
+
+

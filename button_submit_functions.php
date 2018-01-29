@@ -11,13 +11,11 @@ function button_submit_quit_html_make () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-
   $script_action = 'quit_script.php';
-  debug_n_check ($here , "script_action", $script_action);
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form action="' . $script_action . '" method="get">' . "\n";
-  $html_str .= '  <input type="submit" value="';
+  $html_str .= '<input type="submit" value="';
   $html_str .= ucfirst (language_translate_of_en_string ('quit'));
   $html_str .= '" title="';
   $html_str .= ucfirst (language_translate_of_en_string ('remove browsing data'));

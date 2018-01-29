@@ -42,14 +42,18 @@ function block_current_undo_form_submit_build () {
   entering_in_function ($here);
 
   $en_tit = 'undo';
+  $la_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
+  $la_Tit = string_html_capitalized_of_string ($la_tit);
 
-  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
+  $en_bub_tit = 'leave current version. Return to previous one';
+  $la_bub_tit = language_translate_of_en_string ($en_bub_tit);
   $la_bub_Tit = string_html_capitalized_of_string ($la_bub_tit);
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>' . "\n";
   $html_str .= '<input type="submit" value="';
-  $html_str .= $la_bub_Tit;
+  $html_str .= $la_Tit;
+  $html_str .= '" title="' . $la_bub_Tit ; 
   $html_str .= '">' . "\n";
   $html_str .= '</center>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);

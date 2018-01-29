@@ -19,13 +19,13 @@ function toward_entry_current_display_build () {
     $entity = entity_name_of_script_nameoffile ($script_action);
     $_SESSION['get_key_by_script_name'][$entity] = 'entry_current_name' ;
 
-    $la_act_ent = language_translate_of_en_string ('display');
+#    $la_act_ent = language_translate_of_en_string ('display');
 
     $html_str  = comment_entering_of_function_name ($here);    
     $html_str .= '<a href="'. $script_action ;
     $html_str .= '?entry_current_name=' . $nam_ent_cur; 
     $html_str .= '">';
-    $html_str .= $la_act_ent;
+#    $html_str .= $la_act_ent;
     $html_str .= '</a>';
 
     $html_str .= comment_exiting_of_function_name ($here); 

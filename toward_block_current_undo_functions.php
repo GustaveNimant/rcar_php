@@ -13,8 +13,6 @@ function toward_block_current_undo_previous_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
 
-    $module = module_name_of_module_fullnameoffile (__FILE__);
-
     $nam_blo_cur = irp_provide ('block_current_name', $here);
     $nam_ent = irp_provide ('entry_current_name', $here);
 
@@ -25,7 +23,6 @@ function toward_block_current_undo_previous_build () {
     $entity_son = entity_name_of_script_nameoffile ($script_action);
     father_n_son_stack_entity_push_of_father_of_son ($entity_fat, $entity_son);
 
-    debug_n_check ($here , '$script_action',  $script_action);
     $la_act_blo = language_translate_of_en_string ('undo');
 
     $en_tit = 'leave current version. Return to previous one';
@@ -36,8 +33,7 @@ function toward_block_current_undo_previous_build () {
     $html_str .= '<a href="' . $script_action;
     $html_str .= '?entry_current_name=' . $nam_ent;
     $html_str .= '&block_current_name=' . $nam_blo_cur; 
-    $html_str .= '&from_module_name=' . $module . '"';
-    $html_str .= ' title="' . $la_Tit ; 
+    $html_str .= '" title="' . $la_Tit ; 
     $html_str .= '">';
     $html_str .= $la_act_blo;
     $html_str .= '</a>';

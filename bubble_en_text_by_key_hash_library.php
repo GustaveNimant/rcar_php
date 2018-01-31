@@ -15,7 +15,7 @@ function bubble_en_text_by_key_hash_make () {
         'action' => 'an action is one off remove&#44; history&#44; rename or undo',
         'block' => 'a block is defined for a property. It contains 4 elements : the current item&#44; the justification for having created the current item&#44; the previous item and the sha1 of the previous block',
         'choose' => 'click on one of the radio buttons',
-        'entry' => 'an entry is a concept defined by the list of its properties e.g. Democracy&#44; General will',
+        'entry' => 'an entry is a concept defined by the list of its properties e.g. Democracy&#44; General will&#44; etc ...&#41;',
         'item' => 'an item is a property of an entry it is a component of a block',
         'justify' => 'a justification proves that the modification done complies with the rules',
         'justification' => 'a justification proves that the modification done complies with the rules',

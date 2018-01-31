@@ -154,11 +154,11 @@ commençant par quoi, pourquoi ou comment',
         'it' => '???',
     ),
 
-    'an entry is a concept defined by the list of its properties e.g. Democracy&#44; General will' =>
+    'an entry is a concept defined by the list of its properties e.g. Democracy&#44; General will&#44; etc ...&#41;' =>
     array (
         'fr' => 'une entr&eacute;e est un concept d&eacute;fini
 par la liste de ses propri&eacute;t&eacute;s 
-&#40;D&eacute;mocratie&#44; Volont&eacute; g&eacute;n&eacute;rale&#41;',
+&#40;D&eacute;mocratie&#44; Volont&eacute; g&eacute;n&eacute;rale&#44; etc ...&#41;',
         'it' => '???',
     ),
 

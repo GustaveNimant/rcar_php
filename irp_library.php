@@ -460,9 +460,10 @@ function irp_retrieve ($irp_key, $caller) {
         /* debug ($here , "irp_val",  $irp_val); */
         
         if (string_is_empty_of_string ($irp_val)) {
-            $mest = "Irp Value is empty in function irp_retrieve for Irp irp_key $irp_key";
-            exiting_from_function ($here . ' with Exception ' . $mest);
-            throw new Exception ($mest);
+            print_fatal_error ($here,
+            "Irp Value for \$irp_key >$irp_key< were NOT empty",
+            "it is EMPTY",
+            "Check");
         }
         
 /* obtain path for a stored module */

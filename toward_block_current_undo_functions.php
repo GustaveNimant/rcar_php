@@ -14,7 +14,6 @@ function toward_block_current_undo_previous_build () {
     entering_in_function ($here);
 
     $nam_blo_cur = irp_provide ('block_current_name', $here);
-    $nam_ent = irp_provide ('entry_current_name', $here);
 
     $entity_fat = entity_name_of_build_function_name ($here);
     father_n_son_stack_entity_push_of_father_of_son ($entity_fat, "BUTTON_$entity_fat");
@@ -31,8 +30,7 @@ function toward_block_current_undo_previous_build () {
 
     $html_str  = comment_entering_of_function_name ($here);
     $html_str .= '<a href="' . $script_action;
-    $html_str .= '?entry_current_name=' . $nam_ent;
-    $html_str .= '&block_current_name=' . $nam_blo_cur; 
+    $html_str .= '?block_current_name=' . $nam_blo_cur; 
     $html_str .= '" title="' . $la_Tit ; 
     $html_str .= '">';
     $html_str .= $la_act_blo;

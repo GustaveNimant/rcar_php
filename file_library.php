@@ -41,7 +41,7 @@ function file_is_directory_of_directory_path ($dir_pat) {
 
 function file_basic_directory_of_name ($nam) {
   $here = __FUNCTION__;
-#  debug_n_check ($here , '$nam', $nam);
+  debug_n_check ($here , '$nam', $nam);
 
   $src_abs_pat = $_SESSION['parameters']['absolute_path_source'];
   $src_rel_pat = $_SESSION['parameters']['relative_path_source'];
@@ -71,7 +71,7 @@ function file_basic_directory_of_name ($nam) {
     exit;
   }
   
-#  debug_n_check ($here , "output directory name", $dir);
+  debug_n_check ($here , "output directory name", $dir);
   return $dir;
 };
 

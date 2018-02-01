@@ -6,7 +6,7 @@ $module = module_name_of_module_nameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-function git_log_commit_sha1ipdate_of_directory_path_of_quatuor ($hdir, $since, $before, $nam_ent, $nam_blo) {
+function git_log_commit_sha1ipdate_of_server_path_of_quatuor ($hdir, $since, $before, $nam_ent, $nam_blo) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($hdir, $since, $before, $nam_ent, $nam_blo)");
 
@@ -14,9 +14,10 @@ function git_log_commit_sha1ipdate_of_directory_path_of_quatuor ($hdir, $since, 
 /* 60f6345 fait par ::1 le 5 November 2017 Ã  16h33:54 */
 /* 9f03383 fait par ::1 le 28 October 2017 Ã  13h19:48 */
 
-  $ext_blo = "blo"; 
-  $fno_blo = $hdir . '/' . $nam_ent . '/' . $nam_blo . '.' . $ext_blo;
-
+  $ext_blo = $_SESSION['parameters']['extension_block_filename'];
+  $nof_blo = $nam_blo . '.' . $ext_blo; 
+  $fno_blo = $hdir . '/' . $nam_ent . '/'. $nof_blo;
+  
   $cmd_git  = "cd $hdir" . ';'; 
   $cmd_git .= ' git log --pretty=format:"%H %s" ';
   if ($since != "") {
@@ -26,7 +27,7 @@ function git_log_commit_sha1ipdate_of_directory_path_of_quatuor ($hdir, $since, 
       $cmd_git .= ' --before="' . $before . '"';
 
   }
-  $cmd_git .= ' ' . $fno_blo; 
+  $cmd_git .= ' -- ' . $fno_blo; 
 
   debug_n_check ($here , '$cmd_git', $cmd_git);
 
@@ -45,9 +46,9 @@ function git_log_commit_sha1ipdate_of_directory_path_of_quatuor ($hdir, $since, 
   return $log_git;
 }
 
-function git_ls_tree_of_entry_name_of_commit_sha ($nam_ent, $sha_com) {
+function git_ls_tree_of_commit_sha1_of_entry_name ($sha_com, $nam_ent) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_ent, $sha_com)");
+  entering_in_function ($here . " ($sha_com, $nam_ent)");
 
 /* 100644 blob 3e756621cb2417a91f0c2c896c24e1972b92e060	Citoyen.ite */
 
@@ -73,17 +74,19 @@ function git_ls_tree_of_entry_name_of_commit_sha ($nam_ent, $sha_com) {
   return $log_git;
 }
 
-function git_blob_sha1_of_entry_name_of_blob_name_of_commit_sha1 ($nam_ent, $nam_blo, $sha_com) {
+function git_blob_sha1_of_commit_sha1_of_entry_name_of_blob_name ($sha_com, $nam_ent, $nam_blo) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_ent, $nam_blo, $sha_com)");
+  entering_in_function ($here . " ($sha_com, $nam_ent, $nam_blo)");
 
 /* Ex.: str : 100644 blob 3e756621cb2417a91f0c2c896c24e1972b92e060	Citoyen.ite */
 /*                          wor_a[0]                                wor_a[1]    */
 /*            w_a[0] w_a[1] w_a[2]                                  wor_a[1]    */
-  $str = git_ls_tree_of_entry_name_of_commit_sha ($nam_ent, $sha_com);
-#  debug ($here , '$str', $str);
-  $str_blo_a = explode ("\n", $str);
-#  debug ($here , '$str_blo_a', $str_blo_a);
+
+  $str_lst = git_ls_tree_of_commit_sha1_of_entry_name ($sha_com, $nam_ent);
+  debug ($here , '$str_lst', $str_lst);
+
+  $str_blo_a = explode ("\n", $str_lst);
+  debug ($here , '$str_blo_a', $str_blo_a);
 
   $sha_blo = "";
   foreach ($str_blo_a as $k => $str) {
@@ -117,9 +120,10 @@ function git_log_of_count_of_directory_path_of_entry_name_of_block_name ($cou, $
 
     $ext_blo = $_SESSION['parameters']['extension_block_filename'];
     $nof_blo = $nam_blo . '.' . $ext_blo; 
+    $fno_blo = $hdir . '/' . $nam_ent . '/'. $nof_blo;
 
     $cmd_git  = "cd $hdir; ";
-    $cmd_git .= 'git log -' . $cou . ' --pretty=format:"%H %s" ./' . $nam_ent . '/'. $nof_blo;
+    $cmd_git .= 'git log -' . $cou . ' --pretty=format:"%H %s" -- ' . $fno_blo; 
     debug ($here , '$cmd_git', $cmd_git);
 
     $log_git = shell_exec ($cmd_git);
@@ -178,9 +182,9 @@ function git_commit_sha1_array_of_directory_path_of_quatuor ($hdir, $since, $bef
 /*     [2] => 9f03383e1a04af6d7fb0d1b1eefe38b42d6a851d */
 /* ) */
     
-    $log_str = git_log_commit_sha1ipdate_of_directory_path_of_quatuor ($hdir, $since, $before, $nam_ent, $nam_blo);
-
+    $log_str = git_log_commit_sha1ipdate_of_server_path_of_quatuor ($hdir, $since, $before, $nam_ent, $nam_blo);
     debug ($here , '$log_str', $log_str);
+
     $str_a = explode ("\n", $log_str);
     
     $sha_com_a = array ();

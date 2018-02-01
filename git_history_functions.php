@@ -16,10 +16,10 @@ function git_quatuor_array_build () {
   entering_in_function ($here . " ()");
   
   $qua_by_a = array (
-      "since" => "2016-05-18",
-      "before" => "2017-12-31",
-      "entry_current_name" => "Utilisation", 
-      "blob_name" => "Menu_faq.blo",
+      "since" => "2017-10-28",
+      "before" => "2018-01-30",
+      "entry_current_name" => "Volonte_generale", 
+      "blob_name" => "Protocole",
   );
  
   debug ($here, '$qua_by_a', $qua_by_a);
@@ -40,7 +40,7 @@ function git_quatuor_history_array_build () {
   $nam_ent = $qua_by_a['entry_current_name'];
   $nam_blo = $qua_by_a['blob_name'];
   
-  $str = git_log_commit_sha1ipdate_of_directory_path_of_quatuor ($hdir, $since, $before, $nam_ent, $nam_blo);
+  $str = git_log_commit_sha1ipdate_of_server_path_of_quatuor ($hdir, $since, $before, $nam_ent, $nam_blo);
   $git_qua_his_a = explode ("\n", $str);
   
   debug ($here, '$git_qua_his_a', $git_qua_his_a);
@@ -67,7 +67,7 @@ function git_blob_content_array_build () {
   $con_blo_a = array () ;
   foreach ($sha_com_a as $k => $sha_com) {
       debug ($here, '$sha_com', $sha_com);
-      $sha_blo = git_blob_sha1_of_entry_name_of_blob_name_of_commit_sha1 ($nam_ent, $nam_blo, $sha_com);
+      $sha_blo = git_blob_sha1_of_commit_sha1_of_entry_name_of_blob_name ($sha_com, $nam_ent, $nam_blo);
       $con_blo = git_blob_content_of_blob_sha1 ($sha_blo);
       array_push ($con_blo_a, $con_blo);
   }

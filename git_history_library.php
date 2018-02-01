@@ -52,10 +52,10 @@ function git_ls_tree_of_commit_sha1_of_entry_name ($sha_com, $nam_ent) {
 
 /* 100644 blob 3e756621cb2417a91f0c2c896c24e1972b92e060	Citoyen.ite */
 
-  $hdir = file_basic_directory_of_name ("hd_php_server");
+  $hdir = $_SESSION['parameters']['absolute_path_server'];
   debug_n_check ($here , '$hdir', $hdir);
   
-  $cmd_git  = "cd $hdir$nam_ent; "; 
+  $cmd_git  = "cd $hdir" . '/' . "$nam_ent; "; 
   $cmd_git .= "git ls-tree $sha_com";
   debug ($here , '$cmd_git', $cmd_git);
 
@@ -85,27 +85,38 @@ function git_blob_sha1_of_commit_sha1_of_entry_name_of_blob_name ($sha_com, $nam
   $str_lst = git_ls_tree_of_commit_sha1_of_entry_name ($sha_com, $nam_ent);
   debug ($here , '$str_lst', $str_lst);
 
-  $str_blo_a = explode ("\n", $str_lst);
+  $str_tri = trim ($str_lst, " \t\n\r\0\x0B");
+  $str_blo_a = explode ("\n", $str_tri);
   debug ($here , '$str_blo_a', $str_blo_a);
+
+  $ext_blo = $_SESSION['parameters']['extension_block_filename'];
+  $nof_blo = $nam_blo . '.' . $ext_blo;
 
   $sha_blo = "";
   foreach ($str_blo_a as $k => $str) {
       $wor_a = explode ("\t", $str);
-#      debug ($here , '$wor_a', $wor_a);
-      $nam = $wor_a[1];
-#      debug ($here , '$nam', $nam);
-      if ($nam == $nam_blo) {
+      debug ($here , '$wor_a', $wor_a);
+
+      $nof = $wor_a[1];
+      debug ($here , '$nof', $nof);
+
+      if ($nof == $nof_blo) {
           $w_a = explode (" ", $wor_a[0]);
-#          debug ($here , '$w_a', $w_a);
+          debug ($here , '$w_a', $w_a);
           if ($w_a[1] == "blob" ) {
               $sha_blo = $w_a[2];
+              debug ($here , 'loop $nof $sha_blo', $nof . ' ' . $sha_blo);
           }
       }
   }
-
+  
   if (string_is_empty_of_string ($sha_blo)) {
-      warning ($here, 'Blob_sha is empty. Reset to empty_sha');
       $sha_blo = 'empty_sha';
+
+      print_warning ($here, 
+      "Blob_sha were NOT empty", 
+      "it is EMPTY",
+      "it is set to >$sha_blo<");
   }
 
   debug ($here , '$sha_blo', $sha_blo);
@@ -220,7 +231,7 @@ function git_blob_content_of_blob_sha1 ($sha_blo) {
       return $con_blo;
   }
 
-  $hdir = file_basic_directory_of_name ("hd_php_server");
+  $hdir = $_SESSION['parameters']['absolute_path_server'];
   debug_n_check ($here , '$hdir', $hdir);
   
   $cmd_git  = "cd $hdir;"; 

@@ -27,7 +27,7 @@ function git_quatuor_array_build () {
   return $qua_by_a;
 }
 
-function git_quatuor_history_array_build () {
+function git_quatuor_log_commit_sha1ipdate_array_build () {
   $here = __FUNCTION__;
   entering_in_function ($here . " ()");
 
@@ -43,8 +43,9 @@ function git_quatuor_history_array_build () {
   $str = git_log_commit_sha1ipdate_of_server_path_of_quatuor ($hdir, $since, $before, $nam_ent, $nam_blo);
   $git_qua_his_a = explode ("\n", $str);
   
-  debug ($here, '$git_qua_his_a', $git_qua_his_a);
+  debug_n_check ($here, '$git_qua_his_a', $git_qua_his_a);
   exiting_from_function ($here);
+
   return $git_qua_his_a;
 }
 
@@ -52,10 +53,12 @@ function git_blob_content_array_build () {
   $here = __FUNCTION__;
   entering_in_function ($here . " ()");
 
-  $hdir = file_basic_directory_of_name ("hd_php_server");
-  debug_n_check ($here , '$hdir', $hdir);
+  $hdir = $_SESSION['parameters']['absolute_path_server'];
+  
+  /* $git_qua_his_a = git_quatuor_log_commit_sha1ipdate_array_build (); */
+  /* debug_n_check ($here, '$git_qua_his_a', $git_qua_his_a); */
 
-  $qua_by_a = git_quatuor_history_array_build ();
+  $qua_by_a = git_quatuor_array_build ();
   $since = $qua_by_a['since'];
   $before = $qua_by_a['before'];
   $nam_ent = $qua_by_a['entry_current_name'];

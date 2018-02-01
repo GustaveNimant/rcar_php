@@ -64,16 +64,18 @@ function entry_current_namenew_save_entry_subdirectory_rename_build (){
   $old_nam_ent_cur = irp_provide ('entry_current_name', $here);
   debug_n_check ($here , '$old_nam_ent_cur', $old_nam_ent_cur);
 
-  $old_fno_ent_cur = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $old_nam_ent_cur);
+  $hdir = $_SESSION['parameters']['absolute_path_server'];
+  $old_fnd_ent_cur = $hdir . '/' . $old_nam_ent_cur;
+  debug_n_check ($here , '$old_fnd_ent_cur', $old_fnd_ent_cur);
 
   $log_str = '';
-  if ( file_exists ($old_fno_ent_cur)) {
+  if ( file_exists ($old_fnd_ent_cur)) {
       entry_current_rename_subdirectory ($old_nam_ent_cur, $new_nam_ent_cur);
-      $log_str = "Entry subdirectory >$old_fno_ent_cur< has been renamed as >$new_nam_ent_cur<";
+      $log_str = "Entry subdirectory >$old_fnd_ent_cur< has been renamed as >$new_nam_ent_cur<";
   }
   else { 
       print_warning ($here,/* Improve because of TWICE */
-      "Entry subdirectory $old_fno_ent_cur exist",
+      "Entry subdirectory $old_fnd_ent_cur exist",
       "it does NOT",
       "Check");
   }

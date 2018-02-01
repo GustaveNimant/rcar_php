@@ -17,13 +17,15 @@ function block_current_file_fullname_build () {
   entering_in_function ($here);
 
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
-  $hdir = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent_cur);
-  debug_n_check ($here , '$hdir', $hdir);
+
+  $hdir = $_SESSION['parameters']['absolute_path_server'];
+  $fnd_ent_cur = $hdir . '/' . $nam_ent_cur;
+  debug_n_check ($here , '$fnd_ent_cur', $fnd_ent_cur);
 
   $ext_blo = $_SESSION['parameters']['extension_block_filename'];
 
   $nam_blo_cur = irp_provide ('block_current_name', $here);
-  $fno_blo_cur = $hdir . $nam_blo_cur . '.' .  $ext_blo;
+  $fno_blo_cur = $fnd_ent_cur . '/' . $nam_blo_cur . '.' .  $ext_blo;
 
   debug_n_check ($here , '$fno_blo_cur', $fno_blo_cur);
 

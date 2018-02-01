@@ -44,11 +44,14 @@ function block_current_remove_save_block_file_remove_build () { /* Improve no $l
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
   $nam_blo_cur = irp_provide ('block_current_name', $here);
 
-  $dir = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent_cur);
+  $hdir = $_SESSION['parameters']['absolute_path_server'];
+  $fnd_ent_cur = $hdir . '/' . $nam_ent_cur;
+  debug_n_check ($here , '$fnd_ent_cur', $fnd_ent_cur);
+
   $ext_blo_cur = $_SESSION['parameters']['extension_block_filename'];
 
   $nof_blo_cur = $nam_blo_cur . '.' . $ext_blo_cur;
-  $fno_blo_cur = $dir . $nof_blo_cur;
+  $fno_blo_cur = $fnd_ent_cur . '/' . $nof_blo_cur;
 
   $log_str = '';
   if ( file_exists ($fno_blo_cur)) {

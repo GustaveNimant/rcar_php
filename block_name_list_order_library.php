@@ -34,9 +34,12 @@ function block_name_list_order_fullnameoffile_of_entry_name ($nam_ent) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_ent)");
 
-  $dir = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
+  $hdir = $_SESSION['parameters']['absolute_path_server'];
+  $fnd_ent = $hdir . '/' . $nam_ent;
+  debug_n_check ($here , '$fnd_ent', $fnd_ent);
+
   $ext_nam_blo_lis = $_SESSION['parameters']['extension_block_name_list_order_filename'];
-  $fno_nam_blo_lis = $dir . 'Block_name_list_order_string.' . $ext_nam_blo_lis;
+  $fno_nam_blo_lis = $fnd_ent . '/' . 'Block_name_list_order_string.' . $ext_nam_blo_lis;
 
   debug_n_check ($here , '$fno_nam_blo_lis', $fno_nam_blo_lis);
   exiting_from_function ($here);
@@ -62,9 +65,12 @@ function block_name_list_order_current_string_read_of_entry_name ($nam_ent) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_ent)");
 
-  $dir_pat = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
+  $hdir = $_SESSION['parameters']['absolute_path_server'];
+  $fnd_ent = $hdir . '/' . $nam_ent;
+  debug_n_check ($here , '$fnd_ent', $fnd_ent);
+
   $ext_nam_blo_lis = $_SESSION['parameters']['extension_block_name_list_order_filename'];
-  $fno_nam_blo_lis = $dir_pat . 'Block_name_list_order_string.' . $ext_nam_blo_lis;
+  $fno_nam_blo_lis = $fnd_ent . '/' . 'Block_name_list_order_string.' . $ext_nam_blo_lis;
 
   $str = file_content_read_of_fullnameoffile ($fno_nam_blo_lis);
   $nam_blo_lis = trim ($str, " \t\n\r\0\x0B");

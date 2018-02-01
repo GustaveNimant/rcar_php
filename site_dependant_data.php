@@ -4,7 +4,7 @@ $nam_ser = $_SERVER['SERVER_NAME'];
 
 switch ($nam_ser) {
 case 'localhost' :
-    $roo_doc = '/keep/sources/';
+    $roo_doc = '/keep/sources';
 
     $_SESSION['is_cpu_active'] = FALSE;
     $_SESSION['is_verbose'] = TRUE;

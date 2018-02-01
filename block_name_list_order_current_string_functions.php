@@ -15,9 +15,12 @@ function block_name_list_order_current_string_build () {
   $nam_ent = irp_provide ('entry_current_name', $here);
   $nof_blo_cur_a = irp_provide ('block_current_nameoffile_array', $here); /* blocks that are on disk */      
 
-  $dir_pat = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
+  $hdir = $_SESSION['parameters']['absolute_path_server'];
+  $fnd_ent = $hdir . '/' . $nam_ent;
+  debug_n_check ($here , '$fnd_ent', $fnd_ent);
+
   $ext_nam_blo_lis = $_SESSION['parameters']['extension_block_name_list_order_filename'];
-  $fno_nam_blo_lis = $dir_pat . 'Block_name_list_order_string.' . $ext_nam_blo_lis;
+  $fno_nam_blo_lis = $fnd_ent . '/' . 'Block_name_list_order_string.' . $ext_nam_blo_lis;
 
   if (file_is_existing_of_fullnameoffile ($fno_nam_blo_lis)) {
       /* get ordered list from disk */

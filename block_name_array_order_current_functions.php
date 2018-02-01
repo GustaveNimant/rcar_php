@@ -75,9 +75,12 @@ function block_name_array_order_current_build () {
   /* Improve delete file Block_name_list_order_string.lis */
 
   if ($is_obsolete_block_name_list_order_string) {
-      $dir_pat = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent_cur);
+      $hdir = $_SESSION['parameters']['absolute_path_server'];
+      $fnd_ent_cur = $hdir . '/' . $nam_ent_cur;
+      debug_n_check ($here , '$fnd_ent_cur', $fnd_ent_cur);
+
       $ext_nam_blo_lis = $_SESSION['parameters']['extension_block_name_list_order_filename'];
-      $fno_nam_blo_lis = $dir_pat . 'Block_name_list_order_string.' . $ext_nam_blo_lis;
+      $fno_nam_blo_lis = $fnd_ent_cur . '/' . 'Block_name_list_order_string' . '.' . $ext_nam_blo_lis;
 
       irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'block_name_list_order_current_string', $here);
 

@@ -71,7 +71,8 @@ function command_result_html_build () {
     case 'write' :
         if (irp_is_providable_of_irp_key ($com_arg, $here) ) {
             $com_res = irp_provide ($com_arg, $here);
-            $dir = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", 'FILES');
+            $hdir = $_SESSION['parameters']['absolute_path_server'];
+            $dir = $hdir . '/' .'FILES';
             $nof = $com_arg . '.txt';
             $fno = $dir . $nof;
             file_string_write ($fno, $com_res);

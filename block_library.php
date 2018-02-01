@@ -60,10 +60,12 @@ function block_file_rename ($nam_ent, $old_nam_blo, $new_nam_blo, $ext_fil) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($nam_ent, $old_nam_blo, $new_nam_blo, $ext_fil)");
     
-    $dir = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
+    $hdir = $_SESSION['parameters']['absolute_path_server'];
+    $fnd_ent = $hdir . '/' . $nam_ent;
+    debug_n_check ($here , '$fnd_ent', $fnd_ent);
     
-    $old_nof = $dir . $old_nam_blo . '.' . $ext_fil;  
-    $new_nof = $dir . $new_nam_blo . '.' . $ext_fil;
+    $old_nof = $fnd_ent . '/' . $old_nam_blo . '.' . $ext_fil;  
+    $new_nof = $fnd_ent . '/' . $new_nam_blo . '.' . $ext_fil;
     
     file_rename_of_old_of_new_of_where ($old_nof, $new_nof, $here);
     

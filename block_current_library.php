@@ -48,8 +48,11 @@ function block_content_write ($nam_ent, $nam_blo, $con_blo) {
     $ext_blo = $_SESSION['parameters']['extension_block_filename'];
     debug_n_check ($here ,'$ext_blo', $ext_blo);
 
-    $dir = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
-    $nof_blo = $dir . $nam_blo . '.' . $ext_blo;
+    $hdir = $_SESSION['parameters']['absolute_path_server'];
+    $fnd_ent = $hdir . '/' . $nam_ent;
+    debug_n_check ($here , '$fnd_ent', $fnd_ent);
+
+    $nof_blo = $fnd_ent . '/' . $nam_blo . '.' . $ext_blo;
     debug_n_check ($here , '$nof_blo', $nof_blo);
 
     file_string_write ($nof_blo, $con_blo); 

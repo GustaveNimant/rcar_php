@@ -297,7 +297,8 @@ function command_write ($what) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($what)");
 
-    $dir = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", 'FILES');
+    $hdir = $_SESSION['parameters']['absolute_path_server'];
+    $dir = $hdir . '/' .'FILES';
     $nof = $what . '.txt';
     $fno = $dir . $nof;
 

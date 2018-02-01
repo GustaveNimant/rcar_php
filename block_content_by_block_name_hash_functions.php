@@ -33,15 +33,16 @@ function block_content_by_block_name_hash_build () {
     $con_by_nam_blo_a = array ();
   }
   else {
-    $hdir = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
-    debug_n_check ($here , "hdir", $hdir);
+      $hdir = $_SESSION['parameters']['absolute_path_server'];
+      $fdi_ent = $hdir . '/' . $nam_ent;
+      debug_n_check ($here , "fdi_ent", $fdi_ent);
 
-    $ext_blo = $_SESSION['parameters']['extension_block_filename'];
-
-    $con_blo_by_nam_blo_a = array ();
-    foreach ($nam_blo_a as $nam_blo) {
-      $fno_blo = $hdir . $nam_blo . '.' .  $ext_blo;
-
+      $ext_blo = $_SESSION['parameters']['extension_block_filename'];
+      
+      $con_blo_by_nam_blo_a = array ();
+      foreach ($nam_blo_a as $nam_blo) {
+          $fno_blo = $fdi_ent . '/' . $nam_blo . '.' . $ext_blo;
+          
 /* Read Block_content from Disk */      
       $con_blo = file_content_read_of_fullnameoffile ($fno_blo);
 

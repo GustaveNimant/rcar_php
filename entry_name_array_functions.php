@@ -1,6 +1,6 @@
 <?php
 
-require_once "file_library.php";
+require_once "directory_library.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
 

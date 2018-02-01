@@ -92,8 +92,9 @@ function file_log_create_of_action () {
     $here = __FUNCTION__;
     entering_in_function ($here);
     
-    $dir_nam = file_specific_directory_name_of_basic_name_of_name ('hd_php', 'LOGS');
-    
+    $hdir = $_SESSION['parameters']['absolute_path_server'];
+    $dir_nam = $hdir . '/' .'LOGS';
+
     $ext_log = $_SESSION['parameters']['extension_action_log_filename'];
  
     if ($_COOKIE['connect'] == 'ok') {

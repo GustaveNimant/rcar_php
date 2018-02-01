@@ -43,7 +43,8 @@ function entry_current_display_build (){
     entering_in_function ($here);
     
     $nam_ent_cur = irp_provide ('entry_current_name', $here);
-    $fnd_ent_cur = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent_cur);
+    $hdir = $_SESSION['parameters']['absolute_path_server'];
+    $fnd_ent_cur = $hdir . '/' . $nam_ent_cur;
     debug_n_check ($here , '$fnd_ent_cur', $fnd_ent_cur);
 
     $html_str  = comment_entering_of_function_name ($here);

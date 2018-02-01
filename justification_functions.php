@@ -73,10 +73,12 @@ function justification_get_content_of_item_name_of_entry_name ($nam_ite, $nam_en
     $here = __FUNCTION__;
     entering_in_function ($here);
     
-    $dir_pat = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
- 
+    $hdir = $_SESSION['parameters']['absolute_path_server'];
+    $fnd_ent = $hdir . '/' . $nam_ent;
+    debug_n_check ($here , '$fnd_ent', $fnd_ent);
+
     $nam_ite_jus = $nam_ite . '.jus';
-    $fno = $dir_pat . $nam_ite_jus;
+    $fno = $fnd_ent . '/' . $nam_ite_jus;
     
     $jus_con = file_content_read_of_fullnameoffile ($fno);
 

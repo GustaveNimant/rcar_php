@@ -13,11 +13,12 @@ function block_current_nameoffile_array_read_of_entry_name ($nam_ent) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_ent)");
 
-  $dir_pat = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent);
-  debug_n_check ($here , '$dir_pat', $dir_pat);
+  $hdir = $_SESSION['parameters']['absolute_path_server'];
+  $fnd_ent = $hdir . '/' . $nam_ent;
+  debug_n_check ($here , '$fnd_ent', $fnd_ent);
 
   try {
-      $nof_blo_a = file_array_of_directory_path_of_predicate ($dir_pat, "file_is_block_text_of_nameoffile");
+      $nof_blo_a = file_array_of_directory_path_of_predicate ($fnd_ent, "file_is_block_text_of_nameoffile");
       debug ($here , '$nof_blo_a', $nof_blo_a);
   } 
   catch (Exception $e) {  

@@ -51,16 +51,19 @@ function block_current_namenew_save_block_file_rename_build () {
 
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
 
-  $dir = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent_cur);
+  $hdir = $_SESSION['parameters']['absolute_path_server'];
+  $fnd_ent_cur = $hdir . '/' . $nam_ent_cur;
+  debug_n_check ($here , '$fnd_ent_cur', $fnd_ent_cur);
+
   $ext_blo_cur = $_SESSION['parameters']['extension_block_filename'];
 
   $old_nam_blo_cur = irp_provide ('block_current_name', $here);
   $old_nof_blo_cur = $old_nam_blo_cur . '.' . $ext_blo_cur;
-  $old_fno_blo_cur = $dir . $old_nof_blo_cur;
+  $old_fno_blo_cur = $fnd_ent_cur . '/' . $old_nof_blo_cur;
 
   $new_nam_blo_cur = irp_provide ('block_current_namenew_from_block_current_surnamenew', $here);
   $new_nof_blo_cur = $new_nam_blo_cur . '.' . $ext_blo_cur;
-  $new_fno_blo_cur = $dir . $new_nof_blo_cur;
+  $new_fno_blo_cur = $fnd_ent_cur . '/' . $new_nof_blo_cur;
 
   debug_n_check ($here , '$old_nam_blo_cur', $old_nam_blo_cur);
   debug_n_check ($here , '$new_nam_blo_cur', $new_nam_blo_cur);
@@ -114,14 +117,17 @@ function block_current_namenew_save_block_name_array_update_build () {
   entering_in_function ($here);
 
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
-  $dir = file_specific_directory_name_of_basic_name_of_name ("hd_php_server", $nam_ent_cur);
 
+  $hdir = $_SESSION['parameters']['absolute_path_server'];
+  $fnd_ent_cur = $hdir . '/' . $nam_ent_cur;
+  debug_n_check ($here , '$fnd_ent_cur', $fnd_ent_cur);
+  
   $old_nam_blo_cur = irp_provide ('block_current_name', $here);
   debug_n_check ($here , '$old_nam_blo_cur', $old_nam_blo_cur);
-
+  
   $ext_lis_blo = $_SESSION['parameters']['extension_block_name_list_order_filename'];
   $nof_lis_blo = 'Block_name_list_order_string' . '.' . $ext_lis_blo;
-  $fno_lis_blo = $dir . $nof_lis_blo;
+  $fno_lis_blo = $fnd_ent_cur . '/' . $nof_lis_blo;
   debug_n_check ($here , '$fno_lis_blo', $fno_lis_blo);
 
   $log_str = ''; /* Improve */

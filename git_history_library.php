@@ -59,19 +59,15 @@ function git_ls_tree_of_commit_sha1_of_entry_name ($sha_com, $nam_ent) {
   $cmd_git .= "git ls-tree $sha_com";
   debug ($here , '$cmd_git', $cmd_git);
 
-  $log_git = shell_exec ($cmd_git);
+  $str_lst = shell_exec ($cmd_git);
 
-  if (string_is_empty_of_string ($log_git)) {
-      print_fatal_error ($here,
-      "log of git command >$cmd_git< were NOT empty",
-      'it is empty',
-      'chown -R www-data.www-data server  will probably do the job'
-      );
+  if (string_is_empty_of_string ($str_lst)) {
+      $str_lst = 'EMPTY_LS_TREE_OUPUT';
   } 
-  debug ($here , '$log_git', $log_git);
+  debug ($here , '$str_lst', $str_lst);
 
   exiting_from_function ($here);
-  return $log_git;
+  return $str_lst;
 }
 
 function git_blob_sha1_of_commit_sha1_of_entry_name_of_blob_name ($sha_com, $nam_ent, $nam_blo) {
@@ -84,6 +80,14 @@ function git_blob_sha1_of_commit_sha1_of_entry_name_of_blob_name ($sha_com, $nam
 
   $str_lst = git_ls_tree_of_commit_sha1_of_entry_name ($sha_com, $nam_ent);
   debug ($here , '$str_lst', $str_lst);
+
+  if ($str_lst == 'EMPTY_LS_TREE_OUPUT') {
+      $sha_blo = 'EMPTY_BLOB_SHA1';
+      debug ($here , '$sha_blo', $sha_blo);
+
+      exiting_from_function ($here);
+      return $sha_blo;
+  }
 
   $str_tri = trim ($str_lst, " \t\n\r\0\x0B");
   $str_blo_a = explode ("\n", $str_tri);

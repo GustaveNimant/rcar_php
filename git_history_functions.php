@@ -16,8 +16,8 @@ function git_quatuor_array_build () {
   entering_in_function ($here . " ()");
   
   $qua_by_a = array (
-      "since" => "2017-10-28",
-      "before" => "2018-01-30",
+      "since" => "2017-08-24",
+      "before" => "2018-01-31",
       "entry_current_name" => "Volonte_generale", 
       "blob_name" => "Protocole",
   );
@@ -71,12 +71,16 @@ function git_blob_content_array_build () {
   foreach ($sha_com_a as $k => $sha_com) {
       debug ($here, '$sha_com', $sha_com);
       $sha_blo = git_blob_sha1_of_commit_sha1_of_entry_name_of_blob_name ($sha_com, $nam_ent, $nam_blo);
-      $con_blo = git_blob_content_of_blob_sha1 ($sha_blo);
-      array_push ($con_blo_a, $con_blo);
+      if ($sha_blo == 'EMPTY_BLOB_SHA1') {
+      }
+      else { 
+          $con_blo = git_blob_content_of_blob_sha1 ($sha_blo);
+          array_push ($con_blo_a, $con_blo);
+      }
   }
 
   debug ($here, '$con_blo_a', $con_blo_a);
-
+  
   exiting_from_function ($here);
   return $con_blo_a;
 }

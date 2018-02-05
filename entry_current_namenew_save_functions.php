@@ -1,6 +1,4 @@
 <?php
-
-require_once "irp_library.php";
 require_once "entry_library.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
@@ -74,7 +72,7 @@ function entry_current_namenew_save_entry_subdirectory_rename_build (){
       $log_str = "Entry subdirectory >$old_fnd_ent_cur< has been renamed as >$new_nam_ent_cur<";
   }
   else { 
-      print_warning ($here,/* Improve because of TWICE */
+      print_fatal_error ($here,
       "Entry subdirectory $old_fnd_ent_cur exist",
       "it does NOT",
       "Check");
@@ -160,18 +158,6 @@ function entry_current_namenew_save_link_to_return_build () {
   return $html_str;
 }
 
-function entry_current_namenew_save_irp_path_clean () {
-  $here = __FUNCTION__;
-  entering_in_function ($here);
-
-/* Clean all Father Nodes and Store New as Current */
-  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_entry_fullnameofdirectory_array', $here); 
-  irp_path_clean_register_of_top_key_of_bottom_key_of_where ('index', 'READ_surname_catalog_fullnameoffile_array', $here); 
- 
-  exiting_from_function ($here);
-  return;
-}
-
 function entry_current_namenew_save_build (){
     $here = __FUNCTION__;
     entering_in_function ($here);
@@ -188,8 +174,6 @@ function entry_current_namenew_save_build (){
 
     $html_str .= irp_provide ('entry_current_namenew_save_surname_catalog_update', $here);
     $html_str .= '<br><br>' . "\n";
-
-    entry_current_namenew_save_irp_path_clean (); /* Improve */
 
     $html_str .= irp_provide ('git_command_n_commit_html', $here);
     $html_str .= '<br><br>' . "\n";

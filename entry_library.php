@@ -12,10 +12,10 @@ function entry_current_rename_subdirectory ($old_nam_ent, $new_nam_ent_cur) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($old_nam_ent, $new_nam_ent_cur)");
  
-  $dir = file_basic_directory_of_name ('hd_php_server');
+  $hdir = $_SESSION['parameters']['absolute_path_server'];
 
-  $old_nod = $dir . $old_nam_ent; 
-  $new_nod = $dir . $new_nam_ent_cur; 
+  $old_nod = $hdir . '/' . $old_nam_ent; 
+  $new_nod = $hdir . '/' . $new_nam_ent_cur; 
 
   file_rename_of_old_of_new_of_where ($old_nod, $new_nod, $here);
 

@@ -69,13 +69,12 @@ function block_current_namenew_save_block_file_rename_build () {
   debug_n_check ($here , '$new_nam_blo_cur', $new_nam_blo_cur);
   debug_n_check ($here , '$ext_blo_cur', $ext_blo_cur);
 
-  $log_str = '';
   if ( file_exists ($old_fno_blo_cur)) {
       block_file_rename ($nam_ent_cur, $old_nam_blo_cur, $new_nam_blo_cur, $ext_blo_cur);
       $log_str = "Block file >$old_fno_blo_cur< has been renamed as >$new_nam_blo_cur<";
   }
-  else {/* Improve because of TWICE */
-      print_warning ($here,
+  else {
+      print_fatal_error ($here,
       "Block file $old_fno_blo_cur exist",
       "it does NOT",
       "Check");
@@ -130,7 +129,6 @@ function block_current_namenew_save_block_name_array_update_build () {
   $fno_lis_blo = $fnd_ent_cur . '/' . $nof_lis_blo;
   debug_n_check ($here , '$fno_lis_blo', $fno_lis_blo);
 
-  $log_str = ''; /* Improve */
   if ( file_exists ($fno_lis_blo)) {
       $log_str = "Block Catalog $fno_lis_blo has been renamed";
   }

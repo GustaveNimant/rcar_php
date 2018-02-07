@@ -101,7 +101,7 @@ function block_current_display_build (){
   $html_str .= '<br>' . "\n";
 
   $html_str .= irp_provide ('toward_item_current_modify_form', $here);
-  $html_str .= '<br><br>' . "\n";
+  $html_str .= '<br>' . "\n";
 
   $html_str .= irp_provide ('toward_block_current_history_form', $here);
   $html_str .= '<br><br>' . "\n";
@@ -119,18 +119,18 @@ function block_current_display_build (){
   $html_str .= '<br><br>' . "\n";
 
 # beginning of href_list  
-  $html_str .= irp_provide ('block_current_actions_title', $here); 
-  $html_str .= '<br>' . "\n";
+    $html_str .= irp_provide ('block_current_actions_title', $here); 
+    $html_str .= '<br>' . "\n";
 
-  $html_str .= irp_provide ('toward_block_current_remove', $here);
-  $html_str .= '&nbsp;&nbsp;';
+    $html_str .= irp_provide ('toward_block_current_remove', $here);
+    $html_str .= '&nbsp;&nbsp;' . "\n";
 
-  $html_str .= irp_provide ('toward_block_current_rename', $here);
-  $html_str .= '&nbsp;&nbsp;';
+    $html_str .= irp_provide ('toward_block_current_rename', $here);
+    $html_str .= '&nbsp;&nbsp;' . "\n";
 
-  $html_str .= irp_provide ('toward_block_current_undo', $here);
+    $html_str .= irp_provide ('toward_block_current_undo', $here);
 # end of href_list
-  $html_str .= '<br><br>';
+  $html_str .= '<br><br>' . "\n";
 
   $html_str .= irp_provide ('block_current_display_link_to_return', $here);
   $html_str .= '<br><br>';

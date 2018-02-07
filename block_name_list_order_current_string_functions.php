@@ -25,7 +25,6 @@ function block_name_list_order_current_string_build () {
   if (file_is_existing_of_fullnameoffile ($fno_nam_blo_lis)) {
       /* get ordered list from disk */
       $nam_blo_lis = block_name_list_order_current_string_read_of_entry_name ($nam_ent); 
-
       /* Improve check adequacy of Block_name_list_order_string.lis and array of nameoffile  */
   }
   else {
@@ -38,7 +37,6 @@ function block_name_list_order_current_string_build () {
       $log_str = block_name_list_order_write_of_entry_name_of_block_name_list_order_string ($nam_ent, $nam_blo_lis);
       file_log_write ($here, $log_str);
 
-/* Improve is that correct ? */
       $entity = entity_name_of_build_function_name ($here);
       father_n_son_stack_entity_push_of_father_of_son ("WRITE_block_name_list_order_current_string", $entity);
   }

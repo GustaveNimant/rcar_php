@@ -85,6 +85,39 @@ function git_blob_content_array_build () {
   return $con_blo_a;
 }
 
+function git_blob_content_by_blob_sha1_hash_build () {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ()");
+
+  $hdir = $_SESSION['parameters']['absolute_path_server'];
+
+  $qua_by_a = git_quatuor_array_build ();
+  $since = $qua_by_a['since'];
+  $before = $qua_by_a['before'];
+  $nam_ent = $qua_by_a['entry_current_name'];
+  $nam_blo = $qua_by_a['blob_name'];
+
+  $sha_com_a = git_commit_sha1_array_of_directory_path_of_quatuor ($hdir, $since, $before, $nam_ent, $nam_blo);
+  debug ($here, '$sha_com_a', $sha_com_a);
+
+  $con_blo_by_sha_blo_h = array () ;
+  foreach ($sha_com_a as $k => $sha_com) {
+      debug ($here, '$sha_com', $sha_com);
+      $sha_blo = git_blob_sha1_of_commit_sha1_of_entry_name_of_blob_name ($sha_com, $nam_ent, $nam_blo);
+      if ($sha_blo == 'EMPTY_BLOB_SHA1') {
+      }
+      else { 
+          $con_blo = git_blob_content_of_blob_sha1 ($sha_blo);
+          $con_blo_by_sha_blo_h[$sha_blo] = $con_blo;
+      }
+  }
+
+  debug ($here, '$con_blo_by_sha_blo_h', $con_blo_by_sha_blo_h);
+  
+  exiting_from_function ($here);
+  return $con_blo_by_sha_blo_h;
+}
+
   exiting_from_module ($module);
 
 ?>

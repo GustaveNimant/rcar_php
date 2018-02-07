@@ -35,7 +35,7 @@ function toward_block_current_history_form_build () {
   $irp_fat = str_replace('_build', '', $here);
   father_n_son_stack_entity_push_of_father_of_son ($irp_fat, "BUTTON_$irp_fat");
 
-  $script_action = 'block_current_history_script.php';
+  $script_action = 'block_current_history_display_script.php';
   $entity = entity_name_of_script_nameoffile ($script_action);
 
   $la_Nam_act = ucfirst (language_translate_of_en_string ('display'));

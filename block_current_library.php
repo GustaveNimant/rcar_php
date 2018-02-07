@@ -92,5 +92,35 @@ function item_current_justification_of_block_current_content ($con_blo_cur) {
     return $ite_cur_jus;
 }
 
+function item_previous_content_of_block_current_content ($con_blo_cur) {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+    $ele_a = four_elements_array_off_block_content ($con_blo_cur);
+    $key = 'item_previous_content :';
+    
+    $ite_pre_con = array_retrieve_value_of_key_of_array ($key, $ele_a);
+    
+    debug_n_check ($here, '$ite_pre_con', $ite_pre_con);
+    exiting_from_function ($here);
+
+    return $ite_pre_con;
+}
+
+function block_previous_sha1_of_block_current_content ($con_blo_cur) {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+    $ele_a = four_elements_array_off_block_content ($con_blo_cur);
+    $key = 'block_previous_sha1 :';
+    
+    $blo_pre_sha = array_retrieve_value_of_key_of_array ($key, $ele_a);
+    
+    debug_n_check ($here, '$blo_pre_sha', $blo_pre_sha);
+    exiting_from_function ($here);
+
+    return $blo_pre_sha;
+}
+
 
 ?>

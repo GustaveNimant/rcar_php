@@ -313,23 +313,41 @@ c&rsquo;est une composante d&rsquo;un bloc',
 		'it' => '???',
     ),
     
+    'blob current sha1' => 
+    array (
+        'fr' => 'sha1 du blob courant',
+        'it' => '???',
+    ),
+
     'block' =>
     array (
         'fr' => 'bloc',
         'it' => '???',
    ), 
 
-    'blocks' =>
+    'block current sha1' => 
     array (
-        'fr' => 'blocs',
+        'fr' => 'sha1 du bloc courant',
+        'it' => '???',
+    ),
+    
+    'block information' =>
+    array (
+        'fr' => 'information sur le bloc',
         'it' => '???',
     ), 
-    
+
     'block previous sha1' => 
     array (
         'fr' => 'sha1 du bloc pr&eacute;c&eacute;dent',
         'it' => '???',
     ),
+    
+    'blocks' =>
+    array (
+        'fr' => 'blocs',
+        'it' => '???',
+    ), 
     
     'bubble' => 
     array (

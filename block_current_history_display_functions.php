@@ -8,7 +8,7 @@ $Documentation[$module]['what for'] = "to ...";
 
 entering_in_module ($module);
 
-function block_current_history_page_title_build (){
+function block_current_history_display_page_title_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -39,7 +39,78 @@ function block_current_history_page_title_build (){
   return $html_str;
 }
 
-function block_current_history_link_to_return_build () {
+function block_current_history_display_content_array_build () {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+
+  $nam_ent_cur = irp_provide ('entry_current_name', $here);
+  $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
+
+  $con_blo_by_sha_blo_h = irp_provide ('git_blob_content_by_blob_sha1_hash', $here);
+  debug_n_check ($here, '$con_blo_by_sha_blo_h', $con_blo_by_sha_blo_h);
+
+  $html_str  = comment_entering_of_function_name ($here);
+
+  foreach ($con_blo_by_sha_blo_h as $sha_blo => $con_blo) {
+
+      $en_tit = 'block information'; /* date sha1 user .... */
+      $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
+      $html_str .= '<b>' . common_html_span_background_color_of_html ($la_Tit) . '</b>';
+      $html_str .= '<br><br>';
+
+      $en_tit = 'blob current sha1';
+      $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
+      $html_str .= common_html_span_background_color_of_html ($la_Tit);
+      $html_str .= ' :<br>';
+      $html_str .= $sha_blo;
+      $html_str .= '<br><br>';
+
+      $en_tit = 'item current content';
+      $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
+      $html_str .= common_html_span_background_color_of_html ($la_Tit);
+      $html_str .= ' :<br>';
+      $con_ite_cur = item_current_content_of_block_current_content ($con_blo);
+      $html_str .= $con_ite_cur;
+      $html_str .= '<br><br>';
+
+      $en_tit = 'item current justification';
+      $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
+      $html_str .= common_html_span_background_color_of_html ($la_Tit);
+      $html_str .= ' :<br>';
+      $jus_ite_cur = item_current_justification_of_block_current_content ($con_blo);
+      $html_str .= $jus_ite_cur;
+      $html_str .= '<br><br>';
+
+      $en_tit = 'item previous content';
+      $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
+      $html_str .= common_html_span_background_color_of_html ($la_Tit);
+      $html_str .= ' :<br>';
+      $con_ite_pre = item_previous_content_of_block_current_content ($con_blo);
+      $html_str .= $con_ite_pre;
+      $html_str .= '<br><br>';
+
+      $en_tit = 'block previous sha1';
+      $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
+      $html_str .= common_html_span_background_color_of_html ($la_Tit);
+      $html_str .= ' :<br>';
+      $sha_blo_pre = block_previous_sha1_of_block_current_content ($con_blo);
+      $html_str .= $sha_blo_pre;
+      $html_str .= '<br>';
+
+      $html_str .= '<br>';
+  }
+
+  $html_str .= comment_exiting_of_function_name ($here);
+
+  debug_n_check ($here , '$html_str',  $html_str);
+  exiting_from_function ($here);
+
+  return $html_str;
+}
+
+
+function block_current_history_display_link_to_return_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -60,7 +131,7 @@ function block_current_history_link_to_return_build () {
   return $html_str;
 }
 
-function block_current_history_build (){
+function block_current_history_display_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -68,10 +139,13 @@ function block_current_history_build (){
   $html_str .= irp_provide ('pervasive_page_header', $here);
   $html_str .= '<br><br>' . "\n";
 
-  $html_str .= irp_provide ('block_current_history_page_title', $here);
+  $html_str .= irp_provide ('block_current_history_display_page_title', $here);
   $html_str .= '<br><br>' . "\n";
 
-  $html_str .= irp_provide ('block_current_history_link_to_return', $here);
+  $html_str .= irp_provide ('block_current_history_display_content_array', $here);
+  $html_str .= '<br><br>' . "\n";
+
+  $html_str .= irp_provide ('block_current_history_display_link_to_return', $here);
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   $html_str .= comment_exiting_of_function_name ($here);

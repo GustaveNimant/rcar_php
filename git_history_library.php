@@ -38,6 +38,119 @@ function four_words_off_ls_tree_line ($lin_lst) {
     return $four_wor_a;
 }
 
+function git_log_commit_ipdate_of_commit_sha1 ($sha_com) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($sha_com)");
+
+/* fait par ::1 le 22 January 2018 Ã  17h34:56 */
+
+  $hdir = $_SESSION['parameters']['absolute_path_server'];
+
+  $cmd_git  = "cd $hdir" . ';'; 
+  $cmd_git .= ' git log -1 --pretty=format:"%s" ' . $sha_com ;
+
+  debug_n_check ($here , '$cmd_git', $cmd_git);
+
+  $log_git = shell_exec ($cmd_git);
+
+  if (string_is_empty_of_string ($log_git)) {
+      print_fatal_error ($here,
+      "log of git command >$cmd_git< were NOT empty",
+      'it is empty',
+      'chown -R www-data.www-data server  will probably do the job'
+      );
+  } 
+  debug_n_check ($here , '$log_git', $log_git);
+
+  exiting_from_function ($here);
+  return $log_git;
+}
+
+function git_commit_author_name_of_commit_sha1 ($sha_com) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($sha_com)");
+
+/* Collectif Willforge */
+
+  $hdir = $_SESSION['parameters']['absolute_path_server'];
+
+  $cmd_git  = "cd $hdir" . ';'; 
+  $cmd_git .= ' git log -1 --pretty=format:"%an" ' . $sha_com ;
+
+  debug_n_check ($here , '$cmd_git', $cmd_git);
+
+  $nam_aut = shell_exec ($cmd_git);
+
+  if (string_is_empty_of_string ($nam_aut)) {
+      print_fatal_error ($here,
+      "log of git command >$cmd_git< were NOT empty",
+      'it is empty',
+      'chown -R www-data.www-data server  will probably do the job'
+      );
+  } 
+  debug_n_check ($here , '$nam_aut', $nam_aut);
+
+  exiting_from_function ($here);
+  return $nam_aut;
+}
+
+function git_commit_commiter_name_of_commit_sha1 ($sha_com) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($sha_com)");
+
+/* Collectif Willforge */
+
+  $hdir = $_SESSION['parameters']['absolute_path_server'];
+
+  $cmd_git  = "cd $hdir" . ';'; 
+  $cmd_git .= ' git log -1 --pretty=format:"%cn" ' . $sha_com ;
+
+  debug_n_check ($here , '$cmd_git', $cmd_git);
+
+  $nam_com = shell_exec ($cmd_git);
+
+  if (string_is_empty_of_string ($nam_com)) {
+      print_fatal_error ($here,
+      "log of git command >$cmd_git< were NOT empty",
+      'it is empty',
+      'chown -R www-data.www-data server  will probably do the job'
+      );
+  } 
+  debug_n_check ($here , '$nam_com', $nam_com);
+
+  exiting_from_function ($here);
+  return $nam_com;
+}
+
+function git_commit_commiter_date_of_commit_sha1 ($sha_com) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($sha_com)");
+
+/* 2017-12-14 14:55:12 +010 */ 
+/* cD Thu, 14 Dec 2017 14:55:12 +0100 */
+
+  $hdir = $_SESSION['parameters']['absolute_path_server'];
+
+  $cmd_git  = "cd $hdir" . ';'; 
+  $cmd_git .= ' git log -1 --pretty=format:"%ci" ' . $sha_com ;
+
+  debug_n_check ($here , '$cmd_git', $cmd_git);
+
+  $dat_com = shell_exec ($cmd_git);
+
+  if (string_is_empty_of_string ($dat_com)) {
+      print_fatal_error ($here,
+      "log of git command >$cmd_git< were NOT empty",
+      'it is empty',
+      'chown -R www-data.www-data server  will probably do the job'
+      );
+  } 
+  debug_n_check ($here , '$dat_com', $dat_com);
+
+  exiting_from_function ($here);
+  return $dat_com;
+}
+
 function git_log_commit_sha1ipdate_of_server_path_of_quatuor ($hdir, $since, $before, $nam_ent, $nam_blo) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($hdir, $since, $before, $nam_ent, $nam_blo)");

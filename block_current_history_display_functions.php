@@ -49,6 +49,8 @@ function block_current_history_display_content_array_build () {
   $con_blo_by_sha_blo_h = irp_provide ('git_blob_content_by_blob_sha1_hash', $here);
   debug_n_check ($here, '$con_blo_by_sha_blo_h', $con_blo_by_sha_blo_h);
 
+  $sha_com_by_sha_blo_h = irp_provide ('git_commit_sha1_by_blob_sha1_hash', $here);
+
   $html_str  = comment_entering_of_function_name ($here);
 
   foreach ($con_blo_by_sha_blo_h as $sha_blo => $con_blo) {
@@ -60,9 +62,20 @@ function block_current_history_display_content_array_build () {
           break;
       }
 
+      $sha_com = $sha_com_by_sha_blo_h[$sha_blo];
+
+      $dat_com = git_commit_commiter_date_of_commit_sha1 ($sha_com);
+      $nam_com = git_commit_commiter_name_of_commit_sha1 ($sha_com);
+
       $en_tit = 'block information'; /* date sha1 user .... */
+
       $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
       $html_str .= '<b>' . common_html_span_background_color_of_html ($la_Tit) . '</b>';
+      $html_str .= '<br><br>';
+
+      $html_str .= '<b>date of commit</b> ' . $dat_com  ;
+      $html_str .= '<br><br>';
+      $html_str .= '<b>committer</b> ' . $nam_com  ;
       $html_str .= '<br><br>';
 
       $en_tit = 'blob current sha1';

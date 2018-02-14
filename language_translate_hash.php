@@ -2113,6 +2113,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'fr' => 'page de s&eacute;lection des limites de l&rsquo;historique de la propri&eacute;t&eacute;',
         'it' => '???',
     ), 
+    
+    'page for selecting the limits of the history of the rule' =>
+    array (
+        'fr' => 'page de s&eacute;lection des limites de l&rsquo;historique de la r&egrave;le;',
+        'it' => '???',
+    ), 
 
     'page for undoing the paragraph' =>
     array (

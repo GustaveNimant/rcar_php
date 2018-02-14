@@ -456,15 +456,19 @@ function four_elements_array_of_four_keys_off_string ($key_1, $key_2, $key_3, $k
         switch ($str_t) {
         case "$key_1" :
             $key = $str_t;
+            $result_a[$key] = '';
             break;
         case "$key_2" :
             $key = $str_t;
+            $result_a[$key] = '';
             break;
         case "$key_3" :
             $key = $str_t;
+            $result_a[$key] = '';
             break; 
         case "$key_4" :
             $key = $str_t;
+            $result_a[$key] = '';
             break; 
         default:
             if ( (isset ($result_a[$key])) && 

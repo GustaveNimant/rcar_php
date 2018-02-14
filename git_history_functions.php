@@ -23,12 +23,12 @@ function git_quatuor_array_build () {
   $since_month = irp_provide ('since_month', $here);
   $since_day = irp_provide ('since_day', $here);
 
-  $nam_ent = irp_provide ('entry_current_name', $here);
-  $nam_blo = irp_provide ('block_current_name', $here);
-  
   $before = $before_year . '-' . $before_month . '-' . $before_day;
   $since = $since_year . '-' . $since_month . '-' . $since_day;
 
+  $nam_ent = irp_provide ('entry_current_name', $here);
+  $nam_blo = irp_provide ('block_current_name', $here);
+  
   $qua_by_a = array (
       "since" => $since,
       "before" => $before,

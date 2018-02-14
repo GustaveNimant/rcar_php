@@ -7,6 +7,26 @@ $module = module_name_of_module_nameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
+function string_html_of_array ($var_a){	
+    $eol = end_of_line ();;
+
+    $html_str = '';
+    if (is_array ($var_a)) {
+
+        $html_str .= "<pre>$eol";
+        foreach ($var_a as $k => $val) {
+            $html_str .= $val . $eol;
+        }
+        $html = "</pre>$eol";
+    }
+    else {
+        print_fatal_error ($where, 
+        "argument were an array",
+        "it is NOT",
+        "Check");
+    }
+
+}
 
 function array_first_dots_last_element_of_array ($arr_a) {
   $here = __FUNCTION__;
@@ -532,11 +552,11 @@ function array_retrieve_value_of_key_of_array ($key, $arr_a) {
       }
 
   if ( ! array_key_exists ($key, $arr_a) ) {
-      $str = string_html_of_array ($arr_a);
+      print_html_array ($here, '$arr_a', $arr_a);
       print_fatal_error ($here , 
       "key >$key< were found in array",
-      $str,
-      "Check");
+      "it is NOT",
+      "Check array upper");
       }
 
   $val = $arr_a[$key];

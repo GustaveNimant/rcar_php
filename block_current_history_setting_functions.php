@@ -48,17 +48,30 @@ function block_current_history_setting_form_build (){
 
     $la_Nam_act = ucfirst (language_translate_of_en_string ('validate'));
 
+    $la_Nam_yea = ucfirst (language_translate_of_en_string ('year'));
+    $la_Nam_mon = ucfirst (language_translate_of_en_string ('month'));
+    $la_Nam_day = ucfirst (language_translate_of_en_string ('day'));
+
     $html_str  = comment_entering_of_function_name ($here);
 
     $html_str .= '<form action="' . $script_action . '" method="get">';
     $html_str .= '<table>';
     $html_str .= '<tr>';
+    $html_str .= '<td></td>';
+    $html_str .= "<td>$la_Nam_yea</td>";
+    $html_str .= "<td>$la_Nam_mon</td>";
+    $html_str .= "<td>$la_Nam_day</td>";
+    $html_str .= '</tr>';
+    $html_str .= '<tr>';
     $html_str .= since_date_html_make ();
-    $html_str .= '</tr><tr>';
+    $html_str .= '</tr>';
+    $html_str .= '<tr>';
     $html_str .= before_date_html_make ();
     $html_str .= '</tr>';
     $html_str .= '</table>';
+    $html_str .= '<center>';
     $html_str .= '<input type="submit" value="' . $la_Nam_act . '">' . "\n";
+    $html_str .= '</center>';
     $html_str .= '</form>';
 
     $html_str .= comment_exiting_of_function_name ($here);

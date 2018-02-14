@@ -69,10 +69,12 @@ function before_day_html_make () {
 
 function before_date_html_make () {
 
+    $la_Nam_bef = ucfirst (language_translate_of_en_string ('before'));
+
     $html_str  = '';
     
     $html_str .= '<td>';
-    $html_str .= 'before :';
+    $html_str .= $la_Nam_bef;
     $html_str .= '</td>';
     $html_str .= '<td>';
     $html_str .= before_year_html_make ();
@@ -144,9 +146,11 @@ function since_day_html_make () {
 
 function since_date_html_make () {
 
+    $la_Nam_sin = ucfirst (language_translate_of_en_string ('since'));
+
     $html_str  = '';
     $html_str .= '<td>';
-    $html_str .= 'since :';
+    $html_str .= $la_Nam_sin;
     $html_str .= '</td>';
     $html_str .= '<td>';
     $html_str .= since_year_html_make ();

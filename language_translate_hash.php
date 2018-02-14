@@ -629,6 +629,12 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
 
+    'day' =>
+    array (
+        'fr' => 'jour',
+        'it' => '???',
+    ),
+
     'debug' => 
     array (
         'fr' => 'debug',
@@ -1562,6 +1568,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ),
     
+    'month' =>
+    array (
+        'fr' => 'mois',
+        'it' => '???',
+    ),
+
     'move after' =>
     array (
 		'fr' => 'd&eacute;placer apr&egrave;s',
@@ -2116,7 +2128,7 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
     
     'page for selecting the limits of the history of the rule' =>
     array (
-        'fr' => 'page de s&eacute;lection des limites de l&rsquo;historique de la r&egrave;le;',
+        'fr' => 'page de s&eacute;lection des limites de l&rsquo;historique de la r&egrave;gle',
         'it' => '???',
     ), 
 
@@ -2523,6 +2535,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ),
     
+    'since' => 
+    array (
+        'fr' => 'depuis',
+        'it' => '???',
+    ),
+    
     'specify a text defining the new property' => 
     array (
 		'fr' => 'indiquez un texte d&eacute;finissant la nouvelle propri&eacute;t&eacute;',
@@ -2873,6 +2891,12 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
     'write a short text defining property' =>
     array (
         'fr' => 'ecrire un texte court d&eacute;finissant la propri&eacute;t&eacute;',
+        'it' => '???',
+    ),
+
+    'year' =>
+    array (
+        'fr' => 'ann&eacute;e',
         'it' => '???',
     ),
 

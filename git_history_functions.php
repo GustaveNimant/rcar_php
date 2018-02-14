@@ -15,13 +15,27 @@ function git_quatuor_array_build () {
   $here = __FUNCTION__;
   entering_in_function ($here . " ()");
   
+  $before_year = irp_provide ('before_year', $here);
+  $before_month = irp_provide ('before_month', $here);
+  $before_day = irp_provide ('before_day', $here);
+
+  $since_year = irp_provide ('since_year', $here);
+  $since_month = irp_provide ('since_month', $here);
+  $since_day = irp_provide ('since_day', $here);
+
+  $nam_ent = irp_provide ('entry_current_name', $here);
+  $nam_blo = irp_provide ('block_current_name', $here);
+  
+  $before = $before_year . '-' . $before_month . '-' . $before_day;
+  $since = $since_year . '-' . $since_month . '-' . $since_day;
+
   $qua_by_a = array (
-      "since" => "2017-08-24",
-      "before" => "2018-01-31",
-      "entry_current_name" => "Volonte_generale", 
-      "blob_name" => "Protocole",
+      "since" => $since,
+      "before" => $before,
+      "entry_current_name" => $nam_ent,
+      "blob_name" => $nam_blo,
   );
- 
+  
   debug ($here, '$qua_by_a', $qua_by_a);
   exiting_from_function ($here);
   return $qua_by_a;
@@ -64,13 +78,13 @@ function git_blob_content_array_build () {
   $nam_ent = $qua_by_a['entry_current_name'];
   $nam_blo = $qua_by_a['blob_name'];
 
-  $sha_com_a = git_commit_sha1_array_of_directory_path_of_quatuor ($hdir, $since, $before, $nam_ent, $nam_blo);
-  debug ($here, '$sha_com_a', $sha_com_a);
+  $com_sha_a = git_commit_sha1_array_of_directory_path_of_quatuor ($hdir, $since, $before, $nam_ent, $nam_blo);
+  debug ($here, '$com_sha_a', $com_sha_a);
 
   $con_blo_a = array () ;
-  foreach ($sha_com_a as $k => $sha_com) {
-      debug ($here, '$sha_com', $sha_com);
-      $sha_blo = git_blob_sha1_of_commit_sha1_of_entry_name_of_blob_name ($sha_com, $nam_ent, $nam_blo);
+  foreach ($com_sha_a as $k => $com_sha) {
+      debug ($here, '$com_sha', $com_sha);
+      $sha_blo = git_blob_sha1_of_commit_sha1_of_entry_name_of_blob_name ($com_sha, $nam_ent, $nam_blo);
       if ($sha_blo == 'EMPTY_BLOB_SHA1') {
       }
       else { 
@@ -97,18 +111,28 @@ function git_blob_content_by_blob_sha1_hash_build () {
   $nam_ent = $qua_by_a['entry_current_name'];
   $nam_blo = $qua_by_a['blob_name'];
 
-  $sha_com_a = git_commit_sha1_array_of_directory_path_of_quatuor ($hdir, $since, $before, $nam_ent, $nam_blo);
-  debug ($here, '$sha_com_a', $sha_com_a);
+  $com_sha_a = git_commit_sha1_array_of_directory_path_of_quatuor ($hdir, $since, $before, $nam_ent, $nam_blo);
+  debug ($here, '$com_sha_a', $com_sha_a);
 
   $con_blo_by_sha_blo_h = array () ;
-  foreach ($sha_com_a as $k => $sha_com) {
-      debug ($here, '$sha_com', $sha_com);
-      $sha_blo = git_blob_sha1_of_commit_sha1_of_entry_name_of_blob_name ($sha_com, $nam_ent, $nam_blo);
+  foreach ($com_sha_a as $k => $com_sha) {
+      debug ($here, '$com_sha', $com_sha);
+      $sha_blo = git_blob_sha1_of_commit_sha1_of_entry_name_of_blob_name ($com_sha, $nam_ent, $nam_blo);
+      debug ($here, '$sha_blo', $sha_blo);
       if ($sha_blo == 'EMPTY_BLOB_SHA1') {
       }
       else { 
           $con_blo = git_blob_content_of_blob_sha1 ($sha_blo);
-          $con_blo_by_sha_blo_h[$sha_blo] = $con_blo;
+          debug ($here, '$con_blo', $con_blo);
+          
+          if (string_first_word_of_string ($con_blo) == 'item_current_content') {
+              $con_blo_by_sha_blo_h[$sha_blo] = $con_blo;
+          }
+          else {
+              $log_str = "No item_current_content in Block of sha1 $sha_blo in commit sha1 $com_sha. Skipped";
+              file_log_write ($here, $log_str);
+              break;
+          }
       }
   }
 

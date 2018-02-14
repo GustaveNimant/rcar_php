@@ -352,7 +352,7 @@ function is_substring_of_substring_off_string ($sub_str, $str) {
 function check_is_substring_of_substring_off_string ($sub_str, $str) { 
   $here = __FUNCTION__;
   if ( ! is_substring_of_substring_off_string ($sub_str, $str)) {
-      print_fatal_error (
+      print_fatal_error ($here,
           "substring >$sub_str< were contained into string >$str<",
           "it is NOT",
           "Check"

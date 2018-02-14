@@ -12,7 +12,7 @@ $Documentation[$module]['what for'] = "to ...";
 
 function block_current_content_of_four_elements ($con_ite_cur, $jus_ite_cur, $con_ite_pre, $blo_pre_sha) {
   $here = __FUNCTION__;
-  entering_in_function ($here);
+  entering_in_function ($here. " ($con_ite_cur, $jus_ite_cur, $con_ite_pre, $blo_pre_sha)");
 
   $con_blo_cur  = '';
   $con_blo_cur .= 'item_current_content :';
@@ -65,7 +65,7 @@ function block_content_write ($nam_ent, $nam_blo, $con_blo) {
 
 function item_current_content_of_block_current_content ($con_blo_cur) {
     $here = __FUNCTION__;
-    entering_in_function ($here);
+    entering_in_function ($here . " ($con_blo_cur)");
     
     $ele_a = four_elements_array_off_block_content ($con_blo_cur);
     $key = 'item_current_content :';
@@ -80,7 +80,7 @@ function item_current_content_of_block_current_content ($con_blo_cur) {
 
 function item_current_justification_of_block_current_content ($con_blo_cur) {
     $here = __FUNCTION__;
-    entering_in_function ($here);
+    entering_in_function ($here . " ($con_blo_cur)");
     
     $ele_a = four_elements_array_off_block_content ($con_blo_cur);
     $key = 'item_current_justification :';
@@ -94,7 +94,7 @@ function item_current_justification_of_block_current_content ($con_blo_cur) {
 
 function item_previous_content_of_block_current_content ($con_blo_cur) {
     $here = __FUNCTION__;
-    entering_in_function ($here);
+    entering_in_function ($here . " ($con_blo_cur)");
     
     $ele_a = four_elements_array_off_block_content ($con_blo_cur);
     $key = 'item_previous_content :';
@@ -109,7 +109,7 @@ function item_previous_content_of_block_current_content ($con_blo_cur) {
 
 function block_previous_sha1_of_block_current_content ($con_blo_cur) {
     $here = __FUNCTION__;
-    entering_in_function ($here);
+    entering_in_function ($here . " ($con_blo_cur)");
     
     $ele_a = four_elements_array_off_block_content ($con_blo_cur);
     $key = 'block_previous_sha1 :';

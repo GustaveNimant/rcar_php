@@ -6,6 +6,38 @@ $module = module_name_of_module_nameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
+function four_words_off_ls_tree_line ($lin_lst) {
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($lin_lst)");
+    
+/* Ex.: lin_lst : 100644 blob 3e756621cb2417a91f0c2c896c24e1972b92e060\tCitoyen.ite    */
+/*                            two_wor_a[0]                              two_wor_a[1]   */
+/*            four_wor_a[0] four_wor_a[1] four_wor_a[2]                 four_wor_a[3]  */
+    
+    if ($lin_lst == 'EMPTY_LS_TREE_OUPUT') {
+        $sha_blo = 'EMPTY_BLOB_SHA1';
+        debug ($here , '$sha_blo', $sha_blo);
+        
+        exiting_from_function ($here);
+        return $sha_blo;
+    }
+    
+    $str_tri = trim ($lin_lst, " \t\n\r\0\x0B");
+    debug ($here , '$str_tri', $str_tri);
+    
+    $two_wor_a = explode ("\t", $str_tri);
+    debug ($here , '$two_wor_a', $two_wor_a);
+    
+    $four_wor_a = explode (" ", $two_wor_a[0]);
+    array_push ($four_wor_a, $two_wor_a[1]);
+    
+    debug ($here , '$four_wor_a', $four_wor_a);
+    
+    exiting_from_function ($here);
+    
+    return $four_wor_a;
+}
+
 function git_log_commit_sha1ipdate_of_server_path_of_quatuor ($hdir, $since, $before, $nam_ent, $nam_blo) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($hdir, $since, $before, $nam_ent, $nam_blo)");
@@ -46,11 +78,14 @@ function git_log_commit_sha1ipdate_of_server_path_of_quatuor ($hdir, $since, $be
   return $log_git;
 }
 
-function git_ls_tree_of_commit_sha1_of_entry_name ($sha_com, $nam_ent) {
+function git_ls_tree_string_of_commit_sha1_of_entry_name ($sha_com, $nam_ent) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($sha_com, $nam_ent)");
 
-/* 100644 blob 3e756621cb2417a91f0c2c896c24e1972b92e060	Citoyen.ite */
+/* 100755 blob 97165023228f5f02706a4552d2fc9ac98170c077	Block_name_list_order_string.lis */
+/* 100755 blob 3405f4b78cc7b7b50eee483123ec287e89a32ebc	Interet_general_objet_volonte_generale.blo */
+/* 100755 blob 6d8f012024dd9fecf40afdccd00bde1419239851	Pas_particuliere.blo */
+/* 100755 blob 68364df6ec36e8a87264a371592ec3474d0ecc90	Protocole.blo */
 
   $hdir = $_SESSION['parameters']['absolute_path_server'];
   debug_n_check ($here , '$hdir', $hdir);
@@ -70,15 +105,97 @@ function git_ls_tree_of_commit_sha1_of_entry_name ($sha_com, $nam_ent) {
   return $str_lst;
 }
 
+function git_ls_tree_line_array_of_commit_sha1_of_entry_name ($sha_com, $nam_ent) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($sha_com, $nam_ent)");
+
+/* Array */
+/* ( */
+/*     [0] => 100755 blob 97165023228f5f02706a4552d2fc9ac98170c077	Block_name_list_order_string.lis */
+/*     [1] => 100755 blob 3405f4b78cc7b7b50eee483123ec287e89a32ebc	Interet_general_objet_volonte_generale.blo */
+/*     [2] => 100755 blob 6d8f012024dd9fecf40afdccd00bde1419239851	Pas_particuliere.blo */
+/*     [3] => 100755 blob 68364df6ec36e8a87264a371592ec3474d0ecc90	Protocole.blo */
+/* ) */
+
+  $str_lst = git_ls_tree_string_of_commit_sha1_of_entry_name ($sha_com, $nam_ent);
+
+  if ($str_lst == 'EMPTY_LS_TREE_OUPUT') {
+      $lin_lst_a = array ('EMPTY_BLOB_SHA1');
+      debug ($here , '$lin_lst_a', $lin_lst_a);
+
+      exiting_from_function ($here);
+      return $lin_lst_a;
+  }
+
+  $str_tri = trim ($str_lst, " \t\n\r\0\x0B");
+  $lin_lst_a = explode ("\n", $str_tri);
+  debug ($here , '$lin_lst_a', $lin_lst_a);
+
+  exiting_from_function ($here);
+  return $lin_lst_a;
+}
+
 function git_blob_sha1_of_commit_sha1_of_entry_name_of_blob_name ($sha_com, $nam_ent, $nam_blo) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($sha_com, $nam_ent, $nam_blo)");
 
-/* Ex.: str : 100644 blob 3e756621cb2417a91f0c2c896c24e1972b92e060	Citoyen.ite */
-/*                          wor_a[0]                                wor_a[1]    */
-/*            w_a[0] w_a[1] w_a[2]                                  wor_a[1]    */
+/* lin_str : 100755 blob 68364df6ec36e8a87264a371592ec3474d0ecc90	Protocole.blo */
+/*                  four_wor_a[0] four_wor_a[1] four_wor_a[2]       four_wor_a[3] */
 
-  $str_lst = git_ls_tree_of_commit_sha1_of_entry_name ($sha_com, $nam_ent);
+  $lin_lst_a = git_ls_tree_line_array_of_commit_sha1_of_entry_name ($sha_com, $nam_ent);
+  debug_n_check ($here , '$lin_lst_a', $lin_lst_a);
+
+  $ext_blo = $_SESSION['parameters']['extension_block_filename'];
+  $nof_blo = $nam_blo . '.' . $ext_blo;
+
+  $sha_blo = "";
+  foreach ($lin_lst_a as $k => $lin_lst) {
+      debug_n_check ($here , '$lin_lst', $lin_lst);
+
+      if ($lin_lst == "EMPTY_BLOB_SHA1") {
+          break;
+      }
+
+      $four_wor_a = four_words_off_ls_tree_line ($lin_lst);
+      debug_n_check ($here , '$four_wor_a', $four_wor_a);
+
+      $git_typ = $four_wor_a[1];
+      debug_n_check ($here , '$git_typ', $git_typ);
+      $nof = $four_wor_a[3];
+      debug_n_check ($here , '$nof', $nof);
+
+      if ($git_typ == "blob" ) {
+          if ($nof == $nof_blo) {
+              $sha_blo = $four_wor_a[2];
+              debug_n_check ($here , 'loop $nof $sha_blo', $nof . ' ' . $sha_blo);
+          }
+      }
+  }
+   
+  if (string_is_empty_of_string ($sha_blo)) {
+      $sha_blo = 'EMPTY_BLOB_SHA1';
+
+      print_warning ($here, 
+      "Blob_sha1 were NOT empty", 
+      "it is EMPTY",
+      "it is set to >$sha_blo<");
+  }
+
+  debug ($here , '$sha_blo', $sha_blo);
+  exiting_from_function ($here);
+
+  return $sha_blo;
+}
+
+function git_commit_sha1_by_blob_sha1_hash_of_commit_sha1_of_entry_name_of_blob_name ($sha_com, $nam_ent, $nam_blo) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($sha_com, $nam_ent, $nam_blo)");
+
+/* Ex.: lin_lst : 100644 blob 3e756621cb2417a91f0c2c896c24e1972b92e060\tCitoyen.ite    */
+/*                            two_wor_a[0]                              two_wor_a[1]   */
+/*            four_wor_a[0] four_wor_a[1] four_wor_a[2]                 four_wor_a[3]  */
+
+  $str_lst = git_ls_tree_string_of_commit_sha1_of_entry_name ($sha_com, $nam_ent);
   debug ($here , '$str_lst', $str_lst);
 
   if ($str_lst == 'EMPTY_LS_TREE_OUPUT') {
@@ -96,37 +213,30 @@ function git_blob_sha1_of_commit_sha1_of_entry_name_of_blob_name ($sha_com, $nam
   $ext_blo = $_SESSION['parameters']['extension_block_filename'];
   $nof_blo = $nam_blo . '.' . $ext_blo;
 
-  $sha_blo = "";
-  foreach ($str_blo_a as $k => $str) {
-      $wor_a = explode ("\t", $str);
-      debug ($here , '$wor_a', $wor_a);
+  $sha_com_by_sha_blo_h = array ();
+  foreach ($str_blo_a as $k => $lin_str) {
 
-      $nof = $wor_a[1];
+      $four_wor_a = four_words_off_ls_tree_line ($lin_lst);
+
+      $nof = $four_wor_a[3];
       debug ($here , '$nof', $nof);
 
+      $git_typ = $four_wor_a[1];
+
+      if ($git_typ == "blob" ) {
+
       if ($nof == $nof_blo) {
-          $w_a = explode (" ", $wor_a[0]);
-          debug ($here , '$w_a', $w_a);
-          if ($w_a[1] == "blob" ) {
-              $sha_blo = $w_a[2];
-              debug ($here , 'loop $nof $sha_blo', $nof . ' ' . $sha_blo);
-          }
+          $sha_blo = $four_wor_a[2];
+          $sha_com_by_sha_blo_h[$sha_blo] = $sha_com;	
+          debug ($here , 'loop $sha_blo', $nof . ' ' . $sha_blo);
       }
+	 }
   }
   
-  if (string_is_empty_of_string ($sha_blo)) {
-      $sha_blo = 'empty_sha';
-
-      print_warning ($here, 
-      "Blob_sha were NOT empty", 
-      "it is EMPTY",
-      "it is set to >$sha_blo<");
-  }
-
-  debug ($here , '$sha_blo', $sha_blo);
+  debug_n_check ($here , '$sha_com_by_sha_blo_h', $sha_com_by_sha_blo_h);
   exiting_from_function ($here);
 
-  return $sha_blo;
+  return $sha_com_by_sha_blo_h;
 }
 
 function git_log_of_count_of_directory_path_of_entry_name_of_block_name ($cou, $hdir, $nam_ent, $nam_blo) {
@@ -228,8 +338,8 @@ function git_blob_content_of_blob_sha1 ($sha_blo) {
   entering_in_function ($here . " ($sha_blo)");
 /* Ex.: Un citoyen n'appartient qu'à une seule population */
 
-  if ($sha_blo == 'empty_sha') {
-      $con_blo = 'inexistant_blob';
+  if ($sha_blo == 'EMPTY_BLOB_SHA1') {
+      $con_blo = 'INEXISTANT_BLOB';
       debug ($here , '$con_blo', $con_blo);
       exiting_from_function ($here);
       return $con_blo;

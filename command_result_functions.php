@@ -74,7 +74,7 @@ function command_result_html_build () {
             $hdir = $_SESSION['parameters']['absolute_path_server'];
             $dir = $hdir . '/' .'FILES';
             $nof = $com_arg . '.txt';
-            $fno = $dir . $nof;
+            $fno = $dir . '/' . $nof;
             file_string_write ($fno, $com_res);
 
             debug_n_check ($here , '$com_res', $com_res);

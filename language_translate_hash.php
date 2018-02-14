@@ -2108,6 +2108,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ),
 
+    'page for selecting the limits of the history of the property' =>
+    array (
+        'fr' => 'page de s&eacute;lection des limites de l&rsquo;historique de la propri&eacute;t&eacute;',
+        'it' => '???',
+    ), 
+
     'page for undoing the paragraph' =>
     array (
         'fr' => 'page de restauration du paragraphe pr&eacute;c&eacute;dent',
@@ -2801,6 +2807,12 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
     'usage' => 
     array (
 		'fr' => 'utilisation',
+		'it' => '???',
+    ),
+
+    'validate' => 
+    array (
+		'fr' => 'valider',
 		'it' => '???',
     ),
 

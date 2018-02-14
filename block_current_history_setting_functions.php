@@ -1,5 +1,6 @@
 <?php
 require_once "irp_library.php";
+require_once "date_selected_functions.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
 
@@ -16,7 +17,7 @@ function block_current_history_setting_page_title_build (){
   $sur_blo_cur = irp_provide ('block_current_surname_from_block_current_name', $here);
   $kin_blo = irp_provide ('entry_block_kind', $here);
 
-  $en_tit = 'page for setting the history of the ' . $kin_blo;  
+  $en_tit = 'page for selecting the limits of the history of the ' . $kin_blo;  
 
   $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);
@@ -43,42 +44,23 @@ function block_current_history_setting_form_build (){
     $here = __FUNCTION__;
     entering_in_function ($here);
     
-    $entity_textarea = 'item_next_content';
+    $script_action = 'block_current_history_display_script.php';
 
-    $row_hta = $_SESSION['parameters']['html_textarea_rows'];
-    $col_hta = $_SESSION['parameters']['html_textarea_cols'];
-    
+    $la_Nam_act = ucfirst (language_translate_of_en_string ('validate'));
+
     $html_str  = comment_entering_of_function_name ($here);
-/*
-<form action="command_result_script.php" method="get"> 
-<select name="command_action">
-<option value="display">Actions</option>
-<option value="write"> 
-&Eacute;crire</option> 
-<option value="set"> 
-Activer</option> 
-<option value="display"> 
-Afficher</option> 
-<option value="load"> 
-Charger</option> 
-<option value="unset"> 
-D&eacute;sactiver</option> 
-<option value="debug"> 
-Debug</option> 
-<option value="read"> 
-Lire</option> 
-<option value="remove"> 
-Supprimer</option> 
-</select> 
-<input type="text" name="command_argument" size="50">
-<input type="submit" value="Action">
-</form> 
-*/
-    $html_str .= '<textarea name="' . $entity_textarea; 
-    $html_str .= '" rows="' . $row_hta .'" cols="' .$col_hta;
-    $html_str .= '"/>';
-    $html_str .= $con_ite_cur;
-    $html_str .= '</textarea> ' . "\n";
+
+    $html_str .= '<form action="' . $script_action . '" method="get">';
+    $html_str .= '<table>';
+    $html_str .= '<tr>';
+    $html_str .= since_date_html_make ();
+    $html_str .= '</tr><tr>';
+    $html_str .= before_date_html_make ();
+    $html_str .= '</tr>';
+    $html_str .= '</table>';
+    $html_str .= '<input type="submit" value="' . $la_Nam_act . '">' . "\n";
+    $html_str .= '</form>';
+
     $html_str .= comment_exiting_of_function_name ($here);
     
     debug_n_check ($here , '$html_str',  $html_str);

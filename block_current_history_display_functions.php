@@ -43,7 +43,6 @@ function block_current_history_display_content_array_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
   $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
 
@@ -53,6 +52,13 @@ function block_current_history_display_content_array_build () {
   $html_str  = comment_entering_of_function_name ($here);
 
   foreach ($con_blo_by_sha_blo_h as $sha_blo => $con_blo) {
+
+      debug_n_check ($here, '$sha_blo', $sha_blo);
+      debug_n_check ($here, '$con_blo', $con_blo);
+
+      if ($sha_blo == "EMPTY_BLOB_SHA1") {
+          break;
+      }
 
       $en_tit = 'block information'; /* date sha1 user .... */
       $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));

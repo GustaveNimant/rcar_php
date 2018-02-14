@@ -12,6 +12,7 @@ require_once "block_content_linked_by_block_name_hash_functions.php";
 require_once "block_current_display_functions.php";
 require_once "block_current_functions.php";
 require_once "block_current_history_display_functions.php";
+require_once "block_current_history_setting_functions.php";
 require_once "block_current_name_functions.php";
 require_once "block_current_nameoffile_array_functions.php";
 require_once "block_current_namenew_save_functions.php";

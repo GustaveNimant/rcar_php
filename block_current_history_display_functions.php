@@ -67,19 +67,26 @@ function block_current_history_display_content_array_build () {
       $dat_com = git_commit_commiter_date_of_commit_sha1 ($sha_com);
       $nam_com = git_commit_commiter_name_of_commit_sha1 ($sha_com);
 
-      $en_tit = 'block information'; /* date sha1 user .... */
+      $en_dat = 'date of commit';
+      $la_Dat = ucfirst (language_translate_of_en_string ($en_dat));
 
+      $en_com = 'committer';
+      $la_Com = ucfirst (language_translate_of_en_string ($en_com));
+
+      $en_tit = 'block information'; /* date sha1 user .... */
       $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
+
+
       $html_str .= '<b>' . common_html_span_background_color_of_html ($la_Tit) . '</b>';
       $html_str .= '<br><br>';
-
-      $html_str .= '<b>date of commit</b> ' . $dat_com  ;
+      $html_str .= '<b>' . $la_Dat . '</b> : ' . $dat_com  ;
       $html_str .= '<br><br>';
-      $html_str .= '<b>committer</b> ' . $nam_com  ;
+      $html_str .= '<b>' . $la_Com . '</b> : ' . $nam_com  ;
       $html_str .= '<br><br>';
 
       $en_tit = 'blob current sha1';
       $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
+
       $html_str .= common_html_span_background_color_of_html ($la_Tit);
       $html_str .= ' :<br>';
       $html_str .= $sha_blo;

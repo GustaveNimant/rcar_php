@@ -467,6 +467,12 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
 
+    'commit' => 
+    array (
+        'fr' => 'commit',
+        'it' => '???',
+    ),
+
     'commit entries' => 
     array (
         'fr' => 'commiter les entr&eacute;es',
@@ -479,9 +485,9 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
 
-    'commit' => 
+    'committer' => 
     array (
-        'fr' => 'commit',
+        'fr' => 'committeur',
         'it' => '???',
     ),
 
@@ -629,6 +635,12 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
 
+    'date of commit' =>
+    array (
+        'fr' => 'date du commit',
+        'it' => '???',
+    ),
+    
     'day' =>
     array (
         'fr' => 'jour',
@@ -2126,6 +2138,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ), 
     
+    'page for selecting the limits of the history of the question' =>
+    array (
+        'fr' => 'page de s&eacute;lection des limites de l&rsquo;historique de la question',
+        'it' => '???',
+    ),
+
     'page for selecting the limits of the history of the rule' =>
     array (
         'fr' => 'page de s&eacute;lection des limites de l&rsquo;historique de la r&egrave;gle',

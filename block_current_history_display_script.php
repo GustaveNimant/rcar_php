@@ -22,7 +22,6 @@ foreach ($_GET as $get_key => $get_val) {
     file_log_write ($script, $log_str);
 }
 
-
 $html_str = irp_provide ($entity, $script);
 
 print $html_str;

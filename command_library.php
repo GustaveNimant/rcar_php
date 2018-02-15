@@ -298,9 +298,9 @@ function command_write ($what) {
     entering_in_function ($here . " ($what)");
 
     $hdir = $_SESSION['parameters']['absolute_path_server'];
-    $dir = $hdir . '/' .'FILES';
+    $dir = $hdir . '/' . 'FILES';
     $nof = $what . '.txt';
-    $fno = $dir . $nof;
+    $fno = $dir . '/' . $nof;
 
     debug_n_check ($here , '$fno', $fno);
 

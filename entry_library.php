@@ -33,8 +33,8 @@ function entry_subdirectory_name_of_entry_name ($nam_ent) {
 
   string_check_entry_name_of_string ($nam_ent);
 
-  $dir_bas = file_basic_directory_of_name ("hd_php_server");
-  $fnd = $dir_bas . $nam_ent;
+  $hdir = $_SESSION['parameters']['absolute_path_server'];
+  $fnd = $hdir . '/'. $nam_ent;
   debug_n_check ($here , '$fnd', $fnd);
 
   exiting_from_function ($here);

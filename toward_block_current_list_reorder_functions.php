@@ -43,7 +43,7 @@ function no_block_current_list_build () {
     $la_bub_Tit .= ' <i><b>' . $sur_ent_cur . '</b></i> ';
     
     $html_str  = comment_entering_of_function_name ($here);
-    $html_str .= $la_bub_Tit;
+    $html_str .= common_html_span_background_color_of_html ($la_bub_Tit);
     $html_str .= comment_exiting_of_function_name ($here);
 
     debug_n_check ($here , '$html_str',  $html_str);
@@ -65,7 +65,7 @@ function only_one_block_current_list_build () {
     $la_bub_Tit .= ' <i><b>' . $sur_ent_cur . '</b></i> ';
     
     $html_str  = comment_entering_of_function_name ($here);
-    $html_str .= $la_bub_Tit;
+    $html_str .= common_html_span_background_color_of_html ($la_bub_Tit);
     $html_str .= comment_exiting_of_function_name ($here);
 
     debug_n_check ($here , '$html_str',  $html_str);
@@ -104,9 +104,11 @@ function toward_block_current_list_reorder_build () {
 
   if (count ($nam_blo_a) == 0 ) {
       $html_str .= irp_provide ('no_block_current_list', $here);
+      $html_str .= '<br>' . "\n";
   }
   elseif (count ($nam_blo_a) == 1 ) {
       $html_str .= irp_provide ('only_one_block_current_list', $here);
+      $html_str .= '<br>' . "\n";
   }
   else if (count ($nam_blo_a) > 1 ) {
       $html_str .= irp_provide ('more_than_one_block_current_list_form', $here);

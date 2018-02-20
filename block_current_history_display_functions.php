@@ -76,7 +76,6 @@ function block_current_history_display_content_array_build () {
       $en_tit = 'block information'; /* date sha1 user .... */
       $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
 
-
       $html_str .= '<b>' . common_html_span_background_color_of_html ($la_Tit) . '</b>';
       $html_str .= '<br><br>';
       $html_str .= '<b>' . $la_Dat . '</b> : ' . $dat_com  ;
@@ -134,7 +133,6 @@ function block_current_history_display_content_array_build () {
 
   return $html_str;
 }
-
 
 function block_current_history_display_link_to_return_build () {
   $here = __FUNCTION__;

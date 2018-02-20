@@ -2072,6 +2072,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
    ), 
 
+   'page for removing the rule' =>
+    array (
+        'fr' => 'page de suppression de la r&egrave;gle',
+        'it' => '???',
+   ), 
+
     'page for renaming the entry' =>
     array (
         'fr' => 'page de renommage de l&rsquo;entr&eacute;e',

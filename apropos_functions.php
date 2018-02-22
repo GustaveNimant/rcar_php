@@ -14,13 +14,14 @@ function apropos_version_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $version   = $_SESSION['parameters']['version'];
+  $num_ver = $_SESSION['parameters']['version_number'];
+  $tit_ver = $_SESSION['parameters']['version_title'];
   $nam_pro = $_SESSION['parameters']['program_name'];
   $NAM_PRO = strtoupper ($nam_pro);
 
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= "$NAM_PRO Version $version<br>"; 
-  $html_str .= 'Contact : <a href="mailto:arce@willforge.fr?subject=A propos d\'Arce">arce@willforge.fr</a><br>'; 
+  $html_str .= "$NAM_PRO Version # $num_ver [$tit_ver]<br>"; 
+  $html_str .= 'Contact : <a href="mailto:rcar@willforge.fr?subject=A propos de Rcar">rcar@willforge.fr</a><br>'; 
   $html_str .= 'Copyright : Creative Commons'; 
   $html_str .= comment_exiting_of_function_name ($here);
 

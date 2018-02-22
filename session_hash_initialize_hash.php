@@ -164,7 +164,8 @@ $_SESSION['parameters']['irp_path_step_number_maximum'] = 50;
 $_SESSION['parameters']['stack_function_level_maximum'] = 250;
 $_SESSION['parameters']['stack_function_level_dot_list'] = $points;
 
-$_SESSION['parameters']['version'] = 0.01;
+$_SESSION['parameters']['version_number'] = "1.00";
+$_SESSION['parameters']['version_title'] = 'Blockchain & Git';
 $_SESSION['parameters']['www_filename_css'] = 'CSS/style.css';
 
 $_SESSION['time_start'] = microtime (TRUE);

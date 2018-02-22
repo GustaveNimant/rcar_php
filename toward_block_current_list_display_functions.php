@@ -87,6 +87,7 @@ function toward_block_current_list_display_display_build () {
         $nam_blo_cur_ord_a = irp_provide ('block_name_array_order_current', $here);
 
         foreach ($nam_blo_cur_ord_a as $key => $nam_blo) {
+
             $con_blo = array_retrieve_value_of_key_of_array ($nam_blo, $con_blo_by_nam_blo_h);
             $con_ite_cur = item_current_content_of_block_current_content ($con_blo);
 
@@ -94,8 +95,9 @@ function toward_block_current_list_display_display_build () {
             
             $html_str .= block_current_display_and_link_of_surname_by_name_hash_of_block_current_name_of_la_eol ($sur_by_nam_h, $nam_blo, $la_eol);
             $html_str .= '<br>';  
-            $html_str .= '&nbsp;&nbsp;&nbsp;<i>' . $con_ite_cur_lin . '</i>';
+            $html_str .= '&nbsp;&nbsp;&nbsp;<i>' . ucfirst($con_ite_cur_lin) . '</i>';
             $html_str .= '<br>'; 
+
         }
         
         $html_str .= '<br> ';

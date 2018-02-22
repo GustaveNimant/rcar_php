@@ -227,9 +227,10 @@ function block_current_namenew_save_build () {
   block_current_namenew_save_irp_path_clean (); /* Improve */
      
   $html_str .= irp_provide ('git_command_n_commit_html', $here);
-  $html_str .= '<br><br> ';
+  $html_str .= '<br><br>';
 
   $html_str .= irp_provide ('block_current_namenew_save_link_to_return', $here);
+  $html_str .= '<br>';
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   $html_str .= comment_exiting_of_function_name ($here);

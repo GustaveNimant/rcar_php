@@ -104,20 +104,20 @@ function block_current_rename_form_build () {
   $html_str .= 'method="get" action="' . $script_action . '">' . "\n";
 
   $html_str .= irp_provide ('block_current_rename_form_title', $here);
-  $html_str .= '<br> ';
+  $html_str .= '<br>' . "\n";
 
   $html_str .= irp_provide ('block_current_rename_form_surnamenew', $here);
-  $html_str .= '<br> ';
+  $html_str .= '<br><br>' . "\n";
 
   $html_str .= irp_provide ('block_current_rename_form_justify_title', $here);
-  $html_str .= '<br> ';
+  $html_str .= '<br>' . "\n";
 
   $html_str .= irp_provide ('block_current_rename_form_justification', $here);
-  $html_str .= '<br>';
+  $html_str .= '<br>' . "\n";
 
-  $html_str .= '<center>';
+  $html_str .= '<center>' . "\n";
   $html_str .= inputtypesubmit_of_en_action_name ('save');
-  $html_str .= '</center>';
+  $html_str .= '</center>' . "\n";
 
   $html_str .= '</form> ' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);

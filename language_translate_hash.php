@@ -1952,6 +1952,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ), 
 
+    'page for displaying the result of the removal of the rule' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la suppression de la r&egrave;gle',
+        'it' => '???',
+    ), 
+
     'page for displaying the result of the renaming of the question' =>
     array (
         'fr' => 'page d&rsquo;affichage du r&eacute;sultat du renommage de la question',
@@ -1963,6 +1969,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'fr' => 'page d&rsquo;affichage du r&eacute;sultat du renommage du paragraphe',
         'it' => '???',
     ),
+    
+    'page for displaying the result of the renaming of the rule' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat du renommage de la r&egrave;gle',
+        'it' => '???',
+    ), 
     
     'page for displaying the result of the renaming of the property' =>
     array (
@@ -2101,7 +2113,13 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'fr' => 'page de renommage de la question',
         'it' => '???',
     ),
-
+    
+    'page for renaming the rule' =>
+    array (
+        'fr' => 'page de renommage de la r&egrave;gle',
+        'it' => '???',
+    ), 
+    
     'page for reordering the paragraphs of the entry' =>
     array (
         'fr' => 'page de modification de l&rsquo;ordre des paragraphes de l&rsquo;entr&eacute;e',
@@ -2822,6 +2840,12 @@ avec les autres propri&eacute;t&eacute;s de la m&ecirc;me entr&eacute;',
         'it' => '???',
    ), 
 
+    'to rule' =>
+    array (
+        'fr' => 'en r&egrave;gle',
+        'it' => '???',
+    ), 
+    
     'undefined' => 
     array (
 		'fr' => 'ind&eacute;fini',

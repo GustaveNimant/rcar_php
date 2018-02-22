@@ -67,7 +67,7 @@ function block_next_save_write_build () {
   return $html_str;
 };
 
-function section_block_next_save_link_to_return_build () {
+function block_next_save_link_to_return_block_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
     
@@ -82,7 +82,7 @@ function section_block_next_save_link_to_return_build () {
     $en_txt = 'back to the ' . $kin_blo;
     $la_txt  = language_translate_of_en_string ($en_txt);
     $la_Txt  = string_html_capitalized_of_string ($la_txt);
-    $la_Txt .= ' ' . $sur_blo_cur;
+    $la_Txt .= ' <b><i>' . $sur_blo_cur . '</i></b>';
 
     debug_n_check ("$here", '$la_Txt', $la_Txt);
     
@@ -97,6 +97,28 @@ function section_block_next_save_link_to_return_build () {
     
     return $html_str;
 }
+
+function block_next_save_link_to_return_entry_build () {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+  $nam_ent_cur = irp_provide ('entry_current_name', $here);
+  $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
+
+  $script_to_return = 'entry_current_display_script.php';
+
+  $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= '<center>';
+  $html_str .= link_to_return_of_entry_name_of_entry_surname_of_script_to_return ($nam_ent_cur, $sur_ent_cur, $script_to_return);
+  $html_str .= '</center>';
+  $html_str .= comment_exiting_of_function_name ($here);
+
+  debug_n_check ($here , '$html_str',  $html_str);
+  exiting_from_function ($here);
+
+  return $html_str;
+}
+
 
 function block_next_save_irp_path_clean () {
   $here = __FUNCTION__;
@@ -125,8 +147,11 @@ function block_next_save_build () {
 
   block_next_save_irp_path_clean (); /* Improve */
 
-  $html_str .= irp_provide ('section_block_next_save_link_to_return', $here);
-  $html_str .= '<br><br>';
+  $html_str .= irp_provide ('block_next_save_link_to_return_block', $here);
+  $html_str .= '<br>';
+
+  $html_str .= irp_provide ('block_next_save_link_to_return_entry', $here);
+  $html_str .= '<br>';
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   $html_str .= comment_exiting_of_function_name ($here);

@@ -99,7 +99,7 @@ function item_current_modify_link_to_return_build () {
   $en_txt = 'back to the entry';
   $la_txt  = language_translate_of_en_string ($en_txt);
   $la_Txt  = string_html_capitalized_of_string ($la_txt);
-  $la_Txt .= ' ' . $sur_ent_cur;
+  $la_Txt .= ' <i><b>' . $sur_ent_cur . '</b></i>';
 
   debug_n_check ("$here", '$la_Txt', $la_Txt);
 
@@ -138,6 +138,7 @@ function item_current_modify_build () {
   $html_str .= '<br>' . "\n"; 
 
   $html_str .= irp_provide ('item_current_modify_link_to_return', $here);
+  $html_str .= '<br>' . "\n"; 
 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   $html_str .= comment_exiting_of_function_name ($here);

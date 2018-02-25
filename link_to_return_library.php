@@ -72,8 +72,8 @@ function link_to_return_of_entry_name_of_entry_surname_of_script_to_return ($nam
   $html_str .= '<a href="' . $scr_ret; 
   $html_str .= '?entry_current_name=' . $nam_ent;
   $html_str .= '">';
-  $html_str .= $la_Tit. ' <b><i>' . $sur_ent . '</i></b>';
-  $html_str .= '</a>';
+  $html_str .= $la_Tit . ' <b><i>' . $sur_ent . '</i></b>';
+  $html_str .= '</a>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
   exiting_from_function ($here);

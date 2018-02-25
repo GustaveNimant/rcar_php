@@ -63,14 +63,16 @@ function block_new_create_build (){
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_page_header', $here);
-  $html_str .= '<br><br> ';
+  $html_str .= '<br><br>' . "\n";
 
   $html_str .= irp_provide ('block_new_create_page_title', $here);
+  $html_str .= '<br><br>' . "\n";
 
   $html_str .= irp_provide ('block_new_create_form', $here);
   $html_str .= '<br><br>' . "\n";
 
   $html_str .= irp_provide ('block_new_create_link_to_return', $here);
+  $html_str .= '<br><br>' . "\n";
 
   $html_str .= irp_provide ('block_new_create_block_list', $here);
 

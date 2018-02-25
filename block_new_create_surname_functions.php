@@ -21,7 +21,7 @@ function block_new_create_surname_inputtypetext_build (){
   $html_str .= ' size="' . $siz_hit . '"';
   $html_str .= ' name="block_new_surname"'; 
   $html_str .= ' placeholder="' . $la_nam_blo . '"';
-  $html_str .= '">' . "\n";
+  $html_str .= '>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str',  $html_str);
@@ -34,9 +34,11 @@ function block_new_create_surname_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $html_str  = '';
+  $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('block_new_create_surname_title_n_help', $here);
+  $html_str .= '<br>' . "\n";
   $html_str .= irp_provide ('block_new_create_surname_inputtypetext', $here);
+  $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str', $html_str);
 

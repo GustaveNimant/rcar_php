@@ -205,7 +205,8 @@ function sub_sentence_original_matched_array_of_surname_by_name_hash_of_entry_na
     $here = __FUNCTION__;
     entering_in_function ($here . " ($sen_ori, \$sur_low_a)");
 
-    $sen_ori_rep = str_replace ('\'', "' ", $sen_ori); 
+    $sen_ori_rep_1 = str_replace ('\'', "' ", $sen_ori); 
+    $sen_ori_rep = str_replace ('  ', '<br>', $sen_ori_rep_1); /* Improve ??? */ 
     debug ($here, '\$sen_ori_rep', $sen_ori_rep);
     $wor_ori_a = explode (" ", $sen_ori_rep);
     debug_n_check ($here, '$wor_ori_a', $wor_ori_a);
@@ -229,7 +230,7 @@ function sub_sentence_original_matched_array_of_surname_by_name_hash_of_entry_na
         $len_cur = strlen ($wor_ori_cur);
         $sub_sen_ori = sub_sentence_original_of_word_current_position_of_full_sentence_original_replaced ($wor_pos, $sen_ori_rep);
 
-        debug_n_check ($here, '$sub_sen_ori', $sub_sen_ori); 
+        debug_n_check ($here, 'while $sub_sen_ori', $sub_sen_ori); 
 
         $sub_sen_ori_mat = sub_sentence_original_matched_of_surname_reduced_array_of_sub_sentence_original ($sur_red_a, $sub_sen_ori);
         debug_n_check ($here, '$sub_sen_ori_mat', $sub_sen_ori_mat);

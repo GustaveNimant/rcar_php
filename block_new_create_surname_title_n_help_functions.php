@@ -46,7 +46,7 @@ function block_new_create_surname_title_n_help_build (){
   $la_Tit .= ' : ';
   $la_Tit .= irp_provide ('block_new_create_surname_title_help', $here);
 
-  $html_str = common_html_div_background_color_of_html ($la_Tit);
+  $html_str = common_html_span_background_color_of_html ($la_Tit);
 
   debug_n_check ($here , '$html_str',  $html_str);
   exiting_from_function ($here);

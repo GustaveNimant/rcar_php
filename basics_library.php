@@ -57,7 +57,7 @@ function mail_send_of_subject_of_message ($sub, $mes) {
 }
 
 function print_d ($str) {
-  $here = __FUNCTION__;
+    $here = __FUNCTION__;
     $nof_deb = $_SESSION['debug_nameoffile'];
     file_put_contents ($nof_deb, $str, FILE_APPEND); 
     return;

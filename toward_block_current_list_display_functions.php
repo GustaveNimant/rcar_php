@@ -14,9 +14,6 @@ function block_current_display_and_link_of_surname_by_name_hash_of_block_current
   $sur_blo = surname_of_name_of_surname_by_name_hash ($nam_blo_cur, $sur_by_nam_h);
   $sur_blo = string_html_capitalized_of_string ($sur_blo);
 
-  $en_tit = 'click to open the page';
-  $la_tit = language_translate_of_en_string ($en_tit);
-
   $script_action = 'block_current_display_script.php';
   $entity = entity_name_of_script_nameoffile ($script_action);
 
@@ -24,12 +21,11 @@ function block_current_display_and_link_of_surname_by_name_hash_of_block_current
   $_SESSION['get_key_by_script_name'][$entity] = $get_key;
 
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<br> '; /* keep */
+  $html_str .= '<br>' . "\n"; /* keep */
   $html_str .= '<a href="' . $script_action;
-  $html_str .= '?block_current_name=' . $nam_blo_cur . '" ';
-  $html_str .= 'title="' . $la_tit . '"';
+  $html_str .= '?block_current_name=' . $nam_blo_cur . '"';
   $html_str .= '>';
-  $html_str .= '<b> ' . $sur_blo . $la_eol . '</b> ';
+  $html_str .= '<b>' . $sur_blo . $la_eol . '</b>';
   $html_str .= '</a>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 

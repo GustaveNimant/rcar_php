@@ -2,6 +2,7 @@
 
 include "session.php";
 require_once "irp_library.php";
+require_once "browser_library.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
@@ -40,6 +41,10 @@ else {
 
 $program_name = $_SESSION['parameters']['program_name'];
 $Program_name = ucfirst($program_name);
+
+$browser_name = browser_name_get ();
+$Browser_name = ucfirst ($browser_name);
+$_SESSION['parameters']['browser_name'] = $browser_name;
 
 $subjet = "Connexion à $program_name par $usr_ip";
 $message  = $usr_ip . " vient de se connecter sur $Program_name\r\n";

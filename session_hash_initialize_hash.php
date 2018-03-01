@@ -1,5 +1,5 @@
 <?php
-require_once "site_dependant_data.php";
+require_once "site_dependent_data.php";
 
 /* --- $_SESSION --- */
 

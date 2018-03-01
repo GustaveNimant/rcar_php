@@ -7,7 +7,6 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-
 function string_remove_control_M ($str) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($str)");
@@ -34,6 +33,28 @@ function string_html_capitalized_of_string ($str) {
   exiting_from_function ($here . " with $str");
   return $str;
 };
+
+function string_any_capitalized_accented_of_string_accented ($str) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($str)");
+    
+    $str_htm = htmlentities ($str, ENT_QUOTES, "UTF-8"); 
+
+    $fir_cha = $str_htm[0];
+
+    if ($fir_cha == '&') {
+        $str_htm[1] = ucfirst ($str_htm[1]);
+    }
+    else {
+        $str_htm = ucfirst ($str_htm);
+    }
+
+    $str = html_entity_decode ($str_htm);
+
+    exiting_from_function ($here . " with $str");
+    return $str;
+};
+
 
 function string_remove_html_entities ($html_str) {
   $here = __FUNCTION__;

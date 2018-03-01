@@ -55,8 +55,8 @@ function block_current_history_display_content_array_build () {
 
   foreach ($con_blo_by_sha_blo_h as $sha_blo => $con_blo) {
 
-      debug_n_check ($here, '$sha_blo', $sha_blo);
-      debug_n_check ($here, '$con_blo', $con_blo);
+      debug_n_check ($here, 'loop $sha_blo', $sha_blo);
+      debug_n_check ($here, 'loop $con_blo', $con_blo);
 
       if ($sha_blo == "EMPTY_BLOB_SHA1") {
           break;
@@ -74,6 +74,7 @@ function block_current_history_display_content_array_build () {
       $la_Com = ucfirst (language_translate_of_en_string ($en_com));
 
       $en_tit = 'block information'; /* date sha1 user .... */
+
       $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
 
       $html_str .= '<b>' . common_html_span_background_color_of_html ($la_Tit) . '</b>';
@@ -147,6 +148,7 @@ function block_current_history_display_link_to_return_block_build () {
     $kin_blo = irp_provide ('entry_block_kind', $here);
 
     $en_txt = 'back to the ' . $kin_blo;
+
     $la_txt  = language_translate_of_en_string ($en_txt);
     $la_Txt  = string_html_capitalized_of_string ($la_txt);
     $la_Txt .= ' <b><i>' . $sur_blo_cur . '</i></b>';

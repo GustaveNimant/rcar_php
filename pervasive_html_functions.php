@@ -67,7 +67,30 @@ function pervasive_page_header_build (){
     exiting_from_function ($here);
 
     return $html_str;
+}
 
+function pervasive_creativecommons_url_build () {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+
+    $lan = $_SESSION['parameters']['language'];
+
+    switch ($lan) {
+    case 'en' :
+        $url = 'https://creativecommons.org/licenses/by-sa/3.0/legalcode';
+        break;
+    case 'fr' :
+        $url = 'https://creativecommons.org/licenses/by-sa/3.0/legalcode.fr';
+        break;
+    case 'it' :
+        $url = 'https://creativecommons.org/licenses/by-sa/3.0/legalcode.it';
+        break;
+    default:
+        $url = 'https://creativecommons.org/licenses/by-sa/3.0/legalcode';
+    }
+        
+    exiting_from_function ($here . " with \$url = $url");
+    return $url;
 }
 
 function pervasive_license_build () {
@@ -76,10 +99,17 @@ function pervasive_license_build () {
     $en_lic = 'this code is available under the Creative Commons License';
     $la_lic = language_translate_of_en_string ($en_lic);
     $la_Lic = string_html_capitalized_of_string ($la_lic);
-    $str = '<a href="https://creativecommons.org/licenses/by-sa/3.0/legalcode.fr" title="' . $la_Lic . '">License</a>';
-    
+
+    $en_tit = 'license';
+    $la_tit = language_translate_of_en_string ($en_tit);
+    $la_Tit = string_html_capitalized_of_string ($la_tit);
+
+    $url = irp_provide ('pervasive_creativecommons_url', $here);
+
     $html_str  = comment_entering_of_function_name ($here);
-    $html_str .= $str . "\n";
+    $html_str .= '<a href="' . $url . '">';
+    $html_str .= $la_Tit; 
+    $html_str .= '</a>';
     $html_str .= comment_exiting_of_function_name ($here);
     
     return $html_str;

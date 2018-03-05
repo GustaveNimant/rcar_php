@@ -6,7 +6,6 @@ $module = module_name_of_module_nameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-
 function arce_home_header_en () {
     $here = __FUNCTION__; 
     entering_in_function ($here);
@@ -43,15 +42,15 @@ function arce_home_text_en () {
     $html_str .= "</li>";
     $html_str .= "<br />";
     $html_str .= "<li>";
-    $html_str .= "<b>Editing rules :</b> allows to access to homonymous entry";
+    $html_str .= "<b>Editing rules :</b> allows to access to eponymous entry";
     $html_str .= "</li>";
     $html_str .= "<br />";
     $html_str .= "<li>";
-    $html_str .= "<b>Faq :</b> allows to access to homonymous entry";
+    $html_str .= "<b>Faq :</b> allows to access to eponymous entry";
     $html_str .= "</li>";
     $html_str .= "<br />";
     $html_str .= "<li>";
-    $html_str .= "<b>Property rules :</b> allows to access to homonymous entry";
+    $html_str .= "<b>Property rules :</b> allows to access to eponymous entry";
     $html_str .= "</li>";
     $html_str .= "<br />";
     $html_str .= "<li>";
@@ -111,17 +110,17 @@ function arce_home_text_accent_fr () {
     $html_str .= "<br />";
     $html_str .= "\n";
     $html_str .= "<li>";
-    $html_str .= "<b>Règles de rédaction :</b> permet d'accéder à l'entrée homonyme";
+    $html_str .= "<b>Règles de rédaction :</b> permet d'accéder à l'entrée éponyme";
     $html_str .= "</li>";
     $html_str .= "<br />";
     $html_str .= "\n";
     $html_str .= "<li>";
-    $html_str .= "<b>Faq :</b> permet d'accéder à l'entrée homonyme";
+    $html_str .= "<b>Faq :</b> permet d'accéder à l'entrée éponyme";
     $html_str .= "</li>";
     $html_str .= "<br />";
     $html_str .= "\n";
     $html_str .= "<li>";
-    $html_str .= "<b>Règles des propriétés :</b> permet d'accéder à l'entrée homonyme";
+    $html_str .= "<b>Règles des propriétés :</b> permet d'accéder à l'entrée éponyme";
     $html_str .= "</li>";
     $html_str .= "<br />";
     $html_str .= "\n";
@@ -139,6 +138,5 @@ function arce_home_text_accent_fr () {
     exiting_from_function ($here);
     return $html_str;
 }
-
 
 ?>

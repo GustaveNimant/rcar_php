@@ -55,6 +55,8 @@ require_once "block_previous_sha1_display_functions.php";
 require_once "command_functions.php";
 require_once "command_result_functions.php";
 
+require_once "common_html_functions.php";
+
 require_once "entry_current_display_functions.php";
 require_once "entry_current_name_functions.php";
 require_once "entry_current_rename_functions.php";

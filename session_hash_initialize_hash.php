@@ -144,7 +144,7 @@ $_SESSION['parameters']['extension_surname_nameoffile'] = 'sur';
 $_SESSION['parameters']['glue'] = ' '; /* explode implode */
 
 $_SESSION['parameters']['html_input_text_size'] = 44;
-$_SESSION['parameters']['html_textarea_rows'] = 2 ;
+$_SESSION['parameters']['html_textarea_rows'] = 2;
 $_SESSION['parameters']['html_textarea_cols'] = 50;
 
 $_SESSION['parameters']['irp_nondata_storage_is_enabled'] = TRUE;
@@ -153,7 +153,7 @@ $_SESSION['parameters']['language'] = 'fr';
 $_SESSION['parameters']['printed_html_string_max_size'] = 200;
 $_SESSION['parameters']['program_name'] = 'rcar';
 
-$_SESSION['parameters']['select_size'] = 6;
+$_SESSION['parameters']['select_size'] = 10;
 
 $_SESSION['parameters']['stack_function_called_array'] = array ();
 array_push ($_SESSION['parameters']['stack_function_called_array'], "UP");

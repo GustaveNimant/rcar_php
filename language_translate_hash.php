@@ -1334,6 +1334,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ), 
 
+    'license' =>
+    array (
+        'fr' => 'licence',
+        'it' => '???',
+    ),
+    
     'list of editing rules' =>
     array (
 		'fr' => 'liste des r&egrave;gles de r&eacute;daction',

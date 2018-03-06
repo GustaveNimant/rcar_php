@@ -26,6 +26,42 @@ function common_html_div_background_color_of_html ($tit) {
   return $html_str;
 }
 
+function common_html_div_yellow_background_color_of_html ($tit) {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+  $html_str = comment_entering_of_function_name ($here);
+  if ($tit != '') {
+    $html_str .= '<div class="my-div-yellow">' . "\n";
+    $html_str .= $tit;
+    $html_str .= '</div>' . "\n";
+  }
+  $html_str .= comment_exiting_of_function_name ($here);
+
+#  debug_n_check ($here , '$html_str', $html_str);
+  exiting_from_function ($here);
+
+  return $html_str;
+}
+
+function common_html_div_green_background_color_of_html ($tit) {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+  $html_str = comment_entering_of_function_name ($here);
+  if ($tit != '') {
+    $html_str .= '<div class="my-div-green">' . "\n";
+    $html_str .= $tit;
+    $html_str .= '</div>' . "\n";
+  }
+  $html_str .= comment_exiting_of_function_name ($here);
+
+#  debug_n_check ($here , '$html_str', $html_str);
+  exiting_from_function ($here);
+
+  return $html_str;
+}
+
 function common_html_span_background_color_of_html ($tit) {
   $here = __FUNCTION__;
   entering_in_function ($here);

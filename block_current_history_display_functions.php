@@ -53,6 +53,7 @@ function block_current_history_display_content_array_build () {
 
   $html_str  = comment_entering_of_function_name ($here);
 
+/* Improve alternate background */
   foreach ($con_blo_by_sha_blo_h as $sha_blo => $con_blo) {
 
       debug_n_check ($here, 'loop $sha_blo', $sha_blo);
@@ -76,6 +77,8 @@ function block_current_history_display_content_array_build () {
       $en_tit = 'block information'; /* date sha1 user .... */
 
       $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
+
+#      $html_str .= '<div class="my-div-yellow">' . "\n";
 
       $html_str .= '<b>' . common_html_span_background_color_of_html ($la_Tit) . '</b>';
       $html_str .= '<br><br>';
@@ -123,7 +126,7 @@ function block_current_history_display_content_array_build () {
       $sha_blo_pre = block_previous_sha1_of_block_current_content ($con_blo);
       $html_str .= $sha_blo_pre;
       $html_str .= '<br>';
-
+#      $html_str .= '</div>';
       $html_str .= '<br>';
   }
 

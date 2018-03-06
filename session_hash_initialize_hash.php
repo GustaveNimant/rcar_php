@@ -153,7 +153,7 @@ $_SESSION['parameters']['language'] = 'fr';
 $_SESSION['parameters']['printed_html_string_max_size'] = 200;
 $_SESSION['parameters']['program_name'] = 'rcar';
 
-$_SESSION['parameters']['select_size'] = 10;
+$_SESSION['parameters']['select_size'] = 20;
 
 $_SESSION['parameters']['stack_function_called_array'] = array ();
 array_push ($_SESSION['parameters']['stack_function_called_array'], "UP");

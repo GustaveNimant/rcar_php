@@ -96,5 +96,4 @@ function common_html_css_survol_of_la_title ($la_tit) {
   return $html_str;
 }
 
-
 ?>

@@ -95,23 +95,29 @@ function pervasive_creativecommons_url_build () {
 
 function pervasive_license_build () {
     $here = __FUNCTION__;
-    
-    $en_lic = 'this code is available under the Creative Commons License';
-    $la_lic = language_translate_of_en_string ($en_lic);
-    $la_Lic = string_html_capitalized_of_string ($la_lic);
+    entering_in_function ($here);
 
-    $en_tit = 'license';
+    $en_tit = 'this code is available under the Creative Commons License';
     $la_tit = language_translate_of_en_string ($en_tit);
     $la_Tit = string_html_capitalized_of_string ($la_tit);
+
+    $en_lic = 'license';
+    $la_lic = language_translate_of_en_string ($en_lic);
+    $la_Lic = string_html_capitalized_of_string ($la_lic);
 
     $url = irp_provide ('pervasive_creativecommons_url', $here);
 
     $html_str  = comment_entering_of_function_name ($here);
-    $html_str .= '<a href="' . $url . '">';
-    $html_str .= $la_Tit; 
+    $html_str .= '<a href="' . $url;
+    $html_str .= '" title="' . $la_Tit ; 
+    $html_str .= '">';
+    $html_str .= $la_Lic; 
     $html_str .= '</a>';
     $html_str .= comment_exiting_of_function_name ($here);
     
+    debug_n_check ($here, '$html_str', $html_str);
+    exiting_from_function ($here);
+
     return $html_str;
 }
 

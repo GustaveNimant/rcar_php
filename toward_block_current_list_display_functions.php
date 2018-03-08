@@ -11,8 +11,9 @@ function block_current_display_and_link_of_surname_by_name_hash_of_block_current
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_blo_cur");
 
-  $sur_blo = surname_of_name_of_surname_by_name_hash ($nam_blo_cur, $sur_by_nam_h);
-  $sur_blo = string_html_capitalized_of_string ($sur_blo);
+  $sur_blo_cur = surname_of_name_of_surname_by_name_hash ($nam_blo_cur, $sur_by_nam_h);
+  $sur_blo_cur = string_html_capitalized_of_string ($sur_blo_cur);
+  debug_n_check ($here, '$sur_blo_cur', $sur_blo_cur); /* élément réseau */
 
   $script_action = 'block_current_display_script.php';
   $entity = entity_name_of_script_nameoffile ($script_action);
@@ -25,7 +26,7 @@ function block_current_display_and_link_of_surname_by_name_hash_of_block_current
   $html_str .= '<a href="' . $script_action;
   $html_str .= '?block_current_name=' . $nam_blo_cur . '"';
   $html_str .= '>';
-  $html_str .= '<b>' . $sur_blo . $la_eol . '</b>';
+  $html_str .= '<b>' . $sur_blo_cur . $la_eol . '</b>';
   $html_str .= '</a>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
@@ -92,7 +93,7 @@ function toward_block_current_list_display_display_build () {
             $html_str .= block_current_display_and_link_of_surname_by_name_hash_of_block_current_name_of_la_eol ($sur_by_nam_h, $nam_blo, $la_eol);
             $html_str .= '<br>';  
             $html_str .= '&nbsp;&nbsp;&nbsp;<i>' . ucfirst($con_ite_cur_lin) . '</i>';
-            $html_str .= '<br>'; 
+            $html_str .= '<br>' . "\n"; 
 
         }
         

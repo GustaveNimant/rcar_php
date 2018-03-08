@@ -54,80 +54,26 @@ function block_current_history_display_content_array_build () {
   $html_str  = comment_entering_of_function_name ($here);
 
 /* Improve alternate background */
+  $cou_blo = 0;
   foreach ($con_blo_by_sha_blo_h as $sha_blo => $con_blo) {
-
-      debug_n_check ($here, 'loop $sha_blo', $sha_blo);
-      debug_n_check ($here, 'loop $con_blo', $con_blo);
 
       if ($sha_blo == "EMPTY_BLOB_SHA1") {
           break;
       }
-
+      
       $sha_com = $sha_com_by_sha_blo_h[$sha_blo];
+    
+      $cou_blo = $cou_blo +1;
+      debug_n_check ($here, '$cou_blo $sha_blo', 'block # ' . $cou_blo . ' sha1 = ' . $sha_blo);
+      debug_n_check ($here, '$cou_blo $sha_blo', 'block # ' . $cou_blo . ' content = ' . $con_blo);
 
-      $dat_com = git_commit_commiter_date_of_commit_sha1 ($sha_com);
-      $nam_com = git_commit_commiter_name_of_commit_sha1 ($sha_com);
-
-      $en_dat = 'date of commit';
-      $la_Dat = ucfirst (language_translate_of_en_string ($en_dat));
-
-      $en_com = 'committer';
-      $la_Com = ucfirst (language_translate_of_en_string ($en_com));
-
-      $en_tit = 'block information'; /* date sha1 user .... */
-
-      $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
-
-#      $html_str .= '<div class="my-div-yellow">' . "\n";
-
-      $html_str .= '<b>' . common_html_span_background_color_of_html ($la_Tit) . '</b>';
-      $html_str .= '<br><br>';
-      $html_str .= '<b>' . $la_Dat . '</b> : ' . $dat_com  ;
-      $html_str .= '<br><br>';
-      $html_str .= '<b>' . $la_Com . '</b> : ' . $nam_com  ;
-      $html_str .= '<br><br>';
-
-      $en_tit = 'blob current sha1';
-      $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
-
-      $html_str .= common_html_span_background_color_of_html ($la_Tit);
-      $html_str .= ' :<br>';
-      $html_str .= $sha_blo;
-      $html_str .= '<br><br>';
-
-      $en_tit = 'item current content';
-      $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
-      $html_str .= common_html_span_background_color_of_html ($la_Tit);
-      $html_str .= ' :<br>';
-      $con_ite_cur = item_current_content_of_block_current_content ($con_blo);
-      $html_str .= $con_ite_cur;
-      $html_str .= '<br><br>';
-
-      $en_tit = 'item current justification';
-      $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
-      $html_str .= common_html_span_background_color_of_html ($la_Tit);
-      $html_str .= ' :<br>';
-      $jus_ite_cur = item_current_justification_of_block_current_content ($con_blo);
-      $html_str .= $jus_ite_cur;
-      $html_str .= '<br><br>';
-
-      $en_tit = 'item previous content';
-      $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
-      $html_str .= common_html_span_background_color_of_html ($la_Tit);
-      $html_str .= ' :<br>';
-      $con_ite_pre = item_previous_content_of_block_current_content ($con_blo);
-      $html_str .= $con_ite_pre;
-      $html_str .= '<br><br>';
-
-      $en_tit = 'block previous sha1';
-      $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
-      $html_str .= common_html_span_background_color_of_html ($la_Tit);
-      $html_str .= ' :<br>';
-      $sha_blo_pre = block_previous_sha1_of_block_current_content ($con_blo);
-      $html_str .= $sha_blo_pre;
-      $html_str .= '<br>';
-#      $html_str .= '</div>';
-      $html_str .= '<br>';
+      $blo_str  = block_display_of_block_sha_of_block_content_of_commit_sha ($sha_blo, $con_blo, $sha_com);
+      $blo_str .= '<hr>' . "\n";
+      if ($cou_blo%2 == 0) {
+          $html_str .= common_html_div_yellow_background_color_of_html ($blo_str);
+      } else {
+          $html_str .= common_html_div_green_background_color_of_html ($blo_str);
+      }
   }
 
   $html_str .= comment_exiting_of_function_name ($here);

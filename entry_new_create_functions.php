@@ -52,8 +52,6 @@ function entry_new_create_form_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $module = module_name_of_module_nameoffile (__FILE__);
-
   $entity_fat = entity_name_of_build_function_name ($here);
   father_n_son_stack_entity_push_of_father_of_son ($entity_fat, "BUTTON_$entity_fat");
 
@@ -62,7 +60,6 @@ function entry_new_create_form_build () {
   father_n_son_stack_entity_push_of_father_of_son ($entity_fat, $entity_son);
 
   $get_key = 'entry_new_surname';
-  $_SESSION['get_key_by_script_name'][$entity_son] = $get_key;
 
   $siz_hit = $_SESSION['parameters']['html_input_text_size'];
 
@@ -71,11 +68,9 @@ function entry_new_create_form_build () {
   $html_str .= '<br>' . "\n";
   $html_str .= '<input type="text"';
   $html_str .= ' name="' . $get_key . '"';
-#  $html_str .= ' value=""';
   $html_str .= ' size="' . $siz_hit . '"';
   $html_str .= '/>' .  "\n";
   $html_str .= inputtypesubmit_of_en_action_name ('create');
-#  $html_str .= inputtypehidden_store_of_clicked_module_name ($module);
   $html_str .= '</form>' .  "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 

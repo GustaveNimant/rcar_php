@@ -40,9 +40,6 @@ function toward_entry_new_create_form_build () {  /* Generalize */
   $entity_son = entity_name_of_script_nameoffile ($script_action);
   father_n_son_stack_entity_push_of_father_of_son ($entity_fat, "$entity_son");
 
-  /* $get_key = 'entry_new_surname'; */
-  /* $_SESSION['get_key_by_script_name'][$entity_son] = $get_key; */
-
   $la_Nam_act = ucfirst (language_translate_of_en_string ('create'));
 
   $html_str  = comment_entering_of_function_name ($here);

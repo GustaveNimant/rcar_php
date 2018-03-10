@@ -113,10 +113,6 @@ function entry_current_namenew_form_build () {
   entering_in_function ($here);
 
   $script_action = 'entry_current_namenew_save_script.php';
-  $entity = entity_name_of_script_nameoffile ($script_action);
-
-  $get_key = 'entry_current_surnamenew';
-  $_SESSION['get_key_by_script_name'][$entity] = $get_key;
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form action="' . $script_action .'" method="get">' . "\n";

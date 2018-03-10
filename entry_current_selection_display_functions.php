@@ -40,7 +40,8 @@ function entry_current_selection_display_menuselect_build () { /* move in some t
 
     $html_str  = comment_entering_of_function_name ($here);
     $html_str .= '<select name="'. $get_key_sel . '"'; 
-    $html_str .= ' size="' . $select_size . '" >' . "\n";
+    $html_str .= ' size="' . $select_size . '"'; 
+    $html_str .= '>' . "\n";
     
     foreach ($nam_ent_a as $nam_ent) {
         $sur_ent = surname_of_name_of_surname_by_name_hash ($nam_ent, $sur_by_nam_h);
@@ -82,11 +83,6 @@ function entry_current_selection_display_form_build () {
     entering_in_function ($here);
     
     $script_action = 'entry_current_display_script.php';
-    $entity = entity_name_of_script_nameoffile ($script_action);
-
-/* html produces : script?$get_key_sel=$get_val */
-    $get_key_sel = 'entry_current_name'; 
-    $_SESSION['get_key_by_script_name'][$entity] = $get_key_sel;
 
     $html_str  = comment_entering_of_function_name ($here); 
     $html_str .= '<form action="' . $script_action .'" method="get"> ' . "\n";

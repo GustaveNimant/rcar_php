@@ -62,6 +62,8 @@ require_once "entry_current_name_functions.php";
 require_once "entry_current_rename_functions.php";
 require_once "entry_current_namenew_form_functions.php";
 require_once "entry_current_namenew_save_functions.php";
+require_once "entry_current_selection_display_functions.php";
+
 require_once "entry_list_display_functions.php";
 
 require_once "entry_new_create_functions.php";
@@ -108,9 +110,6 @@ require_once "entry_current_rename_form_functions.php";
 
 require_once "toward_item_current_modify_form_functions.php";
 require_once "toward_item_next_create_form_functions.php";
-
-require_once "entry_current_selection_display_functions.php";
-require_once "entry_current_selection_rename_functions.php";
 
 require_once "toward_block_new_create_form_functions.php";
 require_once "toward_entry_new_create_form_functions.php";

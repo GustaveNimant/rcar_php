@@ -8,14 +8,11 @@ $script = $entity . '_script';
 
 $Documentation[$script]['what is it'] = "it is ...";
 $Documentation[$script]['what for'] = "to ...";
-$Documentation[$script]['how it is done'] = "cp template_...";
+$Documentation[$script]['how it is done'] = 'no $_GET';
 
 entering_in_module ($script);
 
 father_n_son_stack_script_push_of_current_script ($script);
-
-/* $bot_key = 'entry_current_name'; */
-/* irp_path_clean_register_of_top_key_of_bottom_key_of_where ($entity, "GET_$bot_key", $script);  */
 
 $bot_key = 'entry_fullnameofdirectory_array';
 irp_path_clean_register_of_top_key_of_bottom_key_of_where ($entity, "READ_$bot_key", $script); 

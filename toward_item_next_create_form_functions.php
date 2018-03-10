@@ -106,9 +106,6 @@ function toward_item_next_create_form_build () {
   $entity_son = entity_name_of_script_nameoffile ($script_action);
   father_n_son_stack_entity_push_of_father_of_son ($entity_fat, $entity_son);
 
-  /* $get_key = '???'; */
-  /* $_SESSION['get_key_by_script_name'][$entity_son] = $get_key; */
-
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form ' . "\n";
   $html_str .= 'method="get" action="' . $script_action. '">' . "\n";

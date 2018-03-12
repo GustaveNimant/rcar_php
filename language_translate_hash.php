@@ -342,6 +342,12 @@ c&rsquo;est une composante d&rsquo;un bloc',
         'fr' => 'sha1 du bloc pr&eacute;c&eacute;dent',
         'it' => '???',
     ),
+
+    'blockchain' =>
+    array (
+        'fr' => 'cha&icirc;ne de blocs',
+        'it' => '???',
+    ), 
     
     'blocks' =>
     array (
@@ -490,7 +496,13 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
         'fr' => 'committeur',
         'it' => '???',
     ),
-
+    
+    'concept' =>
+    array (
+        'fr' => 'concept',
+        'it' => '???',
+    ), 
+    
     'content of the answer' => 
     array (
         'fr' => 'contenu de la r&eacute;ponse',
@@ -1103,6 +1115,12 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
 		'it' => '???',
     ),
 
+    'general will' =>
+    array (
+        'fr' => 'volont&eacute; g&eacute;n&eacute;rale',
+        'it' => '???',
+    ), 
+    
     'git' =>
     array (
 		'fr' => 'git',
@@ -2503,6 +2521,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'fr' => 's&eacute;lectionner une action et entrer son argument dans la fen&ecirc;tre ci-dessous',
         'it' => '???',
     ), 
+    
+    'select an entry type' =>
+    array (
+		'fr' => 's&eacute;lectionner le type de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ),
     
     'select a property and an action' => 
     array (

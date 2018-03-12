@@ -87,7 +87,9 @@ function entry_current_selection_display_form_build () {
     $html_str  = comment_entering_of_function_name ($here); 
     $html_str .= '<form action="' . $script_action .'" method="get"> ' . "\n";
     $html_str .= '<br>' .  "\n";
+
     $html_str .= irp_provide ('entry_current_selection_display_menuselect', $here);
+
     $html_str .= inputtypesubmit_of_en_action_name ('select');
     $html_str .= '</form>' .  "\n";
     $html_str .= comment_exiting_of_function_name ($here);

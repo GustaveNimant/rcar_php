@@ -93,6 +93,11 @@ $_SESSION['is_read_entity_name'] = array (
     'entry_fullnameofdirectory_array' => TRUE,
 );
 
+$_SESSION['entry_type_by_entry_name'] = array (
+    'Blockchain' => 'blockchain',
+    'Chaine_de_blocs' => 'blockchain',
+    'Volonte_generale' => 'general will',
+);
 
 $_SESSION['creation_step_count'] = 0;
 $_SESSION['creation_step'] = array () ; /* of any entity or page */

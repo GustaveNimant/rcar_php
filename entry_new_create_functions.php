@@ -48,6 +48,55 @@ function entry_new_create_form_title_build () {
   return $html_str;
 }
 
+function entry_new_create_type_select_title_build () {
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+  $en_tit = 'select an entry type';
+
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
+  $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);
+
+  $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= common_html_span_background_color_of_html ($la_bub_Tit);
+  $html_str .= comment_exiting_of_function_name ($here);
+
+  debug_n_check ($here , '$html_str',  $html_str);
+  exiting_from_function ($here);
+
+  return $html_str;
+}
+function entry_new_create_type_select_display_build () {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+    $key = str_replace('_build', '', $here);
+    father_n_son_stack_entity_push_of_father_of_son ($key, "BUTTON_$key");
+    
+    $get_key_sel = 'entry_type';
+    $en_typ_a = array ('general will', 'concept', 'blockchain');
+
+    $html_str  = comment_entering_of_function_name ($here);
+    $html_str .= '<select name="' . $get_key_sel . '">' . "\n";
+
+    foreach ($en_typ_a as $en_typ) {
+        $la_typ = language_translate_of_en_string ($en_typ);
+        
+        $html_str .= '<option value="' . $en_typ . '"> ' . "\n";
+        $html_str .= string_html_capitalized_of_string (ucfirst ($la_typ));
+        $html_str .= '</option> ' . "\n";
+    }
+    
+    $html_str .= '</select> ' . "\n";
+    $html_str .= comment_exiting_of_function_name ($here);
+    
+    debug_n_check ($here , '$html_str', $html_str);
+    
+    exiting_from_function ($here);
+    
+    return $html_str;
+}
+
 function entry_new_create_form_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
@@ -70,6 +119,11 @@ function entry_new_create_form_build () {
   $html_str .= ' name="' . $get_key . '"';
   $html_str .= ' size="' . $siz_hit . '"';
   $html_str .= '/>' .  "\n";
+  $html_str .= '<br><br>' . "\n";
+  $html_str .= irp_provide ('entry_new_create_type_select_title', $here);
+  $html_str .= '<br><br>' . "\n";
+  $html_str .= irp_provide ('entry_new_create_type_select_display', $here);
+  $html_str .= '<br><br>' . "\n";
   $html_str .= inputtypesubmit_of_en_action_name ('create');
   $html_str .= '</form>' .  "\n";
   $html_str .= comment_exiting_of_function_name ($here);

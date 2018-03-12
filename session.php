@@ -22,6 +22,8 @@ if (!isset($_SESSION)) {
     session_start(); 
 }
 
+ini_set ('display_errors', 1);
+
 if (empty($_SESSION['count'])) {
     $_SESSION['count'] = 1;
 } else {

@@ -31,7 +31,6 @@ function block_current_file_fullname_build () {
 
   exiting_from_function ($here);
   return $fno_blo_cur;
-
 }
 
 function block_current_sha1_build () {
@@ -47,7 +46,6 @@ function block_current_sha1_build () {
   exiting_from_function ($here);
 
   return $blo_cur_sha;
-
 }
 
 function item_current_content_from_block_current_content_build () {

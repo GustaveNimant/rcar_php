@@ -72,7 +72,7 @@ function block_new_create_block_list_mouseover_content_build () {
 
       $html_str  = comment_entering_of_function_name ($here);
       foreach ($con_by_nam_blo_h as $nam_blo => $con_blo) {
-          $con_ite = item_current_content_of_block_current_content ($con_blo); 
+          $con_ite = item_current_content_off_block_current_content ($con_blo); 
           
           $html_str .= '<li>' . "\n";
           $html_str .= '<b>' . $nam_blo . '</b>';

@@ -82,7 +82,7 @@ function toward_block_current_list_display_display_build () {
         foreach ($nam_blo_cur_ord_a as $key => $nam_blo) {
 
             $con_blo = array_retrieve_value_of_key_of_array ($nam_blo, $con_blo_by_nam_blo_h);
-            $con_ite_cur = item_current_content_of_block_current_content ($con_blo);
+            $con_ite_cur = item_current_content_off_block_current_content ($con_blo);
 
             $con_ite_cur_lin = replace_all_sub_sentence_by_links_of_surname_by_name_hash_of_entry_name_array_of_item_content_of_surname_lowercase_array ($sur_by_nam_h, $nam_ent_a, $con_ite_cur, $sur_low_a);
             

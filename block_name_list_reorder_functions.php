@@ -114,7 +114,7 @@ function block_name_list_reorder_order_loop_table_build () {
 
   foreach ($nam_blo_a as $key => $nam_blo) {
       $con_blo = $con_by_nam_blo_a[$nam_blo];
-      $con_ite_cur = item_current_content_of_block_current_content ($con_blo) ;
+      $con_ite_cur = item_current_content_off_block_current_content ($con_blo) ;
       $con_ite = str_replace ("\n", "<br>", $con_ite_cur);
 
       $html_str .= block_name_list_reorder_of_surname_by_name_hash_of_entry_name_of_block_current_name_of_item_content_of_la_eol ($sur_by_nam_h, $nam_ent, $nam_blo, $con_ite, $la_eol);

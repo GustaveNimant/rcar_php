@@ -113,7 +113,7 @@ function block_display_of_block_sha_of_block_content_of_commit_sha ($sha_blo, $c
     $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
     $html_str .= common_html_span_background_color_of_html ($la_Tit);
     $html_str .= ' :<br>';
-    $con_ite_cur = item_current_content_of_block_current_content ($con_blo);
+    $con_ite_cur = item_current_content_off_block_current_content ($con_blo);
     $html_str .= $con_ite_cur;
     $html_str .= '<br><br>';
     
@@ -121,7 +121,7 @@ function block_display_of_block_sha_of_block_content_of_commit_sha ($sha_blo, $c
     $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
     $html_str .= common_html_span_background_color_of_html ($la_Tit);
     $html_str .= ' :<br>';
-    $jus_ite_cur = item_current_justification_of_block_current_content ($con_blo);
+    $jus_ite_cur = item_current_justification_off_block_current_content ($con_blo);
     $html_str .= $jus_ite_cur;
     $html_str .= '<br><br>';
     
@@ -129,7 +129,7 @@ function block_display_of_block_sha_of_block_content_of_commit_sha ($sha_blo, $c
     $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
     $html_str .= common_html_span_background_color_of_html ($la_Tit);
     $html_str .= ' :<br>';
-    $con_ite_pre = item_previous_content_of_block_current_content ($con_blo);
+    $con_ite_pre = item_previous_content_off_block_current_content ($con_blo);
     $html_str .= $con_ite_pre;
     $html_str .= '<br><br>';
     
@@ -137,7 +137,7 @@ function block_display_of_block_sha_of_block_content_of_commit_sha ($sha_blo, $c
     $la_Tit = ucfirst (language_translate_of_en_string ($en_tit));
     $html_str .= common_html_span_background_color_of_html ($la_Tit);
     $html_str .= ' :<br>';
-    $sha_blo_pre = block_previous_sha1_of_block_current_content ($con_blo);
+    $sha_blo_pre = block_previous_sha1_off_block_current_content ($con_blo);
     $html_str .= $sha_blo_pre;
     $html_str .= '<br>';
     $html_str .= comment_exiting_of_function_name ($here);

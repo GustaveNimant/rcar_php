@@ -47,7 +47,7 @@ function item_current_content_display_content_textarea_build () {
     $nam_blo_cur = irp_provide ('block_current_name', $here);
     $con_blo_by_nam_blo_h = irp_provide ('block_content_by_block_name_hash', $here);
     $con_blo_cur = array_retrieve_value_of_key_of_array ($nam_blo_cur, $con_blo_by_nam_blo_h);
-    $ite_cur_con = item_current_content_of_block_current_content ($con_blo_cur);
+    $ite_cur_con = item_current_content_off_block_current_content ($con_blo_cur);
     
     $row_hta = $_SESSION['parameters']['html_textarea_rows'];
     $col_hta = $_SESSION['parameters']['html_textarea_cols'];
@@ -70,7 +70,7 @@ function item_current_content_display_content_textarea_disabled_build () {
     $nam_blo_cur = irp_provide ('block_current_name', $here);
     $con_blo_by_nam_blo_h = irp_provide ('block_content_by_block_name_hash', $here);
     $con_blo_cur = array_retrieve_value_of_key_of_array ($nam_blo_cur, $con_blo_by_nam_blo_h);
-    $ite_cur_con = item_current_content_of_block_current_content ($con_blo_cur);
+    $ite_cur_con = item_current_content_off_block_current_content ($con_blo_cur);
     
     $row_hta = $_SESSION['parameters']['html_textarea_rows'];
     $col_hta = $_SESSION['parameters']['html_textarea_cols'];

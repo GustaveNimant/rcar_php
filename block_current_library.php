@@ -5,10 +5,7 @@ $module = module_name_of_module_nameoffile (__FILE__);
 
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
-
-
 # $Documentation[$module]['surname_local_array'] = "the array of the surnames that begins as the current word";
-
 
 function block_current_content_of_four_elements ($con_ite_cur, $jus_ite_cur, $con_ite_pre, $blo_pre_sha) {
   $here = __FUNCTION__;
@@ -63,7 +60,7 @@ function block_content_write ($nam_ent, $nam_blo, $con_blo) {
     return $log_str;
 }
 
-function item_current_content_of_block_current_content ($con_blo_cur) {
+function item_current_content_off_block_current_content ($con_blo_cur) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($con_blo_cur)");
     
@@ -78,7 +75,7 @@ function item_current_content_of_block_current_content ($con_blo_cur) {
     return $ite_cur_con;
 }
 
-function item_current_justification_of_block_current_content ($con_blo_cur) {
+function item_current_justification_off_block_current_content ($con_blo_cur) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($con_blo_cur)");
     
@@ -92,7 +89,7 @@ function item_current_justification_of_block_current_content ($con_blo_cur) {
     return $ite_cur_jus;
 }
 
-function item_previous_content_of_block_current_content ($con_blo_cur) {
+function item_previous_content_off_block_current_content ($con_blo_cur) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($con_blo_cur)");
     
@@ -107,7 +104,7 @@ function item_previous_content_of_block_current_content ($con_blo_cur) {
     return $ite_pre_con;
 }
 
-function block_previous_sha1_of_block_current_content ($con_blo_cur) {
+function block_previous_sha1_off_block_current_content ($con_blo_cur) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($con_blo_cur)");
     

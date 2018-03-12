@@ -30,7 +30,7 @@ function item_current_content_linked_by_item_name_hash_build () {
 
   $con_ite_cur_by_nam_blo_a = array ();
   foreach ($con_by_nam_blo_a as $nam_blo => $con_blo) {
-      $con_ite_cur = item_current_content_of_block_current_content ($con_blo);
+      $con_ite_cur = item_current_content_off_block_current_content ($con_blo);
 
       $wor_lin_cur = replace_all_sub_sentence_by_links_of_surname_by_name_hash_of_entry_name_array_of_item_content_of_surname_lowercase_array ($sur_by_nam_h, $nam_ent_a, $con_ite_cur, $sur_low_a);
 

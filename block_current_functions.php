@@ -39,6 +39,8 @@ function block_current_sha1_build () {
   entering_in_function ($here);
 
   $fno_blo_cur = irp_provide ('block_current_file_fullname', $here);
+  debug_n_check ($here, '$fno_blo_cur', $fno_blo_cur);
+
   $blo_cur_sha = sha1_file ($fno_blo_cur);
  
   debug_n_check ($here , '$blo_cur_sha', $blo_cur_sha);

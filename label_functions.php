@@ -51,9 +51,6 @@ function label_html_href_make_of_en_label_name ($en_nam_lab) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($en_nam_lab)");
 
-/* Improve */
-  $_SESSION['get_key_by_script_name']['entry_current_display'] = 'entry_current_name';
-
   $la_nam_lab = language_translate_of_en_string ($en_nam_lab);
   $la_nam_labc = html_entity_decode ($la_nam_lab);
 
@@ -69,7 +66,8 @@ function label_html_href_make_of_en_label_name ($en_nam_lab) {
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<span id="menu-header-links">' . "\n";
-  $html_str .= '<a href="' . $url_rel . '" title="' . $bub . '">';
+  $html_str .= '<a href="' . $url_rel . '"'; 
+  $html_str .= ' title="' . $bub . '">';
   $html_str .= $Tit;
   $html_str .= '</a>' . "\n";
   $html_str .= '</span>' . "\n";

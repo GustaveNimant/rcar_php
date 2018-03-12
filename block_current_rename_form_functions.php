@@ -92,12 +92,6 @@ function block_current_rename_form_build () {
   entering_in_function ($here);
 
   $script_action = 'block_current_namenew_save_script.php';
-  $entity = entity_name_of_script_nameoffile ($script_action);
-
-  $get_key_lis  = 'block_current_surnamenew';
-  $get_key_lis .= ':' ;
-  $get_key_lis .= 'block_current_surnamenew_justification';
-  $_SESSION['get_key_by_script_name'][$entity] = $get_key_lis;
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form ' . "\n";

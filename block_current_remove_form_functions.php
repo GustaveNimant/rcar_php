@@ -27,8 +27,6 @@ function block_current_remove_form_justify_title_build (){
   return $html_str;
 }
 
-
-
 function block_current_remove_form_justification_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
@@ -56,10 +54,6 @@ function block_current_remove_form_build () {
   entering_in_function ($here);
 
   $script_action = 'block_current_remove_save_script.php';
-  $entity = entity_name_of_script_nameoffile ($script_action);
-
-  $get_key = 'block_current_remove_justification';
-  $_SESSION['get_key_by_script_name'][$entity] = $get_key;
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form action="' . $script_action . '" method="get">' . "\n";

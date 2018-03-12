@@ -169,13 +169,9 @@ function command_button_form_build () {
     entering_in_function ($here);
     
     $script_action = 'command_result_script.php';
-    $entity = entity_name_of_script_nameoffile ($script_action);
-    
-    $get_key_sel = 'command_action:command_argument';
-    $_SESSION['get_key_by_script_name'][$entity] = $get_key_sel;
     
     $html_str  = comment_entering_of_function_name ($here);
-    $html_str .= '<form action="'. $script_action .'" method="get"> ' . "\n";
+    $html_str .= '<form action="'. $script_action .'" method="get">' . "\n";
     $html_str .= irp_provide ('command_selection_action', $here);
     $html_str .= irp_provide ('command_selection_argument', $here);
     $html_str .= inputtypesubmit_of_en_action_name ('go');

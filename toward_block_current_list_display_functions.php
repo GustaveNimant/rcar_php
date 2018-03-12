@@ -16,10 +16,6 @@ function block_current_display_and_link_of_surname_by_name_hash_of_block_current
   debug_n_check ($here, '$sur_blo_cur', $sur_blo_cur); /* élément réseau */
 
   $script_action = 'block_current_display_script.php';
-  $entity = entity_name_of_script_nameoffile ($script_action);
-
-  $get_key = 'block_current_name';
-  $_SESSION['get_key_by_script_name'][$entity] = $get_key;
 
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<br>' . "\n"; /* keep */

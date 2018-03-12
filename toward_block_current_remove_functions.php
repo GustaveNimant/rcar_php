@@ -16,8 +16,6 @@ function toward_block_current_remove_build () {
     $nam_blo_cur = irp_provide ('block_current_name', $here);
 
     $script_action = 'block_current_remove_script.php';
-    $entity = entity_name_of_script_nameoffile ($script_action);
-    $_SESSION['get_key_by_script_name'][$entity] = 'block_current_name' ;
 
     $la_act_blo = language_translate_of_en_string ('remove');
 

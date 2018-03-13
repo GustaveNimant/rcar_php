@@ -156,4 +156,32 @@ function block_current_name_reordered_array_of_en_order_of_block_name_list_order
 }
 
 
+function block_current_name_reordered_array_of_en_order_of_block_name_list_order_current_of_from_of_to ($en_order, $old_pro_a, $from, $to) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($en_order, ... array)");
+  # debug_n_check ($here , "old block order array", $old_pro_a);
+
+  switch ($en_order) {
+  case 'move before':
+      $new_pro_a = before_one_block_of_from_of_to ($old_pro_a, $from, $to);
+      # debug_n_check ($here , "new block order array", $new_pro_a);
+      break;
+  case 'move after':
+      $new_pro_a = after_one_block_of_from_of_to ($old_pro_a, $from, $to);
+      # debug_n_check ($here , "new block order array", $new_pro_a);
+      break;
+  case 'swap':
+      $new_pro_a = swap_two_blocks_of_from_of_to ($old_pro_a, $from, $to);
+      # debug_n_check ($here , "new block order array", $new_pro_a);
+      break;
+  default:
+      print "<br>Fatal Error in $here : case >$order< is unknown. Check";
+      break;
+  }
+  
+  exiting_from_function ($here);
+  return $new_pro_a;
+}
+
+
 ?>

@@ -125,12 +125,12 @@ function block_name_list_reorder_order_loop_table_build () {
 
   $html_str .= '</table>' . "\n";
 
-  $glue = $_SESSION['parameters']['glue'];
-  $ser_arr = implode ($glue, $arr_a);
+  /* $glue = $_SESSION['parameters']['glue']; */
+  /* $ser_arr = implode ($glue, $arr_a); */
 
-  $entity_inputtype = 'block_list_order_new';
+  /* $entity_inputtype = 'block_list_order_new'; */
 
-  $html_str .= '<input type="hidden" name="' . $entity_inputtype . '" value="' .$ser_arr . '">' . "\n";
+  /* $html_str .= '<input type="hidden" name="' . $entity_inputtype . '" value="' .$ser_arr . '">' . "\n"; */
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str', $html_str);

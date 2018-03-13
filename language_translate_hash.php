@@ -1826,6 +1826,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ),
 
+    'page for creating a new block of questions for entry' =>
+    array (
+        'fr' => 'page de cr&eacute;ation d&rsquo;un nouveau bloc de questions pour l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ), 
+
     'page for creating a new block of rules for entry' =>
     array (
         'fr' => 'page de cr&eacute;ation d&rsquo;un nouveau bloc de r&egrave;gles pour l&rsquo;entr&eacute;e',
@@ -1885,6 +1891,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'fr' => 'page d&rsquo;affichage du nouvel ordre des paragraphes de l&rsquo;entr&eacute;e',
         'it' => '???',
     ), 
+
+    'page for displaying the new order of the questions for entry' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du nouvel ordre des questions de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ),
 
     'page for displaying the new order of the rules for entry' =>
     array (
@@ -2102,13 +2114,20 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ), 
     
-   'page for removing the property' =>
+    'page for removing the property' =>
     array (
         'fr' => 'page de suppression de la propri&eacute;t&eacute;',
         'it' => '???',
-   ), 
-
-   'page for removing the rule' =>
+    ), 
+    
+    
+    'page for removing the question' =>
+    array (
+        'fr' => 'page de suppression de la question',
+        'it' => '???',
+    ), 
+    
+    'page for removing the rule' =>
     array (
         'fr' => 'page de suppression de la r&egrave;gle',
         'it' => '???',

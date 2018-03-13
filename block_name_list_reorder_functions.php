@@ -129,6 +129,7 @@ function block_name_list_reorder_order_loop_table_build () {
   $ser_arr = implode ($glue, $arr_a);
 
   $entity_inputtype = 'block_list_order_new';
+
   $html_str .= '<input type="hidden" name="' . $entity_inputtype . '" value="' .$ser_arr . '">' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 
@@ -178,7 +179,7 @@ function block_name_list_reorder_form_build (){
   $script_action = 'block_name_list_order_new_script.php';
 
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<form action="' . $script_action . '" method="get"> ' . "\n";
+  $html_str .= '<form action="' . $script_action . '" method="get">' . "\n";
 
   $html_str .= '<center>' . "\n";
   $html_str .= irp_provide ('block_name_list_reorder_action_table', $here);

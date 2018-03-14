@@ -40,14 +40,13 @@ function block_name_list_order_string_write_build () { /* user driven */
 
   $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__);
 
-/* Improve  */
-  $get_key = 'block_name_list_order_new_string';
-  $new_lis_blo = irp_data_value_retrieve_and_store_of_get_key_of_module_name_of_where ($get_key, $nam_mod_cur, $here);
+  $entity_write = 'block_name_list_order_new_string'; 
+  $new_lis_blo = irp_provide ('block_name_list_order_new_string', $here);
 
 /* Write Improve */
   $nam_ent_cur = irp_provide ('entry_current_name', $here);
   $log_str = block_name_list_order_write_of_entry_name_of_block_name_list_order_string ($nam_ent_cur, $new_lis_blo);
-  father_n_son_stack_entity_push_of_father_of_son ("WRITE_block_name_list_order", $get_key);
+  father_n_son_stack_entity_push_of_father_of_son ('WRITE_' . $entity_write, $entity_write);
 
   exiting_from_function ($here);
 

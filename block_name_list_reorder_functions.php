@@ -102,17 +102,18 @@ function block_name_list_reorder_order_loop_table_build () {
 
   $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);
   $con_by_nam_blo_a = irp_provide ('block_content_by_block_name_hash', $here);
-  $nam_blo_a = irp_provide ('block_name_array_order_current', $here);
+  $nam_blo_ord_cur_a = irp_provide ('block_name_array_order_current', $here);
 
   $arr_a = array();
   $count = 0;
   $la_eol = '';
+
   $kin_blo = irp_provide ('entry_block_kind', $here);
   if ($kin_blo == 'question') {$la_eol = language_translate_of_en_string ('?');}
   
   $html_str  = comment_entering_of_function_name ($here);
 
-  foreach ($nam_blo_a as $key => $nam_blo) {
+  foreach ($nam_blo_ord_cur_a as $key => $nam_blo) {
       $con_blo = $con_by_nam_blo_a[$nam_blo];
       $con_ite_cur = item_current_content_off_block_current_content ($con_blo) ;
       $con_ite = str_replace ("\n", "<br>", $con_ite_cur);
@@ -124,13 +125,6 @@ function block_name_list_reorder_order_loop_table_build () {
   }
 
   $html_str .= '</table>' . "\n";
-
-  /* $glue = $_SESSION['parameters']['glue']; */
-  /* $ser_arr = implode ($glue, $arr_a); */
-
-  /* $entity_inputtype = 'block_list_order_new'; */
-
-  /* $html_str .= '<input type="hidden" name="' . $entity_inputtype . '" value="' .$ser_arr . '">' . "\n"; */
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str', $html_str);

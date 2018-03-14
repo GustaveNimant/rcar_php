@@ -2,7 +2,6 @@
 
 require_once "label_information_library.php";
 require_once "entry_information_functions.php";
-require_once "button_submit_functions.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 

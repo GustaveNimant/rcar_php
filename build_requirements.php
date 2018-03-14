@@ -82,12 +82,6 @@ require_once "item_current_justification_linked_functions.php";
 require_once "item_current_modify_functions.php";
 require_once "item_previous_content_linked_functions.php";
 
-require_once "item_next_create_form_current_content_functions.php";
-require_once "item_next_create_form_functions.php";
-require_once "item_next_create_form_new_create_content_functions.php";
-require_once "item_next_create_form_new_create_justification_functions.php";
-require_once "item_next_create_form_page_title_functions.php";
-
 require_once "item_new_create_content_form_functions.php"; 
 require_once "item_new_create_justification_functions.php"; 
 require_once "item_new_name_functions.php"; 

@@ -32,7 +32,7 @@ function block_name_list_order_new_form_title_build () {
   return $html_str;
 }
 
-function block_name_list_order_new_form_blocks_display_build () {
+function block_name_list_order_new_string_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
 
@@ -42,15 +42,21 @@ function block_name_list_order_new_form_blocks_display_build () {
     $glue = $_SESSION['parameters']['glue'];
     $nam_blo_ord_new_str = implode ($glue, $nam_blo_ord_new_a);
     
-    $entity_inputtype = 'block_name_list_order_new_string';
+    exiting_from_function ($here . "with \$nam_blo_ord_new_str = $nam_blo_ord_new_str");
+    
+    return $nam_blo_ord_new_str;
+}
+
+function block_name_list_order_new_form_blocks_display_build () {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+
+    $nam_blo_ord_new_a = irp_provide ('block_name_list_order_new_array', $here);
+
+    $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here); 
 
     $html_str  = comment_entering_of_function_name ($here);
-
     $html_str .= block_name_list_order_current_of_surname_by_name_hash_of_block_name_list_order_current ($sur_by_nam_h, $nam_blo_ord_new_a);
-
-    $html_str .= '<input type="hidden" name="' . $entity_inputtype;
-    $html_str .= '" value="' . $nam_blo_ord_new_str;
-    $html_str .= '">';
     $html_str .= comment_exiting_of_function_name ($here);
     
     debug_n_check ($here , '$html_str', $html_str);
@@ -83,6 +89,7 @@ function block_name_list_order_new_justification_textarea_build () {
     entering_in_function ($here);
     
     $entity_textarea = 'block_name_list_order_new_justification';
+
     $row_hta = $_SESSION['parameters']['html_textarea_rows'];
     $col_hta = $_SESSION['parameters']['html_textarea_cols'];
 
@@ -132,7 +139,6 @@ function block_name_list_order_new_form_build () {
     exiting_from_function ($here);
     
     return $html_str;
-    
 }
 
 exiting_from_module ($module);

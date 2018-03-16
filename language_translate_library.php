@@ -9,7 +9,6 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-
 function language_translate_of_en_string ($en_str) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($en_str)");
@@ -61,18 +60,14 @@ function language_translate_texts_english_by_language_hash () {
   include "language_translate_hash.php";
 
   foreach ($language_translate_hash as $en_str => $val_a) {
-
     $la_str = $val_a [$lan];
-    /* debug_n_check ($here , "en_str", $en_str); */
-    /* debug_n_check ($here , "lan_str", $la_str); */
-    $texts_english_by_language_h [$la_str] = $en_str;
-
+    $en_txt_by_la_txt_h [$la_str] = $en_str;
   }
 
-  /* # debug_n_check ($here , "output bi_language array", $texts_english_by_language_h); */
+#  debug_n_check ($here , '$en_txt_by_la_txt_h', $en_txt_by_la_txt_h);
   exiting_from_function ($here);
   
-  return $texts_english_by_language_h;
+  return $en_txt_by_la_txt_h;
 }
 
 function language_translate_to_english_of_la_string ($la_str) {
@@ -80,28 +75,33 @@ function language_translate_to_english_of_la_string ($la_str) {
   entering_in_function ($here . " ($la_str)"); 
 
   $lan = $_SESSION['parameters']['language'];
-  if ($lan == "en") {
+  debug_n_check ($here , '$lan', $lan);
+
+  if ($lan == 'en') {
     $en_str = $la_str;
   }
   else {
-    $la_str_h = htmlentities ($la_str);
-#    debug_n_check ($here , '$la_str_h', $la_str_h);
-    $bi_lan_a = language_translate_texts_english_by_language_hash ();
-#    debug_n_check ($here , '$bi_lan_a', $bi_lan_a);
-    $en_str = $bi_lan_a[$la_str]; 
- }
-
-     if (array_key_exists($la_str_h, $bi_lan_a)){
-       $en_str = $bi_lan_a[$la_str_h];
-     }
-     else {
-       print_html_array ($here , '$bi_lan_a', $bi_lan_a);
-       fatal_error ($here, "element >$la_str_h< not in array $\bi_lan_a"); 
-     }
+      debug_n_check ($here , '$la_str', $la_str);
+      $la_str_h = htmlentities ($la_str);
+      debug_n_check ($here , '$la_str_h', $la_str_h);
+      $en_txt_by_la_txt_h = language_translate_texts_english_by_language_hash ();
+      debug_n_check ($here , '$en_txt_by_la_txt_h', $en_txt_by_la_txt_h);
+      
+      if (array_key_exists ($la_str_h, $en_txt_by_la_txt_h) ) {
+          $en_str = $en_txt_by_la_txt_h[$la_str_h];
+          debug_n_check ($here , '$en_str', $en_str);
+      }
+      else {
+          print_html_array ($here, '$en_txt_by_la_txt_h', $en_txt_by_la_txt_h);
+          print_fatal_error ($here,
+          "element >$la_str_h< were a key of hash \$en_txt_by_la_txt_h",
+          "it is NOT",
+          "Check hash upper"); 
+      }
+  }
   
-#  debug_n_check ($here , "output string in english", $en_str);
-  exiting_from_function ($here);
-
+  exiting_from_function ($here . "with \$en_str = $en_str");
+  
   return $en_str;  
 }
 

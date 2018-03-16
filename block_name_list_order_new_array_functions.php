@@ -14,11 +14,13 @@ function block_name_list_order_new_array_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__);
+#  $nam_mod_cur = module_name_of_module_fullnameoffile (__FILE__);
 
   $la_Order = irp_provide ('block_name_list_reorder_action_la', $here);
   $la_order = strtolower ($la_Order);
+  debug_n_check ($here , '$la_order', $la_order);
   $en_order = language_translate_to_english_of_la_string ($la_order);
+  debug_n_check ($here , '$en_order', $en_order);
 
   $nam_blo_fr = irp_provide ('from', $here);
   $nam_blo_to = irp_provide ('to', $here);

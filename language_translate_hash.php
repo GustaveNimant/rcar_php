@@ -823,37 +823,37 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
 
     'edit' => 
     array (
-		'fr' => 'editer',
+		'fr' => '&eacute;diter',
 		'it' => 'modifica',
     ),
 	 
     'edit the bubble' => 
     array (
-		'fr' => 'editer la bulle',
+		'fr' => '&eacute;diter la bulle',
 		'it' => '???',
     ),
 
     'edit the paragraph' => 
     array (
-		'fr' => 'editer le paragraphe',
+		'fr' => '&eacute;diter le paragraphe',
 		'it' => '???',
     ),
 
     'edit the property' => 
     array (
-		'fr' => 'editer la propri&eacute;t&eacute;',
+		'fr' => '&eacute;diter la propri&eacute;t&eacute;',
 		'it' => '???',
     ),
 
     'edit the question' => 
     array (
-		'fr' => 'editer la question',
+		'fr' => '&eacute;diter la question',
 		'it' => '???',
     ),
 
     'editing rules for ARCE' =>
     array (
-        'fr' => 'editer les r&egrave;gles pour RCAR',
+        'fr' => '&eacute;diter les r&egrave;gles pour RCAR',
 		'it' => '???',
     ),
 

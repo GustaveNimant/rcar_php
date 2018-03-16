@@ -75,22 +75,6 @@ function inputtypehidden_store_of_get_key_of_get_value ($get_key, $get_val) {
   return $html_str;
 }
 
-function inputtypehidden_store_of_clicked_module_name ($nam_mod_cli) {
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_mod_cli)");
-
-  $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= '<input type="hidden" name="clicked_module_name"';
-  $html_str .= ' value="' . $nam_mod_cli;
-  $html_str .= '"> ' . "\n";
-  $html_str .= comment_exiting_of_function_name ($here);
-  
-  debug_n_check ($here , '$html_str', $html_str);
-  exiting_from_function ($here);
-  
-  return $html_str;
-}
-
 function inputtypereset_of_en_action_name () {
   $here = __FUNCTION__;
   entering_in_function ($here);

@@ -138,17 +138,19 @@ function file_is_entry_nameoffile_text_of_name ($nam) {
     return $result;
 };
 
-function file_is_item_nameoffile_of_entry_name_of_name ($nam_ent, $nam) {
+function file_is_block_nameoffile_of_entry_name_of_name ($nam_ent, $nam) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($nam_ent, $nam)");
 
     $ext_blo = $_SESSION['parameters']['extension_block_filename'];
 
-    $hpse_dir = $_SESSION['parameters']['absolute_path_server_surname'];
-    $fnod = $hpse_dir . '/' . $nam_ent;
+    $hdir = $_SESSION['parameters']['absolute_path_server'];
+    $fnod = $hdir . '/' . $nam_ent;
     
     $nof = $nam . '.' . $ext_blo; 
     $fnof = $fnod . '/' . $nof;
+
+    debug_n_check ($here, '$fnof', $fnof);
 
     $result = file_exists ($fnof);
 

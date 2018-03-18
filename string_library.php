@@ -34,7 +34,7 @@ function string_html_capitalized_of_string ($str) {
   return $str;
 };
 
-function string_any_capitalized_accented_of_string_accented ($str) {
+function string_html_capitalized_accented_of_string_accented ($str) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($str)");
     
@@ -49,10 +49,8 @@ function string_any_capitalized_accented_of_string_accented ($str) {
         $str_htm = ucfirst ($str_htm);
     }
 
-    $str = html_entity_decode ($str_htm);
-
-    exiting_from_function ($here . " with $str");
-    return $str;
+    exiting_from_function ($here . " with $str_htm");
+    return $str_htm;
 };
 
 

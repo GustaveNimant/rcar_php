@@ -12,13 +12,13 @@ function entry_new_create_save_page_title_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $sur_ent_cur = irp_provide ('entry_new_surname', $here);
-  debug_n_check ($here , '$sur_ent_cur',  $sur_ent_cur);
+  $sur_ent_new = irp_provide ('entry_new_surname', $here); /* Improve capitalized surname*/
+  debug_n_check ($here , '$sur_ent_new',  $sur_ent_new);
 
   $en_tit = 'page for displaying the result of creation of the new entry'; 
 
   $la_bub_tit  = bubble_bubbled_la_text_of_en_text ($en_tit);
-  $la_bub_tit .= ' <i><b>' . ucfirst ($sur_ent_cur) . '</b></i>';
+  $la_bub_tit .= ' <i><b>' . string_html_capitalized_accented_of_string_accented ($sur_ent_new) . '</b></i>';
   $la_bub_Tit = string_html_capitalized_of_string ($la_bub_tit);
 
   $html_str  = comment_entering_of_function_name ($here);
@@ -40,7 +40,7 @@ function entry_new_create_save_subdirectory_create_build () {
   $sur_ent_new = irp_provide ('entry_new_surname', $here); /* ??? */ 
   $nam_ent_new = irp_provide ('entry_new_name_from_entry_new_surname', $here); 
   
-  debug_n_check ($here, '$sur_ent_new', $sur_ent_new);
+  debug_n_check ($here, '$sur_ent_new', $sur_ent_new);  /* Improve capitalized surname*/
   debug_n_check ($here, '$nam_ent_new', $nam_ent_new);
 
   $en_tit = 'the directory of entry';
@@ -67,7 +67,7 @@ function entry_new_create_save_surname_update_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
     
-    $sur_ent_new = irp_provide ('entry_new_surname', $here); /* ??? */ 
+    $sur_ent_new = irp_provide ('entry_new_surname', $here);   /* Improve capitalized surname*/
     $nam_ent_new = irp_provide ('entry_new_name_from_entry_new_surname', $here); 
     
     debug_n_check ($here, '$sur_ent_new', $sur_ent_new);
@@ -83,7 +83,6 @@ function entry_new_create_save_surname_update_build () {
     return $log_str;
 }
 
-
 function entry_new_create_save_irp_path_clean () {
   $here = __FUNCTION__;
   entering_in_function ($here);
@@ -93,7 +92,6 @@ function entry_new_create_save_irp_path_clean () {
   exiting_from_function ($here);
   return;
 }
-
 
 function entry_new_create_save_link_to_return_build () {
   $here = __function__;
@@ -121,14 +119,14 @@ function entry_new_create_save_link_to_go_build () {
   $here = __function__;
   entering_in_function ($here);
 
-  $sur_ent_new = irp_provide ('entry_new_surname', $here);
+  $sur_ent_new = irp_provide ('entry_new_surname', $here); /* Improve capitalized surname */
   debug_n_check ($here , '$sur_ent_new',  $sur_ent_new);
   $nam_ent_new = irp_provide ('entry_new_name_from_entry_new_surname', $here);
+  debug_n_check ($here , '$nam_ent_new',  $nam_ent_new);
 
   $en_tit = 'go to new entry';
   $la_tit = language_translate_of_en_string ($en_tit);
-
-  $la_tit .= ' <i><b>' . ucfirst ($sur_ent_new) . '</b></i>';
+  $la_tit .= ' <i><b>' . string_html_capitalized_accented_of_string_accented ($sur_ent_new) . '</b></i>';
   $la_Tit = string_html_capitalized_of_string ($la_tit);
 
   $script_to_return = 'entry_current_display_script.php?entry_current_name=' . $nam_ent_new;

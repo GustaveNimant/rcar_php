@@ -56,7 +56,7 @@ function surname_catalog_item_add_save_build (){
   /* $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here); */
   $nof_mod = 'entry_current_display_script.php';
 
-  $html_str = '';
+  $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('pervasive_page_header', $here);
   $html_str .= irp_provide ('git_command_n_commit_html', $here);
 
@@ -64,7 +64,8 @@ function surname_catalog_item_add_save_build (){
   $sur_ent = irp_provide ('entry_current_surname_from_entry_current_name', $here);
   $html_str .= link_to_return_of_entry_name_of_entry_surname_of_script_to_return ($nam_ent, $sur_ent, $nof_mod); 
   $html_str .= irp_provide ('pervasive_page_footer', $here);
-  
+  $html_str .= comment_exiting_of_function_name ($here);
+
   debug_n_check ($here, '$html_str', $html_str);
   exiting_from_function ($here);
   
@@ -111,7 +112,6 @@ function surname_catalog_add_save_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-
   $nam_wos = irp_provide ('name_without_surname', $here);
   debug_n_check ($here , '$nam_wos', $nam_wos);
 
@@ -120,12 +120,12 @@ function surname_catalog_add_save_build (){
   }
   else {
       $nam_ent = irp_provide ('entry_current_name', $here);
-      if (file_is_item_nameoffile_of_entry_name_of_name ($nam_ent, $nam_wos)) { 
+      if (file_is_block_nameoffile_of_entry_name_of_name ($nam_ent, $nam_wos)) { 
           $html_str = irp_provide ('surname_catalog_item_add_save', $here);
       }
       else {
           print_fatal_error ($here,
-          "\$nam_wos were either an item or an entry name",
+          "Name without surname >$nam_wos< were either an item or an entry name",
           "it is neither an item or an entry name",
           "Check"
           );

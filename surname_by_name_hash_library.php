@@ -7,7 +7,6 @@ $module = module_name_of_module_nameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is an array equivalent to the surname_catalog";
 $Documentation[$module]['what for'] = "to ...";
 
-
 function surname_by_name_hash_keysort ($sur_by_nam_h) {
   $here = __FUNCTION__;
   entering_in_function ($here . ' ( ...$sur_nam_a)');
@@ -66,11 +65,9 @@ function surname_by_name_hash_add_n_write_of_name_of_surname_of_current_hash ($n
 
   string_check_is_not_empty_of_what_of_where_of_string ("???", $here, $nam);
   string_check_is_not_empty_of_what_of_where_of_string ("???", $here, $sur_nam);
-  # debug_n_check ($here , '$old_sur_by_nam_h', $old_sur_by_nam_h);
 
-  if ($sur_nam <> ucfirst($sur_nam)){
-      $sur_nam = ucfirst($sur_nam);
-  }
+  $html_str = string_html_capitalized_accented_of_string_accented ($sur_nam);
+  $sur_nam = html_entity_decode ($html_str); /* Surnames are NOT html entities */
 
   if (array_key_exists ($nam, $old_sur_by_nam_h)) {
 

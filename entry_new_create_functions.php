@@ -105,6 +105,7 @@ function entry_new_create_form_build () {
   father_n_son_stack_entity_push_of_father_of_son ($entity_fat, "BUTTON_$entity_fat");
 
   $script_action = 'entry_new_create_save_script.php';
+
   $entity_son = entity_name_of_script_nameoffile ($script_action);
   father_n_son_stack_entity_push_of_father_of_son ($entity_fat, $entity_son);
 

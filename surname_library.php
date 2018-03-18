@@ -16,7 +16,6 @@ function surname_of_name_of_surname_by_name_hash ($nam, $sur_by_nam_h) {
   entering_in_function ($here . " ($nam, \$sur_by_nam_h)");
 #  $cpu_in = entering_withcpu_in_function ($here);
 
-  /* $sur_by_nam_h = surname_by_name_hash_make (); */
   # debug_n_check ($here , '$sur_by_nam_h', $sur_by_nam_h);
 
   if ( ! isset ($nam) 
@@ -28,10 +27,10 @@ function surname_of_name_of_surname_by_name_hash ($nam, $sur_by_nam_h) {
       );
   }
 
-/* Moche */
+/* Improve FCC 18 march 2018 Moche */
   
   if ( ! isset ($sur_by_nam_h[$nam]) ) {
-      irp_store_force ('name_without_surname', $nam, 'entry_current_display');
+      irp_store_force ('name_without_surname', $nam, 'entry_current_display', $here);
       exiting_from_function ($here . " with \$nam >$nam<");
       include 'surname_catalog_add_script.php';
       exit;
@@ -47,12 +46,20 @@ function surname_of_name_of_surname_by_name_hash ($nam, $sur_by_nam_h) {
       );
   }
   
-  $sur = ucfirst ($sur);
+  $Sur = ucfirst ($sur);
 
-  $log_str = "Surname >$sur< for name >$nam< has been done";
+  if ($Sur != $sur)  { /* un simple test */
+      print_fatal_error ($here,
+      "surname for key name >$nam< were capitalized",
+      "it does NOT and is >$sur<",
+      "Check"
+      );
+  }
+  
+  $log_str = "Surname >$Sur< for name >$nam< and surname >$sur< has been done";
   file_log_write ($here, $log_str);
 
-  exiting_from_function ($here . " with surname >$sur< from name >$nam<");
+  exiting_from_function ($here . " with surname >$Sur< from name >$nam< and surname >$sur<");
 #  exiting_withcpu_from_function ($here, $cpu_in);
 
   return $sur;

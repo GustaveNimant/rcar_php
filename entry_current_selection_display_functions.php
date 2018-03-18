@@ -45,6 +45,7 @@ function entry_current_selection_display_menuselect_build () { /* move in some t
     
     foreach ($nam_ent_a as $nam_ent) {
         $sur_ent = surname_of_name_of_surname_by_name_hash ($nam_ent, $sur_by_nam_h);
+        $Sur_ent = string_html_capitalized_accented_of_string_accented ($sur_ent); /* Improve  Surname accented capitalized */
 
         debug_n_check ($here, 'foreach $nam_ent', $nam_ent);
         
@@ -57,14 +58,14 @@ function entry_current_selection_display_menuselect_build () { /* move in some t
             if ($nam_ent_las != 'no selection done yet') {
 
                 if ($nam_ent_las == $nam_ent) {
-                    $html_str .= '  <option value="' . $nam_ent . '" selected> ' . $sur_ent . '</option>' . "\n";
+                    $html_str .= '  <option value="' . $nam_ent . '" selected> ' . $Sur_ent . '</option>' . "\n";
                 }
                 else {
-                    $html_str .= '  <option value="' . $nam_ent . '"> ' . $sur_ent . '</option>' . "\n";
+                    $html_str .= '  <option value="' . $nam_ent . '"> ' . $Sur_ent . '</option>' . "\n";
                 }
             }
             else {
-                $html_str .= '  <option value="' . $nam_ent . '"> ' . $sur_ent . '</option>' . "\n";
+                $html_str .= '  <option value="' . $nam_ent . '"> ' . $Sur_ent . '</option>' . "\n";
             }
         }
     }

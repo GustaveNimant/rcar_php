@@ -14,7 +14,8 @@ function management_excluded_first_word_function_build () {
       'array', 'check', 'label', 'file', 
       'language', 'now', 
 #      'string', 
-      'surname', 'user', 'word'
+#      'surname', 
+      'user', 'word'
   ); 
   
   return $excluded_first_a;

@@ -70,6 +70,10 @@ require_once "entry_new_create_functions.php";
 require_once "entry_new_create_save_functions.php";
 require_once "entry_new_name_functions.php";
 
+require_once "entry_type_catalog_add_save_functions.php";
+require_once "entry_type_by_entry_name_hash_functions.php";
+require_once "entry_type_catalog_functions.php";
+
 require_once "git_command_functions.php";
 require_once "git_history_functions.php";
 require_once "git_retrieve_functions.php";

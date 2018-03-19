@@ -85,18 +85,14 @@ $_SESSION['is_data_entity_name'] = array (
     'item_previous_content' => TRUE,
 
     'surname_of_name_without_surname' => TRUE,
+    'entry_type_of_entry_name_without_entry_type' => TRUE,
 );
 
 $_SESSION['is_read_entity_name'] = array (
     'block_name_list_order_current_string' => TRUE,
     'surname_catalog' => TRUE,
+    'entry_type_catalog' => TRUE,
     'entry_fullnameofdirectory_array' => TRUE,
-);
-
-$_SESSION['entry_type_by_entry_name'] = array (
-    'Blockchain' => 'blockchain',
-    'Chaine_de_blocs' => 'blockchain',
-    'Volonte_generale' => 'general will',
 );
 
 $_SESSION['creation_step_count'] = 0;
@@ -128,15 +124,31 @@ $_SESSION['language_translate_hash'] = $language_translate_hash;
 $_SESSION['parameters']['absolute_path_rcar'] = $roo_doc . '/rcar';
 
 $_SESSION['parameters']['absolute_path_server'] = $roo_doc . '/rcar/server';
-$_SESSION['parameters']['absolute_path_server_surname'] = $roo_doc . '/rcar/server/SURNAMES';
 
+/* surnames */
+$_SESSION['parameters']['relative_path_server_surname'] = '/rcar/server/SURNAMES';
+$_SESSION['parameters']['absolute_path_server_surname'] = $roo_doc . '/rcar/server/SURNAMES';
 $_SESSION['parameters']['nameoffile_surname_catalog'] = 'Surname_catalog.cat';
 $_SESSION['parameters']['absolute_path_server_surname_catalog'] = $_SESSION['parameters']['absolute_path_server_surname'] . '/' . $_SESSION['parameters']['nameoffile_surname_catalog'];
+
+/* entry_types */
+$_SESSION['parameters']['relative_path_server_entry_type'] = '/rcar/server/ENTRY_TYPES';
+$_SESSION['parameters']['absolute_path_server_entry_type'] = $roo_doc . '/rcar/server/ENTRY_TYPES';
+$_SESSION['parameters']['nameoffile_entry_type_catalog'] = 'Entry_type_catalog.cat';
+$_SESSION['parameters']['absolute_path_server_entry_type_catalog'] = $_SESSION['parameters']['absolute_path_server_entry_type'] . '/' . $_SESSION['parameters']['nameoffile_entry_type_catalog'];
+
+
+$_SESSION['entry_type_array'] = array (
+    'general will',
+    'header',  
+    'concept', 
+    'blockchain',
+    'miscellaneous',
+);
 
 $_SESSION['parameters']['absolute_path_source'] = $roo_doc . '/rcar/php';
 
 $_SESSION['parameters']['relative_path_server'] = '/rcar/server';
-$_SESSION['parameters']['relative_path_server_surname'] = '/rcar/server/SURNAMES';
 $_SESSION['parameters']['relative_path_source'] = '/rcar/php';
 $_SESSION['parameters']['relative_path_source_images'] = '/rcar/php/IMAGES';
 

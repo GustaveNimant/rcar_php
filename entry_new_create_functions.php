@@ -73,8 +73,9 @@ function entry_new_create_type_select_display_build () {
     $key = str_replace('_build', '', $here);
     father_n_son_stack_entity_push_of_father_of_son ($key, "BUTTON_$key");
     
-    $get_key_sel = 'entry_type';
-    $en_typ_a = array ('general will', 'concept', 'blockchain');
+    $en_typ_a = $_SESSION['entry_type_array'];
+
+    $get_key_sel = 'entry_new_type';
 
     $html_str  = comment_entering_of_function_name ($here);
     $html_str .= '<select name="' . $get_key_sel . '">' . "\n";

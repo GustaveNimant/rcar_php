@@ -83,6 +83,26 @@ function entry_new_create_save_surname_update_build () {
     return $log_str;
 }
 
+function entry_new_create_save_type_update_build () {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+    $nam_ent_new = irp_provide ('entry_new_name_from_entry_new_surname', $here); 
+    $typ_ent_new = irp_provide ('entry_new_type', $here); 
+    
+    debug_n_check ($here, '$nam_ent_new', $nam_ent_new);
+    debug_n_check ($here, '$typ_ent_new', $typ_ent_new);
+    
+    $typ_ent_by_nam_ent_h = irp_provide ('entry_type_by_entry_name_hash', $here);
+    entry_type_by_entry_name_hash_add_n_write_of_entry_name_of_entry_type_of_current_hash ($nam_ent_new, $typ_ent_new, $typ_ent_by_nam_ent_h);
+
+    $fno_typ_cat = $_SESSION['parameters']['absolute_path_server_entry_type_catalog'];
+    $log_str = "entry_new_type >$typ_ent_new< for new entry >$nam_ent_new< has been added to $fno_typ_cat";
+    
+    exiting_from_function ($here);
+    return $log_str;
+}
+
 function entry_new_create_save_irp_path_clean () {
   $here = __FUNCTION__;
   entering_in_function ($here);
@@ -166,6 +186,10 @@ function entry_new_create_save_build () {
   $html_str .= '<br>' . "\n";
   $html_str .= irp_provide ('entry_new_create_save_link_to_return', $here);
   $html_str .= '<br><br>' . "\n";
+
+  $log_str   = irp_provide ('entry_new_create_save_type_update', $here);
+  file_log_write ($here, $log_str);
+
   
   $html_str .= irp_provide ('pervasive_page_footer', $here);
   $html_str .= comment_exiting_of_function_name ($here);

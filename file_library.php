@@ -8,7 +8,6 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-
 function file_fullnameoffile_parse_array ($fno) {
     $here = __FUNCTION__;
     
@@ -207,6 +206,26 @@ function file_check_exists_of_fullnameoffile ($fno) {
   return;
 };
 
+function file_is_empty_of_fullnameoffile ($fno) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($fno)");
+
+  $boo = (file_get_contents ($fno) == '');
+
+  exiting_from_function ($here);
+  return $boo;
+};
+
+function file_is_not_empty_of_fullnameoffile ($fno) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($fno)");
+
+  $boo = (file_get_contents ($fno) <> '');
+
+  exiting_from_function ($here);
+  return $boo;
+};
+
 function file_surname_nameofile_extension_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
@@ -373,7 +392,6 @@ function file_rename_of_old_of_new_of_where ($old_nof, $new_nof, $where) {
     exiting_from_function ($here . ' with file >' . $old_nof . ' renamed as '. $new_nof);
     return;
 }
-
 
 function file_remove_of_fullnameoffile ($fno) {
     $here = __FUNCTION__;

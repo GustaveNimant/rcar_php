@@ -1187,6 +1187,12 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
 		'fr' => 'a &eacute;t&eacute; &eacute;crit sur le disque',
         'it' => '???',
     ), 
+
+    'header' =>
+    array (
+        'fr' => 'en-t&ecirc;te',
+        'it' => '???',
+    ), 
     
     'here' => 
     array (
@@ -1463,6 +1469,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
     'message' =>
     array (
 		'fr' => 'message',
+		'it' => '???',
+    ),
+
+    'miscellaneous' =>
+    array (
+		'fr' => 'divers',
 		'it' => '???',
     ),
 

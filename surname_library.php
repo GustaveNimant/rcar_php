@@ -1,8 +1,4 @@
 <?php
-
-require_once "surname_by_name_hash_functions.php";
-require_once "surname_catalog_add_functions.php";
-
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
 $Documentation[$module]['what is it'] = "it is ...";

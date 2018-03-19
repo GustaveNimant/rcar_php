@@ -13,13 +13,9 @@ function surname_catalog_fullnameoffile_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $fdi_ser = $_SESSION['parameters']['absolute_path_server'];
-  debug_n_check ($here , '$fdi_ser', $fdi_ser);
-  $nof_sur = 'Surname_catalog.cat';
-  $fno_sur = $fdi_ser . '/SURNAMES/' . $nof_sur;
-
-  $mod_scr = entity_name_of_build_function_name ($here);
-  father_n_son_stack_entity_push_of_father_of_son ($mod_scr, "READ_$mod_scr");
+  $fno_sur = $_SESSION['parameters']['absolute_path_server_surname_catalog'];
+  $entity = entity_name_of_build_function_name ($here);
+  father_n_son_stack_entity_push_of_father_of_son ($entity, "READ_$entity");
 
   debug_n_check ($here , '$fno_sur', $fno_sur);
   exiting_from_function ($here);

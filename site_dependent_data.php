@@ -10,8 +10,8 @@ case 'localhost' :
     $_SESSION['is_verbose'] = TRUE;
     $_SESSION['is_very_verbose'] = FALSE;
     $_SESSION['is_debug_active'] = TRUE;
-    $_SESSION['is_comment_html_active'] = TRUE;
     $_SESSION['is_comment_html_active'] = FALSE;
+    $_SESSION['is_comment_html_active'] = TRUE;
     
     break;
 

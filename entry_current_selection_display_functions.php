@@ -1,5 +1,6 @@
 <?php
 require_once "irp_library.php";
+require_once "entry_current_selection_display_library.php";
 
 $module = module_name_of_module_nameoffile (__FILE__);
 
@@ -32,47 +33,36 @@ function entry_current_selection_display_menuselect_build () { /* move in some t
     $here = __FUNCTION__;
     entering_in_function ($here);
 
-    $select_size = $_SESSION['parameters']['select_size'];
     $nam_ent_a = irp_provide ('entry_name_array', $here);
     $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);
+    $nam_ent_las = irp_provide ('entry_current_name_last', $here);       
+    debug_n_check ($here, '$nam_ent_las', $nam_ent_las);
 
-    $get_key_sel = 'entry_current_name';
+    $typ_ent_by_nam_ent_h = irp_provide ('entry_type_by_entry_name_hash', $here);
+    $typ_ent_a = $_SESSION['entry_type_array'];
 
-    $html_str  = comment_entering_of_function_name ($here);
-    $html_str .= '<select name="'. $get_key_sel . '"'; 
-    $html_str .= ' size="' . $select_size . '"'; 
-    $html_str .= '>' . "\n";
+    $html_str  = comment_entering_of_function_name ($here); 
+    $html_str .= '<table>' . "\n";
     
-    foreach ($nam_ent_a as $nam_ent) {
-        $sur_ent = surname_of_name_of_surname_by_name_hash ($nam_ent, $sur_by_nam_h);
-        $Sur_ent = string_html_capitalized_accented_of_string_accented ($sur_ent); /* Improve  Surname accented capitalized */
-
-        debug_n_check ($here, 'foreach $nam_ent', $nam_ent);
+    foreach ($typ_ent_a as $key => $typ_ent) {
         
-        if ( ! isset ($_SESSION['is_label_entity_name'][$nam_ent])) { 
-            /* labels are accessed directly */
-
-            $nam_ent_las = irp_provide ('entry_current_name_last', $here);       
-            debug_n_check ($here, '$nam_ent_las', $nam_ent_las);
-
-            if ($nam_ent_las != 'no selection done yet') {
-
-                if ($nam_ent_las == $nam_ent) {
-                    $html_str .= '  <option value="' . $nam_ent . '" selected> ' . $Sur_ent . '</option>' . "\n";
-                }
-                else {
-                    $html_str .= '  <option value="' . $nam_ent . '"> ' . $Sur_ent . '</option>' . "\n";
-                }
-            }
-            else {
-                $html_str .= '  <option value="' . $nam_ent . '"> ' . $Sur_ent . '</option>' . "\n";
-            }
+        if ($typ_ent <> 'header') {
+            $nam_ent_a = array_keys ($typ_ent_by_nam_ent_h, $typ_ent);
+#            $nam_ent_a = array_retrieve_key_array_of_value_of_array_of_where ($typ_ent, $typ_ent_by_nam_ent_h, $here);
+            
+            $html_str .= '<td>' . "\n";
+            
+            $html_str .= entry_typed_menuselect_of_entry_name_array_of_surname_by_name_hash_of_entry_current_name_last ($nam_ent_a, $sur_by_nam_h, $nam_ent_las);
+            
+            $html_str .= '</td>' . "\n";
+            
         }
+        
     }
     
-    $html_str .= '</select>' . "\n";
+    $html_str .= '</table>' . "\n";
     $html_str .= comment_exiting_of_function_name ($here);
-    
+ 
     debug_n_check ($here , '$html_str',  $html_str);
     exiting_from_function ($here);
     

@@ -53,7 +53,7 @@ function entry_current_name_last_build () {
         debug_n_check ($here, '$nam_ent_las', $nam_ent_las);
     }
     else {
-        $nam_ent_las = 'no selection done yet';
+        $nam_ent_las = 'NO_SELECTION_DONE_YET';
     }
     
     $entity_leaf = 'entry_current_name_last';

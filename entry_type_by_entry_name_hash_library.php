@@ -19,11 +19,11 @@ function entry_type_by_entry_name_hash_keysort ($sur_by_nam_h) {
 }
 
 
-function entry_type_by_entry_name_hash_of_entry_type_catalog ($str_sur) {
+function entry_type_by_entry_name_hash_of_entry_type_catalog ($typ_ent_cat) {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
-  $unser_a = array_by_key_unserialize_of_separator_of_string (" : ", $str_sur);
+  $unser_a = array_by_key_unserialize_of_separator_of_string (" : ", $typ_ent_cat);
   debug_n_check ($here , '$unser_a', $unser_a);
   # check_is_array_unique_of_what_of_hash ('entry_type_by_entry_name_hash', $unser_a);
 

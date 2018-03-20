@@ -33,5 +33,15 @@ function entry_type_catalog_write_of_entry_type_by_entry_name_hash ($typ_ent_by_
   return;
 }
 
+function entry_type_catalog_updated_of_entry_name_array_of_entry_type_catalog_unupdated ($nam_ent_a, $typ_ent_cat_unu) {
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($typ_ent_cat_unu)");
+    
+    $typ_ent_hu = entry_type_by_entry_name_hash_of_entry_type_catalog ($typ_ent_cat_unu);
+/* ICI */    
+    exiting_from_function ($here);
+    
+    return;
+}
 
 ?>

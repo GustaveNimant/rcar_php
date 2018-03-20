@@ -65,6 +65,7 @@ function entry_type_catalog_add_name_modify_inputtype_build (){
 
   $nam = irp_provide ('entry_name_without_entry_type', $here);
   $nam_nun = str_replace('_', ' ', $nam);
+
   $html_str  = '';
   $html_str .= '<input type="text" name="surname_of_entry_name_without_entry_type" size="50" value="' . $nam_nun . '"/> ';
 

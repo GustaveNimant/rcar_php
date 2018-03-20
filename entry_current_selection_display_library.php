@@ -1,19 +1,15 @@
 <?php
 require_once "management_library.php";
 
-function entry_typed_menuselect_of_entry_name_array_of_surname_by_name_hash_of_entry_current_name_last ($nam_ent_a, $sur_by_nam_h, $nam_ent_las) {
+function entry_typed_menuselect_of_entry_name_array_of_surname_by_name_hash_of_entry_current_name_last_of_select_size ($nam_ent_a, $sur_by_nam_h, $nam_ent_las, $siz_sel) {
     $here = __FUNCTION__;
-    entering_in_function ($here);
-
-    debug_n_check ($here, '$nam_ent_las', $nam_ent_las);
-
-    $select_size = $_SESSION['parameters']['select_size'];
+    entering_in_function ($here . " ($nam_ent_las, $siz_sel)");
 
     $get_key_sel = 'entry_current_name';
 
     $html_str  = comment_entering_of_function_name ($here);
     $html_str .= '<select name="'. $get_key_sel . '"'; 
-    $html_str .= ' size="' . $select_size . '"'; 
+    $html_str .= ' size="' . $siz_sel . '"'; 
     $html_str .= '>' . "\n";
     
     foreach ($nam_ent_a as $nam_ent) {

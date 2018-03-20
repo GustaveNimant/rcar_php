@@ -29,11 +29,42 @@ function entry_current_selection_display_form_title_build () {
     return $html_str;
 }
 
+function entry_typed_selection_size_build () {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+
+    $typ_ent_a = $_SESSION['entry_type_array'];
+    $typ_ent_by_nam_ent_h = irp_provide ('entry_type_by_entry_name_hash', $here);
+    
+    $siz_sel = 0;
+    foreach ($typ_ent_a as $key => $en_typ_ent) {
+        
+        if ($en_typ_ent <> 'header') {
+            $nam_ent_k = array_keys ($typ_ent_by_nam_ent_h, $en_typ_ent);
+            $cou_typ = count ($nam_ent_k);
+
+            if ( $cou_typ > $siz_sel ) {
+                $siz_sel = $cou_typ;
+            }
+        }
+    }
+
+    if ($siz_sel > $_SESSION['parameters']['select_size']) {
+        $siz_sel = $_SESSION['parameters']['select_size'];
+    }
+
+    debug_n_check ($here , '$siz_sel',  $siz_sel);
+    exiting_from_function ($here);
+    
+    return $siz_sel;
+}
+
 function entry_current_selection_display_menuselect_build () { /* move in some tools */
     $here = __FUNCTION__;
     entering_in_function ($here);
 
     $nam_ent_a = irp_provide ('entry_name_array', $here);
+    debug_n_check ($here, '$nam_ent_a', $nam_ent_a);
     $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);
     $nam_ent_las = irp_provide ('entry_current_name_last', $here);       
     debug_n_check ($here, '$nam_ent_las', $nam_ent_las);
@@ -41,25 +72,49 @@ function entry_current_selection_display_menuselect_build () { /* move in some t
     $typ_ent_by_nam_ent_h = irp_provide ('entry_type_by_entry_name_hash', $here);
     $typ_ent_a = $_SESSION['entry_type_array'];
 
+    debug_n_check ($here, '$typ_ent_a', $typ_ent_a);
+
+    $siz_sel = irp_provide ('entry_typed_selection_size', $here);
+
     $html_str  = comment_entering_of_function_name ($here); 
     $html_str .= '<table>' . "\n";
-    
-    foreach ($typ_ent_a as $key => $typ_ent) {
+    $html_str .= '<tr>' . "\n";
+
+    foreach ($typ_ent_a as $key => $en_typ_ent) {
+
+        debug_n_check ($here, '$en_typ_ent', $en_typ_ent);
         
-        if ($typ_ent <> 'header') {
-            $nam_ent_a = array_keys ($typ_ent_by_nam_ent_h, $typ_ent);
-#            $nam_ent_a = array_retrieve_key_array_of_value_of_array_of_where ($typ_ent, $typ_ent_by_nam_ent_h, $here);
-            
-            $html_str .= '<td>' . "\n";
-            
-            $html_str .= entry_typed_menuselect_of_entry_name_array_of_surname_by_name_hash_of_entry_current_name_last ($nam_ent_a, $sur_by_nam_h, $nam_ent_las);
-            
-            $html_str .= '</td>' . "\n";
-            
+        if ($en_typ_ent <> 'header') {
+            $nam_ent_k = array_keys ($typ_ent_by_nam_ent_h, $en_typ_ent);
+
+            if (count ($nam_ent_k) <> 0 ) {
+                
+                debug_n_check ($here, '$nam_ent_k', $nam_ent_k);
+
+                $la_typ_ent = language_translate_of_en_string ($en_typ_ent); 
+                $la_Typ_ent = string_html_capitalized_of_string ($la_typ_ent);
+
+                debug_n_check ($here, '$la_Typ_ent', $la_Typ_ent);
+
+                $html_str .= '<td>' . "\n";
+                $html_str .= '<table>' . "\n";
+                $html_str .= '<tr>' . "\n";
+                $html_str .= '<td><center><b><i>' . $la_Typ_ent . '</i></b></center></td>' . "\n";
+                $html_str .= '</tr>' . "\n";
+                $html_str .= '<tr>' . "\n";
+                $html_str .= '<td>' . "\n";
+                
+                $html_str .= entry_typed_menuselect_of_entry_name_array_of_surname_by_name_hash_of_entry_current_name_last_of_select_size ($nam_ent_k, $sur_by_nam_h, $nam_ent_las, $siz_sel);
+                
+                $html_str .= '</td>' . "\n";
+                $html_str .= '</tr>' . "\n";
+                $html_str .= '</table>' . "\n";
+                $html_str .= '</td>' . "\n";
+            }
         }
-        
     }
     
+    $html_str .= '</tr>' . "\n";
     $html_str .= '</table>' . "\n";
     $html_str .= comment_exiting_of_function_name ($here);
  

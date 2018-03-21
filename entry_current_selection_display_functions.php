@@ -29,7 +29,7 @@ function entry_current_selection_display_form_title_build () {
     return $html_str;
 }
 
-function entry_current_selection_display_menuselect_build () { /* move in some tools */
+function entry_current_selection_display_menuselect_build () { 
     $here = __FUNCTION__;
     entering_in_function ($here);
 

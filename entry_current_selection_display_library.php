@@ -40,3 +40,34 @@ function entry_typed_menuselect_of_entry_name_array_of_surname_by_name_hash_of_e
     
     return $html_str;
 }
+
+function entry_typed_selection_size_of_entry_type_by_entry_name_hash ($typ_ent_by_nam_ent_h) {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+
+    $typ_ent_a = $_SESSION['entry_type_array'];
+    
+    $siz_sel = 0;
+    foreach ($typ_ent_a as $key => $en_typ_ent) {
+        
+        if ($en_typ_ent <> 'header') {
+            $nam_ent_k = array_keys ($typ_ent_by_nam_ent_h, $en_typ_ent);
+            $cou_typ = count ($nam_ent_k);
+
+            if ( $cou_typ > $siz_sel ) {
+                $siz_sel = $cou_typ;
+            }
+        }
+    }
+
+    if ($siz_sel > $_SESSION['parameters']['select_size']) {
+        $siz_sel = $_SESSION['parameters']['select_size'];
+    }
+
+    debug_n_check ($here , '$siz_sel',  $siz_sel);
+    exiting_from_function ($here);
+    
+    return $siz_sel;
+}
+
+?>

@@ -2059,6 +2059,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la restauration de la propri&eacute;t&eacute',
         'it' => '???',
     ), 
+
+    'page for displaying the result of the revert of the rule' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat de la restauration de la r&egrave;gle',
+        'it' => '???',
+    ), 
     
     'page for displaying the entry' =>
     array (
@@ -2217,6 +2223,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ), 
     
+    'page for selecting the limits of the history of the paragraph' =>
+    array (
+        'fr' => 'page de s&eacute;lection des limites de l&rsquo;historique du paragraphe',
+        'it' => '???',
+    ), 
+
     'page for selecting the limits of the history of the question' =>
     array (
         'fr' => 'page de s&eacute;lection des limites de l&rsquo;historique de la question',
@@ -2238,6 +2250,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
     'page for undoing the property' =>
     array (
         'fr' => 'page de restauration de la propri&eacute;t&eacute pr&eacute;c&eacute;dente',
+        'it' => '???',
+    ), 
+    
+    'page for undoing the rule' =>
+    array (
+        'fr' => 'page de restauration de la r&egrave;gle pr&eacute;c&eacute;dente',
         'it' => '???',
     ), 
     

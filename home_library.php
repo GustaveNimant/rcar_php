@@ -77,6 +77,11 @@ function arce_home_header_accent_fr () {
     $html_str .= '<a href="http://willforge.fr/wikiwil/index.php?title=Pr%C3%A9sentation_de_la_m%C3%A9thode_de_r%C3%A9daction_collaborative_auto-r%C3%A9gul%C3%A9e" target="blank">';
     $html_str .= '<b>rédaction collaborative auto-régulée</b>.</a>';
     $html_str .= '<br/>' . "\n";
+
+    $html_str .= 'Pour le moment elle est limitée à l\'énoncé d\'assertions définissant des concepts (entrées) comme la <b>volonté générale</b>.' . "\n";
+
+    $html_str .= '<br/>' . "\n";
+
     $html_str .= "Elle est applicable à une <b>vaste</b> collectivité d'internautes.<br/>\n";
     $html_str .= 'Voir la <a href="entry_current_display_script.php?entry_current_name=Faq">Faq</a>.' . "\n";
     $html_str .= '</i>' . "\n";

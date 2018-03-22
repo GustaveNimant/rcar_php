@@ -29,6 +29,8 @@ $html_str = irp_provide ($entity, $script);
 
 print $html_str;
 
+/* Iùprove 'entry_current_name_last' $_SESSION['entry_current_name_last'] = $get_val; */
+
 exiting_from_script ($script);
 
 ?>

@@ -102,6 +102,8 @@ $_SESSION['leaf_creation_function'] = array ();
 
 $_SESSION['get_value_by_get_key_hash'] = array ();
 
+$_SESSION['entry_current_name_last'] = 'NO_SELECTION_DONE_YET';
+
 /* $_SESSION['module_wheretoact_nameoffile']['entry_current_name'] = $nam_mod_act; */
 /* $_SESSION['module_wheretoact_nameoffile'][$nam_sel] = $nam_mod_act; */
 $_SESSION['module_wheretoact_nameoffile'] = array (); 

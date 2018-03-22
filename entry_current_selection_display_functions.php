@@ -36,8 +36,11 @@ function entry_current_selection_display_menuselect_build () {
     $nam_ent_a = irp_provide ('entry_name_array', $here);
     debug_n_check ($here, '$nam_ent_a', $nam_ent_a);
     $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);
-    $nam_ent_las = irp_provide ('entry_current_name_last', $here);       
-    debug_n_check ($here, '$nam_ent_las', $nam_ent_las);
+# Improve 'entry_current_name_last   $nam_ent_las = irp_provide ('entry_current_name_last', $here); 
+# Improve 'entry_current_name_last   $typ_ent_las = irp_provide ('entry_current_type_last', $here);       
+
+# Improve 'entry_current_name_last   $nam_ent_las = $_SESSION['entry_current_name_last'];
+# Improve 'entry_current_name_last   debug_n_check ($here, '$nam_ent_las', $nam_ent_las);
 
     $typ_ent_by_nam_ent_h = irp_provide ('entry_type_by_entry_name_hash', $here);
     $typ_ent_a = $_SESSION['entry_type_array'];
@@ -73,7 +76,10 @@ function entry_current_selection_display_menuselect_build () {
                 $html_str .= '</tr>' . "\n";
                 $html_str .= '<tr>' . "\n";
                 $html_str .= '<td>' . "\n";
-                
+
+/* Improve 'entry_current_name_last */
+                $nam_ent_las = 'NO_SELECTION_DONE_YET';
+
                 $html_str .= entry_typed_menuselect_of_entry_name_array_of_surname_by_name_hash_of_entry_current_name_last_of_select_size ($nam_ent_k, $sur_by_nam_h, $nam_ent_las, $siz_sel);
                 
                 $html_str .= '</td>' . "\n";

@@ -33,13 +33,27 @@ function father_n_son_stack_script_push_of_father_of_son ($nam_fat, $nam_son) {
   if ( $nam_son == $nam_fat) {
       $log_str = "Names for Father script and Son are the same >$nam_son<";
       file_log_write ($here, $log_str);
+
+      /* Improve to avoid error messages */
+      /* include 'index.php';  */
+      /* exiting_from_function ($here . " ($nam_fat, $nam_son)"); */
+      /* return; */
+
   }
   else {
-      $fat_to_son = $nam_fat . ' -> ' . $nam_son;
-      session_hash_push_inplace_of_key_of_value ('father_n_son_stack_script', $fat_to_son);
-#      print_html_array ($here, '$_SESSION', $_SESSION);
-      $fat_n_son_mod_h = $_SESSION['father_n_son_stack_script'];
-      debug ($here, '$fat_n_son_mod_h', $fat_n_son_mod_h);
+      if (isset ($_SESSION['father_n_son_stack_script'])) {
+          $fat_to_son = $nam_fat . ' -> ' . $nam_son;
+          session_hash_push_inplace_of_key_of_value ('father_n_son_stack_script', $fat_to_son);
+
+          $fat_n_son_mod_h = $_SESSION['father_n_son_stack_script'];
+          debug ($here, '$fat_n_son_mod_h', $fat_n_son_mod_h);
+      }
+/*       else {  */
+/* /\* Improve to avoid error messages *\/ */
+/*           include "index.php"; */
+/*           exiting_from_function ($here); */
+/*           return; */
+/*       } */
   }
 
   exiting_from_function ($here . " ($nam_fat, $nam_son)");
@@ -57,6 +71,7 @@ function father_n_son_stack_script_push_of_current_script ($cur_mod) {
   father_n_son_stack_script_push_of_father_of_son ($pre_mod, $cur_mod);
 
   if ( isset ($_SESSION['father_n_son_stack_script'])) {
+#      print_html_array ($here, '$_SESSION["father_n_son_stack_script"]', $_SESSION['father_n_son_stack_script']);
       $fat_n_son_mod_h = $_SESSION['father_n_son_stack_script'];
       debug_n_check ($here, '$fat_n_son_mod_h', $fat_n_son_mod_h);
   }

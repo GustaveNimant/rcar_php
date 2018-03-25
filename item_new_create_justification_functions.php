@@ -92,6 +92,18 @@ function item_new_create_justification_build (){
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= irp_provide ('item_new_create_justification_title_n_help', $here);
   $html_str .= '<br>' . "\n";
+
+/* select justification 'item_new_create_justification_select'
+
+   item_new_justification_content (item_new_justification)
+   item_new_justification_type
+
+array : item_justification_type_array
+
+check rules to accept the creation / modification  
+
+*/
+
   $html_str .= irp_provide ('item_new_create_justification_textarea', $here);
   $html_str .= comment_exiting_of_function_name ($here);
 

@@ -48,13 +48,13 @@ function block_new_create_form_build (){
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<form action="' . $script_action . '" method="get">' . "\n";
 
+  $html_str .= irp_provide ('block_new_create_surname', $here);
+  $html_str .= '<br><br>' . "\n";
+
   $html_str .= irp_provide ('item_new_create_content_form', $here);
   $html_str .= '<br><br>' . "\n";
 
   $html_str .= irp_provide ('item_new_create_justification', $here);
-  $html_str .= '<br><br>' . "\n";
-
-  $html_str .= irp_provide ('block_new_create_surname', $here);
   $html_str .= '<br><br>' . "\n";
 
   $html_str .= irp_provide ('block_new_create_form_submit', $here);

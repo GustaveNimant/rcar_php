@@ -90,7 +90,7 @@ function block_name_array_order_current_build () {
   check_is_array_unique_of_what_of_array ('$nam_blo_cur_ord_a', $nam_blo_cur_ord_a);
    
   $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);
-  surname_by_name_hash_check_are_surnamed_of_nameofarray_of_current_array ('entry_name_array', $nam_blo_cur_ord_a, $sur_by_nam_h);
+  surname_by_name_hash_check_are_surnamed_of_what_of_name_array_of_current_hash ('entry_name_array', $nam_blo_cur_ord_a, $sur_by_nam_h);
   
   debug ($here , '$nam_blo_cur_ord_a', $nam_blo_cur_ord_a);
   exiting_from_function ($here);

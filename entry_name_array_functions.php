@@ -58,7 +58,7 @@ function entry_name_array_build () {
   $nam_ent_a = preg_grep ("/^[A-Z][a-z_]*[a-z]$/", $fnd_a);
 
   $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);
-  surname_by_name_hash_check_are_surnamed_of_nameofarray_of_current_array ('entry_name_array', $nam_ent_a, $sur_by_nam_h);
+  surname_by_name_hash_check_are_surnamed_of_what_of_name_array_of_current_hash ('entry_name_array', $nam_ent_a, $sur_by_nam_h);
   check_is_array_unique_of_what_of_array ('entry_name_array', $nam_ent_a);
 
   exiting_from_function ($here);

@@ -42,7 +42,7 @@ function surname_by_name_hash_of_surname_catalog ($str_sur) {
 
 }
 
-function surname_by_name_hash_put_of_name_of_surname_of_current_array ($nam, $sur_nam, $sur_by_nam_h) {
+function surname_by_name_hash_put_of_name_of_surname_of_current_hash ($nam, $sur_nam, $sur_by_nam_h) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam, $sur_nam)");
 
@@ -83,7 +83,7 @@ function surname_by_name_hash_add_n_write_of_name_of_surname_of_current_hash ($n
       $new_sur_by_nam_h = $old_sur_by_nam_h; /* Improve ??? */
   }
   else {
-      $new_sur_by_nam_h = surname_by_name_hash_put_of_name_of_surname_of_current_array ($nam, $sur_nam, $old_sur_by_nam_h);
+      $new_sur_by_nam_h = surname_by_name_hash_put_of_name_of_surname_of_current_hash ($nam, $sur_nam, $old_sur_by_nam_h);
   }
 
   irp_store_force ('surname_by_name_hash', $new_sur_by_nam_h, 'entry_current_display', $here);
@@ -109,7 +109,7 @@ function surname_by_name_hash_replace_n_write_of_name_of_surnamenew_of_current_h
   /* $sur_by_nam_h = surname_by_name_hash_make (); */
   # debug_n_check ($here , ' ICI ? $sur_by_nam_h', $sur_by_nam_h);
   
-  $sur_by_nam_h = surname_by_name_hash_put_of_name_of_surname_of_current_array ($nam, $new_sur_nam, $sur_by_nam_h);
+  $sur_by_nam_h = surname_by_name_hash_put_of_name_of_surname_of_current_hash ($nam, $new_sur_nam, $sur_by_nam_h);
  
 #  debug_n_check ($here , '$sur_by_nam_h[' . $nam . ']', $sur_by_nam_h[$nam]);
 
@@ -128,7 +128,7 @@ function surname_by_name_hash_replace_n_write_of_name_of_surnamenew_of_current_h
   return;
 }
 
-function surname_by_name_hash_check_are_surnamed_of_nameofarray_of_current_array ($nam_arr, $nam_a, $sur_by_nam_h) {
+function surname_by_name_hash_check_are_surnamed_of_what_of_name_array_of_current_hash ($nam_arr, $nam_a, $sur_by_nam_h) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_arr, \$nam_a, \$sur_by_nam_h)");
 

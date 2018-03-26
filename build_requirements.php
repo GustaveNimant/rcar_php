@@ -63,6 +63,7 @@ require_once "entry_current_rename_functions.php";
 require_once "entry_current_namenew_form_functions.php";
 require_once "entry_current_namenew_save_functions.php";
 require_once "entry_current_selection_display_functions.php";
+require_once "entry_current_type_functions.php";
 
 require_once "entry_list_display_functions.php";
 

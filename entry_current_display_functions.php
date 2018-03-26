@@ -20,15 +20,26 @@ function entry_current_display_page_title_build () {
 
   $sur_ent_cur = irp_provide ('entry_current_surname_from_entry_current_name', $here);
 
+  $typ_ent_cur = irp_provide ('entry_current_type', $here);
+
   $en_tit = 'page for displaying the entry';
 
   $la_bub_tit  = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);
   $la_bub_Tit .= ' <i><b>' . ucfirst ($sur_ent_cur) . '</b></i> ';
 
+  $en_tit = 'of type';
+
+  $la_typ = language_translate_of_en_string ($typ_ent_cur);
+  $la_Typ = string_html_capitalized_of_string ($la_typ);
+
+  $la_bub_typ  = bubble_bubbled_la_text_of_en_text ($en_tit);
+  $la_bub_typ .= ' <i><b>' . $la_Typ . '</b></i> ';
+
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<center>';
   $html_str .= common_html_div_background_color_of_html ($la_bub_Tit);
+  $html_str .= common_html_div_background_color_of_html ($la_bub_typ);
   $html_str .= '</center>';
   $html_str .= comment_exiting_of_function_name ($here);
 
@@ -59,6 +70,9 @@ function entry_current_display_build (){
     
     $html_str .= irp_provide ('entry_current_rename_form', $here);
     $html_str .= '<br>' . "\n";
+
+    /* $html_str .= irp_provide ('entry_current_retype_form', $here); */
+    /* $html_str .= '<br>' . "\n"; */
 
     $html_str .= irp_provide ('toward_block_new_create_form', $here);
     $html_str .= '<br>' . "\n";

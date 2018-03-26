@@ -1766,6 +1766,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ),
     
+    'of type' =>
+    array (
+        'fr' => 'de type',
+        'it' => '???',
+    ),
+
     'on' => 
     array (
         'fr' => 'le',

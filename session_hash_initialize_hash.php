@@ -65,6 +65,7 @@ $_SESSION['is_data_entity_name'] = array (
 
     'entry_new_name' => TRUE,
     'entry_new_surname' => TRUE,
+    'entry_new_type' => TRUE,
 
     'item_next_content' => TRUE,
     'item_next_justification' => TRUE,

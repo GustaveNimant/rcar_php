@@ -30,6 +30,9 @@ function surname_catalog_write_of_surname_by_name_hash ($sur_by_nam_h) {
   $fno_sur = surname_catalog_fullnameoffile_build ();
   file_string_write ($fno_sur, $cat_sur);
 
+  $log_str = "Suname catalog File >$fno_sur< has been written on disk";
+  file_log_write ($here, $log_str);
+
   exiting_from_function ($here);
 #  exiting_withcpu_from_function ($here, $cpu_in);
   

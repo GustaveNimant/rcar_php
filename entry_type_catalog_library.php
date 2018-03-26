@@ -28,6 +28,9 @@ function entry_type_catalog_write_of_entry_type_by_entry_name_hash ($typ_ent_by_
   $fno_typ_ent = entry_type_catalog_fullnameoffile_build ();
   file_string_write ($fno_typ_ent, $cat_typ_ent);
 
+  $log_str = "Entry_type catalog File >$fno_typ_ent< has been written on disk";
+  file_log_write ($here, $log_str);
+
   exiting_from_function ($here);
 
   return;
@@ -53,6 +56,7 @@ function entry_type_catalog_updated_of_entry_name_array_of_entry_type_catalog_un
 /* an entry is in entry_name_array not in entry_type_catalog */
 
     entry_type_catalog_write_of_entry_type_by_entry_name_hash ($typ_ent_by_nam_ent_upd_h);
+
     $typ_ent_cat_u = entry_type_catalog_of_entry_type_by_entry_name_hash ($typ_ent_by_nam_ent_upd_h);
 
     debug_n_check ($here, '$typ_ent_cat_u', $typ_ent_cat_u);

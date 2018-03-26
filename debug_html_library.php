@@ -2,11 +2,16 @@
 
 function print_html_scalar ($her, $mes, $var){	
 
-  print "<pre>in $her : ";	
-  print "$mes<br>";
-  print "$var<br>";
-  print '</pre> ';
-
+    print "<pre>in $her : ";	
+    print "$mes is ";
+    if (substr ($mes, 0, 3) == 'is_') {
+        $str = string_of_boolean ($var);
+        print ">$str<";
+    }
+    else {
+        print ">$var<br><";
+    }
+    print '</pre> ';
 }
 
 function string_html_shorten_of_key_of_string ($key, $str_big){	

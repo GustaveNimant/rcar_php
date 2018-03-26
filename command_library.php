@@ -8,7 +8,6 @@ $module = module_name_of_module_nameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-
 function command_display ($what) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($what)");
@@ -151,10 +150,15 @@ function command_display ($what) {
         break;
 
     default:
-        print_fatal_error ($here, 
-        "what to be displayed were defined",
-        "$what",
-        "Check");
+        if (isset ($_SESSION[$what]) ) {
+            print_html_variable ($here, $what, $_SESSION[$what]);
+        }
+        else {
+            print_fatal_error ($here, 
+            "Element \$_SESSION['$what'] to be displayed were defined",
+            "it is NOT",
+            "Check");
+        }
     };
     
     debug_n_check ($here, '$com_res', $com_res);

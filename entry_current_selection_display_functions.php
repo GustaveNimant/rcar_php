@@ -36,9 +36,9 @@ function entry_current_selection_display_menuselect_build () {
     $nam_ent_a = irp_provide ('entry_name_array', $here);
     debug_n_check ($here, '$nam_ent_a', $nam_ent_a);
     $sur_by_nam_h = irp_provide ('surname_by_name_hash', $here);
+
 # Improve 'entry_current_name_last   $nam_ent_las = irp_provide ('entry_current_name_last', $here); 
 # Improve 'entry_current_name_last   $typ_ent_las = irp_provide ('entry_current_type_last', $here);       
-
 # Improve 'entry_current_name_last   $nam_ent_las = $_SESSION['entry_current_name_last'];
 # Improve 'entry_current_name_last   debug_n_check ($here, '$nam_ent_las', $nam_ent_las);
 

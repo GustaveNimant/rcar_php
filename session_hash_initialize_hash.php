@@ -153,16 +153,19 @@ $_SESSION['item_new_justification_array'] = array (
     'definition' => "1",
     'grievance' => "1",
     'issue' => "1",
+    'grievance restricted' => "2",
 );
 
 $_SESSION['item_next_justification_array'] = array (
-    'orthograph' => "0",
-    'grammar' => "0",
-    'simplification' => "1",
-    'clarification' => "1",
-    'ambiguity' => "2",
-    'assertion' => "3",
-    'formalized assertion' => "4",
+    'orthograph' => "1",
+    'grammar' => "1",
+    'simplification' => "2",
+    'clarification' => "2",
+    'ambiguity' => "3",
+    'divergence' => "3",
+    'generalization' => "4",
+    'assertion' => "5",
+    'formalized assertion' => "6",
 );
 
 $_SESSION['parameters']['absolute_path_source'] = $roo_doc . '/rcar/php';

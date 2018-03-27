@@ -23,23 +23,6 @@ function entry_type_catalog_fullnameoffile_build () {
     return $fno_typ_ent;
 }
 
-function entry_type_catalog_update_build () {
-    $here = __FUNCTION__;
-    entering_in_function ($here);
-    
-    $fno_typ_ent = irp_provide ('entry_type_catalog_fullnameoffile', $here);
-    $typ_ent_cat_unu = file_content_read_of_fullnameoffile ($fno_typ_ent);
-    
-    $nam_ent_a = irp_provide ('entry_name_array', $here);
-/* update catalog */
-    $typ_ent_cat_u = entry_type_catalog_updated_of_entry_name_array_of_entry_type_catalog_unupdated ($nam_ent_a, $typ_ent_cat_unu); 
-    debug_n_check ($here, '$typ_ent_cat_u', $typ_ent_cat_u);
-    
-    exiting_from_function ($here);
-    
-    return $typ_ent_cat_u;
-}
-
 function entry_type_catalog_build () { /* may need some cleaning */
     $here = __FUNCTION__;
     entering_in_function ($here);

@@ -78,7 +78,10 @@ function entry_new_create_save_surname_update_build () {
     surname_by_name_hash_add_n_write_of_name_of_surname_of_current_hash ($nam_ent_new, $sur_ent_new, $sur_by_nam_h) ;
     $fno_sur_cat = $_SESSION['parameters']['absolute_path_server_surname_catalog'];
     $log_str = "entry_new_surname >$sur_ent_new< has been added to $fno_sur_cat";
-    
+
+    $entity_write = entity_name_of_build_function_name ($here); 
+    father_n_son_stack_entity_push_of_father_of_son ("WRITE_$entity_write", $entity_write);
+
     exiting_from_function ($here);
     return $log_str;
 }
@@ -98,6 +101,9 @@ function entry_new_create_save_type_update_build () {
 
     $fno_typ_cat = $_SESSION['parameters']['absolute_path_server_entry_type_catalog'];
     $log_str = "entry_new_type >$typ_ent_new< for new entry >$nam_ent_new< has been added to $fno_typ_cat";
+
+    $entity_write = entity_name_of_build_function_name ($here); 
+    father_n_son_stack_entity_push_of_father_of_son ("WRITE_$entity_write", $entity_write);
     
     exiting_from_function ($here);
     return $log_str;

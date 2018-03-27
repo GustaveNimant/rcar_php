@@ -234,26 +234,30 @@ function command_remove ($what) {
 function command_set ($what) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($what)");
-
+    
     switch ($what) {
-      case 'count_entity' :
-          $_SESSION['count_entity'] = 1;
-          break;
-      case 'cpu' :
-          $_SESSION['is_cpu_active'] = TRUE;
-          break;
-      case 'debug' :
-          $_SESSION['is_debug_active'] = TRUE;
-          break;
-      case 'trace' :
-          $_SESSION['is_verbose'] = TRUE;
-          break;
-      default:
-          print_fatal_error ($here, 
-          "what to be set were defined",
-          "$what",
-          "Please select one of count_entity | cpu | debug | trace"
-          );
+    case 'count_entity' :
+        $_SESSION['count_entity'] = 1;
+        break;
+    case 'cpu' :
+        $_SESSION['is_cpu_active'] = TRUE;
+        break;
+    case 'debug' :
+        $_SESSION['is_debug_active'] = TRUE;
+        break;
+    case 'trace' :
+        $_SESSION['is_verbose'] = TRUE;
+        break;
+    default:
+        if (isset ($_SESSION[$what]) ) {
+            $_SESSION[$what] = TRUE;
+        }
+        else {
+            print_fatal_error ($here, 
+            "Element \$_SESSION['$what'] to be displayed were defined",
+            "it is NOT",
+            "Check");
+        }
     };
     
     $log_str = "$what has been set";
@@ -282,11 +286,15 @@ function command_unset ($what) {
           $_SESSION['is_verbose'] = FALSE;
           break;
       default:
-          print_fatal_error ($here, 
-          "what to be unset were defined",
-          "$what",
-          "Please select one of count_entity | cpu | debug | trace"
-          );
+        if (isset ($_SESSION[$what]) ) {
+            $_SESSION[$what] = FALSE;
+        }
+        else {
+            print_fatal_error ($here, 
+            "Element \$_SESSION['$what'] to be displayed were defined",
+            "it is NOT",
+            "Check");
+        }
     };
     
     $log_str = "$what has been removed";

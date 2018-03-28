@@ -66,6 +66,7 @@ function entry_new_create_type_select_title_build () {
 
   return $html_str;
 }
+
 function entry_new_create_type_select_display_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);

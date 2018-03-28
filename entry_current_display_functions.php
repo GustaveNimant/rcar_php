@@ -71,8 +71,8 @@ function entry_current_display_build (){
     $html_str .= irp_provide ('entry_current_rename_form', $here);
     $html_str .= '<br>' . "\n";
 
-    /* $html_str .= irp_provide ('entry_current_retype_form', $here); */
-    /* $html_str .= '<br>' . "\n"; */
+    $html_str .= irp_provide ('entry_current_retype_form', $here);
+    $html_str .= '<br>' . "\n";
 
     $html_str .= irp_provide ('toward_block_new_create_form', $here);
     $html_str .= '<br>' . "\n";

@@ -60,8 +60,16 @@ function command_action_en_array_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
     
-    $en_act_a = array ('debug', 'display', 'load', 'read', 'remove', 'set', 'unset', 'write');
-
+    $en_act_a = array (
+        'debug', 
+        'display', 
+        'load', 
+        'read', 
+        'remove', 
+        'set', 
+        'unset', 
+        'write');
+    
     $entity = entity_name_of_build_function_name ($here);
     father_n_son_stack_entity_push_of_father_of_son ($entity, 'CONSTANT_' . $entity);
 

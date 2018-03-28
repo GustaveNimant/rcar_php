@@ -59,11 +59,15 @@ require_once "common_html_functions.php";
 
 require_once "entry_current_display_functions.php";
 require_once "entry_current_name_functions.php";
-require_once "entry_current_rename_functions.php";
 require_once "entry_current_namenew_form_functions.php";
 require_once "entry_current_namenew_save_functions.php";
+require_once "entry_current_rename_functions.php";
+require_once "entry_current_retype_form_functions.php";
+require_once "entry_current_retype_functions.php";
 require_once "entry_current_selection_display_functions.php";
 require_once "entry_current_type_functions.php";
+require_once "entry_current_typenew_form_functions.php";
+require_once "entry_current_typenew_save_functions.php";
 
 require_once "entry_list_display_functions.php";
 

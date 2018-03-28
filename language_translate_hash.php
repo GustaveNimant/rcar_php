@@ -1615,6 +1615,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'fr' => 'modifier le texte ci-dessous',
         'it' => '???',
     ),
+
+    'modify the type below' =>
+    array (
+        'fr' => 'modifier le type ci-dessous',
+        'it' => '???',
+    ),
     
     'month' =>
     array (
@@ -1952,6 +1958,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ),
 
+    'page for displaying the result of saving the retyping of the entry' =>
+    array (
+        'fr' => 'page d&rsquo;affichage du r&eacute;sultat du retypage de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ),
+
     'page for displaying the history of the paragraph' =>
     array (
         'fr' => 'page d&rsquo;affichage de l&rsquo;historique du paragraphe',
@@ -2210,6 +2222,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'fr' => 'page de modification de l&rsquo;ordre des r&egrave;gles de l&rsquo;entr&eacute;e',
         'it' => '???',
     ), 
+
+    'page for retyping the entry' =>
+    array (
+        'fr' => 'page de retypage de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ),
 
     'page for selecting an entry to act on it' =>
     array (
@@ -2481,6 +2499,18 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
 		'it' => '???',
     ),
 
+    'retype' =>
+    array (
+        'fr' => 'changer le type',
+        'it' => '???',
+    ),
+
+    'retype the entry' =>
+    array (
+        'fr' => 'changer le type de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ),
+
     'reorder' => 
     array (
 		'fr' => 'r&eacute;ordonner',
@@ -2725,6 +2755,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
     'the current entry has been renamed as' =>
     array (
         'fr' => 'l&rsquo;entr&eacute;e courante a &eacute;t&eacute; renomm&eacute;e en',
+        'it' => '???',
+    ),
+    
+    'the current entry has been retyped in catalog' =>
+    array (
+        'fr' => 'l&rsquo;entr&eacute;e courante a &eacute;t&eacute; retyp&eacute;e dans le catalogue',
         'it' => '???',
     ),
     

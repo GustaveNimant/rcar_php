@@ -29,7 +29,7 @@ function entry_current_namenew_form_surnamenew_titled_gather_build (){
   $html_str .= '<span class="my-fieldset">' . "\n";
 
   $html_str .= '<legend>';
-  $html_str .= common_html_div_background_color_of_html ($la_bub_Tit);
+  $html_str .= common_html_span_background_color_of_html ($la_bub_Tit);
   $html_str .= '</legend>' . "\n";
 
   $html_str .= '<input type="text"';
@@ -54,9 +54,6 @@ function entry_current_namenew_form_justification_titled_gather_build (){
   $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
   $la_bub_Tit = string_html_capitalized_of_string ($la_bub_tit);
 
-/* Improve gather_wide_of_get_key_of_initial_value */
-/* Improve gather_wide_titled_of_title_of_get_key_of_initial_value */
-
   $entity_textarea = "entry_current_namenew_justification";
 
   $row_hta = $_SESSION['parameters']['html_textarea_rows'];
@@ -66,10 +63,10 @@ function entry_current_namenew_form_justification_titled_gather_build (){
   $html_str .= '<span class="my-fieldset">' . "\n";
 
   $html_str .= '<legend>' . "\n";
-  $html_str .= common_html_div_background_color_of_html ($la_bub_Tit);
+  $html_str .= common_html_span_background_color_of_html ($la_bub_Tit);
   $html_str .= '</legend>' . "\n";
   
-  $html_str .= '<textarea name="' . $entity_textarea; 
+  $html_str .= '<textarea name="' . $entity_textarea . '"'; 
   $html_str .= ' rows="' . $row_hta. '" cols="' . $col_hta; 
   $html_str .= '"/>' . "\n";
   $html_str .= '</textarea>' . "\n";

@@ -116,12 +116,12 @@ function entry_current_typenew_save_entry_type_catalog_update_build () {
 
     file_log_write ($here, $log_str);
 
-    $fno_typ_ent_cat = $_SESSION['parameters']['absolute_path_server_entry_type_catalog'];
+    $nof_typ_ent_cat = $_SESSION['parameters']['nameoffile_entry_type_catalog'];
  
     $en_tit = 'the current entry has been retyped in catalog';
 
     $la_bub_tit  = bubble_bubbled_la_text_of_en_text ($en_tit);
-    $la_bub_tit .= ' <i><b> ' . $fno_typ_ent_cat . '</b></i>';
+    $la_bub_tit .= ' <i><b>' . $nof_typ_ent_cat . '</b></i>';
     $la_bub_Tit = string_html_capitalized_of_string ($la_bub_tit);
     
     $html_str  = comment_entering_of_function_name ($here);

@@ -59,9 +59,9 @@ $_SESSION['is_data_entity_name'] = array (
     'entry_current_surname' => TRUE,
 
     'entry_current_namenew' => TRUE,
-    'entry_current_surnamenew' => TRUE,
-
     'entry_current_namenew_justification' => TRUE,
+    'entry_current_surnamenew' => TRUE,
+    'entry_current_typenew' => TRUE,
 
     'entry_new_name' => TRUE,
     'entry_new_surname' => TRUE,

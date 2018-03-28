@@ -1544,6 +1544,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
 		'it' => '???',
     ),
     
+    'modify current entry type to' => 
+    array (
+		'fr' => 'modifier le type de l&rsquo;entr&eacute;e courante en',
+		'it' => '???',
+    ),	 
+
     'modify the justification for' =>
     array (
 		'fr' => 'modifier la justification de',

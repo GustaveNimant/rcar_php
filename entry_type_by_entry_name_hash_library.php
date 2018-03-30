@@ -92,52 +92,52 @@ function entry_type_by_entry_name_hash_add_n_write_of_entry_name_of_entry_type_o
   return $new_typ_ent_by_nam_ent_h;
 }
 
-function entry_type_by_entry_name_hash_replace_n_write_of_entry_name_of_entry_typenew_of_current_hash ($nam_ent, $new_sur_nam, $sur_by_nam_h) {
+function entry_type_by_entry_name_hash_replace_n_write_of_entry_name_of_entry_typenew_of_current_hash ($nam_ent, $new_typ_nam, $typ_ent_by_nam_ent_h) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_ent, $new_sur_nam, \$sur_by_nam_h [...])");
+  entering_in_function ($here . " ($nam_ent, $new_typ_nam, \$typ_ent_by_nam_ent_h [...])");
 
   string_check_is_not_empty_of_what_of_where_of_string ("???", $here, $nam_ent);
-  string_check_is_not_empty_of_what_of_where_of_string ("???", $here, $new_sur_nam);
+  string_check_is_not_empty_of_what_of_where_of_string ("???", $here, $new_typ_nam);
 
-  if ($new_sur_nam <> ucfirst($new_sur_nam)){
-      $new_sur_nam = ucfirst($new_sur_nam);
+  if ($new_typ_nam <> ucfirst($new_typ_nam)){
+      $new_typ_nam = ucfirst($new_typ_nam);
   }
 
-  /* $sur_by_nam_h = entry_type_by_entry_name_hash_make (); */
-  # debug_n_check ($here , ' ICI ? $sur_by_nam_h', $sur_by_nam_h);
+  /* $typ_ent_by_nam_ent_h = entry_type_by_entry_name_hash_make (); */
+  # debug_n_check ($here , ' ICI ? $typ_ent_by_nam_ent_h', $typ_ent_by_nam_ent_h);
   
-  $sur_by_nam_h = entry_type_by_entry_name_hash_put_of_entry_name_of_entry_type_of_current_array ($nam_ent, $new_sur_nam, $sur_by_nam_h);
+  $typ_ent_by_nam_ent_h = entry_type_by_entry_name_hash_put_of_entry_name_of_entry_type_of_current_array ($nam_ent, $new_typ_nam, $typ_ent_by_nam_ent_h);
  
-#  debug_n_check ($here , '$sur_by_nam_h[' . $nam_ent . ']', $sur_by_nam_h[$nam_ent]);
+#  debug_n_check ($here , '$typ_ent_by_nam_ent_h[' . $nam_ent . ']', $typ_ent_by_nam_ent_h[$nam_ent]);
 
-  entry_type_catalog_write_of_entry_type_by_entry_name_hash ($sur_by_nam_h);
+  entry_type_catalog_write_of_entry_type_by_entry_name_hash ($typ_ent_by_nam_ent_h);
 
   if (file_is_entry_nameoffile_of_string ($nam_ent)) { 
-      irp_store_force ('entry_current_entry_type', $new_sur_nam, 'entry_current_display', $here);
+      irp_store_force ('entry_current_entry_type', $new_typ_nam, 'entry_current_display', $here);
   }
   else {
-      irp_store_force ('block_current_entry_type', $new_sur_nam, 'entry_current_display', $here);
+      irp_store_force ('block_current_entry_type', $new_typ_nam, 'entry_current_display', $here);
   }
 
-  irp_store_force ('entry_type_by_entry_name_hash', $sur_by_nam_h, 'entry_current_display', $here);
+  irp_store_force ('entry_type_by_entry_name_hash', $typ_ent_by_nam_ent_h, 'entry_current_display', $here);
 
-  exiting_from_function ($here . " ($nam_ent, $new_sur_nam, \$sur_by_nam_h [...])");
+  exiting_from_function ($here . " ($nam_ent, $new_typ_nam, \$typ_ent_by_nam_ent_h [...])");
   return;
 }
 
-function entry_type_by_entry_name_hash_check_are_entry_typed_of_entry_name_of_array_of_current_array ($nam_ent_arr, $nam_ent_a, $sur_by_nam_h) {
+function entry_type_by_entry_name_hash_check_are_entry_typed_of_entry_name_of_array_of_current_array ($nam_ent_arr, $nam_ent_a, $typ_ent_by_nam_ent_h) {
   $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_arr, \$nam_a, \$sur_by_nam_h)");
+  entering_in_function ($here . " ($nam_arr, \$nam_a, \$typ_ent_by_nam_ent_h)");
 
-  # debug_n_check ($here , '$sur_by_nam_h', $sur_by_nam_h);
+  # debug_n_check ($here , '$typ_ent_by_nam_ent_h', $typ_ent_by_nam_ent_h);
 
   foreach ($nam_a as $k => $nam) {
 
       if ( isset ($nam)) { /* Improve */
           if ( (! string_is_empty_of_string ($nam)) 
-          && ( isset ($sur_by_nam_h[$nam])) ) { /* Improve */
+          && ( isset ($typ_ent_by_nam_ent_h[$nam])) ) { /* Improve */
               
-              $sur = $sur_by_nam_h[$nam];
+              $sur = $typ_ent_by_nam_ent_h[$nam];
               
 #             debug ($here , '$nam', ">$nam<");
 #             debug ($here , '$sur', ">$sur<");

@@ -29,13 +29,18 @@ function entry_current_namenew_from_entry_current_surnamenew_build () {
     $here = __FUNCTION__;
     entering_in_function ($here);
 
-/* Improve */    
     if (irp_is_stored_of_irp_key ('entry_current_surnamenew', $here)) {  
         $new_sur_ent_cur = irp_provide ('entry_current_surnamenew', $here);  
         $new_nam_ent_cur = word_name_capitalized_of_string_surname ($new_sur_ent_cur);
     }
     else {
+/* Improve this code is not used */    
+
         $new_nam_ent_cur = get_hash_retrieve_value_of_get_key_of_where ('entry_current_namenew', $here);
+        print_fatal_error ($here,
+        "entity >entry_current_namenew< were NOT retrieved from \$_GET",
+        "it is",
+        "Check why");
     }
 
     string_check_entry_name_of_string ($new_nam_ent_cur);

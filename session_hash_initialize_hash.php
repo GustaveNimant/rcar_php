@@ -96,6 +96,8 @@ $_SESSION['is_read_entity_name'] = array (
     'entry_fullnameofdirectory_array' => TRUE,
 );
 
+$_SESSION['entry_current_renamed'] = array ();
+
 $_SESSION['creation_step_count'] = 0;
 $_SESSION['creation_step'] = array () ; /* of any entity or page */
 $_SESSION['data_creation_function'] = array ();

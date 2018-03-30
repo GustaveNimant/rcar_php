@@ -173,7 +173,9 @@ function entry_current_typenew_save_build (){
 
     $html_str .= irp_provide ('git_command_n_commit_html', $here);
     $html_str .= '<br><br>' . "\n";
-    
+
+    $html_str .= irp_provide ('entry_current_retype_link_to_return', $here);
+
     $html_str .= irp_provide ('entry_current_typenew_save_link_to_return', $here);
     $html_str .= '<br><br>' . "\n";
     

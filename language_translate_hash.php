@@ -2764,6 +2764,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ),
     
+    'the current entry has been renamed in catalog' =>
+    array (
+        'fr' => 'l&rsquo;entr&eacute;e courante a &eacute;t&eacute; renomm&eacute;e dans le catalogue',
+        'it' => '???',
+    ),
+    
     'the current entry has been retyped in catalog' =>
     array (
         'fr' => 'l&rsquo;entr&eacute;e courante a &eacute;t&eacute; retyp&eacute;e dans le catalogue',

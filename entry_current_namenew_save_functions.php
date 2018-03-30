@@ -136,12 +136,29 @@ function entry_current_namenew_save_surname_catalog_update_build () {
     return $html_str;
 }
 
+function entry_current_namenew_save_session_entry_renamed_update_build () {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+    $new_nam_ent_cur = irp_provide ('entry_current_namenew_from_entry_current_surnamenew', $here);
+    debug_n_check ($here , '$new_nam_ent_cur', $new_nam_ent_cur);
+
+    $old_nam_ent_cur = irp_provide ('entry_current_name', $here);
+    debug_n_check ($here , '$old_nam_ent_cur', $old_nam_ent_cur);
+    
+    $_SESSION['entry_current_renamed'][$old_nam_ent_cur] = $new_nam_ent_cur;
+
+    $log_str  = "the current entry >$old_nam_ent_cur< renaming to >$new_nam_ent_cur< has been stored in \_SESSION|'entry_current_renamed']";
+           
+    exiting_from_function ($here);
+    return $log_str;
+}
+
 function entry_current_namenew_save_link_to_return_build () {
   $here = __FUNCTION__;
   entering_in_function ($here);
 
   $en_tit = 'back to entry list';
-  
   $la_tit = language_translate_of_en_string ($en_tit);
   
   $script_to_return = 'entry_list_display_script.php';
@@ -175,9 +192,17 @@ function entry_current_namenew_save_build (){
     $html_str .= irp_provide ('entry_current_namenew_save_surname_catalog_update', $here);
     $html_str .= '<br><br>' . "\n";
 
+    $log_str   = irp_provide ('entry_current_namenew_save_session_entry_renamed_update', $here); 
+    file_log_write ($here, $log_str);
+
+    $html_str .= '<br><br>' . "\n";
+
     $html_str .= irp_provide ('git_command_n_commit_html', $here);
     $html_str .= '<br><br>' . "\n";
-    
+
+#    $html_str .= irp_provide ('entry_current_rename_link_to_return', $here);
+#    return to new name
+
     $html_str .= irp_provide ('entry_current_namenew_save_link_to_return', $here);
     $html_str .= '<br><br>' . "\n";
     

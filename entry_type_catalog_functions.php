@@ -34,6 +34,9 @@ function entry_type_catalog_build () { /* may need some cleaning */
     } 
     else {
         $typ_ent_cat = file_content_read_of_fullnameoffile ($fno_typ_ent);
+
+
+
     }
     debug_n_check ($here , '$typ_ent_cat', ">$typ_ent_cat<");
     

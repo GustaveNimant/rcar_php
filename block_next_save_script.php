@@ -22,7 +22,6 @@ foreach ($_GET as $get_key => $get_val) {
     
     $log_str = irp_data_value_only_store_of_get_key_of_script_name_of_where ($get_key, $script, $script);
     file_log_write ($script, $log_str);
-
 }
 
 $html_str = irp_provide ($entity, $script);

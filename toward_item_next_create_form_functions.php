@@ -115,12 +115,10 @@ function toward_item_next_create_form_build () {
   $html_str .= '<br>';
 
   $html_str .= irp_provide ('toward_item_next_content', $here);
-
   $html_str .= '<br><br>';
 
   $html_str .= irp_provide ('toward_item_next_justify_title', $here);
   $html_str .= '<br>';
-
   $html_str .= irp_provide ('toward_item_next_justification', $here);
   $html_str .= '<br>';
 

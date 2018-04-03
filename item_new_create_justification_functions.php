@@ -1,5 +1,6 @@
 <?php
 require_once "irp_library.php";
+require_once "justification_library.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
@@ -54,7 +55,7 @@ function item_new_create_justification_title_n_help_build (){
   return $html_str;
 }
 
-function item_new_create_justification_textarea_build (){
+function item_new_create_justification_select_n_textarea_build (){
   $here = __FUNCTION__;
   entering_in_function ($here);
 
@@ -69,8 +70,12 @@ function item_new_create_justification_textarea_build (){
   
   $row_hta = $_SESSION['parameters']['html_textarea_rows'];
   $col_hta = $_SESSION['parameters']['html_textarea_cols'];
+
+  $nam_jus_a = $_SESSION['item_new_justification_array']; 
   
   $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= justification_select_of_justification_name_array ($nam_jus_a);
+  $html_str .= '<br>' . "\n";
   $html_str .= '<textarea name="' . $entity_textarea . '" ';
   $html_str .= 'placeholder="';
   $html_str .= $la_Pla;
@@ -93,18 +98,7 @@ function item_new_create_justification_build (){
   $html_str .= irp_provide ('item_new_create_justification_title_n_help', $here);
   $html_str .= '<br>' . "\n";
 
-/* select justification 'item_new_create_justification_select'
-
-   item_new_justification_content (item_new_justification)
-   item_new_justification_type
-
-array : item_justification_type_array
-
-check rules to accept the creation / modification  
-
-*/
-
-  $html_str .= irp_provide ('item_new_create_justification_textarea', $here);
+  $html_str .= irp_provide ('item_new_create_justification_select_n_textarea', $here);
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str', $html_str);

@@ -123,7 +123,9 @@ $_SESSION['irp_register'] = array ();
 $_SESSION['irp_stack'] = array ();
 
 $_SESSION['item_information_metadata_en_by_item_name_array'] = array ();
+
 include "language_translate_hash.php";
+
 $_SESSION['language_translate_hash'] = $language_translate_hash;
 
 $_SESSION['parameters']['absolute_path_rcar'] = $roo_doc . '/rcar';
@@ -152,22 +154,23 @@ $_SESSION['entry_type_array'] = array (
 );
 
 $_SESSION['item_new_justification_array'] = array (
-    'definition' => "1",
-    'grievance' => "1",
-    'issue' => "1",
-    'grievance restricted' => "2",
+    'definition',
+    'grievance',
+    'issue',
 );
 
 $_SESSION['item_next_justification_array'] = array (
-    'orthograph' => "1",
-    'grammar' => "1",
+    'orthograph' => "0",
+    'grammar' => "0",
+    'clarification' => "0",
+    'restricted grievance' => "1",
     'simplification' => "2",
-    'clarification' => "2",
-    'ambiguity' => "3",
-    'divergence' => "3",
-    'generalization' => "4",
-    'assertion' => "5",
-    'formalized assertion' => "6",
+    'generalization' => "3",
+    'ambiguity' => "4",
+    'precision' => "4",
+    'divergency' => "5",
+    'assertion' => "6",
+    'formalized assertion' => "7",
 );
 
 $_SESSION['parameters']['absolute_path_source'] = $roo_doc . '/rcar/php';

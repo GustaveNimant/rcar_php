@@ -17,6 +17,10 @@ function block_next_content_build () {
 
   $con_ite_nex = irp_provide ('item_next_content', $here);
   $jus_ite_nex = irp_provide ('item_next_justification', $here);
+
+  $log_str = irp_provide ('item_next_justification_checked', $here);
+  file_log_write ($here, $log_str);
+
   $con_ite_cur = irp_provide ('item_current_content_from_block_current_content', $here);
   $blo_cur_sha = irp_provide ('block_current_sha1', $here);
 

@@ -154,6 +154,12 @@ commençant par quoi, pourquoi ou comment',
         'it' => '???',
     ),
 
+    'ambiguity' => 
+    array (
+        'fr' => 'ambigu&iuml;t&eacute;',
+        'it' => '???',
+    ),
+
     'an entry is a concept defined by the list of its properties e.g. Democracy&#44; General will&#44; etc ...&#41;' =>
     array (
         'fr' => 'une entr&eacute;e est un concept d&eacute;fini
@@ -202,6 +208,12 @@ c&rsquo;est une composante d&rsquo;un bloc',
     'ask a question' => 
     array (
         'fr' => 'poser une question',
+        'it' => '???',
+    ),
+
+    'assertion' => 
+    array (
+        'fr' => 'assertion',
         'it' => '???',
     ),
 
@@ -436,6 +448,13 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
 dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
+
+    'clarification' => 
+    array (
+        'fr' => 'clarification',
+        'it' => '???',
+    ),
+
 
     'click on one of the radio buttons' => 
     array (
@@ -737,6 +756,12 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
 		'it' => '???',
     ),
 
+    'definition' => 
+    array (
+		'fr' => 'd&eacute;finition',
+		'it' => '???',
+    ),
+	 
     'definition of' => 
     array (
 		'fr' => 'd&eacute;finition de',
@@ -783,6 +808,12 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
     array (
         'fr' => 'affichage de l&rsquo;historique du bloc courant',
         'it' => '???',
+    ),
+
+    'divergency' => 
+    array (
+		'fr' => 'divergence',
+		'it' => '???',
     ),
     
     'do you want to create the entry' => 
@@ -1102,7 +1133,13 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
 		'fr' => 'pour',
 		'it' => '???',
     ),
-
+    
+    'formalized assertion' =>
+    array (
+		'fr' => 'assertion formalis&eacute;e',
+		'it' => '???',
+    ),
+    
     'frequently asked questions' => 
     array (
 		'fr' => 'foire aux questions',
@@ -1151,10 +1188,21 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
 
-
     'go to new entry' =>
     array (
         'fr' => 'aller &agrave; la nouvelle entr&eacute;e',
+        'it' => '???',
+    ), 
+
+    'grammar' =>
+    array (
+        'fr' => 'grammaire',
+        'it' => '???',
+    ), 
+
+    'grievance' =>
+    array (
+        'fr' => 'dol&eacute;ance',
         'it' => '???',
     ), 
 
@@ -1245,6 +1293,12 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
     'introduction' => 
     array (
         'fr' => 'pr&eacute;sentation',
+        'it' => '???',
+    ),
+
+    'issue' => 
+    array (
+        'fr' => 'probl&egrave;me',
         'it' => '???',
     ),
 
@@ -1805,6 +1859,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
     'order of rules' => 
     array (
         'fr' => 'ordre des r&egrave;gles',
+        'it' => '???',
+    ),
+
+    'orthograph' => 
+    array (
+        'fr' => 'orthographe',
         'it' => '???',
     ),
 
@@ -2505,6 +2565,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
 		'it' => '???',
     ),
 
+    'restricted grievance' =>
+    array (
+        'fr' => 'dol&eacute;ance restreinte',
+        'it' => '???',
+    ), 
+
     'retype' =>
     array (
         'fr' => 'changer le type',
@@ -2607,6 +2673,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
 		'it' => '???',
     ),
 
+    'select' => 
+    array (
+		'fr' => 's&eacute;lectionner',
+		'it' => '???',
+    ),
+	 
     'select an action and enter its argument in the window below' =>
     array (
         'fr' => 's&eacute;lectionner une action et entrer son argument dans la fen&ecirc;tre ci-dessous',
@@ -2616,6 +2688,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
     'select an entry type' =>
     array (
 		'fr' => 's&eacute;lectionner le type de l&rsquo;entr&eacute;e',
+        'it' => '???',
+    ),
+
+    'select a justification' =>
+    array (
+        'fr' => 's&eacute;lectionner un justificatif',
         'it' => '???',
     ),
     
@@ -2674,12 +2752,6 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ),
     
-    'select' => 
-    array (
-		'fr' => 's&eacute;lectionner',
-		'it' => '???',
-    ),
-	 
     'select a language' => 
     array (
 		'fr' => 's&eacute;lectionner un langage',
@@ -2695,6 +2767,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
     'set' => 
     array (
         'fr' => 'activer',
+        'it' => '???',
+    ),
+    
+    'simplification' => 
+    array (
+        'fr' => 'simplification',
         'it' => '???',
     ),
     

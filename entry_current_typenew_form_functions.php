@@ -61,20 +61,11 @@ function entry_current_typenew_form_titled_gather_build (){
   $la_bub_Tit = string_html_capitalized_of_string ($la_bub_tit);
 
   $html_str  = comment_entering_of_function_name ($here);
-
   $html_str .= '<b>'. "\n";
   $html_str .= common_html_span_background_color_of_html ($la_bub_Tit);
   $html_str .= '</b>'. "\n";
   $html_str .= '<br>'. "\n";
   $html_str .= irp_provide ('entry_current_typenew_form_select_display', $here);
-
-  /* $siz_htz = $_SESSION['parameters']['html_input_text_size']; */
-  /* $html_str .= '<input type="text"'; */
-  /* $html_str .= ' name="' . $get_key . '"';  */
-  /* $html_str .= ' value="' . $typ_ent_cur . '"';  */
-  /* $html_str .= ' size="' . $siz_htz . '"';  */
-  /* $html_str .= '>' . "\n"; */
-  
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str', $html_str);

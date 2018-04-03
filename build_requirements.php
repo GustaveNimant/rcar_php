@@ -84,18 +84,21 @@ require_once "git_history_functions.php";
 require_once "git_retrieve_functions.php";
 
 require_once "item_any_content_linked_library.php";
+
 require_once "item_current_content_display_functions.php";
 require_once "item_current_content_linked_functions.php";
 require_once "item_current_justification_display_functions.php";
 require_once "item_current_justification_linked_functions.php";
 require_once "item_current_modify_functions.php";
-require_once "item_previous_content_linked_functions.php";
 
 require_once "item_new_create_content_form_functions.php"; 
 require_once "item_new_create_justification_functions.php"; 
 require_once "item_new_name_functions.php"; 
 
+require_once "item_next_justification_checked_functions.php";
+
 require_once "item_previous_content_display_functions.php";
+require_once "item_previous_content_linked_functions.php";
 
 require_once "language_select_functions.php";
 require_once "pervasive_html_functions.php";

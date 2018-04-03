@@ -11,6 +11,8 @@ function block_current_content_of_four_elements ($con_ite_cur, $jus_ite_cur, $co
   $here = __FUNCTION__;
   entering_in_function ($here. " ($con_ite_cur, $jus_ite_cur, $con_ite_pre, $blo_pre_sha)");
 
+#  $la_jus_ite_cur = language_translate_of_en_string ($jus_ite_cur);
+
   $con_blo_cur  = '';
   $con_blo_cur .= 'item_current_content :';
   $con_blo_cur .= "\n";

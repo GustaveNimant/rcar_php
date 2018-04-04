@@ -73,20 +73,34 @@ function toward_item_next_justify_title_build () {
     return $html_str;
 }
 
-function toward_item_next_justification_build (){
+function toward_item_next_justification_select_n_textarea_build (){
     $here = __FUNCTION__;
     entering_in_function ($here);
+    
+    $en_pla = 'enter your justification';
+    $la_Pla = ucfirst (language_translate_of_en_string ($en_pla));
+    debug_n_check ($here , '$la_Pla',  $la_Pla);  
     
     $entity_textarea = 'item_next_justification';
 
     $row_hta = $_SESSION['parameters']['html_textarea_rows'];
     $col_hta = $_SESSION['parameters']['html_textarea_cols'];
+
+    $nam_jus_h = $_SESSION['item_next_justification_hash']; 
+    $nam_jus_nex_a = array_keys ($nam_jus_h);
     
+    $nam_jus_any_a = $_SESSION['item_any_justification_array'];
+    $nam_jus_a = array_merge ($nam_jus_any_a, $nam_jus_nex_a);
+
     $html_str  = comment_entering_of_function_name ($here);
+    $html_str .= justification_select_of_justification_name_array ($nam_jus_a);
+    $html_str .= '<br>' . "\n";
     $html_str .= '<textarea name="' . $entity_textarea; 
-    $html_str .= '" rows="' . $row_hta .'" cols="' .$col_hta;
+    $html_str .= '" placeholder="';
+    $html_str .= $la_Pla;
+    $html_str .= '" rows="' . $row_hta . '" cols="' . $col_hta;
     $html_str .= '"/>';
-    $html_str .= '</textarea> ' . "\n";
+    $html_str .= '</textarea>' . "\n";
     $html_str .= comment_exiting_of_function_name ($here);
 
     debug_n_check ($here , '$html_str',  $html_str);
@@ -119,7 +133,7 @@ function toward_item_next_create_form_build () {
 
   $html_str .= irp_provide ('toward_item_next_justify_title', $here);
   $html_str .= '<br>';
-  $html_str .= irp_provide ('toward_item_next_justification', $here);
+  $html_str .= irp_provide ('toward_item_next_justification_select_n_textarea', $here);
   $html_str .= '<br>';
 
   $html_str .= '<center>';

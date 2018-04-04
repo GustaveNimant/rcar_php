@@ -144,7 +144,6 @@ $_SESSION['parameters']['absolute_path_server_entry_type'] = $roo_doc . '/rcar/s
 $_SESSION['parameters']['nameoffile_entry_type_catalog'] = 'Entry_type_catalog.cat';
 $_SESSION['parameters']['absolute_path_server_entry_type_catalog'] = $_SESSION['parameters']['absolute_path_server_entry_type'] . '/' . $_SESSION['parameters']['nameoffile_entry_type_catalog'];
 
-
 $_SESSION['entry_type_array'] = array (
     'general will',
     'header',  
@@ -153,16 +152,19 @@ $_SESSION['entry_type_array'] = array (
     'miscellaneous',
 );
 
+$_SESSION['item_any_justification_array'] = array (
+    'orthograph',
+    'grammar',
+    'clarification',
+);
+
 $_SESSION['item_new_justification_array'] = array (
     'definition',
     'grievance',
     'issue',
 );
 
-$_SESSION['item_next_justification_array'] = array (
-    'orthograph' => "0",
-    'grammar' => "0",
-    'clarification' => "0",
+$_SESSION['item_next_justification_hash'] = array (
     'restricted grievance' => "1",
     'simplification' => "2",
     'generalization' => "3",

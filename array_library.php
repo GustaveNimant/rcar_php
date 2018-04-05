@@ -794,5 +794,21 @@ function ___array_push_inplace_of_array_name_of_value_of_array ($nam_arr, $val, 
     return;
 }
 
+function array_keys_from_key_value_of_hash_of_key ($arr_h, $key) {
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    $val = $arr_h[$key];
+ 
+    $arr_a = array ();
+    foreach ($arr_h as $k => $v) {
+
+        if ( $v >= $val) {
+            array_push ($arr_a, $k);
+        }
+    }
+   
+    exiting_from_function ($here);
+    return $arr_a;
+}
 
 ?>

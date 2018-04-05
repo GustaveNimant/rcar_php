@@ -19,7 +19,9 @@ function item_next_justification_checked_build () {
   debug_n_check ($here , '$con_jus_ite_cur', $con_jus_ite_cur);
   debug_n_check ($here , '$con_jus_ite_nex', $con_jus_ite_nex);
 
-  $nam_jus_ite_cur = string_first_word_of_string ($con_jus_ite_cur);
+
+  $len = strpos ($con_jus_ite_cur, ':');
+  $nam_jus_ite_cur = trim (substr ($con_jus_ite_cur, 0, $len));
   $nam_jus_ite_nex = irp_provide ('justification_name', $here);
   debug_n_check ($here , '$nam_jus_ite_cur', $nam_jus_ite_cur);
   debug_n_check ($here , '$nam_jus_ite_nex', $nam_jus_ite_nex);

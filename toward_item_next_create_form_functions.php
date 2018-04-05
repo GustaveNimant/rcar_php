@@ -86,9 +86,26 @@ function toward_item_next_justification_select_n_textarea_build (){
     $row_hta = $_SESSION['parameters']['html_textarea_rows'];
     $col_hta = $_SESSION['parameters']['html_textarea_cols'];
 
-    $nam_jus_h = $_SESSION['item_next_justification_hash']; 
-    $nam_jus_nex_a = array_keys ($nam_jus_h);
-    
+    $nam_jus_nex_h = $_SESSION['item_next_justification_hash']; 
+
+    $con_jus_ite_cur = irp_provide ('item_current_justification_from_block_current_content', $here);
+
+    $len = strpos ($con_jus_ite_cur, ':');
+    $nam_jus_ite_cur = trim (substr ($con_jus_ite_cur, 0, $len));
+    debug_n_check ($here , '$nam_jus_ite_cur', $nam_jus_ite_cur);
+
+    $ind_jus_ite_cur = $nam_jus_nex_h[$nam_jus_ite_cur];
+    if (string_is_empty_of_string ($ind_jus_ite_cur) ) {
+        $nam_jus_nex_a = array_keys ($nam_jus_nex_h);
+    }
+    else {
+        $nam_jus_nex_a = array_keys_from_key_value_of_hash_of_key ($nam_jus_nex_h, $nam_jus_ite_cur); 
+    }
+
+
+    debug_n_check ($here , '$con_jus_ite_cur', $con_jus_ite_cur);
+    debug_n_check ($here , '$nam_jus_ite_cur', $nam_jus_ite_cur);
+
     $nam_jus_any_a = $_SESSION['item_any_justification_array'];
     $nam_jus_a = array_merge ($nam_jus_any_a, $nam_jus_nex_a);
 

@@ -94,15 +94,13 @@ function toward_item_next_justification_select_n_textarea_build (){
     $nam_jus_ite_cur = trim (substr ($con_jus_ite_cur, 0, $len));
     debug_n_check ($here , '$nam_jus_ite_cur', $nam_jus_ite_cur);
 
-    $ind_jus_ite_cur = $nam_jus_nex_h[$nam_jus_ite_cur];
-    if (string_is_empty_of_string ($ind_jus_ite_cur) ) {
-        $nam_jus_nex_a = array_keys ($nam_jus_nex_h);
-    }
-    else {
+    if (array_key_exists ($nam_jus_ite_cur, $nam_jus_nex_h)) {
         $nam_jus_nex_a = array_keys_from_key_value_of_hash_of_key ($nam_jus_nex_h, $nam_jus_ite_cur); 
     }
-
-
+    else {
+        $nam_jus_nex_a = array_keys ($nam_jus_nex_h);
+    }
+    
     debug_n_check ($here , '$con_jus_ite_cur', $con_jus_ite_cur);
     debug_n_check ($here , '$nam_jus_ite_cur', $nam_jus_ite_cur);
 

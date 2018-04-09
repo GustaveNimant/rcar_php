@@ -25,8 +25,8 @@ function block_next_content_build () {
   $con_ite_jus = $nam_jus . ' : ' . $jus_ite_nex;
   debug_n_check ($here , '$con_ite_jus', $con_ite_jus);
 
-  $log_str = irp_provide ('item_next_justification_checked', $here);
-  file_log_write ($here, $log_str);
+  /* $log_str = irp_provide ('item_next_justification_checked', $here); */
+  /* file_log_write ($here, $log_str); */
 
   $con_ite_cur = irp_provide ('item_current_content_from_block_current_content', $here);
   $blo_cur_sha = irp_provide ('block_current_sha1', $here);

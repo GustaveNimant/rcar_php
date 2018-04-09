@@ -161,6 +161,7 @@ $_SESSION['item_any_justification_array'] = array (
 $_SESSION['item_new_justification_array'] = array (
     'definition',
     'grievance',
+    'genesis',
     'issue',
 );
 

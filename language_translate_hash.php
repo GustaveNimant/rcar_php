@@ -1158,6 +1158,18 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ), 
     
+    'generalization' =>
+    array (
+        'fr' => 'g&eacute;n&eacute;ralisation',
+        'it' => '???',
+    ), 
+    
+    'genesis' =>
+    array (
+        'fr' => 'genesis',
+        'it' => '???',
+    ), 
+
     'git' =>
     array (
 		'fr' => 'git',
@@ -2378,6 +2390,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
 		'fr' => 'paragraphes',
 		'it' => '???',
     ),
+
+    'precision' =>
+    array (
+        'fr' => 'pr&eacute;cision',
+        'it' => '???',
+    ), 
 
     'presentation' =>
     array (

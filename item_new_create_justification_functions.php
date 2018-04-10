@@ -62,9 +62,9 @@ function item_new_create_justification_select_n_textarea_build (){
   $entity_fat = entity_name_of_build_function_name ($here);
   father_n_son_stack_entity_push_of_father_of_son ($entity_fat, "TEXTAREA_$entity_fat");
 
-  $en_pla = 'enter your justification';
-  $la_Pla = ucfirst (language_translate_of_en_string ($en_pla));
-  debug_n_check ($here , '$la_Pla',  $la_Pla);  
+  $en_txt = 'undefined';
+  $la_txt = language_translate_of_en_string ($en_txt);
+  debug_n_check ($here , '$la_txt',  $la_txt);  
 
   $entity_textarea = 'item_new_justification';
   
@@ -81,10 +81,9 @@ function item_new_create_justification_select_n_textarea_build (){
   $html_str .= justification_select_of_justification_name_array ($nam_jus_a);
   $html_str .= '<br>' . "\n";
   $html_str .= '<textarea name="' . $entity_textarea;
-  $html_str .= '" placeholder="';
-  $html_str .= $la_Pla;
   $html_str .= '" rows="' . $row_hta . '" cols="' . $col_hta;
-  $html_str .= '">';
+  $html_str .= '"/>';
+  $html_str .= $la_txt;
   $html_str .= '</textarea>' . "\n";
   $html_str .= comment_exiting_of_function_name ($here);
 

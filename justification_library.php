@@ -100,8 +100,9 @@ function justification_select_of_justification_name_array ($nam_jus_a) {
     $html_str .= '<select name="' . $get_key_sel . '">' . "\n";
     $html_str .= '<option selected>' . $la_Tit . '</option>';
 
-    foreach ($nam_jus_a as $key => $nam_jus) {
-        $html_str .= '<option>' . $nam_jus . '</option>' . "\n";
+    foreach ($nam_jus_a as $key => $en_nam_jus) {
+        $la_nam_jus = language_translate_of_en_string ($en_nam_jus);
+        $html_str .= '<option>' . $la_nam_jus . '</option>' . "\n";
     }
 
     $html_str .= '</select>' . "\n";

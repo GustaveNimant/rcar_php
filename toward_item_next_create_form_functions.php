@@ -77,9 +77,9 @@ function toward_item_next_justification_select_n_textarea_build (){
     $here = __FUNCTION__;
     entering_in_function ($here);
     
-    $en_pla = 'enter your justification';
-    $la_Pla = ucfirst (language_translate_of_en_string ($en_pla));
-    debug_n_check ($here , '$la_Pla',  $la_Pla);  
+    $en_txt = 'undefined';
+    $la_txt = language_translate_of_en_string ($en_txt);
+    debug_n_check ($here , '$la_txt',  $la_txt);  
     
     $entity_textarea = 'item_next_justification';
 
@@ -111,10 +111,9 @@ function toward_item_next_justification_select_n_textarea_build (){
     $html_str .= justification_select_of_justification_name_array ($nam_jus_a);
     $html_str .= '<br>' . "\n";
     $html_str .= '<textarea name="' . $entity_textarea; 
-    $html_str .= '" placeholder="';
-    $html_str .= $la_Pla;
     $html_str .= '" rows="' . $row_hta . '" cols="' . $col_hta;
     $html_str .= '"/>';
+    $html_str .= $la_txt; 
     $html_str .= '</textarea>' . "\n";
     $html_str .= comment_exiting_of_function_name ($here);
 

@@ -80,8 +80,15 @@ function git_command_commit_build () {
   $hdir = file_basic_directory_of_name ("hd_php_server");
   debug_n_check ($here , '$hdir', $hdir);
 
-  $mes_git  = irp_provide ('user_information', $here);
-
+  $jus_inf = irp_provide ('justification_information', $here);
+  if ($jus_inf == 'undefined') {
+      $mes_git = '';
+  }
+  else {
+      $mes_git = $jus_inf . "\n";
+  }
+  $mes_git .= irp_provide ('user_information', $here);
+  
   $cmd_git  = 'cd ' . $hdir . ';';
   $cmd_git .= git_command_provide ();
   $cmd_git .= 'git commit -a -m "' . $mes_git . '"';

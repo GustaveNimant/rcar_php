@@ -100,6 +100,8 @@ require_once "item_next_justification_checked_functions.php";
 require_once "item_previous_content_display_functions.php";
 require_once "item_previous_content_linked_functions.php";
 
+require_once "justification_information_functions.php";
+
 require_once "language_select_functions.php";
 require_once "pervasive_html_functions.php";
 require_once "quit_functions.php";

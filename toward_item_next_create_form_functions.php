@@ -7,6 +7,30 @@ $Documentation[$module]['what for'] = "to display the form page where one can mo
 
 entering_in_module ($module);
 
+function toward_item_next_create_form_justification_title_n_help_build (){
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+  $en_tit = 'justification content';
+
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
+  $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
+  $la_Tit  = "<b>$la_Tit</b>";
+  $la_Tit .= ' : ';
+
+  $key_hel = 'create justify item'; /* Improve adapt to next */
+  $la_Tit .= help_text_of_help_key ($key_hel);
+
+  $html_str  = comment_entering_of_function_name ($here);
+  $html_str .= common_html_span_background_color_of_html ($la_Tit);
+  $html_str .= comment_exiting_of_function_name ($here);
+
+  debug_n_check ($here , '$html_str',  $html_str);
+  exiting_from_function ($here);
+
+  return $html_str;
+}
+
 function toward_item_next_create_title_build () { 
   $here = __FUNCTION__;
   entering_in_function ($here);
@@ -53,39 +77,25 @@ function toward_item_next_content_build (){
   return $html_str;
 }
 
-function toward_item_next_justify_title_build () { 
+function toward_item_next_justification_select_title_build () { 
     $here = __FUNCTION__;
     entering_in_function ($here);
     
-    $en_tit = 'enter your justification below';
+    $en_tit = 'select a justification';
     
     $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
     $la_bub_Tit = string_html_capitalized_of_string ($la_bub_tit);
-    $la_bub_Tit = '<b>' . $la_bub_Tit . '</b>';
     
-    $html_str  = comment_entering_of_function_name ($here);
-    $html_str .= common_html_span_background_color_of_html ($la_bub_Tit);
-    $html_str .= comment_exiting_of_function_name ($here);
-    
-    debug_n_check ($here , '$html_str',  $html_str);
+    debug_n_check ($here , '$la_bub_Tit',  $la_bub_Tit);
     exiting_from_function ($here);
     
-    return $html_str;
+    return $la_bub_Tit;
 }
 
-function toward_item_next_justification_select_n_textarea_build (){
+function toward_item_next_justification_select_build (){
     $here = __FUNCTION__;
     entering_in_function ($here);
     
-    $en_txt = 'undefined';
-    $la_txt = language_translate_of_en_string ($en_txt);
-    debug_n_check ($here , '$la_txt',  $la_txt);  
-    
-    $entity_textarea = 'item_next_justification';
-
-    $row_hta = $_SESSION['parameters']['html_textarea_rows'];
-    $col_hta = $_SESSION['parameters']['html_textarea_cols'];
-
     $nam_jus_nex_h = $_SESSION['item_next_justification_hash']; 
 
     $con_jus_ite_cur = irp_provide ('item_current_justification_from_block_current_content', $here);
@@ -109,7 +119,43 @@ function toward_item_next_justification_select_n_textarea_build (){
 
     $html_str  = comment_entering_of_function_name ($here);
     $html_str .= justification_select_of_justification_name_array ($nam_jus_a);
-    $html_str .= '<br>' . "\n";
+    $html_str .= comment_exiting_of_function_name ($here);
+
+    debug_n_check ($here , '$html_str',  $html_str);
+    exiting_from_function ($here);
+
+    return $html_str;
+}
+
+function toward_item_next_create_form_justification_textarea_title_build (){
+  $here = __FUNCTION__;
+  entering_in_function ($here);
+
+  $en_tit = 'enter your justification below';
+
+  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
+  $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
+
+  debug_n_check ($here , '$la_Tit',  $la_Tit);
+  exiting_from_function ($here);
+
+  return $la_Tit;
+}
+
+function toward_item_next_create_form_justification_textarea_build (){
+    $here = __FUNCTION__;
+    entering_in_function ($here);
+    
+    $en_txt = 'undefined';
+    $la_txt = language_translate_of_en_string ($en_txt);
+    debug_n_check ($here , '$la_txt',  $la_txt);  
+    
+    $entity_textarea = 'item_next_justification';
+
+    $row_hta = $_SESSION['parameters']['html_textarea_rows'];
+    $col_hta = $_SESSION['parameters']['html_textarea_cols'];
+
+    $html_str  = comment_entering_of_function_name ($here);
     $html_str .= '<textarea name="' . $entity_textarea; 
     $html_str .= '" rows="' . $row_hta . '" cols="' . $col_hta;
     $html_str .= '"/>';
@@ -145,9 +191,15 @@ function toward_item_next_create_form_build () {
   $html_str .= irp_provide ('toward_item_next_content', $here);
   $html_str .= '<br><br>';
 
-  $html_str .= irp_provide ('toward_item_next_justify_title', $here);
+  $html_str .= irp_provide ('toward_item_next_create_form_justification_title_n_help', $here);
   $html_str .= '<br>';
-  $html_str .= irp_provide ('toward_item_next_justification_select_n_textarea', $here);
+  $html_str .= irp_provide ('toward_item_next_justification_select_title', $here);
+  $html_str .= '<br>';
+  $html_str .= irp_provide ('toward_item_next_justification_select', $here);
+  $html_str .= '<br>';
+  $html_str .= irp_provide ('toward_item_next_create_form_justification_textarea_title', $here);
+  $html_str .= '<br>';
+  $html_str .= irp_provide ('toward_item_next_create_form_justification_textarea', $here);
   $html_str .= '<br>';
 
   $html_str .= '<center>';

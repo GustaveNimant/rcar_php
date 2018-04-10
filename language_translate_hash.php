@@ -1356,6 +1356,12 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
 
+    'justification content' =>
+    array (
+        'fr' => 'contenu de la justification',
+        'it' => '???',
+    ),
+
     'justify below your change' =>
     array (
         'fr' => 'justifier ci-dessous votre modification',

@@ -90,15 +90,10 @@ function justification_select_of_justification_name_array ($nam_jus_a) {
 
     debug_n_check ($here, '$nam_jus_a', $nam_jus_a);
 
-    $en_tit = 'select a justification';
-    $la_tit = language_translate_of_en_string ($en_tit);
-    $la_Tit = string_html_capitalized_of_string ($la_tit);
-
     $get_key_sel = 'justification_name';
 
     $html_str  = comment_entering_of_function_name ($here);
     $html_str .= '<select name="' . $get_key_sel . '">' . "\n";
-    $html_str .= '<option selected>' . $la_Tit . '</option>';
 
     foreach ($nam_jus_a as $key => $en_nam_jus) {
         $la_nam_jus = language_translate_of_en_string ($en_nam_jus);

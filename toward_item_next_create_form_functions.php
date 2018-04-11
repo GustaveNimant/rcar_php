@@ -99,9 +99,13 @@ function toward_item_next_justification_select_build (){
     $nam_jus_nex_h = $_SESSION['item_next_justification_hash']; 
 
     $con_jus_ite_cur = irp_provide ('item_current_justification_from_block_current_content', $here);
+    debug_n_check ($here , '$con_jus_ite_cur', $con_jus_ite_cur);
 
     $len = strpos ($con_jus_ite_cur, ':');
-    $nam_jus_ite_cur = trim (substr ($con_jus_ite_cur, 0, $len));
+    $la_nam_jus_ite_cur = trim (substr ($con_jus_ite_cur, 0, $len));
+    debug_n_check ($here , '$la_nam_jus_ite_cur', $la_nam_jus_ite_cur);
+
+    $nam_jus_ite_cur = language_translate_to_english_of_la_string ($la_nam_jus_ite_cur) ;
     debug_n_check ($here , '$nam_jus_ite_cur', $nam_jus_ite_cur);
 
     if (array_key_exists ($nam_jus_ite_cur, $nam_jus_nex_h)) {
@@ -112,7 +116,6 @@ function toward_item_next_justification_select_build (){
     }
     
     debug_n_check ($here , '$con_jus_ite_cur', $con_jus_ite_cur);
-    debug_n_check ($here , '$nam_jus_ite_cur', $nam_jus_ite_cur);
 
     $nam_jus_any_a = $_SESSION['item_any_justification_array'];
     $nam_jus_a = array_merge ($nam_jus_any_a, $nam_jus_nex_a);

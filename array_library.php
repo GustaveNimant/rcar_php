@@ -796,7 +796,9 @@ function ___array_push_inplace_of_array_name_of_value_of_array ($nam_arr, $val, 
 
 function array_keys_from_key_value_of_hash_of_key ($arr_h, $key) {
     $here = __FUNCTION__;
-    entering_in_function ($here);
+    entering_in_function ($here . "($key)");
+#    debug_n_check ($here, '$arr_h', $arr_h);
+
     $val = $arr_h[$key];
  
     $arr_a = array ();
@@ -807,6 +809,7 @@ function array_keys_from_key_value_of_hash_of_key ($arr_h, $key) {
         }
     }
    
+#    debug_n_check ($here, '$arr_a', $arr_a);
     exiting_from_function ($here);
     return $arr_a;
 }

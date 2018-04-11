@@ -18,7 +18,7 @@ function toward_item_next_create_form_justification_title_n_help_build (){
   $la_Tit  = "<b>$la_Tit</b>";
   $la_Tit .= ' : ';
 
-  $key_hel = 'create justify item'; /* Improve adapt to next */
+  $key_hel = 'create_justify_next_item'; 
   $la_Tit .= help_text_of_help_key ($key_hel);
 
   $html_str  = comment_entering_of_function_name ($here);

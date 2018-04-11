@@ -20,12 +20,13 @@ function item_new_create_content_form_title_text_build (){
   }
 
   $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
-  $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
+  $la_bub_Tit = string_html_capitalized_of_string ($la_bub_tit);
+  $la_bub_Tit = '<b>' . $la_bub_Tit . '</b>';
 
-  debug_n_check ($here , '$la_Tit',  $la_Tit);
+  debug_n_check ($here , '$la_bub_Tit',  $la_bub_Tit);
   exiting_from_function ($here);
 
-  return $la_Tit;
+  return $la_bub_Tit;
 }
 
 function item_new_create_content_form_title_help_build (){

@@ -12,15 +12,16 @@ function item_new_create_justification_title_n_help_build (){
 
   $en_tit = 'justification content';
 
-  $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
-  $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
-  $la_Tit .= ' : ';
+  $la_bub_tit  = bubble_bubbled_la_text_of_en_text ($en_tit);
+  $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);
+  $la_bub_Tit  = '<b>' . $la_bub_Tit . '</b>';
+  $la_bub_Tit .= ' : ';
 
-  $key_hel = 'create justify item';
-  $la_Tit .= help_text_of_help_key ($key_hel);
+  $key_hel = 'create_justify_item_new';
+  $la_bub_Tit .= help_text_of_help_key ($key_hel);
 
   $html_str  = comment_entering_of_function_name ($here);
-  $html_str .= common_html_span_background_color_of_html ($la_Tit);
+  $html_str .= common_html_span_background_color_of_html ($la_bub_Tit);
   $html_str .= comment_exiting_of_function_name ($here);
 
   debug_n_check ($here , '$html_str',  $html_str);
@@ -36,12 +37,12 @@ function item_new_create_justification_select_title_build (){
   $en_tit = 'select a justification';
 
   $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
-  $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
+  $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);
 
-  debug_n_check ($here , '$la_Tit',  $la_Tit);
+  debug_n_check ($here , '$la_bub_Tit',  $la_bub_Tit);
   exiting_from_function ($here);
 
-  return $la_Tit;
+  return $la_bub_Tit;
 }
 
 function item_new_create_justification_textarea_title_build (){
@@ -51,12 +52,12 @@ function item_new_create_justification_textarea_title_build (){
   $en_tit = 'enter your justification below';
 
   $la_bub_tit = bubble_bubbled_la_text_of_en_text ($en_tit);
-  $la_Tit  = string_html_capitalized_of_string ($la_bub_tit);
+  $la_bub_Tit  = string_html_capitalized_of_string ($la_bub_tit);
 
-  debug_n_check ($here , '$la_Tit',  $la_Tit);
+  debug_n_check ($here , '$la_bub_Tit',  $la_bub_Tit);
   exiting_from_function ($here);
 
-  return $la_Tit;
+  return $la_bub_Tit;
 }
 
 function item_new_create_justification_select_build (){

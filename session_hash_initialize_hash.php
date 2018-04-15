@@ -150,6 +150,7 @@ $_SESSION['entry_type_array'] = array (
     'concept', 
     'blockchain',
     'miscellaneous',
+    'undefined',
 );
 
 $_SESSION['item_any_justification_array'] = array (

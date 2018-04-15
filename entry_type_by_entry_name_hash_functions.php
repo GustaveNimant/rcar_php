@@ -16,6 +16,19 @@ function entry_type_by_entry_name_hash_build () {
   $cat_typ_ent = irp_provide ('entry_type_catalog', $here) ;
   $typ_ent_by_nam_ent_h = entry_type_by_entry_name_hash_of_entry_type_catalog ($cat_typ_ent);
 
+/* ICI >> */
+  $nam_ent_a = irp_provide ('entry_name_array', $here);
+  debug_n_check ($here, '$nam_ent_a', $nam_ent_a);
+
+  foreach ($nam_ent_a as $k => $nam_ent) {
+      if (!isset ($typ_ent_by_nam_ent_h [$nam_ent])) {
+          $typ_ent_by_nam_ent_h [$nam_ent] = 'undefined';
+      }
+  }
+  ksort ($typ_ent_by_nam_ent_h);
+  debug_n_check ($here, ' 1 $typ_ent_by_nam_ent_h', $typ_ent_by_nam_ent_h);
+/* << ICI */
+
 /* rename hash entry if necessary */
   foreach ($typ_ent_by_nam_ent_h as $nam_ent => $typ_ent) {
       
@@ -33,7 +46,7 @@ function entry_type_by_entry_name_hash_build () {
       }
   }
   
-  debug_n_check ($here , '$typ_ent_by_nam_ent_h', $typ_ent_by_nam_ent_h);
+  debug_n_check ($here , '2 $typ_ent_by_nam_ent_h', $typ_ent_by_nam_ent_h);
   exiting_from_function ($here);
 
   return $typ_ent_by_nam_ent_h;

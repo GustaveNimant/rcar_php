@@ -18,7 +18,7 @@ function toward_item_next_create_form_justification_title_n_help_build (){
   $la_Tit  = "<b>$la_Tit</b>";
   $la_Tit .= ' : ';
 
-  $key_hel = 'create_justify_next_item'; 
+  $key_hel = 'create_justify_item_next'; 
   $la_Tit .= help_text_of_help_key ($key_hel);
 
   $html_str  = comment_entering_of_function_name ($here);
@@ -117,9 +117,10 @@ function toward_item_next_justification_select_build (){
     
     debug_n_check ($here , '$con_jus_ite_cur', $con_jus_ite_cur);
 
-    $nam_jus_any_a = $_SESSION['item_any_justification_array'];
-    $nam_jus_a = array_merge ($nam_jus_any_a, $nam_jus_nex_a);
+    /* $nam_jus_any_a = $_SESSION['item_any_justification_array']; */
+    /* $nam_jus_a = array_merge ($nam_jus_any_a, $nam_jus_nex_a); */
 
+    $nam_jus_a = $nam_jus_nex_a;
     $html_str  = comment_entering_of_function_name ($here);
     $html_str .= justification_select_of_justification_name_array ($nam_jus_a);
     $html_str .= comment_exiting_of_function_name ($here);

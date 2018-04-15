@@ -1,9 +1,6 @@
 <?php
 require_once "management_library.php";
 
-$module = module_name_of_module_fullnameoffile (__FILE__);
-
-
 function help_text_of_help_key ($key_hel) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($key_hel)");
@@ -36,6 +33,5 @@ function help_text_of_help_key ($key_hel) {
   return $html_str;
 
 }
-
 
 ?>

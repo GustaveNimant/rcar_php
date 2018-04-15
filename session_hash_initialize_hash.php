@@ -155,7 +155,6 @@ $_SESSION['entry_type_array'] = array (
 $_SESSION['item_any_justification_array'] = array (
     'orthograph',
     'grammar',
-    'clarification',
 );
 
 $_SESSION['item_new_justification_array'] = array (
@@ -166,6 +165,7 @@ $_SESSION['item_new_justification_array'] = array (
 );
 
 $_SESSION['item_next_justification_hash'] = array (
+    'clarification' => "1",
     'restricted grievance' => "1",
     'simplification' => "2",
     'generalization' => "3",

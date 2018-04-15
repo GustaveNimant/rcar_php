@@ -67,6 +67,7 @@ function father_n_son_stack_script_push_of_current_script ($cur_mod) {
   entering_in_function ($here . " ($cur_mod)");
 
   $pre_mod = link_previous_script_name_make ();
+  debug_n_check ($here, '$pre_mod', $pre_mod);
 
   father_n_son_stack_script_push_of_father_of_son ($pre_mod, $cur_mod);
 

@@ -98,6 +98,10 @@ function irp_path_clean_register_of_top_key_of_bottom_key_of_where ($top_key, $b
   $here = __FUNCTION__;
   entering_in_function ($here . " ($top_key, $bot_key, $where)");
 
+  if (! isset ($_SESSION['father_n_son_stack_entity'])) { /* to make script work at once */
+      include 'session_hash_initialize_hash.php';
+  }
+
   $fat_n_son_h = $_SESSION['father_n_son_stack_entity'];
   debug ($here, '$fat_n_son_h', $fat_n_son_h);
 

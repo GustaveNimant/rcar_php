@@ -145,11 +145,13 @@ $_SESSION['parameters']['nameoffile_entry_type_catalog'] = 'Entry_type_catalog.c
 $_SESSION['parameters']['absolute_path_server_entry_type_catalog'] = $_SESSION['parameters']['absolute_path_server_entry_type'] . '/' . $_SESSION['parameters']['nameoffile_entry_type_catalog'];
 
 $_SESSION['entry_type_array'] = array (
-    'general will',
-    'header',  
+    'social contract',
+    'title',
+    'article',
     'concept', 
     'blockchain',
     'miscellaneous',
+    'header',  
     'undefined',
 );
 
@@ -166,15 +168,11 @@ $_SESSION['item_new_justification_array'] = array (
 );
 
 $_SESSION['item_next_justification_hash'] = array (
-    'clarification' => "1",
-    'restricted grievance' => "1",
+    'cleaning' => "1",
     'simplification' => "2",
     'generalization' => "3",
-    'ambiguity' => "4",
-    'precision' => "4",
-    'divergency' => "5",
-    'assertion' => "6",
-    'formalized assertion' => "7",
+    'assertion' => "4",
+    'formalized assertion' => "5",
 );
 
 $_SESSION['parameters']['absolute_path_source'] = $roo_doc . '/rcar/php';

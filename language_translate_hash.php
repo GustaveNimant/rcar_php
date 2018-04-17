@@ -199,6 +199,12 @@ c&rsquo;est une composante d&rsquo;un bloc',
         'it' => '???',
     ),
 
+    'article' => 
+    array (
+        'fr' => 'article',
+        'it' => '???',
+    ),
+
     'ask a new question' => 
     array (
         'fr' => 'poser une nouvelle question',
@@ -2806,6 +2812,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
         'it' => '???',
     ),
     
+    'social contract' =>
+    array (
+        'fr' => 'contrat social',
+        'it' => '???',
+    ), 
+
     'specify a text defining the new property' => 
     array (
 		'fr' => 'indiquez un texte d&eacute;finissant la nouvelle propri&eacute;t&eacute;',

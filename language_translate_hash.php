@@ -461,6 +461,11 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
         'it' => '???',
     ),
 
+    'cleaning' =>
+    array (
+        'fr' => 'nettoyage',
+        'it' => '???',
+    ),
 
     'click on one of the radio buttons' => 
     array (
@@ -1198,6 +1203,12 @@ dans la liste ci-dessous puis s&eacute;lectionner une action',
     array (
 		'fr' => 'donner une r&eacute;ponse',
 		'it' => '???',
+    ),
+
+    'glossary' =>
+    array (
+        'fr' => 'glossaire',
+        'it' => '???',
     ),
 
     'go' =>

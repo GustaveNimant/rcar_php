@@ -148,7 +148,7 @@ $_SESSION['entry_type_array'] = array (
     'social contract',
     'title',
     'article',
-    'concept', 
+    'glossary', 
     'blockchain',
     'miscellaneous',
     'header',  

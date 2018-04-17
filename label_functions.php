@@ -123,17 +123,17 @@ function label_entry_html_initial_section_as_row_build (){
   $html_str  = comment_entering_of_function_name ($here);
   $html_str .= '<tr>' . "\n";
 
-  $html_str .= ' <td colspan="2">' . "\n";
-  $html_str .= label_html_href_make_of_en_label_name ('editing rules');
-  $html_str .= ' </td>' . "\n";
+  /* $html_str .= ' <td colspan="2">' . "\n"; */
+  /* $html_str .= label_html_href_make_of_en_label_name ('editing rules'); */
+  /* $html_str .= ' </td>' . "\n"; */
 
   $html_str .= ' <td>' . "\n";
   $html_str .= label_html_href_make_of_en_label_name ('faq');
   $html_str .= ' </td>' . "\n";
  
-  $html_str .= ' <td colspan="2">' . "\n";
-  $html_str .= label_html_href_make_of_en_label_name ('property rules');
-  $html_str .= ' </td>' . "\n";
+  /* $html_str .= ' <td colspan="2">' . "\n"; */
+  /* $html_str .= label_html_href_make_of_en_label_name ('property rules'); */
+  /* $html_str .= ' </td>' . "\n"; */
 
   $html_str .= ' <td>' . "\n";
   $html_str .= label_html_href_make_of_en_label_name ('presentation');

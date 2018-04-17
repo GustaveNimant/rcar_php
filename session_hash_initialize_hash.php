@@ -146,9 +146,9 @@ $_SESSION['parameters']['absolute_path_server_entry_type_catalog'] = $_SESSION['
 
 $_SESSION['entry_type_array'] = array (
     'social contract',
-    'title',
     'article',
     'glossary', 
+    'rule',
     'blockchain',
     'miscellaneous',
     'header',  

@@ -102,8 +102,14 @@ function toward_item_next_justification_select_build (){
     debug_n_check ($here , '$con_jus_ite_cur', $con_jus_ite_cur);
 
     $len = strpos ($con_jus_ite_cur, ':');
-    $la_nam_jus_ite_cur = trim (substr ($con_jus_ite_cur, 0, $len));
-    debug_n_check ($here , '$la_nam_jus_ite_cur', $la_nam_jus_ite_cur);
+    if (string_is_empty_of_string ($len)) {
+        $la_nam_jus_ite_cur = trim ($con_jus_ite_cur);
+    }
+    else {
+        debug_n_check ($here , '$len', $len);
+        $la_nam_jus_ite_cur = trim (substr ($con_jus_ite_cur, 0, $len));
+        debug_n_check ($here , '$la_nam_jus_ite_cur', $la_nam_jus_ite_cur);
+    }
 
     $nam_jus_ite_cur = language_translate_to_english_of_la_string ($la_nam_jus_ite_cur) ;
     debug_n_check ($here , '$nam_jus_ite_cur', $nam_jus_ite_cur);

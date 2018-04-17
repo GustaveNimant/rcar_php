@@ -223,6 +223,12 @@ c&rsquo;est une composante d&rsquo;un bloc',
         'it' => '???',
     ),
 
+    'auto-defined' => 
+    array (
+		'fr' => 'auto-d&eacute;fini',
+		'it' => '???',
+    ),
+
     'auto-regulated collaborative editing' => 
     array (
         'fr' => 'r&eacute;daction collaborative auto-r&eacute;gul&eacute;e',

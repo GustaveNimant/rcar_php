@@ -147,7 +147,7 @@ function toward_item_next_create_form_justification_textarea_build (){
     $here = __FUNCTION__;
     entering_in_function ($here);
     
-    $en_txt = 'undefined';
+    $en_txt = 'auto-defined';
     $la_txt = language_translate_of_en_string ($en_txt);
     debug_n_check ($here , '$la_txt',  $la_txt);  
     

@@ -87,7 +87,7 @@ function item_new_create_justification_textarea_build (){
   $entity_fat = entity_name_of_build_function_name ($here);
   father_n_son_stack_entity_push_of_father_of_son ($entity_fat, "TEXTAREA_$entity_fat");
 
-  $en_txt = 'undefined';
+  $en_txt = 'auto-defined';
   $la_txt = language_translate_of_en_string ($en_txt);
   debug_n_check ($here , '$la_txt',  $la_txt);  
 

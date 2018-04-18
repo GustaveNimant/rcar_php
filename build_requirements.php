@@ -106,7 +106,7 @@ require_once "language_select_functions.php";
 require_once "pervasive_html_functions.php";
 require_once "quit_functions.php";
 
-require_once "toward_block_current_history_form_functions.php";
+require_once "block_current_history_form_functions.php";
 require_once "toward_block_current_history_display_functions.php";
 require_once "toward_block_current_list_display_functions.php";
 require_once "toward_block_current_list_reorder_functions.php";
@@ -116,8 +116,8 @@ require_once "toward_block_current_undo_functions.php";
 
 require_once "entry_current_rename_form_functions.php";
 
-require_once "toward_item_current_modify_form_functions.php";
-require_once "toward_item_next_create_form_functions.php";
+require_once "item_current_modify_form_functions.php";
+require_once "item_next_create_form_functions.php";
 
 require_once "toward_block_new_create_form_functions.php";
 require_once "toward_entry_new_create_form_functions.php";

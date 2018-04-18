@@ -10,7 +10,6 @@ function help_text_of_help_key ($key_hel) {
 
   $lan = $_SESSION['parameters']['language'];
 
-
   if (isset ($help_text_by_language_by_item_h[$key_hel])) {
       $la_txt_hel = $help_text_by_language_by_item_h[$key_hel][$lan];
   }

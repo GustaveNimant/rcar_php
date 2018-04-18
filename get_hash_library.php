@@ -61,7 +61,7 @@ function get_hash_retrieve_value_of_get_key_of_where ($get_key, $where) {
   if ($get_val == '') {
       print_html_array ($here,'<br>$_GET array is :' , $_GET);
 
-      if (is_substring_of_substring_off_string ('_surname', $get_key)) {
+      if (string_is_substring_of_substring_off_string ('_surname', $get_key)) {
           $fno_sur = surname_catalog_fullnameoffile_build ();
           $mes = "Check Surname catalog file >$fno_sur<";
       }

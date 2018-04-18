@@ -13,13 +13,13 @@ $Documentation[$module]['module_name_of_module_nameoffile'] = "the name of the p
 function link_is_ok_of_module_name ($nam_mod) {
   $here = __FUNCTION__;
     $boo = ! (
-        (is_substring_of_substring_off_string ("http:", $nam_mod))
+        (string_is_substring_of_substring_off_string ("http:", $nam_mod))
         ||
-        (is_substring_of_substring_off_string ("?", $nam_mod))
+        (string_is_substring_of_substring_off_string ("?", $nam_mod))
         ||
-        (is_substring_of_substring_off_string (".php", $nam_mod))
+        (string_is_substring_of_substring_off_string (".php", $nam_mod))
         ||
-        (is_substring_of_substring_off_string ("\/", $nam_mod))
+        (string_is_substring_of_substring_off_string ("\/", $nam_mod))
     );
     
     return $boo;

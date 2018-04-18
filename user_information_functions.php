@@ -12,7 +12,7 @@ function user_information_build () {
   $usr_ip = $_SERVER['REMOTE_ADDR'];
   debug_n_check ($here , '$irp_ip', $usr_ip);
 
-  $dat = today (); 
+  $dat = string_today (); 
 
   $usr_inf  = '';
   $usr_inf .= language_translate_of_en_string ('done by');

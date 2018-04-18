@@ -662,9 +662,9 @@ function irp_provide ($irp_key, $caller) {
     if ( ! ( 
         ($caller == "command_display")
         ||
-        (is_substring_of_substring_off_string ("_build", $caller)) 
+        (string_is_substring_of_substring_off_string ("_build", $caller)) 
         || 
-        (is_substring_of_substring_off_string ("_script", $caller))
+        (string_is_substring_of_substring_off_string ("_script", $caller))
     )) { 
         print_fatal_error ($here, 
         "the name of the current function ends with \"_build\" as it uses an <i><b>irp_provide</b></i>",

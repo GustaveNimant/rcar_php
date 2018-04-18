@@ -9,7 +9,7 @@ function label_information_array_en_of_label ($nam_lab) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_lab)");
 
-  check_label_name ($nam_lab);
+  string_check_label_name_of_string ($nam_lab);
   debug_n_check ($here , '$nam_lab', $nam_lab);
 
   switch ($nam_lab) {

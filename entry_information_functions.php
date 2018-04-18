@@ -100,7 +100,7 @@ function entry_information_array_en_of_entry_name ($nam_ent) {
       break;
 
   default : /* All non-href Entry */
-      if (is_substring_of_substring_off_string ("_texte", $nam_ent)) {
+      if (string_is_substring_of_substring_off_string ("_texte", $nam_ent)) {
           $entry_information_a = 
               array (
                   'entry_kind' => 'texte',

@@ -14,7 +14,7 @@ function label_html_href_make_of_label ($nam_lab) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($nam_lab)");
 
-  check_label_name ($nam_lab);
+  string_check_label_name_of_string ($nam_lab);
 
   $ent_inf_lan_a = label_information_array_lan_of_label ($nam_lab);
 

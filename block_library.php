@@ -3,6 +3,59 @@ require_once "string_library.php";
 
 $module = module_name_of_module_fullnameoffile (__FILE__);
 
+function four_elements_array_of_four_keys_off_string ($key_1, $key_2, $key_3, $key_4, $str) {  
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($key_1, $key_2, $key_3, $key_4, $str)");
+
+    string_check_is_substring_of_substring_off_string ($key_1, $str);
+    string_check_is_substring_of_substring_off_string ($key_2, $str);
+    string_check_is_substring_of_substring_off_string ($key_3, $str);
+    string_check_is_substring_of_substring_off_string ($key_4, $str);
+  
+    $str_a = explode ("\n", $str);
+    debug ($here, '$str_a', $str_a);
+    
+    $result_a = array ();
+    foreach ($str_a as $k => $str) {
+        $str_t = trim ($str);
+        switch ($str_t) {
+        case "$key_1" :
+            $key = $str_t;
+            $result_a[$key] = '';
+            break;
+        case "$key_2" :
+            $key = $str_t;
+            $result_a[$key] = '';
+            break;
+        case "$key_3" :
+            $key = $str_t;
+            $result_a[$key] = '';
+            break; 
+        case "$key_4" :
+            $key = $str_t;
+            $result_a[$key] = '';
+            break; 
+        default:
+            if ( (isset ($result_a[$key])) && 
+            ($result_a[$key] != "") ) {
+                $result_a[$key] .= "\n";
+                $result_a[$key] .= $str_t;
+            }
+            else {
+                $result_a[$key] = $str_t;
+            }
+            break;
+        }
+    }
+    
+    check_has_no_empty_value_of_any_array ($result_a);
+
+    debug ($here, '$result_a', $result_a);
+    exiting_from_function ($here);
+    
+    return $result_a;
+}
+
 function four_elements_array_off_block_content ($con_blo) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($con_blo)");

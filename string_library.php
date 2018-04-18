@@ -7,15 +7,16 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
 
-function string_remove_control_M ($str) {
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($str)");
-
-  $str = preg_replace ('/(\r\n|\r|\n)/m', '', $str); 
-
-  exiting_from_function ($here . " without $str");
-  return $str;
-
+function string_is_ascii_of_string ($str) {
+    $here = __FUNCTION__;
+    $num = 0;
+    while( isset ($str[$num]) ) {
+        if( ord ($str[$num]) & 0x80 ) {
+            return false;
+        }
+        $num++;
+    }
+    return true;
 }
 
 function string_html_capitalized_of_string ($str) {
@@ -53,6 +54,16 @@ function string_html_capitalized_accented_of_string_accented ($str) {
     return $str_htm;
 };
 
+function string_remove_control_M ($str) {
+  $here = __FUNCTION__;
+  entering_in_function ($here . " ($str)");
+
+  $str = preg_replace ('/(\r\n|\r|\n)/m', '', $str); 
+
+  exiting_from_function ($here . " without $str");
+  return $str;
+
+}
 
 function string_remove_html_entities ($html_str) {
   $here = __FUNCTION__;
@@ -95,186 +106,138 @@ function string_word_remove_accents ($str, $charset='utf-8')  /* why two functio
 }
 
 function string_replace_accents_to_html_code ($str) {
-  $here = __FUNCTION__;
+    $here = __FUNCTION__;
     entering_in_function ($here . " ($str)");
- 
-  $str = str_replace('á', '&aacute;', $str);
-  $str = str_replace('à', '&agrave;', $str);
-  $str = str_replace('â', '&acirc;', $str);
-  $str = str_replace('ä', '&auml;', $str);
-
-  $str = str_replace('é', '&eacute;', $str);
-  $str = str_replace('è', '&egrave;', $str);
-  $str = str_replace('ê', '&ecirc;', $str);
-  $str = str_replace('ë', '&euml;', $str);
-
-  $str = str_replace('î', '&icirc;', $str);
-  $str = str_replace('ï', '&iuml;', $str);
-
-  $str = str_replace('ô', '&ocirc;', $str);
-  $str = str_replace('ö', '&ouml;', $str);
-
-  $str = str_replace('û', '&ucirc;', $str);
-  $str = str_replace('ü', '&uuml;', $str);
-
-  $str = str_replace('ç', '&ccedil;', $str);
-  
-  exiting_from_function ($here . " ($str)");  
-  return $str;
+    
+    $str = str_replace('á', '&aacute;', $str);
+    $str = str_replace('à', '&agrave;', $str);
+    $str = str_replace('â', '&acirc;', $str);
+    $str = str_replace('ä', '&auml;', $str);
+    
+    $str = str_replace('é', '&eacute;', $str);
+    $str = str_replace('è', '&egrave;', $str);
+    $str = str_replace('ê', '&ecirc;', $str);
+    $str = str_replace('ë', '&euml;', $str);
+    
+    $str = str_replace('î', '&icirc;', $str);
+    $str = str_replace('ï', '&iuml;', $str);
+    
+    $str = str_replace('ô', '&ocirc;', $str);
+    $str = str_replace('ö', '&ouml;', $str);
+    
+    $str = str_replace('û', '&ucirc;', $str);
+    $str = str_replace('ü', '&uuml;', $str);
+    
+    $str = str_replace('ç', '&ccedil;', $str);
+    
+    exiting_from_function ($here . " ($str)");  
+    return $str;
 }
 
 function string_is_empty_of_string ($str) {
-  $here = __FUNCTION__;
-  
-  $bol = empty ($str); 
-  
-  return $bol;
+    $here = __FUNCTION__;
+    
+    $bol = empty ($str); 
+    
+    return $bol;
 };
 
 function string_check_is_not_empty_of_what_of_where_of_string ($what, $where, $str) {
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($what, $where, $str)");
-
-  if (string_is_empty_of_string ($str)){
-      print_fatal_error ($here,
-      "Argument string ($what) of function $where were NOT EMPTY",
-      "it is empty",
-      "Check");
-  }
-
-  exiting_from_function ($here . " ($str)");
-
-  return;
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($what, $where, $str)");
+    
+    if (string_is_empty_of_string ($str)){
+        print_fatal_error ($here,
+        "Argument string ($what) of function $where were NOT EMPTY",
+        "it is empty",
+        "Check");
+    }
+    
+    exiting_from_function ($here . " ($str)");
+    
+    return;
 };
-
-function word_name_capitalized_of_string_surname ($str, $encoding='utf-8') {
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($str)");
-
-  $str_bef = $str;
-
-  $str = string_remove_control_M ($str);
-  $str = string_remove_accents ($str, $encoding='utf-8');
-  $str = trim ($str);
-  $str = str_replace(' ', '_', $str);
-  $str = str_replace('\'', '_', $str);
-  $str = str_replace('-', '_', $str);
-  $str = strtolower ($str);
-  $str = ucfirst ($str);
-
-  /* $str = preg_replace ('#&([A-za-z]{2})(?:lig);#', '\1', $str); */
-  /* $str = preg_replace ('#&[^;]+;#', '', $str); */
-
-  exiting_from_function ($here . " ($str)");
-  
-  return $str;
-};
-
-function string_name_of_surname_capitalize ($str, $encoding='utf-8') {
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($str)");
-  
-  $str = word_name_capitalized_of_string_surname ($str, $encoding='utf-8');
-  $str = ucfirst ($str);
-  
-  exiting_from_function ($here . " ($str)");
-  
-  return $str;
-};
-
-function string_name_of_surname_lowercase ($str, $encoding='utf-8') {
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($str)");
-
-  $str = word_name_capitalized_of_string_surname ($str, $encoding='utf-8');
-  $str = strtolower ($str);
-
-  exiting_from_function ($here . " ($str)");
-  
-  return $str;
-}
 
 function string_is_item_name_of_string ($nam_ite){
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_ite)");
-
-  $result = preg_match ('/^[A-Z][A-Za-z_]*$/', $nam_ite);
-  
-  exiting_from_function ($here . " ($nam_ite)");
-  return $result;
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($nam_ite)");
+    
+    $result = preg_match ('/^[A-Z][A-Za-z_]*$/', $nam_ite);
+    
+    exiting_from_function ($here . " ($nam_ite)");
+    return $result;
 }
 
-function check_item_name ($nam_ite){
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_ite)");
-  /* debug_n_check ($here , "input item name", $nam_ite); */
-
-  if ( ! string_is_item_name_of_string ($nam_ite)) {
-    fatal_error ($here, "item name >$nam_ite< is NOT canonical");
-  }
-
-  exiting_from_function ($here . " ($nam_ite)");
-  return;
+function string_check_is_item_name_of_string ($nam_ite){
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($nam_ite)");
+    /* debug_n_check ($here , "input item name", $nam_ite); */
+    
+    if ( ! string_is_item_name_of_string ($nam_ite)) {
+        fatal_error ($here, "item name >$nam_ite< is NOT canonical");
+    }
+    
+    exiting_from_function ($here . " ($nam_ite)");
+    return;
 }
 
 function string_is_block_current_name_of_string ($nam_blo){
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_blo)");
-
-  $boo = preg_match ('/^[A-Z][A-Za-z_]*$/', $nam_blo);
-  
-  exiting_from_function ($here . " for block_current_name >$nam_blo< is ". string_of_boolean ($boo));
-  return $boo;
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($nam_blo)");
+    
+    $boo = preg_match ('/^[A-Z][A-Za-z_]*$/', $nam_blo);
+    
+    exiting_from_function ($here . " for block_current_name >$nam_blo< is ". string_of_boolean ($boo));
+    return $boo;
 }
 
 function string_check_is_block_name_of_string ($nam_blo){
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_blo)");
-  /* debug_n_check ($here , "input block name", $nam_blo); */
-
-  if ( ! string_is_block_current_name_of_string ($nam_blo)) {
-    print_fatal_error ($here, 
-    "block name >$nam_blo< were NOT canonical",
-    "it is NOT",
-    "Check function <i><b>word_name_capitalized_of_string_surname</b></i>");
-  }
-
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($nam_blo)");
+    /* debug_n_check ($here , "input block name", $nam_blo); */
+    
+    if ( ! string_is_block_current_name_of_string ($nam_blo)) {
+        print_fatal_error ($here, 
+        "block name >$nam_blo< were NOT canonical",
+        "it is NOT",
+        "Check function <i><b>word_name_capitalized_of_string_surname</b></i>");
+    }
+    
   exiting_from_function ($here . " ($nam_blo)");
   return;
 }
 
-function item_content_clean ($con_ite) {
+function string_item_content_clean_of_string ($con_ite) {
   $here = __FUNCTION__;
   entering_in_function ($here . " ($con_ite)");
   /* debug_n_check ($here , "input string", $con_ite); */
-
+  
   $con_ite = string_remove_control_M ($con_ite);
   $con_ite = trim ($con_ite);
-
+  
   /* debug_n_check ($here , "output item content", $con_ite); */
   exiting_from_function ($here);
   
   return $con_ite;
-
 }
 
 function string_is_entry_name_of_string ($nam_ent){
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_ent)");
-
-  /* debug_n_check ($here , "input entry_current_name name", $nam_ent); */
-
-  $boo = preg_match ('/^[A-Z][a-z_]*[a-z]$/', $nam_ent);
-
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($nam_ent)");
+    
+    /* debug_n_check ($here , "input entry_current_name name", $nam_ent); */
+    
+    $boo = preg_match ('/^[A-Z][a-z_]*[a-z]$/', $nam_ent);
+    
 /* is also directory name */
-  /* debug_n_check ($here , "result", $boo); */
-  exiting_from_function ($here . " ($nam_ent)");
-  return $boo;
+    /* debug_n_check ($here , "result", $boo); */
+    exiting_from_function ($here . " ($nam_ent)");
+    return $boo;
 }
 
 function string_check_entry_name_of_string ($nam_ent){
     $here = __FUNCTION__;
-      entering_in_function ($here . " ($nam_ent)");
+    entering_in_function ($here . " ($nam_ent)");
     /* debug_n_check ($here , "input entry_current_name name", $nam_ent); */
     
     if ( ! string_is_entry_name_of_string ($nam_ent)) {
@@ -288,45 +251,45 @@ function string_check_entry_name_of_string ($nam_ent){
     return;
 }
 
-function is_label_name ($nam_lab){
+function string_is_label_name_of_string ($nam_lab){
     $here = __FUNCTION__;
-      entering_in_function ($here . " ($nam_lab)");
+    entering_in_function ($here . " ($nam_lab)");
     
     /* debug_n_check ($here , "input label_name name", $nam_lab); */
     
     $boo = preg_match ('/^[a-z][a-z_]*[a-z]$/', $nam_lab);
     
     /* debug_n_check ($here , "result", $boo); */
-      exiting_from_function ($here . " ($nam_lab)");
+    exiting_from_function ($here . " ($nam_lab)");
     return $boo;
 }
 
-function check_label_name ($nam_lab){
-  $here = __FUNCTION__;
-  entering_in_function ($here . " ($nam_lab)");
-  /* debug_n_check ($here , "input label_name name", $nam_lab); */
-
-  if ( ! is_label_name ($nam_lab)) {
-    print_fatal_error ($here, 
-    "label_name >$nam_lab< were canonical",
-    "it is NOT",
-    "Check");
-  }
-
-  exiting_from_function ($here . " ($nam_lab)");
-  return;
+function string_check_label_name_of_string ($nam_lab){
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($nam_lab)");
+    /* debug_n_check ($here , "input label_name name", $nam_lab); */
+    
+    if ( ! string_is_label_name_of_string ($nam_lab)) {
+        print_fatal_error ($here, 
+        "label_name >$nam_lab< were canonical",
+        "it is NOT",
+        "Check");
+    }
+    
+    exiting_from_function ($here . " ($nam_lab)");
+    return;
 }
 
-function today () {
-  $here = __FUNCTION__;
-  /* nothing before date */
-  date_default_timezone_set ("Europe/Paris");
-  $str = date("j F Y à G\hi:s");  
-  return $str;
+function string_today () {
+    $here = __FUNCTION__;
+    /* nothing before date */
+    date_default_timezone_set ("Europe/Paris");
+    $str = date("j F Y à G\hi:s");  
+    return $str;
 };
 
 function string_replace_if_exists ($here, $str_fro, $str_to, $str) {
-     $here = __FUNCTION__; 
+    $here = __FUNCTION__; 
     if (substr_count ($str, $str_fro) != 0) {
         $new_str = str_replace ($str_fro, $str_to, $str);
     }
@@ -357,7 +320,7 @@ function string_replace ($here, $str_fro, $str_to, $str) {
 
 }
 
-function is_substring_of_substring_off_string ($sub_str, $str) { 
+function string_is_substring_of_substring_off_string ($sub_str, $str) { 
   $here = __FUNCTION__;
     if (string_is_empty_of_string ($str) || string_is_empty_of_string ($sub_str) || is_array ($str)) {
         $boo = false;
@@ -368,9 +331,9 @@ function is_substring_of_substring_off_string ($sub_str, $str) {
     return $boo; 
 }
 
-function check_is_substring_of_substring_off_string ($sub_str, $str) { 
+function string_check_is_substring_of_substring_off_string ($sub_str, $str) { 
   $here = __FUNCTION__;
-  if ( ! is_substring_of_substring_off_string ($sub_str, $str)) {
+  if ( ! string_is_substring_of_substring_off_string ($sub_str, $str)) {
       print_fatal_error ($here,
           "substring >$sub_str< were contained into string >$str<",
           "it is NOT",
@@ -457,59 +420,9 @@ function string_of_boolean ($boo) {
     return $str;
 }
 
-function four_elements_array_of_four_keys_off_string ($key_1, $key_2, $key_3, $key_4, $str) {  
-    $here = __FUNCTION__;
-    entering_in_function ($here . " ($key_1, $key_2, $key_3, $key_4, $str)");
+/* filename */
 
-    check_is_substring_of_substring_off_string ($key_1, $str);
-    check_is_substring_of_substring_off_string ($key_2, $str);
-    check_is_substring_of_substring_off_string ($key_3, $str);
-    check_is_substring_of_substring_off_string ($key_4, $str);
-  
-    $str_a = explode ("\n", $str);
-    debug ($here, '$str_a', $str_a);
-    
-    $result_a = array ();
-    foreach ($str_a as $k => $str) {
-        $str_t = trim ($str);
-        switch ($str_t) {
-        case "$key_1" :
-            $key = $str_t;
-            $result_a[$key] = '';
-            break;
-        case "$key_2" :
-            $key = $str_t;
-            $result_a[$key] = '';
-            break;
-        case "$key_3" :
-            $key = $str_t;
-            $result_a[$key] = '';
-            break; 
-        case "$key_4" :
-            $key = $str_t;
-            $result_a[$key] = '';
-            break; 
-        default:
-            if ( (isset ($result_a[$key])) && 
-            ($result_a[$key] != "") ) {
-                $result_a[$key] .= "\n";
-                $result_a[$key] .= $str_t;
-            }
-            else {
-                $result_a[$key] = $str_t;
-            }
-            break;
-        }
-    }
-    
-    check_has_no_empty_value_of_any_array ($result_a);
-
-    debug ($here, '$result_a', $result_a);
-    exiting_from_function ($here);
-    
-    return $result_a;
-}
-function is_filename_extension ($ext) {
+function string_is_filename_extension_of_string ($ext) {
     $here = __FUNCTION__;
     entering_in_function ($here . " ($ext)");
     
@@ -568,6 +481,8 @@ function check_block_text_filename_extension ($ext){
 
   return;
 }
+
+/* serialization */
 
 function string_of_separator_of_any_variable ($sep, $var) {
   $here = __FUNCTION__;
@@ -680,6 +595,5 @@ function string_pretty_of_array ($str_a) {
     $str = string_pretty_of_array_of_index_of_eol ($val, ($ind + 2), $eol);
     return $str;
 };
-
 
 ?>

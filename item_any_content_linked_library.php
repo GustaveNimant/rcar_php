@@ -105,7 +105,7 @@ function surname_reduced_array_of_surname_by_name_hash_of_entry_name_array_of_su
     foreach ($sur_low_a as $sur_low){
         /* debug_n_check ($here, 'foreach $sur_low', $sur_low); */
         if (
-            (is_substring_of_substring_off_string ($sur_low, $sen_low))
+            (string_is_substring_of_substring_off_string ($sur_low, $sen_low))
             && 
             (surname_is_entry_of_entry_name_array_of_surname_lowercase_of_surname_by_name_hash ($nam_ent_a, $sur_low, $sur_by_nam_h))
         ) {

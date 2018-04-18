@@ -29,10 +29,10 @@ function clean () {
   print_r ($_SESSION);
   print '</pre> ';
   
-  $today = today();
+  $string_today = string_today();
 
-  /* create debug file with today date at top */
-  /* debug ($here, "", $today . "\n"); */
+  /* create debug file with string_today date at top */
+  /* debug ($here, "", $string_today . "\n"); */
   /* git_status_check (); */
 
   exiting_from_function ($here);

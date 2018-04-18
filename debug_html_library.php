@@ -18,17 +18,17 @@ function string_html_shorten_of_key_of_string ($key, $str_big){
     $here = __FUNCTION__;
     
     if ( 
-        (! is_substring_of_substring_off_string ("<html>", $str_big))
-        && (! is_substring_of_substring_off_string ("<input", $str_big))
-        && (! is_substring_of_substring_off_string ("<textarea", $str_big))
-        && (! is_substring_of_substring_off_string ("<link", $str_big))
-        && (! is_substring_of_substring_off_string ("<select", $str_big))
-        && (! is_substring_of_substring_off_string ("/textarea>", $str_big))
-        && (! is_substring_of_substring_off_string ("<div", $str_big))
-        && (! is_substring_of_substring_off_string ("/div>", $str_big))
-        && (! is_substring_of_substring_off_string ("<a href", $str_big))
-        && (! is_substring_of_substring_off_string ("<span", $str_big))
-        && (! is_substring_of_substring_off_string ("/span>", $str_big))
+        (! string_is_substring_of_substring_off_string ("<html>", $str_big))
+        && (! string_is_substring_of_substring_off_string ("<input", $str_big))
+        && (! string_is_substring_of_substring_off_string ("<textarea", $str_big))
+        && (! string_is_substring_of_substring_off_string ("<link", $str_big))
+        && (! string_is_substring_of_substring_off_string ("<select", $str_big))
+        && (! string_is_substring_of_substring_off_string ("/textarea>", $str_big))
+        && (! string_is_substring_of_substring_off_string ("<div", $str_big))
+        && (! string_is_substring_of_substring_off_string ("/div>", $str_big))
+        && (! string_is_substring_of_substring_off_string ("<a href", $str_big))
+        && (! string_is_substring_of_substring_off_string ("<span", $str_big))
+        && (! string_is_substring_of_substring_off_string ("/span>", $str_big))
     ){
         $str_cut = " [$key] => $str_big<br>";
     }

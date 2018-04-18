@@ -3,9 +3,54 @@ $module = module_name_of_module_fullnameoffile (__FILE__);
 
 $Documentation[$module]['what is it'] = "it is ...";
 $Documentation[$module]['what for'] = "to ...";
-
-
 $Documentation[$module]['surname'] = "it is any name as it has been rentered by a user";
+
+function word_name_capitalized_of_string_surname ($str, $encoding='utf-8') {
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($str)");
+    
+    $str_bef = $str;
+    
+    $str = string_remove_control_M ($str);
+    $str = string_remove_accents ($str, $encoding='utf-8');
+    $str = trim ($str);
+    $str = str_replace(' ', '_', $str);
+    $str = str_replace('\'', '_', $str);
+    $str = str_replace('-', '_', $str);
+    $str = strtolower ($str);
+    $str = ucfirst ($str);
+    
+    /* $str = preg_replace ('#&([A-za-z]{2})(?:lig);#', '\1', $str); */
+    /* $str = preg_replace ('#&[^;]+;#', '', $str); */
+    
+    exiting_from_function ($here . " ($str)");
+    
+    return $str;
+};
+
+function string_name_of_surname_capitalize ($str, $encoding='utf-8') {
+    $here = __FUNCTION__;
+    entering_in_function ($here . " ($str)");
+    
+    $str = word_name_capitalized_of_string_surname ($str, $encoding='utf-8');
+    $str = ucfirst ($str);
+    
+    exiting_from_function ($here . " ($str)");
+    
+    return $str;
+};
+
+function string_name_of_surname_lowercase ($str, $encoding='utf-8') {
+    $here = __FUNCTION__;
+  entering_in_function ($here . " ($str)");
+  
+  $str = word_name_capitalized_of_string_surname ($str, $encoding='utf-8');
+  $str = strtolower ($str);
+  
+  exiting_from_function ($here . " ($str)");
+  
+  return $str;
+}
 
 function surname_of_name_of_surname_by_name_hash ($nam, $sur_by_nam_h) {
   $here = __FUNCTION__;
@@ -138,6 +183,5 @@ function surname_is_entry_of_entry_name_array_of_surname_lowercase_of_surname_by
     
     return $boo;
 }
-
 
 ?>

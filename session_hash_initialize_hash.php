@@ -165,6 +165,7 @@ $_SESSION['item_new_justification_array'] = array (
     'grievance',
     'genesis',
     'issue',
+    'proposition',
 );
 
 $_SESSION['item_next_justification_hash'] = array (

@@ -2474,6 +2474,12 @@ Retourner &agrave; la version pr&eacute;c&eacute;dente',
 		'it' => '???',
     ),
 
+    'proposition' =>
+    array (
+      'fr' => 'proposition',
+      'it' => '???',
+   ),
+
     'question create content' => 
     array (
 		'fr' => 'contenu de la question',
